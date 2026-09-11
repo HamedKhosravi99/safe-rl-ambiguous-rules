@@ -22,12 +22,15 @@ checks them byte-for-byte against the fragments compiled into the submitted PDF.
 │                              #   coverage analyses, the ARTEMIS external study
 ├── experiments/
 │   ├── live_agent/            # the tool-using agent under a published rate limit (Appendix E), with logs
-│   └── theory_extension/      # finite-data certificate experiment on the 28 compiled rules
+│   ├── theory_extension/      # finite-data certificate experiment on the 28 compiled rules
+│   └── dsrl_learners/         # wrappers that ran the published offline safe-RL learners (results/dsrl/)
 ├── scripts/
 │   ├── paper/                 # make_gen_*.py, make_figs_*.py: archived results -> LaTeX fragments and figures
 │   └── reproduce_paper.py     # runs them all in dependency order and diffs against paper/reference/
 ├── results/                   # archived experiment outputs read by the generators
-│   ├── e2e/                   #   exact decision suites, clarification, class ladder, coverage, ARTEMIS
+│   ├── e2e/                   #   exact decision suites, clarification, class ladder, coverage, ARTEMIS,
+│   │                          #   and the pre-registration notes REGISTRATION_V18-V21.md
+│   ├── compiler_audit/        #   compiler-faithfulness audit behind SAFE-KEEP's implication relation
 │   ├── conformal/             #   learning arms (agnostic50, main50, ...), LP certificates (lp/), corpus manifests
 │   ├── dsrl/                  #   published offline safe-RL learners on DSRL/OSRL
 │   ├── safe_keep_final/, final_pipeline/   # SAFE-KEEP on 579 families and the fixed-data pipeline (Table 4)
@@ -235,5 +238,5 @@ lists every fragment the paper inputs.
 | `results/safe_keep_final/safekeep_final.json` | `src/saorl/benchmark_sg/safe_keep_final_run.py` (recovered driver, re-run reproduces the archive up to the runtime field) |
 | `results/final_pipeline/pipeline_rows.json` | `src/saorl/benchmark_sg/final_pipeline_run.py` (recovered driver, re-run reproduces all 1,600 rows within LP tolerance and yields identical paper macros) |
 | `results/conformal/agnostic50/`, `main50/`, `budget50/`, `cmapss4/`, `risk50/` … | `src/saorl/experiments.py` (learning arms, 50 seeds per cell) |
-| `results/dsrl/**` | `src/saorl/dsrl_*.py` wrappers around the published offline safe-RL learners |
+| `results/dsrl/**` | `experiments/dsrl_learners/dsrl_sweep.py`, `dsrl_vector.py`, `dsrl_e3.py`, `dsrl_nondominated.py` (wrappers around the published OSRL/DSRL learners; the SLURM job files are omitted) |
 
