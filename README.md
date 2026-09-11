@@ -1,4 +1,4 @@
-# ARROW — code, archived results, and paper generators
+# Safe RL under ambiguous written rules — code, archived results, and paper generators
 
 Code and data behind *Ambiguity Relevance for Reinforcement Learning Over Written Rules (ARROW)*.
 Every number, table, and figure in the paper is produced by a script in this repository from an
@@ -33,12 +33,12 @@ checks them byte-for-byte against the fragments compiled into the submitted PDF.
 │   ├── safe_keep_final/, final_pipeline/   # SAFE-KEEP on 579 families and the fixed-data pipeline (Table 4)
 │   ├── theory_extension/      #   offline certificate on the 28 rules (Section 5.3)
 │   ├── paper_extra/, corpus_eval/, fragments/
-├── data/rule_corpora/         # the third-party rule files the pipeline reads, at pinned commits (see THIRD_PARTY_NOTICE.md)
+├── data/rule_corpora/         # the third-party rule files the pipeline reads, at pinned commits (NOTICE.md inside)
 ├── paper/
 │   ├── reference/             # the exact fragments (generated/) and figures (figure/) compiled into the PDF
 │   ├── generated/, figure/    # outputs of scripts/reproduce_paper.py (ignored by git)
 ├── tests/                     # unit tests (construction, gridworld, offline learner, C-MAPSS)
-├── pyproject.toml, requirements.txt, Makefile, conftest.py
+└── requirements.txt
 ```
 
 Naming: the method was called CORSET during development, so code, logs, and comments use
@@ -50,15 +50,17 @@ for the fresh-evaluation safety test.
 
 ```bash
 python3 -m venv .venv && . .venv/bin/activate
-pip install -e .              # numpy, scipy, matplotlib, PyYAML; installs src/ as packages
-pip install -e ".[learners]"  # torch, scikit-learn, pandas, only for re-running the learning arms
-make test                     # 22 unit tests
+pip install -r requirements.txt        # numpy, scipy, matplotlib, PyYAML
+export PYTHONPATH=src                  # the packages live in src/
+python3 -m pytest tests -q             # 22 unit tests
 ```
+
+Re-running the learning arms additionally needs `torch`, `scikit-learn`, and `pandas`.
 
 ## Reproducing the paper's tables and figures
 
 ```bash
-make reproduce                # = python3 scripts/reproduce_paper.py
+python3 scripts/reproduce_paper.py
 ```
 
 This runs the 30 generators in `scripts/paper/` in dependency order, writes the fragments to
@@ -70,7 +72,7 @@ figures regenerate (PDFs embed a timestamp, so they are not byte-compared). Run 
 ## Re-running experiments
 
 Every archived result lists its driver in the tables below. Drivers run from the repository
-root; after `pip install -e .` no `PYTHONPATH` is needed. For example
+root with `PYTHONPATH=src`. For example
 
 ```bash
 python3 src/saorl/benchmark_sg/policy_sufficiency.py      # exact ARROW verdicts behind Tables 1 and 2
