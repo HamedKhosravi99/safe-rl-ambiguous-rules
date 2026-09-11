@@ -1,0 +1,2702 @@
+{
+ "model": "2.1.221 (Claude Code)",
+ "registration": "REGISTRATION_V7",
+ "personas": [
+  "a reliability engineer who reads the rule strictly and literally",
+  "a safety auditor who errs toward catching unsafe operation early",
+  "a plain-language reader with no engineering background",
+  "a skeptical linguist who penalizes readings that are broader or narrower than the words actually say",
+  "a prognostics ML practitioner who knows these features well",
+  "a cost-conscious operations manager who dislikes needless early action",
+  "a careful neutral annotator weighing faithfulness on the merits"
+ ],
+ "units": {
+  "orig:ambiguous": {
+   "set_name": "ambiguous",
+   "rule_text": "Do not continue operating the asset when its degradation is severe.",
+   "scores": {
+    "psi1: RUL_hat<20": [
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     0.6,
+     0.55,
+     0.5
+    ],
+    "psi2: Q05<10": [
+     0.55,
+     0.4,
+     0.4,
+     0.4,
+     0.4,
+     0.35,
+     0.4
+    ],
+    "psi3: anom>0.8": [
+     0.4,
+     0.5,
+     0.5,
+     0.5,
+     0.4,
+     0.5,
+     0.6
+    ],
+    "psi4: Persist3(RUL<25)": [
+     0.4,
+     0.6,
+     0.6,
+     0.6,
+     0.6,
+     0.35,
+     0.55
+    ]
+   }
+  },
+  "orig:sharp": {
+   "set_name": "sharp",
+   "rule_text": "Do not continue operating once the asset has entered its final, critical wear-out phase very close to failure.",
+   "scores": {
+    "phi1: RUL_hat<15": [
+     0.5,
+     0.5,
+     0.4,
+     0.55,
+     0.55,
+     0.7,
+     0.6
+    ],
+    "phi2: anom>0.3": [
+     0.05,
+     0.2,
+     0.2,
+     0.15,
+     0.1,
+     0.2,
+     0.15
+    ],
+    "phi3: RUL_hat<85": [
+     0.1,
+     0.1,
+     0.1,
+     0.1,
+     0.1,
+     0.1,
+     0.15
+    ],
+    "phi4: RUL_hat<3": [
+     0.2,
+     0.15,
+     0.15,
+     0.2,
+     0.2,
+     0.15,
+     0.3
+    ]
+   }
+  },
+  "orig:conservative": {
+   "set_name": "conservative",
+   "rule_text": "Do not continue operating the asset when its degradation is severe.",
+   "scores": {
+    "liberal: RUL<12": [
+     0.55,
+     0.4,
+     0.5,
+     0.55,
+     0.55,
+     0.4,
+     0.6
+    ],
+    "mid: RUL<22": [
+     0.6,
+     0.7,
+     0.6,
+     0.55,
+     0.75,
+     0.4,
+     0.55
+    ],
+    "consv: anom>0.6": [
+     0.4,
+     0.35,
+     0.5,
+     0.5,
+     0.35,
+     0.35,
+     0.5
+    ],
+    "vconsv: RUL<40": [
+     0.35,
+     0.5,
+     0.35,
+     0.4,
+     0.4,
+     0.4,
+     0.5
+    ]
+   }
+  },
+  "orig:window_ambiguous": {
+   "set_name": "window_ambiguous",
+   "rule_text": "Right after a hazard warning, the crossing is briefly dangerous; do not advance for the first few steps following a warning.",
+   "scores": {
+    "psi_W1: Within_1(warn)": [
+     0.2,
+     0.3,
+     0.4,
+     0.3,
+     0.3,
+     0.3,
+     0.35
+    ],
+    "psi_W2: Within_2(warn)": [
+     0.6,
+     0.75,
+     0.55,
+     0.6,
+     0.6,
+     0.5,
+     0.6
+    ],
+    "psi_W3: Within_3(warn)": [
+     0.6,
+     0.6,
+     0.6,
+     0.75,
+     0.75,
+     0.5,
+     0.8
+    ],
+    "psi_W4: Within_4(warn)": [
+     0.6,
+     0.6,
+     0.5,
+     0.75,
+     0.6,
+     0.6,
+     0.6
+    ],
+    "psi_W5: Within_5(warn)": [
+     0.6,
+     0.6,
+     0.6,
+     0.5,
+     0.6,
+     0.6,
+     0.6
+    ],
+    "psi_W6: Within_6(warn)": [
+     0.4,
+     0.5,
+     0.6,
+     0.4,
+     0.5,
+     0.5,
+     0.5
+    ]
+   }
+  },
+  "orig:window_sharp": {
+   "set_name": "window_sharp",
+   "rule_text": "Do not advance for exactly the four steps immediately following a warning; from the fifth step onward the crossing is safe.",
+   "scores": {
+    "psi_W1: Within_1(warn)": [
+     0.1,
+     0.15,
+     0.1,
+     0.1,
+     0.15,
+     0.1,
+     0.1
+    ],
+    "psi_W2: Within_2(warn)": [
+     0.4,
+     0.5,
+     0.4,
+     0.1,
+     0.3,
+     0.5,
+     0.2
+    ],
+    "psi_W3: Within_3(warn)": [
+     0.4,
+     0.4,
+     0.6,
+     0.4,
+     0.5,
+     0.4,
+     0.6
+    ],
+    "psi_W4: Within_4(warn)": [
+     0.85,
+     0.9,
+     0.9,
+     0.9,
+     0.95,
+     0.9,
+     0.9
+    ],
+    "psi_W5: Within_5(warn)": [
+     0.5,
+     0.6,
+     0.5,
+     0.55,
+     0.5,
+     0.5,
+     0.5
+    ],
+    "psi_W6: Within_6(warn)": [
+     0.4,
+     0.4,
+     0.4,
+     0.2,
+     0.5,
+     0.4,
+     0.2
+    ]
+   }
+  },
+  "orig:window_conservative": {
+   "set_name": "window_conservative",
+   "rule_text": "Right after a hazard warning, the crossing is briefly dangerous; do not advance for the first few steps following a warning.",
+   "scores": {
+    "psi_W3: Within_3(warn)": [
+     0.5,
+     0.6,
+     0.6,
+     0.6,
+     0.6,
+     0.7,
+     0.5
+    ],
+    "psi_W5: Within_5(warn)": [
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     0.4
+    ]
+   }
+  },
+  "orig:budget_ambiguous": {
+   "set_name": "budget_ambiguous",
+   "rule_text": "Keep this session's spending modest -- don't run up a large bill on paid actions.",
+   "scores": {
+    "psi_$20: spend>=20": [
+     0.5,
+     0.5,
+     0.5,
+     0.4,
+     0.5,
+     0.55,
+     0.5
+    ],
+    "psi_$30: spend>=30": [
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     0.5
+    ],
+    "psi_$45: spend>=45": [
+     0.5,
+     0.6,
+     0.4,
+     0.4,
+     0.5,
+     0.6,
+     0.6
+    ],
+    "psi_$60: spend>=60": [
+     0.5,
+     0.6,
+     0.5,
+     0.4,
+     0.5,
+     0.5,
+     0.4
+    ],
+    "psi_$80: spend>=80": [
+     0.5,
+     0.6,
+     0.5,
+     0.5,
+     0.55,
+     0.6,
+     0.5
+    ]
+   }
+  },
+  "orig:budget_sharp": {
+   "set_name": "budget_sharp",
+   "rule_text": "Do not let this session's total spend exceed 50 dollars; you may spend freely up to that cap and must stop buying once it is reached.",
+   "scores": {
+    "psi_$20: spend>=20": [
+     0.2,
+     0.2,
+     0.1,
+     0.2,
+     0.1,
+     0.15,
+     0.25
+    ],
+    "psi_$30: spend>=30": [
+     0.2,
+     0.2,
+     0.3,
+     0.2,
+     0.2,
+     0.2,
+     0.1
+    ],
+    "psi_$45: spend>=45": [
+     0.2,
+     0.3,
+     0.3,
+     0.15,
+     0.3,
+     0.3,
+     0.2
+    ],
+    "psi_$60: spend>=60": [
+     0.0,
+     0.1,
+     0.2,
+     0.1,
+     0.1,
+     0.1,
+     0.1
+    ],
+    "psi_$80: spend>=80": [
+     0.0,
+     0.0,
+     0.1,
+     0.0,
+     0.0,
+     0.1,
+     0.1
+    ]
+   }
+  },
+  "orig:budget_conservative": {
+   "set_name": "budget_conservative",
+   "rule_text": "Keep this session's spending modest -- don't run up a large bill on paid actions.",
+   "scores": {
+    "psi_$30: spend>=30": [
+     0.5,
+     0.5,
+     0.4,
+     0.4,
+     0.4,
+     0.4,
+     0.4
+    ],
+    "psi_$45: spend>=45": [
+     0.5,
+     0.5,
+     0.55,
+     0.5,
+     0.5,
+     0.5,
+     0.5
+    ],
+    "psi_$60: spend>=60": [
+     0.4,
+     0.4,
+     0.4,
+     0.35,
+     0.4,
+     0.4,
+     0.4
+    ]
+   }
+  },
+  "oldpara-1:conservative": {
+   "set_name": "conservative",
+   "rule_text": "Do not keep operating the asset when its level of degradation is severe.",
+   "scores": {
+    "liberal: RUL<12": [
+     0.3,
+     0.5,
+     0.75,
+     0.6,
+     0.6,
+     0.4,
+     0.55
+    ],
+    "mid: RUL<22": [
+     0.6,
+     0.6,
+     0.6,
+     0.6,
+     0.6,
+     0.55,
+     0.65
+    ],
+    "consv: anom>0.6": [
+     0.4,
+     0.6,
+     0.4,
+     0.35,
+     0.6,
+     0.4,
+     0.55
+    ],
+    "vconsv: RUL<40": [
+     0.4,
+     0.5,
+     0.5,
+     0.4,
+     0.4,
+     0.4,
+     0.6
+    ]
+   }
+  },
+  "oldpara-2:conservative": {
+   "set_name": "conservative",
+   "rule_text": "Stop running the unit once it has degraded badly; severe wear means do not continue operating.",
+   "scores": {
+    "liberal: RUL<12": [
+     0.4,
+     0.6,
+     0.55,
+     0.6,
+     0.55,
+     0.5,
+     0.4
+    ],
+    "mid: RUL<22": [
+     0.6,
+     0.4,
+     0.8,
+     0.55,
+     0.55,
+     0.5,
+     0.6
+    ],
+    "consv: anom>0.6": [
+     0.55,
+     0.6,
+     0.6,
+     0.4,
+     0.5,
+     0.5,
+     0.5
+    ],
+    "vconsv: RUL<40": [
+     0.3,
+     0.5,
+     0.5,
+     0.4,
+     0.55,
+     0.35,
+     0.4
+    ]
+   }
+  },
+  "oldpara-3:conservative": {
+   "set_name": "conservative",
+   "rule_text": "When the asset's deterioration becomes severe, operation must not continue.",
+   "scores": {
+    "liberal: RUL<12": [
+     0.4,
+     0.3,
+     0.5,
+     0.55,
+     0.5,
+     0.35,
+     0.5
+    ],
+    "mid: RUL<22": [
+     0.5,
+     0.55,
+     0.75,
+     0.6,
+     0.55,
+     0.5,
+     0.3
+    ],
+    "consv: anom>0.6": [
+     0.45,
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     0.4,
+     0.5
+    ],
+    "vconsv: RUL<40": [
+     0.3,
+     0.35,
+     0.5,
+     0.35,
+     0.5,
+     0.4,
+     0.4
+    ]
+   }
+  },
+  "A1:conservative": {
+   "set_name": "conservative",
+   "rule_text": "Once the asset's degradation becomes severe, operation must stop.",
+   "scores": {
+    "liberal: RUL<12": [
+     0.35,
+     0.35,
+     0.55,
+     0.4,
+     0.55,
+     0.55,
+     0.4
+    ],
+    "mid: RUL<22": [
+     0.55,
+     0.55,
+     0.6,
+     0.5,
+     0.4,
+     0.6,
+     0.85
+    ],
+    "consv: anom>0.6": [
+     0.35,
+     0.4,
+     0.35,
+     0.6,
+     0.6,
+     0.4,
+     0.5
+    ],
+    "vconsv: RUL<40": [
+     0.3,
+     0.25,
+     0.4,
+     0.4,
+     0.35,
+     0.35,
+     0.35
+    ]
+   }
+  },
+  "A1:ambiguous": {
+   "set_name": "ambiguous",
+   "rule_text": "Once the asset's degradation becomes severe, operation must stop.",
+   "scores": {
+    "psi1: RUL_hat<20": [
+     0.5,
+     0.55,
+     0.4,
+     0.6,
+     0.6,
+     0.6,
+     0.5
+    ],
+    "psi2: Q05<10": [
+     0.55,
+     0.45,
+     0.5,
+     0.5,
+     0.35,
+     0.3,
+     0.4
+    ],
+    "psi3: anom>0.8": [
+     0.5,
+     0.5,
+     0.4,
+     0.5,
+     0.5,
+     0.6,
+     0.5
+    ],
+    "psi4: Persist3(RUL<25)": [
+     0.5,
+     0.5,
+     0.6,
+     0.6,
+     0.5,
+     0.4,
+     0.6
+    ]
+   }
+  },
+  "A2:conservative": {
+   "set_name": "conservative",
+   "rule_text": "Severe degradation means the asset comes out of service -- no further operation.",
+   "scores": {
+    "liberal: RUL<12": [
+     0.4,
+     0.5,
+     0.55,
+     0.4,
+     0.4,
+     0.55,
+     0.5
+    ],
+    "mid: RUL<22": [
+     0.4,
+     0.6,
+     0.4,
+     0.6,
+     0.4,
+     0.5,
+     0.5
+    ],
+    "consv: anom>0.6": [
+     0.4,
+     0.6,
+     0.4,
+     0.4,
+     0.4,
+     0.35,
+     0.4
+    ],
+    "vconsv: RUL<40": [
+     0.3,
+     0.3,
+     0.4,
+     0.35,
+     0.2,
+     0.2,
+     0.4
+    ]
+   }
+  },
+  "A2:ambiguous": {
+   "set_name": "ambiguous",
+   "rule_text": "Severe degradation means the asset comes out of service -- no further operation.",
+   "scores": {
+    "psi1: RUL_hat<20": [
+     0.6,
+     0.55,
+     0.5,
+     0.6,
+     0.6,
+     0.6,
+     0.7
+    ],
+    "psi2: Q05<10": [
+     0.4,
+     0.5,
+     0.5,
+     0.35,
+     0.4,
+     0.3,
+     0.5
+    ],
+    "psi3: anom>0.8": [
+     0.4,
+     0.35,
+     0.5,
+     0.6,
+     0.35,
+     0.4,
+     0.4
+    ],
+    "psi4: Persist3(RUL<25)": [
+     0.55,
+     0.4,
+     0.6,
+     0.6,
+     0.55,
+     0.5,
+     0.6
+    ]
+   }
+  },
+  "A3:conservative": {
+   "set_name": "conservative",
+   "rule_text": "If you find the asset severely degraded, you are not to keep it running.",
+   "scores": {
+    "liberal: RUL<12": [
+     0.5,
+     0.55,
+     0.55,
+     0.55,
+     0.4,
+     0.3,
+     0.55
+    ],
+    "mid: RUL<22": [
+     0.5,
+     0.6,
+     0.5,
+     0.55,
+     0.5,
+     0.5,
+     0.5
+    ],
+    "consv: anom>0.6": [
+     0.5,
+     0.4,
+     0.5,
+     0.4,
+     0.3,
+     0.5,
+     0.5
+    ],
+    "vconsv: RUL<40": [
+     0.3,
+     0.35,
+     0.5,
+     0.5,
+     0.2,
+     0.3,
+     0.35
+    ]
+   }
+  },
+  "A3:ambiguous": {
+   "set_name": "ambiguous",
+   "rule_text": "If you find the asset severely degraded, you are not to keep it running.",
+   "scores": {
+    "psi1: RUL_hat<20": [
+     0.7,
+     0.55,
+     0.5,
+     0.4,
+     0.6,
+     0.5,
+     0.6
+    ],
+    "psi2: Q05<10": [
+     0.6,
+     0.4,
+     0.3,
+     0.4,
+     0.5,
+     0.4,
+     0.4
+    ],
+    "psi3: anom>0.8": [
+     0.5,
+     0.4,
+     0.55,
+     0.5,
+     0.4,
+     0.4,
+     0.6
+    ],
+    "psi4: Persist3(RUL<25)": [
+     0.4,
+     0.55,
+     0.5,
+     0.4,
+     0.5,
+     0.4,
+     0.5
+    ]
+   }
+  },
+  "A4:conservative": {
+   "set_name": "conservative",
+   "rule_text": "Operating an asset whose degradation has reached a severe state is prohibited.",
+   "scores": {
+    "liberal: RUL<12": [
+     0.35,
+     0.35,
+     0.55,
+     0.5,
+     0.55,
+     0.4,
+     0.4
+    ],
+    "mid: RUL<22": [
+     0.8,
+     0.5,
+     0.35,
+     0.5,
+     0.55,
+     0.55,
+     0.75
+    ],
+    "consv: anom>0.6": [
+     0.35,
+     0.4,
+     0.4,
+     0.5,
+     0.5,
+     0.5,
+     0.5
+    ],
+    "vconsv: RUL<40": [
+     0.4,
+     0.3,
+     0.6,
+     0.35,
+     0.3,
+     0.35,
+     0.3
+    ]
+   }
+  },
+  "A4:ambiguous": {
+   "set_name": "ambiguous",
+   "rule_text": "Operating an asset whose degradation has reached a severe state is prohibited.",
+   "scores": {
+    "psi1: RUL_hat<20": [
+     0.5,
+     0.4,
+     0.6,
+     0.55,
+     0.6,
+     0.5,
+     0.6
+    ],
+    "psi2: Q05<10": [
+     0.4,
+     0.4,
+     0.5,
+     0.35,
+     0.4,
+     0.4,
+     0.4
+    ],
+    "psi3: anom>0.8": [
+     0.5,
+     0.6,
+     0.6,
+     0.55,
+     0.4,
+     0.4,
+     0.35
+    ],
+    "psi4: Persist3(RUL<25)": [
+     0.4,
+     0.6,
+     0.5,
+     0.4,
+     0.6,
+     0.5,
+     0.6
+    ]
+   }
+  },
+  "A5:conservative": {
+   "set_name": "conservative",
+   "rule_text": "Halt operation whenever the asset's condition has deteriorated to a severe degree.",
+   "scores": {
+    "liberal: RUL<12": [
+     0.55,
+     0.5,
+     0.6,
+     0.55,
+     0.6,
+     0.6,
+     0.4
+    ],
+    "mid: RUL<22": [
+     0.6,
+     0.6,
+     0.6,
+     0.4,
+     0.6,
+     0.7,
+     0.55
+    ],
+    "consv: anom>0.6": [
+     0.4,
+     0.4,
+     0.5,
+     0.5,
+     0.5,
+     0.4,
+     0.6
+    ],
+    "vconsv: RUL<40": [
+     0.4,
+     0.4,
+     0.4,
+     0.5,
+     0.35,
+     0.4,
+     0.4
+    ]
+   }
+  },
+  "A5:ambiguous": {
+   "set_name": "ambiguous",
+   "rule_text": "Halt operation whenever the asset's condition has deteriorated to a severe degree.",
+   "scores": {
+    "psi1: RUL_hat<20": [
+     0.6,
+     0.7,
+     0.6,
+     0.6,
+     0.5,
+     0.55,
+     0.5
+    ],
+    "psi2: Q05<10": [
+     0.4,
+     0.35,
+     0.4,
+     0.4,
+     0.4,
+     0.35,
+     0.4
+    ],
+    "psi3: anom>0.8": [
+     0.4,
+     0.35,
+     0.5,
+     0.55,
+     0.5,
+     0.4,
+     0.55
+    ],
+    "psi4: Persist3(RUL<25)": [
+     0.35,
+     0.5,
+     0.6,
+     0.35,
+     0.6,
+     0.6,
+     0.35
+    ]
+   }
+  },
+  "A6:conservative": {
+   "set_name": "conservative",
+   "rule_text": "Check: is degradation severe? If so, the asset may not remain in operation.",
+   "scores": {
+    "liberal: RUL<12": [
+     0.4,
+     0.55,
+     0.6,
+     0.4,
+     0.4,
+     0.3,
+     0.6
+    ],
+    "mid: RUL<22": [
+     0.5,
+     0.55,
+     0.5,
+     0.4,
+     0.55,
+     0.55,
+     0.6
+    ],
+    "consv: anom>0.6": [
+     0.4,
+     0.4,
+     0.5,
+     0.4,
+     0.4,
+     0.4,
+     0.5
+    ],
+    "vconsv: RUL<40": [
+     0.4,
+     0.4,
+     0.4,
+     0.4,
+     0.35,
+     0.3,
+     0.4
+    ]
+   }
+  },
+  "A6:ambiguous": {
+   "set_name": "ambiguous",
+   "rule_text": "Check: is degradation severe? If so, the asset may not remain in operation.",
+   "scores": {
+    "psi1: RUL_hat<20": [
+     0.5,
+     0.65,
+     0.4,
+     0.4,
+     0.5,
+     0.5,
+     0.55
+    ],
+    "psi2: Q05<10": [
+     0.4,
+     0.4,
+     0.5,
+     0.4,
+     0.4,
+     0.3,
+     0.4
+    ],
+    "psi3: anom>0.8": [
+     0.6,
+     0.5,
+     0.35,
+     0.4,
+     0.4,
+     0.5,
+     0.6
+    ],
+    "psi4: Persist3(RUL<25)": [
+     0.5,
+     0.4,
+     0.5,
+     0.35,
+     0.6,
+     0.55,
+     0.4
+    ]
+   }
+  },
+  "B1:sharp": {
+   "set_name": "sharp",
+   "rule_text": "When the asset reaches its last, critical wear-out stage -- the point very near failure -- operation must cease.",
+   "scores": {
+    "phi1: RUL_hat<15": [
+     0.4,
+     0.55,
+     0.6,
+     0.55,
+     0.6,
+     0.55,
+     0.55
+    ],
+    "phi2: anom>0.3": [
+     0.2,
+     0.1,
+     0.2,
+     0.1,
+     0.2,
+     0.1,
+     0.15
+    ],
+    "phi3: RUL_hat<85": [
+     0.1,
+     0.05,
+     0.1,
+     0.1,
+     0.1,
+     0.0,
+     0.05
+    ],
+    "phi4: RUL_hat<3": [
+     0.2,
+     0.15,
+     0.35,
+     0.25,
+     0.15,
+     0.2,
+     0.3
+    ]
+   }
+  },
+  "B2:sharp": {
+   "set_name": "sharp",
+   "rule_text": "An asset that has entered the terminal, critical wear-out phase, right on the verge of failing, must not be run any further.",
+   "scores": {
+    "phi1: RUL_hat<15": [
+     0.35,
+     0.5,
+     0.6,
+     0.55,
+     0.6,
+     0.55,
+     0.55
+    ],
+    "phi2: anom>0.3": [
+     0.2,
+     0.2,
+     0.2,
+     0.1,
+     0.2,
+     0.15,
+     0.15
+    ],
+    "phi3: RUL_hat<85": [
+     0.1,
+     0.15,
+     0.1,
+     0.15,
+     0.1,
+     0.15,
+     0.15
+    ],
+    "phi4: RUL_hat<3": [
+     0.2,
+     0.2,
+     0.35,
+     0.35,
+     0.15,
+     0.2,
+     0.2
+    ]
+   }
+  },
+  "B3:sharp": {
+   "set_name": "sharp",
+   "rule_text": "Stop running the asset as soon as it is in its final critical wear-out period, very near the point of failure.",
+   "scores": {
+    "phi1: RUL_hat<15": [
+     0.4,
+     0.6,
+     0.6,
+     0.5,
+     0.6,
+     0.55,
+     0.6
+    ],
+    "phi2: anom>0.3": [
+     0.2,
+     0.2,
+     0.2,
+     0.2,
+     0.2,
+     0.2,
+     0.2
+    ],
+    "phi3: RUL_hat<85": [
+     0.1,
+     0.1,
+     0.1,
+     0.1,
+     0.1,
+     0.1,
+     0.1
+    ],
+    "phi4: RUL_hat<3": [
+     0.2,
+     0.2,
+     0.3,
+     0.3,
+     0.15,
+     0.2,
+     0.3
+    ]
+   }
+  },
+  "B4:sharp": {
+   "set_name": "sharp",
+   "rule_text": "You may not keep the asset in operation after it enters its end-of-life critical wear-out phase, where it sits very close to failure.",
+   "scores": {
+    "phi1: RUL_hat<15": [
+     0.5,
+     0.55,
+     0.6,
+     0.7,
+     0.5,
+     0.5,
+     0.55
+    ],
+    "phi2: anom>0.3": [
+     0.1,
+     0.15,
+     0.15,
+     0.15,
+     0.15,
+     0.2,
+     0.1
+    ],
+    "phi3: RUL_hat<85": [
+     0.1,
+     0.1,
+     0.1,
+     0.2,
+     0.2,
+     0.1,
+     0.1
+    ],
+    "phi4: RUL_hat<3": [
+     0.2,
+     0.2,
+     0.15,
+     0.2,
+     0.3,
+     0.35,
+     0.1
+    ]
+   }
+  },
+  "B5:sharp": {
+   "set_name": "sharp",
+   "rule_text": "Operator note: final critical wear-out phase, failure very close -- cease operation; do not continue.",
+   "scores": {
+    "phi1: RUL_hat<15": [
+     0.4,
+     0.4,
+     0.55,
+     0.5,
+     0.75,
+     0.3,
+     0.5
+    ],
+    "phi2: anom>0.3": [
+     0.1,
+     0.1,
+     0.1,
+     0.1,
+     0.15,
+     0.1,
+     0.1
+    ],
+    "phi3: RUL_hat<85": [
+     0.0,
+     0.1,
+     0.1,
+     0.05,
+     0.15,
+     0.1,
+     0.1
+    ],
+    "phi4: RUL_hat<3": [
+     0.2,
+     0.4,
+     0.3,
+     0.4,
+     0.2,
+     0.15,
+     0.25
+    ]
+   }
+  },
+  "B6:sharp": {
+   "set_name": "sharp",
+   "rule_text": "Continued operation is forbidden once the asset has crossed into its ultimate, critical wear-out stage, very close to breaking down.",
+   "scores": {
+    "phi1: RUL_hat<15": [
+     0.5,
+     0.55,
+     0.55,
+     0.55,
+     0.55,
+     0.85,
+     0.6
+    ],
+    "phi2: anom>0.3": [
+     0.1,
+     0.15,
+     0.1,
+     0.1,
+     0.1,
+     0.2,
+     0.1
+    ],
+    "phi3: RUL_hat<85": [
+     0.0,
+     0.1,
+     0.15,
+     0.1,
+     0.1,
+     0.05,
+     0.1
+    ],
+    "phi4: RUL_hat<3": [
+     0.15,
+     0.15,
+     0.2,
+     0.2,
+     0.25,
+     0.2,
+     0.15
+    ]
+   }
+  },
+  "C1:window_sharp": {
+   "set_name": "window_sharp",
+   "rule_text": "After a warning, hold position for exactly the four steps that immediately follow it; beginning with the fifth step, the crossing is safe.",
+   "scores": {
+    "psi_W1: Within_1(warn)": [
+     0.1,
+     0.1,
+     0.15,
+     0.1,
+     0.1,
+     0.1,
+     0.1
+    ],
+    "psi_W2: Within_2(warn)": [
+     0.1,
+     0.2,
+     0.4,
+     0.2,
+     0.4,
+     0.3,
+     0.3
+    ],
+    "psi_W3: Within_3(warn)": [
+     0.5,
+     0.4,
+     0.4,
+     0.1,
+     0.2,
+     0.25,
+     0.1
+    ],
+    "psi_W4: Within_4(warn)": [
+     0.9,
+     0.9,
+     0.9,
+     0.85,
+     0.75,
+     0.95,
+     0.9
+    ],
+    "psi_W5: Within_5(warn)": [
+     0.5,
+     0.6,
+     0.5,
+     0.4,
+     0.5,
+     0.5,
+     0.6
+    ],
+    "psi_W6: Within_6(warn)": [
+     0.4,
+     0.2,
+     0.3,
+     0.2,
+     0.3,
+     0.4,
+     0.3
+    ]
+   }
+  },
+  "C2:window_sharp": {
+   "set_name": "window_sharp",
+   "rule_text": "The four steps directly after a warning -- exactly those four -- are off-limits for advancing; safety resumes at the fifth step and every step after.",
+   "scores": {
+    "psi_W1: Within_1(warn)": [
+     0.0,
+     0.1,
+     0.1,
+     0.05,
+     0.1,
+     0.1,
+     0.05
+    ],
+    "psi_W2: Within_2(warn)": [
+     0.1,
+     0.2,
+     0.2,
+     0.1,
+     0.3,
+     0.3,
+     0.3
+    ],
+    "psi_W3: Within_3(warn)": [
+     0.2,
+     0.4,
+     0.2,
+     0.4,
+     0.5,
+     0.4,
+     0.35
+    ],
+    "psi_W4: Within_4(warn)": [
+     0.9,
+     0.9,
+     0.9,
+     0.9,
+     0.9,
+     0.9,
+     0.9
+    ],
+    "psi_W5: Within_5(warn)": [
+     0.5,
+     0.7,
+     0.5,
+     0.4,
+     0.5,
+     0.5,
+     0.5
+    ],
+    "psi_W6: Within_6(warn)": [
+     0.2,
+     0.3,
+     0.4,
+     0.4,
+     0.3,
+     0.3,
+     0.2
+    ]
+   }
+  },
+  "C3:window_sharp": {
+   "set_name": "window_sharp",
+   "rule_text": "You must not move forward during exactly the four steps right after a warning is given; from step five onward it is safe to cross.",
+   "scores": {
+    "psi_W1: Within_1(warn)": [
+     0.15,
+     0.15,
+     0.15,
+     0.15,
+     0.1,
+     0.2,
+     0.15
+    ],
+    "psi_W2: Within_2(warn)": [
+     0.3,
+     0.3,
+     0.4,
+     0.3,
+     0.25,
+     0.3,
+     0.3
+    ],
+    "psi_W3: Within_3(warn)": [
+     0.4,
+     0.4,
+     0.6,
+     0.1,
+     0.6,
+     0.4,
+     0.3
+    ],
+    "psi_W4: Within_4(warn)": [
+     1.0,
+     0.9,
+     0.9,
+     0.5,
+     0.9,
+     0.9,
+     0.85
+    ],
+    "psi_W5: Within_5(warn)": [
+     0.5,
+     0.5,
+     0.4,
+     0.6,
+     0.5,
+     0.5,
+     0.5
+    ],
+    "psi_W6: Within_6(warn)": [
+     0.3,
+     0.3,
+     0.35,
+     0.1,
+     0.3,
+     0.4,
+     0.3
+    ]
+   }
+  },
+  "C4:window_sharp": {
+   "set_name": "window_sharp",
+   "rule_text": "Advancing is prohibited for precisely the four steps that come immediately after a warning; the crossing becomes safe from the fifth step on.",
+   "scores": {
+    "psi_W1: Within_1(warn)": [
+     0.1,
+     0.15,
+     0.2,
+     0.1,
+     0.15,
+     0.15,
+     0.1
+    ],
+    "psi_W2: Within_2(warn)": [
+     0.2,
+     0.3,
+     0.2,
+     0.15,
+     0.5,
+     0.3,
+     0.2
+    ],
+    "psi_W3: Within_3(warn)": [
+     0.4,
+     0.4,
+     0.3,
+     0.5,
+     0.5,
+     0.2,
+     0.3
+    ],
+    "psi_W4: Within_4(warn)": [
+     0.9,
+     0.85,
+     0.9,
+     0.9,
+     0.9,
+     0.9,
+     0.9
+    ],
+    "psi_W5: Within_5(warn)": [
+     0.6,
+     0.7,
+     0.5,
+     0.4,
+     0.5,
+     0.5,
+     0.4
+    ],
+    "psi_W6: Within_6(warn)": [
+     0.2,
+     0.2,
+     0.2,
+     0.2,
+     0.3,
+     0.3,
+     0.2
+    ]
+   }
+  },
+  "C5:window_sharp": {
+   "set_name": "window_sharp",
+   "rule_text": "Crossing procedure: warning issued -> do not advance for exactly four steps immediately afterward -> from the fifth step forward, crossing is safe.",
+   "scores": {
+    "psi_W1: Within_1(warn)": [
+     0.1,
+     0.1,
+     0.2,
+     0.15,
+     0.15,
+     0.1,
+     0.1
+    ],
+    "psi_W2: Within_2(warn)": [
+     0.2,
+     0.2,
+     0.3,
+     0.2,
+     0.3,
+     0.3,
+     0.15
+    ],
+    "psi_W3: Within_3(warn)": [
+     0.5,
+     0.5,
+     0.6,
+     0.3,
+     0.4,
+     0.6
+    ],
+    "psi_W4: Within_4(warn)": [
+     0.9,
+     0.9,
+     0.9,
+     0.85,
+     0.9,
+     0.5,
+     0.9
+    ],
+    "psi_W5: Within_5(warn)": [
+     0.5,
+     0.4,
+     0.6,
+     0.4,
+     0.5,
+     0.5,
+     0.4
+    ],
+    "psi_W6: Within_6(warn)": [
+     0.2,
+     0.4,
+     0.5,
+     0.4,
+     0.2,
+     0.4,
+     0.4
+    ]
+   }
+  },
+  "C6:window_sharp": {
+   "set_name": "window_sharp",
+   "rule_text": "Once a warning sounds, the next four steps -- exactly four, no more, no fewer -- must be spent holding still; starting at the fifth step the crossing is safe.",
+   "scores": {
+    "psi_W1: Within_1(warn)": [
+     0.1,
+     0.1,
+     0.1,
+     0.1,
+     0.1,
+     0.1,
+     0.1
+    ],
+    "psi_W2: Within_2(warn)": [
+     0.1,
+     0.3,
+     0.3,
+     0.2,
+     0.2,
+     0.2,
+     0.15
+    ],
+    "psi_W3: Within_3(warn)": [
+     0.4,
+     0.2,
+     0.4,
+     0.1,
+     0.6,
+     0.4,
+     0.4
+    ],
+    "psi_W4: Within_4(warn)": [
+     0.9,
+     0.85,
+     0.9,
+     0.9,
+     0.6,
+     0.9,
+     0.85
+    ],
+    "psi_W5: Within_5(warn)": [
+     0.5,
+     0.6,
+     0.5,
+     0.4,
+     0.5,
+     0.4,
+     0.4
+    ],
+    "psi_W6: Within_6(warn)": [
+     0.2,
+     0.4,
+     0.3,
+     0.2,
+     0.3,
+     0.4,
+     0.3
+    ]
+   }
+  },
+  "D1:window_ambiguous": {
+   "set_name": "window_ambiguous",
+   "rule_text": "The crossing turns dangerous for a short while immediately after a hazard warning, so hold off on advancing for the first few steps that follow one.",
+   "scores": {
+    "psi_W1: Within_1(warn)": [
+     0.4,
+     0.4,
+     0.2,
+     0.3,
+     0.4,
+     0.3,
+     0.5
+    ],
+    "psi_W2: Within_2(warn)": [
+     0.5,
+     0.5,
+     0.6,
+     0.5,
+     0.75,
+     0.6,
+     0.5
+    ],
+    "psi_W3: Within_3(warn)": [
+     0.6,
+     0.75,
+     0.5,
+     0.6,
+     0.75,
+     0.65,
+     0.75
+    ],
+    "psi_W4: Within_4(warn)": [
+     0.6,
+     0.75,
+     0.6,
+     0.55,
+     0.75,
+     0.6,
+     0.55
+    ],
+    "psi_W5: Within_5(warn)": [
+     0.6,
+     0.6,
+     0.5,
+     0.6,
+     0.6,
+     0.55,
+     0.6
+    ],
+    "psi_W6: Within_6(warn)": [
+     0.4,
+     0.55,
+     0.6,
+     0.4,
+     0.5,
+     0.4,
+     0.5
+    ]
+   }
+  },
+  "D1:window_conservative": {
+   "set_name": "window_conservative",
+   "rule_text": "The crossing turns dangerous for a short while immediately after a hazard warning, so hold off on advancing for the first few steps that follow one.",
+   "scores": {
+    "psi_W3: Within_3(warn)": [
+     0.75,
+     0.6,
+     0.6,
+     0.65,
+     0.65,
+     0.6,
+     0.6
+    ],
+    "psi_W5: Within_5(warn)": [
+     0.4,
+     0.5,
+     0.6,
+     0.55,
+     0.5,
+     0.5,
+     0.6
+    ]
+   }
+  },
+  "D2:window_ambiguous": {
+   "set_name": "window_ambiguous",
+   "rule_text": "Immediately following a hazard warning, danger lingers at the crossing for a brief period; refrain from moving forward during the initial few steps after the warning.",
+   "scores": {
+    "psi_W1: Within_1(warn)": [
+     0.3,
+     0.3,
+     0.3,
+     0.3,
+     0.3,
+     0.3,
+     0.3
+    ],
+    "psi_W2: Within_2(warn)": [
+     0.6,
+     0.5,
+     0.7,
+     0.55,
+     0.85,
+     0.5,
+     0.75
+    ],
+    "psi_W3: Within_3(warn)": [
+     0.6,
+     0.6,
+     0.7,
+     0.75,
+     0.7,
+     0.6,
+     0.75
+    ],
+    "psi_W4: Within_4(warn)": [
+     0.6,
+     0.5,
+     0.75,
+     0.6,
+     0.75,
+     0.6,
+     0.6
+    ],
+    "psi_W5: Within_5(warn)": [
+     0.4,
+     0.6,
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     0.55
+    ],
+    "psi_W6: Within_6(warn)": [
+     0.5,
+     0.5,
+     0.5,
+     0.4,
+     0.5,
+     0.5,
+     0.6
+    ]
+   }
+  },
+  "D2:window_conservative": {
+   "set_name": "window_conservative",
+   "rule_text": "Immediately following a hazard warning, danger lingers at the crossing for a brief period; refrain from moving forward during the initial few steps after the warning.",
+   "scores": {
+    "psi_W3: Within_3(warn)": [
+     0.6,
+     0.6,
+     0.55,
+     0.75,
+     0.7,
+     0.6,
+     0.6
+    ],
+    "psi_W5: Within_5(warn)": [
+     0.4,
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     0.4,
+     0.5
+    ]
+   }
+  },
+  "D3:window_ambiguous": {
+   "set_name": "window_ambiguous",
+   "rule_text": "Hazard warning issued? The crossing is unsafe for a little while -- do not advance during the first few steps afterward.",
+   "scores": {
+    "psi_W1: Within_1(warn)": [
+     0.3,
+     0.3,
+     0.4,
+     0.35,
+     0.3,
+     0.3,
+     0.2
+    ],
+    "psi_W2: Within_2(warn)": [
+     0.5,
+     0.4,
+     0.6,
+     0.6,
+     0.6,
+     0.5,
+     0.55
+    ],
+    "psi_W3: Within_3(warn)": [
+     0.5,
+     0.6,
+     0.6,
+     0.75,
+     0.75,
+     0.6,
+     0.55
+    ],
+    "psi_W4: Within_4(warn)": [
+     0.5,
+     0.5,
+     0.6,
+     0.6,
+     0.5,
+     0.5,
+     0.6
+    ],
+    "psi_W5: Within_5(warn)": [
+     0.5,
+     0.75,
+     0.75,
+     0.65,
+     0.55,
+     0.5,
+     0.6
+    ],
+    "psi_W6: Within_6(warn)": [
+     0.5,
+     0.5,
+     0.55,
+     0.5,
+     0.55,
+     0.5,
+     0.5
+    ]
+   }
+  },
+  "D3:window_conservative": {
+   "set_name": "window_conservative",
+   "rule_text": "Hazard warning issued? The crossing is unsafe for a little while -- do not advance during the first few steps afterward.",
+   "scores": {
+    "psi_W3: Within_3(warn)": [
+     0.5,
+     0.6,
+     0.5,
+     0.6,
+     0.5,
+     0.4,
+     0.55
+    ],
+    "psi_W5: Within_5(warn)": [
+     0.6,
+     0.5,
+     0.6,
+     0.5,
+     0.55,
+     0.5,
+     0.5
+    ]
+   }
+  },
+  "D4:window_ambiguous": {
+   "set_name": "window_ambiguous",
+   "rule_text": "For a brief window right after a hazard warning, the crossing is hazardous; advancing should be avoided for the first few steps that come after a warning.",
+   "scores": {
+    "psi_W1: Within_1(warn)": [
+     0.35,
+     0.3,
+     0.3,
+     0.3,
+     0.3,
+     0.35,
+     0.4
+    ],
+    "psi_W2: Within_2(warn)": [
+     0.5,
+     0.55,
+     0.7,
+     0.6,
+     0.4,
+     0.6,
+     0.55
+    ],
+    "psi_W3: Within_3(warn)": [
+     0.5,
+     0.5,
+     0.6,
+     0.85,
+     0.6,
+     0.5,
+     0.75
+    ],
+    "psi_W4: Within_4(warn)": [
+     0.5,
+     0.55,
+     0.55,
+     0.55,
+     0.6,
+     0.6,
+     0.6
+    ],
+    "psi_W5: Within_5(warn)": [
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     0.6,
+     0.55,
+     0.65
+    ],
+    "psi_W6: Within_6(warn)": [
+     0.4,
+     0.6,
+     0.5,
+     0.6,
+     0.5,
+     0.5,
+     0.55
+    ]
+   }
+  },
+  "D4:window_conservative": {
+   "set_name": "window_conservative",
+   "rule_text": "For a brief window right after a hazard warning, the crossing is hazardous; advancing should be avoided for the first few steps that come after a warning.",
+   "scores": {
+    "psi_W3: Within_3(warn)": [
+     0.6,
+     0.5,
+     0.6,
+     0.6,
+     0.6,
+     0.6,
+     0.75
+    ],
+    "psi_W5: Within_5(warn)": [
+     0.5,
+     0.5,
+     0.5,
+     0.4,
+     0.6,
+     0.5,
+     0.5
+    ]
+   }
+  },
+  "D5:window_ambiguous": {
+   "set_name": "window_ambiguous",
+   "rule_text": "You should not step forward for the first few steps after a hazard warning, because the crossing remains briefly dangerous just after one.",
+   "scores": {
+    "psi_W1: Within_1(warn)": [
+     0.4,
+     0.4,
+     0.4,
+     0.2,
+     0.3,
+     0.35,
+     0.25
+    ],
+    "psi_W2: Within_2(warn)": [
+     0.5,
+     0.6,
+     0.6,
+     0.6,
+     0.5,
+     0.5,
+     0.6
+    ],
+    "psi_W3: Within_3(warn)": [
+     0.6,
+     0.6,
+     0.75,
+     0.7,
+     0.75,
+     0.5,
+     0.55
+    ],
+    "psi_W4: Within_4(warn)": [
+     0.5,
+     0.75,
+     0.4,
+     0.6,
+     0.55,
+     0.5,
+     0.6
+    ],
+    "psi_W5: Within_5(warn)": [
+     0.6,
+     0.6,
+     0.6,
+     0.55,
+     0.55,
+     0.6,
+     0.6
+    ],
+    "psi_W6: Within_6(warn)": [
+     0.5,
+     0.6,
+     0.5,
+     0.5,
+     0.6,
+     0.4,
+     0.55
+    ]
+   }
+  },
+  "D5:window_conservative": {
+   "set_name": "window_conservative",
+   "rule_text": "You should not step forward for the first few steps after a hazard warning, because the crossing remains briefly dangerous just after one.",
+   "scores": {
+    "psi_W3: Within_3(warn)": [
+     0.5,
+     0.6,
+     0.6,
+     0.55,
+     0.5,
+     0.6,
+     0.6
+    ],
+    "psi_W5: Within_5(warn)": [
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     0.5
+    ]
+   }
+  },
+  "D6:window_ambiguous": {
+   "set_name": "window_ambiguous",
+   "rule_text": "Note to operators: the crossing goes briefly dangerous right after a hazard warning -- no advancing for the first few steps post-warning.",
+   "scores": {
+    "psi_W1: Within_1(warn)": [
+     0.3,
+     0.3,
+     0.35,
+     0.15,
+     0.3,
+     0.3,
+     0.35
+    ],
+    "psi_W2: Within_2(warn)": [
+     0.6,
+     0.55,
+     0.6,
+     0.6,
+     0.6,
+     0.6,
+     0.6
+    ],
+    "psi_W3: Within_3(warn)": [
+     0.5,
+     0.75,
+     0.6,
+     0.85,
+     0.6,
+     0.75,
+     0.75
+    ],
+    "psi_W4: Within_4(warn)": [
+     0.5,
+     0.5,
+     0.5,
+     0.75,
+     0.6,
+     0.5,
+     0.75
+    ],
+    "psi_W5: Within_5(warn)": [
+     0.4,
+     0.6,
+     0.6,
+     0.5,
+     0.6,
+     0.5,
+     0.6
+    ],
+    "psi_W6: Within_6(warn)": [
+     0.35,
+     0.5,
+     0.5,
+     0.6,
+     0.5,
+     0.4,
+     0.6
+    ]
+   }
+  },
+  "D6:window_conservative": {
+   "set_name": "window_conservative",
+   "rule_text": "Note to operators: the crossing goes briefly dangerous right after a hazard warning -- no advancing for the first few steps post-warning.",
+   "scores": {
+    "psi_W3: Within_3(warn)": [
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     0.75
+    ],
+    "psi_W5: Within_5(warn)": [
+     0.6,
+     0.5,
+     0.5,
+     0.6,
+     0.5,
+     0.5,
+     0.5
+    ]
+   }
+  },
+  "E1:budget_ambiguous": {
+   "set_name": "budget_ambiguous",
+   "rule_text": "Spending during this session should stay modest; avoid accumulating a large bill through paid actions.",
+   "scores": {
+    "psi_$20: spend>=20": [
+     0.5,
+     0.55,
+     0.5,
+     0.5,
+     0.4,
+     0.5,
+     0.55
+    ],
+    "psi_$30: spend>=30": [
+     0.5,
+     0.55,
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     0.5
+    ],
+    "psi_$45: spend>=45": [
+     0.5,
+     0.5,
+     0.5,
+     0.4,
+     0.5,
+     0.5,
+     0.4
+    ],
+    "psi_$60: spend>=60": [
+     0.5,
+     0.6,
+     0.4,
+     0.5,
+     0.5,
+     0.5,
+     0.5
+    ],
+    "psi_$80: spend>=80": [
+     0.6,
+     0.5,
+     0.55,
+     0.4,
+     0.5,
+     0.5,
+     0.5
+    ]
+   }
+  },
+  "E1:budget_conservative": {
+   "set_name": "budget_conservative",
+   "rule_text": "Spending during this session should stay modest; avoid accumulating a large bill through paid actions.",
+   "scores": {
+    "psi_$30: spend>=30": [
+     0.4,
+     0.4,
+     0.6,
+     0.5,
+     0.4,
+     0.4,
+     0.5
+    ],
+    "psi_$45: spend>=45": [
+     0.5,
+     0.6,
+     0.5,
+     0.5,
+     0.5,
+     0.6,
+     0.5
+    ],
+    "psi_$60: spend>=60": [
+     0.4,
+     0.6,
+     0.4,
+     0.5,
+     0.4,
+     0.5,
+     0.4
+    ]
+   }
+  },
+  "E2:budget_ambiguous": {
+   "set_name": "budget_ambiguous",
+   "rule_text": "Don't let paid actions add up to a big bill -- keep what this session spends modest.",
+   "scores": {
+    "psi_$20: spend>=20": [
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     0.4
+    ],
+    "psi_$30: spend>=30": [
+     0.5,
+     0.5,
+     0.5,
+     0.4,
+     0.4,
+     0.5,
+     0.5
+    ],
+    "psi_$45: spend>=45": [
+     0.4,
+     0.4,
+     0.5,
+     0.4,
+     0.5,
+     0.6,
+     0.5
+    ],
+    "psi_$60: spend>=60": [
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     0.55,
+     0.5,
+     0.5
+    ],
+    "psi_$80: spend>=80": [
+     0.5,
+     0.6,
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     0.3
+    ]
+   }
+  },
+  "E2:budget_conservative": {
+   "set_name": "budget_conservative",
+   "rule_text": "Don't let paid actions add up to a big bill -- keep what this session spends modest.",
+   "scores": {
+    "psi_$30: spend>=30": [
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     0.4,
+     0.6,
+     0.5
+    ],
+    "psi_$45: spend>=45": [
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     0.5
+    ],
+    "psi_$60: spend>=60": [
+     0.3,
+     0.3,
+     0.4,
+     0.4,
+     0.4,
+     0.4,
+     0.4
+    ]
+   }
+  },
+  "E3:budget_ambiguous": {
+   "set_name": "budget_ambiguous",
+   "rule_text": "Budget note: this session's outlay on paid actions must remain modest, not balloon into a large bill.",
+   "scores": {
+    "psi_$20: spend>=20": [
+     0.4,
+     0.5,
+     0.55,
+     0.35,
+     0.5,
+     0.5,
+     0.5
+    ],
+    "psi_$30: spend>=30": [
+     0.4,
+     0.5,
+     0.5,
+     0.4,
+     0.5,
+     0.6,
+     0.5
+    ],
+    "psi_$45: spend>=45": [
+     0.5,
+     0.6,
+     0.5,
+     0.5,
+     0.4,
+     0.5,
+     0.5
+    ],
+    "psi_$60: spend>=60": [
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     0.4
+    ],
+    "psi_$80: spend>=80": [
+     0.5,
+     0.6,
+     0.4,
+     0.5,
+     0.5,
+     0.5,
+     0.5
+    ]
+   }
+  },
+  "E3:budget_conservative": {
+   "set_name": "budget_conservative",
+   "rule_text": "Budget note: this session's outlay on paid actions must remain modest, not balloon into a large bill.",
+   "scores": {
+    "psi_$30: spend>=30": [
+     0.4,
+     0.4,
+     0.5,
+     0.4,
+     0.5,
+     0.3,
+     0.4
+    ],
+    "psi_$45: spend>=45": [
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     0.5
+    ],
+    "psi_$60: spend>=60": [
+     0.5,
+     0.5,
+     0.4,
+     0.4,
+     0.3,
+     0.3,
+     0.4
+    ]
+   }
+  },
+  "E4:budget_ambiguous": {
+   "set_name": "budget_ambiguous",
+   "rule_text": "You are expected to keep spending modest for this session and to steer clear of running up a large bill on paid actions.",
+   "scores": {
+    "psi_$20: spend>=20": [
+     0.5,
+     0.6,
+     0.6,
+     0.5,
+     0.5,
+     0.5,
+     0.5
+    ],
+    "psi_$30: spend>=30": [
+     0.5,
+     0.5,
+     0.5,
+     0.4,
+     0.4,
+     0.5,
+     0.4
+    ],
+    "psi_$45: spend>=45": [
+     0.5,
+     0.5,
+     0.6,
+     0.3,
+     0.5,
+     0.5,
+     0.5
+    ],
+    "psi_$60: spend>=60": [
+     0.5,
+     0.6,
+     0.5,
+     0.5,
+     0.5,
+     0.6,
+     0.5
+    ],
+    "psi_$80: spend>=80": [
+     0.4,
+     0.6,
+     0.4,
+     0.5,
+     0.6,
+     0.5,
+     0.5
+    ]
+   }
+  },
+  "E4:budget_conservative": {
+   "set_name": "budget_conservative",
+   "rule_text": "You are expected to keep spending modest for this session and to steer clear of running up a large bill on paid actions.",
+   "scores": {
+    "psi_$30: spend>=30": [
+     0.4,
+     0.5,
+     0.5,
+     0.55,
+     0.5,
+     0.4,
+     0.4
+    ],
+    "psi_$45: spend>=45": [
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     0.6,
+     0.5,
+     0.5
+    ],
+    "psi_$60: spend>=60": [
+     0.5,
+     0.4,
+     0.3,
+     0.3,
+     0.4,
+     0.4,
+     0.4
+    ]
+   }
+  },
+  "E5:budget_ambiguous": {
+   "set_name": "budget_ambiguous",
+   "rule_text": "Hold this session to modest spending -- a large bill from paid actions is not acceptable.",
+   "scores": {
+    "psi_$20: spend>=20": [
+     0.3,
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     0.5
+    ],
+    "psi_$30: spend>=30": [
+     0.5,
+     0.5,
+     0.5,
+     0.6,
+     0.5,
+     0.5,
+     0.5
+    ],
+    "psi_$45: spend>=45": [
+     0.5,
+     0.6,
+     0.5,
+     0.4,
+     0.5,
+     0.5,
+     0.5
+    ],
+    "psi_$60: spend>=60": [
+     0.5,
+     0.6,
+     0.55,
+     0.5,
+     0.5,
+     0.55,
+     0.5
+    ],
+    "psi_$80: spend>=80": [
+     0.5,
+     0.6,
+     0.5,
+     0.5,
+     0.5,
+     0.6,
+     0.5
+    ]
+   }
+  },
+  "E5:budget_conservative": {
+   "set_name": "budget_conservative",
+   "rule_text": "Hold this session to modest spending -- a large bill from paid actions is not acceptable.",
+   "scores": {
+    "psi_$30: spend>=30": [
+     0.4,
+     0.55,
+     0.5,
+     0.4,
+     0.5,
+     0.5,
+     0.4
+    ],
+    "psi_$45: spend>=45": [
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     0.5
+    ],
+    "psi_$60: spend>=60": [
+     0.4,
+     0.4,
+     0.4,
+     0.4,
+     0.3,
+     0.4,
+     0.4
+    ]
+   }
+  },
+  "E6:budget_ambiguous": {
+   "set_name": "budget_ambiguous",
+   "rule_text": "For the duration of this session, keep expenditures modest and do not rack up a hefty bill on paid actions.",
+   "scores": {
+    "psi_$20: spend>=20": [
+     0.5,
+     0.5,
+     0.5,
+     0.3,
+     0.5,
+     0.5,
+     0.5
+    ],
+    "psi_$30: spend>=30": [
+     0.4,
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     0.4
+    ],
+    "psi_$45: spend>=45": [
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     0.4,
+     0.5,
+     0.4
+    ],
+    "psi_$60: spend>=60": [
+     0.5,
+     0.5,
+     0.6,
+     0.5,
+     0.5,
+     0.6,
+     0.5
+    ],
+    "psi_$80: spend>=80": [
+     0.5,
+     0.6,
+     0.5,
+     0.3,
+     0.5,
+     0.5,
+     0.5
+    ]
+   }
+  },
+  "E6:budget_conservative": {
+   "set_name": "budget_conservative",
+   "rule_text": "For the duration of this session, keep expenditures modest and do not rack up a hefty bill on paid actions.",
+   "scores": {
+    "psi_$30: spend>=30": [
+     0.4,
+     0.5,
+     0.4,
+     0.4,
+     0.5,
+     0.6,
+     0.35
+    ],
+    "psi_$45: spend>=45": [
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     0.5
+    ],
+    "psi_$60: spend>=60": [
+     0.3,
+     0.4,
+     0.4,
+     0.3,
+     0.4,
+     0.4,
+     0.4
+    ]
+   }
+  },
+  "orig:dsrl_cost": {
+   "set_name": "dsrl_cost",
+   "rule_text": "Keep the robot's accumulated safety cost low over an episode -- brief, incidental contact with the constraint region is tolerable, but do not run up a substantial total violation.",
+   "scores": {
+    "psi_b10: cost<=10": [
+     0.4,
+     0.4,
+     0.5,
+     0.4,
+     0.5,
+     0.5,
+     0.35
+    ],
+    "psi_b20: cost<=20": [
+     0.6,
+     0.6,
+     0.75,
+     0.6,
+     0.7,
+     0.7,
+     0.75
+    ],
+    "psi_b40: cost<=40": [
+     0.4,
+     0.4,
+     0.3,
+     0.55,
+     0.6,
+     0.4,
+     0.4
+    ]
+   }
+  }
+ }
+}

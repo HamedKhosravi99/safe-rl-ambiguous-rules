@@ -1,0 +1,85 @@
+{
+  "created": "20260728-221747",
+  "device": "cuda",
+  "tasks": [
+    "OfflineAntRun-v0"
+  ],
+  "learners": [
+    "coptidice"
+  ],
+  "seeds": [
+    8
+  ],
+  "U": [
+    10,
+    20,
+    40
+  ],
+  "c_single": 40,
+  "c_saorl": 10,
+  "update_steps": 100000,
+  "runs": [
+    {
+      "raw_return": 570.4351571006989,
+      "raw_cost": 12.05,
+      "ep_length": 200.0,
+      "episode_len": 200,
+      "update_steps": 100000,
+      "eval_episodes": 20,
+      "max_epi_r": 955.4818725585938,
+      "min_epi_r": 0.001767391717990563,
+      "train_sec": 1466.8,
+      "normalized_reward": 0.597012315195567,
+      "normalized_cost_per_reading": {
+        "10": 1.205,
+        "20": 0.6025,
+        "40": 0.30125
+      },
+      "worst_retained_normalized_cost": 1.205,
+      "satisfies_all_retained": false,
+      "task": "OfflineAntRun-v0",
+      "learner": "coptidice",
+      "learner_long": "COptiDICE",
+      "reading": "single",
+      "target_cost": 40,
+      "seed": 8,
+      "U": [
+        10,
+        20,
+        40
+      ],
+      "status": "ok"
+    },
+    {
+      "raw_return": 585.382488764877,
+      "raw_cost": 18.35,
+      "ep_length": 200.0,
+      "episode_len": 200,
+      "update_steps": 100000,
+      "eval_episodes": 20,
+      "max_epi_r": 955.4818725585938,
+      "min_epi_r": 0.001767391717990563,
+      "train_sec": 1491.2,
+      "normalized_reward": 0.612656106817547,
+      "normalized_cost_per_reading": {
+        "10": 1.8350000000000002,
+        "20": 0.9175000000000001,
+        "40": 0.45875000000000005
+      },
+      "worst_retained_normalized_cost": 1.8350000000000002,
+      "satisfies_all_retained": false,
+      "task": "OfflineAntRun-v0",
+      "learner": "coptidice",
+      "learner_long": "COptiDICE",
+      "reading": "saorl",
+      "target_cost": 10,
+      "seed": 8,
+      "U": [
+        10,
+        20,
+        40
+      ],
+      "status": "ok"
+    }
+  ]
+}

@@ -1,0 +1,350 @@
+{
+ "n": 34,
+ "max_identity_err": 1.1102230246251565e-16,
+ "closed_over_realized": {
+  "median": 3.5039889181315247,
+  "max": 6.7806775619055895
+ },
+ "rows": [
+  {
+   "uid": "AlertmanagerClusterCrashlooping",
+   "k": 0,
+   "realized": 0.26398704505273735,
+   "exact_form": 0.26398704505273746,
+   "identity_err": 1.1102230246251565e-16,
+   "closed_form": 0.5625257550728932,
+   "ratio_closed": 2.1308839415226455,
+   "ratio_exact": 1.0000000000000004
+  },
+  {
+   "uid": "AlertmanagerClusterCrashlooping",
+   "k": 1,
+   "realized": 0.021740552993791185,
+   "exact_form": 0.02174055299379126,
+   "identity_err": 7.632783294297951e-17,
+   "closed_form": 0.11746787402368611,
+   "ratio_closed": 5.403168634083658,
+   "ratio_exact": 1.0000000000000036
+  },
+  {
+   "uid": "AlertmanagerClusterDown",
+   "k": 0,
+   "realized": 0.26398704505273735,
+   "exact_form": 0.26398704505273746,
+   "identity_err": 1.1102230246251565e-16,
+   "closed_form": 0.5625257550728932,
+   "ratio_closed": 2.1308839415226455,
+   "ratio_exact": 1.0000000000000004
+  },
+  {
+   "uid": "AlertmanagerClusterDown",
+   "k": 1,
+   "realized": 0.021740552993791185,
+   "exact_form": 0.02174055299379126,
+   "identity_err": 7.632783294297951e-17,
+   "closed_form": 0.11746787402368611,
+   "ratio_closed": 5.403168634083658,
+   "ratio_exact": 1.0000000000000036
+  },
+  {
+   "uid": "NodeNetworkInterfaceFlapping",
+   "k": 0,
+   "realized": 0.05955128604557308,
+   "exact_form": 0.05955128604557311,
+   "identity_err": 2.7755575615628914e-17,
+   "closed_form": 0.40379806907183885,
+   "ratio_closed": 6.7806775619055895,
+   "ratio_exact": 1.0000000000000004
+  },
+  {
+   "uid": "NodeNetworkInterfaceFlapping",
+   "k": 1,
+   "realized": 0.05588778464432881,
+   "exact_form": 0.0558877846443288,
+   "identity_err": 6.938893903907228e-18,
+   "closed_form": 0.31139155193323054,
+   "ratio_closed": 5.571728310845273,
+   "ratio_exact": 0.9999999999999999
+  },
+  {
+   "uid": "KubeStateMetricsListErrors",
+   "k": 0,
+   "realized": 0.47782659129529476,
+   "exact_form": 0.4778265912952947,
+   "identity_err": 5.551115123125783e-17,
+   "closed_form": 0.6200167843609052,
+   "ratio_closed": 1.2975769780416795,
+   "ratio_exact": 0.9999999999999999
+  },
+  {
+   "uid": "KubeStateMetricsListErrors",
+   "k": 1,
+   "realized": 0.014402231435924229,
+   "exact_form": 0.014402231435924263,
+   "identity_err": 3.469446951953614e-17,
+   "closed_form": 0.050465259347843974,
+   "ratio_closed": 3.5039889181315247,
+   "ratio_exact": 1.0000000000000024
+  },
+  {
+   "uid": "KubeStateMetricsWatchErrors",
+   "k": 0,
+   "realized": 0.47782659129529476,
+   "exact_form": 0.4778265912952947,
+   "identity_err": 5.551115123125783e-17,
+   "closed_form": 0.6200167843609052,
+   "ratio_closed": 1.2975769780416795,
+   "ratio_exact": 0.9999999999999999
+  },
+  {
+   "uid": "KubeStateMetricsWatchErrors",
+   "k": 1,
+   "realized": 0.014402231435924229,
+   "exact_form": 0.014402231435924263,
+   "identity_err": 3.469446951953614e-17,
+   "closed_form": 0.050465259347843974,
+   "ratio_closed": 3.5039889181315247,
+   "ratio_exact": 1.0000000000000024
+  },
+  {
+   "uid": "KubePodCrashLooping",
+   "k": 0,
+   "realized": 0.47782659129529476,
+   "exact_form": 0.4778265912952947,
+   "identity_err": 5.551115123125783e-17,
+   "closed_form": 0.6200167843609052,
+   "ratio_closed": 1.2975769780416795,
+   "ratio_exact": 0.9999999999999999
+  },
+  {
+   "uid": "KubePodCrashLooping",
+   "k": 1,
+   "realized": 0.014402231435924229,
+   "exact_form": 0.014402231435924263,
+   "identity_err": 3.469446951953614e-17,
+   "closed_form": 0.050465259347843974,
+   "ratio_closed": 3.5039889181315247,
+   "ratio_exact": 1.0000000000000024
+  },
+  {
+   "uid": "KubeCPUQuotaOvercommit",
+   "k": 0,
+   "realized": 0.26398704505273735,
+   "exact_form": 0.26398704505273746,
+   "identity_err": 1.1102230246251565e-16,
+   "closed_form": 0.5625257550728932,
+   "ratio_closed": 2.1308839415226455,
+   "ratio_exact": 1.0000000000000004
+  },
+  {
+   "uid": "KubeCPUQuotaOvercommit",
+   "k": 1,
+   "realized": 0.021740552993791185,
+   "exact_form": 0.02174055299379126,
+   "identity_err": 7.632783294297951e-17,
+   "closed_form": 0.11746787402368611,
+   "ratio_closed": 5.403168634083658,
+   "ratio_exact": 1.0000000000000036
+  },
+  {
+   "uid": "KubeMemoryQuotaOvercommit",
+   "k": 0,
+   "realized": 0.26398704505273735,
+   "exact_form": 0.26398704505273746,
+   "identity_err": 1.1102230246251565e-16,
+   "closed_form": 0.5625257550728932,
+   "ratio_closed": 2.1308839415226455,
+   "ratio_exact": 1.0000000000000004
+  },
+  {
+   "uid": "KubeMemoryQuotaOvercommit",
+   "k": 1,
+   "realized": 0.021740552993791185,
+   "exact_form": 0.02174055299379126,
+   "identity_err": 7.632783294297951e-17,
+   "closed_form": 0.11746787402368611,
+   "ratio_closed": 5.403168634083658,
+   "ratio_exact": 1.0000000000000036
+  },
+  {
+   "uid": "NodeCPUHighUsage",
+   "k": 0,
+   "realized": 0.47782659129529476,
+   "exact_form": 0.4778265912952947,
+   "identity_err": 5.551115123125783e-17,
+   "closed_form": 0.6200167843609052,
+   "ratio_closed": 1.2975769780416795,
+   "ratio_exact": 0.9999999999999999
+  },
+  {
+   "uid": "NodeCPUHighUsage",
+   "k": 1,
+   "realized": 0.014402231435924229,
+   "exact_form": 0.014402231435924263,
+   "identity_err": 3.469446951953614e-17,
+   "closed_form": 0.050465259347843974,
+   "ratio_closed": 3.5039889181315247,
+   "ratio_exact": 1.0000000000000024
+  },
+  {
+   "uid": "NodeClockNotSynchronising",
+   "k": 0,
+   "realized": 0.47782659129529476,
+   "exact_form": 0.4778265912952947,
+   "identity_err": 5.551115123125783e-17,
+   "closed_form": 0.6200167843609052,
+   "ratio_closed": 1.2975769780416795,
+   "ratio_exact": 0.9999999999999999
+  },
+  {
+   "uid": "NodeClockNotSynchronising",
+   "k": 1,
+   "realized": 0.014402231435924229,
+   "exact_form": 0.014402231435924263,
+   "identity_err": 3.469446951953614e-17,
+   "closed_form": 0.050465259347843974,
+   "ratio_closed": 3.5039889181315247,
+   "ratio_exact": 1.0000000000000024
+  },
+  {
+   "uid": "NodeDiskIOSaturation",
+   "k": 0,
+   "realized": 0.47782659129529476,
+   "exact_form": 0.4778265912952947,
+   "identity_err": 5.551115123125783e-17,
+   "closed_form": 0.6200167843609052,
+   "ratio_closed": 1.2975769780416795,
+   "ratio_exact": 0.9999999999999999
+  },
+  {
+   "uid": "NodeDiskIOSaturation",
+   "k": 1,
+   "realized": 0.014402231435924229,
+   "exact_form": 0.014402231435924263,
+   "identity_err": 3.469446951953614e-17,
+   "closed_form": 0.050465259347843974,
+   "ratio_closed": 3.5039889181315247,
+   "ratio_exact": 1.0000000000000024
+  },
+  {
+   "uid": "PrometheusErrorSendingAlertsToAnyAlertmanager",
+   "k": 0,
+   "realized": 0.47782659129529476,
+   "exact_form": 0.4778265912952947,
+   "identity_err": 5.551115123125783e-17,
+   "closed_form": 0.6200167843609052,
+   "ratio_closed": 1.2975769780416795,
+   "ratio_exact": 0.9999999999999999
+  },
+  {
+   "uid": "PrometheusErrorSendingAlertsToAnyAlertmanager",
+   "k": 1,
+   "realized": 0.014402231435924229,
+   "exact_form": 0.014402231435924263,
+   "identity_err": 3.469446951953614e-17,
+   "closed_form": 0.050465259347843974,
+   "ratio_closed": 3.5039889181315247,
+   "ratio_exact": 1.0000000000000024
+  },
+  {
+   "uid": "PrometheusErrorSendingAlertsToSomeAlertmanagers",
+   "k": 0,
+   "realized": 0.47782659129529476,
+   "exact_form": 0.4778265912952947,
+   "identity_err": 5.551115123125783e-17,
+   "closed_form": 0.6200167843609052,
+   "ratio_closed": 1.2975769780416795,
+   "ratio_exact": 0.9999999999999999
+  },
+  {
+   "uid": "PrometheusErrorSendingAlertsToSomeAlertmanagers",
+   "k": 1,
+   "realized": 0.014402231435924229,
+   "exact_form": 0.014402231435924263,
+   "identity_err": 3.469446951953614e-17,
+   "closed_form": 0.050465259347843974,
+   "ratio_closed": 3.5039889181315247,
+   "ratio_exact": 1.0000000000000024
+  },
+  {
+   "uid": "PrometheusHighQueryLoad",
+   "k": 0,
+   "realized": 0.47782659129529476,
+   "exact_form": 0.4778265912952947,
+   "identity_err": 5.551115123125783e-17,
+   "closed_form": 0.6200167843609052,
+   "ratio_closed": 1.2975769780416795,
+   "ratio_exact": 0.9999999999999999
+  },
+  {
+   "uid": "PrometheusHighQueryLoad",
+   "k": 1,
+   "realized": 0.014402231435924229,
+   "exact_form": 0.014402231435924263,
+   "identity_err": 3.469446951953614e-17,
+   "closed_form": 0.050465259347843974,
+   "ratio_closed": 3.5039889181315247,
+   "ratio_exact": 1.0000000000000024
+  },
+  {
+   "uid": "PrometheusOperatorListErrors",
+   "k": 0,
+   "realized": 0.47782659129529476,
+   "exact_form": 0.4778265912952947,
+   "identity_err": 5.551115123125783e-17,
+   "closed_form": 0.6200167843609052,
+   "ratio_closed": 1.2975769780416795,
+   "ratio_exact": 0.9999999999999999
+  },
+  {
+   "uid": "PrometheusOperatorListErrors",
+   "k": 1,
+   "realized": 0.014402231435924229,
+   "exact_form": 0.014402231435924263,
+   "identity_err": 3.469446951953614e-17,
+   "closed_form": 0.050465259347843974,
+   "ratio_closed": 3.5039889181315247,
+   "ratio_exact": 1.0000000000000024
+  },
+  {
+   "uid": "PrometheusOperatorNodeLookupErrors",
+   "k": 0,
+   "realized": 0.47782659129529476,
+   "exact_form": 0.4778265912952947,
+   "identity_err": 5.551115123125783e-17,
+   "closed_form": 0.6200167843609052,
+   "ratio_closed": 1.2975769780416795,
+   "ratio_exact": 0.9999999999999999
+  },
+  {
+   "uid": "PrometheusOperatorNodeLookupErrors",
+   "k": 1,
+   "realized": 0.014402231435924229,
+   "exact_form": 0.014402231435924263,
+   "identity_err": 3.469446951953614e-17,
+   "closed_form": 0.050465259347843974,
+   "ratio_closed": 3.5039889181315247,
+   "ratio_exact": 1.0000000000000024
+  },
+  {
+   "uid": "PrometheusOperatorReconcileErrors",
+   "k": 0,
+   "realized": 0.47782659129529476,
+   "exact_form": 0.4778265912952947,
+   "identity_err": 5.551115123125783e-17,
+   "closed_form": 0.6200167843609052,
+   "ratio_closed": 1.2975769780416795,
+   "ratio_exact": 0.9999999999999999
+  },
+  {
+   "uid": "PrometheusOperatorReconcileErrors",
+   "k": 1,
+   "realized": 0.014402231435924229,
+   "exact_form": 0.014402231435924263,
+   "identity_err": 3.469446951953614e-17,
+   "closed_form": 0.050465259347843974,
+   "ratio_closed": 3.5039889181315247,
+   "ratio_exact": 1.0000000000000024
+  }
+ ]
+}

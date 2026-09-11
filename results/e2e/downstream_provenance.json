@@ -1,0 +1,549 @@
+{
+ "n_targets": 88,
+ "counts": {
+  "LOSSY": 51,
+  "FAITHFUL": 37
+ },
+ "lossy_causes": {
+  "arith_vector": 35,
+  "fn_max_over_time": 9,
+  "setop_and": 9,
+  "agg_nested": 5,
+  "fn_changes": 5,
+  "fn_avg_over_time": 3,
+  "nested_comparison": 3,
+  "threshold_reference": 3,
+  "no_comparison": 3,
+  "fn_min_over_time": 3,
+  "agg_count_values": 1,
+  "agg_param": 1,
+  "agg_stdvar": 1,
+  "fn_time": 1,
+  "setop_or": 1
+ },
+ "verdicts": {
+  "AlertmanagerFailedReload#0": {
+   "verdict": "LOSSY",
+   "why": [
+    "fn_max_over_time"
+   ]
+  },
+  "AlertmanagerConfigInconsistent#1": {
+   "verdict": "LOSSY",
+   "why": [
+    "agg_count_values",
+    "agg_nested",
+    "agg_param"
+   ]
+  },
+  "AlertmanagerClusterDown#2": {
+   "verdict": "LOSSY",
+   "why": [
+    "arith_vector",
+    "fn_avg_over_time",
+    "nested_comparison"
+   ]
+  },
+  "AlertmanagerClusterCrashlooping#3": {
+   "verdict": "LOSSY",
+   "why": [
+    "arith_vector",
+    "fn_changes",
+    "nested_comparison"
+   ]
+  },
+  "AlertmanagerClusterFailedPeers#4": {
+   "verdict": "LOSSY",
+   "why": [
+    "fn_max_over_time"
+   ]
+  },
+  "NodeNetworkInterfaceFlapping#5": {
+   "verdict": "LOSSY",
+   "why": [
+    "fn_changes"
+   ]
+  },
+  "KubeStateMetricsListErrors#6": {
+   "verdict": "LOSSY",
+   "why": [
+    "arith_vector"
+   ]
+  },
+  "KubeStateMetricsWatchErrors#7": {
+   "verdict": "LOSSY",
+   "why": [
+    "arith_vector"
+   ]
+  },
+  "KubeStateMetricsShardingMismatch#8": {
+   "verdict": "LOSSY",
+   "why": [
+    "agg_stdvar"
+   ]
+  },
+  "KubeStateMetricsShardsMissing#9": {
+   "verdict": "LOSSY",
+   "why": [
+    "agg_nested",
+    "arith_vector"
+   ]
+  },
+  "KubePodCrashLooping#10": {
+   "verdict": "LOSSY",
+   "why": [
+    "fn_max_over_time"
+   ]
+  },
+  "KubeDeploymentReplicasMismatch#11": {
+   "verdict": "LOSSY",
+   "why": [
+    "fn_changes",
+    "setop_and",
+    "threshold_reference"
+   ]
+  },
+  "KubeDeploymentRolloutStuck#12": {
+   "verdict": "FAITHFUL",
+   "why": []
+  },
+  "KubeStatefulSetReplicasMismatch#13": {
+   "verdict": "LOSSY",
+   "why": [
+    "fn_changes",
+    "setop_and",
+    "threshold_reference"
+   ]
+  },
+  "KubeContainerWaiting#14": {
+   "verdict": "FAITHFUL",
+   "why": []
+  },
+  "KubeDaemonSetNotScheduled#15": {
+   "verdict": "LOSSY",
+   "why": [
+    "arith_vector"
+   ]
+  },
+  "KubeDaemonSetMisScheduled#16": {
+   "verdict": "FAITHFUL",
+   "why": []
+  },
+  "KubeJobNotCompleted#17": {
+   "verdict": "LOSSY",
+   "why": [
+    "arith_vector",
+    "fn_time",
+    "no_comparison",
+    "setop_and"
+   ]
+  },
+  "KubeJobFailed#18": {
+   "verdict": "FAITHFUL",
+   "why": []
+  },
+  "KubeHpaReplicasMismatch#19": {
+   "verdict": "LOSSY",
+   "why": [
+    "fn_changes",
+    "setop_and",
+    "threshold_reference"
+   ]
+  },
+  "KubePdbNotEnoughHealthyPods#20": {
+   "verdict": "LOSSY",
+   "why": [
+    "arith_vector"
+   ]
+  },
+  "KubeCPUQuotaOvercommit#21": {
+   "verdict": "LOSSY",
+   "why": [
+    "agg_nested",
+    "arith_vector"
+   ]
+  },
+  "KubeMemoryQuotaOvercommit#22": {
+   "verdict": "LOSSY",
+   "why": [
+    "agg_nested",
+    "arith_vector"
+   ]
+  },
+  "KubePersistentVolumeErrors#23": {
+   "verdict": "FAITHFUL",
+   "why": []
+  },
+  "KubeClientErrors#24": {
+   "verdict": "LOSSY",
+   "why": [
+    "arith_vector"
+   ]
+  },
+  "KubeAggregatedAPIErrors#25": {
+   "verdict": "FAITHFUL",
+   "why": []
+  },
+  "KubeAggregatedAPIDown#26": {
+   "verdict": "LOSSY",
+   "why": [
+    "arith_vector",
+    "fn_avg_over_time"
+   ]
+  },
+  "KubeAPIInstanceUnreachable#27": {
+   "verdict": "FAITHFUL",
+   "why": []
+  },
+  "KubeAPITerminatedRequests#28": {
+   "verdict": "LOSSY",
+   "why": [
+    "arith_vector"
+   ]
+  },
+  "KubeletPlegDurationHigh#29": {
+   "verdict": "FAITHFUL",
+   "why": []
+  },
+  "KubeletClientCertificateExpiration#30": {
+   "verdict": "FAITHFUL",
+   "why": []
+  },
+  "KubeletClientCertificateExpiration#31": {
+   "verdict": "FAITHFUL",
+   "why": []
+  },
+  "KubeletServerCertificateExpiration#32": {
+   "verdict": "FAITHFUL",
+   "why": []
+  },
+  "KubeletServerCertificateExpiration#33": {
+   "verdict": "FAITHFUL",
+   "why": []
+  },
+  "KubeletClientCertificateRenewalErrors#34": {
+   "verdict": "FAITHFUL",
+   "why": []
+  },
+  "KubeletServerCertificateRenewalErrors#35": {
+   "verdict": "FAITHFUL",
+   "why": []
+  },
+  "KubeletInstanceUnreachable#36": {
+   "verdict": "FAITHFUL",
+   "why": []
+  },
+  "KubeSchedulerInstanceUnreachable#37": {
+   "verdict": "FAITHFUL",
+   "why": []
+  },
+  "KubeControllerManagerInstanceUnreachable#38": {
+   "verdict": "FAITHFUL",
+   "why": []
+  },
+  "NodeFilesystemAlmostOutOfSpace#39": {
+   "verdict": "LOSSY",
+   "why": [
+    "arith_vector",
+    "setop_and"
+   ]
+  },
+  "NodeFilesystemAlmostOutOfSpace#40": {
+   "verdict": "LOSSY",
+   "why": [
+    "arith_vector",
+    "setop_and"
+   ]
+  },
+  "NodeFilesystemAlmostOutOfFiles#41": {
+   "verdict": "LOSSY",
+   "why": [
+    "arith_vector",
+    "setop_and"
+   ]
+  },
+  "NodeFilesystemAlmostOutOfFiles#42": {
+   "verdict": "LOSSY",
+   "why": [
+    "arith_vector",
+    "setop_and"
+   ]
+  },
+  "NodeNetworkReceiveErrs#43": {
+   "verdict": "LOSSY",
+   "why": [
+    "arith_vector"
+   ]
+  },
+  "NodeNetworkTransmitErrs#44": {
+   "verdict": "LOSSY",
+   "why": [
+    "arith_vector"
+   ]
+  },
+  "NodeHighNumberConntrackEntriesUsed#45": {
+   "verdict": "LOSSY",
+   "why": [
+    "arith_vector"
+   ]
+  },
+  "NodeTextFileCollectorScrapeError#46": {
+   "verdict": "FAITHFUL",
+   "why": []
+  },
+  "NodeClockNotSynchronising#47": {
+   "verdict": "LOSSY",
+   "why": [
+    "fn_min_over_time",
+    "setop_and"
+   ]
+  },
+  "NodeRAIDDiskFailure#48": {
+   "verdict": "FAITHFUL",
+   "why": []
+  },
+  "NodeFileDescriptorLimit#49": {
+   "verdict": "LOSSY",
+   "why": [
+    "arith_vector"
+   ]
+  },
+  "NodeFileDescriptorLimit#50": {
+   "verdict": "LOSSY",
+   "why": [
+    "arith_vector"
+   ]
+  },
+  "NodeCPUHighUsage#51": {
+   "verdict": "LOSSY",
+   "why": [
+    "agg_nested",
+    "arith_vector"
+   ]
+  },
+  "NodeSystemSaturation#52": {
+   "verdict": "LOSSY",
+   "why": [
+    "arith_vector"
+   ]
+  },
+  "NodeMemoryMajorPagesFaults#53": {
+   "verdict": "FAITHFUL",
+   "why": []
+  },
+  "NodeMemoryHighUtilization#54": {
+   "verdict": "LOSSY",
+   "why": [
+    "arith_vector"
+   ]
+  },
+  "NodeDiskIOSaturation#55": {
+   "verdict": "FAITHFUL",
+   "why": []
+  },
+  "NodeSystemdServiceFailed#56": {
+   "verdict": "FAITHFUL",
+   "why": []
+  },
+  "NodeSystemdServiceCrashlooping#57": {
+   "verdict": "FAITHFUL",
+   "why": []
+  },
+  "NodeBondingDegraded#58": {
+   "verdict": "LOSSY",
+   "why": [
+    "arith_vector"
+   ]
+  },
+  "PrometheusBadConfig#59": {
+   "verdict": "LOSSY",
+   "why": [
+    "fn_max_over_time"
+   ]
+  },
+  "PrometheusSDRefreshFailure#60": {
+   "verdict": "FAITHFUL",
+   "why": []
+  },
+  "PrometheusKubernetesListWatchFailures#61": {
+   "verdict": "FAITHFUL",
+   "why": []
+  },
+  "PrometheusErrorSendingAlertsToSomeAlertmanagers#62": {
+   "verdict": "LOSSY",
+   "why": [
+    "arith_vector"
+   ]
+  },
+  "PrometheusNotConnectedToAlertmanagers#63": {
+   "verdict": "LOSSY",
+   "why": [
+    "fn_max_over_time"
+   ]
+  },
+  "PrometheusTSDBReloadsFailing#64": {
+   "verdict": "FAITHFUL",
+   "why": []
+  },
+  "PrometheusTSDBCompactionsFailing#65": {
+   "verdict": "FAITHFUL",
+   "why": []
+  },
+  "PrometheusDuplicateTimestamps#66": {
+   "verdict": "FAITHFUL",
+   "why": []
+  },
+  "PrometheusOutOfOrderTimestamps#67": {
+   "verdict": "FAITHFUL",
+   "why": []
+  },
+  "PrometheusRemoteStorageFailures#68": {
+   "verdict": "LOSSY",
+   "why": [
+    "arith_vector",
+    "no_comparison",
+    "setop_or"
+   ]
+  },
+  "PrometheusRemoteWriteBehind#69": {
+   "verdict": "LOSSY",
+   "why": [
+    "arith_vector",
+    "fn_max_over_time"
+   ]
+  },
+  "PrometheusRuleFailures#70": {
+   "verdict": "FAITHFUL",
+   "why": []
+  },
+  "PrometheusMissingRuleEvaluations#71": {
+   "verdict": "FAITHFUL",
+   "why": []
+  },
+  "PrometheusTargetLimitHit#72": {
+   "verdict": "FAITHFUL",
+   "why": []
+  },
+  "PrometheusLabelLimitHit#73": {
+   "verdict": "FAITHFUL",
+   "why": []
+  },
+  "PrometheusScrapeBodySizeLimitHit#74": {
+   "verdict": "FAITHFUL",
+   "why": []
+  },
+  "PrometheusScrapeSampleLimitHit#75": {
+   "verdict": "FAITHFUL",
+   "why": []
+  },
+  "PrometheusTargetSyncFailure#76": {
+   "verdict": "FAITHFUL",
+   "why": []
+  },
+  "PrometheusHighQueryLoad#77": {
+   "verdict": "LOSSY",
+   "why": [
+    "arith_vector",
+    "fn_avg_over_time",
+    "fn_max_over_time"
+   ]
+  },
+  "PrometheusErrorSendingAlertsToAnyAlertmanager#78": {
+   "verdict": "LOSSY",
+   "why": [
+    "arith_vector"
+   ]
+  },
+  "PrometheusOperatorListErrors#79": {
+   "verdict": "LOSSY",
+   "why": [
+    "arith_vector"
+   ]
+  },
+  "PrometheusOperatorWatchErrors#80": {
+   "verdict": "LOSSY",
+   "why": [
+    "arith_vector"
+   ]
+  },
+  "PrometheusOperatorSyncFailed#81": {
+   "verdict": "LOSSY",
+   "why": [
+    "fn_min_over_time"
+   ]
+  },
+  "PrometheusOperatorReconcileErrors#82": {
+   "verdict": "LOSSY",
+   "why": [
+    "arith_vector"
+   ]
+  },
+  "PrometheusOperatorStatusUpdateErrors#83": {
+   "verdict": "LOSSY",
+   "why": [
+    "arith_vector"
+   ]
+  },
+  "PrometheusOperatorNodeLookupErrors#84": {
+   "verdict": "FAITHFUL",
+   "why": []
+  },
+  "PrometheusOperatorNotReady#85": {
+   "verdict": "LOSSY",
+   "why": [
+    "fn_max_over_time",
+    "nested_comparison",
+    "no_comparison"
+   ]
+  },
+  "PrometheusOperatorRejectedResources#86": {
+   "verdict": "LOSSY",
+   "why": [
+    "fn_min_over_time"
+   ]
+  },
+  "ConfigReloaderSidecarErrors#87": {
+   "verdict": "LOSSY",
+   "why": [
+    "fn_max_over_time"
+   ]
+  }
+ },
+ "restatements": {
+  "monitoring_screen": {
+   "all": {
+    "n": 60,
+    "fires": 1
+   },
+   "faithful": {
+    "n": 26,
+    "fires": 0
+   }
+  },
+  "ladder_free_rung": {
+   "all": {
+    "n": 88,
+    "fires": 61
+   },
+   "faithful": {
+    "n": 37,
+    "fires": 27
+   }
+  },
+  "ladder_pair_decides": {
+   "all": {
+    "n": 88,
+    "decides": 64
+   },
+   "faithful": {
+    "n": 37,
+    "decides": 29
+   }
+  }
+ },
+ "labels_only": {
+  "kyverno": "parsed from structured policy fields by a separate code path; parse_prom_expr never runs on kyverno targets",
+  "dominance_88_132": "report.json stores aggregate dominance rates without per-pool identity; labelled as computed over the six-tuple-representable population",
+  "cross_reading_pairs": "same: aggregate archive, labelled"
+ }
+}

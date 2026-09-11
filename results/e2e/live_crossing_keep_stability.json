@@ -1,0 +1,51 @@
+{
+ "registration": "replicate panels around the registered run-cap closure; the registered verdict is the first panel's and is not re-averaged",
+ "qhat": 0.5,
+ "n_panels": 5,
+ "per_candidate": {
+  "psi_run>=2": {
+   "registered_mean": 0.285714,
+   "replicate_means": [
+    0.257143,
+    0.278571,
+    0.257143,
+    0.314286,
+    0.307143
+   ],
+   "lo": 0.257143,
+   "hi": 0.314286,
+   "retained_in": 0,
+   "n_panels": 5
+  },
+  "psi_run>=3": {
+   "registered_mean": 0.507143,
+   "replicate_means": [
+    0.464286,
+    0.464286,
+    0.442857,
+    0.428571,
+    0.5
+   ],
+   "lo": 0.428571,
+   "hi": 0.5,
+   "retained_in": 1,
+   "n_panels": 5
+  },
+  "psi_run>=4": {
+   "registered_mean": 0.457143,
+   "replicate_means": [
+    0.428571,
+    0.514286,
+    0.414286,
+    0.385714,
+    0.364286
+   ],
+   "lo": 0.364286,
+   "hi": 0.514286,
+   "retained_in": 1,
+   "n_panels": 5
+  }
+ },
+ "guard_safety_stable": true,
+ "r3_retained_in": 1
+}

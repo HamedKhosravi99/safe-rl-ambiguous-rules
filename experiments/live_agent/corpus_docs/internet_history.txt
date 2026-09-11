@@ -1,0 +1,8 @@
+The Internet grew out of ARPANET, a network funded by the United States Department of Defense in 1969.
+ARPANET first connected computers at four universities.
+The TCP/IP protocol suite, developed by Vinton Cerf and Robert Kahn, became the standard in 1983.
+Tim Berners-Lee invented the World Wide Web in 1989 at CERN.
+The Web uses HTTP to transfer pages and HTML to structure them.
+The first web browser and web server were also created by Berners-Lee.
+Domain names are translated into numeric IP addresses by the Domain Name System, or DNS.
+The Internet is a network of networks, with no single owner.

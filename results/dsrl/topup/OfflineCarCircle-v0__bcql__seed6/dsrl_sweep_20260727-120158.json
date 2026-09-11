@@ -1,0 +1,51 @@
+{
+  "created": "20260727-120158",
+  "device": "cuda",
+  "tasks": [
+    "OfflineCarCircle-v0"
+  ],
+  "learners": [
+    "bcql"
+  ],
+  "seeds": [
+    6
+  ],
+  "U": [
+    10,
+    20,
+    40
+  ],
+  "c_single": 40,
+  "c_saorl": 10,
+  "update_steps": 100000,
+  "runs": [
+    {
+      "task": "OfflineCarCircle-v0",
+      "learner": "bcql",
+      "reading": "single",
+      "target_cost": 40,
+      "seed": 6,
+      "U": [
+        10,
+        20,
+        40
+      ],
+      "status": "error",
+      "error": "RuntimeError('repeats can not be negative')"
+    },
+    {
+      "task": "OfflineCarCircle-v0",
+      "learner": "bcql",
+      "reading": "saorl",
+      "target_cost": 10,
+      "seed": 6,
+      "U": [
+        10,
+        20,
+        40
+      ],
+      "status": "error",
+      "error": "RuntimeError('Storage size calculation overflowed with sizes=[4440543100386752765]')"
+    }
+  ]
+}

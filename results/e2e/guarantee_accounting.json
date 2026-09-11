@@ -1,0 +1,318 @@
+{
+ "registration": "W1/W6/W7 accounting, 2026-09-02; per-unit recomputation; anchors asserted",
+ "accounting": {
+  "raw_units": {
+   "recorded_G0": {
+    "n": 4390,
+    "expressible": 315,
+    "licensed": 181,
+    "retained": 158,
+    "reach": 0.07175398633257403,
+    "proposal": 0.5746031746031746,
+    "retention": 0.8729281767955801,
+    "e2e": 0.03599088838268793
+   },
+   "faithful_G0": {
+    "n": 4390,
+    "expressible": 173,
+    "licensed": 111,
+    "retained": 102,
+    "reach": 0.03940774487471526,
+    "proposal": 0.6416184971098265,
+    "retention": 0.918918918918919,
+    "e2e": 0.023234624145785875
+   },
+   "recorded_G1": {
+    "n": 4390,
+    "expressible": 1511,
+    "licensed": 595,
+    "retained": 563,
+    "reach": 0.34419134396355355,
+    "proposal": 0.3937789543348776,
+    "retention": 0.946218487394958,
+    "e2e": 0.12824601366742597
+   },
+   "faithful_G1": {
+    "n": 4390,
+    "expressible": 1222,
+    "licensed": 435,
+    "retained": 417,
+    "reach": 0.2783599088838269,
+    "proposal": 0.35597381342062195,
+    "retention": 0.9586206896551724,
+    "e2e": 0.09498861047835991
+   },
+   "faithful_share_of_expressible_G0": 0.5492063492063493
+  },
+  "distinct_rules": {
+   "recorded_G0": {
+    "n": 1471,
+    "expressible": 216,
+    "licensed": 128,
+    "retained": 112,
+    "reach": 0.14683888511216858,
+    "proposal": 0.5925925925925926,
+    "retention": 0.875,
+    "e2e": 0.07613868116927261
+   },
+   "faithful_G0": {
+    "n": 1471,
+    "expressible": 123,
+    "licensed": 80,
+    "retained": 74,
+    "reach": 0.08361658735554045,
+    "proposal": 0.6504065040650406,
+    "retention": 0.925,
+    "e2e": 0.05030591434398368
+   },
+   "recorded_G1": {
+    "n": 1471,
+    "expressible": 329,
+    "licensed": 157,
+    "retained": 140,
+    "reach": 0.22365737593473828,
+    "proposal": 0.47720364741641336,
+    "retention": 0.89171974522293,
+    "e2e": 0.09517335146159075
+   },
+   "faithful_G1": {
+    "n": 1471,
+    "expressible": 230,
+    "licensed": 107,
+    "retained": 100,
+    "reach": 0.15635622025832766,
+    "proposal": 0.4652173913043478,
+    "retention": 0.9345794392523364,
+    "e2e": 0.06798096532970768
+   },
+   "faithful_share_of_expressible_G0": 0.5694444444444444
+  },
+  "non_template_units": {
+   "recorded_G0": {
+    "n": 588,
+    "expressible": 292,
+    "licensed": 165,
+    "retained": 143,
+    "reach": 0.4965986394557823,
+    "proposal": 0.565068493150685,
+    "retention": 0.8666666666666667,
+    "e2e": 0.24319727891156462
+   },
+   "faithful_G0": {
+    "n": 588,
+    "expressible": 157,
+    "licensed": 98,
+    "retained": 89,
+    "reach": 0.26700680272108845,
+    "proposal": 0.6242038216560509,
+    "retention": 0.9081632653061225,
+    "e2e": 0.15136054421768708
+   },
+   "recorded_G1": {
+    "n": 588,
+    "expressible": 295,
+    "licensed": 166,
+    "retained": 144,
+    "reach": 0.5017006802721088,
+    "proposal": 0.5627118644067797,
+    "retention": 0.8674698795180723,
+    "e2e": 0.24489795918367346
+   },
+   "faithful_G1": {
+    "n": 588,
+    "expressible": 158,
+    "licensed": 99,
+    "retained": 90,
+    "reach": 0.2687074829931973,
+    "proposal": 0.6265822784810127,
+    "retention": 0.9090909090909091,
+    "e2e": 0.15306122448979592
+   },
+   "faithful_share_of_expressible_G0": 0.5376712328767124
+  },
+  "grammar_expressible_G0": {
+   "recorded_G0": {
+    "n": 315,
+    "expressible": 315,
+    "licensed": 181,
+    "retained": 158,
+    "reach": 1.0,
+    "proposal": 0.5746031746031746,
+    "retention": 0.8729281767955801,
+    "e2e": 0.5015873015873016
+   },
+   "faithful_G0": {
+    "n": 315,
+    "expressible": 173,
+    "licensed": 111,
+    "retained": 102,
+    "reach": 0.5492063492063493,
+    "proposal": 0.6416184971098265,
+    "retention": 0.918918918918919,
+    "e2e": 0.3238095238095238
+   },
+   "recorded_G1": {
+    "n": 315,
+    "expressible": 315,
+    "licensed": 181,
+    "retained": 158,
+    "reach": 1.0,
+    "proposal": 0.5746031746031746,
+    "retention": 0.8729281767955801,
+    "e2e": 0.5015873015873016
+   },
+   "faithful_G1": {
+    "n": 315,
+    "expressible": 173,
+    "licensed": 111,
+    "retained": 102,
+    "reach": 0.5492063492063493,
+    "proposal": 0.6416184971098265,
+    "retention": 0.918918918918919,
+    "e2e": 0.3238095238095238
+   },
+   "faithful_share_of_expressible_G0": 0.5492063492063493,
+   "availability_v4u": 0.8317,
+   "retained_set_median": 26999432,
+   "antichain_median": 18150
+  },
+  "widened_grammar_G1": {
+   "recorded_G0": {
+    "n": 1511,
+    "expressible": 315,
+    "licensed": 181,
+    "retained": 158,
+    "reach": 0.2084712111184646,
+    "proposal": 0.5746031746031746,
+    "retention": 0.8729281767955801,
+    "e2e": 0.10456651224354732
+   },
+   "faithful_G0": {
+    "n": 1511,
+    "expressible": 173,
+    "licensed": 111,
+    "retained": 102,
+    "reach": 0.11449371277299801,
+    "proposal": 0.6416184971098265,
+    "retention": 0.918918918918919,
+    "e2e": 0.06750496360026473
+   },
+   "recorded_G1": {
+    "n": 1511,
+    "expressible": 1511,
+    "licensed": 595,
+    "retained": 563,
+    "reach": 1.0,
+    "proposal": 0.3937789543348776,
+    "retention": 0.946218487394958,
+    "e2e": 0.37260092653871607
+   },
+   "faithful_G1": {
+    "n": 1511,
+    "expressible": 1222,
+    "licensed": 435,
+    "retained": 417,
+    "reach": 0.8087359364659166,
+    "proposal": 0.35597381342062195,
+    "retention": 0.9586206896551724,
+    "e2e": 0.2759761747187293
+   },
+   "faithful_share_of_expressible_G0": 0.5492063492063493
+  }
+ },
+ "monitoring_funnel": {
+  "rule_records": 234,
+  "recording_rules_not_alerts": 95,
+  "alerts": 139,
+  "alerts_without_text": 1,
+  "alerts_with_text": 138,
+  "outside_six_tuple_grammar": 50,
+  "compiled": 88,
+  "compiled_faithful": 37,
+  "compiled_lossy": 51,
+  "analyzable": 60,
+  "solved": 28,
+  "clear_by_nesting": 32,
+  "outside_compiled_control_grammar": 28,
+  "analyzable_faithful": 26,
+  "solved_faithful": 5,
+  "nested_faithful": 21,
+  "unanalyzed_faithful": 11,
+  "screen_fires": 1,
+  "screen_fires_faithful": 0
+ },
+ "admission_funnel": {
+  "validate_rules_in_policy_documents": 558,
+  "no_validate_block": 114,
+  "validate_outside_compiled_families": 327,
+  "no_match_kinds": 0,
+  "duplicate_rules": 0,
+  "in_grammar_before_curation": 117,
+  "removed_by_curation": 73,
+  "curated_pools": 44,
+  "policies_out_of_grammar_with_text": 260,
+  "previously_printed_304_is": "44 pools + 260 out-of-grammar POLICIES (document level), not a rule-level partition",
+  "curation_rule": "per-family caps (field_constraint 14, required_labels 11, others 8) and dedup on (policy, rule, structure)"
+ },
+ "operational_funnel": {
+  "open_corpus": {
+   "raw_rules": 4390,
+   "faithful_representable": 173,
+   "representable_recorded": 315,
+   "generated": 181,
+   "generated_faithful": 111,
+   "retained": 158,
+   "retained_faithful": 102,
+   "decide": "not run",
+   "decide_note": "calibrated retained sets (antichain median 18150) exceed the exact DECIDE threshold; PROTECT by the fallback rule",
+   "learned": null,
+   "certificate": null,
+   "ships": null
+  },
+  "pinned_public_rules": {
+   "raw_rules": 88,
+   "faithful_representable": 37,
+   "analyzable": 60,
+   "analyzable_faithful": 26,
+   "set_protected": 1,
+   "set_protected_faithful": 0,
+   "singleton_certified": 27,
+   "singleton_candidates": 27,
+   "solved": 28,
+   "learned": null,
+   "certificate": null,
+   "ships": null
+  },
+  "controlled_domains": {
+   "synthetic": {
+    "readings": 3,
+    "maximal": 2,
+    "seeds": 50,
+    "ships_set": 15,
+    "ships_single": 4
+   },
+   "real": {
+    "readings": 3,
+    "maximal": 2,
+    "seeds": 50,
+    "ships_set": 0,
+    "ships_single": 0
+   },
+   "gridworld": {
+    "readings": 2,
+    "maximal": 1,
+    "seeds": 50,
+    "ships_set": 50,
+    "ships_single": 3
+   },
+   "budget": {
+    "readings": 2,
+    "maximal": 1,
+    "seeds": 50,
+    "ships_set": 50,
+    "ships_single": 0
+   }
+  }
+ },
+ "faithful_definition": "gold needs no capability beyond its grammar class (the audit's strict 'faithful' bucket; structural and representational extras are excluded)"
+}

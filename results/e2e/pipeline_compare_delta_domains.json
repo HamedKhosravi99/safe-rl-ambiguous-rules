@@ -1,0 +1,266 @@
+{
+ "synthetic": {
+  "naive (0.05,0.05)": {
+   "stcr": {
+    "ship": 0.3,
+    "runs": 1.92,
+    "episodes": 576.0,
+    "ret_over_unc": 0.9683067375886524,
+    "U0": 0.29049202127659574
+   },
+   "arrow": {
+    "ship": 0.3,
+    "runs": 1.0,
+    "episodes": 300.0,
+    "ret_over_unc": 0.9683067375886524,
+    "U0": 0.29049202127659574
+   }
+  },
+  "equal (0.025,0.025)": {
+   "stcr": {
+    "ship": 0.3,
+    "runs": 1.92,
+    "episodes": 576.0,
+    "ret_over_unc": 0.9683067375886524,
+    "U0": 0.29049202127659574
+   },
+   "arrow": {
+    "ship": 0.3,
+    "runs": 1.0,
+    "episodes": 300.0,
+    "ret_over_unc": 0.9683067375886524,
+    "U0": 0.29049202127659574
+   }
+  },
+  "front (0.04,0.01)": {
+   "stcr": {
+    "ship": 0.08,
+    "runs": 1.92,
+    "episodes": 576.0,
+    "ret_over_unc": 0.9672539893617021,
+    "U0": 0.07738031914893617
+   },
+   "arrow": {
+    "ship": 0.3,
+    "runs": 1.0,
+    "episodes": 300.0,
+    "ret_over_unc": 0.9683067375886524,
+    "U0": 0.29049202127659574
+   }
+  },
+  "back (0.01,0.04)": {
+   "stcr": {
+    "ship": 0.3,
+    "runs": 2.0,
+    "episodes": 600.0,
+    "ret_over_unc": 0.9683067375886524,
+    "U0": 0.29049202127659574
+   },
+   "arrow": {
+    "ship": 0.3,
+    "runs": 1.0,
+    "episodes": 300.0,
+    "ret_over_unc": 0.9683067375886524,
+    "U0": 0.29049202127659574
+   }
+  }
+ },
+ "real": {
+  "naive (0.05,0.05)": {
+   "stcr": {
+    "ship": 0.0,
+    "runs": 2.0,
+    "episodes": 600.0,
+    "ret_over_unc": null,
+    "U0": 0.0
+   },
+   "arrow": {
+    "ship": 0.0,
+    "runs": 1.0,
+    "episodes": 300.0,
+    "ret_over_unc": null,
+    "U0": 0.0
+   }
+  },
+  "equal (0.025,0.025)": {
+   "stcr": {
+    "ship": 0.0,
+    "runs": 2.0,
+    "episodes": 600.0,
+    "ret_over_unc": null,
+    "U0": 0.0
+   },
+   "arrow": {
+    "ship": 0.0,
+    "runs": 1.0,
+    "episodes": 300.0,
+    "ret_over_unc": null,
+    "U0": 0.0
+   }
+  },
+  "front (0.04,0.01)": {
+   "stcr": {
+    "ship": 0.0,
+    "runs": 2.0,
+    "episodes": 600.0,
+    "ret_over_unc": null,
+    "U0": 0.0
+   },
+   "arrow": {
+    "ship": 0.0,
+    "runs": 1.0,
+    "episodes": 300.0,
+    "ret_over_unc": null,
+    "U0": 0.0
+   }
+  },
+  "back (0.01,0.04)": {
+   "stcr": {
+    "ship": 0.0,
+    "runs": 2.0,
+    "episodes": 600.0,
+    "ret_over_unc": null,
+    "U0": 0.0
+   },
+   "arrow": {
+    "ship": 0.0,
+    "runs": 1.0,
+    "episodes": 300.0,
+    "ret_over_unc": null,
+    "U0": 0.0
+   }
+  }
+ },
+ "gridworld": {
+  "naive (0.05,0.05)": {
+   "stcr": {
+    "ship": 1.0,
+    "runs": 1.94,
+    "episodes": 582.0,
+    "ret_over_unc": 0.9831162071215445,
+    "U0": 0.9831162071215445
+   },
+   "arrow": {
+    "ship": 1.0,
+    "runs": 1.0,
+    "episodes": 300.0,
+    "ret_over_unc": 0.9831162071215445,
+    "U0": 0.9831162071215445
+   }
+  },
+  "equal (0.025,0.025)": {
+   "stcr": {
+    "ship": 1.0,
+    "runs": 1.94,
+    "episodes": 582.0,
+    "ret_over_unc": 0.9831162071215445,
+    "U0": 0.9831162071215445
+   },
+   "arrow": {
+    "ship": 1.0,
+    "runs": 1.0,
+    "episodes": 300.0,
+    "ret_over_unc": 0.9831162071215445,
+    "U0": 0.9831162071215445
+   }
+  },
+  "front (0.04,0.01)": {
+   "stcr": {
+    "ship": 1.0,
+    "runs": 1.94,
+    "episodes": 582.0,
+    "ret_over_unc": 0.9831162071215445,
+    "U0": 0.9831162071215445
+   },
+   "arrow": {
+    "ship": 1.0,
+    "runs": 1.0,
+    "episodes": 300.0,
+    "ret_over_unc": 0.9831162071215445,
+    "U0": 0.9831162071215445
+   }
+  },
+  "back (0.01,0.04)": {
+   "stcr": {
+    "ship": 1.0,
+    "runs": 1.94,
+    "episodes": 582.0,
+    "ret_over_unc": 0.9831162071215445,
+    "U0": 0.9831162071215445
+   },
+   "arrow": {
+    "ship": 1.0,
+    "runs": 1.0,
+    "episodes": 300.0,
+    "ret_over_unc": 0.9831162071215445,
+    "U0": 0.9831162071215445
+   }
+  }
+ },
+ "budget": {
+  "naive (0.05,0.05)": {
+   "stcr": {
+    "ship": 1.0,
+    "runs": 2.0,
+    "episodes": 600.0,
+    "ret_over_unc": 0.2,
+    "U0": 0.2
+   },
+   "arrow": {
+    "ship": 1.0,
+    "runs": 1.0,
+    "episodes": 300.0,
+    "ret_over_unc": 0.2,
+    "U0": 0.2
+   }
+  },
+  "equal (0.025,0.025)": {
+   "stcr": {
+    "ship": 1.0,
+    "runs": 2.0,
+    "episodes": 600.0,
+    "ret_over_unc": 0.2,
+    "U0": 0.2
+   },
+   "arrow": {
+    "ship": 1.0,
+    "runs": 1.0,
+    "episodes": 300.0,
+    "ret_over_unc": 0.2,
+    "U0": 0.2
+   }
+  },
+  "front (0.04,0.01)": {
+   "stcr": {
+    "ship": 1.0,
+    "runs": 2.0,
+    "episodes": 600.0,
+    "ret_over_unc": 0.2,
+    "U0": 0.2
+   },
+   "arrow": {
+    "ship": 1.0,
+    "runs": 1.0,
+    "episodes": 300.0,
+    "ret_over_unc": 0.2,
+    "U0": 0.2
+   }
+  },
+  "back (0.01,0.04)": {
+   "stcr": {
+    "ship": 1.0,
+    "runs": 2.0,
+    "episodes": 600.0,
+    "ret_over_unc": 0.2,
+    "U0": 0.2
+   },
+   "arrow": {
+    "ship": 1.0,
+    "runs": 1.0,
+    "episodes": 300.0,
+    "ret_over_unc": 0.2,
+    "U0": 0.2
+   }
+  }
+ }
+}

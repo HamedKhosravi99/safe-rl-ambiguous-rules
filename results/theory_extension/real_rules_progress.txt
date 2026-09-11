@@ -1,0 +1,35 @@
+load chain M_true:
+ [[0.55 0.27 0.18]
+ [0.15 0.7  0.15]
+ [0.55 0.05 0.4 ]] 
+stationary pi: [0.3938 0.3904 0.2158]
+compiled 28 rules; nS: [19, 37, 55] K: [2]
+exact analysis done in 1s
+archive check: 126 (rule,budget,reading) W values compared, 0 mismatches > 1e-5
+d=0.005: rules with an eps-sufficient reading: eps=0.0: 0/28, eps=0.005: 0/28, eps=0.01: 0/28, eps=0.02: 0/28; eps* quantiles (readings): none
+d=0.01: rules with an eps-sufficient reading: eps=0.0: 22/28, eps=0.005: 22/28, eps=0.01: 22/28, eps=0.02: 22/28; eps* quantiles (readings): [0.7, 0.7, 0.7, 0.7, 0.7]
+d=0.02: rules with an eps-sufficient reading: eps=0.0: 22/28, eps=0.005: 22/28, eps=0.01: 22/28, eps=0.02: 22/28; eps* quantiles (readings): [0.7, 0.7, 0.7, 0.7, 0.7]
+d=0.05: rules with an eps-sufficient reading: eps=0.0: 27/28, eps=0.005: 27/28, eps=0.01: 27/28, eps=0.02: 27/28; eps* quantiles (readings): [0.7, 0.7, 0.7, 0.7, 0.7]
+d=0.1: rules with an eps-sufficient reading: eps=0.0: 28/28, eps=0.005: 28/28, eps=0.01: 28/28, eps=0.02: 28/28; eps* quantiles (readings): [0.7, 0.7, 0.7, 0.7, 0.7]
+n_total=1e+04: done (0s)
+n_total=3.16e+04: done (1s)
+n_total=1e+05: done (1s)
+n_total=3.16e+05: done (2s)
+n_total=1e+06: done (2s)
+n_total=3.16e+06: done (3s)
+n_total=1e+07: done (5s)
+n_total=3.16e+07: done (6s)
+n_total=1e+08: done (8s)
+n_total=3.16e+08: done (9s)
+n_total=1e+09: done (11s)
+n_total=3.16e+09: done (13s)
+n_total=1e+10: done (14s)
+[d=0.02|bernstein] n=1e+05: suff 0/220, false 0/340; n=1e+06: suff 0/220, false 0/340; n=1e+07: suff 0/220, false 0/340; n=1e+08: suff 0/220, false 0/340; n=1e+09: suff 220/220, false 0/340; n=1e+10: suff 220/220, false 0/340
+   n* found for 22 readings; log n* vs log margin slope = nan; n*·margin² range [84865.66, 84865.66]
+[d=0.05|weissman] n=1e+05: suff 0/270, false 0/290; n=1e+06: suff 0/270, false 0/290; n=1e+07: suff 0/270, false 0/290; n=1e+08: suff 220/270, false 0/290; n=1e+09: suff 220/270, false 0/290; n=1e+10: suff 270/270, false 0/290
+   n* found for 27 readings; log n* vs log margin slope = -2.33; n*·margin² range [35834.85, 80204.04]
+[d=0.05|bernstein] n=1e+05: suff 0/270, false 0/290; n=1e+06: suff 0/270, false 0/290; n=1e+07: suff 0/270, false 0/290; n=1e+08: suff 220/270, false 0/290; n=1e+09: suff 220/270, false 0/290; n=1e+10: suff 270/270, false 0/290
+   n* found for 27 readings; log n* vs log margin slope = -2.33; n*·margin² range [35834.85, 80204.04]
+[d=0.1|bernstein] n=1e+05: suff 0/280, false 0/280; n=1e+06: suff 0/280, false 0/280; n=1e+07: suff 220/280, false 0/280; n=1e+08: suff 270/280, false 0/280; n=1e+09: suff 280/280, false 0/280; n=1e+10: suff 280/280, false 0/280
+   n* found for 28 readings; log n* vs log margin slope = -2.17; n*·margin² range [55449.43, 67775.60]
+total time 15s

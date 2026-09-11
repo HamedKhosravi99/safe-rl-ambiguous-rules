@@ -1,0 +1,8 @@
+Renewable energy comes from sources that are naturally replenished, unlike fossil fuels.
+Solar power converts sunlight into electricity using photovoltaic cells.
+Wind power uses turbines to convert the kinetic energy of wind into electricity.
+Hydroelectric power generates electricity from flowing or falling water.
+Geothermal energy taps heat from within the Earth.
+Biomass energy comes from burning organic material such as wood or crop waste.
+Renewables produce little or no greenhouse gas during operation, helping reduce carbon emissions.
+Storage, such as batteries, helps balance supply when the sun is not shining or the wind is not blowing.

@@ -1,0 +1,85 @@
+{
+  "created": "20260729-050714",
+  "device": "cuda",
+  "tasks": [
+    "OfflineCarRun-v0"
+  ],
+  "learners": [
+    "cpq"
+  ],
+  "seeds": [
+    9
+  ],
+  "U": [
+    10,
+    20,
+    40
+  ],
+  "c_single": 40,
+  "c_saorl": 10,
+  "update_steps": 100000,
+  "runs": [
+    {
+      "raw_return": 565.7506372399226,
+      "raw_cost": 57.1,
+      "ep_length": 200.0,
+      "episode_len": 200,
+      "update_steps": 100000,
+      "eval_episodes": 20,
+      "max_epi_r": 574.6533203125,
+      "min_epi_r": 204.28726196289062,
+      "train_sec": 2057.7,
+      "normalized_reward": 0.9759624758482198,
+      "normalized_cost_per_reading": {
+        "10": 5.71,
+        "20": 2.855,
+        "40": 1.4275
+      },
+      "worst_retained_normalized_cost": 5.71,
+      "satisfies_all_retained": false,
+      "task": "OfflineCarRun-v0",
+      "learner": "cpq",
+      "learner_long": "CPQ",
+      "reading": "single",
+      "target_cost": 40,
+      "seed": 9,
+      "U": [
+        10,
+        20,
+        40
+      ],
+      "status": "ok"
+    },
+    {
+      "raw_return": 547.604044555419,
+      "raw_cost": 0.25,
+      "ep_length": 200.0,
+      "episode_len": 200,
+      "update_steps": 100000,
+      "eval_episodes": 20,
+      "max_epi_r": 574.6533203125,
+      "min_epi_r": 204.28726196289062,
+      "train_sec": 2117.6,
+      "normalized_reward": 0.9269661051619676,
+      "normalized_cost_per_reading": {
+        "10": 0.025,
+        "20": 0.0125,
+        "40": 0.00625
+      },
+      "worst_retained_normalized_cost": 0.025,
+      "satisfies_all_retained": true,
+      "task": "OfflineCarRun-v0",
+      "learner": "cpq",
+      "learner_long": "CPQ",
+      "reading": "saorl",
+      "target_cost": 10,
+      "seed": 9,
+      "U": [
+        10,
+        20,
+        40
+      ],
+      "status": "ok"
+    }
+  ]
+}

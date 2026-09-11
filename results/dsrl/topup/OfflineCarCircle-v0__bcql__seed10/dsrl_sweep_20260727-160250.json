@@ -1,0 +1,68 @@
+{
+  "created": "20260727-160250",
+  "device": "cuda",
+  "tasks": [
+    "OfflineCarCircle-v0"
+  ],
+  "learners": [
+    "bcql"
+  ],
+  "seeds": [
+    10
+  ],
+  "U": [
+    10,
+    20,
+    40
+  ],
+  "c_single": 40,
+  "c_saorl": 10,
+  "update_steps": 100000,
+  "runs": [
+    {
+      "raw_return": 376.41535479744465,
+      "raw_cost": 52.4,
+      "ep_length": 300.0,
+      "episode_len": 300,
+      "update_steps": 100000,
+      "eval_episodes": 20,
+      "max_epi_r": 534.3060913085938,
+      "min_epi_r": 3.484419822692871,
+      "train_sec": 2702.0,
+      "normalized_reward": 0.7025540873846113,
+      "normalized_cost_per_reading": {
+        "10": 5.24,
+        "20": 2.62,
+        "40": 1.31
+      },
+      "worst_retained_normalized_cost": 5.24,
+      "satisfies_all_retained": false,
+      "task": "OfflineCarCircle-v0",
+      "learner": "bcql",
+      "learner_long": "BCQ-Lagrangian",
+      "reading": "single",
+      "target_cost": 40,
+      "seed": 10,
+      "U": [
+        10,
+        20,
+        40
+      ],
+      "status": "ok"
+    },
+    {
+      "task": "OfflineCarCircle-v0",
+      "learner": "bcql",
+      "reading": "saorl",
+      "target_cost": 10,
+      "seed": 10,
+      "U": [
+        10,
+        20,
+        40
+      ],
+      "status": "error",
+      "error": "RuntimeError('Pin memory thread exited unexpectedly')"
+    }
+  ]
+}

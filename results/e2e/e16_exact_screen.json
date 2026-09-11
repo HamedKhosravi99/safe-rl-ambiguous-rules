@@ -1,0 +1,55 @@
+{
+ "registration": "REGISTRATION_V10 E16",
+ "budgets": [
+  0.01,
+  0.02,
+  0.05,
+  0.1
+ ],
+ "families": {
+  "kyverno": {
+   "n_pools": 44,
+   "published_greedy": {
+    "d=0.01": 0.2273,
+    "d=0.02": 0.2045,
+    "d=0.05": 0.2045,
+    "d=0.1": 0.0455
+   },
+   "exact_achievable": {
+    "d=0.01": 0.2273,
+    "d=0.02": 0.2045,
+    "d=0.05": 0.0455,
+    "d=0.1": 0.0455
+   },
+   "disagreements": {
+    "d=0.01": 0,
+    "d=0.02": 0,
+    "d=0.05": 7,
+    "d=0.1": 0
+   }
+  },
+  "prometheus": {
+   "n_pools": 1,
+   "published_greedy": {
+    "d=0.01": 0.0,
+    "d=0.02": 0.0,
+    "d=0.05": 0.0,
+    "d=0.1": 0.0
+   },
+   "exact_achievable": {
+    "d=0.01": 0.0,
+    "d=0.02": 0.0,
+    "d=0.05": 0.0,
+    "d=0.1": 0.0
+   },
+   "disagreements": {
+    "d=0.01": 0,
+    "d=0.02": 0,
+    "d=0.05": 0,
+    "d=0.1": 0
+   }
+  }
+ },
+ "total_disagreements": 7,
+ "verdict": "published predicate is argmax-sensitive"
+}

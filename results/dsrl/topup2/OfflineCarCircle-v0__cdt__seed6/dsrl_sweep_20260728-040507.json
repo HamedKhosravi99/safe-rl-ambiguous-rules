@@ -1,0 +1,87 @@
+{
+  "created": "20260728-040507",
+  "device": "cuda",
+  "tasks": [
+    "OfflineCarCircle-v0"
+  ],
+  "learners": [
+    "cdt"
+  ],
+  "seeds": [
+    6
+  ],
+  "U": [
+    10,
+    20,
+    40
+  ],
+  "c_single": 40,
+  "c_saorl": 10,
+  "update_steps": 100000,
+  "runs": [
+    {
+      "raw_return": 395.2508631780012,
+      "raw_cost": 33.9,
+      "ep_length": 300.0,
+      "episode_len": 300,
+      "update_steps": 100000,
+      "eval_episodes": 20,
+      "max_epi_r": 534.3060913085938,
+      "min_epi_r": 3.484419822692871,
+      "train_sec": 8215.7,
+      "target_return": 550.0,
+      "target_cost": 40,
+      "normalized_reward": 0.7380377712512314,
+      "normalized_cost_per_reading": {
+        "10": 3.3899999999999997,
+        "20": 1.6949999999999998,
+        "40": 0.8474999999999999
+      },
+      "worst_retained_normalized_cost": 3.3899999999999997,
+      "satisfies_all_retained": false,
+      "task": "OfflineCarCircle-v0",
+      "learner": "cdt",
+      "learner_long": "CDT",
+      "reading": "single",
+      "seed": 6,
+      "U": [
+        10,
+        20,
+        40
+      ],
+      "status": "ok"
+    },
+    {
+      "raw_return": 375.517890012252,
+      "raw_cost": 5.55,
+      "ep_length": 300.0,
+      "episode_len": 300,
+      "update_steps": 100000,
+      "eval_episodes": 20,
+      "max_epi_r": 534.3060913085938,
+      "min_epi_r": 3.484419822692871,
+      "train_sec": 8215.7,
+      "target_return": 450.0,
+      "target_cost": 10,
+      "normalized_reward": 0.7008633787466606,
+      "normalized_cost_per_reading": {
+        "10": 0.5549999999999999,
+        "20": 0.27749999999999997,
+        "40": 0.13874999999999998
+      },
+      "worst_retained_normalized_cost": 0.5549999999999999,
+      "satisfies_all_retained": true,
+      "task": "OfflineCarCircle-v0",
+      "learner": "cdt",
+      "learner_long": "CDT",
+      "reading": "saorl",
+      "seed": 6,
+      "U": [
+        10,
+        20,
+        40
+      ],
+      "status": "ok"
+    }
+  ]
+}

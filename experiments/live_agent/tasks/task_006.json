@@ -1,0 +1,24 @@
+{
+  "id": "task_006",
+  "question": "What are the inputs and outputs of the photosynthesis reaction?",
+  "source_docs": [
+    "photosynthesis.txt"
+  ],
+  "rubric": [
+    [
+      "carbon dioxide",
+      "co2"
+    ],
+    [
+      "water"
+    ],
+    [
+      "glucose",
+      "sugar"
+    ],
+    [
+      "oxygen"
+    ]
+  ],
+  "reference": "Inputs: carbon dioxide and water. Outputs: glucose and oxygen."
+}

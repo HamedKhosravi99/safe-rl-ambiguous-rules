@@ -1,0 +1,29 @@
+{
+  "phase": "logs",
+  "episodes": 300,
+  "episodes_requested": 300,
+  "episodes_failed": 0,
+  "model": "gpt-4o-mini",
+  "total_spend": 0.08294609999999994,
+  "paid_calls_billed": 2860,
+  "paid_posts_total": 2860,
+  "mean_episode_value": 10.4878,
+  "n_paid_per_episode_hist": [
+    0,
+    0,
+    0,
+    6,
+    5,
+    20,
+    33,
+    32,
+    24,
+    12,
+    8,
+    0,
+    160
+  ],
+  "episodes_with_api_error": 0,
+  "run_start": 1785206091,
+  "run_end": 1785206542
+}

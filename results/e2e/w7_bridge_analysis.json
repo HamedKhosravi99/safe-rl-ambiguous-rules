@@ -1,0 +1,304 @@
+{
+ "registration": "REGISTRATION_W7 analysis",
+ "n_instances": 17,
+ "stage0_admitted_as_registered": 0,
+ "exact_optimum_passes_gate": 0,
+ "gate_attainable": false,
+ "descriptive": {
+  "single_own_exact_ok": "77/85",
+  "set_worst_exact_ok": "85/85",
+  "hidden_gap_median": 0.10282879297672097,
+  "set_worst_median": 0.0
+ },
+ "rows": [
+  {
+   "uid": "AlertmanagerClusterCrashlooping",
+   "stage0_pass_seeds": 0,
+   "exact_single_own_J": 0.14193669799475728,
+   "exact_single_cp": [
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0
+   ],
+   "exact_gate_passes": false,
+   "learned_single_own_ok": 3,
+   "learned_set_worst_ok": 5,
+   "hidden_gap_median": 0.08459487667970611,
+   "set_worst_median": 0.0
+  },
+  {
+   "uid": "AlertmanagerClusterDown",
+   "stage0_pass_seeds": 0,
+   "exact_single_own_J": 0.14193669799475728,
+   "exact_single_cp": [
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0
+   ],
+   "exact_gate_passes": false,
+   "learned_single_own_ok": 3,
+   "learned_set_worst_ok": 5,
+   "hidden_gap_median": 0.08459487667970611,
+   "set_worst_median": 0.0
+  },
+  {
+   "uid": "NodeNetworkInterfaceFlapping",
+   "stage0_pass_seeds": 0,
+   "exact_single_own_J": 0.025292133488613425,
+   "exact_single_cp": [
+    0.6634905324669063,
+    0.6667224820423499,
+    0.6957051373412252,
+    0.6764045020159449,
+    0.6440512267322558
+   ],
+   "exact_gate_passes": false,
+   "learned_single_own_ok": 5,
+   "learned_set_worst_ok": 5,
+   "hidden_gap_median": 0.020304490499395304,
+   "set_worst_median": 0.0
+  },
+  {
+   "uid": "KubeStateMetricsListErrors",
+   "stage0_pass_seeds": 0,
+   "exact_single_own_J": 0.04881394338219332,
+   "exact_single_cp": [
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0
+   ],
+   "exact_gate_passes": false,
+   "learned_single_own_ok": 5,
+   "learned_set_worst_ok": 5,
+   "hidden_gap_median": 0.10282879297672097,
+   "set_worst_median": 0.0
+  },
+  {
+   "uid": "KubeStateMetricsWatchErrors",
+   "stage0_pass_seeds": 0,
+   "exact_single_own_J": 0.04881394338219332,
+   "exact_single_cp": [
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0
+   ],
+   "exact_gate_passes": false,
+   "learned_single_own_ok": 5,
+   "learned_set_worst_ok": 5,
+   "hidden_gap_median": 0.10282879297672097,
+   "set_worst_median": 0.0
+  },
+  {
+   "uid": "KubePodCrashLooping",
+   "stage0_pass_seeds": 0,
+   "exact_single_own_J": 0.04881394338219332,
+   "exact_single_cp": [
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0
+   ],
+   "exact_gate_passes": false,
+   "learned_single_own_ok": 5,
+   "learned_set_worst_ok": 5,
+   "hidden_gap_median": 0.10282879297672097,
+   "set_worst_median": 0.0
+  },
+  {
+   "uid": "KubeCPUQuotaOvercommit",
+   "stage0_pass_seeds": 0,
+   "exact_single_own_J": 0.14193669799475728,
+   "exact_single_cp": [
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0
+   ],
+   "exact_gate_passes": false,
+   "learned_single_own_ok": 3,
+   "learned_set_worst_ok": 5,
+   "hidden_gap_median": 0.08459487667970611,
+   "set_worst_median": 0.0
+  },
+  {
+   "uid": "KubeMemoryQuotaOvercommit",
+   "stage0_pass_seeds": 0,
+   "exact_single_own_J": 0.14193669799475728,
+   "exact_single_cp": [
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0
+   ],
+   "exact_gate_passes": false,
+   "learned_single_own_ok": 3,
+   "learned_set_worst_ok": 5,
+   "hidden_gap_median": 0.08459487667970611,
+   "set_worst_median": 0.0
+  },
+  {
+   "uid": "NodeCPUHighUsage",
+   "stage0_pass_seeds": 0,
+   "exact_single_own_J": 0.04881394338219332,
+   "exact_single_cp": [
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0
+   ],
+   "exact_gate_passes": false,
+   "learned_single_own_ok": 5,
+   "learned_set_worst_ok": 5,
+   "hidden_gap_median": 0.10282879297672097,
+   "set_worst_median": 0.0
+  },
+  {
+   "uid": "NodeClockNotSynchronising",
+   "stage0_pass_seeds": 0,
+   "exact_single_own_J": 0.04881394338219332,
+   "exact_single_cp": [
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0
+   ],
+   "exact_gate_passes": false,
+   "learned_single_own_ok": 5,
+   "learned_set_worst_ok": 5,
+   "hidden_gap_median": 0.10282879297672097,
+   "set_worst_median": 0.0
+  },
+  {
+   "uid": "NodeDiskIOSaturation",
+   "stage0_pass_seeds": 0,
+   "exact_single_own_J": 0.04881394338219332,
+   "exact_single_cp": [
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0
+   ],
+   "exact_gate_passes": false,
+   "learned_single_own_ok": 5,
+   "learned_set_worst_ok": 5,
+   "hidden_gap_median": 0.10282879297672097,
+   "set_worst_median": 0.0
+  },
+  {
+   "uid": "PrometheusErrorSendingAlertsToAnyAlertmanager",
+   "stage0_pass_seeds": 0,
+   "exact_single_own_J": 0.04881394338219332,
+   "exact_single_cp": [
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0
+   ],
+   "exact_gate_passes": false,
+   "learned_single_own_ok": 5,
+   "learned_set_worst_ok": 5,
+   "hidden_gap_median": 0.10282879297672097,
+   "set_worst_median": 0.0
+  },
+  {
+   "uid": "PrometheusErrorSendingAlertsToSomeAlertmanagers",
+   "stage0_pass_seeds": 0,
+   "exact_single_own_J": 0.04881394338219332,
+   "exact_single_cp": [
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0
+   ],
+   "exact_gate_passes": false,
+   "learned_single_own_ok": 5,
+   "learned_set_worst_ok": 5,
+   "hidden_gap_median": 0.10282879297672097,
+   "set_worst_median": 0.0
+  },
+  {
+   "uid": "PrometheusHighQueryLoad",
+   "stage0_pass_seeds": 0,
+   "exact_single_own_J": 0.04881394338219332,
+   "exact_single_cp": [
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0
+   ],
+   "exact_gate_passes": false,
+   "learned_single_own_ok": 5,
+   "learned_set_worst_ok": 5,
+   "hidden_gap_median": 0.10282879297672097,
+   "set_worst_median": 0.0
+  },
+  {
+   "uid": "PrometheusOperatorListErrors",
+   "stage0_pass_seeds": 0,
+   "exact_single_own_J": 0.04881394338219332,
+   "exact_single_cp": [
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0
+   ],
+   "exact_gate_passes": false,
+   "learned_single_own_ok": 5,
+   "learned_set_worst_ok": 5,
+   "hidden_gap_median": 0.10282879297672097,
+   "set_worst_median": 0.0
+  },
+  {
+   "uid": "PrometheusOperatorNodeLookupErrors",
+   "stage0_pass_seeds": 0,
+   "exact_single_own_J": 0.04881394338219332,
+   "exact_single_cp": [
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0
+   ],
+   "exact_gate_passes": false,
+   "learned_single_own_ok": 5,
+   "learned_set_worst_ok": 5,
+   "hidden_gap_median": 0.10282879297672097,
+   "set_worst_median": 0.0
+  },
+  {
+   "uid": "PrometheusOperatorReconcileErrors",
+   "stage0_pass_seeds": 0,
+   "exact_single_own_J": 0.04881394338219332,
+   "exact_single_cp": [
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0
+   ],
+   "exact_gate_passes": false,
+   "learned_single_own_ok": 5,
+   "learned_set_worst_ok": 5,
+   "hidden_gap_median": 0.10282879297672097,
+   "set_worst_median": 0.0
+  }
+ ]
+}

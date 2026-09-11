@@ -1,0 +1,82 @@
+{
+  "created": "20260724-174251",
+  "device": "cuda",
+  "tasks": [
+    "OfflineDroneCircle-v0"
+  ],
+  "learners": [
+    "cdt"
+  ],
+  "seeds": [
+    2
+  ],
+  "U": [
+    10,
+    20
+  ],
+  "c_single": 20,
+  "c_saorl": 10,
+  "update_steps": 100000,
+  "runs": [
+    {
+      "raw_return": 684.236794312205,
+      "raw_cost": 22.95,
+      "ep_length": 300.0,
+      "episode_len": 300,
+      "update_steps": 100000,
+      "eval_episodes": 20,
+      "max_epi_r": 996.38916015625,
+      "min_epi_r": 207.794189453125,
+      "train_sec": 8405.9,
+      "target_return": 750.0,
+      "target_cost": 20,
+      "normalized_reward": 0.6041664258069955,
+      "normalized_cost_per_reading": {
+        "10": 2.295,
+        "20": 1.1475
+      },
+      "worst_retained_normalized_cost": 2.295,
+      "satisfies_all_retained": false,
+      "task": "OfflineDroneCircle-v0",
+      "learner": "cdt",
+      "learner_long": "CDT",
+      "reading": "single",
+      "seed": 2,
+      "U": [
+        10,
+        20
+      ],
+      "status": "ok"
+    },
+    {
+      "raw_return": 656.2801332246638,
+      "raw_cost": 12.05,
+      "ep_length": 300.0,
+      "episode_len": 300,
+      "update_steps": 100000,
+      "eval_episodes": 20,
+      "max_epi_r": 996.38916015625,
+      "min_epi_r": 207.794189453125,
+      "train_sec": 8405.9,
+      "target_return": 700.0,
+      "target_cost": 10,
+      "normalized_reward": 0.5687151965623879,
+      "normalized_cost_per_reading": {
+        "10": 1.205,
+        "20": 0.6025
+      },
+      "worst_retained_normalized_cost": 1.205,
+      "satisfies_all_retained": false,
+      "task": "OfflineDroneCircle-v0",
+      "learner": "cdt",
+      "learner_long": "CDT",
+      "reading": "saorl",
+      "seed": 2,
+      "U": [
+        10,
+        20
+      ],
+      "status": "ok"
+    }
+  ]
+}

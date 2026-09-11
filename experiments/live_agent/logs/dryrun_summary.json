@@ -1,0 +1,16 @@
+{
+  "model": "gpt-5-nano",
+  "episodes_run": 5,
+  "total_spend": 8.870000000000001e-05,
+  "paid_calls_billed": 5,
+  "paid_calls_attempted": 5,
+  "live_billing_ok": true,
+  "api_error": null,
+  "billing_exact": true,
+  "billing_math_synthetic_ok": true,
+  "recon": false,
+  "recon_reason": "HTTP 403 on https://api.openai.com/v1/organization/costs -- the Costs API needs an ADMIN (organization) key; the configured key is project/user scope. Internal reconciliation (billing_log vs summed usage fields) still holds to the cent.",
+  "schema_ok": true,
+  "run_start": 1785204093,
+  "run_end": 1785204099
+}

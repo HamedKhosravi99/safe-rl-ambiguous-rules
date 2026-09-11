@@ -1,0 +1,87 @@
+{
+  "created": "20260729-120653",
+  "device": "cuda",
+  "tasks": [
+    "OfflineAntRun-v0"
+  ],
+  "learners": [
+    "caps"
+  ],
+  "seeds": [
+    1
+  ],
+  "U": [
+    10,
+    20,
+    40
+  ],
+  "c_single": 40,
+  "c_saorl": 10,
+  "update_steps": 100000,
+  "runs": [
+    {
+      "raw_return": 670.3897499025529,
+      "raw_cost": 34.15,
+      "ep_length": 200.0,
+      "episode_len": 200,
+      "update_steps": 100000,
+      "eval_episodes": 20,
+      "max_epi_r": 955.4818725585938,
+      "min_epi_r": 0.001767391717990563,
+      "train_sec": 3097.0,
+      "target_cost": 40,
+      "num_heads": 5,
+      "normalized_reward": 0.7016242189509013,
+      "normalized_cost_per_reading": {
+        "10": 3.415,
+        "20": 1.7075,
+        "40": 0.85375
+      },
+      "worst_retained_normalized_cost": 3.415,
+      "satisfies_all_retained": false,
+      "task": "OfflineAntRun-v0",
+      "learner": "caps",
+      "learner_long": "CAPS",
+      "reading": "single",
+      "seed": 1,
+      "U": [
+        10,
+        20,
+        40
+      ],
+      "status": "ok"
+    },
+    {
+      "raw_return": 659.2489482564838,
+      "raw_cost": 10.25,
+      "ep_length": 200.0,
+      "episode_len": 200,
+      "update_steps": 100000,
+      "eval_episodes": 20,
+      "max_epi_r": 955.4818725585938,
+      "min_epi_r": 0.001767391717990563,
+      "train_sec": 3097.0,
+      "target_cost": 10,
+      "num_heads": 5,
+      "normalized_reward": 0.6899643198218416,
+      "normalized_cost_per_reading": {
+        "10": 1.025,
+        "20": 0.5125,
+        "40": 0.25625
+      },
+      "worst_retained_normalized_cost": 1.025,
+      "satisfies_all_retained": false,
+      "task": "OfflineAntRun-v0",
+      "learner": "caps",
+      "learner_long": "CAPS",
+      "reading": "saorl",
+      "seed": 1,
+      "U": [
+        10,
+        20,
+        40
+      ],
+      "status": "ok"
+    }
+  ]
+}

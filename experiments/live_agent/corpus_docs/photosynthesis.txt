@@ -1,0 +1,7 @@
+Photosynthesis is the process by which green plants, algae, and some bacteria convert light energy into chemical energy.
+It takes place mainly in the chloroplasts, which contain the green pigment chlorophyll.
+The overall reaction uses carbon dioxide and water and, powered by sunlight, produces glucose and oxygen.
+The light-dependent reactions occur in the thylakoid membranes and produce ATP and NADPH.
+The Calvin cycle, also called the light-independent reactions, occurs in the stroma and fixes carbon dioxide into sugar.
+Oxygen is released as a byproduct, which is essential for most life on Earth.
+Photosynthesis is the foundation of nearly every food chain.

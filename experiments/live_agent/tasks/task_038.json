@@ -1,0 +1,17 @@
+{
+  "id": "task_038",
+  "question": "What did the Rosetta Stone allow scholars to do, and when was it found?",
+  "source_docs": [
+    "ancient_egypt.txt"
+  ],
+  "rubric": [
+    [
+      "hieroglyph",
+      "hieroglyphics"
+    ],
+    [
+      "1799"
+    ]
+  ],
+  "reference": "It let scholars decode hieroglyphics; found in 1799."
+}

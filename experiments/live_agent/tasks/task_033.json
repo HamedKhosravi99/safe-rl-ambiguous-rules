@@ -1,0 +1,22 @@
+{
+  "id": "task_033",
+  "question": "Which gases cause the greenhouse effect?",
+  "source_docs": [
+    "greenhouse_effect.txt"
+  ],
+  "rubric": [
+    [
+      "carbon dioxide",
+      "co2"
+    ],
+    [
+      "methane"
+    ],
+    [
+      "water vapor",
+      "vapour",
+      "vapor"
+    ]
+  ],
+  "reference": "Carbon dioxide, methane, and water vapor."
+}

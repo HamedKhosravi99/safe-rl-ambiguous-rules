@@ -1,0 +1,20 @@
+{
+  "id": "task_025",
+  "question": "What happens at divergent versus convergent boundaries?",
+  "source_docs": [
+    "plate_tectonics.txt"
+  ],
+  "rubric": [
+    [
+      "divergent",
+      "apart",
+      "new crust"
+    ],
+    [
+      "convergent",
+      "collide",
+      "collision"
+    ]
+  ],
+  "reference": "Divergent: plates move apart and new crust forms. Convergent: plates collide."
+}

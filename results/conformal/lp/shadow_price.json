@@ -1,0 +1,446 @@
+{
+ "config": {
+  "budget": 0.05,
+  "deltas": [
+   0.0,
+   0.01,
+   0.05,
+   0.1,
+   0.15
+  ],
+  "normalization": "fixed_psi",
+  "note": "T2 shadow-price identification + T1 exact minimax game value; see paper/corset_deep_theory_plan.md"
+ },
+ "domains": {
+  "synthetic": {
+   "U": [
+    "mid: RUL<22",
+    "consv: anom>0.6",
+    "vconsv: RUL<40"
+   ],
+   "budget": 0.05,
+   "normalization": "fixed_psi",
+   "solver": "highs",
+   "t2_shadow_price": {
+    "psi_star": "mid: RUL<22",
+    "V_psi_star": 381.5539747179151,
+    "V_robust": 375.4646457059687,
+    "poa_exact": 6.089329011946404,
+    "duals": {
+     "mid: RUL<22": 0.0,
+     "consv: anom>0.6": 1.17332349190512,
+     "vconsv: RUL<40": 7.823254611227519e-06
+    },
+    "budgets": {
+     "mid: RUL<22": 1.1250000000000002,
+     "consv: anom>0.6": 2.0249999999999986,
+     "vconsv: RUL<40": 2.0249999999999972
+    },
+    "oracle_episodic_costs": {
+     "mid: RUL<22": 1.124999999999999,
+     "consv: anom>0.6": 16.000999628515093,
+     "vconsv: RUL<40": 15.929107435971549
+    },
+    "oracle_excess": {
+     "mid: RUL<22": -1.3322676295501878e-15,
+     "consv: anom>0.6": 13.975999628515094,
+     "vconsv: RUL<40": 13.904107435971552
+    },
+    "bound_signed": 16.398477462366603,
+    "bound_plus": 16.398477462366603,
+    "tightness_gap": 10.3091484504202,
+    "robust_lp_relative_duality_gap": 1.479728604504884e-14,
+    "holds": true
+   },
+   "t1_exact_minimax": {
+    "delta_R": 4400.0,
+    "M": 3,
+    "V_by_subset": {
+     "(none)": 388.0952380952383,
+     "mid: RUL<22": 381.5539747179151,
+     "consv: anom>0.6": 375.4646458375625,
+     "vconsv: RUL<40": 375.61934173605596,
+     "consv: anom>0.6+mid: RUL<22": 375.46464572851687,
+     "mid: RUL<22+vconsv: RUL<40": 375.61934174259017,
+     "consv: anom>0.6+vconsv: RUL<40": 375.4646456784575,
+     "consv: anom>0.6+mid: RUL<22+vconsv: RUL<40": 375.4646457059687
+    },
+    "minimax": [
+     {
+      "delta": 0.0,
+      "V_star": 375.4646457059687,
+      "R_star": 6.089329011946404,
+      "old_thm4_lower_bound": 6.089329011946404,
+      "slack_of_old_bound": 0.0,
+      "optimal_mixture": {
+       "consv: anom>0.6+mid: RUL<22+vconsv: RUL<40": 1.0
+      }
+     },
+     {
+      "delta": 0.01,
+      "V_star": 375.59095162986137,
+      "R_star": 5.963023088053717,
+      "old_thm4_lower_bound": 0.0,
+      "slack_of_old_bound": 5.963023088053717,
+      "optimal_mixture": {
+       "(none)": 0.01,
+       "consv: anom>0.6+mid: RUL<22+vconsv: RUL<40": 0.99
+      }
+     },
+     {
+      "delta": 0.05,
+      "V_star": 376.09617532543217,
+      "R_star": 5.457799392482912,
+      "old_thm4_lower_bound": 0.0,
+      "slack_of_old_bound": 5.457799392482912,
+      "optimal_mixture": {
+       "(none)": 0.05,
+       "consv: anom>0.6+mid: RUL<22+vconsv: RUL<40": 0.95
+      }
+     },
+     {
+      "delta": 0.1,
+      "V_star": 376.72770494489566,
+      "R_star": 4.826269773019419,
+      "old_thm4_lower_bound": 0.0,
+      "slack_of_old_bound": 4.826269773019419,
+      "optimal_mixture": {
+       "(none)": 0.1,
+       "consv: anom>0.6+mid: RUL<22+vconsv: RUL<40": 0.9
+      }
+     },
+     {
+      "delta": 0.15,
+      "V_star": 377.3592345643591,
+      "R_star": 4.194740153555983,
+      "old_thm4_lower_bound": 0.0,
+      "slack_of_old_bound": 4.194740153555983,
+      "optimal_mixture": {
+       "(none)": 0.15,
+       "consv: anom>0.6+mid: RUL<22+vconsv: RUL<40": 0.85
+      }
+     }
+    ]
+   },
+   "elapsed_s": 108.45534181594849
+  },
+  "real": {
+   "U": [
+    "mid: RUL<22",
+    "consv: anom>0.6",
+    "vconsv: RUL<40"
+   ],
+   "budget": 0.05,
+   "normalization": "fixed_psi",
+   "solver": "dantzig-wolfe column generation",
+   "t2_shadow_price": {
+    "psi_star": "mid: RUL<22",
+    "V_psi_star": 479.81071428571505,
+    "V_robust": 451.4615771148815,
+    "poa_exact": 28.349137170833558,
+    "duals": {
+     "mid: RUL<22": 0.0,
+     "consv: anom>0.6": 38.90911330666867,
+     "vconsv: RUL<40": 4.99999999999661
+    },
+    "budgets": {
+     "mid: RUL<22": 0.0075,
+     "consv: anom>0.6": 0.19600000000000017,
+     "vconsv: RUL<40": 0.030000000000000013
+    },
+    "oracle_episodic_costs": {
+     "mid: RUL<22": 0.007500000000000004,
+     "consv: anom>0.6": 3.7585714285714253,
+     "vconsv: RUL<40": 0.4296428571428571
+    },
+    "oracle_excess": {
+     "mid: RUL<22": 4.336808689942018e-18,
+     "consv: anom>0.6": 3.562571428571425,
+     "vconsv: RUL<40": 0.3996428571428571
+    },
+    "bound_signed": 140.61470966309898,
+    "bound_plus": 140.61470966309898,
+    "tightness_gap": 112.26557249226542,
+    "robust_lp_relative_duality_gap": 1.2563148283942635e-16,
+    "holds": true
+   },
+   "t1_exact_minimax": {
+    "delta_R": 5280.0,
+    "M": 3,
+    "V_by_subset": {
+     "(none)": 480.0000000000008,
+     "mid: RUL<22": 479.81071428571505,
+     "consv: anom>0.6": 451.89658191300373,
+     "vconsv: RUL<40": 479.400000000001,
+     "consv: anom>0.6+mid: RUL<22": 451.89658191300373,
+     "mid: RUL<22+vconsv: RUL<40": 479.40000000000043,
+     "consv: anom>0.6+vconsv: RUL<40": 451.46157711488206,
+     "consv: anom>0.6+mid: RUL<22+vconsv: RUL<40": 451.4615771148815
+    },
+    "minimax": [
+     {
+      "delta": 0.0,
+      "V_star": 451.4615771148815,
+      "R_star": 28.349137170833558,
+      "old_thm4_lower_bound": 28.349137170833558,
+      "slack_of_old_bound": 0.0,
+      "optimal_mixture": {
+       "consv: anom>0.6+mid: RUL<22+vconsv: RUL<40": 1.0
+      }
+     },
+     {
+      "delta": 0.01,
+      "V_star": 451.74696134373266,
+      "R_star": 28.063752941982386,
+      "old_thm4_lower_bound": 0.0,
+      "slack_of_old_bound": 28.063752941982386,
+      "optimal_mixture": {
+       "(none)": 0.01,
+       "consv: anom>0.6+mid: RUL<22+vconsv: RUL<40": 0.99
+      }
+     },
+     {
+      "delta": 0.05,
+      "V_star": 452.88849825913746,
+      "R_star": 26.922216026577587,
+      "old_thm4_lower_bound": 0.0,
+      "slack_of_old_bound": 26.922216026577587,
+      "optimal_mixture": {
+       "(none)": 0.05,
+       "consv: anom>0.6+mid: RUL<22+vconsv: RUL<40": 0.95
+      }
+     },
+     {
+      "delta": 0.1,
+      "V_star": 454.31541940339343,
+      "R_star": 25.495294882321616,
+      "old_thm4_lower_bound": 0.0,
+      "slack_of_old_bound": 25.495294882321616,
+      "optimal_mixture": {
+       "(none)": 0.1,
+       "consv: anom>0.6+mid: RUL<22+vconsv: RUL<40": 0.9
+      }
+     },
+     {
+      "delta": 0.15,
+      "V_star": 455.74234054764935,
+      "R_star": 24.068373738065702,
+      "old_thm4_lower_bound": 0.0,
+      "slack_of_old_bound": 24.068373738065702,
+      "optimal_mixture": {
+       "(none)": 0.15,
+       "consv: anom>0.6+mid: RUL<22+vconsv: RUL<40": 0.85
+      }
+     }
+    ]
+   },
+   "elapsed_s": 48.39986276626587
+  },
+  "gridworld": {
+   "U": [
+    "psi_W3: Within_3(warn)",
+    "psi_W5: Within_5(warn)"
+   ],
+   "budget": 0.05,
+   "normalization": "fixed_psi",
+   "solver": "highs",
+   "t2_shadow_price": {
+    "psi_star": "psi_W3: Within_3(warn)",
+    "V_psi_star": 39.693989084679906,
+    "V_robust": 39.192508082916845,
+    "poa_exact": 0.5014810017630609,
+    "duals": {
+     "psi_W3: Within_3(warn)": 0.0,
+     "psi_W5: Within_5(warn)": 0.19999999999999943
+    },
+    "budgets": {
+     "psi_W3: Within_3(warn)": 0.533212456889782,
+     "psi_W5: Within_5(warn)": 0.8742643662639967
+    },
+    "oracle_episodic_costs": {
+     "psi_W3: Within_3(warn)": 0.0,
+     "psi_W5: Within_5(warn)": 3.38166937507931
+    },
+    "oracle_excess": {
+     "psi_W3: Within_3(warn)": -0.533212456889782,
+     "psi_W5: Within_5(warn)": 2.5074050088153133
+    },
+    "bound_signed": 0.5014810017630612,
+    "bound_plus": 0.5014810017630612,
+    "tightness_gap": 3.3306690738754696e-16,
+    "robust_lp_relative_duality_gap": 3.5356974204956594e-16,
+    "holds": true
+   },
+   "t1_exact_minimax": {
+    "delta_R": 180.0,
+    "M": 2,
+    "V_by_subset": {
+     "(none)": 39.693989084679934,
+     "psi_W3: Within_3(warn)": 39.693989084679906,
+     "psi_W5: Within_5(warn)": 39.192508082916845,
+     "psi_W3: Within_3(warn)+psi_W5: Within_5(warn)": 39.192508082916845
+    },
+    "minimax": [
+     {
+      "delta": 0.0,
+      "V_star": 39.192508082916845,
+      "R_star": 0.5014810017630609,
+      "old_thm4_lower_bound": 0.5014810017630609,
+      "slack_of_old_bound": 0.0,
+      "optimal_mixture": {
+       "psi_W3: Within_3(warn)+psi_W5: Within_5(warn)": 1.0
+      }
+     },
+     {
+      "delta": 0.01,
+      "V_star": 39.19752289293447,
+      "R_star": 0.4964661917454336,
+      "old_thm4_lower_bound": 0.0,
+      "slack_of_old_bound": 0.4964661917454336,
+      "optimal_mixture": {
+       "psi_W3: Within_3(warn)": 0.01,
+       "psi_W3: Within_3(warn)+psi_W5: Within_5(warn)": 0.99
+      }
+     },
+     {
+      "delta": 0.05,
+      "V_star": 39.217582133004996,
+      "R_star": 0.4764069516749103,
+      "old_thm4_lower_bound": 0.0,
+      "slack_of_old_bound": 0.4764069516749103,
+      "optimal_mixture": {
+       "psi_W3: Within_3(warn)": 0.05,
+       "psi_W3: Within_3(warn)+psi_W5: Within_5(warn)": 0.95
+      }
+     },
+     {
+      "delta": 0.1,
+      "V_star": 39.24265618309315,
+      "R_star": 0.45133290158675266,
+      "old_thm4_lower_bound": 0.0,
+      "slack_of_old_bound": 0.45133290158675266,
+      "optimal_mixture": {
+       "psi_W3: Within_3(warn)": 0.1,
+       "psi_W3: Within_3(warn)+psi_W5: Within_5(warn)": 0.9
+      }
+     },
+     {
+      "delta": 0.15,
+      "V_star": 39.267730233181304,
+      "R_star": 0.4262588514986021,
+      "old_thm4_lower_bound": 0.0,
+      "slack_of_old_bound": 0.4262588514986021,
+      "optimal_mixture": {
+       "psi_W3: Within_3(warn)": 0.15,
+       "psi_W3: Within_3(warn)+psi_W5: Within_5(warn)": 0.85
+      }
+     }
+    ]
+   },
+   "elapsed_s": 0.1103208065032959
+  },
+  "budget": {
+   "U": [
+    "psi_$60: spend>=60",
+    "psi_$80: spend>=80"
+   ],
+   "budget": 0.05,
+   "normalization": "fixed_psi",
+   "solver": "highs",
+   "t2_shadow_price": {
+    "psi_star": "psi_$80: spend>=80",
+    "V_psi_star": 9.100000000000001,
+    "V_robust": 7.2,
+    "poa_exact": 1.9000000000000012,
+    "duals": {
+     "psi_$60: spend>=60": 1.0,
+     "psi_$80: spend>=80": 0.0
+    },
+    "budgets": {
+     "psi_$60: spend>=60": 1.2000000000000002,
+     "psi_$80: spend>=80": 1.1
+    },
+    "oracle_episodic_costs": {
+     "psi_$60: spend>=60": 3.1000000000000005,
+     "psi_$80: spend>=80": 1.1
+    },
+    "oracle_excess": {
+     "psi_$60: spend>=60": 1.9000000000000004,
+     "psi_$80: spend>=80": 0.0
+    },
+    "bound_signed": 1.9000000000000004,
+    "bound_plus": 1.9000000000000004,
+    "tightness_gap": -8.881784197001252e-16,
+    "robust_lp_relative_duality_gap": 0.0,
+    "holds": true
+   },
+   "t1_exact_minimax": {
+    "delta_R": 30.0,
+    "M": 2,
+    "V_by_subset": {
+     "(none)": 30.0,
+     "psi_$60: spend>=60": 7.2,
+     "psi_$80: spend>=80": 9.100000000000001,
+     "psi_$60: spend>=60+psi_$80: spend>=80": 7.2
+    },
+    "minimax": [
+     {
+      "delta": 0.0,
+      "V_star": 7.2,
+      "R_star": 1.9000000000000012,
+      "old_thm4_lower_bound": 1.9000000000000012,
+      "slack_of_old_bound": 0.0,
+      "optimal_mixture": {
+       "psi_$60: spend>=60+psi_$80: spend>=80": 1.0
+      }
+     },
+     {
+      "delta": 0.01,
+      "V_star": 7.428,
+      "R_star": 1.6720000000000015,
+      "old_thm4_lower_bound": 1.3000000000000012,
+      "slack_of_old_bound": 0.37200000000000033,
+      "optimal_mixture": {
+       "(none)": 0.01,
+       "psi_$60: spend>=60+psi_$80: spend>=80": 0.99
+      }
+     },
+     {
+      "delta": 0.05,
+      "V_star": 8.34,
+      "R_star": 0.7600000000000016,
+      "old_thm4_lower_bound": 0.0,
+      "slack_of_old_bound": 0.7600000000000016,
+      "optimal_mixture": {
+       "(none)": 0.05,
+       "psi_$60: spend>=60+psi_$80: spend>=80": 0.95
+      }
+     },
+     {
+      "delta": 0.1,
+      "V_star": 9.48,
+      "R_star": -0.379999999999999,
+      "old_thm4_lower_bound": 0.0,
+      "slack_of_old_bound": -0.379999999999999,
+      "optimal_mixture": {
+       "(none)": 0.1,
+       "psi_$60: spend>=60+psi_$80: spend>=80": 0.9
+      }
+     },
+     {
+      "delta": 0.15,
+      "V_star": 10.62,
+      "R_star": -1.5199999999999978,
+      "old_thm4_lower_bound": 0.0,
+      "slack_of_old_bound": -1.5199999999999978,
+      "optimal_mixture": {
+       "(none)": 0.15,
+       "psi_$60: spend>=60+psi_$80: spend>=80": 0.85
+      }
+     }
+    ]
+   },
+   "elapsed_s": 0.04903292655944824
+  }
+ }
+}

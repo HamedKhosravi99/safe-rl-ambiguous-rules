@@ -1,0 +1,19 @@
+{
+  "id": "task_003",
+  "question": "Why is Mars called the Red Planet?",
+  "source_docs": [
+    "solar_system.txt"
+  ],
+  "rubric": [
+    [
+      "iron oxide",
+      "iron",
+      "rust"
+    ],
+    [
+      "red",
+      "reddish"
+    ]
+  ],
+  "reference": "Iron oxide on its surface gives it a reddish color."
+}

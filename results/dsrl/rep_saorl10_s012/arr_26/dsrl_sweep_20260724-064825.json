@@ -1,0 +1,77 @@
+{
+  "created": "20260724-064825",
+  "device": "cuda",
+  "tasks": [
+    "OfflineBallCircle-v0"
+  ],
+  "learners": [
+    "cdt"
+  ],
+  "seeds": [
+    2
+  ],
+  "U": [
+    10
+  ],
+  "c_single": 10,
+  "c_saorl": 10,
+  "update_steps": 100000,
+  "runs": [
+    {
+      "raw_return": 626.6606338213402,
+      "raw_cost": 11.5,
+      "ep_length": 200.0,
+      "episode_len": 200,
+      "update_steps": 100000,
+      "eval_episodes": 20,
+      "max_epi_r": 881.46337890625,
+      "min_epi_r": 0.38312244415283203,
+      "train_sec": 8251.1,
+      "target_return": 700.0,
+      "target_cost": 10,
+      "normalized_reward": 0.7108064297025003,
+      "normalized_cost_per_reading": {
+        "10": 1.15
+      },
+      "worst_retained_normalized_cost": 1.15,
+      "satisfies_all_retained": false,
+      "task": "OfflineBallCircle-v0",
+      "learner": "cdt",
+      "learner_long": "CDT",
+      "reading": "single",
+      "seed": 2,
+      "U": [
+        10
+      ],
+      "status": "ok"
+    },
+    {
+      "raw_return": 617.4047821544997,
+      "raw_cost": 11.7,
+      "ep_length": 200.0,
+      "episode_len": 200,
+      "update_steps": 100000,
+      "eval_episodes": 20,
+      "max_epi_r": 881.46337890625,
+      "min_epi_r": 0.38312244415283203,
+      "train_sec": 8251.1,
+      "target_return": 700.0,
+      "target_cost": 10,
+      "normalized_reward": 0.7003013121505459,
+      "normalized_cost_per_reading": {
+        "10": 1.17
+      },
+      "worst_retained_normalized_cost": 1.17,
+      "satisfies_all_retained": false,
+      "task": "OfflineBallCircle-v0",
+      "learner": "cdt",
+      "learner_long": "CDT",
+      "reading": "saorl",
+      "seed": 2,
+      "U": [
+        10
+      ],
+      "status": "ok"
+    }
+  ]
+}

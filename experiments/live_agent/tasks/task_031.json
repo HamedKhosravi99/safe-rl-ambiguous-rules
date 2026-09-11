@@ -1,0 +1,19 @@
+{
+  "id": "task_031",
+  "question": "What does the natural pacemaker of the heart do?",
+  "source_docs": [
+    "human_heart.txt"
+  ],
+  "rubric": [
+    [
+      "sinoatrial",
+      "sa node",
+      "pacemaker"
+    ],
+    [
+      "rhythm",
+      "beat"
+    ]
+  ],
+  "reference": "The sinoatrial node sets the heart's rhythm."
+}

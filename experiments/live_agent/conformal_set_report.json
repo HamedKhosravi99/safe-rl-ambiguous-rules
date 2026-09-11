@@ -1,0 +1,134 @@
+{
+  "policy": "real-a02-slack-posting-rate",
+  "rule_text": "In general, apps may post no more than one message per second per channel. We allow bursts over that limit for short periods.",
+  "qhat": 0.5,
+  "qhat_source": "corpus results_paper/conformal/conformal_report.json (reused; demo rule is a fresh exchangeable deployment unit)",
+  "n_personas": 7,
+  "personas": [
+    "a reliability engineer who reads the rule strictly and literally",
+    "a safety auditor who errs toward catching unsafe operation early",
+    "a plain-language reader with no engineering background",
+    "a skeptical linguist who penalizes readings that are broader or narrower than the words actually say",
+    "a prognostics ML practitioner who knows these features well",
+    "a cost-conscious operations manager who dislikes needless early action",
+    "a careful neutral annotator weighing faithfulness on the merits"
+  ],
+  "per_candidate": {
+    "psi_calls>=2": {
+      "gloss": "allow a short burst of up to 2 messages to a channel within one burst window, then throttle -- i.e. forbid posting once 2 messages have already been posted in the current burst window (k = 2; k = 2 is essentially the hard 1 message/second limit with no meaningful burst)",
+      "scores": [
+        0.3,
+        0.5,
+        0.3,
+        0.15,
+        0.35,
+        0.3,
+        0.35
+      ],
+      "mean": 0.321429,
+      "retained": false
+    },
+    "psi_calls>=3": {
+      "gloss": "allow a short burst of up to 3 messages to a channel within one burst window, then throttle -- i.e. forbid posting once 3 messages have already been posted in the current burst window (k = 3; k = 2 is essentially the hard 1 message/second limit with no meaningful burst)",
+      "scores": [
+        0.6,
+        0.5,
+        0.6,
+        0.6,
+        0.6,
+        0.6,
+        0.6
+      ],
+      "mean": 0.585714,
+      "retained": true
+    },
+    "psi_calls>=4": {
+      "gloss": "allow a short burst of up to 4 messages to a channel within one burst window, then throttle -- i.e. forbid posting once 4 messages have already been posted in the current burst window (k = 4; k = 2 is essentially the hard 1 message/second limit with no meaningful burst)",
+      "scores": [
+        0.6,
+        0.6,
+        0.5,
+        0.4,
+        0.55,
+        0.7,
+        0.55
+      ],
+      "mean": 0.557143,
+      "retained": true
+    },
+    "psi_calls>=5": {
+      "gloss": "allow a short burst of up to 5 messages to a channel within one burst window, then throttle -- i.e. forbid posting once 5 messages have already been posted in the current burst window (k = 5; k = 2 is essentially the hard 1 message/second limit with no meaningful burst)",
+      "scores": [
+        0.6,
+        0.6,
+        0.7,
+        0.55,
+        0.75,
+        0.6,
+        0.7
+      ],
+      "mean": 0.642857,
+      "retained": true
+    },
+    "psi_calls>=6": {
+      "gloss": "allow a short burst of up to 6 messages to a channel within one burst window, then throttle -- i.e. forbid posting once 6 messages have already been posted in the current burst window (k = 6; k = 2 is essentially the hard 1 message/second limit with no meaningful burst)",
+      "scores": [
+        0.4,
+        0.6,
+        0.6,
+        0.5,
+        0.6,
+        0.6,
+        0.7
+      ],
+      "mean": 0.571429,
+      "retained": true
+    },
+    "psi_calls>=8": {
+      "gloss": "allow a short burst of up to 8 messages to a channel within one burst window, then throttle -- i.e. forbid posting once 8 messages have already been posted in the current burst window (k = 8; k = 2 is essentially the hard 1 message/second limit with no meaningful burst)",
+      "scores": [
+        0.4,
+        0.6,
+        0.6,
+        0.35,
+        0.6,
+        0.7,
+        0.6
+      ],
+      "mean": 0.55,
+      "retained": true
+    },
+    "psi_bot": {
+      "gloss": "no burst cap and no rate limit apply -- read the rule as placing no bound on how many messages an app may post to a channel in a short window (none of the capped readings captures the rule)",
+      "scores": [
+        0.0,
+        0.1,
+        0.1,
+        0.1,
+        0.0,
+        0.0,
+        0.1
+      ],
+      "mean": 0.057143,
+      "retained": false
+    }
+  },
+  "retained_set": [
+    "psi_calls>=3",
+    "psi_calls>=4",
+    "psi_calls>=5",
+    "psi_calls>=6",
+    "psi_calls>=8"
+  ],
+  "retained_means": {
+    "psi_calls>=3": 0.585714,
+    "psi_calls>=4": 0.557143,
+    "psi_calls>=5": 0.642857,
+    "psi_calls>=6": 0.571429,
+    "psi_calls>=8": 0.55
+  },
+  "most_plausible": "psi_calls>=5",
+  "anchored_reading": "psi_calls>=2",
+  "n_retained": 5,
+  "non_singleton": true
+}

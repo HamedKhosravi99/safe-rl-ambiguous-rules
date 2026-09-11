@@ -1,0 +1,11 @@
+__pycache__/
+*.pyc
+*.egg-info/
+.venv/
+.DS_Store
+paper/generated/*.tex
+paper/figure/*
+!paper/generated/.gitkeep
+!paper/figure/.gitkeep
+data/cmapss/
+external_data/

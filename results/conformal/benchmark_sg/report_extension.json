@@ -1,0 +1,65 @@
+{
+ "manifest": "EVIDENCE_FREEZE_MANIFEST.md Addendum A5 @ bbe3ac3",
+ "provenance": {
+  "thanos": {
+   "url": "https://github.com/thanos-io/thanos",
+   "commit": "d7d0f7f68f013409646c10eb271ed89778b6d67b"
+  },
+  "mimir": {
+   "url": "https://github.com/grafana/mimir",
+   "commit": "9f0e877a2bd39df7d83362d78906846c39323a6a"
+  },
+  "cluster-monitoring-operator": {
+   "url": "https://github.com/openshift/cluster-monitoring-operator",
+   "commit": "54fe9b4f84023ef0b381b6011a2f0e10dee89284"
+  }
+ },
+ "counts": {
+  "parsed": 220,
+  "skipped": {
+   "out_of_dsl_expr": 151,
+   "not_alert": 156,
+   "duplicate": 42
+  },
+  "oodsl_with_text": 151,
+  "oodsl_test": 75,
+  "per_repo": {
+   "thanos": 31,
+   "mimir": 103,
+   "cluster-monitoring-operator": 86
+  },
+  "n_source_files": 14
+ },
+ "primary_iid_loo": {
+  "n_test": 220,
+  "split": "leave-one-out (iid/exchangeable)",
+  "in_dsl_coverage": 0.9136,
+  "in_dsl_cov_cp": [
+   0.8684,
+   0.9472
+  ],
+  "cluster_bootstrap_ci": [
+   0.8522,
+   0.9524
+  ],
+  "overall_coverage": 0.5418,
+  "n_oodsl_test": 151,
+  "mean_set_size": 9.945,
+  "median_set_size": 12.0,
+  "empty_set_rate": 0.0636,
+  "frac_ge2_incomparable_retained": 0.7273
+ },
+ "dominance": {
+  "n_pools": 220,
+  "collapse_rate": 0.2591,
+  "frac_genuinely_non_dominated": 0.7409,
+  "mean_n_maximal": 2.968,
+  "nu_pi_positive_frac": 0.7409
+ },
+ "combined_clusters": {
+  "original_prom_source_files": 7,
+  "extension_source_files": 14,
+  "combined": 21,
+  "note": "independent source-file clusters, V3 metric; original 132-pool study untouched"
+ }
+}

@@ -1,0 +1,46 @@
+{
+ "model": "2.1.218 (Claude Code)",
+ "personas": [
+  "a reliability engineer who reads the rule strictly and literally",
+  "a safety auditor who errs toward catching unsafe operation early",
+  "a plain-language reader with no engineering background",
+  "a skeptical linguist who penalizes readings that are broader or narrower than the words actually say",
+  "a prognostics ML practitioner who knows these features well",
+  "a cost-conscious operations manager who dislikes needless early action",
+  "a careful neutral annotator weighing faithfulness on the merits"
+ ],
+ "sets": {
+  "dsrl_cost": {
+   "rule_text": "Keep the robot's accumulated safety cost low over an episode -- brief, incidental contact with the constraint region is tolerable, but do not run up a substantial total violation.",
+   "scores": {
+    "psi_b10: cost<=10": [
+     0.6,
+     0.75,
+     0.6,
+     0.6,
+     0.7,
+     0.7,
+     0.65
+    ],
+    "psi_b20: cost<=20": [
+     0.85,
+     0.85,
+     0.85,
+     0.85,
+     0.85,
+     0.78,
+     0.9
+    ],
+    "psi_b40: cost<=40": [
+     0.55,
+     0.5,
+     0.5,
+     0.5,
+     0.6,
+     0.6,
+     0.55
+    ]
+   }
+  }
+ }
+}

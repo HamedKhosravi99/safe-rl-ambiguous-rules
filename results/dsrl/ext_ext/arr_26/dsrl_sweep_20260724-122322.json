@@ -1,0 +1,87 @@
+{
+  "created": "20260724-122322",
+  "device": "cuda",
+  "tasks": [
+    "OfflineCarCircle-v0"
+  ],
+  "learners": [
+    "cdt"
+  ],
+  "seeds": [
+    3
+  ],
+  "U": [
+    10,
+    20,
+    40
+  ],
+  "c_single": 40,
+  "c_saorl": 10,
+  "update_steps": 100000,
+  "runs": [
+    {
+      "raw_return": 416.09089829629613,
+      "raw_cost": 32.3,
+      "ep_length": 300.0,
+      "episode_len": 300,
+      "update_steps": 100000,
+      "eval_episodes": 20,
+      "max_epi_r": 534.3060913085938,
+      "min_epi_r": 3.484419822692871,
+      "train_sec": 8384.7,
+      "target_return": 550.0,
+      "target_cost": 40,
+      "normalized_reward": 0.7772977265954781,
+      "normalized_cost_per_reading": {
+        "10": 3.2299999999999995,
+        "20": 1.6149999999999998,
+        "40": 0.8074999999999999
+      },
+      "worst_retained_normalized_cost": 3.2299999999999995,
+      "satisfies_all_retained": false,
+      "task": "OfflineCarCircle-v0",
+      "learner": "cdt",
+      "learner_long": "CDT",
+      "reading": "single",
+      "seed": 3,
+      "U": [
+        10,
+        20,
+        40
+      ],
+      "status": "ok"
+    },
+    {
+      "raw_return": 384.33949699618535,
+      "raw_cost": 9.65,
+      "ep_length": 300.0,
+      "episode_len": 300,
+      "update_steps": 100000,
+      "eval_episodes": 20,
+      "max_epi_r": 534.3060913085938,
+      "min_epi_r": 3.484419822692871,
+      "train_sec": 8384.7,
+      "target_return": 450.0,
+      "target_cost": 10,
+      "normalized_reward": 0.7174821557442905,
+      "normalized_cost_per_reading": {
+        "10": 0.9650000000000001,
+        "20": 0.48250000000000004,
+        "40": 0.24125000000000002
+      },
+      "worst_retained_normalized_cost": 0.9650000000000001,
+      "satisfies_all_retained": true,
+      "task": "OfflineCarCircle-v0",
+      "learner": "cdt",
+      "learner_long": "CDT",
+      "reading": "saorl",
+      "seed": 3,
+      "U": [
+        10,
+        20,
+        40
+      ],
+      "status": "ok"
+    }
+  ]
+}

@@ -1,0 +1,155 @@
+{
+  "model": "2.1.186 (Claude Code)",
+  "personas": [
+    "a reliability engineer who reads the rule strictly and literally",
+    "a safety auditor who errs toward catching unsafe operation early",
+    "a plain-language reader with no engineering background",
+    "a skeptical linguist who penalizes readings that are broader or narrower than the words actually say",
+    "a prognostics ML practitioner who knows these features well",
+    "a cost-conscious operations manager who dislikes needless early action",
+    "a careful neutral annotator weighing faithfulness on the merits"
+  ],
+  "sets": {
+    "window_ambiguous": {
+      "rule_text": "Right after a hazard warning, the crossing is briefly dangerous; do not advance for the first few steps following a warning.",
+      "scores": {
+        "psi_W1: Within_1(warn)": [
+          0.5,
+          0.2,
+          0.5,
+          0.5,
+          0.3,
+          0.5,
+          0.5
+        ],
+        "psi_W2: Within_2(warn)": [
+          0.5,
+          0.6,
+          0.5,
+          0.5,
+          0.8,
+          0.8,
+          0.5
+        ],
+        "psi_W3: Within_3(warn)": [
+          0.7,
+          0.7,
+          0.5,
+          0.9,
+          0.7,
+          0.5,
+          0.5
+        ],
+        "psi_W4: Within_4(warn)": [
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.9,
+          0.5,
+          0.5
+        ],
+        "psi_W5: Within_5(warn)": [
+          0.8,
+          0.5,
+          0.6,
+          0.5,
+          0.85,
+          0.5,
+          0.7
+        ],
+        "psi_W6: Within_6(warn)": [
+          0.6,
+          0.6,
+          0.5,
+          0.5,
+          0.6,
+          0.5,
+          0.6
+        ]
+      }
+    },
+    "window_sharp": {
+      "rule_text": "Do not advance for exactly the four steps immediately following a warning; from the fifth step onward the crossing is safe.",
+      "scores": {
+        "psi_W1: Within_1(warn)": [
+          0.1,
+          0.1,
+          0.1,
+          0.0,
+          0.1,
+          0.1,
+          0.2
+        ],
+        "psi_W2: Within_2(warn)": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.2,
+          0.25,
+          0.0
+        ],
+        "psi_W3: Within_3(warn)": [
+          0.1,
+          0.3,
+          0.5,
+          0.0,
+          0.4,
+          0.0,
+          0.4
+        ],
+        "psi_W4: Within_4(warn)": [
+          0.6,
+          0.7,
+          0.5,
+          0.5,
+          0.5,
+          1.0,
+          0.6
+        ],
+        "psi_W5: Within_5(warn)": [
+          0.7,
+          0.3,
+          0.5,
+          0.2,
+          0.6,
+          0.5,
+          0.3
+        ],
+        "psi_W6: Within_6(warn)": [
+          0.0,
+          0.3,
+          0.0,
+          0.0,
+          0.4,
+          0.35,
+          0.0
+        ]
+      }
+    },
+    "window_conservative": {
+      "rule_text": "Right after a hazard warning, the crossing is briefly dangerous; do not advance for the first few steps following a warning.",
+      "scores": {
+        "psi_W3: Within_3(warn)": [
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.8,
+          0.5,
+          0.5
+        ],
+        "psi_W5: Within_5(warn)": [
+          0.6,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5
+        ]
+      }
+    }
+  }
+}

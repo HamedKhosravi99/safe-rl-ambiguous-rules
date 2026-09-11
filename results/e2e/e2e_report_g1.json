@@ -1,0 +1,56 @@
+{
+ "registration": "V15 (REGISTRATION_V15.md)",
+ "weights": {
+  "var": 0.3,
+  "num": 0.26,
+  "op": 0.2,
+  "win": 0.12,
+  "forx": 0.04,
+  "agg": 0.08
+ },
+ "dev_fit": {
+  "weights": {
+   "var": 0.3,
+   "num": 0.26,
+   "op": 0.2,
+   "win": 0.12,
+   "forx": 0.04,
+   "agg": 0.08
+  },
+  "dev_objective": 10.80846996327944,
+  "n_dev_units": 160
+ },
+ "qhat": 0.46699999999999997,
+ "delta_sem": 0.1,
+ "ref_topk": 24,
+ "ref_cap": 64,
+ "test": {
+  "n_units": 4390,
+  "n_expressible": 1511,
+  "n_licensed": 595,
+  "n_retained": 549,
+  "expressible_frac": 0.34419134396355355,
+  "rho_gen": {
+   "point": 0.3938,
+   "lo": 0.3487,
+   "hi": 0.4386
+  },
+  "rho_ret": {
+   "point": 0.9227,
+   "lo": 0.8722,
+   "hi": 0.9679
+  },
+  "rho_e2e": {
+   "point": 0.1251,
+   "lo": 0.1003,
+   "hi": 0.1535
+  },
+  "e2e_over_corpus": 0.12505694760820046,
+  "set_size_median": 45173928,
+  "ref_subpop": {
+   "n_ref_expressible": 414,
+   "n_ref_retained": 414,
+   "n_gen_miss": 916
+  }
+ }
+}

@@ -1,0 +1,21 @@
+{
+ "registration": "V15B (REGISTRATION_V15B.md): Mondrian class-conditional calibration; V15 test scores reused unchanged",
+ "delta_sem": 0.1,
+ "per_class": {
+  "IN_DSL": {
+   "qhat": 0.4100000000000001,
+   "licensed": 181,
+   "retained": 158,
+   "retention": 0.8729281767955801
+  },
+  "IN_DSL_REF": {
+   "qhat": 0.5634285714285715,
+   "licensed": 414,
+   "retained": 405,
+   "retention": 0.9782608695652174
+  }
+ },
+ "n_units": 4390,
+ "n_retained": 563,
+ "e2e_over_corpus": 0.12824601366742597
+}

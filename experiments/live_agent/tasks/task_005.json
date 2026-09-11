@@ -1,0 +1,20 @@
+{
+  "id": "task_005",
+  "question": "What does photosynthesis convert and into what?",
+  "source_docs": [
+    "photosynthesis.txt"
+  ],
+  "rubric": [
+    [
+      "light",
+      "sunlight",
+      "light energy"
+    ],
+    [
+      "chemical energy",
+      "glucose",
+      "sugar"
+    ]
+  ],
+  "reference": "It converts light energy into chemical energy (glucose)."
+}

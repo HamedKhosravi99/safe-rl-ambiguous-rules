@@ -1,0 +1,161 @@
+{
+  "phase": "live_eval",
+  "episodes_per_condition": 50,
+  "model": "gpt-4o-mini",
+  "conditions": {
+    "no_guard": {
+      "condition": "no_guard",
+      "n_episodes": 50,
+      "billed_spend_total": 0.0174255,
+      "billed_spend_mean": 0.00034851,
+      "billed_spend_ci95": 4.196361223727055e-06,
+      "task_value_mean": 11.86,
+      "task_value_ci95": 0.06285984409780221,
+      "n_paid_mean": 12.0,
+      "retained_violation_rate": {
+        "psi_calls>=3": {
+          "rate": 1.0,
+          "ci95": 0.0
+        },
+        "psi_calls>=4": {
+          "rate": 1.0,
+          "ci95": 0.0
+        },
+        "psi_calls>=5": {
+          "rate": 1.0,
+          "ci95": 0.0
+        },
+        "psi_calls>=6": {
+          "rate": 1.0,
+          "ci95": 0.0
+        },
+        "psi_calls>=8": {
+          "rate": 1.0,
+          "ci95": 0.0
+        }
+      },
+      "anchored_target_violation_rate": {
+        "psi_calls>=2": {
+          "rate": 1.0,
+          "ci95": 0.0
+        }
+      }
+    },
+    "single": {
+      "condition": "single",
+      "n_episodes": 50,
+      "billed_spend_total": 0.007266299999999999,
+      "billed_spend_mean": 0.00014532599999999998,
+      "billed_spend_ci95": 2.9395362834297506e-06,
+      "task_value_mean": 8.016666666666667,
+      "task_value_ci95": 0.25539076812689293,
+      "n_paid_mean": 5.0,
+      "retained_violation_rate": {
+        "psi_calls>=3": {
+          "rate": 1.0,
+          "ci95": 0.0
+        },
+        "psi_calls>=4": {
+          "rate": 1.0,
+          "ci95": 0.0
+        },
+        "psi_calls>=5": {
+          "rate": 0.0,
+          "ci95": 0.0
+        },
+        "psi_calls>=6": {
+          "rate": 0.0,
+          "ci95": 0.0
+        },
+        "psi_calls>=8": {
+          "rate": 0.0,
+          "ci95": 0.0
+        }
+      },
+      "anchored_target_violation_rate": {
+        "psi_calls>=2": {
+          "rate": 1.0,
+          "ci95": 0.0
+        }
+      }
+    },
+    "corset": {
+      "condition": "corset",
+      "n_episodes": 50,
+      "billed_spend_total": 0.00434895,
+      "billed_spend_mean": 8.6979e-05,
+      "billed_spend_ci95": 2.2603962983512424e-06,
+      "task_value_mean": 6.928333333333334,
+      "task_value_ci95": 0.30494479646140693,
+      "n_paid_mean": 3.0,
+      "retained_violation_rate": {
+        "psi_calls>=3": {
+          "rate": 0.0,
+          "ci95": 0.0
+        },
+        "psi_calls>=4": {
+          "rate": 0.0,
+          "ci95": 0.0
+        },
+        "psi_calls>=5": {
+          "rate": 0.0,
+          "ci95": 0.0
+        },
+        "psi_calls>=6": {
+          "rate": 0.0,
+          "ci95": 0.0
+        },
+        "psi_calls>=8": {
+          "rate": 0.0,
+          "ci95": 0.0
+        }
+      },
+      "anchored_target_violation_rate": {
+        "psi_calls>=2": {
+          "rate": 1.0,
+          "ci95": 0.0
+        }
+      }
+    },
+    "post_clarify": {
+      "condition": "post_clarify",
+      "n_episodes": 50,
+      "billed_spend_total": 0.0028910999999999997,
+      "billed_spend_mean": 5.7821999999999996e-05,
+      "billed_spend_ci95": 1.7576935268698007e-06,
+      "task_value_mean": 6.365,
+      "task_value_ci95": 0.3283254550662261,
+      "n_paid_mean": 2.0,
+      "retained_violation_rate": {
+        "psi_calls>=3": {
+          "rate": 0.0,
+          "ci95": 0.0
+        },
+        "psi_calls>=4": {
+          "rate": 0.0,
+          "ci95": 0.0
+        },
+        "psi_calls>=5": {
+          "rate": 0.0,
+          "ci95": 0.0
+        },
+        "psi_calls>=6": {
+          "rate": 0.0,
+          "ci95": 0.0
+        },
+        "psi_calls>=8": {
+          "rate": 0.0,
+          "ci95": 0.0
+        }
+      },
+      "anchored_target_violation_rate": {
+        "psi_calls>=2": {
+          "rate": 0.0,
+          "ci95": 0.0
+        }
+      }
+    }
+  },
+  "eval_billed_spend": 0.03193184999999998,
+  "demo_cumulative_spend_after_eval": 0.03193184999999998
+}

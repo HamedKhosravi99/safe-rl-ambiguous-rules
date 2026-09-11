@@ -1,0 +1,27 @@
+{
+  "instance_id": "real-a02-slack-posting-rate",
+  "selected_as": "PRIMARY (policy_candidates.md shortlist #1)",
+  "source_type": "real",
+  "domain": "api_rate_limits",
+  "category": "A (API quota docs)",
+  "natural_language_rule": "In general, apps may post no more than one message per second per channel. [...] We allow bursts over that limit for short periods.",
+  "context": "Slack Web API rate limits documentation (docs.slack.dev; redirected from api.slack.com), special limit for posting messages. The page also defines per-method tiers (Tier 1: 1+/min, Tier 2: 20+/min, Tier 3: 50+/min, Tier 4: 100+/min).",
+  "vague_quantifier": "'In general' + 'We allow bursts over that limit for short periods' -- an un-quantified burst allowance around an exact 1 msg/sec/channel anchor",
+  "formal_anchor": "1 message / second / channel (documented posting limit); the strict reading maps to the tightest per-window cap in the pool",
+  "formal_source": {
+    "url": "https://docs.slack.dev/apis/web-api/rate-limits",
+    "path_or_section": "Posting messages (special rate limit)",
+    "version_or_access_date": "accessed 2026-07-26; page reflects changelog through 2025-05-29",
+    "license": "official documentation, quoted under fair use for research"
+  },
+  "span_sha256": "c30915bbc5ae14297d1c0e1bddf1830d303db6fa63fc2c2b92875cc08e23c8ee",
+  "candidate_recipe": "candidate-recipe-v1.0",
+  "access_date": "2026-07-26",
+  "harness_mapping": {
+    "metered_action": "one billed gpt-4o-mini call = one posted message",
+    "window": "one channel session = one episode (W=12 posting opportunities)",
+    "axis": "calls (running count of paid posts in the window)",
+    "reading_form": "psi_k := forbid posting once >= k messages already posted in the window (calls >= k)",
+    "note": "calls-per-window quota framing (primary per task); each paid call is the metered posting action. Nested caps k tight->loose give an interval retained band; the strict 1 msg/sec anchor maps to the tightest cap (post-clarify target)."
+  }
+}

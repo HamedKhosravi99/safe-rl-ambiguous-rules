@@ -1,0 +1,38 @@
+{
+  "phase": "ask_vs_act",
+  "theorem": "Thm 5 (value of query), full-reveal over retained U",
+  "n_full_info_episodes": 160,
+  "retained_ks": [
+    3,
+    4,
+    5,
+    6,
+    8
+  ],
+  "k_robust_corset": 3,
+  "anchor_k_strict": 2,
+  "posterior_over_U": {
+    "psi_calls>=3": 0.2015,
+    "psi_calls>=4": 0.1916,
+    "psi_calls>=5": 0.2211,
+    "psi_calls>=6": 0.1966,
+    "psi_calls>=8": 0.1892
+  },
+  "v_psi": {
+    "psi_calls>=3": 7.0266,
+    "psi_calls>=4": 7.5333,
+    "psi_calls>=5": 8.0885,
+    "psi_calls>=6": 8.6297,
+    "psi_calls>=8": 9.738
+  },
+  "v_robust_corset": 7.0266,
+  "v_psi_anchor_strict": 6.4698,
+  "kappa": 0.5,
+  "kappa_units": "return units (per-episode task value)",
+  "VoQ_plausibility": 1.16,
+  "VoQ_robust": 0.0,
+  "decision": "ASK (fire clarification)",
+  "fires": true,
+  "note_robust_voq_zero": "VoQ_robust = 0 because the worst-case answer cell is the tightest retained reading, which the CORSET policy already honors; the plausibility prior puts mass on looser readings, so the expected VoQ is strictly positive.",
+  "note_anchor_miscoverage": "the documented strict anchor (k=2, 1 msg/sec) scored just below q-hat=0.5 and is NOT in U -- a delta-miscoverage event; the clarification is precisely the mechanism that recovers it."
+}

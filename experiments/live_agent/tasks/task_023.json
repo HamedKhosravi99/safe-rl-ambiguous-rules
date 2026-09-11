@@ -1,0 +1,19 @@
+{
+  "id": "task_023",
+  "question": "What is the difference between direct and alternating current?",
+  "source_docs": [
+    "electricity_basics.txt"
+  ],
+  "rubric": [
+    [
+      "direct",
+      "one direction"
+    ],
+    [
+      "alternating",
+      "reverse",
+      "reverses"
+    ]
+  ],
+  "reference": "Direct current flows one way; alternating current reverses direction."
+}

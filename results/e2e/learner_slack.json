@@ -1,0 +1,95 @@
+{
+ "registration": "V45 (REGISTRATION_V28.md)",
+ "d": 0.005,
+ "learners": {
+  "fqi_lagrangian_fullset_n2000": {
+   "n": 660,
+   "eta_pos_frac": 0.13787878787878788,
+   "eta_median_pos": 0.49337007964240076,
+   "eta_p90": 0.4250205038021638,
+   "eps_r_median": 0.1929841496924384,
+   "eps_r_mean": 0.14589128157227454,
+   "eps_r_p90": 0.1929841496924384
+  },
+  "fqi_lagrangian_single_n2000": {
+   "n": 660,
+   "eta_pos_frac": 0.2196969696969697,
+   "eta_median_pos": 0.49337007964240076,
+   "eta_p90": 0.5086915313067489,
+   "eps_r_median": 0.1929841496924384,
+   "eps_r_mean": 0.12814286791081572,
+   "eps_r_p90": 0.1929841496924384
+  },
+  "fqi_lagrangian_fullset_n20000": {
+   "n": 660,
+   "eta_pos_frac": 0.0015151515151515152,
+   "eta_median_pos": 0.3246627426681449,
+   "eta_p90": 0.0,
+   "eps_r_median": 0.09688521240516357,
+   "eps_r_mean": 0.08433647895670604,
+   "eps_r_p90": 0.09688521240516357
+  },
+  "fqi_lagrangian_single_n20000": {
+   "n": 660,
+   "eta_pos_frac": 0.007575757575757576,
+   "eta_median_pos": 0.22132941555337363,
+   "eta_p90": 0.0,
+   "eps_r_median": 0.09688521240516357,
+   "eps_r_mean": 0.07855874968055372,
+   "eps_r_p90": 0.09688521240516357
+  },
+  "occupancy_lp_fullset_rho0.0": {
+   "n": 660,
+   "eta_pos_frac": 0.603030303030303,
+   "eta_median_pos": 0.10899823529023323,
+   "eta_p90": 0.28947002505498715,
+   "eps_r_median": 0.00043347651313602187,
+   "eps_r_mean": 0.00014162386357867201,
+   "eps_r_p90": 0.0069720631588122035
+  },
+  "occupancy_lp_fullset_rho0.5": {
+   "n": 660,
+   "eta_pos_frac": 0.015151515151515152,
+   "eta_median_pos": 0.2303252303428146,
+   "eta_p90": 0.0,
+   "eps_r_median": 0.024912562164917218,
+   "eps_r_mean": 0.024965245181830353,
+   "eps_r_p90": 0.032176271499644214
+  },
+  "occupancy_lp_fullset_rho0.7": {
+   "n": 660,
+   "eta_pos_frac": 0.006060606060606061,
+   "eta_median_pos": 0.22428502707994125,
+   "eta_p90": 0.0,
+   "eps_r_median": 0.03648902493482786,
+   "eps_r_mean": 0.03729462948566497,
+   "eps_r_p90": 0.04557875534242779
+  },
+  "occupancy_lp_single_rho0.0": {
+   "n": 660,
+   "eta_pos_frac": 0.6075757575757575,
+   "eta_median_pos": 0.11704045004619745,
+   "eta_p90": 0.34701185658444755,
+   "eps_r_median": -0.001067188301826394,
+   "eps_r_mean": -0.0016858676052270084,
+   "eps_r_p90": 0.005040128700904401
+  },
+  "occupancy_lp_single_rho0.5": {
+   "n": 660,
+   "eta_pos_frac": 0.0803030303030303,
+   "eta_median_pos": 0.2955658284773146,
+   "eta_p90": 0.0,
+   "eps_r_median": 0.018258042438701882,
+   "eps_r_mean": 0.01781687566664313,
+   "eps_r_p90": 0.022608503783058186
+  }
+ },
+ "tightening_check": {
+  "n_instances": 22,
+  "observed_loss_mean": 0.02496524518183035,
+  "exact_price_mean": 0.025307757131887897,
+  "paired_diff_mean": -0.00034251195005754434,
+  "paired_diff_max_abs": 0.00197351001657365,
+  "note": "observed = 1 - ret of the buffered LP (rho = 0.5 d) on the true model, mean over seeds; exact price = (V_U(d) - V_U(d/2))/V_U(d) from V39"
+ }
+}

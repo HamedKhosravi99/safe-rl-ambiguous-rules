@@ -1,0 +1,331 @@
+{
+ "n": 1075,
+ "names": {
+  "shape": "predicate shape / boolean composition not proposed",
+  "group": "metric set not retrieved (top-25 groups)",
+  "term": "aggregation-window-function skeleton not proposed",
+  "numeric": "threshold constant not on axis",
+  "label": "label set not available",
+  "for_on_axis": "for-duration off axis",
+  "composition": "all components available, complete AST not emitted",
+  "complete": "complete AST proposed"
+ },
+ "first_failure": {
+  "n": 1075,
+  "n_distinct": 1069,
+  "raw": {
+   "shape": 0.10046511627906977,
+   "group": 0.3776744186046512,
+   "term": 0.2158139534883721,
+   "numeric": 0.04,
+   "label": 0.0,
+   "for_on_axis": 0.0,
+   "composition": 0.04093023255813953,
+   "complete": 0.22511627906976744
+  },
+  "distinct": {
+   "shape": 0.09822263797942002,
+   "group": 0.37792329279700654,
+   "term": 0.21702525724976612,
+   "numeric": 0.03928905519176801,
+   "label": 0.0,
+   "for_on_axis": 0.0,
+   "composition": 0.0411599625818522,
+   "complete": 0.22637979420018708
+  },
+  "repo_macro": {
+   "shape": 0.17578552508446083,
+   "group": 0.37572763176677715,
+   "term": 0.20327295509699114,
+   "numeric": 0.029248021317429856,
+   "label": 0.0,
+   "for_on_axis": 0.0,
+   "composition": 0.03617935825653877,
+   "complete": 0.17978650847780228
+  },
+  "counts": {
+   "shape": 108,
+   "group": 406,
+   "term": 232,
+   "numeric": 43,
+   "label": 0,
+   "for_on_axis": 0,
+   "composition": 44,
+   "complete": 242
+  }
+ },
+ "multiset": {
+  "complete": {
+   "n": 242,
+   "frac": 0.22511627906976744
+  },
+  "group+term": {
+   "n": 192,
+   "frac": 0.1786046511627907
+  },
+  "term": {
+   "n": 177,
+   "frac": 0.16465116279069766
+  },
+  "group": {
+   "n": 137,
+   "frac": 0.12744186046511627
+  },
+  "composition_only": {
+   "n": 44,
+   "frac": 0.04093023255813953
+  },
+  "term+numeric": {
+   "n": 43,
+   "frac": 0.04
+  },
+  "numeric": {
+   "n": 41,
+   "frac": 0.03813953488372093
+  },
+  "group+term+numeric": {
+   "n": 32,
+   "frac": 0.029767441860465118
+  },
+  "group+numeric": {
+   "n": 23,
+   "frac": 0.021395348837209303
+  },
+  "shape+group+term": {
+   "n": 21,
+   "frac": 0.01953488372093023
+  },
+  "group+term+label": {
+   "n": 18,
+   "frac": 0.01674418604651163
+  },
+  "shape+group+term+numeric": {
+   "n": 18,
+   "frac": 0.01674418604651163
+  },
+  "shape+group+term+label": {
+   "n": 11,
+   "frac": 0.010232558139534883
+  },
+  "term+label": {
+   "n": 10,
+   "frac": 0.009302325581395349
+  },
+  "shape+term": {
+   "n": 9,
+   "frac": 0.008372093023255815
+  },
+  "shape+group": {
+   "n": 9,
+   "frac": 0.008372093023255815
+  },
+  "shape": {
+   "n": 9,
+   "frac": 0.008372093023255815
+  },
+  "shape+group+term+numeric+label": {
+   "n": 8,
+   "frac": 0.0074418604651162795
+  },
+  "shape+term+label": {
+   "n": 6,
+   "frac": 0.005581395348837209
+  },
+  "shape+label": {
+   "n": 5,
+   "frac": 0.004651162790697674
+  },
+  "shape+term+numeric": {
+   "n": 4,
+   "frac": 0.0037209302325581397
+  },
+  "group+term+numeric+label": {
+   "n": 4,
+   "frac": 0.0037209302325581397
+  },
+  "shape+group+label": {
+   "n": 3,
+   "frac": 0.0027906976744186047
+  },
+  "shape+term+numeric+label": {
+   "n": 3,
+   "frac": 0.0027906976744186047
+  },
+  "numeric+label": {
+   "n": 2,
+   "frac": 0.0018604651162790699
+  },
+  "term+numeric+label": {
+   "n": 2,
+   "frac": 0.0018604651162790699
+  },
+  "shape+group+numeric": {
+   "n": 1,
+   "frac": 0.0009302325581395349
+  },
+  "shape+numeric": {
+   "n": 1,
+   "frac": 0.0009302325581395349
+  }
+ },
+ "availability": {
+  "n": 1075,
+  "all_components": 286,
+  "all_components_frac": 0.266046511627907,
+  "complete": 242,
+  "complete_frac": 0.22511627906976744,
+  "composition_efficiency": 0.8461538461538461,
+  "stage_pass": {
+   "shape": 0.8995348837209303,
+   "group": 0.5562790697674419,
+   "term": 0.48093023255813955,
+   "numeric": 0.8306976744186046,
+   "label": 0.9330232558139535,
+   "for_on_axis": 1.0
+  }
+ },
+ "by_metric_count": {
+  "single_metric": {
+   "availability": {
+    "n": 787,
+    "all_components": 286,
+    "all_components_frac": 0.3634053367217281,
+    "complete": 242,
+    "complete_frac": 0.30749682337992373,
+    "composition_efficiency": 0.8461538461538461,
+    "stage_pass": {
+     "shape": 0.9695044472681067,
+     "group": 0.6035578144853876,
+     "term": 0.6213468869123253,
+     "numeric": 0.8424396442185514,
+     "label": 0.9758576874205845,
+     "for_on_axis": 1.0
+    }
+   },
+   "first_failure": {
+    "shape": 0.030495552731893267,
+    "group": 0.3799237611181703,
+    "term": 0.17407878017789072,
+    "numeric": 0.052096569250317665,
+    "label": 0.0,
+    "for_on_axis": 0.0,
+    "composition": 0.05590851334180432,
+    "complete": 0.30749682337992373
+   }
+  },
+  "two_metrics": {
+   "availability": {
+    "n": 241,
+    "all_components": 0,
+    "all_components_frac": 0.0,
+    "complete": 0,
+    "complete_frac": 0.0,
+    "composition_efficiency": null,
+    "stage_pass": {
+     "shape": 0.7925311203319502,
+     "group": 0.5062240663900415,
+     "term": 0.1037344398340249,
+     "numeric": 0.8257261410788381,
+     "label": 0.8423236514522822,
+     "for_on_axis": 1.0
+    }
+   },
+   "first_failure": {
+    "shape": 0.2074688796680498,
+    "group": 0.3900414937759336,
+    "term": 0.3941908713692946,
+    "numeric": 0.008298755186721992,
+    "label": 0.0,
+    "for_on_axis": 0.0,
+    "composition": 0.0,
+    "complete": 0.0
+   }
+  },
+  "three_plus": {
+   "availability": {
+    "n": 47,
+    "all_components": 0,
+    "all_components_frac": 0.0,
+    "complete": 0,
+    "complete_frac": 0.0,
+    "composition_efficiency": null,
+    "stage_pass": {
+     "shape": 0.2765957446808511,
+     "group": 0.02127659574468085,
+     "term": 0.06382978723404255,
+     "numeric": 0.6595744680851063,
+     "label": 0.6808510638297872,
+     "for_on_axis": 1.0
+    }
+   },
+   "first_failure": {
+    "shape": 0.723404255319149,
+    "group": 0.2765957446808511,
+    "term": 0.0,
+    "numeric": 0.0,
+    "label": 0.0,
+    "for_on_axis": 0.0,
+    "composition": 0.0,
+    "complete": 0.0
+   }
+  }
+ },
+ "per_repo": {
+  "awesome-prometheus-alerts": {
+   "availability": {
+    "n": 941,
+    "all_components": 266,
+    "all_components_frac": 0.2826780021253985,
+    "complete": 226,
+    "complete_frac": 0.24017003188097769,
+    "composition_efficiency": 0.849624060150376,
+    "stage_pass": {
+     "shape": 0.924548352816153,
+     "group": 0.5770456960680127,
+     "term": 0.5037194473963869,
+     "numeric": 0.8437832093517534,
+     "label": 0.9553666312433581,
+     "for_on_axis": 1.0
+    }
+   },
+   "first_failure": {
+    "shape": 0.07545164718384698,
+    "group": 0.3783209351753454,
+    "term": 0.2199787460148778,
+    "numeric": 0.04357066950053135,
+    "label": 0.0,
+    "for_on_axis": 0.0,
+    "composition": 0.04250797024442083,
+    "complete": 0.24017003188097769
+   }
+  },
+  "kube-prometheus": {
+   "availability": {
+    "n": 134,
+    "all_components": 20,
+    "all_components_frac": 0.14925373134328357,
+    "complete": 16,
+    "complete_frac": 0.11940298507462686,
+    "composition_efficiency": 0.8,
+    "stage_pass": {
+     "shape": 0.7238805970149254,
+     "group": 0.41044776119402987,
+     "term": 0.3208955223880597,
+     "numeric": 0.7388059701492538,
+     "label": 0.7761194029850746,
+     "for_on_axis": 1.0
+    }
+   },
+   "first_failure": {
+    "shape": 0.27611940298507465,
+    "group": 0.373134328358209,
+    "term": 0.1865671641791045,
+    "numeric": 0.014925373134328358,
+    "label": 0.0,
+    "for_on_axis": 0.0,
+    "composition": 0.029850746268656716,
+    "complete": 0.11940298507462686
+   }
+  }
+ }
+}

@@ -1,0 +1,51 @@
+{
+  "created": "20260727-235718",
+  "device": "cuda",
+  "tasks": [
+    "OfflineDroneCircle-v0"
+  ],
+  "learners": [
+    "bcql"
+  ],
+  "seeds": [
+    16
+  ],
+  "U": [
+    10,
+    20,
+    40
+  ],
+  "c_single": 40,
+  "c_saorl": 10,
+  "update_steps": 100000,
+  "runs": [
+    {
+      "task": "OfflineDroneCircle-v0",
+      "learner": "bcql",
+      "reading": "single",
+      "target_cost": 40,
+      "seed": 16,
+      "U": [
+        10,
+        20,
+        40
+      ],
+      "status": "error",
+      "error": "RuntimeError('repeats can not be negative')"
+    },
+    {
+      "task": "OfflineDroneCircle-v0",
+      "learner": "bcql",
+      "reading": "saorl",
+      "target_cost": 10,
+      "seed": 16,
+      "U": [
+        10,
+        20,
+        40
+      ],
+      "status": "error",
+      "error": "RuntimeError('repeats can not be negative')"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+ "design": "frozen v3 weights; semantic-16 licensing on cal and test; frozen quantile rule",
+ "cal": {
+  "expressible": 516,
+  "in_dsl": 203,
+  "n": 203,
+  "k": 20,
+  "qhat": 0.362
+ },
+ "test": {
+  "n": 315,
+  "licensed": 173,
+  "retained": 153,
+  "rho_gen": 0.5492063492063493,
+  "rho_ret_given_gen": 0.884393063583815,
+  "rho_e2e": 0.4857142857142857
+ }
+}

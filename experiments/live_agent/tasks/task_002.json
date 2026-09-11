@@ -1,0 +1,22 @@
+{
+  "id": "task_002",
+  "question": "Which are the four inner rocky planets?",
+  "source_docs": [
+    "solar_system.txt"
+  ],
+  "rubric": [
+    [
+      "mercury"
+    ],
+    [
+      "venus"
+    ],
+    [
+      "earth"
+    ],
+    [
+      "mars"
+    ]
+  ],
+  "reference": "Mercury, Venus, Earth, and Mars."
+}

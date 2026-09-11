@@ -1,0 +1,51 @@
+{
+  "created": "20260727-232752",
+  "device": "cuda",
+  "tasks": [
+    "OfflineCarCircle-v0"
+  ],
+  "learners": [
+    "caps"
+  ],
+  "seeds": [
+    14
+  ],
+  "U": [
+    10,
+    20,
+    40
+  ],
+  "c_single": 40,
+  "c_saorl": 10,
+  "update_steps": 100000,
+  "runs": [
+    {
+      "task": "OfflineCarCircle-v0",
+      "learner": "caps",
+      "reading": "single",
+      "target_cost": 40,
+      "seed": 14,
+      "U": [
+        10,
+        20,
+        40
+      ],
+      "status": "error",
+      "error": "ValueError(\"Expected parameter loc (Tensor of shape (512, 2)) of distribution Normal(loc: torch.Size([512, 2]), scale: torch.Size([512, 2])) to satisfy the constraint Real(), but found invalid values:\\ntensor([[0., 0.],\\n        [0., 0.],\\n        [0., 0.],\\n        ...,\\n        [0., 0.],\\n        "
+    },
+    {
+      "task": "OfflineCarCircle-v0",
+      "learner": "caps",
+      "reading": "saorl",
+      "target_cost": 10,
+      "seed": 14,
+      "U": [
+        10,
+        20,
+        40
+      ],
+      "status": "error",
+      "error": "ValueError(\"Expected parameter loc (Tensor of shape (512, 2)) of distribution Normal(loc: torch.Size([512, 2]), scale: torch.Size([512, 2])) to satisfy the constraint Real(), but found invalid values:\\ntensor([[0., 0.],\\n        [0., 0.],\\n        [0., 0.],\\n        ...,\\n        [0., 0.],\\n        "
+    }
+  ]
+}

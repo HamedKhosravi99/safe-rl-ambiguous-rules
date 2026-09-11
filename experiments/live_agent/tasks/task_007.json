@@ -1,0 +1,23 @@
+{
+  "id": "task_007",
+  "question": "Where does the Calvin cycle occur and what does it do?",
+  "source_docs": [
+    "photosynthesis.txt"
+  ],
+  "rubric": [
+    [
+      "stroma"
+    ],
+    [
+      "carbon",
+      "co2",
+      "carbon dioxide"
+    ],
+    [
+      "sugar",
+      "fix",
+      "glucose"
+    ]
+  ],
+  "reference": "In the stroma; it fixes carbon dioxide into sugar."
+}

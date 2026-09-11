@@ -1,0 +1,8 @@
+Machine learning is a branch of artificial intelligence in which systems learn patterns from data rather than following explicit rules.
+Supervised learning trains a model on labeled examples to predict outputs for new inputs.
+Unsupervised learning finds structure in unlabeled data, such as clusters.
+Reinforcement learning trains an agent to take actions that maximize a reward signal.
+Overfitting happens when a model memorizes the training data and fails to generalize.
+A dataset is usually split into training, validation, and test sets.
+Neural networks are models loosely inspired by the brain and are the basis of deep learning.
+Gradient descent is a common optimization method for training models.

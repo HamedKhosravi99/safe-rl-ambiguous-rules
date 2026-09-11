@@ -1,0 +1,72 @@
+{
+ "shape": {
+  "raw": 0.998353328628558,
+  "distinct": 0.9950669485553206,
+  "repo_macro": 0.986534872763485
+ },
+ "term_shape": {
+  "raw": 0.954834156669019,
+  "distinct": 0.9330514446793516,
+  "repo_macro": 0.6874256907120101
+ },
+ "metric": {
+  "raw": 0.9473065161138555,
+  "distinct": 0.8823114869626497,
+  "repo_macro": 0.6221893162933951
+ },
+ "threshold": {
+  "raw": 0.9952952246530228,
+  "distinct": 0.9922480620155039,
+  "repo_macro": 0.9839630861850444
+ },
+ "window": {
+  "raw": 1.0,
+  "distinct": 1.0,
+  "repo_macro": 1.0
+ },
+ "for": {
+  "raw": 0.9689484827099506,
+  "distinct": 0.9887244538407329,
+  "repo_macro": 0.8604578782853654
+ },
+ "labels": {
+  "raw": 0.9179016701952482,
+  "distinct": 0.9400986610288936,
+  "repo_macro": 0.8572066685778662
+ },
+ "complete_ast_available": {
+  "raw": 0.8252175958597977,
+  "distinct": 0.7998590556730092,
+  "repo_macro": 0.5293972875639964
+ },
+ "n_pool": 4251,
+ "label_sets_needed": 2861,
+ "top_unlicensed_metrics": {
+  "node_uname_info": 24,
+  "up": 19,
+  "container_spec_memory_limit_bytes": 12,
+  "container_memory_working_set_bytes": 8,
+  "cortex_build_info": 6,
+  "cortex_ingester_memory_users": 6,
+  "container_memory_rss": 6,
+  "memberlist_client_cluster_members_count": 6,
+  "cortex_compactor_group_compaction_runs_started_total": 6,
+  "thanos_objstore_bucket_last_successful_upload_time": 6,
+  "vm_new_timeseries_created_total": 6,
+  "vm_data_size_bytes": 6,
+  "vm_app_uptime_seconds": 5,
+  "x509_cert_not_after": 4,
+  "cortex_ring_members": 4,
+  "cortex_request_duration_seconds_count": 4,
+  "node_filesystem_readonly": 4,
+  "vm_deduplicated_samples_total": 4,
+  "vm_rows": 4,
+  "vm_rows_inserted_total": 4,
+  "node_timex_offset_seconds": 3,
+  "node_timex_sync_status": 3,
+  "node_timex_maxerror_seconds": 3,
+  "node_md_disks": 3,
+  "kube_job_owner": 3
+ },
+ "note": "availability upper-bounds proposal recall; a beam-limited ranked generator may still fail to emit an available AST"
+}

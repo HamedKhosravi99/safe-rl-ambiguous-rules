@@ -1,0 +1,2369 @@
+{
+ "config": {
+  "budgets": [
+   0.05,
+   0.0
+  ],
+  "eps_paper": 0.05,
+  "constraint": "on-policy active-normalized expected semantic cost: E[sum_t c_psi] <= d * E[sum_t 1{some honored reading fires}] (the exact analogue of saorl/offline.py normalize='active'; the learners enforce the dataset-state version of the same quantity)",
+  "policy_class": "Markov policies on the domain's exact sufficient state augmented with the current firing pattern where readings fire on noisy features; this class contains every observation-history policy the paper evaluates, so V-values are certified upper bounds for the paper's policies and exact optima of the stated class",
+  "solver": "scipy.optimize.linprog(method='highs')",
+  "price_report": "results_conformal/price/price_report.json",
+  "gamma": 1.0
+ },
+ "domains": {
+  "synthetic": {
+   "U": [
+    "mid: RUL<22",
+    "consv: anom>0.6",
+    "vconsv: RUL<40"
+   ],
+   "n_states": 318,
+   "n_actions": 3,
+   "horizon": 100,
+   "model_notes": "state=(RUL,firing pattern); 6 patterns, 318 states; pattern probs analytic (Gaussian CDF); patterns below 1e-14 pruned (max truncated mass 9.98e-15, renormalized)",
+   "unconstrained": {
+    "V": 388.0952380952383,
+    "method": "exact finite-horizon DP (gamma=1)",
+    "always_greedy_value": 375.99999999999994,
+    "greedy_action": "continue"
+   },
+   "guard_fallback": {
+    "V": 370.2711953922651,
+    "note": "union-guard fallback (safe action wherever some retained reading fires): zero semantic cost by construction, so it certifies feasibility of every analyzed program (the program-level fallback rate is 0)"
+   },
+   "solver": "monolithic occupancy LP (HiGHS)",
+   "lp_vs_dp_unconstrained": {
+    "lp": 388.0952372851582,
+    "dp": 388.0952380952383,
+    "abs_diff": 8.100801096588839e-07
+   },
+   "cg_vs_lp_robust": {
+    "lp": 371.6545773272481,
+    "cg": 371.6545785267905,
+    "abs_diff": 1.199542396079778e-06
+   },
+   "programs": {
+    "d=0.05": {
+     "singleton": {
+      "mid: RUL<22": {
+       "V": 380.0005760537577,
+       "on_policy": {
+        "E_active_steps": 2.1052025645628314,
+        "mid: RUL<22": {
+         "E_episodic_cost": 0.10526013946118408,
+         "active_normalized_cost": 0.050000005335848766
+        },
+        "consv: anom>0.6": {
+         "E_episodic_cost": 39.942348635721245,
+         "active_normalized_cost": 18.973161684332126
+        },
+        "vconsv: RUL<40": {
+         "E_episodic_cost": 39.865966748115426,
+         "active_normalized_cost": 18.93687924344422
+        }
+       },
+       "lp": {
+        "status": 0,
+        "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+        "method": "highs",
+        "n_variables": 95400,
+        "n_eq_rows": 31800,
+        "n_ub_rows": 1,
+        "primal_objective": 380.0005760537577,
+        "dual_objective": 380.0005763649058,
+        "relative_duality_gap": 8.16660405864892e-10,
+        "max_primal_residual": 2.2228363519702467e-10,
+        "min_reduced_cost": -3.4703712437078593e-07,
+        "max_stage_mass_error": 2.134504910600299e-07,
+        "max_constraint_value": 6.130533552516277e-11
+       }
+      },
+      "consv: anom>0.6": {
+       "V": 371.6311445839436,
+       "on_policy": {
+        "E_active_steps": 2.986195315023526,
+        "mid: RUL<22": {
+         "E_episodic_cost": 1.1041915460179911e-08,
+         "active_normalized_cost": 3.6976534671486885e-09
+        },
+        "consv: anom>0.6": {
+         "E_episodic_cost": 0.14930977297842035,
+         "active_normalized_cost": 0.05000000242021813
+        },
+        "vconsv: RUL<40": {
+         "E_episodic_cost": 1.4169552363944264,
+         "active_normalized_cost": 0.4745018617053397
+        }
+       },
+       "lp": {
+        "status": 0,
+        "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+        "method": "highs",
+        "n_variables": 95400,
+        "n_eq_rows": 31800,
+        "n_ub_rows": 1,
+        "primal_objective": 371.6311445839436,
+        "dual_objective": 371.6311447784882,
+        "relative_duality_gap": 5.220836056220463e-10,
+        "max_primal_residual": 4.896049307661562e-08,
+        "min_reduced_cost": -3.420368375195437e-07,
+        "max_stage_mass_error": 1.6085841747504048e-07,
+        "max_constraint_value": 4.525991193650908e-12
+       }
+      },
+      "vconsv: RUL<40": {
+       "V": 371.95961655950754,
+       "on_policy": {
+        "E_active_steps": 2.951619524671373,
+        "mid: RUL<22": {
+         "E_episodic_cost": 1.8608355458568744e-09,
+         "active_normalized_cost": 6.304456012378682e-10
+        },
+        "consv: anom>0.6": {
+         "E_episodic_cost": 2.930437611259668,
+         "active_normalized_cost": 0.9928236301343537
+        },
+        "vconsv: RUL<40": {
+         "E_episodic_cost": 0.14758132955438183,
+         "active_normalized_cost": 0.05000011970405068
+        }
+       },
+       "lp": {
+        "status": 0,
+        "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+        "method": "highs",
+        "n_variables": 95400,
+        "n_eq_rows": 31800,
+        "n_ub_rows": 1,
+        "primal_objective": 371.95961655950754,
+        "dual_objective": 371.9596170733915,
+        "relative_duality_gap": 1.3778541271879556e-09,
+        "max_primal_residual": 3.310732042209224e-08,
+        "min_reduced_cost": -3.42159788502272e-07,
+        "max_stage_mass_error": 6.531025587008799e-08,
+        "max_constraint_value": 2.7906852802846923e-11
+       }
+      }
+     },
+     "pairwise": {
+      "mid: RUL<22 | consv: anom>0.6": {
+       "V": 371.6311448178168,
+       "pair_price": 8.369431235940908,
+       "lp": {
+        "status": 0,
+        "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+        "method": "highs",
+        "n_variables": 95400,
+        "n_eq_rows": 31800,
+        "n_ub_rows": 2,
+        "primal_objective": 371.6311448178168,
+        "dual_objective": 371.6311450013799,
+        "relative_duality_gap": 4.926133814576894e-10,
+        "max_primal_residual": 4.8960493071815746e-08,
+        "min_reduced_cost": -3.4230258627587773e-07,
+        "max_stage_mass_error": 2.0165862624210718e-07,
+        "max_constraint_value": 4.261470215258374e-12
+       }
+      },
+      "mid: RUL<22 | vconsv: RUL<40": {
+       "V": 371.959616399116,
+       "pair_price": 8.04095965464171,
+       "lp": {
+        "status": 0,
+        "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+        "method": "highs",
+        "n_variables": 95400,
+        "n_eq_rows": 31800,
+        "n_ub_rows": 2,
+        "primal_objective": 371.959616399116,
+        "dual_objective": 371.95961690990896,
+        "relative_duality_gap": 1.3695664353562206e-09,
+        "max_primal_residual": 1.1151607465840143e-10,
+        "min_reduced_cost": -3.4215978894636123e-07,
+        "max_stage_mass_error": 9.463745476168128e-08,
+        "max_constraint_value": 1.7049892785118473e-11
+       }
+      },
+      "consv: anom>0.6 | vconsv: RUL<40": {
+       "V": 371.65457699766114,
+       "pair_price": 0.30503956184639947,
+       "lp": {
+        "status": 0,
+        "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+        "method": "highs",
+        "n_variables": 95400,
+        "n_eq_rows": 31800,
+        "n_ub_rows": 2,
+        "primal_objective": 371.65457699766114,
+        "dual_objective": 371.6545770396535,
+        "relative_duality_gap": 1.1268434445993745e-10,
+        "max_primal_residual": 4.686390738809326e-10,
+        "min_reduced_cost": -3.4210232069398216e-07,
+        "max_stage_mass_error": 1.206383972718328e-07,
+        "max_constraint_value": 2.4582078350417413e-11
+       }
+      }
+     },
+     "robust": {
+      "V": 371.6545773272481,
+      "on_policy": {
+       "E_active_steps": 3.108772372004775,
+       "mid: RUL<22": {
+        "E_episodic_cost": 3.726751824679696e-10,
+        "active_normalized_cost": 1.198785687315022e-10
+       },
+       "consv: anom>0.6": {
+        "E_episodic_cost": 0.15543895904545485,
+        "active_normalized_cost": 0.0500001095111431
+       },
+       "vconsv: RUL<40": {
+        "E_episodic_cost": 0.15543963893739957,
+        "active_normalized_cost": 0.050000328212245454
+       }
+      },
+      "lp": {
+       "status": 0,
+       "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+       "method": "highs",
+       "n_variables": 95400,
+       "n_eq_rows": 31800,
+       "n_ub_rows": 3,
+       "primal_objective": 371.6545773272481,
+       "dual_objective": 371.65457732482776,
+       "relative_duality_gap": 6.4948509395308375e-12,
+       "max_primal_residual": 4.698042996208488e-11,
+       "min_reduced_cost": -3.4210232069398216e-07,
+       "max_stage_mass_error": 2.701174108832305e-07,
+       "max_constraint_value": 5.5162187808134615e-12
+      }
+     },
+     "V_psi": {
+      "mid: RUL<22": 380.0005760537577,
+      "consv: anom>0.6": 371.6311445839436,
+      "vconsv: RUL<40": 371.95961655950754
+     },
+     "V_U": 371.6545773272481,
+     "certified_true_price": 8.345998726509606,
+     "pair_witness": {
+      "best_pair": "mid: RUL<22 | consv: anom>0.6",
+      "best_pair_price": 8.369431235940908,
+      "all_pair_prices": {
+       "mid: RUL<22 | consv: anom>0.6": 8.369431235940908,
+       "mid: RUL<22 | vconsv: RUL<40": 8.04095965464171,
+       "consv: anom>0.6 | vconsv: RUL<40": 0.30503956184639947
+      },
+      "witnesses_full_price": true,
+      "tolerance": 1e-06,
+      "note": "pairwise programs normalize the budget over the PAIR's own active set (the learners' convention), so for d > 0 they are not nested inside the full-set program and a pair price may slightly exceed the full-set price; at d = 0 nesting is exact"
+     },
+     "mc_policy_rollouts": {
+      "robust": {
+       "lp_value": 371.6545773272481,
+       "n_episodes": 20000,
+       "mean_return": 371.6595,
+       "se_return": 0.026307557695072984,
+       "mean_active_steps": 3.1139,
+       "cost[mid: RUL<22]": {
+        "mean_episodic": 0.0,
+        "active_normalized": 0.0
+       },
+       "cost[consv: anom>0.6]": {
+        "mean_episodic": 0.15815,
+        "active_normalized": 0.05078840039821446
+       },
+       "cost[vconsv: RUL<40]": {
+        "mean_episodic": 0.1607,
+        "active_normalized": 0.051607309162143934
+       }
+      },
+      "singleton[mid: RUL<22]": {
+       "lp_value": 380.0005760537577,
+       "n_episodes": 20000,
+       "mean_return": 379.9995,
+       "se_return": 0.0005,
+       "mean_active_steps": 47.56735,
+       "cost[mid: RUL<22]": {
+        "mean_episodic": 0.10565,
+        "active_normalized": 0.0022210612951951286
+       },
+       "cost[consv: anom>0.6]": {
+        "mean_episodic": 39.9761,
+        "active_normalized": 0.8404104916502602
+       },
+       "cost[vconsv: RUL<40]": {
+        "mean_episodic": 39.8896,
+        "active_normalized": 0.8385920174237161
+       }
+      }
+     }
+    },
+    "d=0": {
+     "singleton": {
+      "mid: RUL<22": {
+       "V": 379.16233495946216,
+       "on_policy": {
+        "E_active_steps": 0.17900455966003295,
+        "mid: RUL<22": {
+         "E_episodic_cost": 0.0,
+         "active_normalized_cost": 0.0
+        },
+        "consv: anom>0.6": {
+         "E_episodic_cost": 9.371602529332575,
+         "active_normalized_cost": 52.353987781826376
+        },
+        "vconsv: RUL<40": {
+         "E_episodic_cost": 9.239535464954157,
+         "active_normalized_cost": 51.616201746491626
+        }
+       },
+       "lp": {
+        "status": 0,
+        "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+        "method": "highs",
+        "n_variables": 95400,
+        "n_eq_rows": 31800,
+        "n_ub_rows": 1,
+        "primal_objective": 379.16233495946216,
+        "dual_objective": 379.1623349594523,
+        "relative_duality_gap": 2.5867663780969796e-14,
+        "max_primal_residual": 4.6980364037466983e-11,
+        "min_reduced_cost": -3.44616617908855e-07,
+        "max_stage_mass_error": 3.976800777572009e-09,
+        "max_constraint_value": 0.0
+       }
+      },
+      "consv: anom>0.6": {
+       "V": 370.5541649673167,
+       "on_policy": {
+        "E_active_steps": 0.516012071169294,
+        "mid: RUL<22": {
+         "E_episodic_cost": 8.014314604143108e-10,
+         "active_normalized_cost": 1.5531254115785518e-09
+        },
+        "consv: anom>0.6": {
+         "E_episodic_cost": 0.0,
+         "active_normalized_cost": 0.0
+        },
+        "vconsv: RUL<40": {
+         "E_episodic_cost": 0.23675169111391348,
+         "active_normalized_cost": 0.45881037351980786
+        }
+       },
+       "lp": {
+        "status": 0,
+        "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+        "method": "highs",
+        "n_variables": 95400,
+        "n_eq_rows": 31800,
+        "n_ub_rows": 1,
+        "primal_objective": 370.5541649673167,
+        "dual_objective": 370.55416496766463,
+        "relative_duality_gap": 9.364410351250182e-13,
+        "max_primal_residual": 6.1105182296567125e-09,
+        "min_reduced_cost": -3.4112722779866544e-07,
+        "max_stage_mass_error": 2.0610057660519487e-08,
+        "max_constraint_value": 0.0
+       }
+      },
+      "vconsv: RUL<40": {
+       "V": 370.8550472252809,
+       "on_policy": {
+        "E_active_steps": 0.39068573645203225,
+        "mid: RUL<22": {
+         "E_episodic_cost": 0.0,
+         "active_normalized_cost": 0.0
+        },
+        "consv: anom>0.6": {
+         "E_episodic_cost": 0.4186959545471677,
+         "active_normalized_cost": 1.0716950108020502
+        },
+        "vconsv: RUL<40": {
+         "E_episodic_cost": 0.0,
+         "active_normalized_cost": 0.0
+        }
+       },
+       "lp": {
+        "status": 0,
+        "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+        "method": "highs",
+        "n_variables": 95400,
+        "n_eq_rows": 31800,
+        "n_ub_rows": 1,
+        "primal_objective": 370.8550472252809,
+        "dual_objective": 370.8550472252766,
+        "relative_duality_gap": 1.1464834070082671e-14,
+        "max_primal_residual": 9.396072807450731e-11,
+        "min_reduced_cost": -3.4134016413389645e-07,
+        "max_stage_mass_error": 3.0936082584531732e-09,
+        "max_constraint_value": 0.0
+       }
+      }
+     },
+     "pairwise": {
+      "mid: RUL<22 | consv: anom>0.6": {
+       "V": 370.5541652064884,
+       "pair_price": 8.608169752973765,
+       "lp": {
+        "status": 0,
+        "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+        "method": "highs",
+        "n_variables": 95400,
+        "n_eq_rows": 31800,
+        "n_ub_rows": 2,
+        "primal_objective": 370.5541652064884,
+        "dual_objective": 370.5541652074669,
+        "relative_duality_gap": 2.6335396125250104e-12,
+        "max_primal_residual": 6.1102746025623306e-09,
+        "min_reduced_cost": -3.4112722779866544e-07,
+        "max_stage_mass_error": 1.3363060569204777e-07,
+        "max_constraint_value": 0.0
+       }
+      },
+      "mid: RUL<22 | vconsv: RUL<40": {
+       "V": 370.85504722519846,
+       "pair_price": 8.307287734263696,
+       "lp": {
+        "status": 0,
+        "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+        "method": "highs",
+        "n_variables": 95400,
+        "n_eq_rows": 31800,
+        "n_ub_rows": 2,
+        "primal_objective": 370.85504722519846,
+        "dual_objective": 370.8550472272535,
+        "relative_duality_gap": 5.526508615143876e-12,
+        "max_primal_residual": 9.396072807255266e-11,
+        "min_reduced_cost": -3.4134016413389645e-07,
+        "max_stage_mass_error": 3.0929420136160957e-09,
+        "max_constraint_value": 0.0
+       }
+      },
+      "consv: anom>0.6 | vconsv: RUL<40": {
+       "V": 370.2711961331418,
+       "pair_price": 0.5838510921390707,
+       "lp": {
+        "status": 0,
+        "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+        "method": "highs",
+        "n_variables": 95400,
+        "n_eq_rows": 31800,
+        "n_ub_rows": 2,
+        "primal_objective": 370.2711961331418,
+        "dual_objective": 370.27119613313823,
+        "relative_duality_gap": 9.64560522208319e-15,
+        "max_primal_residual": 9.69290932683645e-08,
+        "min_reduced_cost": -3.411084694704414e-07,
+        "max_stage_mass_error": 1.0948568029967021e-07,
+        "max_constraint_value": 0.0
+       }
+      }
+     },
+     "robust": {
+      "V": 370.2711960530923,
+      "on_policy": {
+       "E_active_steps": 0.35383287972622607,
+       "mid: RUL<22": {
+        "E_episodic_cost": 0.0,
+        "active_normalized_cost": 0.0
+       },
+       "consv: anom>0.6": {
+        "E_episodic_cost": 0.0,
+        "active_normalized_cost": 0.0
+       },
+       "vconsv: RUL<40": {
+        "E_episodic_cost": 0.0,
+        "active_normalized_cost": 0.0
+       }
+      },
+      "lp": {
+       "status": 0,
+       "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+       "method": "highs",
+       "n_variables": 95400,
+       "n_eq_rows": 31800,
+       "n_ub_rows": 3,
+       "primal_objective": 370.2711960530923,
+       "dual_objective": 370.27119605308144,
+       "relative_duality_gap": 2.924302536214458e-14,
+       "max_primal_residual": 4.698042996166617e-11,
+       "min_reduced_cost": -3.411084694704414e-07,
+       "max_stage_mass_error": 7.557419912096464e-08,
+       "max_constraint_value": 0.0
+      }
+     },
+     "V_psi": {
+      "mid: RUL<22": 379.16233495946216,
+      "consv: anom>0.6": 370.5541649673167,
+      "vconsv: RUL<40": 370.8550472252809
+     },
+     "V_U": 370.2711960530923,
+     "certified_true_price": 8.89113890636986,
+     "pair_witness": {
+      "best_pair": "mid: RUL<22 | consv: anom>0.6",
+      "best_pair_price": 8.608169752973765,
+      "all_pair_prices": {
+       "mid: RUL<22 | consv: anom>0.6": 8.608169752973765,
+       "mid: RUL<22 | vconsv: RUL<40": 8.307287734263696,
+       "consv: anom>0.6 | vconsv: RUL<40": 0.5838510921390707
+      },
+      "witnesses_full_price": false,
+      "tolerance": 1e-06,
+      "note": "at d = 0 the programs nest exactly: V_pair >= V_U and every pair price <= the full-set price"
+     }
+    }
+   },
+   "max_relative_duality_gap": 1.3778541271879556e-09,
+   "learned_from_price_report": {
+    "n_seeds": 15,
+    "v_psi_mean": {
+     "mid: RUL<22": 368.32,
+     "consv: anom>0.6": 366.62,
+     "vconsv: RUL<40": 366.35333333333335
+    },
+    "v_psi_max": {
+     "mid: RUL<22": 375.0,
+     "consv: anom>0.6": 371.0,
+     "vconsv: RUL<40": 370.25
+    },
+    "v_robust_mean": 366.2366666666667,
+    "v_robust_max": 370.25,
+    "v_surgery_max": 370.25,
+    "learned_price_mean": 2.0833333333333335,
+    "learned_price_sd": 3.1126980079810003,
+    "surgery_feasible_rate": 1.0,
+    "decomposition_per_seed": [
+     {
+      "seed": 0,
+      "learned_price": 11.0,
+      "robust_optimizer_error": 7.6545773272480915,
+      "singleton_shortfall": 5.0005760537576975,
+      "identity_residual": 0.0
+     },
+     {
+      "seed": 1,
+      "learned_price": 3.75,
+      "robust_optimizer_error": 3.6545773272480915,
+      "singleton_shortfall": 8.250576053757698,
+      "identity_residual": 0.0
+     },
+     {
+      "seed": 2,
+      "learned_price": 0.0,
+      "robust_optimizer_error": 4.10457732724808,
+      "singleton_shortfall": 12.450576053757686,
+      "identity_residual": 0.0
+     },
+     {
+      "seed": 3,
+      "learned_price": 7.0,
+      "robust_optimizer_error": 5.4045773272480915,
+      "singleton_shortfall": 6.7505760537576975,
+      "identity_residual": 0.0
+     },
+     {
+      "seed": 4,
+      "learned_price": 0.0,
+      "robust_optimizer_error": 2.9045773272480915,
+      "singleton_shortfall": 11.250576053757698,
+      "identity_residual": 0.0
+     },
+     {
+      "seed": 5,
+      "learned_price": 1.75,
+      "robust_optimizer_error": 9.654577327248091,
+      "singleton_shortfall": 16.250576053757698,
+      "identity_residual": 0.0
+     },
+     {
+      "seed": 6,
+      "learned_price": 4.0,
+      "robust_optimizer_error": 1.4045773272480915,
+      "singleton_shortfall": 5.7505760537576975,
+      "identity_residual": 0.0
+     },
+     {
+      "seed": 7,
+      "learned_price": 0.0,
+      "robust_optimizer_error": 8.904577327248091,
+      "singleton_shortfall": 17.250576053757698,
+      "identity_residual": 0.0
+     },
+     {
+      "seed": 8,
+      "learned_price": 0.0,
+      "robust_optimizer_error": 7.6545773272480915,
+      "singleton_shortfall": 16.000576053757698,
+      "identity_residual": 0.0
+     },
+     {
+      "seed": 9,
+      "learned_price": 2.5,
+      "robust_optimizer_error": 1.6545773272480915,
+      "singleton_shortfall": 7.5005760537576975,
+      "identity_residual": 0.0
+     },
+     {
+      "seed": 10,
+      "learned_price": 0.0,
+      "robust_optimizer_error": 7.9045773272480915,
+      "singleton_shortfall": 16.250576053757698,
+      "identity_residual": 0.0
+     },
+     {
+      "seed": 11,
+      "learned_price": 0.0,
+      "robust_optimizer_error": 7.6545773272480915,
+      "singleton_shortfall": 16.000576053757698,
+      "identity_residual": 0.0
+     },
+     {
+      "seed": 12,
+      "learned_price": 0.0,
+      "robust_optimizer_error": 8.654577327248091,
+      "singleton_shortfall": 17.000576053757698,
+      "identity_residual": 0.0
+     },
+     {
+      "seed": 13,
+      "learned_price": 0.25,
+      "robust_optimizer_error": 2.6545773272480915,
+      "singleton_shortfall": 10.750576053757698,
+      "identity_residual": 0.0
+     },
+     {
+      "seed": 14,
+      "learned_price": 1.0,
+      "robust_optimizer_error": 1.4045773272480915,
+      "singleton_shortfall": 8.750576053757698,
+      "identity_residual": 0.0
+     }
+    ],
+    "decomposition_summary": {
+     "certified_true_price": 8.345998726509606,
+     "robust_optimizer_error_mean": 5.417910660581424,
+     "singleton_shortfall_mean": 11.680576053757697,
+     "max_identity_residual": 0.0,
+     "identity": "learned_price = true_price + robust_optimizer_error - singleton_shortfall (exact per seed)"
+    }
+   },
+   "cross_checks": {
+    "V_U_geq_learned_robust": {
+     "V_U": 371.6545773272481,
+     "learned_robust_max": 370.25,
+     "margin": 1.4045773272480915,
+     "passed": true
+    },
+    "V_U_geq_surgery": {
+     "V_U": 371.6545773272481,
+     "v_surgery_max": 370.25,
+     "margin": 1.4045773272480915,
+     "passed": true
+    },
+    "V_psi_geq_learned_singleton": {
+     "mid: RUL<22": {
+      "V_psi": 380.0005760537577,
+      "learned_max": 375.0,
+      "margin": 5.0005760537576975,
+      "passed": true
+     },
+     "consv: anom>0.6": {
+      "V_psi": 371.6311445839436,
+      "learned_max": 371.0,
+      "margin": 0.6311445839435805,
+      "passed": true
+     },
+     "vconsv: RUL<40": {
+      "V_psi": 371.95961655950754,
+      "learned_max": 370.25,
+      "margin": 1.7096165595075377,
+      "passed": true
+     }
+    },
+    "all_passed": true
+   },
+   "mc_integration": {
+    "n_draws_per_state": 120000,
+    "n_states": 101,
+    "max_abs_diff": 0.0027750000000000274,
+    "max_mc_se": 0.001443375672965733,
+    "worst_case": {
+     "rul": 40,
+     "pattern": [
+      0,
+      1,
+      0
+     ],
+     "analytic": 0.25,
+     "empirical": 0.252775,
+     "mc_se": 0.00125
+    },
+    "note": "empirical firing-pattern frequencies via env.observe() vs the analytic Gaussian-CDF pattern probabilities"
+   },
+   "elapsed_s": 155.4846670627594
+  },
+  "real": {
+   "U": [
+    "mid: RUL<22",
+    "consv: anom>0.6",
+    "vconsv: RUL<40"
+   ],
+   "n_states": 12000,
+   "n_actions": 3,
+   "horizon": 120,
+   "model_notes": "replay over 100 real FD001 engines (min length 128 > horizon 120: failure unreachable); features and firing deterministic per state",
+   "unconstrained": {
+    "V": 480.0000000000008,
+    "method": "exact finite-horizon DP (gamma=1)",
+    "always_greedy_value": 480.0000000000008,
+    "greedy_action": "continue"
+   },
+   "guard_fallback": {
+    "V": 328.20000000000044,
+    "note": "union-guard fallback (safe action wherever some retained reading fires): zero semantic cost by construction, so it certifies feasibility of every analyzed program (the program-level fallback rate is 0)"
+   },
+   "solver": "dantzig-wolfe column generation (HiGHS master, exact DP pricing; certified primal/dual bounds)",
+   "programs": {
+    "d=0.05": {
+     "singleton": {
+      "mid: RUL<22": {
+       "V": 479.80149253731423,
+       "on_policy": {
+        "E_active_steps": 0.020895522388059702,
+        "mid: RUL<22": {
+         "E_episodic_cost": 0.0010447761194029852,
+         "active_normalized_cost": 0.05
+        },
+        "consv: anom>0.6": {
+         "E_episodic_cost": 3.751194029850743,
+         "active_normalized_cost": 179.5214285714284
+        },
+        "vconsv: RUL<40": {
+         "E_episodic_cost": 0.42134328358208956,
+         "active_normalized_cost": 20.164285714285715
+        }
+       },
+       "lp": {
+        "status": 0,
+        "message": "column generation converged (Dantzig-Wolfe over deterministic DP policies; master: HiGHS)",
+        "method": "dantzig-wolfe column generation",
+        "n_columns": 3,
+        "n_iterations": 2,
+        "primal_objective": 479.80149253731423,
+        "dual_objective": 479.8014925373142,
+        "relative_duality_gap": 0.0,
+        "max_primal_residual": 0.0,
+        "min_reduced_cost": 5.684341886080802e-14,
+        "max_stage_mass_error": 0.0,
+        "max_constraint_value": 0.0,
+        "theta_support": 2
+       }
+      },
+      "consv: anom>0.6": {
+       "V": 447.2641758487213,
+       "on_policy": {
+        "E_active_steps": 1.9396818632843993,
+        "mid: RUL<22": {
+         "E_episodic_cost": 0.0,
+         "active_normalized_cost": 0.0
+        },
+        "consv: anom>0.6": {
+         "E_episodic_cost": 0.09698409316421991,
+         "active_normalized_cost": 0.04999999999999997
+        },
+        "vconsv: RUL<40": {
+         "E_episodic_cost": 0.42923722265988795,
+         "active_normalized_cost": 0.22129258966884122
+        }
+       },
+       "lp": {
+        "status": 0,
+        "message": "column generation converged (Dantzig-Wolfe over deterministic DP policies; master: HiGHS)",
+        "method": "dantzig-wolfe column generation",
+        "n_columns": 11,
+        "n_iterations": 10,
+        "primal_objective": 447.2641758487213,
+        "dual_objective": 447.26417585301533,
+        "relative_duality_gap": 9.57919221636267e-12,
+        "max_primal_residual": 1.1102230246251565e-16,
+        "min_reduced_cost": -4.294008704164298e-09,
+        "max_stage_mass_error": 1.1102230246251565e-16,
+        "max_constraint_value": 0.0,
+        "theta_support": 2
+       }
+      },
+      "vconsv: RUL<40": {
+       "V": 479.1450000000007,
+       "on_policy": {
+        "E_active_steps": 0.09000000000000002,
+        "mid: RUL<22": {
+         "E_episodic_cost": 0.0,
+         "active_normalized_cost": 0.0
+        },
+        "consv: anom>0.6": {
+         "E_episodic_cost": 3.6999999999999966,
+         "active_normalized_cost": 41.111111111111065
+        },
+        "vconsv: RUL<40": {
+         "E_episodic_cost": 0.004500000000000001,
+         "active_normalized_cost": 0.05
+        }
+       },
+       "lp": {
+        "status": 0,
+        "message": "column generation converged (Dantzig-Wolfe over deterministic DP policies; master: HiGHS)",
+        "method": "dantzig-wolfe column generation",
+        "n_columns": 4,
+        "n_iterations": 3,
+        "primal_objective": 479.1450000000007,
+        "dual_objective": 479.1450000000007,
+        "relative_duality_gap": 0.0,
+        "max_primal_residual": 0.0,
+        "min_reduced_cost": 0.0,
+        "max_stage_mass_error": 0.0,
+        "max_constraint_value": 4.336808689942018e-19,
+        "theta_support": 2
+       }
+      }
+     },
+     "pairwise": {
+      "mid: RUL<22 | consv: anom>0.6": {
+       "V": 447.2641758487213,
+       "pair_price": 32.53731668859291,
+       "lp": {
+        "status": 0,
+        "message": "column generation converged (Dantzig-Wolfe over deterministic DP policies; master: HiGHS)",
+        "method": "dantzig-wolfe column generation",
+        "n_columns": 11,
+        "n_iterations": 10,
+        "primal_objective": 447.2641758487213,
+        "dual_objective": 447.2641758530152,
+        "relative_duality_gap": 9.578938600651563e-12,
+        "max_primal_residual": 1.1102230246251565e-16,
+        "min_reduced_cost": -4.293895017326577e-09,
+        "max_stage_mass_error": 1.1102230246251565e-16,
+        "max_constraint_value": 0.0,
+        "theta_support": 2
+       }
+      },
+      "mid: RUL<22 | vconsv: RUL<40": {
+       "V": 479.1450000000007,
+       "pair_price": 0.6564925373135111,
+       "lp": {
+        "status": 0,
+        "message": "column generation converged (Dantzig-Wolfe over deterministic DP policies; master: HiGHS)",
+        "method": "dantzig-wolfe column generation",
+        "n_columns": 4,
+        "n_iterations": 3,
+        "primal_objective": 479.1450000000007,
+        "dual_objective": 479.1450000000007,
+        "relative_duality_gap": 0.0,
+        "max_primal_residual": 0.0,
+        "min_reduced_cost": 0.0,
+        "max_stage_mass_error": 0.0,
+        "max_constraint_value": 4.336808689942018e-19,
+        "theta_support": 2
+       }
+      },
+      "consv: anom>0.6 | vconsv: RUL<40": {
+       "V": 447.49356794583355,
+       "pair_price": 31.651432054167174,
+       "lp": {
+        "status": 0,
+        "message": "column generation converged (Dantzig-Wolfe over deterministic DP policies; master: HiGHS)",
+        "method": "dantzig-wolfe column generation",
+        "n_columns": 22,
+        "n_iterations": 21,
+        "primal_objective": 447.49356794583355,
+        "dual_objective": 447.4935679459005,
+        "relative_duality_gap": 1.4930325026672194e-13,
+        "max_primal_residual": 2.220446049250313e-16,
+        "min_reduced_cost": -6.696154741803184e-11,
+        "max_stage_mass_error": 2.220446049250313e-16,
+        "max_constraint_value": 1.463672932855431e-18,
+        "theta_support": 3
+       }
+      }
+     },
+     "robust": {
+      "V": 447.49356794583343,
+      "on_policy": {
+       "E_active_steps": 2.319087891923503,
+       "mid: RUL<22": {
+        "E_episodic_cost": 0.0,
+        "active_normalized_cost": 0.0
+       },
+       "consv: anom>0.6": {
+        "E_episodic_cost": 0.11595439459617517,
+        "active_normalized_cost": 0.05
+       },
+       "vconsv: RUL<40": {
+        "E_episodic_cost": 0.11595439459617521,
+        "active_normalized_cost": 0.050000000000000024
+       }
+      },
+      "lp": {
+       "status": 0,
+       "message": "column generation converged (Dantzig-Wolfe over deterministic DP policies; master: HiGHS)",
+       "method": "dantzig-wolfe column generation",
+       "n_columns": 22,
+       "n_iterations": 21,
+       "primal_objective": 447.49356794583343,
+       "dual_objective": 447.49356794590045,
+       "relative_duality_gap": 1.494299932635528e-13,
+       "max_primal_residual": 0.0,
+       "min_reduced_cost": -6.701839083689265e-11,
+       "max_stage_mass_error": 0.0,
+       "max_constraint_value": 0.0,
+       "theta_support": 3
+      }
+     },
+     "V_psi": {
+      "mid: RUL<22": 479.80149253731423,
+      "consv: anom>0.6": 447.2641758487213,
+      "vconsv: RUL<40": 479.1450000000007
+     },
+     "V_U": 447.49356794583343,
+     "certified_true_price": 32.3079245914808,
+     "pair_witness": {
+      "best_pair": "mid: RUL<22 | consv: anom>0.6",
+      "best_pair_price": 32.53731668859291,
+      "all_pair_prices": {
+       "mid: RUL<22 | consv: anom>0.6": 32.53731668859291,
+       "mid: RUL<22 | vconsv: RUL<40": 0.6564925373135111,
+       "consv: anom>0.6 | vconsv: RUL<40": 31.651432054167174
+      },
+      "witnesses_full_price": true,
+      "tolerance": 1e-06,
+      "note": "pairwise programs normalize the budget over the PAIR's own active set (the learners' convention), so for d > 0 they are not nested inside the full-set program and a pair price may slightly exceed the full-set price; at d = 0 nesting is exact"
+     },
+     "mc_policy_rollouts": {
+      "robust": {
+       "lp_value": 447.49356794583343,
+       "n_episodes": 20000,
+       "mean_return": 447.7509,
+       "se_return": 0.2708898974238912,
+       "mean_active_steps": 2.31695,
+       "cost[mid: RUL<22]": {
+        "mean_episodic": 0.0,
+        "active_normalized": 0.0
+       },
+       "cost[consv: anom>0.6]": {
+        "mean_episodic": 0.118,
+        "active_normalized": 0.050929023069121046
+       },
+       "cost[vconsv: RUL<40]": {
+        "mean_episodic": 0.1195,
+        "active_normalized": 0.05157642590474546
+       }
+      },
+      "singleton[mid: RUL<22]": {
+       "lp_value": 479.80149253731423,
+       "n_episodes": 20000,
+       "mean_return": 479.7965,
+       "se_return": 0.009984206113586894,
+       "mean_active_steps": 4.1065,
+       "cost[mid: RUL<22]": {
+        "mean_episodic": 0.0007,
+        "active_normalized": 0.00017046146353342264
+       },
+       "cost[consv: anom>0.6]": {
+        "mean_episodic": 3.7165,
+        "active_normalized": 0.905028613174236
+       },
+       "cost[vconsv: RUL<40]": {
+        "mean_episodic": 0.4218,
+        "active_normalized": 0.10271520759771095
+       }
+      }
+     }
+    },
+    "d=0": {
+     "singleton": {
+      "mid: RUL<22": {
+       "V": 479.80000000000075,
+       "on_policy": {
+        "E_active_steps": 0.02,
+        "mid: RUL<22": {
+         "E_episodic_cost": 0.0,
+         "active_normalized_cost": 0.0
+        },
+        "consv: anom>0.6": {
+         "E_episodic_cost": 3.7499999999999964,
+         "active_normalized_cost": 187.49999999999983
+        },
+        "vconsv: RUL<40": {
+         "E_episodic_cost": 0.42,
+         "active_normalized_cost": 21.0
+        }
+       },
+       "lp": {
+        "status": 0,
+        "message": "column generation converged (Dantzig-Wolfe over deterministic DP policies; master: HiGHS)",
+        "method": "dantzig-wolfe column generation",
+        "n_columns": 3,
+        "n_iterations": 2,
+        "primal_objective": 479.80000000000075,
+        "dual_objective": 479.80000000000075,
+        "relative_duality_gap": 0.0,
+        "max_primal_residual": 0.0,
+        "min_reduced_cost": 0.0,
+        "max_stage_mass_error": 0.0,
+        "max_constraint_value": 0.0,
+        "theta_support": 1
+       }
+      },
+      "consv: anom>0.6": {
+       "V": 440.2641953968917,
+       "on_policy": {
+        "E_active_steps": 1.9795607768015702,
+        "mid: RUL<22": {
+         "E_episodic_cost": 0.0,
+         "active_normalized_cost": 0.0
+        },
+        "consv: anom>0.6": {
+         "E_episodic_cost": 0.0,
+         "active_normalized_cost": 0.0
+        },
+        "vconsv: RUL<40": {
+         "E_episodic_cost": 0.4572717426973429,
+         "active_normalized_cost": 0.2309965665394569
+        }
+       },
+       "lp": {
+        "status": 0,
+        "message": "column generation converged (Dantzig-Wolfe over deterministic DP policies; master: HiGHS)",
+        "method": "dantzig-wolfe column generation",
+        "n_columns": 9,
+        "n_iterations": 8,
+        "primal_objective": 440.2641953968917,
+        "dual_objective": 440.2641953968917,
+        "relative_duality_gap": 0.0,
+        "max_primal_residual": 0.0,
+        "min_reduced_cost": 0.0,
+        "max_stage_mass_error": 0.0,
+        "max_constraint_value": 0.0,
+        "theta_support": 1
+       }
+      },
+      "vconsv: RUL<40": {
+       "V": 479.1000000000007,
+       "on_policy": {
+        "E_active_steps": 0.09000000000000001,
+        "mid: RUL<22": {
+         "E_episodic_cost": 0.0,
+         "active_normalized_cost": 0.0
+        },
+        "consv: anom>0.6": {
+         "E_episodic_cost": 3.6999999999999966,
+         "active_normalized_cost": 41.11111111111107
+        },
+        "vconsv: RUL<40": {
+         "E_episodic_cost": 0.0,
+         "active_normalized_cost": 0.0
+        }
+       },
+       "lp": {
+        "status": 0,
+        "message": "column generation converged (Dantzig-Wolfe over deterministic DP policies; master: HiGHS)",
+        "method": "dantzig-wolfe column generation",
+        "n_columns": 4,
+        "n_iterations": 3,
+        "primal_objective": 479.1000000000007,
+        "dual_objective": 479.1000000000007,
+        "relative_duality_gap": 0.0,
+        "max_primal_residual": 0.0,
+        "min_reduced_cost": 0.0,
+        "max_stage_mass_error": 0.0,
+        "max_constraint_value": 0.0,
+        "theta_support": 1
+       }
+      }
+     },
+     "pairwise": {
+      "mid: RUL<22 | consv: anom>0.6": {
+       "V": 440.2641953968917,
+       "pair_price": 39.53580460310906,
+       "lp": {
+        "status": 0,
+        "message": "column generation converged (Dantzig-Wolfe over deterministic DP policies; master: HiGHS)",
+        "method": "dantzig-wolfe column generation",
+        "n_columns": 9,
+        "n_iterations": 8,
+        "primal_objective": 440.2641953968917,
+        "dual_objective": 440.2641953968917,
+        "relative_duality_gap": 0.0,
+        "max_primal_residual": 0.0,
+        "min_reduced_cost": 0.0,
+        "max_stage_mass_error": 0.0,
+        "max_constraint_value": 0.0,
+        "theta_support": 1
+       }
+      },
+      "mid: RUL<22 | vconsv: RUL<40": {
+       "V": 479.1000000000007,
+       "pair_price": 0.7000000000000455,
+       "lp": {
+        "status": 0,
+        "message": "column generation converged (Dantzig-Wolfe over deterministic DP policies; master: HiGHS)",
+        "method": "dantzig-wolfe column generation",
+        "n_columns": 5,
+        "n_iterations": 4,
+        "primal_objective": 479.1000000000007,
+        "dual_objective": 479.1000000000007,
+        "relative_duality_gap": 0.0,
+        "max_primal_residual": 0.0,
+        "min_reduced_cost": 0.0,
+        "max_stage_mass_error": 0.0,
+        "max_constraint_value": 0.0,
+        "theta_support": 1
+       }
+      },
+      "consv: anom>0.6 | vconsv: RUL<40": {
+       "V": 439.6126003691515,
+       "pair_price": 39.48739963084921,
+       "lp": {
+        "status": 0,
+        "message": "column generation converged (Dantzig-Wolfe over deterministic DP policies; master: HiGHS)",
+        "method": "dantzig-wolfe column generation",
+        "n_columns": 13,
+        "n_iterations": 12,
+        "primal_objective": 439.6126003691515,
+        "dual_objective": 439.6126003691515,
+        "relative_duality_gap": 0.0,
+        "max_primal_residual": 0.0,
+        "min_reduced_cost": 0.0,
+        "max_stage_mass_error": 0.0,
+        "max_constraint_value": 0.0,
+        "theta_support": 1
+       }
+      }
+     },
+     "robust": {
+      "V": 439.6126003691515,
+      "on_policy": {
+       "E_active_steps": 2.0447202795755968,
+       "mid: RUL<22": {
+        "E_episodic_cost": 0.0,
+        "active_normalized_cost": 0.0
+       },
+       "consv: anom>0.6": {
+        "E_episodic_cost": 0.0,
+        "active_normalized_cost": 0.0
+       },
+       "vconsv: RUL<40": {
+        "E_episodic_cost": 0.0,
+        "active_normalized_cost": 0.0
+       }
+      },
+      "lp": {
+       "status": 0,
+       "message": "column generation converged (Dantzig-Wolfe over deterministic DP policies; master: HiGHS)",
+       "method": "dantzig-wolfe column generation",
+       "n_columns": 13,
+       "n_iterations": 12,
+       "primal_objective": 439.6126003691515,
+       "dual_objective": 439.6126003691515,
+       "relative_duality_gap": 0.0,
+       "max_primal_residual": 0.0,
+       "min_reduced_cost": 0.0,
+       "max_stage_mass_error": 0.0,
+       "max_constraint_value": 0.0,
+       "theta_support": 1
+      }
+     },
+     "V_psi": {
+      "mid: RUL<22": 479.80000000000075,
+      "consv: anom>0.6": 440.2641953968917,
+      "vconsv: RUL<40": 479.1000000000007
+     },
+     "V_U": 439.6126003691515,
+     "certified_true_price": 40.18739963084926,
+     "pair_witness": {
+      "best_pair": "mid: RUL<22 | consv: anom>0.6",
+      "best_pair_price": 39.53580460310906,
+      "all_pair_prices": {
+       "mid: RUL<22 | consv: anom>0.6": 39.53580460310906,
+       "mid: RUL<22 | vconsv: RUL<40": 0.7000000000000455,
+       "consv: anom>0.6 | vconsv: RUL<40": 39.48739963084921
+      },
+      "witnesses_full_price": false,
+      "tolerance": 1e-06,
+      "note": "at d = 0 the programs nest exactly: V_pair >= V_U and every pair price <= the full-set price"
+     }
+    }
+   },
+   "max_relative_duality_gap": 9.57919221636267e-12,
+   "learned_from_price_report": {
+    "n_seeds": 15,
+    "v_psi_mean": {
+     "mid: RUL<22": 472.28666666666663,
+     "consv: anom>0.6": 356.13666666666666,
+     "vconsv: RUL<40": 472.2433333333333
+    },
+    "v_psi_max": {
+     "mid: RUL<22": 476.25,
+     "consv: anom>0.6": 384.75,
+     "vconsv: RUL<40": 476.25
+    },
+    "v_robust_mean": 356.2066666666667,
+    "v_robust_max": 384.0,
+    "v_surgery_max": 384.0,
+    "learned_price_mean": 116.10333333333334,
+    "learned_price_sd": 11.070794410921406,
+    "surgery_feasible_rate": 1.0,
+    "decomposition_per_seed": [
+     {
+      "seed": 0,
+      "learned_price": 124.94999999999999,
+      "robust_optimizer_error": 96.44356794583342,
+      "singleton_shortfall": 3.801492537314232,
+      "identity_residual": 0.0
+     },
+     {
+      "seed": 1,
+      "learned_price": 120.94999999999999,
+      "robust_optimizer_error": 92.19356794583342,
+      "singleton_shortfall": 3.551492537314232,
+      "identity_residual": 0.0
+     },
+     {
+      "seed": 2,
+      "learned_price": 122.09999999999997,
+      "robust_optimizer_error": 94.89356794583341,
+      "singleton_shortfall": 5.101492537314243,
+      "identity_residual": 0.0
+     },
+     {
+      "seed": 3,
+      "learned_price": 126.69999999999999,
+      "robust_optimizer_error": 98.64356794583341,
+      "singleton_shortfall": 4.2514925373142205,
+      "identity_residual": 0.0
+     },
+     {
+      "seed": 4,
+      "learned_price": 89.30000000000001,
+      "robust_optimizer_error": 63.49356794583343,
+      "singleton_shortfall": 6.5014925373142205,
+      "identity_residual": 0.0
+     },
+     {
+      "seed": 5,
+      "learned_price": 107.19999999999999,
+      "robust_optimizer_error": 84.94356794583342,
+      "singleton_shortfall": 10.051492537314232,
+      "identity_residual": 0.0
+     },
+     {
+      "seed": 6,
+      "learned_price": 91.85000000000002,
+      "robust_optimizer_error": 69.34356794583346,
+      "singleton_shortfall": 9.801492537314232,
+      "identity_residual": 0.0
+     },
+     {
+      "seed": 7,
+      "learned_price": 119.94999999999999,
+      "robust_optimizer_error": 94.79356794583344,
+      "singleton_shortfall": 7.151492537314255,
+      "identity_residual": 0.0
+     },
+     {
+      "seed": 8,
+      "learned_price": 113.10000000000002,
+      "robust_optimizer_error": 91.29356794583344,
+      "singleton_shortfall": 10.50149253731422,
+      "identity_residual": 0.0
+     },
+     {
+      "seed": 9,
+      "learned_price": 124.19999999999999,
+      "robust_optimizer_error": 95.99356794583343,
+      "singleton_shortfall": 4.101492537314243,
+      "identity_residual": 0.0
+     },
+     {
+      "seed": 10,
+      "learned_price": 118.19999999999999,
+      "robust_optimizer_error": 94.04356794583344,
+      "singleton_shortfall": 8.151492537314255,
+      "identity_residual": 0.0
+     },
+     {
+      "seed": 11,
+      "learned_price": 120.94999999999999,
+      "robust_optimizer_error": 96.44356794583342,
+      "singleton_shortfall": 7.801492537314232,
+      "identity_residual": 0.0
+     },
+     {
+      "seed": 12,
+      "learned_price": 116.94999999999999,
+      "robust_optimizer_error": 97.19356794583342,
+      "singleton_shortfall": 12.551492537314232,
+      "identity_residual": 0.0
+     },
+     {
+      "seed": 13,
+      "learned_price": 121.94999999999999,
+      "robust_optimizer_error": 99.14356794583341,
+      "singleton_shortfall": 9.50149253731422,
+      "identity_residual": 0.0
+     },
+     {
+      "seed": 14,
+      "learned_price": 123.19999999999999,
+      "robust_optimizer_error": 100.44356794583342,
+      "singleton_shortfall": 9.551492537314232,
+      "identity_residual": 0.0
+     }
+    ],
+    "decomposition_summary": {
+     "certified_true_price": 32.3079245914808,
+     "robust_optimizer_error_mean": 91.28690127916676,
+     "singleton_shortfall_mean": 7.491492537314233,
+     "max_identity_residual": 0.0,
+     "identity": "learned_price = true_price + robust_optimizer_error - singleton_shortfall (exact per seed)"
+    }
+   },
+   "cross_checks": {
+    "V_U_geq_learned_robust": {
+     "V_U": 447.49356794583343,
+     "learned_robust_max": 384.0,
+     "margin": 63.49356794583343,
+     "passed": true
+    },
+    "V_U_geq_surgery": {
+     "V_U": 447.49356794583343,
+     "v_surgery_max": 384.0,
+     "margin": 63.49356794583343,
+     "passed": true
+    },
+    "V_psi_geq_learned_singleton": {
+     "mid: RUL<22": {
+      "V_psi": 479.80149253731423,
+      "learned_max": 476.25,
+      "margin": 3.551492537314232,
+      "passed": true
+     },
+     "consv: anom>0.6": {
+      "V_psi": 447.2641758487213,
+      "learned_max": 384.75,
+      "margin": 62.51417584872132,
+      "passed": true
+     },
+     "vconsv: RUL<40": {
+      "V_psi": 479.1450000000007,
+      "learned_max": 476.25,
+      "margin": 2.8950000000007208,
+      "passed": true
+     }
+    },
+    "all_passed": true
+   },
+   "mc_integration": {
+    "note": "deterministic domain: firing and rewards are exact functions of the state; no feature-noise integration needed (the MC policy rollouts verify end-to-end)"
+   },
+   "elapsed_s": 73.3781111240387
+  },
+  "gridworld": {
+   "U": [
+    "psi_W3: Within_3(warn)",
+    "psi_W5: Within_5(warn)"
+   ],
+   "n_states": 11,
+   "n_actions": 2,
+   "horizon": 60,
+   "model_notes": "belief MDP on offset-since-warning; offsets 0..9 + CLEAR (exact lump: for offsets >= 10 hazard = p_warn, safe, no reading fires); posteriors over D~U{3..5} exact",
+   "unconstrained": {
+    "V": 39.693989084679934,
+    "method": "exact finite-horizon DP (gamma=1)",
+    "always_greedy_value": 17.746845586723794,
+    "greedy_action": "advance"
+   },
+   "guard_fallback": {
+    "V": 39.01765520966407,
+    "note": "union-guard fallback (safe action wherever some retained reading fires): zero semantic cost by construction, so it certifies feasibility of every analyzed program (the program-level fallback rate is 0)"
+   },
+   "solver": "monolithic occupancy LP (HiGHS)",
+   "lp_vs_dp_unconstrained": {
+    "lp": 39.693989084679906,
+    "dp": 39.693989084679934,
+    "abs_diff": 2.842170943040401e-14
+   },
+   "cg_vs_lp_robust": {
+    "lp": 39.19250808291685,
+    "cg": 39.19250808291687,
+    "abs_diff": 2.1316282072803006e-14
+   },
+   "programs": {
+    "d=0.05": {
+     "singleton": {
+      "psi_W3: Within_3(warn)": {
+       "V": 39.693989084679906,
+       "on_policy": {
+        "E_active_steps": 10.66424913779564,
+        "psi_W3: Within_3(warn)": {
+         "E_episodic_cost": 0.0,
+         "active_normalized_cost": 0.0
+        },
+        "psi_W5: Within_5(warn)": {
+         "E_episodic_cost": 3.38166937507931,
+         "active_normalized_cost": 0.31710337327868543
+        }
+       },
+       "lp": {
+        "status": 0,
+        "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+        "method": "highs",
+        "n_variables": 1320,
+        "n_eq_rows": 660,
+        "n_ub_rows": 1,
+        "primal_objective": 39.693989084679906,
+        "dual_objective": 39.693989084679934,
+        "relative_duality_gap": 6.984252482906363e-16,
+        "max_primal_residual": 5.551115123125783e-17,
+        "min_reduced_cost": -2.831068712794149e-15,
+        "max_stage_mass_error": 3.3306690738754696e-16,
+        "max_constraint_value": -0.5332124568897821
+       }
+      },
+      "psi_W5: Within_5(warn)": {
+       "V": 39.19250808291685,
+       "on_policy": {
+        "E_active_steps": 17.485287325279934,
+        "psi_W3: Within_3(warn)": {
+         "E_episodic_cost": 0.0,
+         "active_normalized_cost": 0.0
+        },
+        "psi_W5: Within_5(warn)": {
+         "E_episodic_cost": 0.8742643662639966,
+         "active_normalized_cost": 0.049999999999999996
+        }
+       },
+       "lp": {
+        "status": 0,
+        "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+        "method": "highs",
+        "n_variables": 1320,
+        "n_eq_rows": 660,
+        "n_ub_rows": 1,
+        "primal_objective": 39.19250808291685,
+        "dual_objective": 39.192508082916866,
+        "relative_duality_gap": 3.535697420495659e-16,
+        "max_primal_residual": 1.6653345369377348e-16,
+        "min_reduced_cost": -4.6629367034256575e-15,
+        "max_stage_mass_error": 6.661338147750939e-16,
+        "max_constraint_value": 8.120635021059108e-16
+       }
+      }
+     },
+     "pairwise": {
+      "psi_W3: Within_3(warn) | psi_W5: Within_5(warn)": {
+       "V": 39.19250808291685,
+       "pair_price": 0.5014810017630538,
+       "lp": {
+        "same_as": "robust (|U|=2)"
+       }
+      }
+     },
+     "robust": {
+      "V": 39.19250808291685,
+      "on_policy": {
+       "E_active_steps": 17.485287325279934,
+       "psi_W3: Within_3(warn)": {
+        "E_episodic_cost": 0.0,
+        "active_normalized_cost": 0.0
+       },
+       "psi_W5: Within_5(warn)": {
+        "E_episodic_cost": 0.8742643662639966,
+        "active_normalized_cost": 0.049999999999999996
+       }
+      },
+      "lp": {
+       "status": 0,
+       "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+       "method": "highs",
+       "n_variables": 1320,
+       "n_eq_rows": 660,
+       "n_ub_rows": 2,
+       "primal_objective": 39.19250808291685,
+       "dual_objective": 39.192508082916866,
+       "relative_duality_gap": 3.535697420495659e-16,
+       "max_primal_residual": 1.6653345369377348e-16,
+       "min_reduced_cost": -4.6629367034256575e-15,
+       "max_stage_mass_error": 6.661338147750939e-16,
+       "max_constraint_value": 8.120635021059108e-16
+      }
+     },
+     "V_psi": {
+      "psi_W3: Within_3(warn)": 39.693989084679906,
+      "psi_W5: Within_5(warn)": 39.19250808291685
+     },
+     "V_U": 39.19250808291685,
+     "certified_true_price": 0.5014810017630538,
+     "pair_witness": {
+      "best_pair": "psi_W3: Within_3(warn) | psi_W5: Within_5(warn)",
+      "best_pair_price": 0.5014810017630538,
+      "all_pair_prices": {
+       "psi_W3: Within_3(warn) | psi_W5: Within_5(warn)": 0.5014810017630538
+      },
+      "witnesses_full_price": true,
+      "tolerance": 1e-06,
+      "note": "pairwise programs normalize the budget over the PAIR's own active set (the learners' convention), so for d > 0 they are not nested inside the full-set program and a pair price may slightly exceed the full-set price; at d = 0 nesting is exact"
+     },
+     "mc_policy_rollouts": {
+      "robust": {
+       "lp_value": 39.19250808291685,
+       "n_episodes": 20000,
+       "mean_return": 39.20802,
+       "se_return": 0.03769230981899321,
+       "mean_active_steps": 17.47295,
+       "cost[psi_W3: Within_3(warn)]": {
+        "mean_episodic": 0.0,
+        "active_normalized": 0.0
+       },
+       "cost[psi_W5: Within_5(warn)]": {
+        "mean_episodic": 0.8778,
+        "active_normalized": 0.050237653058012526
+       }
+      },
+      "singleton[psi_W3: Within_3(warn)]": {
+       "lp_value": 39.693989084679906,
+       "n_episodes": 20000,
+       "mean_return": 39.70275,
+       "se_return": 0.039155869048956723,
+       "mean_active_steps": 17.47295,
+       "cost[psi_W3: Within_3(warn)]": {
+        "mean_episodic": 0.0,
+        "active_normalized": 0.0
+       },
+       "cost[psi_W5: Within_5(warn)]": {
+        "mean_episodic": 3.37945,
+        "active_normalized": 0.19341038576771521
+       }
+      }
+     }
+    },
+    "d=0": {
+     "singleton": {
+      "psi_W3: Within_3(warn)": {
+       "V": 39.693989084679906,
+       "on_policy": {
+        "E_active_steps": 10.66424913779564,
+        "psi_W3: Within_3(warn)": {
+         "E_episodic_cost": 0.0,
+         "active_normalized_cost": 0.0
+        },
+        "psi_W5: Within_5(warn)": {
+         "E_episodic_cost": 3.38166937507931,
+         "active_normalized_cost": 0.31710337327868543
+        }
+       },
+       "lp": {
+        "status": 0,
+        "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+        "method": "highs",
+        "n_variables": 1320,
+        "n_eq_rows": 660,
+        "n_ub_rows": 1,
+        "primal_objective": 39.693989084679906,
+        "dual_objective": 39.693989084679934,
+        "relative_duality_gap": 6.984252482906363e-16,
+        "max_primal_residual": 5.551115123125783e-17,
+        "min_reduced_cost": -2.831068712794149e-15,
+        "max_stage_mass_error": 3.3306690738754696e-16,
+        "max_constraint_value": 0.0
+       }
+      },
+      "psi_W5: Within_5(warn)": {
+       "V": 39.01765520966405,
+       "on_policy": {
+        "E_active_steps": 17.485287325279934,
+        "psi_W3: Within_3(warn)": {
+         "E_episodic_cost": 0.0,
+         "active_normalized_cost": 0.0
+        },
+        "psi_W5: Within_5(warn)": {
+         "E_episodic_cost": 0.0,
+         "active_normalized_cost": 0.0
+        }
+       },
+       "lp": {
+        "status": 0,
+        "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+        "method": "highs",
+        "n_variables": 1320,
+        "n_eq_rows": 660,
+        "n_ub_rows": 1,
+        "primal_objective": 39.01765520966405,
+        "dual_objective": 39.017655209664085,
+        "relative_duality_gap": 8.877865682501407e-16,
+        "max_primal_residual": 6.938893903907228e-18,
+        "min_reduced_cost": -3.552713678800501e-15,
+        "max_stage_mass_error": 3.3306690738754696e-16,
+        "max_constraint_value": 0.0
+       }
+      }
+     },
+     "pairwise": {
+      "psi_W3: Within_3(warn) | psi_W5: Within_5(warn)": {
+       "V": 39.01765520966405,
+       "pair_price": 0.6763338750158567,
+       "lp": {
+        "same_as": "robust (|U|=2)"
+       }
+      }
+     },
+     "robust": {
+      "V": 39.01765520966405,
+      "on_policy": {
+       "E_active_steps": 17.485287325279934,
+       "psi_W3: Within_3(warn)": {
+        "E_episodic_cost": 0.0,
+        "active_normalized_cost": 0.0
+       },
+       "psi_W5: Within_5(warn)": {
+        "E_episodic_cost": 0.0,
+        "active_normalized_cost": 0.0
+       }
+      },
+      "lp": {
+       "status": 0,
+       "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+       "method": "highs",
+       "n_variables": 1320,
+       "n_eq_rows": 660,
+       "n_ub_rows": 2,
+       "primal_objective": 39.01765520966405,
+       "dual_objective": 39.017655209664085,
+       "relative_duality_gap": 8.877865682501407e-16,
+       "max_primal_residual": 6.938893903907228e-18,
+       "min_reduced_cost": -3.552713678800501e-15,
+       "max_stage_mass_error": 3.3306690738754696e-16,
+       "max_constraint_value": 0.0
+      }
+     },
+     "V_psi": {
+      "psi_W3: Within_3(warn)": 39.693989084679906,
+      "psi_W5: Within_5(warn)": 39.01765520966405
+     },
+     "V_U": 39.01765520966405,
+     "certified_true_price": 0.6763338750158567,
+     "pair_witness": {
+      "best_pair": "psi_W3: Within_3(warn) | psi_W5: Within_5(warn)",
+      "best_pair_price": 0.6763338750158567,
+      "all_pair_prices": {
+       "psi_W3: Within_3(warn) | psi_W5: Within_5(warn)": 0.6763338750158567
+      },
+      "witnesses_full_price": true,
+      "tolerance": 1e-06,
+      "note": "at d = 0 the programs nest exactly: V_pair >= V_U and every pair price <= the full-set price"
+     }
+    }
+   },
+   "max_relative_duality_gap": 8.877865682501407e-16,
+   "learned_from_price_report": {
+    "n_seeds": 15,
+    "v_psi_mean": {
+     "psi_W3: Within_3(warn)": 40.91599999999999,
+     "psi_W5: Within_5(warn)": 40.230000000000004
+    },
+    "v_psi_max": {
+     "psi_W3: Within_3(warn)": 40.964999999999996,
+     "psi_W5: Within_5(warn)": 40.23
+    },
+    "v_robust_mean": 40.230000000000004,
+    "v_robust_max": 40.23,
+    "v_surgery_max": 40.23,
+    "learned_price_mean": 0.6859999999999995,
+    "learned_price_sd": 0.18334121195192296,
+    "surgery_feasible_rate": 1.0,
+    "decomposition_per_seed": [
+     {
+      "seed": 0,
+      "learned_price": 0.7349999999999994,
+      "robust_optimizer_error": -1.0374919170831447,
+      "singleton_shortfall": -1.2710109153200904,
+      "identity_residual": 0.0
+     },
+     {
+      "seed": 1,
+      "learned_price": 0.7349999999999994,
+      "robust_optimizer_error": -1.0374919170831447,
+      "singleton_shortfall": -1.2710109153200904,
+      "identity_residual": 0.0
+     },
+     {
+      "seed": 2,
+      "learned_price": 0.7349999999999994,
+      "robust_optimizer_error": -1.0374919170831447,
+      "singleton_shortfall": -1.2710109153200904,
+      "identity_residual": 0.0
+     },
+     {
+      "seed": 3,
+      "learned_price": 0.7349999999999994,
+      "robust_optimizer_error": -1.0374919170831447,
+      "singleton_shortfall": -1.2710109153200904,
+      "identity_residual": 0.0
+     },
+     {
+      "seed": 4,
+      "learned_price": 0.7349999999999994,
+      "robust_optimizer_error": -1.0374919170831447,
+      "singleton_shortfall": -1.2710109153200904,
+      "identity_residual": 0.0
+     },
+     {
+      "seed": 5,
+      "learned_price": 0.7349999999999994,
+      "robust_optimizer_error": -1.0374919170831447,
+      "singleton_shortfall": -1.2710109153200904,
+      "identity_residual": 0.0
+     },
+     {
+      "seed": 6,
+      "learned_price": 0.7349999999999994,
+      "robust_optimizer_error": -1.0374919170831447,
+      "singleton_shortfall": -1.2710109153200904,
+      "identity_residual": 0.0
+     },
+     {
+      "seed": 7,
+      "learned_price": 0.7349999999999994,
+      "robust_optimizer_error": -1.0374919170831447,
+      "singleton_shortfall": -1.2710109153200904,
+      "identity_residual": 0.0
+     },
+     {
+      "seed": 8,
+      "learned_price": 0.7349999999999994,
+      "robust_optimizer_error": -1.0374919170831447,
+      "singleton_shortfall": -1.2710109153200904,
+      "identity_residual": 0.0
+     },
+     {
+      "seed": 9,
+      "learned_price": 0.7349999999999994,
+      "robust_optimizer_error": -1.0374919170831447,
+      "singleton_shortfall": -1.2710109153200904,
+      "identity_residual": 0.0
+     },
+     {
+      "seed": 10,
+      "learned_price": 0.7349999999999994,
+      "robust_optimizer_error": -1.0374919170831447,
+      "singleton_shortfall": -1.2710109153200904,
+      "identity_residual": 0.0
+     },
+     {
+      "seed": 11,
+      "learned_price": 0.7349999999999994,
+      "robust_optimizer_error": -1.0374919170831447,
+      "singleton_shortfall": -1.2710109153200904,
+      "identity_residual": 0.0
+     },
+     {
+      "seed": 12,
+      "learned_price": 0.7349999999999994,
+      "robust_optimizer_error": -1.0374919170831447,
+      "singleton_shortfall": -1.2710109153200904,
+      "identity_residual": 0.0
+     },
+     {
+      "seed": 13,
+      "learned_price": 0.0,
+      "robust_optimizer_error": -1.0374919170831447,
+      "singleton_shortfall": -0.5360109153200909,
+      "identity_residual": 0.0
+     },
+     {
+      "seed": 14,
+      "learned_price": 0.7349999999999994,
+      "robust_optimizer_error": -1.0374919170831447,
+      "singleton_shortfall": -1.2710109153200904,
+      "identity_residual": 0.0
+     }
+    ],
+    "decomposition_summary": {
+     "certified_true_price": 0.5014810017630538,
+     "robust_optimizer_error_mean": -1.0374919170831447,
+     "singleton_shortfall_mean": -1.2220109153200904,
+     "max_identity_residual": 0.0,
+     "identity": "learned_price = true_price + robust_optimizer_error - singleton_shortfall (exact per seed)"
+    },
+    "robust_optimizer_error_exact": 0.17485287325278165
+   },
+   "cross_check_investigation": {
+    "cause": "price_report returns are single-fixed-seed 40-episode MC evaluations (seed=123) sharing a correlated offset of order SD/sqrt(40); certified dominance therefore has to be checked against the learned policies' EXACT values, recomputed here by re-running the paper's learner on the seed-0 dataset and evaluating it in the exact chain",
+    "resolved": true,
+    "threshold_policy_exact_values": {
+     "wait<=-1": 17.746845586723794,
+     "wait<=0": 24.249231104290974,
+     "wait<=1": 30.647782229065665,
+     "wait<=2": 36.942494034755946,
+     "wait<=3": 39.693989084679934,
+     "wait<=4": 39.01765520966407,
+     "wait<=5": 35.02889864665675,
+     "wait<=6": 31.109393975528963,
+     "wait<=7": 27.259141982247442,
+     "wait<=8": 23.478137283250113,
+     "wait<=9": 19.914838553671352
+    },
+    "paper_eval_protocol_reproduction": {
+     "wait<=3": {
+      "eval_40ep_seed123": 40.964999999999996,
+      "exact_value": 39.693989084679934
+     },
+     "wait<=4": {
+      "eval_40ep_seed123": 40.23,
+      "exact_value": 39.01765520966407
+     }
+    },
+    "learned_policies_reevaluated_exactly": {
+     "single[psi_W3]": {
+      "actions_by_offset": {
+       "0": "wait",
+       "1": "wait",
+       "2": "wait",
+       "3": "wait",
+       "4": "advance",
+       "5": "advance",
+       "6": "advance",
+       "7": "advance",
+       "8": "advance",
+       "9": "advance",
+       "CLEAR": "advance"
+      },
+      "exact_value": 39.693989084679934
+     },
+     "robust": {
+      "actions_by_offset": {
+       "0": "wait",
+       "1": "wait",
+       "2": "wait",
+       "3": "wait",
+       "4": "wait",
+       "5": "advance",
+       "6": "advance",
+       "7": "advance",
+       "8": "advance",
+       "9": "advance",
+       "CLEAR": "advance"
+      },
+      "exact_value": 39.01765520966407
+     }
+    }
+   },
+   "cross_checks": {
+    "V_U_geq_learned_robust": {
+     "V_U": 39.19250808291685,
+     "learned_robust_max": 40.23,
+     "margin": -1.0374919170831447,
+     "passed": false
+    },
+    "V_U_geq_surgery": {
+     "V_U": 39.19250808291685,
+     "v_surgery_max": 40.23,
+     "margin": -1.0374919170831447,
+     "passed": false
+    },
+    "V_psi_geq_learned_singleton": {
+     "psi_W3: Within_3(warn)": {
+      "V_psi": 39.693989084679906,
+      "learned_max": 40.964999999999996,
+      "margin": -1.2710109153200904,
+      "passed": false
+     },
+     "psi_W5: Within_5(warn)": {
+      "V_psi": 39.19250808291685,
+      "learned_max": 40.23,
+      "margin": -1.0374919170831447,
+      "passed": false
+     }
+    },
+    "all_passed": false,
+    "resolved_by_exact_reevaluation": true
+   },
+   "mc_integration": {
+    "n_episodes": 60000,
+    "min_state_visits": 178162.0,
+    "p_unsafe": {
+     "max_abs_diff": 0.0005413773933728994,
+     "max_mc_se": 0.0010467337144112355
+    },
+    "hazard": {
+     "max_abs_diff": 0.00025641716271177645,
+     "max_mc_se": 0.0006427862290547433
+    },
+    "note": "empirical P(unsafe|offset) and onset hazard from env.signals() vs the belief-MDP posteriors"
+   },
+   "elapsed_s": 18.466960906982422
+  },
+  "budget": {
+   "U": [
+    "psi_$60: spend>=60",
+    "psi_$80: spend>=80"
+   ],
+   "n_states": 31,
+   "n_actions": 2,
+   "horizon": 30,
+   "model_notes": "deterministic; bill bucket = spend/unit_cost",
+   "unconstrained": {
+    "V": 30.0,
+    "method": "exact finite-horizon DP (gamma=1)",
+    "always_greedy_value": 30.0,
+    "greedy_action": "buy"
+   },
+   "guard_fallback": {
+    "V": 6.0,
+    "note": "union-guard fallback (safe action wherever some retained reading fires): zero semantic cost by construction, so it certifies feasibility of every analyzed program (the program-level fallback rate is 0)"
+   },
+   "solver": "monolithic occupancy LP (HiGHS)",
+   "lp_vs_dp_unconstrained": {
+    "lp": 30.0,
+    "dp": 30.0,
+    "abs_diff": 0.0
+   },
+   "cg_vs_lp_robust": {
+    "lp": 7.199999999999992,
+    "cg": 7.2,
+    "abs_diff": 7.993605777301127e-15
+   },
+   "programs": {
+    "d=0.05": {
+     "singleton": {
+      "psi_$60: spend>=60": {
+       "V": 7.200000000000004,
+       "on_policy": {
+        "E_active_steps": 24.000000000000007,
+        "psi_$60: spend>=60": {
+         "E_episodic_cost": 1.2000000000000006,
+         "active_normalized_cost": 0.05000000000000001
+        },
+        "psi_$80: spend>=80": {
+         "E_episodic_cost": 1.0736842105263162,
+         "active_normalized_cost": 0.044736842105263165
+        }
+       },
+       "lp": {
+        "status": 0,
+        "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+        "method": "highs",
+        "n_variables": 1860,
+        "n_eq_rows": 930,
+        "n_ub_rows": 1,
+        "primal_objective": 7.200000000000004,
+        "dual_objective": 7.200000000000001,
+        "relative_duality_gap": 3.249433242805335e-16,
+        "max_primal_residual": 1.3877787807814457e-17,
+        "min_reduced_cost": -4.718447854656915e-16,
+        "max_stage_mass_error": 0.0,
+        "max_constraint_value": 5.715895593096464e-16
+       }
+      },
+      "psi_$80: spend>=80": {
+       "V": 9.100000000000001,
+       "on_policy": {
+        "E_active_steps": 21.99999999999999,
+        "psi_$60: spend>=60": {
+         "E_episodic_cost": 3.1000000000000005,
+         "active_normalized_cost": 0.140909090909091
+        },
+        "psi_$80: spend>=80": {
+         "E_episodic_cost": 1.1000000000000005,
+         "active_normalized_cost": 0.05000000000000005
+        }
+       },
+       "lp": {
+        "status": 0,
+        "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+        "method": "highs",
+        "n_variables": 1860,
+        "n_eq_rows": 930,
+        "n_ub_rows": 1,
+        "primal_objective": 9.100000000000001,
+        "dual_objective": 9.100000000000001,
+        "relative_duality_gap": 0.0,
+        "max_primal_residual": 0.0,
+        "min_reduced_cost": -5.329070518200751e-15,
+        "max_stage_mass_error": 0.0,
+        "max_constraint_value": 1.12417020137201e-15
+       }
+      }
+     },
+     "pairwise": {
+      "psi_$60: spend>=60 | psi_$80: spend>=80": {
+       "V": 7.199999999999992,
+       "pair_price": 1.9000000000000092,
+       "lp": {
+        "same_as": "robust (|U|=2)"
+       }
+      }
+     },
+     "robust": {
+      "V": 7.199999999999992,
+      "on_policy": {
+       "E_active_steps": 24.000000000000004,
+       "psi_$60: spend>=60": {
+        "E_episodic_cost": 1.2000000000000006,
+        "active_normalized_cost": 0.05000000000000002
+       },
+       "psi_$80: spend>=80": {
+        "E_episodic_cost": 0.1894736842105267,
+        "active_normalized_cost": 0.007894736842105279
+       }
+      },
+      "lp": {
+       "status": 0,
+       "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+       "method": "highs",
+       "n_variables": 1860,
+       "n_eq_rows": 930,
+       "n_ub_rows": 2,
+       "primal_objective": 7.199999999999992,
+       "dual_objective": 7.2,
+       "relative_duality_gap": 9.748299728416017e-16,
+       "max_primal_residual": 1.734723475976807e-18,
+       "min_reduced_cost": -1.970645868709653e-15,
+       "max_stage_mass_error": 0.0,
+       "max_constraint_value": -2.076973005132584e-16
+      }
+     },
+     "V_psi": {
+      "psi_$60: spend>=60": 7.200000000000004,
+      "psi_$80: spend>=80": 9.100000000000001
+     },
+     "V_U": 7.199999999999992,
+     "certified_true_price": 1.9000000000000092,
+     "pair_witness": {
+      "best_pair": "psi_$60: spend>=60 | psi_$80: spend>=80",
+      "best_pair_price": 1.9000000000000092,
+      "all_pair_prices": {
+       "psi_$60: spend>=60 | psi_$80: spend>=80": 1.9000000000000092
+      },
+      "witnesses_full_price": true,
+      "tolerance": 1e-06,
+      "note": "pairwise programs normalize the budget over the PAIR's own active set (the learners' convention), so for d > 0 they are not nested inside the full-set program and a pair price may slightly exceed the full-set price; at d = 0 nesting is exact"
+     },
+     "mc_policy_rollouts": {
+      "robust": {
+       "lp_value": 7.199999999999992,
+       "n_episodes": 20000,
+       "mean_return": 7.17955,
+       "se_return": 0.01299880911187315,
+       "mean_active_steps": 24.0,
+       "cost[psi_$60: spend>=60]": {
+        "mean_episodic": 1.17955,
+        "active_normalized": 0.04914791666666667
+       },
+       "cost[psi_$80: spend>=80]": {
+        "mean_episodic": 0.1701,
+        "active_normalized": 0.0070875
+       }
+      },
+      "singleton[psi_$80: spend>=80]": {
+       "lp_value": 9.100000000000001,
+       "n_episodes": 20000,
+       "mean_return": 9.10485,
+       "se_return": 0.0021663468161691925,
+       "mean_active_steps": 24.0,
+       "cost[psi_$60: spend>=60]": {
+        "mean_episodic": 3.10485,
+        "active_normalized": 0.12936875
+       },
+       "cost[psi_$80: spend>=80]": {
+        "mean_episodic": 1.10485,
+        "active_normalized": 0.04603541666666667
+       }
+      }
+     }
+    },
+    "d=0": {
+     "singleton": {
+      "psi_$60: spend>=60": {
+       "V": 6.0,
+       "on_policy": {
+        "E_active_steps": 24.0,
+        "psi_$60: spend>=60": {
+         "E_episodic_cost": 0.0,
+         "active_normalized_cost": 0.0
+        },
+        "psi_$80: spend>=80": {
+         "E_episodic_cost": 0.0,
+         "active_normalized_cost": 0.0
+        }
+       },
+       "lp": {
+        "status": 0,
+        "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+        "method": "highs",
+        "n_variables": 1860,
+        "n_eq_rows": 930,
+        "n_ub_rows": 1,
+        "primal_objective": 6.0,
+        "dual_objective": 6.0,
+        "relative_duality_gap": 0.0,
+        "max_primal_residual": 0.0,
+        "min_reduced_cost": -0.0,
+        "max_stage_mass_error": 0.0,
+        "max_constraint_value": 0.0
+       }
+      },
+      "psi_$80: spend>=80": {
+       "V": 8.0,
+       "on_policy": {
+        "E_active_steps": 22.0,
+        "psi_$60: spend>=60": {
+         "E_episodic_cost": 2.0,
+         "active_normalized_cost": 0.09090909090909091
+        },
+        "psi_$80: spend>=80": {
+         "E_episodic_cost": 0.0,
+         "active_normalized_cost": 0.0
+        }
+       },
+       "lp": {
+        "status": 0,
+        "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+        "method": "highs",
+        "n_variables": 1860,
+        "n_eq_rows": 930,
+        "n_ub_rows": 1,
+        "primal_objective": 8.0,
+        "dual_objective": 8.0,
+        "relative_duality_gap": 0.0,
+        "max_primal_residual": 0.0,
+        "min_reduced_cost": -0.0,
+        "max_stage_mass_error": 0.0,
+        "max_constraint_value": 0.0
+       }
+      }
+     },
+     "pairwise": {
+      "psi_$60: spend>=60 | psi_$80: spend>=80": {
+       "V": 6.0,
+       "pair_price": 2.0,
+       "lp": {
+        "same_as": "robust (|U|=2)"
+       }
+      }
+     },
+     "robust": {
+      "V": 6.0,
+      "on_policy": {
+       "E_active_steps": 24.0,
+       "psi_$60: spend>=60": {
+        "E_episodic_cost": 0.0,
+        "active_normalized_cost": 0.0
+       },
+       "psi_$80: spend>=80": {
+        "E_episodic_cost": 0.0,
+        "active_normalized_cost": 0.0
+       }
+      },
+      "lp": {
+       "status": 0,
+       "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+       "method": "highs",
+       "n_variables": 1860,
+       "n_eq_rows": 930,
+       "n_ub_rows": 2,
+       "primal_objective": 6.0,
+       "dual_objective": 6.0,
+       "relative_duality_gap": 0.0,
+       "max_primal_residual": 0.0,
+       "min_reduced_cost": -0.0,
+       "max_stage_mass_error": 0.0,
+       "max_constraint_value": 0.0
+      }
+     },
+     "V_psi": {
+      "psi_$60: spend>=60": 6.0,
+      "psi_$80: spend>=80": 8.0
+     },
+     "V_U": 6.0,
+     "certified_true_price": 2.0,
+     "pair_witness": {
+      "best_pair": "psi_$60: spend>=60 | psi_$80: spend>=80",
+      "best_pair_price": 2.0,
+      "all_pair_prices": {
+       "psi_$60: spend>=60 | psi_$80: spend>=80": 2.0
+      },
+      "witnesses_full_price": true,
+      "tolerance": 1e-06,
+      "note": "at d = 0 the programs nest exactly: V_pair >= V_U and every pair price <= the full-set price"
+     }
+    }
+   },
+   "max_relative_duality_gap": 9.748299728416017e-16,
+   "learned_from_price_report": {
+    "n_seeds": 15,
+    "v_psi_mean": {
+     "psi_$60: spend>=60": 6.0,
+     "psi_$80: spend>=80": 8.0
+    },
+    "v_psi_max": {
+     "psi_$60: spend>=60": 6.0,
+     "psi_$80: spend>=80": 8.0
+    },
+    "v_robust_mean": 6.0,
+    "v_robust_max": 6.0,
+    "v_surgery_max": 6.0,
+    "learned_price_mean": 2.0,
+    "learned_price_sd": 0.0,
+    "surgery_feasible_rate": 1.0,
+    "decomposition_per_seed": [
+     {
+      "seed": 0,
+      "learned_price": 2.0,
+      "robust_optimizer_error": 1.1999999999999922,
+      "singleton_shortfall": 1.1000000000000014,
+      "identity_residual": 0.0
+     },
+     {
+      "seed": 1,
+      "learned_price": 2.0,
+      "robust_optimizer_error": 1.1999999999999922,
+      "singleton_shortfall": 1.1000000000000014,
+      "identity_residual": 0.0
+     },
+     {
+      "seed": 2,
+      "learned_price": 2.0,
+      "robust_optimizer_error": 1.1999999999999922,
+      "singleton_shortfall": 1.1000000000000014,
+      "identity_residual": 0.0
+     },
+     {
+      "seed": 3,
+      "learned_price": 2.0,
+      "robust_optimizer_error": 1.1999999999999922,
+      "singleton_shortfall": 1.1000000000000014,
+      "identity_residual": 0.0
+     },
+     {
+      "seed": 4,
+      "learned_price": 2.0,
+      "robust_optimizer_error": 1.1999999999999922,
+      "singleton_shortfall": 1.1000000000000014,
+      "identity_residual": 0.0
+     },
+     {
+      "seed": 5,
+      "learned_price": 2.0,
+      "robust_optimizer_error": 1.1999999999999922,
+      "singleton_shortfall": 1.1000000000000014,
+      "identity_residual": 0.0
+     },
+     {
+      "seed": 6,
+      "learned_price": 2.0,
+      "robust_optimizer_error": 1.1999999999999922,
+      "singleton_shortfall": 1.1000000000000014,
+      "identity_residual": 0.0
+     },
+     {
+      "seed": 7,
+      "learned_price": 2.0,
+      "robust_optimizer_error": 1.1999999999999922,
+      "singleton_shortfall": 1.1000000000000014,
+      "identity_residual": 0.0
+     },
+     {
+      "seed": 8,
+      "learned_price": 2.0,
+      "robust_optimizer_error": 1.1999999999999922,
+      "singleton_shortfall": 1.1000000000000014,
+      "identity_residual": 0.0
+     },
+     {
+      "seed": 9,
+      "learned_price": 2.0,
+      "robust_optimizer_error": 1.1999999999999922,
+      "singleton_shortfall": 1.1000000000000014,
+      "identity_residual": 0.0
+     },
+     {
+      "seed": 10,
+      "learned_price": 2.0,
+      "robust_optimizer_error": 1.1999999999999922,
+      "singleton_shortfall": 1.1000000000000014,
+      "identity_residual": 0.0
+     },
+     {
+      "seed": 11,
+      "learned_price": 2.0,
+      "robust_optimizer_error": 1.1999999999999922,
+      "singleton_shortfall": 1.1000000000000014,
+      "identity_residual": 0.0
+     },
+     {
+      "seed": 12,
+      "learned_price": 2.0,
+      "robust_optimizer_error": 1.1999999999999922,
+      "singleton_shortfall": 1.1000000000000014,
+      "identity_residual": 0.0
+     },
+     {
+      "seed": 13,
+      "learned_price": 2.0,
+      "robust_optimizer_error": 1.1999999999999922,
+      "singleton_shortfall": 1.1000000000000014,
+      "identity_residual": 0.0
+     },
+     {
+      "seed": 14,
+      "learned_price": 2.0,
+      "robust_optimizer_error": 1.1999999999999922,
+      "singleton_shortfall": 1.1000000000000014,
+      "identity_residual": 0.0
+     }
+    ],
+    "decomposition_summary": {
+     "certified_true_price": 1.9000000000000092,
+     "robust_optimizer_error_mean": 1.1999999999999922,
+     "singleton_shortfall_mean": 1.1000000000000014,
+     "max_identity_residual": 0.0,
+     "identity": "learned_price = true_price + robust_optimizer_error - singleton_shortfall (exact per seed)"
+    }
+   },
+   "cross_checks": {
+    "V_U_geq_learned_robust": {
+     "V_U": 7.199999999999992,
+     "learned_robust_max": 6.0,
+     "margin": 1.1999999999999922,
+     "passed": true
+    },
+    "V_U_geq_surgery": {
+     "V_U": 7.199999999999992,
+     "v_surgery_max": 6.0,
+     "margin": 1.1999999999999922,
+     "passed": true
+    },
+    "V_psi_geq_learned_singleton": {
+     "psi_$60: spend>=60": {
+      "V_psi": 7.200000000000004,
+      "learned_max": 6.0,
+      "margin": 1.2000000000000037,
+      "passed": true
+     },
+     "psi_$80: spend>=80": {
+      "V_psi": 9.100000000000001,
+      "learned_max": 8.0,
+      "margin": 1.1000000000000014,
+      "passed": true
+     }
+    },
+    "all_passed": true
+   },
+   "mc_integration": {
+    "note": "deterministic domain: firing and rewards are exact functions of the state; no feature-noise integration needed (the MC policy rollouts verify end-to-end)"
+   },
+   "elapsed_s": 6.7712109088897705
+  }
+ },
+ "elapsed_s": 255.1428849697113
+}

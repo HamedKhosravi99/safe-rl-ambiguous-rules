@@ -1,0 +1,43 @@
+{
+ "endpoint": "rho_gen@16 semantic licenser over catalog v5",
+ "n": 315,
+ "hits": 189,
+ "rate": 0.6,
+ "hallucinated_dropped": 0,
+ "per_repo": {
+  "cluster-monitoring-operator": {
+   "hits": 20,
+   "n": 42
+  },
+  "gitlab-runbooks": {
+   "hits": 60,
+   "n": 125
+  },
+  "loki": {
+   "hits": 2,
+   "n": 10
+  },
+  "mimir": {
+   "hits": 58,
+   "n": 86
+  },
+  "tempo": {
+   "hits": 18,
+   "n": 18
+  },
+  "tidb": {
+   "hits": 14,
+   "n": 14
+  },
+  "victoriametrics": {
+   "hits": 17,
+   "n": 20
+  }
+ },
+ "baselines": {
+  "v3_lexical64": 0.438,
+  "v4_lexical64": 0.352,
+  "v5_lexical64": 0.346,
+  "v5_availability": 0.657
+ }
+}

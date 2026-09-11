@@ -1,0 +1,18 @@
+{
+  "id": "task_004",
+  "question": "What is the largest planet and what famous feature does it have?",
+  "source_docs": [
+    "solar_system.txt"
+  ],
+  "rubric": [
+    [
+      "jupiter"
+    ],
+    [
+      "great red spot",
+      "red spot",
+      "storm"
+    ]
+  ],
+  "reference": "Jupiter, which has the Great Red Spot, a giant storm."
+}

@@ -1,0 +1,21 @@
+{
+  "id": "task_020",
+  "question": "What is a gene and what is a genome?",
+  "source_docs": [
+    "dna_genetics.txt"
+  ],
+  "rubric": [
+    [
+      "gene",
+      "segment"
+    ],
+    [
+      "protein"
+    ],
+    [
+      "genome",
+      "complete set"
+    ]
+  ],
+  "reference": "A gene is a DNA segment coding for a protein; the genome is all the DNA."
+}

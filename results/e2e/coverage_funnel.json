@@ -1,0 +1,682 @@
+{
+ "n_units": 4390,
+ "stages": [
+  "raw",
+  "unique",
+  "non_template",
+  "in_grammar",
+  "faithful",
+  "proposed",
+  "retained"
+ ],
+ "nested": {
+  "gitlab-runbooks": {
+   "raw": {
+    "n": 3967,
+    "conditional": null,
+    "unconditional": 1.0
+   },
+   "unique": {
+    "n": 1241,
+    "conditional": 0.3128308545500378,
+    "unconditional": 0.3128308545500378
+   },
+   "non_template": {
+    "n": 140,
+    "conditional": 0.11281224818694602,
+    "unconditional": 0.03529115200403327
+   },
+   "in_grammar": {
+    "n": 94,
+    "conditional": 0.6714285714285714,
+    "unconditional": 0.023695487774136628
+   },
+   "faithful": {
+    "n": 54,
+    "conditional": 0.574468085106383,
+    "unconditional": 0.013612301487269978
+   },
+   "proposed": {
+    "n": 16,
+    "conditional": 0.2962962962962963,
+    "unconditional": 0.00403327451474666
+   },
+   "retained": {
+    "n": 15,
+    "conditional": 0.9375,
+    "unconditional": 0.0037811948575749935
+   }
+  },
+  "mimir": {
+   "raw": {
+    "n": 237,
+    "conditional": null,
+    "unconditional": 1.0
+   },
+   "unique": {
+    "n": 103,
+    "conditional": 0.4345991561181435,
+    "unconditional": 0.4345991561181435
+   },
+   "non_template": {
+    "n": 103,
+    "conditional": 1.0,
+    "unconditional": 0.4345991561181435
+   },
+   "in_grammar": {
+    "n": 40,
+    "conditional": 0.3883495145631068,
+    "unconditional": 0.16877637130801687
+   },
+   "faithful": {
+    "n": 21,
+    "conditional": 0.525,
+    "unconditional": 0.08860759493670886
+   },
+   "proposed": {
+    "n": 18,
+    "conditional": 0.8571428571428571,
+    "unconditional": 0.0759493670886076
+   },
+   "retained": {
+    "n": 16,
+    "conditional": 0.8888888888888888,
+    "unconditional": 0.06751054852320675
+   }
+  },
+  "cluster-monitoring-operator": {
+   "raw": {
+    "n": 58,
+    "conditional": null,
+    "unconditional": 1.0
+   },
+   "unique": {
+    "n": 57,
+    "conditional": 0.9827586206896551,
+    "unconditional": 0.9827586206896551
+   },
+   "non_template": {
+    "n": 57,
+    "conditional": 1.0,
+    "unconditional": 0.9827586206896551
+   },
+   "in_grammar": {
+    "n": 41,
+    "conditional": 0.7192982456140351,
+    "unconditional": 0.7068965517241379
+   },
+   "faithful": {
+    "n": 21,
+    "conditional": 0.5121951219512195,
+    "unconditional": 0.3620689655172414
+   },
+   "proposed": {
+    "n": 13,
+    "conditional": 0.6190476190476191,
+    "unconditional": 0.22413793103448276
+   },
+   "retained": {
+    "n": 12,
+    "conditional": 0.9230769230769231,
+    "unconditional": 0.20689655172413793
+   }
+  },
+  "victoriametrics": {
+   "raw": {
+    "n": 57,
+    "conditional": null,
+    "unconditional": 1.0
+   },
+   "unique": {
+    "n": 52,
+    "conditional": 0.9122807017543859,
+    "unconditional": 0.9122807017543859
+   },
+   "non_template": {
+    "n": 52,
+    "conditional": 1.0,
+    "unconditional": 0.9122807017543859
+   },
+   "in_grammar": {
+    "n": 15,
+    "conditional": 0.28846153846153844,
+    "unconditional": 0.2631578947368421
+   },
+   "faithful": {
+    "n": 6,
+    "conditional": 0.4,
+    "unconditional": 0.10526315789473684
+   },
+   "proposed": {
+    "n": 3,
+    "conditional": 0.5,
+    "unconditional": 0.05263157894736842
+   },
+   "retained": {
+    "n": 2,
+    "conditional": 0.6666666666666666,
+    "unconditional": 0.03508771929824561
+   }
+  },
+  "tempo": {
+   "raw": {
+    "n": 33,
+    "conditional": null,
+    "unconditional": 1.0
+   },
+   "unique": {
+    "n": 32,
+    "conditional": 0.9696969696969697,
+    "unconditional": 0.9696969696969697
+   },
+   "non_template": {
+    "n": 32,
+    "conditional": 1.0,
+    "unconditional": 0.9696969696969697
+   },
+   "in_grammar": {
+    "n": 18,
+    "conditional": 0.5625,
+    "unconditional": 0.5454545454545454
+   },
+   "faithful": {
+    "n": 12,
+    "conditional": 0.6666666666666666,
+    "unconditional": 0.36363636363636365
+   },
+   "proposed": {
+    "n": 12,
+    "conditional": 1.0,
+    "unconditional": 0.36363636363636365
+   },
+   "retained": {
+    "n": 11,
+    "conditional": 0.9166666666666666,
+    "unconditional": 0.3333333333333333
+   }
+  },
+  "loki": {
+   "raw": {
+    "n": 19,
+    "conditional": null,
+    "unconditional": 1.0
+   },
+   "unique": {
+    "n": 17,
+    "conditional": 0.8947368421052632,
+    "unconditional": 0.8947368421052632
+   },
+   "non_template": {
+    "n": 17,
+    "conditional": 1.0,
+    "unconditional": 0.8947368421052632
+   },
+   "in_grammar": {
+    "n": 10,
+    "conditional": 0.5882352941176471,
+    "unconditional": 0.5263157894736842
+   },
+   "faithful": {
+    "n": 4,
+    "conditional": 0.4,
+    "unconditional": 0.21052631578947367
+   },
+   "proposed": {
+    "n": 4,
+    "conditional": 1.0,
+    "unconditional": 0.21052631578947367
+   },
+   "retained": {
+    "n": 4,
+    "conditional": 1.0,
+    "unconditional": 0.21052631578947367
+   }
+  },
+  "tidb": {
+   "raw": {
+    "n": 17,
+    "conditional": null,
+    "unconditional": 1.0
+   },
+   "unique": {
+    "n": 17,
+    "conditional": 1.0,
+    "unconditional": 1.0
+   },
+   "non_template": {
+    "n": 17,
+    "conditional": 1.0,
+    "unconditional": 1.0
+   },
+   "in_grammar": {
+    "n": 14,
+    "conditional": 0.8235294117647058,
+    "unconditional": 0.8235294117647058
+   },
+   "faithful": {
+    "n": 13,
+    "conditional": 0.9285714285714286,
+    "unconditional": 0.7647058823529411
+   },
+   "proposed": {
+    "n": 12,
+    "conditional": 0.9230769230769231,
+    "unconditional": 0.7058823529411765
+   },
+   "retained": {
+    "n": 12,
+    "conditional": 1.0,
+    "unconditional": 0.7058823529411765
+   }
+  },
+  "rook": {
+   "raw": {
+    "n": 2,
+    "conditional": null,
+    "unconditional": 1.0
+   },
+   "unique": {
+    "n": 2,
+    "conditional": 1.0,
+    "unconditional": 1.0
+   },
+   "non_template": {
+    "n": 2,
+    "conditional": 1.0,
+    "unconditional": 1.0
+   },
+   "in_grammar": {
+    "n": 0,
+    "conditional": 0.0,
+    "unconditional": 0.0
+   },
+   "faithful": {
+    "n": 0,
+    "conditional": null,
+    "unconditional": 0.0
+   },
+   "proposed": {
+    "n": 0,
+    "conditional": null,
+    "unconditional": 0.0
+   },
+   "retained": {
+    "n": 0,
+    "conditional": null,
+    "unconditional": 0.0
+   }
+  },
+  "ALL": {
+   "raw": {
+    "n": 4390,
+    "conditional": null,
+    "unconditional": 1.0
+   },
+   "unique": {
+    "n": 1471,
+    "conditional": 0.3350797266514806,
+    "unconditional": 0.3350797266514806
+   },
+   "non_template": {
+    "n": 370,
+    "conditional": 0.2515295717199184,
+    "unconditional": 0.08428246013667426
+   },
+   "in_grammar": {
+    "n": 202,
+    "conditional": 0.5459459459459459,
+    "unconditional": 0.04601366742596811
+   },
+   "faithful": {
+    "n": 113,
+    "conditional": 0.5594059405940595,
+    "unconditional": 0.025740318906605924
+   },
+   "proposed": {
+    "n": 73,
+    "conditional": 0.6460176991150443,
+    "unconditional": 0.01662870159453303
+   },
+   "retained": {
+    "n": 67,
+    "conditional": 0.9178082191780822,
+    "unconditional": 0.015261958997722095
+   }
+  }
+ },
+ "unit_level": {
+  "gitlab-runbooks": {
+   "raw": {
+    "n": 3967,
+    "conditional": null,
+    "unconditional": 1.0
+   },
+   "unique": {
+    "n": 1241,
+    "conditional": 0.3128308545500378,
+    "unconditional": 0.3128308545500378
+   },
+   "non_template": {
+    "n": 165,
+    "conditional": 0.04159314343332493,
+    "unconditional": 0.04159314343332493
+   },
+   "in_grammar": {
+    "n": 125,
+    "conditional": 0.03150995714645828,
+    "unconditional": 0.03150995714645828
+   },
+   "faithful": {
+    "n": 72,
+    "conditional": 0.576,
+    "unconditional": 0.01814973531635997
+   },
+   "proposed": {
+    "n": 29,
+    "conditional": 0.4027777777777778,
+    "unconditional": 0.007310310057978321
+   },
+   "retained": {
+    "n": 28,
+    "conditional": 0.9655172413793104,
+    "unconditional": 0.007058230400806655
+   }
+  },
+  "mimir": {
+   "raw": {
+    "n": 237,
+    "conditional": null,
+    "unconditional": 1.0
+   },
+   "unique": {
+    "n": 103,
+    "conditional": 0.4345991561181435,
+    "unconditional": 0.4345991561181435
+   },
+   "non_template": {
+    "n": 237,
+    "conditional": 1.0,
+    "unconditional": 1.0
+   },
+   "in_grammar": {
+    "n": 86,
+    "conditional": 0.3628691983122363,
+    "unconditional": 0.3628691983122363
+   },
+   "faithful": {
+    "n": 42,
+    "conditional": 0.4883720930232558,
+    "unconditional": 0.17721518987341772
+   },
+   "proposed": {
+    "n": 36,
+    "conditional": 0.8571428571428571,
+    "unconditional": 0.1518987341772152
+   },
+   "retained": {
+    "n": 32,
+    "conditional": 0.8888888888888888,
+    "unconditional": 0.1350210970464135
+   }
+  },
+  "cluster-monitoring-operator": {
+   "raw": {
+    "n": 58,
+    "conditional": null,
+    "unconditional": 1.0
+   },
+   "unique": {
+    "n": 57,
+    "conditional": 0.9827586206896551,
+    "unconditional": 0.9827586206896551
+   },
+   "non_template": {
+    "n": 58,
+    "conditional": 1.0,
+    "unconditional": 1.0
+   },
+   "in_grammar": {
+    "n": 42,
+    "conditional": 0.7241379310344828,
+    "unconditional": 0.7241379310344828
+   },
+   "faithful": {
+    "n": 21,
+    "conditional": 0.5,
+    "unconditional": 0.3620689655172414
+   },
+   "proposed": {
+    "n": 13,
+    "conditional": 0.6190476190476191,
+    "unconditional": 0.22413793103448276
+   },
+   "retained": {
+    "n": 12,
+    "conditional": 0.9230769230769231,
+    "unconditional": 0.20689655172413793
+   }
+  },
+  "victoriametrics": {
+   "raw": {
+    "n": 57,
+    "conditional": null,
+    "unconditional": 1.0
+   },
+   "unique": {
+    "n": 52,
+    "conditional": 0.9122807017543859,
+    "unconditional": 0.9122807017543859
+   },
+   "non_template": {
+    "n": 57,
+    "conditional": 1.0,
+    "unconditional": 1.0
+   },
+   "in_grammar": {
+    "n": 20,
+    "conditional": 0.3508771929824561,
+    "unconditional": 0.3508771929824561
+   },
+   "faithful": {
+    "n": 9,
+    "conditional": 0.45,
+    "unconditional": 0.15789473684210525
+   },
+   "proposed": {
+    "n": 5,
+    "conditional": 0.5555555555555556,
+    "unconditional": 0.08771929824561403
+   },
+   "retained": {
+    "n": 3,
+    "conditional": 0.6,
+    "unconditional": 0.05263157894736842
+   }
+  },
+  "tempo": {
+   "raw": {
+    "n": 33,
+    "conditional": null,
+    "unconditional": 1.0
+   },
+   "unique": {
+    "n": 32,
+    "conditional": 0.9696969696969697,
+    "unconditional": 0.9696969696969697
+   },
+   "non_template": {
+    "n": 33,
+    "conditional": 1.0,
+    "unconditional": 1.0
+   },
+   "in_grammar": {
+    "n": 18,
+    "conditional": 0.5454545454545454,
+    "unconditional": 0.5454545454545454
+   },
+   "faithful": {
+    "n": 12,
+    "conditional": 0.6666666666666666,
+    "unconditional": 0.36363636363636365
+   },
+   "proposed": {
+    "n": 12,
+    "conditional": 1.0,
+    "unconditional": 0.36363636363636365
+   },
+   "retained": {
+    "n": 11,
+    "conditional": 0.9166666666666666,
+    "unconditional": 0.3333333333333333
+   }
+  },
+  "loki": {
+   "raw": {
+    "n": 19,
+    "conditional": null,
+    "unconditional": 1.0
+   },
+   "unique": {
+    "n": 17,
+    "conditional": 0.8947368421052632,
+    "unconditional": 0.8947368421052632
+   },
+   "non_template": {
+    "n": 19,
+    "conditional": 1.0,
+    "unconditional": 1.0
+   },
+   "in_grammar": {
+    "n": 10,
+    "conditional": 0.5263157894736842,
+    "unconditional": 0.5263157894736842
+   },
+   "faithful": {
+    "n": 4,
+    "conditional": 0.4,
+    "unconditional": 0.21052631578947367
+   },
+   "proposed": {
+    "n": 4,
+    "conditional": 1.0,
+    "unconditional": 0.21052631578947367
+   },
+   "retained": {
+    "n": 4,
+    "conditional": 1.0,
+    "unconditional": 0.21052631578947367
+   }
+  },
+  "tidb": {
+   "raw": {
+    "n": 17,
+    "conditional": null,
+    "unconditional": 1.0
+   },
+   "unique": {
+    "n": 17,
+    "conditional": 1.0,
+    "unconditional": 1.0
+   },
+   "non_template": {
+    "n": 17,
+    "conditional": 1.0,
+    "unconditional": 1.0
+   },
+   "in_grammar": {
+    "n": 14,
+    "conditional": 0.8235294117647058,
+    "unconditional": 0.8235294117647058
+   },
+   "faithful": {
+    "n": 13,
+    "conditional": 0.9285714285714286,
+    "unconditional": 0.7647058823529411
+   },
+   "proposed": {
+    "n": 12,
+    "conditional": 0.9230769230769231,
+    "unconditional": 0.7058823529411765
+   },
+   "retained": {
+    "n": 12,
+    "conditional": 1.0,
+    "unconditional": 0.7058823529411765
+   }
+  },
+  "rook": {
+   "raw": {
+    "n": 2,
+    "conditional": null,
+    "unconditional": 1.0
+   },
+   "unique": {
+    "n": 2,
+    "conditional": 1.0,
+    "unconditional": 1.0
+   },
+   "non_template": {
+    "n": 2,
+    "conditional": 1.0,
+    "unconditional": 1.0
+   },
+   "in_grammar": {
+    "n": 0,
+    "conditional": 0.0,
+    "unconditional": 0.0
+   },
+   "faithful": {
+    "n": 0,
+    "conditional": null,
+    "unconditional": 0.0
+   },
+   "proposed": {
+    "n": 0,
+    "conditional": null,
+    "unconditional": 0.0
+   },
+   "retained": {
+    "n": 0,
+    "conditional": null,
+    "unconditional": 0.0
+   }
+  },
+  "ALL": {
+   "raw": {
+    "n": 4390,
+    "conditional": null,
+    "unconditional": 1.0
+   },
+   "unique": {
+    "n": 1471,
+    "conditional": 0.3350797266514806,
+    "unconditional": 0.3350797266514806
+   },
+   "non_template": {
+    "n": 588,
+    "conditional": 0.13394077448747152,
+    "unconditional": 0.13394077448747152
+   },
+   "in_grammar": {
+    "n": 315,
+    "conditional": 0.07175398633257403,
+    "unconditional": 0.07175398633257403
+   },
+   "faithful": {
+    "n": 173,
+    "conditional": 0.5492063492063493,
+    "unconditional": 0.03940774487471526
+   },
+   "proposed": {
+    "n": 111,
+    "conditional": 0.6416184971098265,
+    "unconditional": 0.02528473804100228
+   },
+   "retained": {
+    "n": 102,
+    "conditional": 0.918918918918919,
+    "unconditional": 0.023234624145785875
+   }
+  }
+ }
+}

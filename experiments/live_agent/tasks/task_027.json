@@ -1,0 +1,21 @@
+{
+  "id": "task_027",
+  "question": "What did ARPANET become and when did TCP/IP become standard?",
+  "source_docs": [
+    "internet_history.txt"
+  ],
+  "rubric": [
+    [
+      "arpanet"
+    ],
+    [
+      "tcp/ip",
+      "tcp",
+      "ip"
+    ],
+    [
+      "1983"
+    ]
+  ],
+  "reference": "ARPANET led to the Internet; TCP/IP became the standard in 1983."
+}

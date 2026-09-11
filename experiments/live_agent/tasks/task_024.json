@@ -1,0 +1,16 @@
+{
+  "id": "task_024",
+  "question": "What drives the movement of tectonic plates?",
+  "source_docs": [
+    "plate_tectonics.txt"
+  ],
+  "rubric": [
+    [
+      "convection"
+    ],
+    [
+      "mantle"
+    ]
+  ],
+  "reference": "Convection currents in the mantle."
+}

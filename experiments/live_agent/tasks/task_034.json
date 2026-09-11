@@ -1,0 +1,19 @@
+{
+  "id": "task_034",
+  "question": "What human activity has enhanced the greenhouse effect?",
+  "source_docs": [
+    "greenhouse_effect.txt"
+  ],
+  "rubric": [
+    [
+      "fossil fuel",
+      "fossil fuels",
+      "burning"
+    ],
+    [
+      "carbon dioxide",
+      "co2"
+    ]
+  ],
+  "reference": "Burning fossil fuels, which raises carbon dioxide."
+}

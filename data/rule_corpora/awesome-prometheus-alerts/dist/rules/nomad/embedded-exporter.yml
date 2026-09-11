@@ -1,0 +1,42 @@
+groups:
+
+- name: EmbeddedExporter
+
+  
+  rules:
+
+    - alert: NomadJobFailed
+      expr: 'nomad_nomad_job_summary_failed > 0'
+      for: 0m
+      labels:
+        severity: warning
+      annotations:
+        summary: Nomad job failed (instance {{ $labels.instance }})
+        description: "Nomad job {{ $labels.job }} has {{ $value }} failed allocations.\n  VALUE = {{ $value }}\n  LABELS = {{ $labels }}"
+
+    - alert: NomadJobLost
+      expr: 'nomad_nomad_job_summary_lost > 0'
+      for: 0m
+      labels:
+        severity: warning
+      annotations:
+        summary: Nomad job lost (instance {{ $labels.instance }})
+        description: "Nomad job {{ $labels.job }} has {{ $value }} lost allocations.\n  VALUE = {{ $value }}\n  LABELS = {{ $labels }}"
+
+    - alert: NomadJobQueued
+      expr: 'nomad_nomad_job_summary_queued > 0'
+      for: 2m
+      labels:
+        severity: warning
+      annotations:
+        summary: Nomad job queued (instance {{ $labels.instance }})
+        description: "Nomad job {{ $labels.job }} has {{ $value }} queued allocations.\n  VALUE = {{ $value }}\n  LABELS = {{ $labels }}"
+
+    - alert: NomadBlockedEvaluation
+      expr: 'nomad_nomad_blocked_evals_total_blocked > 0'
+      for: 0m
+      labels:
+        severity: warning
+      annotations:
+        summary: Nomad blocked evaluation (instance {{ $labels.instance }})
+        description: "Nomad has {{ $value }} blocked evaluations. The cluster may lack resources to place allocations.\n  VALUE = {{ $value }}\n  LABELS = {{ $labels }}"

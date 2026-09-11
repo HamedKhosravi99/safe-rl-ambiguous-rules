@@ -1,0 +1,51 @@
+{
+  "created": "20260728-044944",
+  "device": "cuda",
+  "tasks": [
+    "OfflineCarRun-v0"
+  ],
+  "learners": [
+    "cdt"
+  ],
+  "seeds": [
+    8
+  ],
+  "U": [
+    10,
+    20,
+    40
+  ],
+  "c_single": 40,
+  "c_saorl": 10,
+  "update_steps": 100000,
+  "runs": [
+    {
+      "task": "OfflineCarRun-v0",
+      "learner": "cdt",
+      "reading": "single",
+      "target_cost": 40,
+      "seed": 8,
+      "U": [
+        10,
+        20,
+        40
+      ],
+      "status": "error",
+      "error": "RuntimeError('Pin memory thread exited unexpectedly')"
+    },
+    {
+      "task": "OfflineCarRun-v0",
+      "learner": "cdt",
+      "reading": "saorl",
+      "target_cost": 10,
+      "seed": 8,
+      "U": [
+        10,
+        20,
+        40
+      ],
+      "status": "error",
+      "error": "RuntimeError('Pin memory thread exited unexpectedly')"
+    }
+  ]
+}

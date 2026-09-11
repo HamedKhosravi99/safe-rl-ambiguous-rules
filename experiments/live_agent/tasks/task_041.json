@@ -1,0 +1,23 @@
+{
+  "id": "task_041",
+  "question": "What are noble gases and give examples.",
+  "source_docs": [
+    "periodic_table.txt"
+  ],
+  "rubric": [
+    [
+      "noble gas",
+      "noble gases"
+    ],
+    [
+      "helium",
+      "neon"
+    ],
+    [
+      "rarely react",
+      "unreactive",
+      "inert"
+    ]
+  ],
+  "reference": "Unreactive gases like helium and neon in the rightmost group."
+}

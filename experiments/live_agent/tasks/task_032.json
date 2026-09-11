@@ -1,0 +1,22 @@
+{
+  "id": "task_032",
+  "question": "What is the difference between arteries and veins?",
+  "source_docs": [
+    "human_heart.txt"
+  ],
+  "rubric": [
+    [
+      "arteries",
+      "artery"
+    ],
+    [
+      "veins",
+      "vein"
+    ],
+    [
+      "away",
+      "back"
+    ]
+  ],
+  "reference": "Arteries carry blood away from the heart; veins carry it back."
+}

@@ -1,0 +1,156 @@
+{
+ "config": {
+  "delta": 0.05,
+  "note": "Thm A deployment certificate: exact Clopper-Pearson upper bounds on the SHIPPED policy's episode-violation rate; multiplicity handled by pathwise dominance (w = |Max(U)|)"
+ },
+ "domains": {
+  "synthetic": {
+   "U": [
+    "mid: RUL<22",
+    "consv: anom>0.6",
+    "vconsv: RUL<40"
+   ],
+   "maximal": [
+    "consv: anom>0.6",
+    "vconsv: RUL<40"
+   ],
+   "w": 2,
+   "n_episodes_per_seed": 300,
+   "delta": 0.05,
+   "arms": {
+    "corset": {
+     "n_seeds": 50,
+     "seed_mean_rate": 0.04939999999999999,
+     "seed_mean_rate_se": 0.011880237596591825,
+     "median_seed_cp_upper": 0.030250395419737855,
+     "worst_seed_cp_upper": 0.36716633685072775,
+     "best_seed_cp_upper": 0.009936081944457708,
+     "n_seeds_certified_at_005": 32,
+     "n_seeds_certified_at_010": 39,
+     "n_seeds_zero_violations": 15
+    },
+    "single": {
+     "n_seeds": 50,
+     "seed_mean_rate": 0.4938666666666666,
+     "seed_mean_rate_se": 0.06189548355375973,
+     "median_seed_cp_upper": 0.4906007616908954,
+     "worst_seed_cp_upper": 1.0,
+     "best_seed_cp_upper": 0.009936081944457708,
+     "n_seeds_certified_at_005": 14,
+     "n_seeds_certified_at_010": 18,
+     "n_seeds_zero_violations": 4
+    }
+   }
+  },
+  "real": {
+   "U": [
+    "mid: RUL<22",
+    "consv: anom>0.6",
+    "vconsv: RUL<40"
+   ],
+   "maximal": [
+    "consv: anom>0.6",
+    "vconsv: RUL<40"
+   ],
+   "w": 2,
+   "n_episodes_per_seed": 300,
+   "delta": 0.05,
+   "arms": {
+    "corset": {
+     "n_seeds": 50,
+     "seed_mean_rate": 0.056266666666666666,
+     "seed_mean_rate_se": 0.0026300892788102214,
+     "median_seed_cp_upper": 0.07987962312006985,
+     "worst_seed_cp_upper": 0.129460694055819,
+     "best_seed_cp_upper": 0.030250395419737855,
+     "n_seeds_certified_at_005": 2,
+     "n_seeds_certified_at_010": 37,
+     "n_seeds_zero_violations": 0
+    },
+    "single": {
+     "n_seeds": 50,
+     "seed_mean_rate": 0.5996666666666667,
+     "seed_mean_rate_se": 0.002629416703291146,
+     "median_seed_cp_upper": 0.6440512267322558,
+     "worst_seed_cp_upper": 0.7021194711741567,
+     "best_seed_cp_upper": 0.6114752678671085,
+     "n_seeds_certified_at_005": 0,
+     "n_seeds_certified_at_010": 0,
+     "n_seeds_zero_violations": 0
+    }
+   }
+  },
+  "gridworld": {
+   "U": [
+    "psi_W3: Within_3(warn)",
+    "psi_W5: Within_5(warn)"
+   ],
+   "maximal": [
+    "psi_W5: Within_5(warn)"
+   ],
+   "w": 1,
+   "n_episodes_per_seed": 300,
+   "delta": 0.05,
+   "arms": {
+    "corset": {
+     "n_seeds": 50,
+     "seed_mean_rate": 0.0,
+     "seed_mean_rate_se": 0.0,
+     "median_seed_cp_upper": 0.009936081944457708,
+     "worst_seed_cp_upper": 0.009936081944457708,
+     "best_seed_cp_upper": 0.009936081944457708,
+     "n_seeds_certified_at_005": 50,
+     "n_seeds_certified_at_010": 50,
+     "n_seeds_zero_violations": 50
+    },
+    "single": {
+     "n_seeds": 50,
+     "seed_mean_rate": 0.94,
+     "seed_mean_rate_se": 0.033926691677251195,
+     "median_seed_cp_upper": 1.0,
+     "worst_seed_cp_upper": 1.0,
+     "best_seed_cp_upper": 0.009936081944457708,
+     "n_seeds_certified_at_005": 3,
+     "n_seeds_certified_at_010": 3,
+     "n_seeds_zero_violations": 3
+    }
+   }
+  },
+  "budget": {
+   "U": [
+    "psi_$60: spend>=60",
+    "psi_$80: spend>=80"
+   ],
+   "maximal": [
+    "psi_$60: spend>=60"
+   ],
+   "w": 1,
+   "n_episodes_per_seed": 300,
+   "delta": 0.05,
+   "arms": {
+    "corset": {
+     "n_seeds": 50,
+     "seed_mean_rate": 0.0,
+     "seed_mean_rate_se": 0.0,
+     "median_seed_cp_upper": 0.009936081944457708,
+     "worst_seed_cp_upper": 0.009936081944457708,
+     "best_seed_cp_upper": 0.009936081944457708,
+     "n_seeds_certified_at_005": 50,
+     "n_seeds_certified_at_010": 50,
+     "n_seeds_zero_violations": 50
+    },
+    "single": {
+     "n_seeds": 50,
+     "seed_mean_rate": 1.0,
+     "seed_mean_rate_se": 0.0,
+     "median_seed_cp_upper": 1.0,
+     "worst_seed_cp_upper": 1.0,
+     "best_seed_cp_upper": 1.0,
+     "n_seeds_certified_at_005": 0,
+     "n_seeds_certified_at_010": 0,
+     "n_seeds_zero_violations": 0
+    }
+   }
+  }
+ }
+}

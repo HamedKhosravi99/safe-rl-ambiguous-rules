@@ -1,0 +1,363 @@
+{
+ "metadata": {
+  "generated_at": "2026-08-01T05:58:32.738848+00:00",
+  "registered": "paper/Plans/EVIDENCE_FREEZE_MANIFEST.md@91074b3 (D1)",
+  "functional": "s(l,bot) = 1 - max_psi s(l,psi); psi-scores unchanged",
+  "condition": "language_only",
+  "model": "gpt-4o-mini",
+  "delta_sem": 0.1,
+  "single_attempt": true
+ },
+ "calibration": {
+  "n_cal": 542,
+  "n_ood_cal_rows": 46,
+  "k": 54,
+  "qhat": 0.5
+ },
+ "test": {
+  "n_rows": 809,
+  "coverage": {
+   "n": 809,
+   "covered": 743,
+   "rate": 0.9184,
+   "clopper_pearson_ci95": [
+    0.8974,
+    0.9363
+   ],
+   "note": "over rows whose intent lies in the calibrated space (Psi ∪ {⊥})"
+  },
+  "coverage_in_dsl": {
+   "n": 733,
+   "rate": 0.9318
+  },
+  "per_domain": {
+   "alerting_thresholds": {
+    "coverage": 1.0,
+    "n": 10
+   },
+   "api_rate_limits": {
+    "coverage": 1.0,
+    "n": 13
+   },
+   "data_access_policy": {
+    "coverage": 0.8588,
+    "n": 262
+   },
+   "machine_maintenance": {
+    "coverage": 0.9375,
+    "n": 112
+   },
+   "navigation_keepout": {
+    "coverage": 0.9558,
+    "n": 113
+   },
+   "repo_ci_policy": {
+    "coverage": 1.0,
+    "n": 9
+   },
+   "resource_limits": {
+    "coverage": 0.9375,
+    "n": 16
+   },
+   "retention_access_policy": {
+    "coverage": 0.9231,
+    "n": 13
+   },
+   "session_spending_caps": {
+    "coverage": 0.9257,
+    "n": 148
+   },
+   "tool_use_quotas": {
+    "coverage": 0.9646,
+    "n": 113
+   }
+  },
+  "per_author": {
+   "airtable": {
+    "coverage": 1.0,
+    "n": 1
+   },
+   "azure": {
+    "coverage": 0.5,
+    "n": 2
+   },
+   "basecamp": {
+    "coverage": 1.0,
+    "n": 1
+   },
+   "black": {
+    "coverage": 1.0,
+    "n": 1
+   },
+   "cloudflare": {
+    "coverage": 1.0,
+    "n": 2
+   },
+   "data-01": {
+    "coverage": 0.7949,
+    "n": 39
+   },
+   "data-02": {
+    "coverage": 0.8684,
+    "n": 38
+   },
+   "data-03": {
+    "coverage": 0.9211,
+    "n": 38
+   },
+   "data-04": {
+    "coverage": 0.8421,
+    "n": 38
+   },
+   "data-05": {
+    "coverage": 0.8919,
+    "n": 37
+   },
+   "data-06": {
+    "coverage": 0.8611,
+    "n": 36
+   },
+   "data-08": {
+    "coverage": 0.8333,
+    "n": 36
+   },
+   "flake8": {
+    "coverage": 1.0,
+    "n": 1
+   },
+   "gitea": {
+    "coverage": 1.0,
+    "n": 1
+   },
+   "gitlab": {
+    "coverage": 1.0,
+    "n": 3
+   },
+   "golangci-lint": {
+    "coverage": 1.0,
+    "n": 1
+   },
+   "google-cloud": {
+    "coverage": 1.0,
+    "n": 1
+   },
+   "grafana": {
+    "coverage": 1.0,
+    "n": 2
+   },
+   "isort": {
+    "coverage": 1.0,
+    "n": 1
+   },
+   "kubernetes": {
+    "coverage": 1.0,
+    "n": 3
+   },
+   "kubernetes-mixin": {
+    "coverage": 1.0,
+    "n": 3
+   },
+   "linear": {
+    "coverage": 1.0,
+    "n": 1
+   },
+   "maint-04": {
+    "coverage": 0.9474,
+    "n": 38
+   },
+   "maint-05": {
+    "coverage": 0.9474,
+    "n": 38
+   },
+   "maint-08": {
+    "coverage": 0.9167,
+    "n": 36
+   },
+   "markdownlint": {
+    "coverage": 1.0,
+    "n": 1
+   },
+   "mastodon": {
+    "coverage": 1.0,
+    "n": 1
+   },
+   "mediawiki": {
+    "coverage": 1.0,
+    "n": 1
+   },
+   "mongodb": {
+    "coverage": 1.0,
+    "n": 2
+   },
+   "mysql": {
+    "coverage": 1.0,
+    "n": 2
+   },
+   "nav-01": {
+    "coverage": 0.8974,
+    "n": 39
+   },
+   "nav-04": {
+    "coverage": 1.0,
+    "n": 38
+   },
+   "nav-06": {
+    "coverage": 0.9722,
+    "n": 36
+   },
+   "notion": {
+    "coverage": 1.0,
+    "n": 1
+   },
+   "ory-kratos": {
+    "coverage": 1.0,
+    "n": 1
+   },
+   "pgbouncer": {
+    "coverage": 1.0,
+    "n": 1
+   },
+   "php-codesniffer": {
+    "coverage": 1.0,
+    "n": 1
+   },
+   "python-style": {
+    "coverage": 1.0,
+    "n": 1
+   },
+   "rabbitmq": {
+    "coverage": 1.0,
+    "n": 2
+   },
+   "redis": {
+    "coverage": 1.0,
+    "n": 2
+   },
+   "rfc-1035": {
+    "coverage": 1.0,
+    "n": 2
+   },
+   "rfc-2181": {
+    "coverage": 1.0,
+    "n": 1
+   },
+   "rfc-5280": {
+    "coverage": 1.0,
+    "n": 1
+   },
+   "rfc-6238": {
+    "coverage": 1.0,
+    "n": 1
+   },
+   "rfc-6265": {
+    "coverage": 0.5,
+    "n": 2
+   },
+   "rfc-6749": {
+    "coverage": 1.0,
+    "n": 1
+   },
+   "rfc-791": {
+    "coverage": 1.0,
+    "n": 1
+   },
+   "samber-awesome-prometheus-alerts": {
+    "coverage": 1.0,
+    "n": 3
+   },
+   "spend-02": {
+    "coverage": 0.8974,
+    "n": 39
+   },
+   "spend-05": {
+    "coverage": 0.9211,
+    "n": 38
+   },
+   "spend-06": {
+    "coverage": 0.9167,
+    "n": 36
+   },
+   "spend-08": {
+    "coverage": 0.9714,
+    "n": 35
+   },
+   "sqlite": {
+    "coverage": 1.0,
+    "n": 1
+   },
+   "stripe": {
+    "coverage": 1.0,
+    "n": 1
+   },
+   "symfony": {
+    "coverage": 1.0,
+    "n": 1
+   },
+   "telegram": {
+    "coverage": 1.0,
+    "n": 1
+   },
+   "tools-01": {
+    "coverage": 0.9487,
+    "n": 39
+   },
+   "tools-05": {
+    "coverage": 1.0,
+    "n": 38
+   },
+   "tools-08": {
+    "coverage": 0.9444,
+    "n": 36
+   },
+   "travis-ci": {
+    "coverage": 1.0,
+    "n": 1
+   },
+   "wikimedia": {
+    "coverage": 1.0,
+    "n": 1
+   },
+   "wordpress": {
+    "coverage": 1.0,
+    "n": 2
+   },
+   "zendesk": {
+    "coverage": 1.0,
+    "n": 1
+   }
+  },
+  "set_size": {
+   "mean": 3.101,
+   "median": 3.0,
+   "singleton_rate": 0.0816,
+   "empty_rate": 0.042,
+   "full_set_rate": 0.225,
+   "bot_retained_rate": 0.2806
+  },
+  "intent_rank": {
+   "mean": 1.477,
+   "median": 1.0
+  },
+  "escalation": {
+   "n_out_of_dsl": 76,
+   "out_of_dsl_recall": 0.7895,
+   "n_in_dsl": 733,
+   "in_dsl_false_escalation": 0.2278
+  },
+  "set_size_reduction_vs_constant": null,
+  "cluster_bootstrap": {
+   "coverage_ci95": [
+    0.8984,
+    0.9373
+   ],
+   "B": 2000,
+   "seed": 0,
+   "unit": "base_rule_id"
+  }
+ },
+ "baseline": {
+  "source": "test_report_openai.json",
+  "out_of_dsl_recall": 0.4474,
+  "in_dsl_false_escalation": 0.0014
+ }
+}

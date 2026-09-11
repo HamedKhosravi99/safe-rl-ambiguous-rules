@@ -1,0 +1,914 @@
+{
+ "delta_tr": 0.1,
+ "m_supp": 5,
+ "sizes": [
+  2000,
+  8000,
+  32000
+ ],
+ "draws": 50,
+ "d": 0.01,
+ "instances": [
+  {
+   "instance": "AlertmanagerClusterCrashlooping",
+   "geometry": "L3-caps5-1",
+   "nS": 37,
+   "Jr_oracle_fullset": 0.3783791720630837,
+   "switch_gap": [
+    {
+     "k": 0,
+     "Jr_oracle": 0.606246113623497,
+     "Jr_surgery": 0.34225906857075966,
+     "realized_gap": 0.26398704505273735,
+     "switch_gap_bound": 0.26316102642716516,
+     "closed_form": 0.5625257550728932
+    },
+    {
+     "k": 1,
+     "Jr_oracle": 0.3859198325332173,
+     "Jr_surgery": 0.36417927953942614,
+     "realized_gap": 0.021740552993791185,
+     "switch_gap_bound": 0.02174055299379126,
+     "closed_form": 0.11746787402368611
+    }
+   ],
+   "sizes": {
+    "2000": {
+     "conf": 1.0,
+     "opt": 1.0,
+     "feas_opt": 1.0,
+     "feas_sub": 1.0,
+     "margin": 0.0,
+     "bound": 0.0,
+     "n": 50
+    },
+    "8000": {
+     "conf": 1.0,
+     "opt": 1.0,
+     "feas_opt": 1.0,
+     "feas_sub": 1.0,
+     "margin": 0.0,
+     "bound": 0.0,
+     "n": 50
+    },
+    "32000": {
+     "conf": 1.0,
+     "opt": 1.0,
+     "feas_opt": 1.0,
+     "feas_sub": 1.0,
+     "margin": 0.0,
+     "bound": 0.0,
+     "n": 50
+    }
+   }
+  },
+  {
+   "instance": "AlertmanagerClusterDown",
+   "geometry": "L3-caps5-1",
+   "nS": 37,
+   "Jr_oracle_fullset": 0.3783791720630837,
+   "switch_gap": [
+    {
+     "k": 0,
+     "Jr_oracle": 0.606246113623497,
+     "Jr_surgery": 0.34225906857075966,
+     "realized_gap": 0.26398704505273735,
+     "switch_gap_bound": 0.26316102642716516,
+     "closed_form": 0.5625257550728932
+    },
+    {
+     "k": 1,
+     "Jr_oracle": 0.3859198325332173,
+     "Jr_surgery": 0.36417927953942614,
+     "realized_gap": 0.021740552993791185,
+     "switch_gap_bound": 0.02174055299379126,
+     "closed_form": 0.11746787402368611
+    }
+   ],
+   "sizes": {
+    "2000": {
+     "conf": 1.0,
+     "opt": 1.0,
+     "feas_opt": 1.0,
+     "feas_sub": 1.0,
+     "margin": 0.0,
+     "bound": 0.0,
+     "n": 50
+    },
+    "8000": {
+     "conf": 1.0,
+     "opt": 1.0,
+     "feas_opt": 1.0,
+     "feas_sub": 1.0,
+     "margin": 0.0,
+     "bound": 0.0,
+     "n": 50
+    },
+    "32000": {
+     "conf": 1.0,
+     "opt": 1.0,
+     "feas_opt": 1.0,
+     "feas_sub": 1.0,
+     "margin": 0.0,
+     "bound": 0.0,
+     "n": 50
+    }
+   }
+  },
+  {
+   "instance": "NodeNetworkInterfaceFlapping",
+   "geometry": "L3-caps2-1",
+   "nS": 19,
+   "Jr_oracle_fullset": 0.3430009284686942,
+   "switch_gap": [
+    {
+     "k": 0,
+     "Jr_oracle": 0.3745515118893095,
+     "Jr_surgery": 0.31500022584373644,
+     "realized_gap": 0.05955128604557308,
+     "switch_gap_bound": 0.057581825344346506,
+     "closed_form": 0.40379806907183885
+    },
+    {
+     "k": 1,
+     "Jr_oracle": 0.3859198325332173,
+     "Jr_surgery": 0.3300320478888885,
+     "realized_gap": 0.05588778464432881,
+     "switch_gap_bound": 0.0558877846443288,
+     "closed_form": 0.31139155193323054
+    }
+   ],
+   "sizes": {
+    "2000": {
+     "conf": 1.0,
+     "opt": 1.0,
+     "feas_opt": 1.0,
+     "feas_sub": 1.0,
+     "margin": 0.0,
+     "bound": 0.0,
+     "n": 50
+    },
+    "8000": {
+     "conf": 1.0,
+     "opt": 1.0,
+     "feas_opt": 1.0,
+     "feas_sub": 1.0,
+     "margin": 0.0,
+     "bound": 0.0,
+     "n": 50
+    },
+    "32000": {
+     "conf": 1.0,
+     "opt": 1.0,
+     "feas_opt": 1.0,
+     "feas_sub": 1.0,
+     "margin": 0.0,
+     "bound": 0.0,
+     "n": 50
+    }
+   }
+  },
+  {
+   "instance": "KubeStateMetricsListErrors",
+   "geometry": "L3-caps8-1",
+   "nS": 55,
+   "Jr_oracle_fullset": 0.38591983253321727,
+   "switch_gap": [
+    {
+     "k": 0,
+     "Jr_oracle": 0.83097309111885,
+     "Jr_surgery": 0.3531464998235552,
+     "realized_gap": 0.47782659129529476,
+     "switch_gap_bound": 0.47782659129529453,
+     "closed_form": 0.6200167843609052
+    },
+    {
+     "k": 1,
+     "Jr_oracle": 0.38591983253321727,
+     "Jr_surgery": 0.37151760109729304,
+     "realized_gap": 0.014402231435924229,
+     "switch_gap_bound": 0.014402231435924263,
+     "closed_form": 0.050465259347843974
+    }
+   ],
+   "sizes": {
+    "2000": {
+     "conf": 1.0,
+     "opt": 1.0,
+     "feas_opt": 1.0,
+     "feas_sub": 1.0,
+     "margin": 0.0,
+     "bound": 0.0,
+     "n": 50
+    },
+    "8000": {
+     "conf": 1.0,
+     "opt": 1.0,
+     "feas_opt": 1.0,
+     "feas_sub": 1.0,
+     "margin": 0.0,
+     "bound": 0.0,
+     "n": 50
+    },
+    "32000": {
+     "conf": 1.0,
+     "opt": 1.0,
+     "feas_opt": 1.0,
+     "feas_sub": 1.0,
+     "margin": 0.0,
+     "bound": 0.0,
+     "n": 50
+    }
+   }
+  },
+  {
+   "instance": "KubeStateMetricsWatchErrors",
+   "geometry": "L3-caps8-1",
+   "nS": 55,
+   "Jr_oracle_fullset": 0.38591983253321727,
+   "switch_gap": [
+    {
+     "k": 0,
+     "Jr_oracle": 0.83097309111885,
+     "Jr_surgery": 0.3531464998235552,
+     "realized_gap": 0.47782659129529476,
+     "switch_gap_bound": 0.47782659129529453,
+     "closed_form": 0.6200167843609052
+    },
+    {
+     "k": 1,
+     "Jr_oracle": 0.38591983253321727,
+     "Jr_surgery": 0.37151760109729304,
+     "realized_gap": 0.014402231435924229,
+     "switch_gap_bound": 0.014402231435924263,
+     "closed_form": 0.050465259347843974
+    }
+   ],
+   "sizes": {
+    "2000": {
+     "conf": 1.0,
+     "opt": 1.0,
+     "feas_opt": 1.0,
+     "feas_sub": 1.0,
+     "margin": 0.0,
+     "bound": 0.0,
+     "n": 50
+    },
+    "8000": {
+     "conf": 1.0,
+     "opt": 1.0,
+     "feas_opt": 1.0,
+     "feas_sub": 1.0,
+     "margin": 0.0,
+     "bound": 0.0,
+     "n": 50
+    },
+    "32000": {
+     "conf": 1.0,
+     "opt": 1.0,
+     "feas_opt": 1.0,
+     "feas_sub": 1.0,
+     "margin": 0.0,
+     "bound": 0.0,
+     "n": 50
+    }
+   }
+  },
+  {
+   "instance": "KubePodCrashLooping",
+   "geometry": "L3-caps8-1",
+   "nS": 55,
+   "Jr_oracle_fullset": 0.38591983253321727,
+   "switch_gap": [
+    {
+     "k": 0,
+     "Jr_oracle": 0.83097309111885,
+     "Jr_surgery": 0.3531464998235552,
+     "realized_gap": 0.47782659129529476,
+     "switch_gap_bound": 0.47782659129529453,
+     "closed_form": 0.6200167843609052
+    },
+    {
+     "k": 1,
+     "Jr_oracle": 0.38591983253321727,
+     "Jr_surgery": 0.37151760109729304,
+     "realized_gap": 0.014402231435924229,
+     "switch_gap_bound": 0.014402231435924263,
+     "closed_form": 0.050465259347843974
+    }
+   ],
+   "sizes": {
+    "2000": {
+     "conf": 1.0,
+     "opt": 1.0,
+     "feas_opt": 1.0,
+     "feas_sub": 1.0,
+     "margin": 0.0,
+     "bound": 0.0,
+     "n": 50
+    },
+    "8000": {
+     "conf": 1.0,
+     "opt": 1.0,
+     "feas_opt": 1.0,
+     "feas_sub": 1.0,
+     "margin": 0.0,
+     "bound": 0.0,
+     "n": 50
+    },
+    "32000": {
+     "conf": 1.0,
+     "opt": 1.0,
+     "feas_opt": 1.0,
+     "feas_sub": 1.0,
+     "margin": 0.0,
+     "bound": 0.0,
+     "n": 50
+    }
+   }
+  },
+  {
+   "instance": "KubeCPUQuotaOvercommit",
+   "geometry": "L3-caps5-1",
+   "nS": 37,
+   "Jr_oracle_fullset": 0.3783791720630837,
+   "switch_gap": [
+    {
+     "k": 0,
+     "Jr_oracle": 0.606246113623497,
+     "Jr_surgery": 0.34225906857075966,
+     "realized_gap": 0.26398704505273735,
+     "switch_gap_bound": 0.26316102642716516,
+     "closed_form": 0.5625257550728932
+    },
+    {
+     "k": 1,
+     "Jr_oracle": 0.3859198325332173,
+     "Jr_surgery": 0.36417927953942614,
+     "realized_gap": 0.021740552993791185,
+     "switch_gap_bound": 0.02174055299379126,
+     "closed_form": 0.11746787402368611
+    }
+   ],
+   "sizes": {
+    "2000": {
+     "conf": 1.0,
+     "opt": 1.0,
+     "feas_opt": 1.0,
+     "feas_sub": 1.0,
+     "margin": 0.0,
+     "bound": 0.0,
+     "n": 50
+    },
+    "8000": {
+     "conf": 1.0,
+     "opt": 1.0,
+     "feas_opt": 1.0,
+     "feas_sub": 1.0,
+     "margin": 0.0,
+     "bound": 0.0,
+     "n": 50
+    },
+    "32000": {
+     "conf": 1.0,
+     "opt": 1.0,
+     "feas_opt": 1.0,
+     "feas_sub": 1.0,
+     "margin": 0.0,
+     "bound": 0.0,
+     "n": 50
+    }
+   }
+  },
+  {
+   "instance": "KubeMemoryQuotaOvercommit",
+   "geometry": "L3-caps5-1",
+   "nS": 37,
+   "Jr_oracle_fullset": 0.3783791720630837,
+   "switch_gap": [
+    {
+     "k": 0,
+     "Jr_oracle": 0.606246113623497,
+     "Jr_surgery": 0.34225906857075966,
+     "realized_gap": 0.26398704505273735,
+     "switch_gap_bound": 0.26316102642716516,
+     "closed_form": 0.5625257550728932
+    },
+    {
+     "k": 1,
+     "Jr_oracle": 0.3859198325332173,
+     "Jr_surgery": 0.36417927953942614,
+     "realized_gap": 0.021740552993791185,
+     "switch_gap_bound": 0.02174055299379126,
+     "closed_form": 0.11746787402368611
+    }
+   ],
+   "sizes": {
+    "2000": {
+     "conf": 1.0,
+     "opt": 1.0,
+     "feas_opt": 1.0,
+     "feas_sub": 1.0,
+     "margin": 0.0,
+     "bound": 0.0,
+     "n": 50
+    },
+    "8000": {
+     "conf": 1.0,
+     "opt": 1.0,
+     "feas_opt": 1.0,
+     "feas_sub": 1.0,
+     "margin": 0.0,
+     "bound": 0.0,
+     "n": 50
+    },
+    "32000": {
+     "conf": 1.0,
+     "opt": 1.0,
+     "feas_opt": 1.0,
+     "feas_sub": 1.0,
+     "margin": 0.0,
+     "bound": 0.0,
+     "n": 50
+    }
+   }
+  },
+  {
+   "instance": "NodeCPUHighUsage",
+   "geometry": "L3-caps8-1",
+   "nS": 55,
+   "Jr_oracle_fullset": 0.38591983253321727,
+   "switch_gap": [
+    {
+     "k": 0,
+     "Jr_oracle": 0.83097309111885,
+     "Jr_surgery": 0.3531464998235552,
+     "realized_gap": 0.47782659129529476,
+     "switch_gap_bound": 0.47782659129529453,
+     "closed_form": 0.6200167843609052
+    },
+    {
+     "k": 1,
+     "Jr_oracle": 0.38591983253321727,
+     "Jr_surgery": 0.37151760109729304,
+     "realized_gap": 0.014402231435924229,
+     "switch_gap_bound": 0.014402231435924263,
+     "closed_form": 0.050465259347843974
+    }
+   ],
+   "sizes": {
+    "2000": {
+     "conf": 1.0,
+     "opt": 1.0,
+     "feas_opt": 1.0,
+     "feas_sub": 1.0,
+     "margin": 0.0,
+     "bound": 0.0,
+     "n": 50
+    },
+    "8000": {
+     "conf": 1.0,
+     "opt": 1.0,
+     "feas_opt": 1.0,
+     "feas_sub": 1.0,
+     "margin": 0.0,
+     "bound": 0.0,
+     "n": 50
+    },
+    "32000": {
+     "conf": 1.0,
+     "opt": 1.0,
+     "feas_opt": 1.0,
+     "feas_sub": 1.0,
+     "margin": 0.0,
+     "bound": 0.0,
+     "n": 50
+    }
+   }
+  },
+  {
+   "instance": "NodeClockNotSynchronising",
+   "geometry": "L3-caps8-1",
+   "nS": 55,
+   "Jr_oracle_fullset": 0.38591983253321727,
+   "switch_gap": [
+    {
+     "k": 0,
+     "Jr_oracle": 0.83097309111885,
+     "Jr_surgery": 0.3531464998235552,
+     "realized_gap": 0.47782659129529476,
+     "switch_gap_bound": 0.47782659129529453,
+     "closed_form": 0.6200167843609052
+    },
+    {
+     "k": 1,
+     "Jr_oracle": 0.38591983253321727,
+     "Jr_surgery": 0.37151760109729304,
+     "realized_gap": 0.014402231435924229,
+     "switch_gap_bound": 0.014402231435924263,
+     "closed_form": 0.050465259347843974
+    }
+   ],
+   "sizes": {
+    "2000": {
+     "conf": 1.0,
+     "opt": 1.0,
+     "feas_opt": 1.0,
+     "feas_sub": 1.0,
+     "margin": 0.0,
+     "bound": 0.0,
+     "n": 50
+    },
+    "8000": {
+     "conf": 1.0,
+     "opt": 1.0,
+     "feas_opt": 1.0,
+     "feas_sub": 1.0,
+     "margin": 0.0,
+     "bound": 0.0,
+     "n": 50
+    },
+    "32000": {
+     "conf": 1.0,
+     "opt": 1.0,
+     "feas_opt": 1.0,
+     "feas_sub": 1.0,
+     "margin": 0.0,
+     "bound": 0.0,
+     "n": 50
+    }
+   }
+  },
+  {
+   "instance": "NodeDiskIOSaturation",
+   "geometry": "L3-caps8-1",
+   "nS": 55,
+   "Jr_oracle_fullset": 0.38591983253321727,
+   "switch_gap": [
+    {
+     "k": 0,
+     "Jr_oracle": 0.83097309111885,
+     "Jr_surgery": 0.3531464998235552,
+     "realized_gap": 0.47782659129529476,
+     "switch_gap_bound": 0.47782659129529453,
+     "closed_form": 0.6200167843609052
+    },
+    {
+     "k": 1,
+     "Jr_oracle": 0.38591983253321727,
+     "Jr_surgery": 0.37151760109729304,
+     "realized_gap": 0.014402231435924229,
+     "switch_gap_bound": 0.014402231435924263,
+     "closed_form": 0.050465259347843974
+    }
+   ],
+   "sizes": {
+    "2000": {
+     "conf": 1.0,
+     "opt": 1.0,
+     "feas_opt": 1.0,
+     "feas_sub": 1.0,
+     "margin": 0.0,
+     "bound": 0.0,
+     "n": 50
+    },
+    "8000": {
+     "conf": 1.0,
+     "opt": 1.0,
+     "feas_opt": 1.0,
+     "feas_sub": 1.0,
+     "margin": 0.0,
+     "bound": 0.0,
+     "n": 50
+    },
+    "32000": {
+     "conf": 1.0,
+     "opt": 1.0,
+     "feas_opt": 1.0,
+     "feas_sub": 1.0,
+     "margin": 0.0,
+     "bound": 0.0,
+     "n": 50
+    }
+   }
+  },
+  {
+   "instance": "PrometheusErrorSendingAlertsToAnyAlertmanager",
+   "geometry": "L3-caps8-1",
+   "nS": 55,
+   "Jr_oracle_fullset": 0.38591983253321727,
+   "switch_gap": [
+    {
+     "k": 0,
+     "Jr_oracle": 0.83097309111885,
+     "Jr_surgery": 0.3531464998235552,
+     "realized_gap": 0.47782659129529476,
+     "switch_gap_bound": 0.47782659129529453,
+     "closed_form": 0.6200167843609052
+    },
+    {
+     "k": 1,
+     "Jr_oracle": 0.38591983253321727,
+     "Jr_surgery": 0.37151760109729304,
+     "realized_gap": 0.014402231435924229,
+     "switch_gap_bound": 0.014402231435924263,
+     "closed_form": 0.050465259347843974
+    }
+   ],
+   "sizes": {
+    "2000": {
+     "conf": 1.0,
+     "opt": 1.0,
+     "feas_opt": 1.0,
+     "feas_sub": 1.0,
+     "margin": 0.0,
+     "bound": 0.0,
+     "n": 50
+    },
+    "8000": {
+     "conf": 1.0,
+     "opt": 1.0,
+     "feas_opt": 1.0,
+     "feas_sub": 1.0,
+     "margin": 0.0,
+     "bound": 0.0,
+     "n": 50
+    },
+    "32000": {
+     "conf": 1.0,
+     "opt": 1.0,
+     "feas_opt": 1.0,
+     "feas_sub": 1.0,
+     "margin": 0.0,
+     "bound": 0.0,
+     "n": 50
+    }
+   }
+  },
+  {
+   "instance": "PrometheusErrorSendingAlertsToSomeAlertmanagers",
+   "geometry": "L3-caps8-1",
+   "nS": 55,
+   "Jr_oracle_fullset": 0.38591983253321727,
+   "switch_gap": [
+    {
+     "k": 0,
+     "Jr_oracle": 0.83097309111885,
+     "Jr_surgery": 0.3531464998235552,
+     "realized_gap": 0.47782659129529476,
+     "switch_gap_bound": 0.47782659129529453,
+     "closed_form": 0.6200167843609052
+    },
+    {
+     "k": 1,
+     "Jr_oracle": 0.38591983253321727,
+     "Jr_surgery": 0.37151760109729304,
+     "realized_gap": 0.014402231435924229,
+     "switch_gap_bound": 0.014402231435924263,
+     "closed_form": 0.050465259347843974
+    }
+   ],
+   "sizes": {
+    "2000": {
+     "conf": 1.0,
+     "opt": 1.0,
+     "feas_opt": 1.0,
+     "feas_sub": 1.0,
+     "margin": 0.0,
+     "bound": 0.0,
+     "n": 50
+    },
+    "8000": {
+     "conf": 1.0,
+     "opt": 1.0,
+     "feas_opt": 1.0,
+     "feas_sub": 1.0,
+     "margin": 0.0,
+     "bound": 0.0,
+     "n": 50
+    },
+    "32000": {
+     "conf": 1.0,
+     "opt": 1.0,
+     "feas_opt": 1.0,
+     "feas_sub": 1.0,
+     "margin": 0.0,
+     "bound": 0.0,
+     "n": 50
+    }
+   }
+  },
+  {
+   "instance": "PrometheusHighQueryLoad",
+   "geometry": "L3-caps8-1",
+   "nS": 55,
+   "Jr_oracle_fullset": 0.38591983253321727,
+   "switch_gap": [
+    {
+     "k": 0,
+     "Jr_oracle": 0.83097309111885,
+     "Jr_surgery": 0.3531464998235552,
+     "realized_gap": 0.47782659129529476,
+     "switch_gap_bound": 0.47782659129529453,
+     "closed_form": 0.6200167843609052
+    },
+    {
+     "k": 1,
+     "Jr_oracle": 0.38591983253321727,
+     "Jr_surgery": 0.37151760109729304,
+     "realized_gap": 0.014402231435924229,
+     "switch_gap_bound": 0.014402231435924263,
+     "closed_form": 0.050465259347843974
+    }
+   ],
+   "sizes": {
+    "2000": {
+     "conf": 1.0,
+     "opt": 1.0,
+     "feas_opt": 1.0,
+     "feas_sub": 1.0,
+     "margin": 0.0,
+     "bound": 0.0,
+     "n": 50
+    },
+    "8000": {
+     "conf": 1.0,
+     "opt": 1.0,
+     "feas_opt": 1.0,
+     "feas_sub": 1.0,
+     "margin": 0.0,
+     "bound": 0.0,
+     "n": 50
+    },
+    "32000": {
+     "conf": 1.0,
+     "opt": 1.0,
+     "feas_opt": 1.0,
+     "feas_sub": 1.0,
+     "margin": 0.0,
+     "bound": 0.0,
+     "n": 50
+    }
+   }
+  },
+  {
+   "instance": "PrometheusOperatorListErrors",
+   "geometry": "L3-caps8-1",
+   "nS": 55,
+   "Jr_oracle_fullset": 0.38591983253321727,
+   "switch_gap": [
+    {
+     "k": 0,
+     "Jr_oracle": 0.83097309111885,
+     "Jr_surgery": 0.3531464998235552,
+     "realized_gap": 0.47782659129529476,
+     "switch_gap_bound": 0.47782659129529453,
+     "closed_form": 0.6200167843609052
+    },
+    {
+     "k": 1,
+     "Jr_oracle": 0.38591983253321727,
+     "Jr_surgery": 0.37151760109729304,
+     "realized_gap": 0.014402231435924229,
+     "switch_gap_bound": 0.014402231435924263,
+     "closed_form": 0.050465259347843974
+    }
+   ],
+   "sizes": {
+    "2000": {
+     "conf": 1.0,
+     "opt": 1.0,
+     "feas_opt": 1.0,
+     "feas_sub": 1.0,
+     "margin": 0.0,
+     "bound": 0.0,
+     "n": 50
+    },
+    "8000": {
+     "conf": 1.0,
+     "opt": 1.0,
+     "feas_opt": 1.0,
+     "feas_sub": 1.0,
+     "margin": 0.0,
+     "bound": 0.0,
+     "n": 50
+    },
+    "32000": {
+     "conf": 1.0,
+     "opt": 1.0,
+     "feas_opt": 1.0,
+     "feas_sub": 1.0,
+     "margin": 0.0,
+     "bound": 0.0,
+     "n": 50
+    }
+   }
+  },
+  {
+   "instance": "PrometheusOperatorNodeLookupErrors",
+   "geometry": "L3-caps8-1",
+   "nS": 55,
+   "Jr_oracle_fullset": 0.38591983253321727,
+   "switch_gap": [
+    {
+     "k": 0,
+     "Jr_oracle": 0.83097309111885,
+     "Jr_surgery": 0.3531464998235552,
+     "realized_gap": 0.47782659129529476,
+     "switch_gap_bound": 0.47782659129529453,
+     "closed_form": 0.6200167843609052
+    },
+    {
+     "k": 1,
+     "Jr_oracle": 0.38591983253321727,
+     "Jr_surgery": 0.37151760109729304,
+     "realized_gap": 0.014402231435924229,
+     "switch_gap_bound": 0.014402231435924263,
+     "closed_form": 0.050465259347843974
+    }
+   ],
+   "sizes": {
+    "2000": {
+     "conf": 1.0,
+     "opt": 1.0,
+     "feas_opt": 1.0,
+     "feas_sub": 1.0,
+     "margin": 0.0,
+     "bound": 0.0,
+     "n": 50
+    },
+    "8000": {
+     "conf": 1.0,
+     "opt": 1.0,
+     "feas_opt": 1.0,
+     "feas_sub": 1.0,
+     "margin": 0.0,
+     "bound": 0.0,
+     "n": 50
+    },
+    "32000": {
+     "conf": 1.0,
+     "opt": 1.0,
+     "feas_opt": 1.0,
+     "feas_sub": 1.0,
+     "margin": 0.0,
+     "bound": 0.0,
+     "n": 50
+    }
+   }
+  },
+  {
+   "instance": "PrometheusOperatorReconcileErrors",
+   "geometry": "L3-caps8-1",
+   "nS": 55,
+   "Jr_oracle_fullset": 0.38591983253321727,
+   "switch_gap": [
+    {
+     "k": 0,
+     "Jr_oracle": 0.83097309111885,
+     "Jr_surgery": 0.3531464998235552,
+     "realized_gap": 0.47782659129529476,
+     "switch_gap_bound": 0.47782659129529453,
+     "closed_form": 0.6200167843609052
+    },
+    {
+     "k": 1,
+     "Jr_oracle": 0.38591983253321727,
+     "Jr_surgery": 0.37151760109729304,
+     "realized_gap": 0.014402231435924229,
+     "switch_gap_bound": 0.014402231435924263,
+     "closed_form": 0.050465259347843974
+    }
+   ],
+   "sizes": {
+    "2000": {
+     "conf": 1.0,
+     "opt": 1.0,
+     "feas_opt": 1.0,
+     "feas_sub": 1.0,
+     "margin": 0.0,
+     "bound": 0.0,
+     "n": 50
+    },
+    "8000": {
+     "conf": 1.0,
+     "opt": 1.0,
+     "feas_opt": 1.0,
+     "feas_sub": 1.0,
+     "margin": 0.0,
+     "bound": 0.0,
+     "n": 50
+    },
+    "32000": {
+     "conf": 1.0,
+     "opt": 1.0,
+     "feas_opt": 1.0,
+     "feas_sub": 1.0,
+     "margin": 0.0,
+     "bound": 0.0,
+     "n": 50
+    }
+   }
+  }
+ ]
+}

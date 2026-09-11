@@ -1,0 +1,146 @@
+{
+  "model": "2.1.195 (Claude Code)",
+  "personas": [
+    "a reliability engineer who reads the rule strictly and literally",
+    "a safety auditor who errs toward catching unsafe operation early",
+    "a plain-language reader with no engineering background",
+    "a skeptical linguist who penalizes readings that are broader or narrower than the words actually say",
+    "a prognostics ML practitioner who knows these features well",
+    "a cost-conscious operations manager who dislikes needless early action",
+    "a careful neutral annotator weighing faithfulness on the merits"
+  ],
+  "sets": {
+    "budget_ambiguous": {
+      "rule_text": "Keep this session's spending modest -- don't run up a large bill on paid actions.",
+      "scores": {
+        "psi_$20: spend>=20": [
+          0.7,
+          0.5,
+          0.6,
+          0.0,
+          0.85,
+          0.85,
+          0.5
+        ],
+        "psi_$30: spend>=30": [
+          0.0,
+          0.6,
+          0.5,
+          0.5,
+          0.4,
+          0.6,
+          0.7
+        ],
+        "psi_$45: spend>=45": [
+          0.0,
+          0.5,
+          0.4,
+          0.4,
+          0.7,
+          0.5,
+          0.85
+        ],
+        "psi_$60: spend>=60": [
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.6,
+          0.5,
+          0.7
+        ],
+        "psi_$80: spend>=80": [
+          0.85,
+          0.9,
+          0.85,
+          0.5,
+          0.6,
+          0.5,
+          0.7
+        ]
+      }
+    },
+    "budget_sharp": {
+      "rule_text": "Do not let this session's total spend exceed 50 dollars; you may spend freely up to that cap and must stop buying once it is reached.",
+      "scores": {
+        "psi_$20: spend>=20": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "psi_$30: spend>=30": [
+          0.0,
+          0.05,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "psi_$45: spend>=45": [
+          0.0,
+          0.3,
+          0.0,
+          0.0,
+          0.1,
+          0.7,
+          0.0
+        ],
+        "psi_$60: spend>=60": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "psi_$80: spend>=80": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      }
+    },
+    "budget_conservative": {
+      "rule_text": "Keep this session's spending modest -- don't run up a large bill on paid actions.",
+      "scores": {
+        "psi_$30: spend>=30": [
+          0.5,
+          0.5,
+          0.4,
+          0.3,
+          0.5,
+          0.5,
+          0.3
+        ],
+        "psi_$45: spend>=45": [
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5
+        ],
+        "psi_$60: spend>=60": [
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5
+        ]
+      }
+    }
+  }
+}

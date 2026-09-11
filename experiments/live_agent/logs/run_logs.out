@@ -1,0 +1,11 @@
+== Phase 2 LOGS: 300 channel episodes, model=gpt-4o-mini, stop=$10.00, workers=8 ==
+  50/300 episodes | cum spend $0.013747 | calls 475 | errors 0 | failed 0
+  100/300 episodes | cum spend $0.026608 | calls 918 | errors 0 | failed 0
+  150/300 episodes | cum spend $0.040895 | calls 1412 | errors 0 | failed 0
+  200/300 episodes | cum spend $0.054190 | calls 1870 | errors 0 | failed 0
+  250/300 episodes | cum spend $0.069308 | calls 2391 | errors 0 | failed 0
+  300/300 episodes | cum spend $0.082946 | calls 2860 | errors 0 | failed 0
+
+  TOTAL LOG SPEND: $0.082946  (2860 billed posts)
+  mean episode value: 10.488 | n_paid/episode hist: [0, 0, 0, 6, 5, 20, 33, 32, 24, 12, 8, 0, 160]
+  wrote logs/offline_episodes.jsonl and logs/log_summary.json

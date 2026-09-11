@@ -1,0 +1,20 @@
+{
+  "id": "task_001",
+  "question": "How old is the Solar System and where did it form from?",
+  "source_docs": [
+    "solar_system.txt"
+  ],
+  "rubric": [
+    [
+      "4.6 billion",
+      "4.6"
+    ],
+    [
+      "cloud",
+      "gas",
+      "dust",
+      "nebula"
+    ]
+  ],
+  "reference": "About 4.6 billion years ago from a collapsing cloud of gas and dust."
+}

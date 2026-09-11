@@ -1,0 +1,17 @@
+{
+  "id": "task_017",
+  "question": "When did the Western Roman Empire fall and what continued after it?",
+  "source_docs": [
+    "roman_empire.txt"
+  ],
+  "rubric": [
+    [
+      "476"
+    ],
+    [
+      "byzantine",
+      "eastern"
+    ]
+  ],
+  "reference": "It fell in 476 AD; the Eastern half continued as the Byzantine Empire."
+}

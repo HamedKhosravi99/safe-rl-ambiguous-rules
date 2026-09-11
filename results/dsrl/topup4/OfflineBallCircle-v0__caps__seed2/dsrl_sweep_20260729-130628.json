@@ -1,0 +1,87 @@
+{
+  "created": "20260729-130628",
+  "device": "cuda",
+  "tasks": [
+    "OfflineBallCircle-v0"
+  ],
+  "learners": [
+    "caps"
+  ],
+  "seeds": [
+    2
+  ],
+  "U": [
+    10,
+    20,
+    40
+  ],
+  "c_single": 40,
+  "c_saorl": 10,
+  "update_steps": 100000,
+  "runs": [
+    {
+      "raw_return": 709.9750949612201,
+      "raw_cost": 33.65,
+      "ep_length": 200.0,
+      "episode_len": 200,
+      "update_steps": 100000,
+      "eval_episodes": 20,
+      "max_epi_r": 881.46337890625,
+      "min_epi_r": 0.38312244415283203,
+      "train_sec": 3182.4,
+      "target_cost": 40,
+      "num_heads": 5,
+      "normalized_reward": 0.8053658759377638,
+      "normalized_cost_per_reading": {
+        "10": 3.3649999999999998,
+        "20": 1.6824999999999999,
+        "40": 0.8412499999999999
+      },
+      "worst_retained_normalized_cost": 3.3649999999999998,
+      "satisfies_all_retained": false,
+      "task": "OfflineBallCircle-v0",
+      "learner": "caps",
+      "learner_long": "CAPS",
+      "reading": "single",
+      "seed": 2,
+      "U": [
+        10,
+        20,
+        40
+      ],
+      "status": "ok"
+    },
+    {
+      "raw_return": 528.7532174679495,
+      "raw_cost": 3.3,
+      "ep_length": 200.0,
+      "episode_len": 200,
+      "update_steps": 100000,
+      "eval_episodes": 20,
+      "max_epi_r": 881.46337890625,
+      "min_epi_r": 0.38312244415283203,
+      "train_sec": 3182.4,
+      "target_cost": 10,
+      "num_heads": 5,
+      "normalized_reward": 0.5996844114353683,
+      "normalized_cost_per_reading": {
+        "10": 0.32999999999999996,
+        "20": 0.16499999999999998,
+        "40": 0.08249999999999999
+      },
+      "worst_retained_normalized_cost": 0.32999999999999996,
+      "satisfies_all_retained": true,
+      "task": "OfflineBallCircle-v0",
+      "learner": "caps",
+      "learner_long": "CAPS",
+      "reading": "saorl",
+      "seed": 2,
+      "U": [
+        10,
+        20,
+        40
+      ],
+      "status": "ok"
+    }
+  ]
+}

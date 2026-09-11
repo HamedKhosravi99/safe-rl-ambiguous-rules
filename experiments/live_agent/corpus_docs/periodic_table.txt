@@ -1,0 +1,8 @@
+The periodic table organizes the chemical elements by increasing atomic number.
+Atomic number is the number of protons in an atom's nucleus.
+It was arranged by Dmitri Mendeleev in 1869, who left gaps for undiscovered elements.
+Elements in the same column, called a group, have similar chemical properties.
+Rows are called periods.
+Metals are on the left and center, nonmetals on the right, and metalloids between them.
+Hydrogen is the lightest element, and it is the most abundant in the universe.
+The noble gases, such as helium and neon, are in the rightmost group and rarely react.

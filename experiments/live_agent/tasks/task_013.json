@@ -1,0 +1,22 @@
+{
+  "id": "task_013",
+  "question": "List the forms precipitation can take.",
+  "source_docs": [
+    "water_cycle.txt"
+  ],
+  "rubric": [
+    [
+      "rain"
+    ],
+    [
+      "snow"
+    ],
+    [
+      "sleet"
+    ],
+    [
+      "hail"
+    ]
+  ],
+  "reference": "Rain, snow, sleet, or hail."
+}

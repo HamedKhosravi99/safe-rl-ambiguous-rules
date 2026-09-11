@@ -1,0 +1,20 @@
+{
+  "id": "task_036",
+  "question": "What is overfitting?",
+  "source_docs": [
+    "machine_learning.txt"
+  ],
+  "rubric": [
+    [
+      "overfit",
+      "memoriz",
+      "memoris"
+    ],
+    [
+      "generalize",
+      "generalise",
+      "new data"
+    ]
+  ],
+  "reference": "When a model memorizes training data and fails to generalize."
+}

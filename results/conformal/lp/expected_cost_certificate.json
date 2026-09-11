@@ -1,0 +1,170 @@
+{
+ "config": {
+  "manifest": "paper/Plans/EVIDENCE_FREEZE_MANIFEST.md@91074b3",
+  "delta_ev": 0.05,
+  "level": 0.975,
+  "budget": 0.05,
+  "route": "E[W] <= B * CP_{1-delta_ev/2}(k, n); B by max-cost DP / fixed_psi_Z"
+ },
+ "domains": {
+  "synthetic": {
+   "B": 3.1999999999999993,
+   "per_reading": {
+    "mid: RUL<22": {
+     "raw_max": 72.0,
+     "Z": 22.500000000000004,
+     "B_k": 3.1999999999999993
+    },
+    "consv: anom>0.6": {
+     "raw_max": 98.0,
+     "Z": 40.49999999999997,
+     "B_k": 2.419753086419755
+    },
+    "vconsv: RUL<40": {
+     "raw_max": 90.0,
+     "Z": 40.49999999999994,
+     "B_k": 2.2222222222222254
+    }
+   },
+   "n_episodes": 300,
+   "level": 0.975,
+   "budget": 0.05,
+   "arms": {
+    "corset": {
+     "n_seeds": 50,
+     "median_expected_cost_bound": 0.1081116680381371,
+     "best": 0.039107119021739356,
+     "worst": 1.2033284519568284,
+     "n_certified_at_budget": 15,
+     "median_certifies": false
+    },
+    "single": {
+     "n_seeds": 50,
+     "median_expected_cost_bound": 1.5989392656418224,
+     "best": 0.039107119021739356,
+     "worst": 3.1999999999999993,
+     "n_certified_at_budget": 4,
+     "median_certifies": false
+    }
+   }
+  },
+  "real": {
+   "B": 53.333333333333336,
+   "per_reading": {
+    "mid: RUL<22": {
+     "raw_max": 8.0,
+     "Z": 0.15,
+     "B_k": 53.333333333333336
+    },
+    "consv: anom>0.6": {
+     "raw_max": 90.0,
+     "Z": 3.920000000000003,
+     "B_k": 22.95918367346937
+    },
+    "vconsv: RUL<40": {
+     "raw_max": 26.0,
+     "Z": 0.6000000000000002,
+     "B_k": 43.33333333333332
+    }
+   },
+   "n_episodes": 300,
+   "level": 0.975,
+   "budget": 0.05,
+   "arms": {
+    "corset": {
+     "n_seeds": 50,
+     "median_expected_cost_bound": 4.542227461840761,
+     "best": 1.801861133968952,
+     "worst": 7.246661857500322,
+     "n_certified_at_budget": 0,
+     "median_certifies": false
+    },
+    "single": {
+     "n_seeds": 50,
+     "median_expected_cost_bound": 34.80778463974461,
+     "best": 33.080110302755685,
+     "worst": 37.88153932313621,
+     "n_certified_at_budget": 0,
+     "median_certifies": false
+    }
+   }
+  },
+  "gridworld": {
+   "B": 2.0016828633635084,
+   "per_reading": {
+    "psi_W3: Within_3(warn)": {
+     "raw_max": 21.0,
+     "Z": 10.66424913779564,
+     "B_k": 1.9691963052113033
+    },
+    "psi_W5: Within_5(warn)": {
+     "raw_max": 35.0,
+     "Z": 17.485287325279934,
+     "B_k": 2.0016828633635084
+    }
+   },
+   "n_episodes": 300,
+   "level": 0.975,
+   "budget": 0.05,
+   "arms": {
+    "corset": {
+     "n_seeds": 50,
+     "median_expected_cost_bound": 0.02446251561916649,
+     "best": 0.02446251561916649,
+     "worst": 0.02446251561916649,
+     "n_certified_at_budget": 50,
+     "median_certifies": true
+    },
+    "single": {
+     "n_seeds": 50,
+     "median_expected_cost_bound": 2.0016828633635084,
+     "best": 0.02446251561916649,
+     "worst": 2.0016828633635084,
+     "n_certified_at_budget": 3,
+     "median_certifies": false
+    }
+   }
+  },
+  "budget": {
+   "B": 1.0,
+   "per_reading": {
+    "psi_$60: spend>=60": {
+     "raw_max": 24.0,
+     "Z": 24.0,
+     "B_k": 1.0
+    },
+    "psi_$80: spend>=80": {
+     "raw_max": 22.0,
+     "Z": 22.0,
+     "B_k": 1.0
+    }
+   },
+   "n_episodes": 300,
+   "level": 0.975,
+   "budget": 0.05,
+   "arms": {
+    "corset": {
+     "n_seeds": 50,
+     "median_expected_cost_bound": 0.01222097469429355,
+     "best": 0.01222097469429355,
+     "worst": 0.01222097469429355,
+     "n_certified_at_budget": 50,
+     "median_certifies": true
+    },
+    "single": {
+     "n_seeds": 50,
+     "median_expected_cost_bound": 1.0,
+     "best": 1.0,
+     "worst": 1.0,
+     "n_certified_at_budget": 0,
+     "median_certifies": false
+    }
+   }
+  }
+ },
+ "decision_D2": {
+  "median_certifies_in_domains": 2,
+  "rule": "thm:deploy stays in main iff median CORSET seed certifies in >= 2 of 4",
+  "keep_in_main": true
+ }
+}

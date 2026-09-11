@@ -1,0 +1,16 @@
+{
+  "pinned_date": "2026-07-26",
+  "currency": "USD",
+  "unit": "per_1M_tokens",
+  "source": "benchlm.ai/openai/api-pricing (page last-updated 2026-07-26), cross-checked against web search (cloudzero, aipricing.guru) on 2026-07-26",
+  "default_model": "gpt-5-nano",
+  "note": "Prices are pinned for provenance. Cost per call = (prompt_tokens - cached_tokens)*input + cached_tokens*cached_input + completion_tokens*output, all /1e6. completion_tokens ALREADY INCLUDES reasoning_tokens for gpt-5* models, so reasoning is not double-counted. Where OpenAI publishes no cached-input rate we pin cached_input = input (a conservative over-estimate that can only make our accounting >= provider's).",
+  "models": {
+    "gpt-5-nano": {"input": 0.05, "cached_input": 0.05, "output": 0.40, "cached_published": false},
+    "gpt-5-mini": {"input": 0.25, "cached_input": 0.25, "output": 2.00, "cached_published": false},
+    "gpt-5.4-nano": {"input": 0.20, "cached_input": 0.02, "output": 1.25, "cached_published": true},
+    "gpt-5.4-mini": {"input": 0.75, "cached_input": 0.075, "output": 4.50, "cached_published": true},
+    "gpt-4.1-nano": {"input": 0.10, "cached_input": 0.10, "output": 0.40, "cached_published": false},
+    "gpt-4o-mini": {"input": 0.15, "cached_input": 0.15, "output": 0.60, "cached_published": false}
+  }
+}

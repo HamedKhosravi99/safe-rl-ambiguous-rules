@@ -1,0 +1,3340 @@
+{
+ "repos": {
+  "kube-prometheus": {
+   "url": "https://github.com/prometheus-operator/kube-prometheus",
+   "family": "prometheus",
+   "commit": "ecb17ed8b97ce030181627227de397051c1a4403",
+   "n_files": 8,
+   "local_dir": "data/rule_corpora/kube-prometheus"
+  },
+  "kyverno-policies": {
+   "url": "https://github.com/kyverno/policies",
+   "family": "kyverno",
+   "commit": "ef9843f08d25b3555fe69616f8612c9f915af5d4",
+   "n_files": 466,
+   "local_dir": "data/rule_corpora/kyverno-policies"
+  }
+ },
+ "n_files_total": 474,
+ "files": [
+  {
+   "repo": "kube-prometheus",
+   "family": "prometheus",
+   "rel_path": "manifests/alertmanager-prometheusRule.yaml",
+   "abs_path": "data/rule_corpora/kube-prometheus/manifests/alertmanager-prometheusRule.yaml",
+   "last_commit_ts": 1783338549
+  },
+  {
+   "repo": "kube-prometheus",
+   "family": "prometheus",
+   "rel_path": "manifests/grafana-prometheusRule.yaml",
+   "abs_path": "data/rule_corpora/kube-prometheus/manifests/grafana-prometheusRule.yaml",
+   "last_commit_ts": 1785149692
+  },
+  {
+   "repo": "kube-prometheus",
+   "family": "prometheus",
+   "rel_path": "manifests/kubePrometheus-prometheusRule.yaml",
+   "abs_path": "data/rule_corpora/kube-prometheus/manifests/kubePrometheus-prometheusRule.yaml",
+   "last_commit_ts": 1773135218
+  },
+  {
+   "repo": "kube-prometheus",
+   "family": "prometheus",
+   "rel_path": "manifests/kubeStateMetrics-prometheusRule.yaml",
+   "abs_path": "data/rule_corpora/kube-prometheus/manifests/kubeStateMetrics-prometheusRule.yaml",
+   "last_commit_ts": 1781530335
+  },
+  {
+   "repo": "kube-prometheus",
+   "family": "prometheus",
+   "rel_path": "manifests/kubernetesControlPlane-prometheusRule.yaml",
+   "abs_path": "data/rule_corpora/kube-prometheus/manifests/kubernetesControlPlane-prometheusRule.yaml",
+   "last_commit_ts": 1783958911
+  },
+  {
+   "repo": "kube-prometheus",
+   "family": "prometheus",
+   "rel_path": "manifests/nodeExporter-prometheusRule.yaml",
+   "abs_path": "data/rule_corpora/kube-prometheus/manifests/nodeExporter-prometheusRule.yaml",
+   "last_commit_ts": 1784543175
+  },
+  {
+   "repo": "kube-prometheus",
+   "family": "prometheus",
+   "rel_path": "manifests/prometheus-prometheusRule.yaml",
+   "abs_path": "data/rule_corpora/kube-prometheus/manifests/prometheus-prometheusRule.yaml",
+   "last_commit_ts": 1783958911
+  },
+  {
+   "repo": "kube-prometheus",
+   "family": "prometheus",
+   "rel_path": "manifests/prometheusOperator-prometheusRule.yaml",
+   "abs_path": "data/rule_corpora/kube-prometheus/manifests/prometheusOperator-prometheusRule.yaml",
+   "last_commit_ts": 1785251200
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "argo/application-field-validation/application-field-validation.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/argo/application-field-validation/application-field-validation.yaml",
+   "last_commit_ts": 1725869276
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "argo/application-prevent-default-project/application-prevent-default-project.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/argo/application-prevent-default-project/application-prevent-default-project.yaml",
+   "last_commit_ts": 1725869276
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "argo/application-prevent-updates-project/application-prevent-updates-project.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/argo/application-prevent-updates-project/application-prevent-updates-project.yaml",
+   "last_commit_ts": 1725869276
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "argo/applicationset-name-matches-project/applicationset-name-matches-project.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/argo/applicationset-name-matches-project/applicationset-name-matches-project.yaml",
+   "last_commit_ts": 1725869276
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "argo/appproject-clusterresourceblacklist/appproject-clusterresourceblacklist.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/argo/appproject-clusterresourceblacklist/appproject-clusterresourceblacklist.yaml",
+   "last_commit_ts": 1725869276
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "argo/argo-cluster-generation-from-rancher-capi/argo-cluster-generation-from-rancher-capi.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/argo/argo-cluster-generation-from-rancher-capi/argo-cluster-generation-from-rancher-capi.yaml",
+   "last_commit_ts": 1723036925
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "argo-cel/application-field-validation/application-field-validation.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/argo-cel/application-field-validation/application-field-validation.yaml",
+   "last_commit_ts": 1720537593
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "argo-cel/application-prevent-default-project/application-prevent-default-project.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/argo-cel/application-prevent-default-project/application-prevent-default-project.yaml",
+   "last_commit_ts": 1723206870
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "argo-cel/application-prevent-updates-project/application-prevent-updates-project.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/argo-cel/application-prevent-updates-project/application-prevent-updates-project.yaml",
+   "last_commit_ts": 1720537593
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "argo-cel/applicationset-name-matches-project/applicationset-name-matches-project.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/argo-cel/applicationset-name-matches-project/applicationset-name-matches-project.yaml",
+   "last_commit_ts": 1720537593
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "argo-cel/appproject-clusterresourceblacklist/appproject-clusterresourceblacklist.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/argo-cel/appproject-clusterresourceblacklist/appproject-clusterresourceblacklist.yaml",
+   "last_commit_ts": 1720537593
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "aws/require-aws-node-irsa/require-aws-node-irsa.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/aws/require-aws-node-irsa/require-aws-node-irsa.yaml",
+   "last_commit_ts": 1725869276
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "aws/require-encryption-aws-loadbalancers/require-encryption-aws-loadbalancers.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/aws/require-encryption-aws-loadbalancers/require-encryption-aws-loadbalancers.yaml",
+   "last_commit_ts": 1725869276
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "aws-cel/require-encryption-aws-loadbalancers/require-encryption-aws-loadbalancers.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/aws-cel/require-encryption-aws-loadbalancers/require-encryption-aws-loadbalancers.yaml",
+   "last_commit_ts": 1723206870
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "best-practices/add-network-policy/add-network-policy.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/best-practices/add-network-policy/add-network-policy.yaml",
+   "last_commit_ts": 1680649402
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "best-practices/add-networkpolicy-dns/add-networkpolicy-dns.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/best-practices/add-networkpolicy-dns/add-networkpolicy-dns.yaml",
+   "last_commit_ts": 1761062258
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "best-practices/add-ns-quota/add-ns-quota.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/best-practices/add-ns-quota/add-ns-quota.yaml",
+   "last_commit_ts": 1680649402
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "best-practices/add-rolebinding/add-rolebinding.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/best-practices/add-rolebinding/add-rolebinding.yaml",
+   "last_commit_ts": 1692627443
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "best-practices/add-safe-to-evict/add-safe-to-evict.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/best-practices/add-safe-to-evict/add-safe-to-evict.yaml",
+   "last_commit_ts": 1681302285
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "best-practices/check-deprecated-apis/check-deprecated-apis.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/best-practices/check-deprecated-apis/check-deprecated-apis.yaml",
+   "last_commit_ts": 1761155074
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "best-practices/disallow-cri-sock-mount/disallow-cri-sock-mount.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/best-practices/disallow-cri-sock-mount/disallow-cri-sock-mount.yaml",
+   "last_commit_ts": 1725869276
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "best-practices/disallow-default-namespace/disallow-default-namespace.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/best-practices/disallow-default-namespace/disallow-default-namespace.yaml",
+   "last_commit_ts": 1725869276
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "best-practices/disallow-empty-ingress-host/disallow-empty-ingress-host.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/best-practices/disallow-empty-ingress-host/disallow-empty-ingress-host.yaml",
+   "last_commit_ts": 1717417872
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "best-practices/disallow-helm-tiller/disallow-helm-tiller.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/best-practices/disallow-helm-tiller/disallow-helm-tiller.yaml",
+   "last_commit_ts": 1725869276
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "best-practices/disallow-latest-tag/disallow-latest-tag.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/best-practices/disallow-latest-tag/disallow-latest-tag.yaml",
+   "last_commit_ts": 1725869276
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "best-practices/require-drop-all/require-drop-all.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/best-practices/require-drop-all/require-drop-all.yaml",
+   "last_commit_ts": 1725869276
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "best-practices/require-drop-cap-net-raw/require-drop-cap-net-raw.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/best-practices/require-drop-cap-net-raw/require-drop-cap-net-raw.yaml",
+   "last_commit_ts": 1727441732
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "best-practices/require-labels/require-labels.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/best-practices/require-labels/require-labels.yaml",
+   "last_commit_ts": 1725869276
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "best-practices/require-pod-requests-limits/require-pod-requests-limits.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/best-practices/require-pod-requests-limits/require-pod-requests-limits.yaml",
+   "last_commit_ts": 1722604744
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "best-practices/require-probes/require-probes.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/best-practices/require-probes/require-probes.yaml",
+   "last_commit_ts": 1725869276
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "best-practices/require-ro-rootfs/require-ro-rootfs.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/best-practices/require-ro-rootfs/require-ro-rootfs.yaml",
+   "last_commit_ts": 1725869276
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "best-practices/restrict-image-registries/restrict-image-registries.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/best-practices/restrict-image-registries/restrict-image-registries.yaml",
+   "last_commit_ts": 1725869276
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "best-practices/restrict-node-port/restrict-node-port.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/best-practices/restrict-node-port/restrict-node-port.yaml",
+   "last_commit_ts": 1725869276
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "best-practices/restrict-service-external-ips/restrict-service-external-ips.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/best-practices/restrict-service-external-ips/restrict-service-external-ips.yaml",
+   "last_commit_ts": 1725869276
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "best-practices-cel/check-deprecated-apis/check-deprecated-apis.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/best-practices-cel/check-deprecated-apis/check-deprecated-apis.yaml",
+   "last_commit_ts": 1761155074
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "best-practices-cel/disallow-cri-sock-mount/disallow-cri-sock-mount.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/best-practices-cel/disallow-cri-sock-mount/disallow-cri-sock-mount.yaml",
+   "last_commit_ts": 1720532973
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "best-practices-cel/disallow-default-namespace/disallow-default-namespace.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/best-practices-cel/disallow-default-namespace/disallow-default-namespace.yaml",
+   "last_commit_ts": 1720532973
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "best-practices-cel/disallow-empty-ingress-host/disallow-empty-ingress-host.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/best-practices-cel/disallow-empty-ingress-host/disallow-empty-ingress-host.yaml",
+   "last_commit_ts": 1723206870
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "best-practices-cel/disallow-helm-tiller/disallow-helm-tiller.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/best-practices-cel/disallow-helm-tiller/disallow-helm-tiller.yaml",
+   "last_commit_ts": 1720532973
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "best-practices-cel/disallow-latest-tag/disallow-latest-tag.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/best-practices-cel/disallow-latest-tag/disallow-latest-tag.yaml",
+   "last_commit_ts": 1720532973
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "best-practices-cel/require-drop-all/require-drop-all.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/best-practices-cel/require-drop-all/require-drop-all.yaml",
+   "last_commit_ts": 1723206870
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "best-practices-cel/require-drop-cap-net-raw/require-drop-cap-net-raw.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/best-practices-cel/require-drop-cap-net-raw/require-drop-cap-net-raw.yaml",
+   "last_commit_ts": 1729665416
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "best-practices-cel/require-labels/require-labels.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/best-practices-cel/require-labels/require-labels.yaml",
+   "last_commit_ts": 1723206870
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "best-practices-cel/require-pod-requests-limits/require-pod-requests-limits.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/best-practices-cel/require-pod-requests-limits/require-pod-requests-limits.yaml",
+   "last_commit_ts": 1720532973
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "best-practices-cel/require-probes/require-probes.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/best-practices-cel/require-probes/require-probes.yaml",
+   "last_commit_ts": 1720532973
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "best-practices-cel/require-ro-rootfs/require-ro-rootfs.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/best-practices-cel/require-ro-rootfs/require-ro-rootfs.yaml",
+   "last_commit_ts": 1723206870
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "best-practices-cel/restrict-image-registries/restrict-image-registries.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/best-practices-cel/restrict-image-registries/restrict-image-registries.yaml",
+   "last_commit_ts": 1723206870
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "best-practices-cel/restrict-node-port/restrict-node-port.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/best-practices-cel/restrict-node-port/restrict-node-port.yaml",
+   "last_commit_ts": 1720532973
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "best-practices-cel/restrict-service-external-ips/restrict-service-external-ips.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/best-practices-cel/restrict-service-external-ips/restrict-service-external-ips.yaml",
+   "last_commit_ts": 1720532973
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "castai/add-castai-removal-disabled/add-castai-removal-disabled.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/castai/add-castai-removal-disabled/add-castai-removal-disabled.yaml",
+   "last_commit_ts": 1687968566
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "cert-manager/limit-dnsnames/limit-dnsnames.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/cert-manager/limit-dnsnames/limit-dnsnames.yaml",
+   "last_commit_ts": 1725869276
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "cert-manager/limit-duration/limit-duration.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/cert-manager/limit-duration/limit-duration.yaml",
+   "last_commit_ts": 1725869276
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "cert-manager/restrict-issuer/restrict-issuer.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/cert-manager/restrict-issuer/restrict-issuer.yaml",
+   "last_commit_ts": 1725869276
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "consul/enforce-min-tls-version/enforce-min-tls-version.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/consul/enforce-min-tls-version/enforce-min-tls-version.yaml",
+   "last_commit_ts": 1725869276
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "consul-cel/enforce-min-tls-version/enforce-min-tls-version.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/consul-cel/enforce-min-tls-version/enforce-min-tls-version.yaml",
+   "last_commit_ts": 1723206870
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "cost-optimization/schedule-based-quotas/schedule-based-quotas.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/cost-optimization/schedule-based-quotas/schedule-based-quotas.yaml",
+   "last_commit_ts": 1761210851
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "external-secret-operator/add-external-secret-prefix/add-external-secret-prefix.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/external-secret-operator/add-external-secret-prefix/add-external-secret-prefix.yaml",
+   "last_commit_ts": 1685632684
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "flux/generate-flux-multi-tenant-resources/generate-flux-multi-tenant-resources.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/flux/generate-flux-multi-tenant-resources/generate-flux-multi-tenant-resources.yaml",
+   "last_commit_ts": 1652295819
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "flux/verify-flux-images/verify-flux-images.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/flux/verify-flux-images/verify-flux-images.yaml",
+   "last_commit_ts": 1709391805
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "flux/verify-flux-sources/verify-flux-sources.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/flux/verify-flux-sources/verify-flux-sources.yaml",
+   "last_commit_ts": 1725869276
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "flux/verify-git-repositories/verify-git-repositories.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/flux/verify-git-repositories/verify-git-repositories.yaml",
+   "last_commit_ts": 1709391805
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "flux-cel/verify-flux-sources/verify-flux-sources.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/flux-cel/verify-flux-sources/verify-flux-sources.yaml",
+   "last_commit_ts": 1723206870
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "flux-cel/verify-git-repositories/verify-git-repositories.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/flux-cel/verify-git-repositories/verify-git-repositories.yaml",
+   "last_commit_ts": 1720537593
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "istio/add-ambient-mode-namespace/add-ambient-mode-namespace.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/istio/add-ambient-mode-namespace/add-ambient-mode-namespace.yaml",
+   "last_commit_ts": 1761093963
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "istio/add-sidecar-injection-namespace/add-sidecar-injection-namespace.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/istio/add-sidecar-injection-namespace/add-sidecar-injection-namespace.yaml",
+   "last_commit_ts": 1663621084
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "istio/create-authorizationpolicy/create-authorizationpolicy.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/istio/create-authorizationpolicy/create-authorizationpolicy.yaml",
+   "last_commit_ts": 1687367209
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "istio/enforce-ambient-mode-namespace/enforce-ambient-mode-namespace.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/istio/enforce-ambient-mode-namespace/enforce-ambient-mode-namespace.yaml",
+   "last_commit_ts": 1725869276
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "istio/enforce-sidecar-injection-namespace/enforce-sidecar-injection-namespace.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/istio/enforce-sidecar-injection-namespace/enforce-sidecar-injection-namespace.yaml",
+   "last_commit_ts": 1725869276
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "istio/enforce-strict-mtls/enforce-strict-mtls.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/istio/enforce-strict-mtls/enforce-strict-mtls.yaml",
+   "last_commit_ts": 1725869276
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "istio/enforce-tls-hosts-host-subnets/enforce-tls-hosts-host-subnets.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/istio/enforce-tls-hosts-host-subnets/enforce-tls-hosts-host-subnets.yaml",
+   "last_commit_ts": 1725869276
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "istio/prevent-disabling-injection-pods/prevent-disabling-injection-pods.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/istio/prevent-disabling-injection-pods/prevent-disabling-injection-pods.yaml",
+   "last_commit_ts": 1725869276
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "istio/require-authorizationpolicy/require-authorizationpolicy.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/istio/require-authorizationpolicy/require-authorizationpolicy.yaml",
+   "last_commit_ts": 1725869276
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "istio/restrict-virtual-service-wildcard/restrict-virtual-service-wildcard.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/istio/restrict-virtual-service-wildcard/restrict-virtual-service-wildcard.yaml",
+   "last_commit_ts": 1725869276
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "istio/service-mesh-disallow-capabilities/service-mesh-disallow-capabilities.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/istio/service-mesh-disallow-capabilities/service-mesh-disallow-capabilities.yaml",
+   "last_commit_ts": 1717586633
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "istio/service-mesh-require-run-as-nonroot/service-mesh-require-run-as-nonroot.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/istio/service-mesh-require-run-as-nonroot/service-mesh-require-run-as-nonroot.yaml",
+   "last_commit_ts": 1717586633
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "istio-cel/enforce-sidecar-injection-namespace/enforce-sidecar-injection-namespace.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/istio-cel/enforce-sidecar-injection-namespace/enforce-sidecar-injection-namespace.yaml",
+   "last_commit_ts": 1723206870
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "istio-cel/enforce-strict-mtls/enforce-strict-mtls.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/istio-cel/enforce-strict-mtls/enforce-strict-mtls.yaml",
+   "last_commit_ts": 1720583190
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "istio-cel/prevent-disabling-injection-pods/prevent-disabling-injection-pods.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/istio-cel/prevent-disabling-injection-pods/prevent-disabling-injection-pods.yaml",
+   "last_commit_ts": 1723206870
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "karpenter/add-karpenter-daemonset-priority-class/add-karpenter-daemonset-priority-class.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/karpenter/add-karpenter-daemonset-priority-class/add-karpenter-daemonset-priority-class.yaml",
+   "last_commit_ts": 1686180541
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "karpenter/add-karpenter-donot-evict/add-karpenter-donot-evict.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/karpenter/add-karpenter-donot-evict/add-karpenter-donot-evict.yaml",
+   "last_commit_ts": 1701526530
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "karpenter/add-karpenter-nodeselector/add-karpenter-nodeselector.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/karpenter/add-karpenter-nodeselector/add-karpenter-nodeselector.yaml",
+   "last_commit_ts": 1670097670
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "karpenter/set-karpenter-non-cpu-limits/set-karpenter-non-cpu-limits.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/karpenter/set-karpenter-non-cpu-limits/set-karpenter-non-cpu-limits.yaml",
+   "last_commit_ts": 1686180541
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "kasten/kasten-3-2-1-backup/.kyverno-test/kasten-backup-policy.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/kasten/kasten-3-2-1-backup/.kyverno-test/kasten-backup-policy.yaml",
+   "last_commit_ts": 1715795513
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "kasten/kasten-3-2-1-backup/kasten-3-2-1-backup.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/kasten/kasten-3-2-1-backup/kasten-3-2-1-backup.yaml",
+   "last_commit_ts": 1716991337
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "kasten/kasten-data-protection-by-label/kasten-data-protection-by-label.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/kasten/kasten-data-protection-by-label/kasten-data-protection-by-label.yaml",
+   "last_commit_ts": 1716991337
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "kasten/kasten-generate-example-backup-policy/kasten-generate-example-backup-policy.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/kasten/kasten-generate-example-backup-policy/kasten-generate-example-backup-policy.yaml",
+   "last_commit_ts": 1720633158
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "kasten/kasten-generate-policy-by-preset-label/kasten-generate-policy-by-preset-label.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/kasten/kasten-generate-policy-by-preset-label/kasten-generate-policy-by-preset-label.yaml",
+   "last_commit_ts": 1720968132
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "kasten/kasten-hourly-rpo/.kyverno-test/test-policies.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/kasten/kasten-hourly-rpo/.kyverno-test/test-policies.yaml",
+   "last_commit_ts": 1715200241
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "kasten/kasten-hourly-rpo/kasten-hourly-rpo.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/kasten/kasten-hourly-rpo/kasten-hourly-rpo.yaml",
+   "last_commit_ts": 1715200241
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "kasten/kasten-immutable-location-profile/kasten-immutable-location-profile.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/kasten/kasten-immutable-location-profile/kasten-immutable-location-profile.yaml",
+   "last_commit_ts": 1715795464
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "kasten/kasten-minimum-retention/.kyverno-test/kasten-hourly-policy.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/kasten/kasten-minimum-retention/.kyverno-test/kasten-hourly-policy.yaml",
+   "last_commit_ts": 1720626085
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "kasten/kasten-minimum-retention/.kyverno-test/kasten-skipped-policies.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/kasten/kasten-minimum-retention/.kyverno-test/kasten-skipped-policies.yaml",
+   "last_commit_ts": 1720626085
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "kasten/kasten-minimum-retention/.kyverno-test/patched.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/kasten/kasten-minimum-retention/.kyverno-test/patched.yaml",
+   "last_commit_ts": 1720626085
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "kasten/kasten-minimum-retention/kasten-minimum-retention.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/kasten/kasten-minimum-retention/kasten-minimum-retention.yaml",
+   "last_commit_ts": 1755586777
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "kasten/kasten-validate-ns-by-preset-label/kasten-validate-ns-by-preset-label.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/kasten/kasten-validate-ns-by-preset-label/kasten-validate-ns-by-preset-label.yaml",
+   "last_commit_ts": 1715795581
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "kasten-cel/k10-data-protection-by-label/k10-data-protection-by-label.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/kasten-cel/k10-data-protection-by-label/k10-data-protection-by-label.yaml",
+   "last_commit_ts": 1723206870
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "kasten-cel/k10-hourly-rpo/.kyverno-test/backup-export-policy.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/kasten-cel/k10-hourly-rpo/.kyverno-test/backup-export-policy.yaml",
+   "last_commit_ts": 1720583190
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "kasten-cel/k10-hourly-rpo/k10-hourly-rpo.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/kasten-cel/k10-hourly-rpo/k10-hourly-rpo.yaml",
+   "last_commit_ts": 1720583190
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "kasten-cel/k10-validate-ns-by-preset-label/k10-validate-ns-by-preset-label.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/kasten-cel/k10-validate-ns-by-preset-label/k10-validate-ns-by-preset-label.yaml",
+   "last_commit_ts": 1723206870
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "kubecost/enable-kubecost-continuous-rightsizing/enable-kubecost-continuous-rightsizing.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/kubecost/enable-kubecost-continuous-rightsizing/enable-kubecost-continuous-rightsizing.yaml",
+   "last_commit_ts": 1683469106
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "kubecost/kubecost-proactive-cost-control/kubecost-proactive-cost-control.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/kubecost/kubecost-proactive-cost-control/kubecost-proactive-cost-control.yaml",
+   "last_commit_ts": 1706020817
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "kubecost/require-kubecost-labels/require-kubecost-labels.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/kubecost/require-kubecost-labels/require-kubecost-labels.yaml",
+   "last_commit_ts": 1683470027
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "kubecost-cel/require-kubecost-labels/require-kubecost-labels.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/kubecost-cel/require-kubecost-labels/require-kubecost-labels.yaml",
+   "last_commit_ts": 1723206870
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "kubeops/config-syncer-secret-generation-from-rancher-capi/config-syncer-secret-generation-from-rancher-capi.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/kubeops/config-syncer-secret-generation-from-rancher-capi/config-syncer-secret-generation-from-rancher-capi.yaml",
+   "last_commit_ts": 1723036925
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "kubevirt/add-services/add-services.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/kubevirt/add-services/add-services.yaml",
+   "last_commit_ts": 1686667991
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "kubevirt/enforce-instancetype/enforce-instancetype.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/kubevirt/enforce-instancetype/enforce-instancetype.yaml",
+   "last_commit_ts": 1725869276
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "linkerd/add-linkerd-mesh-injection/add-linkerd-mesh-injection.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/linkerd/add-linkerd-mesh-injection/add-linkerd-mesh-injection.yaml",
+   "last_commit_ts": 1663688546
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "linkerd/add-linkerd-policy-annotation/add-linkerd-policy-annotation.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/linkerd/add-linkerd-policy-annotation/add-linkerd-policy-annotation.yaml",
+   "last_commit_ts": 1663685961
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "linkerd/check-linkerd-authorizationpolicy/check-linkerd-authorizationpolicy.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/linkerd/check-linkerd-authorizationpolicy/check-linkerd-authorizationpolicy.yaml",
+   "last_commit_ts": 1725869276
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "linkerd/prevent-linkerd-pod-injection-override/prevent-linkerd-pod-injection-override.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/linkerd/prevent-linkerd-pod-injection-override/prevent-linkerd-pod-injection-override.yaml",
+   "last_commit_ts": 1725869276
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "linkerd/prevent-linkerd-port-skipping/prevent-linkerd-port-skipping.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/linkerd/prevent-linkerd-port-skipping/prevent-linkerd-port-skipping.yaml",
+   "last_commit_ts": 1725869276
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "linkerd/require-linkerd-mesh-injection/require-linkerd-mesh-injection.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/linkerd/require-linkerd-mesh-injection/require-linkerd-mesh-injection.yaml",
+   "last_commit_ts": 1725869276
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "linkerd/require-linkerd-server/require-linkerd-server.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/linkerd/require-linkerd-server/require-linkerd-server.yaml",
+   "last_commit_ts": 1725869276
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "linkerd-cel/prevent-linkerd-pod-injection-override/prevent-linkerd-pod-injection-override.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/linkerd-cel/prevent-linkerd-pod-injection-override/prevent-linkerd-pod-injection-override.yaml",
+   "last_commit_ts": 1723206870
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "linkerd-cel/prevent-linkerd-port-skipping/prevent-linkerd-port-skipping.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/linkerd-cel/prevent-linkerd-port-skipping/prevent-linkerd-port-skipping.yaml",
+   "last_commit_ts": 1721038005
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "linkerd-cel/require-linkerd-mesh-injection/require-linkerd-mesh-injection.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/linkerd-cel/require-linkerd-mesh-injection/require-linkerd-mesh-injection.yaml",
+   "last_commit_ts": 1723206870
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "nginx-ingress/disallow-ingress-nginx-custom-snippets/disallow-ingress-nginx-custom-snippets.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/nginx-ingress/disallow-ingress-nginx-custom-snippets/disallow-ingress-nginx-custom-snippets.yaml",
+   "last_commit_ts": 1725869276
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "nginx-ingress/restrict-annotations/restrict-annotations.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/nginx-ingress/restrict-annotations/restrict-annotations.yaml",
+   "last_commit_ts": 1725869276
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "nginx-ingress/restrict-ingress-paths/restrict-ingress-paths.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/nginx-ingress/restrict-ingress-paths/restrict-ingress-paths.yaml",
+   "last_commit_ts": 1725869276
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "nginx-ingress-cel/disallow-ingress-nginx-custom-snippets/disallow-ingress-nginx-custom-snippets.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/nginx-ingress-cel/disallow-ingress-nginx-custom-snippets/disallow-ingress-nginx-custom-snippets.yaml",
+   "last_commit_ts": 1723206870
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "nginx-ingress-cel/restrict-annotations/restrict-annotations.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/nginx-ingress-cel/restrict-annotations/restrict-annotations.yaml",
+   "last_commit_ts": 1721038005
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "nginx-ingress-cel/restrict-ingress-paths/restrict-ingress-paths.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/nginx-ingress-cel/restrict-ingress-paths/restrict-ingress-paths.yaml",
+   "last_commit_ts": 1723206870
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "openshift/check-routes/check-routes.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/openshift/check-routes/check-routes.yaml",
+   "last_commit_ts": 1725869276
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "openshift/disallow-deprecated-apis/disallow-deprecated-apis.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/openshift/disallow-deprecated-apis/disallow-deprecated-apis.yaml",
+   "last_commit_ts": 1725869276
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "openshift/disallow-jenkins-pipeline-strategy/disallow-jenkins-pipeline-strategy.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/openshift/disallow-jenkins-pipeline-strategy/disallow-jenkins-pipeline-strategy.yaml",
+   "last_commit_ts": 1725869276
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "openshift/disallow-security-context-constraint-anyuid/disallow-security-context-constraint-anyuid.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/openshift/disallow-security-context-constraint-anyuid/disallow-security-context-constraint-anyuid.yaml",
+   "last_commit_ts": 1725869276
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "openshift/disallow-self-provisioner-binding/disallow-self-provisioner-binding.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/openshift/disallow-self-provisioner-binding/disallow-self-provisioner-binding.yaml",
+   "last_commit_ts": 1725869276
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "openshift/enforce-etcd-encryption/enforce-etcd-encryption.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/openshift/enforce-etcd-encryption/enforce-etcd-encryption.yaml",
+   "last_commit_ts": 1725869276
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "openshift/inject-infrastructurename/inject-infrastructurename.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/openshift/inject-infrastructurename/inject-infrastructurename.yaml",
+   "last_commit_ts": 1755586777
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "openshift/team-validate-ns-name/team-validate-ns-name.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/openshift/team-validate-ns-name/team-validate-ns-name.yaml",
+   "last_commit_ts": 1725869276
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "openshift/unique-routes/unique-routes.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/openshift/unique-routes/unique-routes.yaml",
+   "last_commit_ts": 1725869276
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "openshift-cel/check-routes/check-routes.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/openshift-cel/check-routes/check-routes.yaml",
+   "last_commit_ts": 1721038005
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "openshift-cel/disallow-deprecated-apis/disallow-deprecated-apis.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/openshift-cel/disallow-deprecated-apis/disallow-deprecated-apis.yaml",
+   "last_commit_ts": 1721038005
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "openshift-cel/disallow-jenkins-pipeline-strategy/disallow-jenkins-pipeline-strategy.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/openshift-cel/disallow-jenkins-pipeline-strategy/disallow-jenkins-pipeline-strategy.yaml",
+   "last_commit_ts": 1721038005
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "openshift-cel/disallow-security-context-constraint-anyuid/disallow-security-context-constraint-anyuid.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/openshift-cel/disallow-security-context-constraint-anyuid/disallow-security-context-constraint-anyuid.yaml",
+   "last_commit_ts": 1723206870
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "openshift-cel/enforce-etcd-encryption/enforce-etcd-encryption.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/openshift-cel/enforce-etcd-encryption/enforce-etcd-encryption.yaml",
+   "last_commit_ts": 1721038005
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other/add-certificates-volume/add-certificates-volume.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other/add-certificates-volume/add-certificates-volume.yaml",
+   "last_commit_ts": 1701792632
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other/add-default-resources/add-default-resources.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other/add-default-resources/add-default-resources.yaml",
+   "last_commit_ts": 1711108020
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other/add-default-securitycontext/add-default-securitycontext.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other/add-default-securitycontext/add-default-securitycontext.yaml",
+   "last_commit_ts": 1701792632
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other/add-emptydir-sizelimit/add-emptydir-sizelimit.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other/add-emptydir-sizelimit/add-emptydir-sizelimit.yaml",
+   "last_commit_ts": 1701792632
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other/add-env-vars-from-cm/add-env-vars-from-cm.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other/add-env-vars-from-cm/add-env-vars-from-cm.yaml",
+   "last_commit_ts": 1701792632
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other/add-image-as-env-var/add-image-as-env-var.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other/add-image-as-env-var/add-image-as-env-var.yaml",
+   "last_commit_ts": 1701792632
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other/add-imagepullsecrets/add-imagepullsecrets.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other/add-imagepullsecrets/add-imagepullsecrets.yaml",
+   "last_commit_ts": 1701792632
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other/add-imagepullsecrets-for-containers-and-initcontainers/add-imagepullsecrets-for-containers-and-initcontainers.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other/add-imagepullsecrets-for-containers-and-initcontainers/add-imagepullsecrets-for-containers-and-initcontainers.yaml",
+   "last_commit_ts": 1701792632
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other/add-labels/add-labels.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other/add-labels/add-labels.yaml",
+   "last_commit_ts": 1701792632
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other/add-ndots/add-ndots.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other/add-ndots/add-ndots.yaml",
+   "last_commit_ts": 1701792632
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other/add-node-affinity/add-node-affinity.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other/add-node-affinity/add-node-affinity.yaml",
+   "last_commit_ts": 1701792632
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other/add-node-labels-pod/add-node-labels-pod.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other/add-node-labels-pod/add-node-labels-pod.yaml",
+   "last_commit_ts": 1709994323
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other/add-nodeSelector/add-nodeSelector.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other/add-nodeSelector/add-nodeSelector.yaml",
+   "last_commit_ts": 1701792632
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other/add-pod-priorityclassname/add-pod-priorityclassname.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other/add-pod-priorityclassname/add-pod-priorityclassname.yaml",
+   "last_commit_ts": 1704206978
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other/add-pod-proxies/add-pod-proxies.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other/add-pod-proxies/add-pod-proxies.yaml",
+   "last_commit_ts": 1701792632
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other/add-tolerations/add-tolerations.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other/add-tolerations/add-tolerations.yaml",
+   "last_commit_ts": 1701792632
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other/add-ttl-jobs/add-ttl-jobs.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other/add-ttl-jobs/add-ttl-jobs.yaml",
+   "last_commit_ts": 1701792632
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other/add-volume-deployment/add-volume-deployment.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other/add-volume-deployment/add-volume-deployment.yaml",
+   "last_commit_ts": 1701792632
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other/advanced-restrict-image-registries/advanced-restrict-image-registries.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other/advanced-restrict-image-registries/advanced-restrict-image-registries.yaml",
+   "last_commit_ts": 1725869276
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other/advertise-node-extended-resources/advertise-node-extended-resources.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other/advertise-node-extended-resources/advertise-node-extended-resources.yaml",
+   "last_commit_ts": 1701792632
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other/allowed-annotations/allowed-annotations.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other/allowed-annotations/allowed-annotations.yaml",
+   "last_commit_ts": 1725869276
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other/allowed-base-images/allowed-base-images.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other/allowed-base-images/allowed-base-images.yaml",
+   "last_commit_ts": 1725869276
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other/allowed-image-repos/allowed-image-repos.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other/allowed-image-repos/allowed-image-repos.yaml",
+   "last_commit_ts": 1725869276
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other/allowed-label-changes/allowed-label-changes.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other/allowed-label-changes/allowed-label-changes.yaml",
+   "last_commit_ts": 1725869276
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other/allowed-pod-priorities/allowed-pod-priorities.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other/allowed-pod-priorities/allowed-pod-priorities.yaml",
+   "last_commit_ts": 1725869276
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other/always-pull-images/always-pull-images.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other/always-pull-images/always-pull-images.yaml",
+   "last_commit_ts": 1701792632
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other/annotate-base-images/annotate-base-images.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other/annotate-base-images/annotate-base-images.yaml",
+   "last_commit_ts": 1701792632
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other/apply-pss-restricted-profile/apply-pss-restricted-profile.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other/apply-pss-restricted-profile/apply-pss-restricted-profile.yaml",
+   "last_commit_ts": 1704206978
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other/audit-event-on-delete/audit-event-on-delete.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other/audit-event-on-delete/audit-event-on-delete.yaml",
+   "last_commit_ts": 1701792632
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other/audit-event-on-exec/audit-event-on-exec.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other/audit-event-on-exec/audit-event-on-exec.yaml",
+   "last_commit_ts": 1701792632
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other/block-cluster-admin-from-ns/block-cluster-admin-from-ns.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other/block-cluster-admin-from-ns/block-cluster-admin-from-ns.yaml",
+   "last_commit_ts": 1704206978
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other/block-ephemeral-containers/block-ephemeral-containers.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other/block-ephemeral-containers/block-ephemeral-containers.yaml",
+   "last_commit_ts": 1725869276
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other/block-images-with-volumes/block-images-with-volumes.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other/block-images-with-volumes/block-images-with-volumes.yaml",
+   "last_commit_ts": 1725869276
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other/block-kubectl-cp/block-kubectl-cp.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other/block-kubectl-cp/block-kubectl-cp.yaml",
+   "last_commit_ts": 1764584082
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other/block-large-images/block-large-images.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other/block-large-images/block-large-images.yaml",
+   "last_commit_ts": 1725869276
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other/block-pod-exec-by-namespace/block-pod-exec-by-namespace.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other/block-pod-exec-by-namespace/block-pod-exec-by-namespace.yaml",
+   "last_commit_ts": 1725869276
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other/block-pod-exec-by-namespace-label/block-pod-exec-by-namespace-label.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other/block-pod-exec-by-namespace-label/block-pod-exec-by-namespace-label.yaml",
+   "last_commit_ts": 1725869276
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other/block-pod-exec-by-pod-and-container/block-pod-exec-by-pod-and-container.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other/block-pod-exec-by-pod-and-container/block-pod-exec-by-pod-and-container.yaml",
+   "last_commit_ts": 1725869276
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other/block-pod-exec-by-pod-label/block-pod-exec-by-pod-label.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other/block-pod-exec-by-pod-label/block-pod-exec-by-pod-label.yaml",
+   "last_commit_ts": 1725869276
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other/block-pod-exec-by-pod-name/block-pod-exec-by-pod-name.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other/block-pod-exec-by-pod-name/block-pod-exec-by-pod-name.yaml",
+   "last_commit_ts": 1725869276
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other/block-stale-images/block-stale-images.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other/block-stale-images/block-stale-images.yaml",
+   "last_commit_ts": 1725869276
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other/block-updates-deletes/block-updates-deletes.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other/block-updates-deletes/block-updates-deletes.yaml",
+   "last_commit_ts": 1725869276
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other/check-env-vars/check-env-vars.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other/check-env-vars/check-env-vars.yaml",
+   "last_commit_ts": 1725869276
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other/check-hpa-exists/check-hpa-exists.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other/check-hpa-exists/check-hpa-exists.yaml",
+   "last_commit_ts": 1722943645
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other/check-ingress-nginx-controller-version-and-annotation-policy/check-ingress-nginx-controller-version-and-annotation-policy.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other/check-ingress-nginx-controller-version-and-annotation-policy/check-ingress-nginx-controller-version-and-annotation-policy.yaml",
+   "last_commit_ts": 1724678434
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other/check-node-for-cve-2022-0185/check-node-for-cve-2022-0185.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other/check-node-for-cve-2022-0185/check-node-for-cve-2022-0185.yaml",
+   "last_commit_ts": 1725869276
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other/check-nvidia-gpu/check-nvidia-gpu.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other/check-nvidia-gpu/check-nvidia-gpu.yaml",
+   "last_commit_ts": 1725869276
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other/check-serviceaccount/check-serviceaccount.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other/check-serviceaccount/check-serviceaccount.yaml",
+   "last_commit_ts": 1725869276
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other/check-serviceaccount-secrets/check-serviceaccount-secrets.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other/check-serviceaccount-secrets/check-serviceaccount-secrets.yaml",
+   "last_commit_ts": 1709392904
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other/check-subjectaccessreview/check-subjectaccessreview.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other/check-subjectaccessreview/check-subjectaccessreview.yaml",
+   "last_commit_ts": 1701792632
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other/check-vpa-configuration/check-vpa-configuration.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other/check-vpa-configuration/check-vpa-configuration.yaml",
+   "last_commit_ts": 1710680101
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other/concatenate-configmaps/concatenate-configmaps.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other/concatenate-configmaps/concatenate-configmaps.yaml",
+   "last_commit_ts": 1703943078
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other/copy-namespace-labels/copy-namespace-labels.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other/copy-namespace-labels/copy-namespace-labels.yaml",
+   "last_commit_ts": 1702995671
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other/cordon-and-drain-node/cordon-and-drain-node.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other/cordon-and-drain-node/cordon-and-drain-node.yaml",
+   "last_commit_ts": 1703943078
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other/create-default-pdb/create-default-pdb.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other/create-default-pdb/create-default-pdb.yaml",
+   "last_commit_ts": 1701792632
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other/create-pod-antiaffinity/create-pod-antiaffinity.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other/create-pod-antiaffinity/create-pod-antiaffinity.yaml",
+   "last_commit_ts": 1701792632
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other/deny-commands-in-exec-probe/deny-commands-in-exec-probe.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other/deny-commands-in-exec-probe/deny-commands-in-exec-probe.yaml",
+   "last_commit_ts": 1701792632
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other/deny-secret-service-account-token-type/deny-secret-service-account-token-type.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other/deny-secret-service-account-token-type/deny-secret-service-account-token-type.yaml",
+   "last_commit_ts": 1711449160
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other/deployment-replicas-higher-than-pdb/deployment-replicas-higher-than-pdb.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other/deployment-replicas-higher-than-pdb/deployment-replicas-higher-than-pdb.yaml",
+   "last_commit_ts": 1710076794
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other/disable-automountserviceaccounttoken/disable-automountserviceaccounttoken.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other/disable-automountserviceaccounttoken/disable-automountserviceaccounttoken.yaml",
+   "last_commit_ts": 1701792632
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other/disable-service-discovery/disable-service-discovery.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other/disable-service-discovery/disable-service-discovery.yaml",
+   "last_commit_ts": 1701792632
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other/disallow-all-secrets/disallow-all-secrets.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other/disallow-all-secrets/disallow-all-secrets.yaml",
+   "last_commit_ts": 1725869276
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other/disallow-localhost-services/disallow-localhost-services.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other/disallow-localhost-services/disallow-localhost-services.yaml",
+   "last_commit_ts": 1725869276
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other/disallow-secrets-from-env-vars/disallow-secrets-from-env-vars.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other/disallow-secrets-from-env-vars/disallow-secrets-from-env-vars.yaml",
+   "last_commit_ts": 1725869276
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other/dns-policy-and-dns-config/dns-policy-and-dns-config.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other/dns-policy-and-dns-config/dns-policy-and-dns-config.yaml",
+   "last_commit_ts": 1701792632
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other/docker-socket-requires-label/docker-socket-requires-label.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other/docker-socket-requires-label/docker-socket-requires-label.yaml",
+   "last_commit_ts": 1725869276
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other/enforce-pod-duration/enforce-pod-duration.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other/enforce-pod-duration/enforce-pod-duration.yaml",
+   "last_commit_ts": 1725869276
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other/enforce-readwriteonce-pod/enforce-readwriteonce-pod.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other/enforce-readwriteonce-pod/enforce-readwriteonce-pod.yaml",
+   "last_commit_ts": 1704412767
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other/enforce-resources-as-ratio/enforce-resources-as-ratio.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other/enforce-resources-as-ratio/enforce-resources-as-ratio.yaml",
+   "last_commit_ts": 1725869276
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other/ensure-probes-different/ensure-probes-different.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other/ensure-probes-different/ensure-probes-different.yaml",
+   "last_commit_ts": 1725869276
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other/ensure-production-matches-staging/ensure-production-matches-staging.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other/ensure-production-matches-staging/ensure-production-matches-staging.yaml",
+   "last_commit_ts": 1725869276
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other/ensure-readonly-hostpath/ensure-readonly-hostpath.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other/ensure-readonly-hostpath/ensure-readonly-hostpath.yaml",
+   "last_commit_ts": 1725869276
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other/exclude-namespaces-dynamically/exclude-namespaces-dynamically.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other/exclude-namespaces-dynamically/exclude-namespaces-dynamically.yaml",
+   "last_commit_ts": 1725869276
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other/expiration-for-policyexceptions/expiration-for-policyexceptions.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other/expiration-for-policyexceptions/expiration-for-policyexceptions.yaml",
+   "last_commit_ts": 1701792632
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other/forbid-cpu-limits/forbid-cpu-limits.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other/forbid-cpu-limits/forbid-cpu-limits.yaml",
+   "last_commit_ts": 1701792632
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other/generate-networkpolicy-existing/generate-networkpolicy-existing.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other/generate-networkpolicy-existing/generate-networkpolicy-existing.yaml",
+   "last_commit_ts": 1723036925
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other/get-debug-information/get-debug-information.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other/get-debug-information/get-debug-information.yaml",
+   "last_commit_ts": 1723238311
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other/imagepullpolicy-always/imagepullpolicy-always.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other/imagepullpolicy-always/imagepullpolicy-always.yaml",
+   "last_commit_ts": 1725869276
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other/ingress-host-match-tls/ingress-host-match-tls.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other/ingress-host-match-tls/ingress-host-match-tls.yaml",
+   "last_commit_ts": 1725869276
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other/inject-env-var-from-image-label/inject-env-var-from-image-label.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other/inject-env-var-from-image-label/inject-env-var-from-image-label.yaml",
+   "last_commit_ts": 1701792632
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other/inject-sidecar-deployment/inject-sidecar-deployment.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other/inject-sidecar-deployment/inject-sidecar-deployment.yaml",
+   "last_commit_ts": 1701792632
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other/inspect-csr/inspect-csr.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other/inspect-csr/inspect-csr.yaml",
+   "last_commit_ts": 1746457078
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other/kubernetes-version-check/kubernetes-version-check.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other/kubernetes-version-check/kubernetes-version-check.yaml",
+   "last_commit_ts": 1701792632
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other/label-existing-namespaces/label-existing-namespaces.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other/label-existing-namespaces/label-existing-namespaces.yaml",
+   "last_commit_ts": 1701792632
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other/label-nodes-cri/label-nodes-cri.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other/label-nodes-cri/label-nodes-cri.yaml",
+   "last_commit_ts": 1703943078
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other/limit-configmap-for-sa/limit-configmap-for-sa.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other/limit-configmap-for-sa/limit-configmap-for-sa.yaml",
+   "last_commit_ts": 1725869276
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other/limit-containers-per-pod/limit-containers-per-pod.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other/limit-containers-per-pod/limit-containers-per-pod.yaml",
+   "last_commit_ts": 1725869276
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other/limit-hostpath-type-pv/limit-hostpath-type-pv.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other/limit-hostpath-type-pv/limit-hostpath-type-pv.yaml",
+   "last_commit_ts": 1725869276
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other/limit-hostpath-vols/limit-hostpath-vols.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other/limit-hostpath-vols/limit-hostpath-vols.yaml",
+   "last_commit_ts": 1725869276
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other/memory-requests-equal-limits/memory-requests-equal-limits.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other/memory-requests-equal-limits/memory-requests-equal-limits.yaml",
+   "last_commit_ts": 1725869276
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other/metadata-match-regex/metadata-match-regex.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other/metadata-match-regex/metadata-match-regex.yaml",
+   "last_commit_ts": 1725869276
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other/mitigate-log4shell/mitigate-log4shell.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other/mitigate-log4shell/mitigate-log4shell.yaml",
+   "last_commit_ts": 1701792632
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other/mutate-large-termination-gps/mutate-large-termination-gps.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other/mutate-large-termination-gps/mutate-large-termination-gps.yaml",
+   "last_commit_ts": 1701792632
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other/mutate-pod-binding/mutate-pod-binding.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other/mutate-pod-binding/mutate-pod-binding.yaml",
+   "last_commit_ts": 1701792632
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other/namespace-inventory-check/namespace-inventory-check.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other/namespace-inventory-check/namespace-inventory-check.yaml",
+   "last_commit_ts": 1701792632
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other/namespace-protection/namespace-protection.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other/namespace-protection/namespace-protection.yaml",
+   "last_commit_ts": 1701792632
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other/nfs-subdir-external-provisioner-storage-path/nfs-subdir-external-provisioner-storage-path.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other/nfs-subdir-external-provisioner-storage-path/nfs-subdir-external-provisioner-storage-path.yaml",
+   "last_commit_ts": 1725869276
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other/only-trustworthy-registries-set-root/only-trustworthy-registries-set-root.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other/only-trustworthy-registries-set-root/only-trustworthy-registries-set-root.yaml",
+   "last_commit_ts": 1725869276
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other/pdb-maxunavailable/pdb-maxunavailable.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other/pdb-maxunavailable/pdb-maxunavailable.yaml",
+   "last_commit_ts": 1725869276
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other/pdb-maxunavailable-with-deployments/pdb-maxunavailable-with-deployments.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other/pdb-maxunavailable-with-deployments/pdb-maxunavailable-with-deployments.yaml",
+   "last_commit_ts": 1709482982
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other/pdb-minavailable/pdb-minavailable.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other/pdb-minavailable/pdb-minavailable.yaml",
+   "last_commit_ts": 1725869276
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other/policy-for-exceptions/policy-for-exceptions.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other/policy-for-exceptions/policy-for-exceptions.yaml",
+   "last_commit_ts": 1701792632
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other/prepend-image-registry/prepend-image-registry.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other/prepend-image-registry/prepend-image-registry.yaml",
+   "last_commit_ts": 1701792632
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other/prevent-bare-pods/prevent-bare-pods.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other/prevent-bare-pods/prevent-bare-pods.yaml",
+   "last_commit_ts": 1725869276
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other/prevent-cr8escape/prevent-cr8escape.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other/prevent-cr8escape/prevent-cr8escape.yaml",
+   "last_commit_ts": 1725869276
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other/prevent-duplicate-hpa/prevent-duplicate-hpa.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other/prevent-duplicate-hpa/prevent-duplicate-hpa.yaml",
+   "last_commit_ts": 1722387048
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other/prevent-duplicate-vpa/prevent-duplicate-vpa.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other/prevent-duplicate-vpa/prevent-duplicate-vpa.yaml",
+   "last_commit_ts": 1710140902
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other/protect-node-taints/protect-node-taints.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other/protect-node-taints/protect-node-taints.yaml",
+   "last_commit_ts": 1725869276
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other/record-creation-details/record-creation-details.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other/record-creation-details/record-creation-details.yaml",
+   "last_commit_ts": 1746457078
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other/refresh-env-var-in-pod/refresh-env-var-in-pod.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other/refresh-env-var-in-pod/refresh-env-var-in-pod.yaml",
+   "last_commit_ts": 1701792632
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other/refresh-volumes-in-pods/refresh-volumes-in-pods.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other/refresh-volumes-in-pods/refresh-volumes-in-pods.yaml",
+   "last_commit_ts": 1701792632
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other/remove-hostpath-volumes/remove-hostpath-volumes.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other/remove-hostpath-volumes/remove-hostpath-volumes.yaml",
+   "last_commit_ts": 1701792632
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other/remove-serviceaccount-token/remove-serviceaccount-token.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other/remove-serviceaccount-token/remove-serviceaccount-token.yaml",
+   "last_commit_ts": 1701792632
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other/replace-image-registry/replace-image-registry.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other/replace-image-registry/replace-image-registry.yaml",
+   "last_commit_ts": 1701792632
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other/replace-image-registry-with-harbor/replace-image-registry-with-harbor.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other/replace-image-registry-with-harbor/replace-image-registry-with-harbor.yaml",
+   "last_commit_ts": 1709424441
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other/replace-ingress-hosts/replace-ingress-hosts.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other/replace-ingress-hosts/replace-ingress-hosts.yaml",
+   "last_commit_ts": 1701792632
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other/require-annotations/require-annotations.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other/require-annotations/require-annotations.yaml",
+   "last_commit_ts": 1725869276
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other/require-base-image/require-base-image.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other/require-base-image/require-base-image.yaml",
+   "last_commit_ts": 1725869276
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other/require-container-port-names/require-container-port-names.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other/require-container-port-names/require-container-port-names.yaml",
+   "last_commit_ts": 1725869276
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other/require-cpu-limits/require-cpu-limits.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other/require-cpu-limits/require-cpu-limits.yaml",
+   "last_commit_ts": 1722542025
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other/require-deployments-have-multiple-replicas/require-deployments-have-multiple-replicas.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other/require-deployments-have-multiple-replicas/require-deployments-have-multiple-replicas.yaml",
+   "last_commit_ts": 1725869276
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other/require-emptydir-requests-limits/require-emptydir-requests-limits.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other/require-emptydir-requests-limits/require-emptydir-requests-limits.yaml",
+   "last_commit_ts": 1702563487
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other/require-image-checksum/require-image-checksum.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other/require-image-checksum/require-image-checksum.yaml",
+   "last_commit_ts": 1723233485
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other/require-image-source/require-image-source.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other/require-image-source/require-image-source.yaml",
+   "last_commit_ts": 1725869276
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other/require-imagepullsecrets/require-imagepullsecrets.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other/require-imagepullsecrets/require-imagepullsecrets.yaml",
+   "last_commit_ts": 1725869276
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other/require-ingress-https/require-ingress-https.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other/require-ingress-https/require-ingress-https.yaml",
+   "last_commit_ts": 1725869276
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other/require-netpol/require-netpol.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other/require-netpol/require-netpol.yaml",
+   "last_commit_ts": 1725869276
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other/require-non-root-groups/require-non-root-groups.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other/require-non-root-groups/require-non-root-groups.yaml",
+   "last_commit_ts": 1725869276
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other/require-pdb/require-pdb.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other/require-pdb/require-pdb.yaml",
+   "last_commit_ts": 1725869276
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other/require-pod-priorityclassname/require-pod-priorityclassname.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other/require-pod-priorityclassname/require-pod-priorityclassname.yaml",
+   "last_commit_ts": 1725869276
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other/require-qos-burstable/require-qos-burstable.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other/require-qos-burstable/require-qos-burstable.yaml",
+   "last_commit_ts": 1725869276
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other/require-qos-guaranteed/require-qos-guaranteed.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other/require-qos-guaranteed/require-qos-guaranteed.yaml",
+   "last_commit_ts": 1725869276
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other/require-reasonable-pdbs/require-reasonable-pdbs.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other/require-reasonable-pdbs/require-reasonable-pdbs.yaml",
+   "last_commit_ts": 1709477585
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other/require-replicas-allow-disruption/require-replicas-allow-disruption.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other/require-replicas-allow-disruption/require-replicas-allow-disruption.yaml",
+   "last_commit_ts": 1716939682
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other/require-storageclass/require-storageclass.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other/require-storageclass/require-storageclass.yaml",
+   "last_commit_ts": 1725869276
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other/require-unique-external-dns/require-unique-external-dns.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other/require-unique-external-dns/require-unique-external-dns.yaml",
+   "last_commit_ts": 1725869276
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other/require-unique-service-selector/require-unique-service-selector.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other/require-unique-service-selector/require-unique-service-selector.yaml",
+   "last_commit_ts": 1725869276
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other/require-unique-uid-per-workload/require-unique-uid-per-workload.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other/require-unique-uid-per-workload/require-unique-uid-per-workload.yaml",
+   "last_commit_ts": 1725869276
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other/require-vulnerability-scan/require-vulnerability-scan.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other/require-vulnerability-scan/require-vulnerability-scan.yaml",
+   "last_commit_ts": 1725869276
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other/resolve-image-to-digest/resolve-image-to-digest.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other/resolve-image-to-digest/resolve-image-to-digest.yaml",
+   "last_commit_ts": 1701792632
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other/resource-creation-updating-denied/resource-creation-updating-denied.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other/resource-creation-updating-denied/resource-creation-updating-denied.yaml",
+   "last_commit_ts": 1717941383
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other/restart-deployment-on-secret-change/restart-deployment-on-secret-change.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other/restart-deployment-on-secret-change/restart-deployment-on-secret-change.yaml",
+   "last_commit_ts": 1703943078
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other/restrict-annotations/restrict-annotations.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other/restrict-annotations/restrict-annotations.yaml",
+   "last_commit_ts": 1725869276
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other/restrict-automount-sa-token/restrict-automount-sa-token.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other/restrict-automount-sa-token/restrict-automount-sa-token.yaml",
+   "last_commit_ts": 1725869276
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other/restrict-binding-clusteradmin/restrict-binding-clusteradmin.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other/restrict-binding-clusteradmin/restrict-binding-clusteradmin.yaml",
+   "last_commit_ts": 1725869276
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other/restrict-binding-system-groups/restrict-binding-system-groups.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other/restrict-binding-system-groups/restrict-binding-system-groups.yaml",
+   "last_commit_ts": 1725869276
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other/restrict-clusterrole-csr/restrict-clusterrole-csr.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other/restrict-clusterrole-csr/restrict-clusterrole-csr.yaml",
+   "last_commit_ts": 1722611998
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other/restrict-clusterrole-mutating-validating-admission-webhooks/restrict-clusterrole-mutating-validating-admission-webhooks.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other/restrict-clusterrole-mutating-validating-admission-webhooks/restrict-clusterrole-mutating-validating-admission-webhooks.yaml",
+   "last_commit_ts": 1722607786
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other/restrict-clusterrole-nodesproxy/restrict-clusterrole-nodesproxy.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other/restrict-clusterrole-nodesproxy/restrict-clusterrole-nodesproxy.yaml",
+   "last_commit_ts": 1725869276
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other/restrict-controlplane-scheduling/restrict-controlplane-scheduling.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other/restrict-controlplane-scheduling/restrict-controlplane-scheduling.yaml",
+   "last_commit_ts": 1725869276
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other/restrict-deprecated-registry/restrict-deprecated-registry.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other/restrict-deprecated-registry/restrict-deprecated-registry.yaml",
+   "last_commit_ts": 1701792632
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other/restrict-edit-for-endpoints/restrict-edit-for-endpoints.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other/restrict-edit-for-endpoints/restrict-edit-for-endpoints.yaml",
+   "last_commit_ts": 1725869276
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other/restrict-escalation-verbs-roles/restrict-escalation-verbs-roles.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other/restrict-escalation-verbs-roles/restrict-escalation-verbs-roles.yaml",
+   "last_commit_ts": 1725869276
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other/restrict-ingress-classes/restrict-ingress-classes.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other/restrict-ingress-classes/restrict-ingress-classes.yaml",
+   "last_commit_ts": 1725869276
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other/restrict-ingress-defaultbackend/restrict-ingress-defaultbackend.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other/restrict-ingress-defaultbackend/restrict-ingress-defaultbackend.yaml",
+   "last_commit_ts": 1725869276
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other/restrict-ingress-host/restrict-ingress-host.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other/restrict-ingress-host/restrict-ingress-host.yaml",
+   "last_commit_ts": 1725869276
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other/restrict-ingress-wildcard/restrict-ingress-wildcard.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other/restrict-ingress-wildcard/restrict-ingress-wildcard.yaml",
+   "last_commit_ts": 1725869276
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other/restrict-jobs/restrict-jobs.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other/restrict-jobs/restrict-jobs.yaml",
+   "last_commit_ts": 1701792632
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other/restrict-loadbalancer/restrict-loadbalancer.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other/restrict-loadbalancer/restrict-loadbalancer.yaml",
+   "last_commit_ts": 1725869276
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other/restrict-networkpolicy-empty-podselector/restrict-networkpolicy-empty-podselector.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other/restrict-networkpolicy-empty-podselector/restrict-networkpolicy-empty-podselector.yaml",
+   "last_commit_ts": 1725869276
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other/restrict-node-affinity/restrict-node-affinity.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other/restrict-node-affinity/restrict-node-affinity.yaml",
+   "last_commit_ts": 1725869276
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other/restrict-node-label-changes/restrict-node-label-changes.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other/restrict-node-label-changes/restrict-node-label-changes.yaml",
+   "last_commit_ts": 1725869276
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other/restrict-node-label-creation/restrict-node-label-creation.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other/restrict-node-label-creation/restrict-node-label-creation.yaml",
+   "last_commit_ts": 1766905946
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other/restrict-node-selection/restrict-node-selection.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other/restrict-node-selection/restrict-node-selection.yaml",
+   "last_commit_ts": 1725869276
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other/restrict-pod-controller-serviceaccount-updates/restrict-pod-controller-serviceaccount-updates.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other/restrict-pod-controller-serviceaccount-updates/restrict-pod-controller-serviceaccount-updates.yaml",
+   "last_commit_ts": 1725869276
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other/restrict-pod-count-per-node/restrict-pod-count-per-node.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other/restrict-pod-count-per-node/restrict-pod-count-per-node.yaml",
+   "last_commit_ts": 1725869276
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other/restrict-sa-automount-sa-token/restrict-sa-automount-sa-token.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other/restrict-sa-automount-sa-token/restrict-sa-automount-sa-token.yaml",
+   "last_commit_ts": 1705427328
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other/restrict-scale/restrict-scale.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other/restrict-scale/restrict-scale.yaml",
+   "last_commit_ts": 1725869276
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other/restrict-secret-role-verbs/restrict-secret-role-verbs.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other/restrict-secret-role-verbs/restrict-secret-role-verbs.yaml",
+   "last_commit_ts": 1725869276
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other/restrict-secrets-by-label/restrict-secrets-by-label.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other/restrict-secrets-by-label/restrict-secrets-by-label.yaml",
+   "last_commit_ts": 1725869276
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other/restrict-secrets-by-name/restrict-secrets-by-name.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other/restrict-secrets-by-name/restrict-secrets-by-name.yaml",
+   "last_commit_ts": 1725869276
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other/restrict-service-account/restrict-service-account.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other/restrict-service-account/restrict-service-account.yaml",
+   "last_commit_ts": 1725869276
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other/restrict-service-port-range/restrict-service-port-range.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other/restrict-service-port-range/restrict-service-port-range.yaml",
+   "last_commit_ts": 1725869276
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other/restrict-storageclass/restrict-storageclass.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other/restrict-storageclass/restrict-storageclass.yaml",
+   "last_commit_ts": 1725869276
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other/restrict-usergroup-fsgroup-id/restrict-usergroup-fsgroup-id.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other/restrict-usergroup-fsgroup-id/restrict-usergroup-fsgroup-id.yaml",
+   "last_commit_ts": 1725869276
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other/restrict-wildcard-resources/restrict-wildcard-resources.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other/restrict-wildcard-resources/restrict-wildcard-resources.yaml",
+   "last_commit_ts": 1725869276
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other/restrict-wildcard-verbs/restrict-wildcard-verbs.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other/restrict-wildcard-verbs/restrict-wildcard-verbs.yaml",
+   "last_commit_ts": 1725869276
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other/scale-deployment-zero/scale-deployment-zero.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other/scale-deployment-zero/scale-deployment-zero.yaml",
+   "last_commit_ts": 1711276877
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other/spread-pods-across-topology/spread-pods-across-topology.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other/spread-pods-across-topology/spread-pods-across-topology.yaml",
+   "last_commit_ts": 1701792632
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other/sync-secrets/sync-secrets.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other/sync-secrets/sync-secrets.yaml",
+   "last_commit_ts": 1701792632
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other/time-bound-policy/time-bound-policy.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other/time-bound-policy/time-bound-policy.yaml",
+   "last_commit_ts": 1701792632
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other/topologyspreadconstraints-policy/topologyspreadconstraints-policy.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other/topologyspreadconstraints-policy/topologyspreadconstraints-policy.yaml",
+   "last_commit_ts": 1725869276
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other/unique-ingress-host-and-path/unique-ingress-host-and-path.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other/unique-ingress-host-and-path/unique-ingress-host-and-path.yaml",
+   "last_commit_ts": 1725869276
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other/unique-ingress-paths/unique-ingress-paths.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other/unique-ingress-paths/unique-ingress-paths.yaml",
+   "last_commit_ts": 1725869276
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other/update-image-tag/update-image-tag.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other/update-image-tag/update-image-tag.yaml",
+   "last_commit_ts": 1703943078
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other/verify-image/verify-image.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other/verify-image/verify-image.yaml",
+   "last_commit_ts": 1725869276
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other/verify-image-cve-2022-42889/verify-image-cve-2022-42889.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other/verify-image-cve-2022-42889/verify-image-cve-2022-42889.yaml",
+   "last_commit_ts": 1725869276
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other/verify-image-gcpkms/verify-image-gcpkms.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other/verify-image-gcpkms/verify-image-gcpkms.yaml",
+   "last_commit_ts": 1725869276
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other/verify-image-slsa/verify-image-slsa.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other/verify-image-slsa/verify-image-slsa.yaml",
+   "last_commit_ts": 1725869276
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other/verify-image-with-multi-keys/verify-image-with-multi-keys.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other/verify-image-with-multi-keys/verify-image-with-multi-keys.yaml",
+   "last_commit_ts": 1725869276
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other/verify-manifest-integrity/verify-manifest-integrity.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other/verify-manifest-integrity/verify-manifest-integrity.yaml",
+   "last_commit_ts": 1725869276
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other/verify-sbom-cyclonedx/verify-sbom-cyclonedx.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other/verify-sbom-cyclonedx/verify-sbom-cyclonedx.yaml",
+   "last_commit_ts": 1725869276
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other/verify-vpa-target/verify-vpa-target.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other/verify-vpa-target/verify-vpa-target.yaml",
+   "last_commit_ts": 1710140902
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other-cel/advanced-restrict-image-registries/advanced-restrict-image-registries.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other-cel/advanced-restrict-image-registries/advanced-restrict-image-registries.yaml",
+   "last_commit_ts": 1723206870
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other-cel/allowed-annotations/allowed-annotations.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other-cel/allowed-annotations/allowed-annotations.yaml",
+   "last_commit_ts": 1723206870
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other-cel/allowed-pod-priorities/allowed-pod-priorities.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other-cel/allowed-pod-priorities/allowed-pod-priorities.yaml",
+   "last_commit_ts": 1720532973
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other-cel/block-ephemeral-containers/block-ephemeral-containers.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other-cel/block-ephemeral-containers/block-ephemeral-containers.yaml",
+   "last_commit_ts": 1720532973
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other-cel/check-env-vars/check-env-vars.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other-cel/check-env-vars/check-env-vars.yaml",
+   "last_commit_ts": 1723206870
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other-cel/check-node-for-cve-2022-0185/check-node-for-cve-2022-0185.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other-cel/check-node-for-cve-2022-0185/check-node-for-cve-2022-0185.yaml",
+   "last_commit_ts": 1720532973
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other-cel/check-serviceaccount-secrets/check-serviceaccount-secrets.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other-cel/check-serviceaccount-secrets/check-serviceaccount-secrets.yaml",
+   "last_commit_ts": 1720532973
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other-cel/deny-commands-in-exec-probe/deny-commands-in-exec-probe.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other-cel/deny-commands-in-exec-probe/deny-commands-in-exec-probe.yaml",
+   "last_commit_ts": 1723206870
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other-cel/deny-secret-service-account-token-type/deny-secret-service-account-token-type.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other-cel/deny-secret-service-account-token-type/deny-secret-service-account-token-type.yaml",
+   "last_commit_ts": 1720532973
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other-cel/disallow-all-secrets/disallow-all-secrets.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other-cel/disallow-all-secrets/disallow-all-secrets.yaml",
+   "last_commit_ts": 1723206870
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other-cel/disallow-localhost-services/disallow-localhost-services.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other-cel/disallow-localhost-services/disallow-localhost-services.yaml",
+   "last_commit_ts": 1720532973
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other-cel/disallow-secrets-from-env-vars/disallow-secrets-from-env-vars.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other-cel/disallow-secrets-from-env-vars/disallow-secrets-from-env-vars.yaml",
+   "last_commit_ts": 1723206870
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other-cel/docker-socket-requires-label/docker-socket-requires-label.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other-cel/docker-socket-requires-label/docker-socket-requires-label.yaml",
+   "last_commit_ts": 1723206870
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other-cel/enforce-pod-duration/enforce-pod-duration.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other-cel/enforce-pod-duration/enforce-pod-duration.yaml",
+   "last_commit_ts": 1723206870
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other-cel/enforce-readwriteonce-pod/enforce-readwriteonce-pod.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other-cel/enforce-readwriteonce-pod/enforce-readwriteonce-pod.yaml",
+   "last_commit_ts": 1720532973
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other-cel/ensure-probes-different/ensure-probes-different.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other-cel/ensure-probes-different/ensure-probes-different.yaml",
+   "last_commit_ts": 1720532973
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other-cel/ensure-readonly-hostpath/ensure-readonly-hostpath.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other-cel/ensure-readonly-hostpath/ensure-readonly-hostpath.yaml",
+   "last_commit_ts": 1723206870
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other-cel/exclude-namespaces-dynamically/exclude-namespaces-dynamically.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other-cel/exclude-namespaces-dynamically/exclude-namespaces-dynamically.yaml",
+   "last_commit_ts": 1720581998
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other-cel/forbid-cpu-limits/forbid-cpu-limits.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other-cel/forbid-cpu-limits/forbid-cpu-limits.yaml",
+   "last_commit_ts": 1723206870
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other-cel/imagepullpolicy-always/imagepullpolicy-always.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other-cel/imagepullpolicy-always/imagepullpolicy-always.yaml",
+   "last_commit_ts": 1720532973
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other-cel/ingress-host-match-tls/ingress-host-match-tls.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other-cel/ingress-host-match-tls/ingress-host-match-tls.yaml",
+   "last_commit_ts": 1723206870
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other-cel/limit-containers-per-pod/limit-containers-per-pod.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other-cel/limit-containers-per-pod/limit-containers-per-pod.yaml",
+   "last_commit_ts": 1720532973
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other-cel/limit-hostpath-type-pv/limit-hostpath-type-pv.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other-cel/limit-hostpath-type-pv/limit-hostpath-type-pv.yaml",
+   "last_commit_ts": 1720532973
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other-cel/limit-hostpath-vols/limit-hostpath-vols.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other-cel/limit-hostpath-vols/limit-hostpath-vols.yaml",
+   "last_commit_ts": 1723206870
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other-cel/memory-requests-equal-limits/memory-requests-equal-limits.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other-cel/memory-requests-equal-limits/memory-requests-equal-limits.yaml",
+   "last_commit_ts": 1723206870
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other-cel/metadata-match-regex/metadata-match-regex.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other-cel/metadata-match-regex/metadata-match-regex.yaml",
+   "last_commit_ts": 1723206870
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other-cel/pdb-maxunavailable/pdb-maxunavailable.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other-cel/pdb-maxunavailable/pdb-maxunavailable.yaml",
+   "last_commit_ts": 1723206870
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other-cel/prevent-bare-pods/prevent-bare-pods.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other-cel/prevent-bare-pods/prevent-bare-pods.yaml",
+   "last_commit_ts": 1720532973
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other-cel/prevent-cr8escape/prevent-cr8escape.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other-cel/prevent-cr8escape/prevent-cr8escape.yaml",
+   "last_commit_ts": 1723206870
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other-cel/require-annotations/require-annotations.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other-cel/require-annotations/require-annotations.yaml",
+   "last_commit_ts": 1723206870
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other-cel/require-container-port-names/require-container-port-names.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other-cel/require-container-port-names/require-container-port-names.yaml",
+   "last_commit_ts": 1723206870
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other-cel/require-deployments-have-multiple-replicas/require-deployments-have-multiple-replicas.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other-cel/require-deployments-have-multiple-replicas/require-deployments-have-multiple-replicas.yaml",
+   "last_commit_ts": 1720532973
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other-cel/require-emptydir-requests-limits/require-emptydir-requests-limits.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other-cel/require-emptydir-requests-limits/require-emptydir-requests-limits.yaml",
+   "last_commit_ts": 1723206870
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other-cel/require-image-checksum/require-image-checksum.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other-cel/require-image-checksum/require-image-checksum.yaml",
+   "last_commit_ts": 1720532973
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other-cel/require-ingress-https/require-ingress-https.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other-cel/require-ingress-https/require-ingress-https.yaml",
+   "last_commit_ts": 1723206870
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other-cel/require-non-root-groups/require-non-root-groups.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other-cel/require-non-root-groups/require-non-root-groups.yaml",
+   "last_commit_ts": 1723206870
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other-cel/require-pod-priorityclassname/require-pod-priorityclassname.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other-cel/require-pod-priorityclassname/require-pod-priorityclassname.yaml",
+   "last_commit_ts": 1723206870
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other-cel/require-qos-burstable/require-qos-burstable.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other-cel/require-qos-burstable/require-qos-burstable.yaml",
+   "last_commit_ts": 1720532973
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other-cel/require-qos-guaranteed/require-qos-guaranteed.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other-cel/require-qos-guaranteed/require-qos-guaranteed.yaml",
+   "last_commit_ts": 1720581998
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other-cel/require-storageclass/require-storageclass.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other-cel/require-storageclass/require-storageclass.yaml",
+   "last_commit_ts": 1723206870
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other-cel/restrict-annotations/restrict-annotations.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other-cel/restrict-annotations/restrict-annotations.yaml",
+   "last_commit_ts": 1723206870
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other-cel/restrict-binding-clusteradmin/restrict-binding-clusteradmin.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other-cel/restrict-binding-clusteradmin/restrict-binding-clusteradmin.yaml",
+   "last_commit_ts": 1720532973
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other-cel/restrict-binding-system-groups/restrict-binding-system-groups.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other-cel/restrict-binding-system-groups/restrict-binding-system-groups.yaml",
+   "last_commit_ts": 1720532973
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other-cel/restrict-clusterrole-nodesproxy/restrict-clusterrole-nodesproxy.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other-cel/restrict-clusterrole-nodesproxy/restrict-clusterrole-nodesproxy.yaml",
+   "last_commit_ts": 1761635040
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other-cel/restrict-controlplane-scheduling/restrict-controlplane-scheduling.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other-cel/restrict-controlplane-scheduling/restrict-controlplane-scheduling.yaml",
+   "last_commit_ts": 1723206870
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other-cel/restrict-deprecated-registry/restrict-deprecated-registry.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other-cel/restrict-deprecated-registry/restrict-deprecated-registry.yaml",
+   "last_commit_ts": 1723206870
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other-cel/restrict-edit-for-endpoints/restrict-edit-for-endpoints.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other-cel/restrict-edit-for-endpoints/restrict-edit-for-endpoints.yaml",
+   "last_commit_ts": 1720581998
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other-cel/restrict-escalation-verbs-roles/restrict-escalation-verbs-roles.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other-cel/restrict-escalation-verbs-roles/restrict-escalation-verbs-roles.yaml",
+   "last_commit_ts": 1720532973
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other-cel/restrict-ingress-classes/restrict-ingress-classes.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other-cel/restrict-ingress-classes/restrict-ingress-classes.yaml",
+   "last_commit_ts": 1723206870
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other-cel/restrict-ingress-defaultbackend/restrict-ingress-defaultbackend.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other-cel/restrict-ingress-defaultbackend/restrict-ingress-defaultbackend.yaml",
+   "last_commit_ts": 1720532973
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other-cel/restrict-ingress-wildcard/restrict-ingress-wildcard.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other-cel/restrict-ingress-wildcard/restrict-ingress-wildcard.yaml",
+   "last_commit_ts": 1723206870
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other-cel/restrict-jobs/restrict-jobs.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other-cel/restrict-jobs/restrict-jobs.yaml",
+   "last_commit_ts": 1720581998
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other-cel/restrict-loadbalancer/restrict-loadbalancer.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other-cel/restrict-loadbalancer/restrict-loadbalancer.yaml",
+   "last_commit_ts": 1720532973
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other-cel/restrict-networkpolicy-empty-podselector/restrict-networkpolicy-empty-podselector.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other-cel/restrict-networkpolicy-empty-podselector/restrict-networkpolicy-empty-podselector.yaml",
+   "last_commit_ts": 1720532973
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other-cel/restrict-node-affinity/restrict-node-affinity.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other-cel/restrict-node-affinity/restrict-node-affinity.yaml",
+   "last_commit_ts": 1723206870
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other-cel/restrict-node-label-creation/restrict-node-label-creation.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other-cel/restrict-node-label-creation/restrict-node-label-creation.yaml",
+   "last_commit_ts": 1723206870
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other-cel/restrict-pod-controller-serviceaccount-updates/restrict-pod-controller-serviceaccount-updates.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other-cel/restrict-pod-controller-serviceaccount-updates/restrict-pod-controller-serviceaccount-updates.yaml",
+   "last_commit_ts": 1720581998
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other-cel/restrict-sa-automount-sa-token/restrict-sa-automount-sa-token.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other-cel/restrict-sa-automount-sa-token/restrict-sa-automount-sa-token.yaml",
+   "last_commit_ts": 1723206870
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other-cel/restrict-secret-role-verbs/restrict-secret-role-verbs.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other-cel/restrict-secret-role-verbs/restrict-secret-role-verbs.yaml",
+   "last_commit_ts": 1720532973
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other-cel/restrict-secrets-by-name/restrict-secrets-by-name.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other-cel/restrict-secrets-by-name/restrict-secrets-by-name.yaml",
+   "last_commit_ts": 1723206870
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other-cel/restrict-service-port-range/restrict-service-port-range.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other-cel/restrict-service-port-range/restrict-service-port-range.yaml",
+   "last_commit_ts": 1720532973
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other-cel/restrict-storageclass/restrict-storageclass.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other-cel/restrict-storageclass/restrict-storageclass.yaml",
+   "last_commit_ts": 1720532973
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other-cel/restrict-usergroup-fsgroup-id/restrict-usergroup-fsgroup-id.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other-cel/restrict-usergroup-fsgroup-id/restrict-usergroup-fsgroup-id.yaml",
+   "last_commit_ts": 1723206870
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other-cel/restrict-wildcard-resources/restrict-wildcard-resources.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other-cel/restrict-wildcard-resources/restrict-wildcard-resources.yaml",
+   "last_commit_ts": 1720532973
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other-cel/restrict-wildcard-verbs/restrict-wildcard-verbs.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other-cel/restrict-wildcard-verbs/restrict-wildcard-verbs.yaml",
+   "last_commit_ts": 1720532973
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "other-cel/topologyspreadconstraints-policy/topologyspreadconstraints-policy.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/other-cel/topologyspreadconstraints-policy/topologyspreadconstraints-policy.yaml",
+   "last_commit_ts": 1723206870
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "pod-security/baseline/disallow-capabilities/disallow-capabilities.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/pod-security/baseline/disallow-capabilities/disallow-capabilities.yaml",
+   "last_commit_ts": 1725869276
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "pod-security/baseline/disallow-host-namespaces/disallow-host-namespaces.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/pod-security/baseline/disallow-host-namespaces/disallow-host-namespaces.yaml",
+   "last_commit_ts": 1725869276
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "pod-security/baseline/disallow-host-path/disallow-host-path.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/pod-security/baseline/disallow-host-path/disallow-host-path.yaml",
+   "last_commit_ts": 1725869276
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "pod-security/baseline/disallow-host-ports/disallow-host-ports.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/pod-security/baseline/disallow-host-ports/disallow-host-ports.yaml",
+   "last_commit_ts": 1725869276
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "pod-security/baseline/disallow-host-ports-range/disallow-host-ports-range.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/pod-security/baseline/disallow-host-ports-range/disallow-host-ports-range.yaml",
+   "last_commit_ts": 1725869276
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "pod-security/baseline/disallow-host-process/disallow-host-process.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/pod-security/baseline/disallow-host-process/disallow-host-process.yaml",
+   "last_commit_ts": 1725869276
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "pod-security/baseline/disallow-privileged-containers/disallow-privileged-containers.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/pod-security/baseline/disallow-privileged-containers/disallow-privileged-containers.yaml",
+   "last_commit_ts": 1725869276
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "pod-security/baseline/disallow-proc-mount/disallow-proc-mount.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/pod-security/baseline/disallow-proc-mount/disallow-proc-mount.yaml",
+   "last_commit_ts": 1725869276
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "pod-security/baseline/disallow-selinux/disallow-selinux.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/pod-security/baseline/disallow-selinux/disallow-selinux.yaml",
+   "last_commit_ts": 1725869276
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "pod-security/baseline/restrict-apparmor-profiles/restrict-apparmor-profiles.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/pod-security/baseline/restrict-apparmor-profiles/restrict-apparmor-profiles.yaml",
+   "last_commit_ts": 1755493963
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "pod-security/baseline/restrict-seccomp/restrict-seccomp.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/pod-security/baseline/restrict-seccomp/restrict-seccomp.yaml",
+   "last_commit_ts": 1725869276
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "pod-security/baseline/restrict-sysctls/restrict-sysctls.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/pod-security/baseline/restrict-sysctls/restrict-sysctls.yaml",
+   "last_commit_ts": 1725869276
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "pod-security/restricted/disallow-capabilities-strict/disallow-capabilities-strict.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/pod-security/restricted/disallow-capabilities-strict/disallow-capabilities-strict.yaml",
+   "last_commit_ts": 1725869276
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "pod-security/restricted/disallow-privilege-escalation/disallow-privilege-escalation.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/pod-security/restricted/disallow-privilege-escalation/disallow-privilege-escalation.yaml",
+   "last_commit_ts": 1725869276
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "pod-security/restricted/require-run-as-non-root-user/require-run-as-non-root-user.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/pod-security/restricted/require-run-as-non-root-user/require-run-as-non-root-user.yaml",
+   "last_commit_ts": 1725869276
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "pod-security/restricted/require-run-as-nonroot/require-run-as-nonroot.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/pod-security/restricted/require-run-as-nonroot/require-run-as-nonroot.yaml",
+   "last_commit_ts": 1725869276
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "pod-security/restricted/restrict-seccomp-strict/restrict-seccomp-strict.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/pod-security/restricted/restrict-seccomp-strict/restrict-seccomp-strict.yaml",
+   "last_commit_ts": 1725869276
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "pod-security/restricted/restrict-volume-types/restrict-volume-types.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/pod-security/restricted/restrict-volume-types/restrict-volume-types.yaml",
+   "last_commit_ts": 1725869276
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "pod-security/subrule/podsecurity-subrule-baseline/podsecurity-subrule-baseline.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/pod-security/subrule/podsecurity-subrule-baseline/podsecurity-subrule-baseline.yaml",
+   "last_commit_ts": 1725869276
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "pod-security/subrule/restricted/restricted-exclude-capabilities/restricted-exclude-capabilities.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/pod-security/subrule/restricted/restricted-exclude-capabilities/restricted-exclude-capabilities.yaml",
+   "last_commit_ts": 1725869276
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "pod-security/subrule/restricted/restricted-exclude-seccomp/restricted-exclude-seccomp.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/pod-security/subrule/restricted/restricted-exclude-seccomp/restricted-exclude-seccomp.yaml",
+   "last_commit_ts": 1725869276
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "pod-security/subrule/restricted/restricted-latest/restricted-latest.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/pod-security/subrule/restricted/restricted-latest/restricted-latest.yaml",
+   "last_commit_ts": 1725869276
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "pod-security-cel/baseline/disallow-capabilities/disallow-capabilities.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/pod-security-cel/baseline/disallow-capabilities/disallow-capabilities.yaml",
+   "last_commit_ts": 1724708600
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "pod-security-cel/baseline/disallow-host-namespaces/disallow-host-namespaces.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/pod-security-cel/baseline/disallow-host-namespaces/disallow-host-namespaces.yaml",
+   "last_commit_ts": 1724708600
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "pod-security-cel/baseline/disallow-host-path/disallow-host-path.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/pod-security-cel/baseline/disallow-host-path/disallow-host-path.yaml",
+   "last_commit_ts": 1724708600
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "pod-security-cel/baseline/disallow-host-ports/disallow-host-ports.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/pod-security-cel/baseline/disallow-host-ports/disallow-host-ports.yaml",
+   "last_commit_ts": 1761093357
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "pod-security-cel/baseline/disallow-host-ports-range/disallow-host-ports-range.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/pod-security-cel/baseline/disallow-host-ports-range/disallow-host-ports-range.yaml",
+   "last_commit_ts": 1724880509
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "pod-security-cel/baseline/disallow-host-process/disallow-host-process.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/pod-security-cel/baseline/disallow-host-process/disallow-host-process.yaml",
+   "last_commit_ts": 1724884200
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "pod-security-cel/baseline/disallow-privileged-containers/disallow-privileged-containers.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/pod-security-cel/baseline/disallow-privileged-containers/disallow-privileged-containers.yaml",
+   "last_commit_ts": 1724708600
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "pod-security-cel/baseline/disallow-proc-mount/disallow-proc-mount.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/pod-security-cel/baseline/disallow-proc-mount/disallow-proc-mount.yaml",
+   "last_commit_ts": 1724708600
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "pod-security-cel/baseline/disallow-selinux/disallow-selinux.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/pod-security-cel/baseline/disallow-selinux/disallow-selinux.yaml",
+   "last_commit_ts": 1724709089
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "pod-security-cel/baseline/restrict-seccomp/restrict-seccomp.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/pod-security-cel/baseline/restrict-seccomp/restrict-seccomp.yaml",
+   "last_commit_ts": 1724708600
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "pod-security-cel/baseline/restrict-sysctls/restrict-sysctls.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/pod-security-cel/baseline/restrict-sysctls/restrict-sysctls.yaml",
+   "last_commit_ts": 1724708600
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "pod-security-cel/restricted/disallow-capabilities-strict/disallow-capabilities-strict.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/pod-security-cel/restricted/disallow-capabilities-strict/disallow-capabilities-strict.yaml",
+   "last_commit_ts": 1756474544
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "pod-security-cel/restricted/disallow-privilege-escalation/disallow-privilege-escalation.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/pod-security-cel/restricted/disallow-privilege-escalation/disallow-privilege-escalation.yaml",
+   "last_commit_ts": 1728344350
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "pod-security-cel/restricted/require-run-as-non-root-user/require-run-as-non-root-user.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/pod-security-cel/restricted/require-run-as-non-root-user/require-run-as-non-root-user.yaml",
+   "last_commit_ts": 1720532973
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "pod-security-cel/restricted/require-run-as-nonroot/require-run-as-nonroot.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/pod-security-cel/restricted/require-run-as-nonroot/require-run-as-nonroot.yaml",
+   "last_commit_ts": 1761062665
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "pod-security-cel/restricted/restrict-seccomp-strict/restrict-seccomp-strict.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/pod-security-cel/restricted/restrict-seccomp-strict/restrict-seccomp-strict.yaml",
+   "last_commit_ts": 1782984701
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "pod-security-cel/restricted/restrict-volume-types/restrict-volume-types.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/pod-security-cel/restricted/restrict-volume-types/restrict-volume-types.yaml",
+   "last_commit_ts": 1720532973
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "psa/add-privileged-existing-namespaces/add-privileged-existing-namespaces.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/psa/add-privileged-existing-namespaces/add-privileged-existing-namespaces.yaml",
+   "last_commit_ts": 1665164287
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "psa/add-psa-labels/add-psa-labels.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/psa/add-psa-labels/add-psa-labels.yaml",
+   "last_commit_ts": 1670097670
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "psa/add-psa-namespace-reporting/add-psa-namespace-reporting.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/psa/add-psa-namespace-reporting/add-psa-namespace-reporting.yaml",
+   "last_commit_ts": 1725869276
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "psa/deny-privileged-profile/deny-privileged-profile.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/psa/deny-privileged-profile/deny-privileged-profile.yaml",
+   "last_commit_ts": 1725869276
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "psa-cel/add-psa-namespace-reporting/add-psa-namespace-reporting.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/psa-cel/add-psa-namespace-reporting/add-psa-namespace-reporting.yaml",
+   "last_commit_ts": 1723206870
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "psa-cel/deny-privileged-profile/deny-privileged-profile.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/psa-cel/deny-privileged-profile/deny-privileged-profile.yaml",
+   "last_commit_ts": 1721038005
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "psp-migration/add-apparmor/add-apparmor.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/psp-migration/add-apparmor/add-apparmor.yaml",
+   "last_commit_ts": 1711108020
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "psp-migration/add-capabilities/add-capabilities.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/psp-migration/add-capabilities/add-capabilities.yaml",
+   "last_commit_ts": 1711108020
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "psp-migration/add-runtimeClassName/add-runtimeClassName.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/psp-migration/add-runtimeClassName/add-runtimeClassName.yaml",
+   "last_commit_ts": 1684801904
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "psp-migration/check-supplemental-groups/check-supplemental-groups.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/psp-migration/check-supplemental-groups/check-supplemental-groups.yaml",
+   "last_commit_ts": 1725869276
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "psp-migration/restrict-adding-capabilities/restrict-adding-capabilities.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/psp-migration/restrict-adding-capabilities/restrict-adding-capabilities.yaml",
+   "last_commit_ts": 1725869276
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "psp-migration/restrict-runtimeClassName/restrict-runtimeClassName.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/psp-migration/restrict-runtimeClassName/restrict-runtimeClassName.yaml",
+   "last_commit_ts": 1684870486
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "psp-migration-cel/check-supplemental-groups/check-supplemental-groups.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/psp-migration-cel/check-supplemental-groups/check-supplemental-groups.yaml",
+   "last_commit_ts": 1723206870
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "psp-migration-cel/restrict-adding-capabilities/restrict-adding-capabilities.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/psp-migration-cel/restrict-adding-capabilities/restrict-adding-capabilities.yaml",
+   "last_commit_ts": 1723206870
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "psp-migration-cel/restrict-runtimeClassName/restrict-runtimeClassName.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/psp-migration-cel/restrict-runtimeClassName/restrict-runtimeClassName.yaml",
+   "last_commit_ts": 1722609888
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "tekton/block-tekton-task-runs/block-tekton-task-runs.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/tekton/block-tekton-task-runs/block-tekton-task-runs.yaml",
+   "last_commit_ts": 1725869276
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "tekton/require-tekton-bundle/require-tekton-bundle.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/tekton/require-tekton-bundle/require-tekton-bundle.yaml",
+   "last_commit_ts": 1725869276
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "tekton/require-tekton-namespace-pipelinerun/require-tekton-namespace-pipelinerun.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/tekton/require-tekton-namespace-pipelinerun/require-tekton-namespace-pipelinerun.yaml",
+   "last_commit_ts": 1725869276
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "tekton/require-tekton-securitycontext/require-tekton-securitycontext.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/tekton/require-tekton-securitycontext/require-tekton-securitycontext.yaml",
+   "last_commit_ts": 1725869276
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "tekton/verify-tekton-pipeline-bundle-signatures/verify-tekton-pipeline-bundle-signatures.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/tekton/verify-tekton-pipeline-bundle-signatures/verify-tekton-pipeline-bundle-signatures.yaml",
+   "last_commit_ts": 1725869276
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "tekton/verify-tekton-taskrun-signatures/verify-tekton-taskrun-signatures.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/tekton/verify-tekton-taskrun-signatures/verify-tekton-taskrun-signatures.yaml",
+   "last_commit_ts": 1725869276
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "tekton/verify-tekton-taskrun-vuln-scan/verify-tekton-taskrun-vuln-scan.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/tekton/verify-tekton-taskrun-vuln-scan/verify-tekton-taskrun-vuln-scan.yaml",
+   "last_commit_ts": 1725869276
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "tekton-cel/block-tekton-task-runs/block-tekton-task-runs.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/tekton-cel/block-tekton-task-runs/block-tekton-task-runs.yaml",
+   "last_commit_ts": 1722609888
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "tekton-cel/require-tekton-bundle/require-tekton-bundle.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/tekton-cel/require-tekton-bundle/require-tekton-bundle.yaml",
+   "last_commit_ts": 1725891097
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "traefik/disallow-default-tlsoptions/disallow-default-tlsoptions.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/traefik/disallow-default-tlsoptions/disallow-default-tlsoptions.yaml",
+   "last_commit_ts": 1725869276
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "traefik-cel/disallow-default-tlsoptions/disallow-default-tlsoptions.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/traefik-cel/disallow-default-tlsoptions/disallow-default-tlsoptions.yaml",
+   "last_commit_ts": 1721038005
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "velero/backup-all-volumes/backup-all-volumes.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/velero/backup-all-volumes/backup-all-volumes.yaml",
+   "last_commit_ts": 1680007378
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "velero/block-velero-restore/block-velero-restore.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/velero/block-velero-restore/block-velero-restore.yaml",
+   "last_commit_ts": 1725869276
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "velero/validate-cron-schedule/validate-cron-schedule.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/velero/validate-cron-schedule/validate-cron-schedule.yaml",
+   "last_commit_ts": 1725869276
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "velero-cel/block-velero-restore/block-velero-restore.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/velero-cel/block-velero-restore/block-velero-restore.yaml",
+   "last_commit_ts": 1722609888
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "velero-cel/validate-cron-schedule/validate-cron-schedule.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/velero-cel/validate-cron-schedule/validate-cron-schedule.yaml",
+   "last_commit_ts": 1722609888
+  },
+  {
+   "repo": "kyverno-policies",
+   "family": "kyverno",
+   "rel_path": "windows-security/require-run-as-containeruser/require-run-as-containeruser.yaml",
+   "abs_path": "data/rule_corpora/kyverno-policies/windows-security/require-run-as-containeruser/require-run-as-containeruser.yaml",
+   "last_commit_ts": 1725869276
+  }
+ ],
+ "note": "Partial clone (--filter=blob:none); commit == default-branch HEAD at clone time. last_commit_ts is the file's last commit (unix s) for the chronological split."
+}

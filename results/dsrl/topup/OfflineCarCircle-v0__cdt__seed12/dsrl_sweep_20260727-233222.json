@@ -1,0 +1,51 @@
+{
+  "created": "20260727-233222",
+  "device": "cuda",
+  "tasks": [
+    "OfflineCarCircle-v0"
+  ],
+  "learners": [
+    "cdt"
+  ],
+  "seeds": [
+    12
+  ],
+  "U": [
+    10,
+    20,
+    40
+  ],
+  "c_single": 40,
+  "c_saorl": 10,
+  "update_steps": 100000,
+  "runs": [
+    {
+      "task": "OfflineCarCircle-v0",
+      "learner": "cdt",
+      "reading": "single",
+      "target_cost": 40,
+      "seed": 12,
+      "U": [
+        10,
+        20,
+        40
+      ],
+      "status": "error",
+      "error": "ValueError(\"Expected parameter concentration (Tensor of shape (2,)) of distribution Dirichlet(concentration: torch.Size([2])) to satisfy the constraint IndependentConstraint(GreaterThan(lower_bound=0.0), 1), but found invalid values:\\ntensor([0., 0.], device='cuda:0')\")"
+    },
+    {
+      "task": "OfflineCarCircle-v0",
+      "learner": "cdt",
+      "reading": "saorl",
+      "target_cost": 10,
+      "seed": 12,
+      "U": [
+        10,
+        20,
+        40
+      ],
+      "status": "error",
+      "error": "ValueError(\"Expected parameter concentration (Tensor of shape (2,)) of distribution Dirichlet(concentration: torch.Size([2])) to satisfy the constraint IndependentConstraint(GreaterThan(lower_bound=0.0), 1), but found invalid values:\\ntensor([0., 0.], device='cuda:0')\")"
+    }
+  ]
+}

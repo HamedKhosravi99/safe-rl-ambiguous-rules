@@ -1,0 +1,68 @@
+{
+  "created": "20260728-095227",
+  "device": "cuda",
+  "tasks": [
+    "OfflineDroneCircle-v0"
+  ],
+  "learners": [
+    "bcql"
+  ],
+  "seeds": [
+    12
+  ],
+  "U": [
+    10,
+    20,
+    40
+  ],
+  "c_single": 40,
+  "c_saorl": 10,
+  "update_steps": 100000,
+  "runs": [
+    {
+      "raw_return": 921.6097202296371,
+      "raw_cost": 87.3,
+      "ep_length": 300.0,
+      "episode_len": 300,
+      "update_steps": 100000,
+      "eval_episodes": 20,
+      "max_epi_r": 996.38916015625,
+      "min_epi_r": 207.794189453125,
+      "train_sec": 3502.1,
+      "normalized_reward": 0.9051738310479723,
+      "normalized_cost_per_reading": {
+        "10": 8.73,
+        "20": 4.365,
+        "40": 2.1825
+      },
+      "worst_retained_normalized_cost": 8.73,
+      "satisfies_all_retained": false,
+      "task": "OfflineDroneCircle-v0",
+      "learner": "bcql",
+      "learner_long": "BCQ-Lagrangian",
+      "reading": "single",
+      "target_cost": 40,
+      "seed": 12,
+      "U": [
+        10,
+        20,
+        40
+      ],
+      "status": "ok"
+    },
+    {
+      "task": "OfflineDroneCircle-v0",
+      "learner": "bcql",
+      "reading": "saorl",
+      "target_cost": 10,
+      "seed": 12,
+      "U": [
+        10,
+        20,
+        40
+      ],
+      "status": "error",
+      "error": "RuntimeError('Pin memory thread exited unexpectedly')"
+    }
+  ]
+}

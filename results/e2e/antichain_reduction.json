@@ -1,0 +1,2593 @@
+{
+ "registration": "W6 antichain reduction",
+ "d_operating": 0.05,
+ "deltas": [
+  0.0,
+  0.01,
+  0.05,
+  0.1,
+  0.15
+ ],
+ "sanity_two_action": {
+  "n_downclosed": 3,
+  "rows": {
+   "0.0": {
+    "reduced": -0.0,
+    "full": -0.0,
+    "expected": 0.0,
+    "match": true
+   },
+   "0.1": {
+    "reduced": 0.1,
+    "full": 0.1,
+    "expected": 0.1,
+    "match": true
+   },
+   "0.3": {
+    "reduced": 0.3,
+    "full": 0.3,
+    "expected": 0.3,
+    "match": true
+   },
+   "0.7": {
+    "reduced": 0.7,
+    "full": 0.7,
+    "expected": 0.7,
+    "match": true
+   }
+  },
+  "downclosed_ok": true
+ },
+ "families": {
+  "prometheus": {
+   "n_pools": 88,
+   "n_readings_mean": 10.738636363636363,
+   "n_classes_mean": 10.738636363636363,
+   "width_max": 6,
+   "antichains_median": 72,
+   "antichains_max": 196,
+   "frac_le_64": 0.4318181818181818,
+   "frac_le_256": 1.0,
+   "reduction_median": 112.24024024024024,
+   "verified_n": 33,
+   "verified_all": true,
+   "price": {
+    "n_positive": 82,
+    "rel_min_positive": 0.022556390977443615,
+    "rel_max": 1.0,
+    "rel_median_positive": 0.6196919856459331
+   },
+   "pools": [
+    {
+     "name": "AlertmanagerFailedReload",
+     "n_readings": 3,
+     "n_classes": 3,
+     "n_antichains": 6,
+     "width": 2,
+     "v_best_single": 21.0,
+     "v_full": 20.0,
+     "poa": 1.0,
+     "rel_price": 0.047619047619047616,
+     "vstar": {
+      "0.0": 20.0,
+      "0.01": 20.01,
+      "0.05": 20.05,
+      "0.1": 20.1,
+      "0.15": 20.15
+     },
+     "verified": true
+    },
+    {
+     "name": "AlertmanagerConfigInconsistent",
+     "n_readings": 8,
+     "n_classes": 8,
+     "n_antichains": 73,
+     "width": 6,
+     "v_best_single": 2.105263157894737,
+     "v_full": -0.0,
+     "poa": 2.105263157894737,
+     "rel_price": 1.0,
+     "vstar": {
+      "0.0": -0.0,
+      "0.01": 0.28,
+      "0.05": 1.4000000000000001,
+      "0.1": 2.8000000000000003,
+      "0.15": 4.2
+     },
+     "verified": true
+    },
+    {
+     "name": "AlertmanagerClusterDown",
+     "n_readings": 16,
+     "n_classes": 16,
+     "n_antichains": 176,
+     "width": 5,
+     "v_best_single": 17.894736842105264,
+     "v_full": 1.25,
+     "poa": 16.644736842105264,
+     "rel_price": 0.9301470588235294,
+     "vstar": {
+      "0.0": 1.25,
+      "0.01": 1.5075000000000003,
+      "0.05": 2.5375000000000014,
+      "0.1": 3.8249999999999993,
+      "0.15": 5.112500000000001
+     },
+     "verified": null
+    },
+    {
+     "name": "AlertmanagerClusterCrashlooping",
+     "n_readings": 14,
+     "n_classes": 14,
+     "n_antichains": 144,
+     "width": 5,
+     "v_best_single": 15.789473684210527,
+     "v_full": 6.666666666666666,
+     "poa": 9.122807017543861,
+     "rel_price": 0.5777777777777778,
+     "vstar": {
+      "0.0": 6.666666666666666,
+      "0.01": 6.850000000000008,
+      "0.05": 7.583333333333342,
+      "0.1": 8.49999999999999,
+      "0.15": 9.416666666666677
+     },
+     "verified": null
+    },
+    {
+     "name": "AlertmanagerClusterFailedPeers",
+     "n_readings": 13,
+     "n_classes": 13,
+     "n_antichains": 57,
+     "width": 4,
+     "v_best_single": 21.0,
+     "v_full": 5.0,
+     "poa": 16.0,
+     "rel_price": 0.7619047619047619,
+     "vstar": {
+      "0.0": 5.0,
+      "0.01": 5.16,
+      "0.05": 5.8,
+      "0.1": 6.6000000000000005,
+      "0.15": 7.3999999999999995
+     },
+     "verified": null
+    },
+    {
+     "name": "NodeNetworkInterfaceFlapping",
+     "n_readings": 16,
+     "n_classes": 16,
+     "n_antichains": 117,
+     "width": 5,
+     "v_best_single": 29.473684210526315,
+     "v_full": 3.75,
+     "poa": 25.723684210526315,
+     "rel_price": 0.8727678571428571,
+     "vstar": {
+      "0.0": 3.75,
+      "0.01": 4.012499999999994,
+      "0.05": 5.062499999999992,
+      "0.1": 6.374999999999991,
+      "0.15": 7.687499999999992
+     },
+     "verified": null
+    },
+    {
+     "name": "KubeStateMetricsListErrors",
+     "n_readings": 16,
+     "n_classes": 16,
+     "n_antichains": 185,
+     "width": 5,
+     "v_best_single": 30.526315789473685,
+     "v_full": 10.0,
+     "poa": 20.526315789473685,
+     "rel_price": 0.6724137931034483,
+     "vstar": {
+      "0.0": 10.0,
+      "0.01": 10.209999999999999,
+      "0.05": 11.049999999999999,
+      "0.1": 12.1,
+      "0.15": 13.149999999999999
+     },
+     "verified": null
+    },
+    {
+     "name": "KubeStateMetricsWatchErrors",
+     "n_readings": 16,
+     "n_classes": 16,
+     "n_antichains": 185,
+     "width": 5,
+     "v_best_single": 30.526315789473685,
+     "v_full": 10.0,
+     "poa": 20.526315789473685,
+     "rel_price": 0.6724137931034483,
+     "vstar": {
+      "0.0": 10.0,
+      "0.01": 10.209999999999999,
+      "0.05": 11.049999999999999,
+      "0.1": 12.1,
+      "0.15": 13.149999999999999
+     },
+     "verified": null
+    },
+    {
+     "name": "KubeStateMetricsShardingMismatch",
+     "n_readings": 5,
+     "n_classes": 5,
+     "n_antichains": 11,
+     "width": 3,
+     "v_best_single": 2.105263157894737,
+     "v_full": -0.0,
+     "poa": 2.105263157894737,
+     "rel_price": 1.0,
+     "vstar": {
+      "0.0": -0.0,
+      "0.01": 0.22,
+      "0.05": 1.1,
+      "0.1": 2.2,
+      "0.15": 3.3
+     },
+     "verified": true
+    },
+    {
+     "name": "KubeStateMetricsShardsMissing",
+     "n_readings": 5,
+     "n_classes": 5,
+     "n_antichains": 11,
+     "width": 3,
+     "v_best_single": 2.105263157894737,
+     "v_full": -0.0,
+     "poa": 2.105263157894737,
+     "rel_price": 1.0,
+     "vstar": {
+      "0.0": -0.0,
+      "0.01": 0.22,
+      "0.05": 1.1,
+      "0.1": 2.2,
+      "0.15": 3.3
+     },
+     "verified": true
+    },
+    {
+     "name": "KubePodCrashLooping",
+     "n_readings": 17,
+     "n_classes": 17,
+     "n_antichains": 196,
+     "width": 5,
+     "v_best_single": 24.210526315789473,
+     "v_full": 1.25,
+     "poa": 22.960526315789473,
+     "rel_price": 0.9483695652173914,
+     "vstar": {
+      "0.0": 1.25,
+      "0.01": 1.537500000000013,
+      "0.05": 2.687500000000014,
+      "0.1": 4.124999999999971,
+      "0.15": 5.562500000000029
+     },
+     "verified": null
+    },
+    {
+     "name": "KubeDeploymentReplicasMismatch",
+     "n_readings": 2,
+     "n_classes": 2,
+     "n_antichains": 4,
+     "width": 2,
+     "v_best_single": 22.0,
+     "v_full": 22.0,
+     "poa": 0.0,
+     "rel_price": 0.0,
+     "vstar": {
+      "0.0": 22.0,
+      "0.01": 22.0,
+      "0.05": 22.0,
+      "0.1": 22.0,
+      "0.15": 22.0
+     },
+     "verified": true
+    },
+    {
+     "name": "KubeDeploymentRolloutStuck",
+     "n_readings": 5,
+     "n_classes": 5,
+     "n_antichains": 11,
+     "width": 3,
+     "v_best_single": 2.105263157894737,
+     "v_full": -0.0,
+     "poa": 2.105263157894737,
+     "rel_price": 1.0,
+     "vstar": {
+      "0.0": -0.0,
+      "0.01": 0.22,
+      "0.05": 1.1,
+      "0.1": 2.2,
+      "0.15": 3.3
+     },
+     "verified": true
+    },
+    {
+     "name": "KubeStatefulSetReplicasMismatch",
+     "n_readings": 2,
+     "n_classes": 2,
+     "n_antichains": 4,
+     "width": 2,
+     "v_best_single": 22.0,
+     "v_full": 22.0,
+     "poa": 0.0,
+     "rel_price": 0.0,
+     "vstar": {
+      "0.0": 22.0,
+      "0.01": 22.0,
+      "0.05": 22.0,
+      "0.1": 22.0,
+      "0.15": 22.0
+     },
+     "verified": true
+    },
+    {
+     "name": "KubeContainerWaiting",
+     "n_readings": 7,
+     "n_classes": 7,
+     "n_antichains": 8,
+     "width": 1,
+     "v_best_single": 22.0,
+     "v_full": 8.421052631578947,
+     "poa": 13.578947368421053,
+     "rel_price": 0.6172248803827751,
+     "vstar": {
+      "0.0": 8.421052631578947,
+      "0.01": 8.556842105263158,
+      "0.05": 9.1,
+      "0.1": 9.778947368421052,
+      "0.15": 10.457894736842105
+     },
+     "verified": true
+    },
+    {
+     "name": "KubeDaemonSetNotScheduled",
+     "n_readings": 13,
+     "n_classes": 13,
+     "n_antichains": 80,
+     "width": 5,
+     "v_best_single": 14.736842105263158,
+     "v_full": 6.25,
+     "poa": 8.486842105263158,
+     "rel_price": 0.5758928571428571,
+     "vstar": {
+      "0.0": 6.25,
+      "0.01": 6.407500000000001,
+      "0.05": 7.037500000000001,
+      "0.1": 7.824999999999999,
+      "0.15": 8.6125
+     },
+     "verified": null
+    },
+    {
+     "name": "KubeDaemonSetMisScheduled",
+     "n_readings": 13,
+     "n_classes": 13,
+     "n_antichains": 72,
+     "width": 5,
+     "v_best_single": 14.736842105263158,
+     "v_full": 6.25,
+     "poa": 8.486842105263158,
+     "rel_price": 0.5758928571428571,
+     "vstar": {
+      "0.0": 6.25,
+      "0.01": 6.407500000000003,
+      "0.05": 7.037500000000004,
+      "0.1": 7.824999999999981,
+      "0.15": 8.612500000000018
+     },
+     "verified": null
+    },
+    {
+     "name": "KubeJobNotCompleted",
+     "n_readings": 15,
+     "n_classes": 15,
+     "n_antichains": 69,
+     "width": 4,
+     "v_best_single": 24.210526315789473,
+     "v_full": 2.3529411764705883,
+     "poa": 21.857585139318886,
+     "rel_price": 0.9028132992327366,
+     "vstar": {
+      "0.0": 2.3529411764705883,
+      "0.01": 2.5894117647058827,
+      "0.05": 3.53529411764706,
+      "0.1": 4.717647058823529,
+      "0.15": 5.9
+     },
+     "verified": null
+    },
+    {
+     "name": "KubeJobFailed",
+     "n_readings": 13,
+     "n_classes": 13,
+     "n_antichains": 72,
+     "width": 5,
+     "v_best_single": 14.736842105263158,
+     "v_full": 6.25,
+     "poa": 8.486842105263158,
+     "rel_price": 0.5758928571428571,
+     "vstar": {
+      "0.0": 6.25,
+      "0.01": 6.407500000000003,
+      "0.05": 7.037500000000004,
+      "0.1": 7.824999999999981,
+      "0.15": 8.612500000000018
+     },
+     "verified": null
+    },
+    {
+     "name": "KubeHpaReplicasMismatch",
+     "n_readings": 2,
+     "n_classes": 2,
+     "n_antichains": 4,
+     "width": 2,
+     "v_best_single": 22.0,
+     "v_full": 22.0,
+     "poa": 0.0,
+     "rel_price": 0.0,
+     "vstar": {
+      "0.0": 22.0,
+      "0.01": 22.0,
+      "0.05": 22.0,
+      "0.1": 22.0,
+      "0.15": 22.0
+     },
+     "verified": true
+    },
+    {
+     "name": "KubePdbNotEnoughHealthyPods",
+     "n_readings": 13,
+     "n_classes": 13,
+     "n_antichains": 72,
+     "width": 5,
+     "v_best_single": 14.736842105263158,
+     "v_full": 6.25,
+     "poa": 8.486842105263158,
+     "rel_price": 0.5758928571428571,
+     "vstar": {
+      "0.0": 6.25,
+      "0.01": 6.407500000000003,
+      "0.05": 7.037500000000004,
+      "0.1": 7.824999999999981,
+      "0.15": 8.612500000000018
+     },
+     "verified": null
+    },
+    {
+     "name": "KubeCPUQuotaOvercommit",
+     "n_readings": 14,
+     "n_classes": 14,
+     "n_antichains": 69,
+     "width": 4,
+     "v_best_single": 26.0,
+     "v_full": 5.0,
+     "poa": 21.0,
+     "rel_price": 0.8076923076923077,
+     "vstar": {
+      "0.0": 5.0,
+      "0.01": 5.21,
+      "0.05": 6.05,
+      "0.1": 7.1000000000000005,
+      "0.15": 8.15
+     },
+     "verified": null
+    },
+    {
+     "name": "KubeMemoryQuotaOvercommit",
+     "n_readings": 14,
+     "n_classes": 14,
+     "n_antichains": 69,
+     "width": 4,
+     "v_best_single": 26.0,
+     "v_full": 5.0,
+     "poa": 21.0,
+     "rel_price": 0.8076923076923077,
+     "vstar": {
+      "0.0": 5.0,
+      "0.01": 5.21,
+      "0.05": 6.05,
+      "0.1": 7.1000000000000005,
+      "0.15": 8.15
+     },
+     "verified": null
+    },
+    {
+     "name": "KubePersistentVolumeErrors",
+     "n_readings": 13,
+     "n_classes": 13,
+     "n_antichains": 88,
+     "width": 5,
+     "v_best_single": 14.736842105263158,
+     "v_full": 6.25,
+     "poa": 8.486842105263158,
+     "rel_price": 0.5758928571428571,
+     "vstar": {
+      "0.0": 6.25,
+      "0.01": 6.407500000000001,
+      "0.05": 7.037500000000001,
+      "0.1": 7.824999999999999,
+      "0.15": 8.6125
+     },
+     "verified": null
+    },
+    {
+     "name": "KubeClientErrors",
+     "n_readings": 14,
+     "n_classes": 14,
+     "n_antichains": 130,
+     "width": 4,
+     "v_best_single": 17.894736842105264,
+     "v_full": 8.75,
+     "poa": 9.144736842105264,
+     "rel_price": 0.5110294117647058,
+     "vstar": {
+      "0.0": 8.75,
+      "0.01": 8.9125,
+      "0.05": 9.5625,
+      "0.1": 10.375,
+      "0.15": 11.1875
+     },
+     "verified": null
+    },
+    {
+     "name": "KubeAggregatedAPIErrors",
+     "n_readings": 12,
+     "n_classes": 12,
+     "n_antichains": 41,
+     "width": 4,
+     "v_best_single": 22.0,
+     "v_full": 5.882352941176471,
+     "poa": 16.11764705882353,
+     "rel_price": 0.7326203208556149,
+     "vstar": {
+      "0.0": 5.882352941176471,
+      "0.01": 6.043529411764706,
+      "0.05": 6.688235294117647,
+      "0.1": 7.494117647058824,
+      "0.15": 8.3
+     },
+     "verified": null
+    },
+    {
+     "name": "KubeAggregatedAPIDown",
+     "n_readings": 7,
+     "n_classes": 7,
+     "n_antichains": 9,
+     "width": 2,
+     "v_best_single": 26.0,
+     "v_full": 14.736842105263158,
+     "poa": 11.263157894736842,
+     "rel_price": 0.43319838056680166,
+     "vstar": {
+      "0.0": 14.736842105263158,
+      "0.01": 14.849473684210526,
+      "0.05": 15.299999999999999,
+      "0.1": 15.863157894736842,
+      "0.15": 16.426315789473684
+     },
+     "verified": true
+    },
+    {
+     "name": "KubeAPIInstanceUnreachable",
+     "n_readings": 2,
+     "n_classes": 2,
+     "n_antichains": 4,
+     "width": 2,
+     "v_best_single": 21.0,
+     "v_full": 16.666666666666668,
+     "poa": 4.333333333333332,
+     "rel_price": 0.20634920634920628,
+     "vstar": {
+      "0.0": 16.666666666666668,
+      "0.01": 16.711754385964912,
+      "0.05": 16.892105263157895,
+      "0.1": 17.117543859649125,
+      "0.15": 17.34298245614035
+     },
+     "verified": true
+    },
+    {
+     "name": "KubeAPITerminatedRequests",
+     "n_readings": 12,
+     "n_classes": 12,
+     "n_antichains": 50,
+     "width": 4,
+     "v_best_single": 16.842105263157894,
+     "v_full": 8.88888888888889,
+     "poa": 7.9532163742690045,
+     "rel_price": 0.47222222222222215,
+     "vstar": {
+      "0.0": 8.88888888888889,
+      "0.01": 9.05,
+      "0.05": 9.694444444444446,
+      "0.1": 10.5,
+      "0.15": 11.305555555555555
+     },
+     "verified": null
+    },
+    {
+     "name": "KubeletPlegDurationHigh",
+     "n_readings": 17,
+     "n_classes": 17,
+     "n_antichains": 157,
+     "width": 5,
+     "v_best_single": 28.421052631578945,
+     "v_full": 1.25,
+     "poa": 27.171052631578945,
+     "rel_price": 0.9560185185185185,
+     "vstar": {
+      "0.0": 1.25,
+      "0.01": 1.5274999999999999,
+      "0.05": 2.6375,
+      "0.1": 4.025,
+      "0.15": 5.4125
+     },
+     "verified": null
+    },
+    {
+     "name": "KubeletClientCertificateExpiration",
+     "n_readings": 7,
+     "n_classes": 7,
+     "n_antichains": 9,
+     "width": 2,
+     "v_best_single": 26.0,
+     "v_full": 14.736842105263158,
+     "poa": 11.263157894736842,
+     "rel_price": 0.43319838056680166,
+     "vstar": {
+      "0.0": 14.736842105263158,
+      "0.01": 14.849473684210526,
+      "0.05": 15.299999999999999,
+      "0.1": 15.863157894736842,
+      "0.15": 16.426315789473684
+     },
+     "verified": true
+    },
+    {
+     "name": "KubeletClientCertificateExpiration",
+     "n_readings": 8,
+     "n_classes": 8,
+     "n_antichains": 10,
+     "width": 2,
+     "v_best_single": 29.0,
+     "v_full": 3.1578947368421053,
+     "poa": 25.842105263157894,
+     "rel_price": 0.8911070780399274,
+     "vstar": {
+      "0.0": 3.1578947368421053,
+      "0.01": 3.416315789473684,
+      "0.05": 4.45,
+      "0.1": 5.742105263157895,
+      "0.15": 7.034210526315789
+     },
+     "verified": true
+    },
+    {
+     "name": "KubeletServerCertificateExpiration",
+     "n_readings": 7,
+     "n_classes": 7,
+     "n_antichains": 9,
+     "width": 2,
+     "v_best_single": 26.0,
+     "v_full": 14.736842105263158,
+     "poa": 11.263157894736842,
+     "rel_price": 0.43319838056680166,
+     "vstar": {
+      "0.0": 14.736842105263158,
+      "0.01": 14.849473684210526,
+      "0.05": 15.299999999999999,
+      "0.1": 15.863157894736842,
+      "0.15": 16.426315789473684
+     },
+     "verified": true
+    },
+    {
+     "name": "KubeletServerCertificateExpiration",
+     "n_readings": 8,
+     "n_classes": 8,
+     "n_antichains": 10,
+     "width": 2,
+     "v_best_single": 29.0,
+     "v_full": 3.1578947368421053,
+     "poa": 25.842105263157894,
+     "rel_price": 0.8911070780399274,
+     "vstar": {
+      "0.0": 3.1578947368421053,
+      "0.01": 3.416315789473684,
+      "0.05": 4.45,
+      "0.1": 5.742105263157895,
+      "0.15": 7.034210526315789
+     },
+     "verified": true
+    },
+    {
+     "name": "KubeletClientCertificateRenewalErrors",
+     "n_readings": 12,
+     "n_classes": 12,
+     "n_antichains": 37,
+     "width": 4,
+     "v_best_single": 22.0,
+     "v_full": 4.705882352941177,
+     "poa": 17.294117647058822,
+     "rel_price": 0.7860962566844919,
+     "vstar": {
+      "0.0": 4.705882352941177,
+      "0.01": 4.878823529411765,
+      "0.05": 5.570588235294117,
+      "0.1": 6.435294117647059,
+      "0.15": 7.3
+     },
+     "verified": null
+    },
+    {
+     "name": "KubeletServerCertificateRenewalErrors",
+     "n_readings": 12,
+     "n_classes": 12,
+     "n_antichains": 37,
+     "width": 4,
+     "v_best_single": 22.0,
+     "v_full": 4.705882352941177,
+     "poa": 17.294117647058822,
+     "rel_price": 0.7860962566844919,
+     "vstar": {
+      "0.0": 4.705882352941177,
+      "0.01": 4.878823529411765,
+      "0.05": 5.570588235294117,
+      "0.1": 6.435294117647059,
+      "0.15": 7.3
+     },
+     "verified": null
+    },
+    {
+     "name": "KubeletInstanceUnreachable",
+     "n_readings": 2,
+     "n_classes": 2,
+     "n_antichains": 4,
+     "width": 2,
+     "v_best_single": 21.0,
+     "v_full": 16.666666666666668,
+     "poa": 4.333333333333332,
+     "rel_price": 0.20634920634920628,
+     "vstar": {
+      "0.0": 16.666666666666668,
+      "0.01": 16.711754385964912,
+      "0.05": 16.892105263157895,
+      "0.1": 17.117543859649125,
+      "0.15": 17.34298245614035
+     },
+     "verified": true
+    },
+    {
+     "name": "KubeSchedulerInstanceUnreachable",
+     "n_readings": 2,
+     "n_classes": 2,
+     "n_antichains": 4,
+     "width": 2,
+     "v_best_single": 21.0,
+     "v_full": 16.666666666666668,
+     "poa": 4.333333333333332,
+     "rel_price": 0.20634920634920628,
+     "vstar": {
+      "0.0": 16.666666666666668,
+      "0.01": 16.711754385964912,
+      "0.05": 16.892105263157895,
+      "0.1": 17.117543859649125,
+      "0.15": 17.34298245614035
+     },
+     "verified": true
+    },
+    {
+     "name": "KubeControllerManagerInstanceUnreachable",
+     "n_readings": 2,
+     "n_classes": 2,
+     "n_antichains": 4,
+     "width": 2,
+     "v_best_single": 21.0,
+     "v_full": 16.666666666666668,
+     "poa": 4.333333333333332,
+     "rel_price": 0.20634920634920628,
+     "vstar": {
+      "0.0": 16.666666666666668,
+      "0.01": 16.711754385964912,
+      "0.05": 16.892105263157895,
+      "0.1": 17.117543859649125,
+      "0.15": 17.34298245614035
+     },
+     "verified": true
+    },
+    {
+     "name": "NodeFilesystemAlmostOutOfSpace",
+     "n_readings": 8,
+     "n_classes": 8,
+     "n_antichains": 12,
+     "width": 2,
+     "v_best_single": 29.0,
+     "v_full": 11.11111111111111,
+     "poa": 17.88888888888889,
+     "rel_price": 0.6168582375478927,
+     "vstar": {
+      "0.0": 11.11111111111111,
+      "0.01": 11.29,
+      "0.05": 12.005555555555555,
+      "0.1": 12.9,
+      "0.15": 13.794444444444444
+     },
+     "verified": true
+    },
+    {
+     "name": "NodeFilesystemAlmostOutOfSpace",
+     "n_readings": 8,
+     "n_classes": 8,
+     "n_antichains": 13,
+     "width": 2,
+     "v_best_single": 29.0,
+     "v_full": 11.11111111111111,
+     "poa": 17.88888888888889,
+     "rel_price": 0.6168582375478927,
+     "vstar": {
+      "0.0": 11.11111111111111,
+      "0.01": 11.29,
+      "0.05": 12.005555555555555,
+      "0.1": 12.9,
+      "0.15": 13.794444444444444
+     },
+     "verified": true
+    },
+    {
+     "name": "NodeFilesystemAlmostOutOfFiles",
+     "n_readings": 3,
+     "n_classes": 3,
+     "n_antichains": 4,
+     "width": 1,
+     "v_best_single": 29.0,
+     "v_full": 21.05263157894737,
+     "poa": 7.94736842105263,
+     "rel_price": 0.2740471869328493,
+     "vstar": {
+      "0.0": 21.05263157894737,
+      "0.01": 21.132105263157897,
+      "0.05": 21.45,
+      "0.1": 21.847368421052632,
+      "0.15": 22.244736842105265
+     },
+     "verified": true
+    },
+    {
+     "name": "NodeFilesystemAlmostOutOfFiles",
+     "n_readings": 3,
+     "n_classes": 3,
+     "n_antichains": 4,
+     "width": 1,
+     "v_best_single": 29.0,
+     "v_full": 21.05263157894737,
+     "poa": 7.94736842105263,
+     "rel_price": 0.2740471869328493,
+     "vstar": {
+      "0.0": 21.05263157894737,
+      "0.01": 21.132105263157897,
+      "0.05": 21.45,
+      "0.1": 21.847368421052632,
+      "0.15": 22.244736842105265
+     },
+     "verified": true
+    },
+    {
+     "name": "NodeNetworkReceiveErrs",
+     "n_readings": 7,
+     "n_classes": 7,
+     "n_antichains": 8,
+     "width": 1,
+     "v_best_single": 31.0,
+     "v_full": 12.631578947368421,
+     "poa": 18.36842105263158,
+     "rel_price": 0.5925297113752123,
+     "vstar": {
+      "0.0": 12.631578947368421,
+      "0.01": 12.815263157894737,
+      "0.05": 13.549999999999999,
+      "0.1": 14.46842105263158,
+      "0.15": 15.386842105263158
+     },
+     "verified": true
+    },
+    {
+     "name": "NodeNetworkTransmitErrs",
+     "n_readings": 7,
+     "n_classes": 7,
+     "n_antichains": 8,
+     "width": 1,
+     "v_best_single": 31.0,
+     "v_full": 12.631578947368421,
+     "poa": 18.36842105263158,
+     "rel_price": 0.5925297113752123,
+     "vstar": {
+      "0.0": 12.631578947368421,
+      "0.01": 12.815263157894737,
+      "0.05": 13.549999999999999,
+      "0.1": 14.46842105263158,
+      "0.15": 15.386842105263158
+     },
+     "verified": true
+    },
+    {
+     "name": "NodeHighNumberConntrackEntriesUsed",
+     "n_readings": 15,
+     "n_classes": 15,
+     "n_antichains": 156,
+     "width": 5,
+     "v_best_single": 20.0,
+     "v_full": 2.3529411764705883,
+     "poa": 17.647058823529413,
+     "rel_price": 0.8823529411764707,
+     "vstar": {
+      "0.0": 2.3529411764705883,
+      "0.01": 2.6394117647058826,
+      "0.05": 3.7852941176470605,
+      "0.1": 5.217647058823529,
+      "0.15": 6.65
+     },
+     "verified": null
+    },
+    {
+     "name": "NodeTextFileCollectorScrapeError",
+     "n_readings": 6,
+     "n_classes": 6,
+     "n_antichains": 48,
+     "width": 5,
+     "v_best_single": 28.0,
+     "v_full": 27.36842105263158,
+     "poa": 0.6315789473684212,
+     "rel_price": 0.022556390977443615,
+     "vstar": {
+      "0.0": 27.36842105263158,
+      "0.01": 27.374736842105264,
+      "0.05": 27.4,
+      "0.1": 27.431578947368422,
+      "0.15": 27.46315789473684
+     },
+     "verified": true
+    },
+    {
+     "name": "NodeClockNotSynchronising",
+     "n_readings": 17,
+     "n_classes": 17,
+     "n_antichains": 169,
+     "width": 5,
+     "v_best_single": 28.421052631578945,
+     "v_full": 1.3333333333333335,
+     "poa": 27.087719298245613,
+     "rel_price": 0.9530864197530865,
+     "vstar": {
+      "0.0": 1.3333333333333335,
+      "0.01": 1.61,
+      "0.05": 2.716666666666667,
+      "0.1": 4.1000000000000005,
+      "0.15": 5.483333333333333
+     },
+     "verified": null
+    },
+    {
+     "name": "NodeRAIDDiskFailure",
+     "n_readings": 13,
+     "n_classes": 13,
+     "n_antichains": 104,
+     "width": 5,
+     "v_best_single": 14.736842105263158,
+     "v_full": 5.882352941176471,
+     "poa": 8.854489164086687,
+     "rel_price": 0.6008403361344538,
+     "vstar": {
+      "0.0": 5.882352941176471,
+      "0.01": 6.043529411764707,
+      "0.05": 6.688235294117648,
+      "0.1": 7.4941176470588236,
+      "0.15": 8.3
+     },
+     "verified": null
+    },
+    {
+     "name": "NodeFileDescriptorLimit",
+     "n_readings": 16,
+     "n_classes": 16,
+     "n_antichains": 98,
+     "width": 4,
+     "v_best_single": 29.0,
+     "v_full": 2.5,
+     "poa": 26.5,
+     "rel_price": 0.9137931034482759,
+     "vstar": {
+      "0.0": 2.5,
+      "0.01": 2.765,
+      "0.05": 3.825,
+      "0.1": 5.15,
+      "0.15": 6.475
+     },
+     "verified": null
+    },
+    {
+     "name": "NodeFileDescriptorLimit",
+     "n_readings": 16,
+     "n_classes": 16,
+     "n_antichains": 98,
+     "width": 4,
+     "v_best_single": 29.0,
+     "v_full": 3.75,
+     "poa": 25.25,
+     "rel_price": 0.8706896551724138,
+     "vstar": {
+      "0.0": 3.75,
+      "0.01": 4.0024999999999995,
+      "0.05": 5.0125,
+      "0.1": 6.275,
+      "0.15": 7.5375
+     },
+     "verified": null
+    },
+    {
+     "name": "NodeCPUHighUsage",
+     "n_readings": 16,
+     "n_classes": 16,
+     "n_antichains": 99,
+     "width": 4,
+     "v_best_single": 29.0,
+     "v_full": 2.5,
+     "poa": 26.5,
+     "rel_price": 0.9137931034482759,
+     "vstar": {
+      "0.0": 2.5,
+      "0.01": 2.765,
+      "0.05": 3.825,
+      "0.1": 5.15,
+      "0.15": 6.475
+     },
+     "verified": null
+    },
+    {
+     "name": "NodeSystemSaturation",
+     "n_readings": 16,
+     "n_classes": 16,
+     "n_antichains": 113,
+     "width": 5,
+     "v_best_single": 30.0,
+     "v_full": 3.75,
+     "poa": 26.25,
+     "rel_price": 0.875,
+     "vstar": {
+      "0.0": 3.75,
+      "0.01": 4.0125,
+      "0.05": 5.0625,
+      "0.1": 6.375,
+      "0.15": 7.6875
+     },
+     "verified": null
+    },
+    {
+     "name": "NodeMemoryMajorPagesFaults",
+     "n_readings": 15,
+     "n_classes": 15,
+     "n_antichains": 93,
+     "width": 4,
+     "v_best_single": 25.263157894736842,
+     "v_full": 2.5,
+     "poa": 22.763157894736842,
+     "rel_price": 0.9010416666666666,
+     "vstar": {
+      "0.0": 2.5,
+      "0.01": 2.735,
+      "0.05": 3.675,
+      "0.1": 4.8500000000000005,
+      "0.15": 6.0249999999999995
+     },
+     "verified": null
+    },
+    {
+     "name": "NodeMemoryHighUtilization",
+     "n_readings": 16,
+     "n_classes": 16,
+     "n_antichains": 98,
+     "width": 4,
+     "v_best_single": 29.0,
+     "v_full": 3.75,
+     "poa": 25.25,
+     "rel_price": 0.8706896551724138,
+     "vstar": {
+      "0.0": 3.75,
+      "0.01": 4.0024999999999995,
+      "0.05": 5.0125,
+      "0.1": 6.275,
+      "0.15": 7.5375
+     },
+     "verified": null
+    },
+    {
+     "name": "NodeDiskIOSaturation",
+     "n_readings": 16,
+     "n_classes": 16,
+     "n_antichains": 106,
+     "width": 4,
+     "v_best_single": 29.0,
+     "v_full": 5.0,
+     "poa": 24.0,
+     "rel_price": 0.8275862068965517,
+     "vstar": {
+      "0.0": 5.0,
+      "0.01": 5.24,
+      "0.05": 6.2,
+      "0.1": 7.4,
+      "0.15": 8.6
+     },
+     "verified": null
+    },
+    {
+     "name": "NodeSystemdServiceFailed",
+     "n_readings": 6,
+     "n_classes": 6,
+     "n_antichains": 48,
+     "width": 5,
+     "v_best_single": 28.0,
+     "v_full": 27.36842105263158,
+     "poa": 0.6315789473684212,
+     "rel_price": 0.022556390977443615,
+     "vstar": {
+      "0.0": 27.36842105263158,
+      "0.01": 27.374736842105264,
+      "0.05": 27.4,
+      "0.1": 27.431578947368422,
+      "0.15": 27.46315789473684
+     },
+     "verified": true
+    },
+    {
+     "name": "NodeSystemdServiceCrashlooping",
+     "n_readings": 16,
+     "n_classes": 16,
+     "n_antichains": 113,
+     "width": 5,
+     "v_best_single": 30.0,
+     "v_full": 3.75,
+     "poa": 26.25,
+     "rel_price": 0.875,
+     "vstar": {
+      "0.0": 3.75,
+      "0.01": 4.0125,
+      "0.05": 5.0625,
+      "0.1": 6.375,
+      "0.15": 7.6875
+     },
+     "verified": null
+    },
+    {
+     "name": "NodeBondingDegraded",
+     "n_readings": 5,
+     "n_classes": 5,
+     "n_antichains": 11,
+     "width": 3,
+     "v_best_single": 2.105263157894737,
+     "v_full": -0.0,
+     "poa": 2.105263157894737,
+     "rel_price": 1.0,
+     "vstar": {
+      "0.0": -0.0,
+      "0.01": 0.22,
+      "0.05": 1.1,
+      "0.1": 2.2,
+      "0.15": 3.3
+     },
+     "verified": true
+    },
+    {
+     "name": "PrometheusBadConfig",
+     "n_readings": 2,
+     "n_classes": 2,
+     "n_antichains": 4,
+     "width": 2,
+     "v_best_single": 22.0,
+     "v_full": 22.0,
+     "poa": 0.0,
+     "rel_price": 0.0,
+     "vstar": {
+      "0.0": 22.0,
+      "0.01": 22.0,
+      "0.05": 22.0,
+      "0.1": 22.0,
+      "0.15": 22.0
+     },
+     "verified": true
+    },
+    {
+     "name": "PrometheusSDRefreshFailure",
+     "n_readings": 13,
+     "n_classes": 13,
+     "n_antichains": 72,
+     "width": 5,
+     "v_best_single": 14.736842105263158,
+     "v_full": 6.25,
+     "poa": 8.486842105263158,
+     "rel_price": 0.5758928571428571,
+     "vstar": {
+      "0.0": 6.25,
+      "0.01": 6.407500000000003,
+      "0.05": 7.037500000000004,
+      "0.1": 7.824999999999981,
+      "0.15": 8.612500000000018
+     },
+     "verified": null
+    },
+    {
+     "name": "PrometheusKubernetesListWatchFailures",
+     "n_readings": 13,
+     "n_classes": 13,
+     "n_antichains": 72,
+     "width": 5,
+     "v_best_single": 14.736842105263158,
+     "v_full": 6.25,
+     "poa": 8.486842105263158,
+     "rel_price": 0.5758928571428571,
+     "vstar": {
+      "0.0": 6.25,
+      "0.01": 6.407500000000003,
+      "0.05": 7.037500000000004,
+      "0.1": 7.824999999999981,
+      "0.15": 8.612500000000018
+     },
+     "verified": null
+    },
+    {
+     "name": "PrometheusErrorSendingAlertsToSomeAlertmanagers",
+     "n_readings": 16,
+     "n_classes": 16,
+     "n_antichains": 113,
+     "width": 5,
+     "v_best_single": 30.0,
+     "v_full": 7.5,
+     "poa": 22.5,
+     "rel_price": 0.75,
+     "vstar": {
+      "0.0": 7.5,
+      "0.01": 7.725,
+      "0.05": 8.625,
+      "0.1": 9.75,
+      "0.15": 10.875
+     },
+     "verified": null
+    },
+    {
+     "name": "PrometheusNotConnectedToAlertmanagers",
+     "n_readings": 8,
+     "n_classes": 8,
+     "n_antichains": 16,
+     "width": 3,
+     "v_best_single": 26.315789473684212,
+     "v_full": 8.421052631578947,
+     "poa": 17.894736842105267,
+     "rel_price": 0.6800000000000002,
+     "vstar": {
+      "0.0": 8.421052631578947,
+      "0.01": 8.636842105263158,
+      "0.05": 9.5,
+      "0.1": 10.578947368421051,
+      "0.15": 11.657894736842104
+     },
+     "verified": true
+    },
+    {
+     "name": "PrometheusTSDBReloadsFailing",
+     "n_readings": 6,
+     "n_classes": 6,
+     "n_antichains": 7,
+     "width": 1,
+     "v_best_single": 22.0,
+     "v_full": 8.421052631578947,
+     "poa": 13.578947368421053,
+     "rel_price": 0.6172248803827751,
+     "vstar": {
+      "0.0": 8.421052631578947,
+      "0.01": 8.556842105263158,
+      "0.05": 9.1,
+      "0.1": 9.778947368421052,
+      "0.15": 10.457894736842105
+     },
+     "verified": true
+    },
+    {
+     "name": "PrometheusTSDBCompactionsFailing",
+     "n_readings": 6,
+     "n_classes": 6,
+     "n_antichains": 7,
+     "width": 1,
+     "v_best_single": 22.0,
+     "v_full": 8.421052631578947,
+     "poa": 13.578947368421053,
+     "rel_price": 0.6172248803827751,
+     "vstar": {
+      "0.0": 8.421052631578947,
+      "0.01": 8.556842105263158,
+      "0.05": 9.1,
+      "0.1": 9.778947368421052,
+      "0.15": 10.457894736842105
+     },
+     "verified": true
+    },
+    {
+     "name": "PrometheusDuplicateTimestamps",
+     "n_readings": 13,
+     "n_classes": 13,
+     "n_antichains": 80,
+     "width": 5,
+     "v_best_single": 14.736842105263158,
+     "v_full": 6.25,
+     "poa": 8.486842105263158,
+     "rel_price": 0.5758928571428571,
+     "vstar": {
+      "0.0": 6.25,
+      "0.01": 6.407500000000001,
+      "0.05": 7.037500000000001,
+      "0.1": 7.824999999999999,
+      "0.15": 8.6125
+     },
+     "verified": null
+    },
+    {
+     "name": "PrometheusOutOfOrderTimestamps",
+     "n_readings": 13,
+     "n_classes": 13,
+     "n_antichains": 80,
+     "width": 5,
+     "v_best_single": 14.736842105263158,
+     "v_full": 6.25,
+     "poa": 8.486842105263158,
+     "rel_price": 0.5758928571428571,
+     "vstar": {
+      "0.0": 6.25,
+      "0.01": 6.407500000000001,
+      "0.05": 7.037500000000001,
+      "0.1": 7.824999999999999,
+      "0.15": 8.6125
+     },
+     "verified": null
+    },
+    {
+     "name": "PrometheusRemoteStorageFailures",
+     "n_readings": 16,
+     "n_classes": 16,
+     "n_antichains": 113,
+     "width": 5,
+     "v_best_single": 30.0,
+     "v_full": 7.5,
+     "poa": 22.5,
+     "rel_price": 0.75,
+     "vstar": {
+      "0.0": 7.5,
+      "0.01": 7.725,
+      "0.05": 8.625,
+      "0.1": 9.75,
+      "0.15": 10.875
+     },
+     "verified": null
+    },
+    {
+     "name": "PrometheusRemoteWriteBehind",
+     "n_readings": 15,
+     "n_classes": 15,
+     "n_antichains": 93,
+     "width": 4,
+     "v_best_single": 25.263157894736842,
+     "v_full": 2.5,
+     "poa": 22.763157894736842,
+     "rel_price": 0.9010416666666666,
+     "vstar": {
+      "0.0": 2.5,
+      "0.01": 2.735,
+      "0.05": 3.675,
+      "0.1": 4.8500000000000005,
+      "0.15": 6.0249999999999995
+     },
+     "verified": null
+    },
+    {
+     "name": "PrometheusRuleFailures",
+     "n_readings": 13,
+     "n_classes": 13,
+     "n_antichains": 72,
+     "width": 5,
+     "v_best_single": 14.736842105263158,
+     "v_full": 6.25,
+     "poa": 8.486842105263158,
+     "rel_price": 0.5758928571428571,
+     "vstar": {
+      "0.0": 6.25,
+      "0.01": 6.407500000000003,
+      "0.05": 7.037500000000004,
+      "0.1": 7.824999999999981,
+      "0.15": 8.612500000000018
+     },
+     "verified": null
+    },
+    {
+     "name": "PrometheusMissingRuleEvaluations",
+     "n_readings": 13,
+     "n_classes": 13,
+     "n_antichains": 72,
+     "width": 5,
+     "v_best_single": 14.736842105263158,
+     "v_full": 6.25,
+     "poa": 8.486842105263158,
+     "rel_price": 0.5758928571428571,
+     "vstar": {
+      "0.0": 6.25,
+      "0.01": 6.407500000000003,
+      "0.05": 7.037500000000004,
+      "0.1": 7.824999999999981,
+      "0.15": 8.612500000000018
+     },
+     "verified": null
+    },
+    {
+     "name": "PrometheusTargetLimitHit",
+     "n_readings": 13,
+     "n_classes": 13,
+     "n_antichains": 72,
+     "width": 5,
+     "v_best_single": 14.736842105263158,
+     "v_full": 6.25,
+     "poa": 8.486842105263158,
+     "rel_price": 0.5758928571428571,
+     "vstar": {
+      "0.0": 6.25,
+      "0.01": 6.407500000000003,
+      "0.05": 7.037500000000004,
+      "0.1": 7.824999999999981,
+      "0.15": 8.612500000000018
+     },
+     "verified": null
+    },
+    {
+     "name": "PrometheusLabelLimitHit",
+     "n_readings": 13,
+     "n_classes": 13,
+     "n_antichains": 72,
+     "width": 5,
+     "v_best_single": 14.736842105263158,
+     "v_full": 6.25,
+     "poa": 8.486842105263158,
+     "rel_price": 0.5758928571428571,
+     "vstar": {
+      "0.0": 6.25,
+      "0.01": 6.407500000000003,
+      "0.05": 7.037500000000004,
+      "0.1": 7.824999999999981,
+      "0.15": 8.612500000000018
+     },
+     "verified": null
+    },
+    {
+     "name": "PrometheusScrapeBodySizeLimitHit",
+     "n_readings": 13,
+     "n_classes": 13,
+     "n_antichains": 72,
+     "width": 5,
+     "v_best_single": 14.736842105263158,
+     "v_full": 6.25,
+     "poa": 8.486842105263158,
+     "rel_price": 0.5758928571428571,
+     "vstar": {
+      "0.0": 6.25,
+      "0.01": 6.407500000000003,
+      "0.05": 7.037500000000004,
+      "0.1": 7.824999999999981,
+      "0.15": 8.612500000000018
+     },
+     "verified": null
+    },
+    {
+     "name": "PrometheusScrapeSampleLimitHit",
+     "n_readings": 13,
+     "n_classes": 13,
+     "n_antichains": 72,
+     "width": 5,
+     "v_best_single": 14.736842105263158,
+     "v_full": 6.25,
+     "poa": 8.486842105263158,
+     "rel_price": 0.5758928571428571,
+     "vstar": {
+      "0.0": 6.25,
+      "0.01": 6.407500000000003,
+      "0.05": 7.037500000000004,
+      "0.1": 7.824999999999981,
+      "0.15": 8.612500000000018
+     },
+     "verified": null
+    },
+    {
+     "name": "PrometheusTargetSyncFailure",
+     "n_readings": 12,
+     "n_classes": 12,
+     "n_antichains": 56,
+     "width": 4,
+     "v_best_single": 14.736842105263158,
+     "v_full": 6.25,
+     "poa": 8.486842105263158,
+     "rel_price": 0.5758928571428571,
+     "vstar": {
+      "0.0": 6.25,
+      "0.01": 6.407499999999997,
+      "0.05": 7.037499999999995,
+      "0.1": 7.824999999999994,
+      "0.15": 8.612499999999995
+     },
+     "verified": null
+    },
+    {
+     "name": "PrometheusHighQueryLoad",
+     "n_readings": 17,
+     "n_classes": 17,
+     "n_antichains": 160,
+     "width": 5,
+     "v_best_single": 24.210526315789473,
+     "v_full": 6.25,
+     "poa": 17.960526315789473,
+     "rel_price": 0.7418478260869565,
+     "vstar": {
+      "0.0": 6.25,
+      "0.01": 6.4975000000000005,
+      "0.05": 7.487500000000002,
+      "0.1": 8.725,
+      "0.15": 9.9625
+     },
+     "verified": null
+    },
+    {
+     "name": "PrometheusErrorSendingAlertsToAnyAlertmanager",
+     "n_readings": 15,
+     "n_classes": 15,
+     "n_antichains": 131,
+     "width": 4,
+     "v_best_single": 29.0,
+     "v_full": 3.75,
+     "poa": 25.25,
+     "rel_price": 0.8706896551724138,
+     "vstar": {
+      "0.0": 3.75,
+      "0.01": 4.0024999999999995,
+      "0.05": 5.0125,
+      "0.1": 6.275,
+      "0.15": 7.5375
+     },
+     "verified": null
+    },
+    {
+     "name": "PrometheusOperatorListErrors",
+     "n_readings": 14,
+     "n_classes": 14,
+     "n_antichains": 80,
+     "width": 4,
+     "v_best_single": 24.210526315789473,
+     "v_full": 5.0,
+     "poa": 19.210526315789473,
+     "rel_price": 0.7934782608695652,
+     "vstar": {
+      "0.0": 5.0,
+      "0.01": 5.25,
+      "0.05": 6.250000000000002,
+      "0.1": 7.499999999999999,
+      "0.15": 8.75
+     },
+     "verified": null
+    },
+    {
+     "name": "PrometheusOperatorWatchErrors",
+     "n_readings": 14,
+     "n_classes": 14,
+     "n_antichains": 96,
+     "width": 5,
+     "v_best_single": 24.210526315789473,
+     "v_full": 5.0,
+     "poa": 19.210526315789473,
+     "rel_price": 0.7934782608695652,
+     "vstar": {
+      "0.0": 5.0,
+      "0.01": 5.25,
+      "0.05": 6.250000000000002,
+      "0.1": 7.499999999999999,
+      "0.15": 8.75
+     },
+     "verified": null
+    },
+    {
+     "name": "PrometheusOperatorSyncFailed",
+     "n_readings": 13,
+     "n_classes": 13,
+     "n_antichains": 80,
+     "width": 5,
+     "v_best_single": 14.736842105263158,
+     "v_full": 6.25,
+     "poa": 8.486842105263158,
+     "rel_price": 0.5758928571428571,
+     "vstar": {
+      "0.0": 6.25,
+      "0.01": 6.407500000000001,
+      "0.05": 7.037500000000001,
+      "0.1": 7.824999999999999,
+      "0.15": 8.6125
+     },
+     "verified": null
+    },
+    {
+     "name": "PrometheusOperatorReconcileErrors",
+     "n_readings": 13,
+     "n_classes": 13,
+     "n_antichains": 68,
+     "width": 4,
+     "v_best_single": 23.157894736842106,
+     "v_full": 8.75,
+     "poa": 14.407894736842106,
+     "rel_price": 0.6221590909090909,
+     "vstar": {
+      "0.0": 8.75,
+      "0.01": 8.9625,
+      "0.05": 9.812500000000002,
+      "0.1": 10.875,
+      "0.15": 11.9375
+     },
+     "verified": null
+    },
+    {
+     "name": "PrometheusOperatorStatusUpdateErrors",
+     "n_readings": 13,
+     "n_classes": 13,
+     "n_antichains": 68,
+     "width": 4,
+     "v_best_single": 23.157894736842106,
+     "v_full": 8.75,
+     "poa": 14.407894736842106,
+     "rel_price": 0.6221590909090909,
+     "vstar": {
+      "0.0": 8.75,
+      "0.01": 8.9625,
+      "0.05": 9.812500000000002,
+      "0.1": 10.875,
+      "0.15": 11.9375
+     },
+     "verified": null
+    },
+    {
+     "name": "PrometheusOperatorNodeLookupErrors",
+     "n_readings": 14,
+     "n_classes": 14,
+     "n_antichains": 92,
+     "width": 5,
+     "v_best_single": 23.157894736842106,
+     "v_full": 8.75,
+     "poa": 14.407894736842106,
+     "rel_price": 0.6221590909090909,
+     "vstar": {
+      "0.0": 8.75,
+      "0.01": 8.9625,
+      "0.05": 9.812500000000002,
+      "0.1": 10.875,
+      "0.15": 11.9375
+     },
+     "verified": null
+    },
+    {
+     "name": "PrometheusOperatorNotReady",
+     "n_readings": 2,
+     "n_classes": 2,
+     "n_antichains": 4,
+     "width": 2,
+     "v_best_single": 22.0,
+     "v_full": 22.0,
+     "poa": 0.0,
+     "rel_price": 0.0,
+     "vstar": {
+      "0.0": 22.0,
+      "0.01": 22.0,
+      "0.05": 22.0,
+      "0.1": 22.0,
+      "0.15": 22.0
+     },
+     "verified": true
+    },
+    {
+     "name": "PrometheusOperatorRejectedResources",
+     "n_readings": 14,
+     "n_classes": 14,
+     "n_antichains": 104,
+     "width": 5,
+     "v_best_single": 14.736842105263158,
+     "v_full": 6.25,
+     "poa": 8.486842105263158,
+     "rel_price": 0.5758928571428571,
+     "vstar": {
+      "0.0": 6.25,
+      "0.01": 6.407500000000001,
+      "0.05": 7.037500000000001,
+      "0.1": 7.824999999999999,
+      "0.15": 8.6125
+     },
+     "verified": null
+    },
+    {
+     "name": "ConfigReloaderSidecarErrors",
+     "n_readings": 1,
+     "n_classes": 1,
+     "n_antichains": 2,
+     "width": 1,
+     "v_best_single": 18.94736842105263,
+     "v_full": 18.94736842105263,
+     "poa": 0.0,
+     "rel_price": 0.0,
+     "vstar": {
+      "0.0": 18.94736842105263,
+      "0.01": 18.947894736842105,
+      "0.05": 18.95,
+      "0.1": 18.95263157894737,
+      "0.15": 18.955263157894734
+     },
+     "verified": true
+    }
+   ]
+  },
+  "kyverno": {
+   "n_pools": 44,
+   "n_readings_mean": 5.318181818181818,
+   "n_classes_mean": 5.318181818181818,
+   "width_max": 3,
+   "antichains_median": 8,
+   "antichains_max": 22,
+   "frac_le_64": 1.0,
+   "frac_le_256": 1.0,
+   "reduction_median": 4.0,
+   "verified_n": 44,
+   "verified_all": true,
+   "price": {
+    "n_positive": 44,
+    "rel_min_positive": 0.12280701754385959,
+    "rel_max": 0.5777777777777778,
+    "rel_median_positive": 0.3333333333333333
+   },
+   "pools": [
+    {
+     "name": "application-field-validation",
+     "n_readings": 5,
+     "n_classes": 5,
+     "n_antichains": 8,
+     "width": 2,
+     "v_best_single": 7.5,
+     "v_full": 5.0,
+     "poa": 2.5,
+     "rel_price": 0.3333333333333333,
+     "vstar": {
+      "0.0": 5.0,
+      "0.01": 5.03,
+      "0.05": 5.1499999999999995,
+      "0.1": 5.3,
+      "0.15": 5.45
+     },
+     "verified": true
+    },
+    {
+     "name": "application-field-validation",
+     "n_readings": 5,
+     "n_classes": 5,
+     "n_antichains": 8,
+     "width": 2,
+     "v_best_single": 7.5,
+     "v_full": 5.0,
+     "poa": 2.5,
+     "rel_price": 0.3333333333333333,
+     "vstar": {
+      "0.0": 5.0,
+      "0.01": 5.03,
+      "0.05": 5.1499999999999995,
+      "0.1": 5.3,
+      "0.15": 5.45
+     },
+     "verified": true
+    },
+    {
+     "name": "application-prevent-default-project",
+     "n_readings": 5,
+     "n_classes": 5,
+     "n_antichains": 8,
+     "width": 2,
+     "v_best_single": 7.5,
+     "v_full": 5.0,
+     "poa": 2.5,
+     "rel_price": 0.3333333333333333,
+     "vstar": {
+      "0.0": 5.0,
+      "0.01": 5.03,
+      "0.05": 5.1499999999999995,
+      "0.1": 5.3,
+      "0.15": 5.45
+     },
+     "verified": true
+    },
+    {
+     "name": "applicationset-name-matches-project",
+     "n_readings": 5,
+     "n_classes": 5,
+     "n_antichains": 8,
+     "width": 2,
+     "v_best_single": 7.5,
+     "v_full": 5.0,
+     "poa": 2.5,
+     "rel_price": 0.3333333333333333,
+     "vstar": {
+      "0.0": 5.0,
+      "0.01": 5.03,
+      "0.05": 5.1499999999999995,
+      "0.1": 5.3,
+      "0.15": 5.45
+     },
+     "verified": true
+    },
+    {
+     "name": "disallow-container-sock-mounts",
+     "n_readings": 5,
+     "n_classes": 5,
+     "n_antichains": 8,
+     "width": 2,
+     "v_best_single": 7.5,
+     "v_full": 5.0,
+     "poa": 2.5,
+     "rel_price": 0.3333333333333333,
+     "vstar": {
+      "0.0": 5.0,
+      "0.01": 5.03,
+      "0.05": 5.1499999999999995,
+      "0.1": 5.3,
+      "0.15": 5.45
+     },
+     "verified": true
+    },
+    {
+     "name": "disallow-container-sock-mounts",
+     "n_readings": 5,
+     "n_classes": 5,
+     "n_antichains": 8,
+     "width": 2,
+     "v_best_single": 7.5,
+     "v_full": 5.0,
+     "poa": 2.5,
+     "rel_price": 0.3333333333333333,
+     "vstar": {
+      "0.0": 5.0,
+      "0.01": 5.03,
+      "0.05": 5.1499999999999995,
+      "0.1": 5.3,
+      "0.15": 5.45
+     },
+     "verified": true
+    },
+    {
+     "name": "disallow-container-sock-mounts",
+     "n_readings": 5,
+     "n_classes": 5,
+     "n_antichains": 8,
+     "width": 2,
+     "v_best_single": 7.5,
+     "v_full": 5.0,
+     "poa": 2.5,
+     "rel_price": 0.3333333333333333,
+     "vstar": {
+      "0.0": 5.0,
+      "0.01": 5.03,
+      "0.05": 5.1499999999999995,
+      "0.1": 5.3,
+      "0.15": 5.45
+     },
+     "verified": true
+    },
+    {
+     "name": "disallow-container-sock-mounts",
+     "n_readings": 5,
+     "n_classes": 5,
+     "n_antichains": 8,
+     "width": 2,
+     "v_best_single": 7.5,
+     "v_full": 5.0,
+     "poa": 2.5,
+     "rel_price": 0.3333333333333333,
+     "vstar": {
+      "0.0": 5.0,
+      "0.01": 5.03,
+      "0.05": 5.1499999999999995,
+      "0.1": 5.3,
+      "0.15": 5.45
+     },
+     "verified": true
+    },
+    {
+     "name": "disallow-default-namespace",
+     "n_readings": 5,
+     "n_classes": 5,
+     "n_antichains": 8,
+     "width": 2,
+     "v_best_single": 7.5,
+     "v_full": 5.0,
+     "poa": 2.5,
+     "rel_price": 0.3333333333333333,
+     "vstar": {
+      "0.0": 5.0,
+      "0.01": 5.03,
+      "0.05": 5.1499999999999995,
+      "0.1": 5.3,
+      "0.15": 5.45
+     },
+     "verified": true
+    },
+    {
+     "name": "disallow-default-namespace",
+     "n_readings": 4,
+     "n_classes": 4,
+     "n_antichains": 5,
+     "width": 1,
+     "v_best_single": 5.0,
+     "v_full": 3.1578947368421053,
+     "poa": 1.8421052631578947,
+     "rel_price": 0.3684210526315789,
+     "vstar": {
+      "0.0": 3.1578947368421053,
+      "0.01": 3.2063157894736842,
+      "0.05": 3.4,
+      "0.1": 3.642105263157895,
+      "0.15": 3.8842105263157896
+     },
+     "verified": true
+    },
+    {
+     "name": "require-labels",
+     "n_readings": 6,
+     "n_classes": 6,
+     "n_antichains": 14,
+     "width": 3,
+     "v_best_single": 12.5,
+     "v_full": 6.25,
+     "poa": 6.25,
+     "rel_price": 0.5,
+     "vstar": {
+      "0.0": 6.25,
+      "0.01": 6.3275,
+      "0.05": 6.6375,
+      "0.1": 7.025,
+      "0.15": 7.4125
+     },
+     "verified": true
+    },
+    {
+     "name": "require-requests-limits",
+     "n_readings": 7,
+     "n_classes": 7,
+     "n_antichains": 14,
+     "width": 3,
+     "v_best_single": 10.0,
+     "v_full": 5.0,
+     "poa": 5.0,
+     "rel_price": 0.5,
+     "vstar": {
+      "0.0": 5.0,
+      "0.01": 5.09,
+      "0.05": 5.45,
+      "0.1": 5.9,
+      "0.15": 6.35
+     },
+     "verified": true
+    },
+    {
+     "name": "require-ro-rootfs",
+     "n_readings": 5,
+     "n_classes": 5,
+     "n_antichains": 8,
+     "width": 2,
+     "v_best_single": 7.5,
+     "v_full": 5.0,
+     "poa": 2.5,
+     "rel_price": 0.3333333333333333,
+     "vstar": {
+      "0.0": 5.0,
+      "0.01": 5.03,
+      "0.05": 5.1499999999999995,
+      "0.1": 5.3,
+      "0.15": 5.45
+     },
+     "verified": true
+    },
+    {
+     "name": "restrict-image-registries",
+     "n_readings": 7,
+     "n_classes": 7,
+     "n_antichains": 16,
+     "width": 3,
+     "v_best_single": 13.75,
+     "v_full": 6.25,
+     "poa": 7.5,
+     "rel_price": 0.5454545454545454,
+     "vstar": {
+      "0.0": 6.25,
+      "0.01": 6.3275,
+      "0.05": 6.6375,
+      "0.1": 7.025,
+      "0.15": 7.4125
+     },
+     "verified": true
+    },
+    {
+     "name": "restrict-nodeport",
+     "n_readings": 5,
+     "n_classes": 5,
+     "n_antichains": 8,
+     "width": 2,
+     "v_best_single": 7.5,
+     "v_full": 5.0,
+     "poa": 2.5,
+     "rel_price": 0.3333333333333333,
+     "vstar": {
+      "0.0": 5.0,
+      "0.01": 5.03,
+      "0.05": 5.1499999999999995,
+      "0.1": 5.3,
+      "0.15": 5.45
+     },
+     "verified": true
+    },
+    {
+     "name": "cert-manager-restrict-issuer",
+     "n_readings": 5,
+     "n_classes": 5,
+     "n_antichains": 8,
+     "width": 2,
+     "v_best_single": 7.5,
+     "v_full": 5.0,
+     "poa": 2.5,
+     "rel_price": 0.3333333333333333,
+     "vstar": {
+      "0.0": 5.0,
+      "0.01": 5.03,
+      "0.05": 5.1499999999999995,
+      "0.1": 5.3,
+      "0.15": 5.45
+     },
+     "verified": true
+    },
+    {
+     "name": "verify-flux-sources",
+     "n_readings": 6,
+     "n_classes": 6,
+     "n_antichains": 14,
+     "width": 3,
+     "v_best_single": 18.0,
+     "v_full": 15.789473684210527,
+     "poa": 2.2105263157894726,
+     "rel_price": 0.12280701754385959,
+     "vstar": {
+      "0.0": 15.789473684210527,
+      "0.01": 15.811578947368423,
+      "0.05": 15.9,
+      "0.1": 16.010526315789477,
+      "0.15": 16.121052631578948
+     },
+     "verified": true
+    },
+    {
+     "name": "service-mesh-require-run-as-nonroot",
+     "n_readings": 5,
+     "n_classes": 5,
+     "n_antichains": 8,
+     "width": 2,
+     "v_best_single": 7.5,
+     "v_full": 5.0,
+     "poa": 2.5,
+     "rel_price": 0.3333333333333333,
+     "vstar": {
+      "0.0": 5.0,
+      "0.01": 5.03,
+      "0.05": 5.1499999999999995,
+      "0.1": 5.3,
+      "0.15": 5.45
+     },
+     "verified": true
+    },
+    {
+     "name": "require-kubecost-labels",
+     "n_readings": 7,
+     "n_classes": 7,
+     "n_antichains": 16,
+     "width": 3,
+     "v_best_single": 13.75,
+     "v_full": 6.25,
+     "poa": 7.5,
+     "rel_price": 0.5454545454545454,
+     "vstar": {
+      "0.0": 6.25,
+      "0.01": 6.3275,
+      "0.05": 6.6375,
+      "0.1": 7.025,
+      "0.15": 7.4125
+     },
+     "verified": true
+    },
+    {
+     "name": "block-ephemeral-containers",
+     "n_readings": 5,
+     "n_classes": 5,
+     "n_antichains": 8,
+     "width": 2,
+     "v_best_single": 7.5,
+     "v_full": 5.0,
+     "poa": 2.5,
+     "rel_price": 0.3333333333333333,
+     "vstar": {
+      "0.0": 5.0,
+      "0.01": 5.03,
+      "0.05": 5.1499999999999995,
+      "0.1": 5.3,
+      "0.15": 5.45
+     },
+     "verified": true
+    },
+    {
+     "name": "check-env-vars",
+     "n_readings": 5,
+     "n_classes": 5,
+     "n_antichains": 8,
+     "width": 2,
+     "v_best_single": 7.5,
+     "v_full": 5.0,
+     "poa": 2.5,
+     "rel_price": 0.3333333333333333,
+     "vstar": {
+      "0.0": 5.0,
+      "0.01": 5.03,
+      "0.05": 5.1499999999999995,
+      "0.1": 5.3,
+      "0.15": 5.45
+     },
+     "verified": true
+    },
+    {
+     "name": "check-ingress-nginx-controller-version-and-annotation-policy",
+     "n_readings": 5,
+     "n_classes": 5,
+     "n_antichains": 8,
+     "width": 2,
+     "v_best_single": 7.5,
+     "v_full": 5.0,
+     "poa": 2.5,
+     "rel_price": 0.3333333333333333,
+     "vstar": {
+      "0.0": 5.0,
+      "0.01": 5.03,
+      "0.05": 5.1499999999999995,
+      "0.1": 5.3,
+      "0.15": 5.45
+     },
+     "verified": true
+    },
+    {
+     "name": "check-sa",
+     "n_readings": 5,
+     "n_classes": 5,
+     "n_antichains": 8,
+     "width": 2,
+     "v_best_single": 7.5,
+     "v_full": 5.0,
+     "poa": 2.5,
+     "rel_price": 0.3333333333333333,
+     "vstar": {
+      "0.0": 5.0,
+      "0.01": 5.03,
+      "0.05": 5.1499999999999995,
+      "0.1": 5.3,
+      "0.15": 5.45
+     },
+     "verified": true
+    },
+    {
+     "name": "check-serviceaccount-secrets",
+     "n_readings": 5,
+     "n_classes": 5,
+     "n_antichains": 8,
+     "width": 2,
+     "v_best_single": 7.5,
+     "v_full": 5.0,
+     "poa": 2.5,
+     "rel_price": 0.3333333333333333,
+     "vstar": {
+      "0.0": 5.0,
+      "0.01": 5.03,
+      "0.05": 5.1499999999999995,
+      "0.1": 5.3,
+      "0.15": 5.45
+     },
+     "verified": true
+    },
+    {
+     "name": "deny-secret-service-account-token-type",
+     "n_readings": 5,
+     "n_classes": 5,
+     "n_antichains": 8,
+     "width": 2,
+     "v_best_single": 7.5,
+     "v_full": 5.0,
+     "poa": 2.5,
+     "rel_price": 0.3333333333333333,
+     "vstar": {
+      "0.0": 5.0,
+      "0.01": 5.03,
+      "0.05": 5.1499999999999995,
+      "0.1": 5.3,
+      "0.15": 5.45
+     },
+     "verified": true
+    },
+    {
+     "name": "deployment-has-multiple-replicas",
+     "n_readings": 4,
+     "n_classes": 4,
+     "n_antichains": 5,
+     "width": 1,
+     "v_best_single": 6.25,
+     "v_full": 4.2105263157894735,
+     "poa": 2.0394736842105265,
+     "rel_price": 0.3263157894736842,
+     "vstar": {
+      "0.0": 4.2105263157894735,
+      "0.01": 4.238421052631579,
+      "0.05": 4.35,
+      "0.1": 4.489473684210526,
+      "0.15": 4.628947368421052
+     },
+     "verified": true
+    },
+    {
+     "name": "docker-socket-check",
+     "n_readings": 5,
+     "n_classes": 5,
+     "n_antichains": 8,
+     "width": 2,
+     "v_best_single": 7.5,
+     "v_full": 5.0,
+     "poa": 2.5,
+     "rel_price": 0.3333333333333333,
+     "vstar": {
+      "0.0": 5.0,
+      "0.01": 5.03,
+      "0.05": 5.1499999999999995,
+      "0.1": 5.3,
+      "0.15": 5.45
+     },
+     "verified": true
+    },
+    {
+     "name": "exclude-namespaces-example",
+     "n_readings": 6,
+     "n_classes": 6,
+     "n_antichains": 14,
+     "width": 3,
+     "v_best_single": 12.5,
+     "v_full": 6.25,
+     "poa": 6.25,
+     "rel_price": 0.5,
+     "vstar": {
+      "0.0": 6.25,
+      "0.01": 6.3275,
+      "0.05": 6.6375,
+      "0.1": 7.025,
+      "0.15": 7.4125
+     },
+     "verified": true
+    },
+    {
+     "name": "forbid-cpu-limits",
+     "n_readings": 7,
+     "n_classes": 7,
+     "n_antichains": 18,
+     "width": 3,
+     "v_best_single": 10.526315789473685,
+     "v_full": 4.444444444444445,
+     "poa": 6.08187134502924,
+     "rel_price": 0.5777777777777778,
+     "vstar": {
+      "0.0": 4.444444444444445,
+      "0.01": 4.54,
+      "0.05": 4.9222222222222225,
+      "0.1": 5.4,
+      "0.15": 5.877777777777778
+     },
+     "verified": true
+    },
+    {
+     "name": "limit-hostpath-type-pv",
+     "n_readings": 5,
+     "n_classes": 5,
+     "n_antichains": 8,
+     "width": 2,
+     "v_best_single": 7.5,
+     "v_full": 5.0,
+     "poa": 2.5,
+     "rel_price": 0.3333333333333333,
+     "vstar": {
+      "0.0": 5.0,
+      "0.01": 5.03,
+      "0.05": 5.1499999999999995,
+      "0.1": 5.3,
+      "0.15": 5.45
+     },
+     "verified": true
+    },
+    {
+     "name": "protect-node-label-foo",
+     "n_readings": 6,
+     "n_classes": 6,
+     "n_antichains": 10,
+     "width": 2,
+     "v_best_single": 10.526315789473685,
+     "v_full": 4.444444444444445,
+     "poa": 6.08187134502924,
+     "rel_price": 0.5777777777777778,
+     "vstar": {
+      "0.0": 4.444444444444445,
+      "0.01": 4.540000000000001,
+      "0.05": 4.9222222222222225,
+      "0.1": 5.3999999999999995,
+      "0.15": 5.877777777777778
+     },
+     "verified": true
+    },
+    {
+     "name": "require-cpu-limits",
+     "n_readings": 7,
+     "n_classes": 7,
+     "n_antichains": 22,
+     "width": 3,
+     "v_best_single": 12.5,
+     "v_full": 6.25,
+     "poa": 6.25,
+     "rel_price": 0.5,
+     "vstar": {
+      "0.0": 6.25,
+      "0.01": 6.3275,
+      "0.05": 6.6375,
+      "0.1": 7.025,
+      "0.15": 7.4125
+     },
+     "verified": true
+    },
+    {
+     "name": "time-bound-policy",
+     "n_readings": 6,
+     "n_classes": 6,
+     "n_antichains": 14,
+     "width": 3,
+     "v_best_single": 12.5,
+     "v_full": 6.25,
+     "poa": 6.25,
+     "rel_price": 0.5,
+     "vstar": {
+      "0.0": 6.25,
+      "0.01": 6.3275,
+      "0.05": 6.6375,
+      "0.1": 7.025,
+      "0.15": 7.4125
+     },
+     "verified": true
+    },
+    {
+     "name": "disallow-host-namespaces",
+     "n_readings": 5,
+     "n_classes": 5,
+     "n_antichains": 8,
+     "width": 2,
+     "v_best_single": 7.5,
+     "v_full": 5.0,
+     "poa": 2.5,
+     "rel_price": 0.3333333333333333,
+     "vstar": {
+      "0.0": 5.0,
+      "0.01": 5.03,
+      "0.05": 5.1499999999999995,
+      "0.1": 5.3,
+      "0.15": 5.45
+     },
+     "verified": true
+    },
+    {
+     "name": "disallow-host-path",
+     "n_readings": 5,
+     "n_classes": 5,
+     "n_antichains": 8,
+     "width": 2,
+     "v_best_single": 7.5,
+     "v_full": 5.0,
+     "poa": 2.5,
+     "rel_price": 0.3333333333333333,
+     "vstar": {
+      "0.0": 5.0,
+      "0.01": 5.03,
+      "0.05": 5.1499999999999995,
+      "0.1": 5.3,
+      "0.15": 5.45
+     },
+     "verified": true
+    },
+    {
+     "name": "disallow-host-ports",
+     "n_readings": 5,
+     "n_classes": 5,
+     "n_antichains": 8,
+     "width": 2,
+     "v_best_single": 7.5,
+     "v_full": 5.0,
+     "poa": 2.5,
+     "rel_price": 0.3333333333333333,
+     "vstar": {
+      "0.0": 5.0,
+      "0.01": 5.03,
+      "0.05": 5.1499999999999995,
+      "0.1": 5.3,
+      "0.15": 5.45
+     },
+     "verified": true
+    },
+    {
+     "name": "disallow-privilege-escalation",
+     "n_readings": 5,
+     "n_classes": 5,
+     "n_antichains": 8,
+     "width": 2,
+     "v_best_single": 7.5,
+     "v_full": 5.0,
+     "poa": 2.5,
+     "rel_price": 0.3333333333333333,
+     "vstar": {
+      "0.0": 5.0,
+      "0.01": 5.03,
+      "0.05": 5.1499999999999995,
+      "0.1": 5.3,
+      "0.15": 5.45
+     },
+     "verified": true
+    },
+    {
+     "name": "disallow-privileged-containers",
+     "n_readings": 5,
+     "n_classes": 5,
+     "n_antichains": 8,
+     "width": 2,
+     "v_best_single": 7.5,
+     "v_full": 5.0,
+     "poa": 2.5,
+     "rel_price": 0.3333333333333333,
+     "vstar": {
+      "0.0": 5.0,
+      "0.01": 5.03,
+      "0.05": 5.1499999999999995,
+      "0.1": 5.3,
+      "0.15": 5.45
+     },
+     "verified": true
+    },
+    {
+     "name": "require-run-as-nonroot",
+     "n_readings": 5,
+     "n_classes": 5,
+     "n_antichains": 8,
+     "width": 2,
+     "v_best_single": 7.5,
+     "v_full": 5.0,
+     "poa": 2.5,
+     "rel_price": 0.3333333333333333,
+     "vstar": {
+      "0.0": 5.0,
+      "0.01": 5.03,
+      "0.05": 5.1499999999999995,
+      "0.1": 5.3,
+      "0.15": 5.45
+     },
+     "verified": true
+    },
+    {
+     "name": "restrict-seccomp",
+     "n_readings": 5,
+     "n_classes": 5,
+     "n_antichains": 8,
+     "width": 2,
+     "v_best_single": 7.5,
+     "v_full": 5.0,
+     "poa": 2.5,
+     "rel_price": 0.3333333333333333,
+     "vstar": {
+      "0.0": 5.0,
+      "0.01": 5.03,
+      "0.05": 5.1499999999999995,
+      "0.1": 5.3,
+      "0.15": 5.45
+     },
+     "verified": true
+    },
+    {
+     "name": "restrict-seccomp-strict",
+     "n_readings": 5,
+     "n_classes": 5,
+     "n_antichains": 8,
+     "width": 2,
+     "v_best_single": 7.5,
+     "v_full": 5.0,
+     "poa": 2.5,
+     "rel_price": 0.3333333333333333,
+     "vstar": {
+      "0.0": 5.0,
+      "0.01": 5.03,
+      "0.05": 5.1499999999999995,
+      "0.1": 5.3,
+      "0.15": 5.45
+     },
+     "verified": true
+    },
+    {
+     "name": "restrict-sysctls",
+     "n_readings": 5,
+     "n_classes": 5,
+     "n_antichains": 8,
+     "width": 2,
+     "v_best_single": 7.5,
+     "v_full": 5.0,
+     "poa": 2.5,
+     "rel_price": 0.3333333333333333,
+     "vstar": {
+      "0.0": 5.0,
+      "0.01": 5.03,
+      "0.05": 5.1499999999999995,
+      "0.1": 5.3,
+      "0.15": 5.45
+     },
+     "verified": true
+    },
+    {
+     "name": "add-psa-namespace-reporting",
+     "n_readings": 6,
+     "n_classes": 6,
+     "n_antichains": 14,
+     "width": 3,
+     "v_best_single": 12.5,
+     "v_full": 6.25,
+     "poa": 6.25,
+     "rel_price": 0.5,
+     "vstar": {
+      "0.0": 6.25,
+      "0.01": 6.3275,
+      "0.05": 6.6375,
+      "0.1": 7.025,
+      "0.15": 7.4125
+     },
+     "verified": true
+    },
+    {
+     "name": "require-tekton-securitycontext",
+     "n_readings": 5,
+     "n_classes": 5,
+     "n_antichains": 8,
+     "width": 2,
+     "v_best_single": 7.5,
+     "v_full": 5.0,
+     "poa": 2.5,
+     "rel_price": 0.3333333333333333,
+     "vstar": {
+      "0.0": 5.0,
+      "0.01": 5.03,
+      "0.05": 5.1499999999999995,
+      "0.1": 5.3,
+      "0.15": 5.45
+     },
+     "verified": true
+    }
+   ]
+  }
+ }
+}

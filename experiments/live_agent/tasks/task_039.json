@@ -1,0 +1,17 @@
+{
+  "id": "task_039",
+  "question": "For which pharaoh was the Great Pyramid of Giza built?",
+  "source_docs": [
+    "ancient_egypt.txt"
+  ],
+  "rubric": [
+    [
+      "khufu"
+    ],
+    [
+      "giza",
+      "great pyramid"
+    ]
+  ],
+  "reference": "For the pharaoh Khufu (Great Pyramid of Giza)."
+}

@@ -1,0 +1,20 @@
+{
+  "id": "task_037",
+  "question": "What is reinforcement learning?",
+  "source_docs": [
+    "machine_learning.txt"
+  ],
+  "rubric": [
+    [
+      "agent"
+    ],
+    [
+      "reward"
+    ],
+    [
+      "action",
+      "actions"
+    ]
+  ],
+  "reference": "An agent learns actions that maximize a reward signal."
+}

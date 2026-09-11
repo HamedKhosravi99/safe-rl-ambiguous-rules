@@ -1,0 +1,156 @@
+{
+ "experiment": "CORSET-E2E v2: per-deployment public metric namespace",
+ "registered_before_outcome": true,
+ "note": "Committed before any TEST-split unit was evaluated. Development-split measurements informed the DSL grids, the metric-catalog design, and the score weights; the calibration split sets qhat and the OOD threshold; the test split is executed exactly once.",
+ "dsl": {
+  "dsl_version": "corset-e2e-dsl-v1",
+  "comparators": [
+   ">",
+   ">=",
+   "<",
+   "<=",
+   "==",
+   "!="
+  ],
+  "aggregations": [
+   "none",
+   "sum",
+   "avg",
+   "max",
+   "min",
+   "count"
+  ],
+  "rate_windows_s": [
+   "none",
+   60.0,
+   120.0,
+   180.0,
+   300.0,
+   600.0,
+   900.0,
+   1800.0,
+   3600.0,
+   7200.0,
+   10800.0,
+   21600.0,
+   43200.0,
+   86400.0
+  ],
+  "for_s": [
+   0.0,
+   60.0,
+   120.0,
+   180.0,
+   300.0,
+   600.0,
+   900.0,
+   1200.0,
+   1800.0,
+   3600.0,
+   7200.0,
+   14400.0,
+   21600.0,
+   43200.0,
+   86400.0,
+   604800.0
+  ],
+  "n_thresholds": 174,
+  "threshold_min": 0.0,
+  "threshold_max": 10000000000.0,
+  "dsl_hash": "42e29a62951e05201ef378ffd036fab62543add80299a50d4d8839cddcc6ea7d"
+ },
+ "code_hashes": {
+  "dsl/schema.py": "65829175654dd33b",
+  "generator/generate.py": "7cc3ff7f884dad01",
+  "generator/leak_audit.py": "3a4f14436d1a88ba",
+  "scoring/deterministic.py": "452e1ed4b877bfc6",
+  "calibration/run_e2e.py": "d282b7b3c1f61d15",
+  "source_grounded/build_stores.py": "5d573ff1c91eadb8",
+  "source_grounded/build_catalog.py": "f1d5b1c42b38d7b9",
+  "source_grounded/build_catalog_v2.py": "f47926ce92f630ca"
+ },
+ "split": {
+  "salt": "corset-e2e-split-v1",
+  "dev_repos": [
+   "awesome-prometheus-alerts",
+   "kube-prometheus"
+  ],
+  "n_repos": 13,
+  "n_rules": 9776,
+  "n_clusters": {
+   "dev": 120,
+   "cal": 431,
+   "test": 464
+  },
+  "n_rules_by_split": {
+   "dev": 1094,
+   "cal": 4292,
+   "test": 4390
+  },
+  "ledger_sha256": "ba76701f3b114d4a9de97cecec7123f8ad736efdde6bd58e25bc8ba427e03cc1"
+ },
+ "generator": {
+  "N_METRICS": 64,
+  "MIN_METRIC_SCORE": 0.08,
+  "modes": [
+   "complete (primary)",
+   "budgeted (efficiency ablation)"
+  ],
+  "catalog_source": "development split only"
+ },
+ "calibration": {
+  "delta_sem": 0.1,
+  "ood_target_recall": 0.8,
+  "conformal_rule": "qhat = k-th smallest gold score, k=floor(delta*(n+1))"
+ },
+ "primary_endpoints": [
+  "rho_gen on grammar-reachable test units (complete mode)",
+  "rho_ret_given_gen on test units",
+  "rho_e2e over all test units",
+  "OOD recall and false-abstention rate",
+  "|Uhat| and |Max(Uhat)| distributions"
+ ],
+ "go_no_go_gates": {
+  "leak_audit": "all five audits pass (MANDATORY)",
+  "rho_gen": "point >= 0.90 and cluster-bootstrap lower bound >= 0.85",
+  "conditional_retention": "clears nominal 0.90 within finite-sample uncertainty",
+  "ood_recall": ">= 0.80",
+  "false_abstention": "<= 0.25"
+ },
+ "failure_branches": {
+  "rho_gen_below_090": "report as a high-precision selective system; do not claim a viable end-to-end generator; diagnose by operator/feature/constant family",
+  "retention_miss": "report the miss; never recalibrate on the test split",
+  "set_size_large": "report |Uhat| and |Max(Uhat)| honestly as the efficiency cost of target-independence"
+ },
+ "not_executed_this_session": [
+  "WP-F: non-nested neural benchmark (3 families, ~30 configs, prescreen)",
+  "WP-G: vector-cost offline RL training",
+  "WP-H: 1000-episode fixed-policy certificates",
+  "WP-I: local authoritative query sweep"
+ ],
+ "supersedes": "v1 (registered @057094b); v1 outcome recorded before v2 was designed",
+ "change": "The v1 frozen test failed its primary generation gate: rho_gen 0.3587 [0.1913, 0.4786] against a >=0.90 threshold. Diagnosis on the v1 test artifacts showed 202/202 generation failures were metric-not-licensed and rho_gen tracked namespace overlap with the dev catalog. v2 replaces the dev-harvested catalog with the deployment's OWN metric namespace, built as a union over the repository's other source-file clusters so the unit's own cluster never contributes. No other component changed: the DSL, grids, score, weights, splits, and conformal rule are byte-identical.",
+ "leak_audit_v2": {
+  "scheme": "v2 leave-one-cluster-out (union over other clusters)",
+  "target_swap_invariance": {
+   "passed": true,
+   "n": 150,
+   "offenders": []
+  },
+  "canary": {
+   "passed": true,
+   "n": 150,
+   "offenders": []
+  },
+  "ALL_PASS": true
+ },
+ "v1_outcome": {
+  "rho_gen": 0.3587,
+  "rho_gen_lo": 0.1913,
+  "rho_ret_given_gen": 0.9735,
+  "rho_e2e": 0.0251,
+  "ood_recall": 0.8587,
+  "false_abstention": 0.7522,
+  "gate": "FAILED (rho_gen and false-abstention)"
+ }
+}

@@ -1,0 +1,87 @@
+{
+  "created": "20260728-043726",
+  "device": "cuda",
+  "tasks": [
+    "OfflineDroneCircle-v0"
+  ],
+  "learners": [
+    "caps"
+  ],
+  "seeds": [
+    7
+  ],
+  "U": [
+    10,
+    20,
+    40
+  ],
+  "c_single": 40,
+  "c_saorl": 10,
+  "update_steps": 100000,
+  "runs": [
+    {
+      "raw_return": 697.7616228280394,
+      "raw_cost": 35.7,
+      "ep_length": 300.0,
+      "episode_len": 300,
+      "update_steps": 100000,
+      "eval_episodes": 20,
+      "max_epi_r": 996.38916015625,
+      "min_epi_r": 207.794189453125,
+      "train_sec": 1870.2,
+      "target_cost": 40,
+      "num_heads": 5,
+      "normalized_reward": 0.6213169644463371,
+      "normalized_cost_per_reading": {
+        "10": 3.5700000000000003,
+        "20": 1.7850000000000001,
+        "40": 0.8925000000000001
+      },
+      "worst_retained_normalized_cost": 3.5700000000000003,
+      "satisfies_all_retained": false,
+      "task": "OfflineDroneCircle-v0",
+      "learner": "caps",
+      "learner_long": "CAPS",
+      "reading": "single",
+      "seed": 7,
+      "U": [
+        10,
+        20,
+        40
+      ],
+      "status": "ok"
+    },
+    {
+      "raw_return": 632.0356770877535,
+      "raw_cost": 5.6,
+      "ep_length": 300.0,
+      "episode_len": 300,
+      "update_steps": 100000,
+      "eval_episodes": 20,
+      "max_epi_r": 996.38916015625,
+      "min_epi_r": 207.794189453125,
+      "train_sec": 1870.2,
+      "target_cost": 10,
+      "num_heads": 5,
+      "normalized_reward": 0.5379713330613393,
+      "normalized_cost_per_reading": {
+        "10": 0.5599999999999999,
+        "20": 0.27999999999999997,
+        "40": 0.13999999999999999
+      },
+      "worst_retained_normalized_cost": 0.5599999999999999,
+      "satisfies_all_retained": true,
+      "task": "OfflineDroneCircle-v0",
+      "learner": "caps",
+      "learner_long": "CAPS",
+      "reading": "saorl",
+      "seed": 7,
+      "U": [
+        10,
+        20,
+        40
+      ],
+      "status": "ok"
+    }
+  ]
+}

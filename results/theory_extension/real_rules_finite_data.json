@@ -1,0 +1,1118 @@
+{
+ "d=0.02|bernstein": {
+  "per_n": {
+   "1e+04": {
+    "beta": 1.752990962475699,
+    "certified_among_sufficient": [
+     0,
+     220
+    ],
+    "false_certificates": [
+     0,
+     340
+    ]
+   },
+   "3.16e+04": {
+    "beta": 0.9089693581398002,
+    "certified_among_sufficient": [
+     0,
+     220
+    ],
+    "false_certificates": [
+     0,
+     340
+    ]
+   },
+   "1e+05": {
+    "beta": 0.4868245671513377,
+    "certified_among_sufficient": [
+     0,
+     220
+    ],
+    "false_certificates": [
+     0,
+     340
+    ]
+   },
+   "3.16e+05": {
+    "beta": 0.26580045571724753,
+    "certified_among_sufficient": [
+     0,
+     220
+    ],
+    "false_certificates": [
+     0,
+     340
+    ]
+   },
+   "1e+06": {
+    "beta": 0.14705880084972645,
+    "certified_among_sufficient": [
+     0,
+     220
+    ],
+    "false_certificates": [
+     0,
+     340
+    ]
+   },
+   "3.16e+06": {
+    "beta": 0.08186954093590956,
+    "certified_among_sufficient": [
+     0,
+     220
+    ],
+    "false_certificates": [
+     0,
+     340
+    ]
+   },
+   "1e+07": {
+    "beta": 0.045840871150585036,
+    "certified_among_sufficient": [
+     0,
+     220
+    ],
+    "false_certificates": [
+     0,
+     340
+    ]
+   },
+   "3.16e+07": {
+    "beta": 0.025694912008072227,
+    "certified_among_sufficient": [
+     0,
+     220
+    ],
+    "false_certificates": [
+     0,
+     340
+    ]
+   },
+   "1e+08": {
+    "beta": 0.014422346230675464,
+    "certified_among_sufficient": [
+     0,
+     220
+    ],
+    "false_certificates": [
+     0,
+     340
+    ]
+   },
+   "3.16e+08": {
+    "beta": 0.008104219008926989,
+    "certified_among_sufficient": [
+     0,
+     220
+    ],
+    "false_certificates": [
+     0,
+     340
+    ]
+   },
+   "1e+09": {
+    "beta": 0.0045544895437537765,
+    "certified_among_sufficient": [
+     220,
+     220
+    ],
+    "false_certificates": [
+     0,
+     340
+    ]
+   },
+   "3.16e+09": {
+    "beta": 0.002560665566861398,
+    "certified_among_sufficient": [
+     220,
+     220
+    ],
+    "false_certificates": [
+     0,
+     340
+    ]
+   },
+   "1e+10": {
+    "beta": 0.001439696964244096,
+    "certified_among_sufficient": [
+     220,
+     220
+    ],
+    "false_certificates": [
+     0,
+     340
+    ]
+   }
+  },
+  "n_star": {
+   "KubePodCrashLooping#5#1": {
+    "n_star": 1000000000.0,
+    "margin": 0.009212256219467843,
+    "n_star_margin2": 84865.66465312397
+   },
+   "KubeStateMetricsListErrors#3#1": {
+    "n_star": 1000000000.0,
+    "margin": 0.009212256219467843,
+    "n_star_margin2": 84865.66465312397
+   },
+   "KubeStateMetricsWatchErrors#4#1": {
+    "n_star": 1000000000.0,
+    "margin": 0.009212256219467843,
+    "n_star_margin2": 84865.66465312397
+   },
+   "NodeCPUHighUsage#9#1": {
+    "n_star": 1000000000.0,
+    "margin": 0.009212256219467843,
+    "n_star_margin2": 84865.66465312397
+   },
+   "NodeClockNotSynchronising#10#1": {
+    "n_star": 1000000000.0,
+    "margin": 0.009212256219467843,
+    "n_star_margin2": 84865.66465312397
+   },
+   "NodeDiskIOSaturation#11#1": {
+    "n_star": 1000000000.0,
+    "margin": 0.009212256219467843,
+    "n_star_margin2": 84865.66465312397
+   },
+   "NodeFileDescriptorLimit#12#1": {
+    "n_star": 1000000000.0,
+    "margin": 0.009212256219467843,
+    "n_star_margin2": 84865.66465312397
+   },
+   "NodeFileDescriptorLimit#13#1": {
+    "n_star": 1000000000.0,
+    "margin": 0.009212256219467843,
+    "n_star_margin2": 84865.66465312397
+   },
+   "NodeMemoryHighUtilization#14#1": {
+    "n_star": 1000000000.0,
+    "margin": 0.009212256219467843,
+    "n_star_margin2": 84865.66465312397
+   },
+   "NodeMemoryMajorPagesFaults#15#1": {
+    "n_star": 1000000000.0,
+    "margin": 0.009212256219467843,
+    "n_star_margin2": 84865.66465312397
+   },
+   "NodeSystemSaturation#16#1": {
+    "n_star": 1000000000.0,
+    "margin": 0.009212256219467843,
+    "n_star_margin2": 84865.66465312397
+   },
+   "NodeSystemdServiceCrashlooping#17#1": {
+    "n_star": 1000000000.0,
+    "margin": 0.009212256219467843,
+    "n_star_margin2": 84865.66465312397
+   },
+   "PrometheusErrorSendingAlertsToAnyAlertmanager#18#1": {
+    "n_star": 1000000000.0,
+    "margin": 0.009212256219467843,
+    "n_star_margin2": 84865.66465312397
+   },
+   "PrometheusErrorSendingAlertsToSomeAlertmanagers#19#1": {
+    "n_star": 1000000000.0,
+    "margin": 0.009212256219467843,
+    "n_star_margin2": 84865.66465312397
+   },
+   "PrometheusHighQueryLoad#20#1": {
+    "n_star": 1000000000.0,
+    "margin": 0.009212256219467843,
+    "n_star_margin2": 84865.66465312397
+   },
+   "PrometheusOperatorListErrors#23#1": {
+    "n_star": 1000000000.0,
+    "margin": 0.009212256219467843,
+    "n_star_margin2": 84865.66465312397
+   },
+   "PrometheusOperatorNodeLookupErrors#24#1": {
+    "n_star": 1000000000.0,
+    "margin": 0.009212256219467843,
+    "n_star_margin2": 84865.66465312397
+   },
+   "PrometheusOperatorReconcileErrors#25#1": {
+    "n_star": 1000000000.0,
+    "margin": 0.009212256219467843,
+    "n_star_margin2": 84865.66465312397
+   },
+   "PrometheusOperatorStatusUpdateErrors#26#1": {
+    "n_star": 1000000000.0,
+    "margin": 0.009212256219467843,
+    "n_star_margin2": 84865.66465312397
+   },
+   "PrometheusOperatorWatchErrors#27#1": {
+    "n_star": 1000000000.0,
+    "margin": 0.009212256219467843,
+    "n_star_margin2": 84865.66465312397
+   },
+   "PrometheusRemoteStorageFailures#21#1": {
+    "n_star": 1000000000.0,
+    "margin": 0.009212256219467843,
+    "n_star_margin2": 84865.66465312397
+   },
+   "PrometheusRemoteWriteBehind#22#1": {
+    "n_star": 1000000000.0,
+    "margin": 0.009212256219467843,
+    "n_star_margin2": 84865.66465312397
+   }
+  }
+ },
+ "d=0.05|weissman": {
+  "per_n": {
+   "1e+04": {
+    "beta": 1.2228848114875561,
+    "certified_among_sufficient": [
+     0,
+     270
+    ],
+    "false_certificates": [
+     0,
+     290
+    ]
+   },
+   "3.16e+04": {
+    "beta": 0.6877388934344724,
+    "certified_among_sufficient": [
+     0,
+     270
+    ],
+    "false_certificates": [
+     0,
+     290
+    ]
+   },
+   "1e+05": {
+    "beta": 0.38675493941729444,
+    "certified_among_sufficient": [
+     0,
+     270
+    ],
+    "false_certificates": [
+     0,
+     290
+    ]
+   },
+   "3.16e+05": {
+    "beta": 0.21748691525956085,
+    "certified_among_sufficient": [
+     0,
+     270
+    ],
+    "false_certificates": [
+     0,
+     290
+    ]
+   },
+   "1e+06": {
+    "beta": 0.12230180018866142,
+    "certified_among_sufficient": [
+     0,
+     270
+    ],
+    "false_certificates": [
+     0,
+     290
+    ]
+   },
+   "3.16e+06": {
+    "beta": 0.06877530054685656,
+    "certified_among_sufficient": [
+     0,
+     270
+    ],
+    "false_certificates": [
+     0,
+     290
+    ]
+   },
+   "1e+07": {
+    "beta": 0.038675189202157643,
+    "certified_among_sufficient": [
+     0,
+     270
+    ],
+    "false_certificates": [
+     0,
+     290
+    ]
+   },
+   "3.16e+07": {
+    "beta": 0.02174865646138807,
+    "certified_among_sufficient": [
+     220,
+     270
+    ],
+    "false_certificates": [
+     0,
+     290
+    ]
+   },
+   "1e+08": {
+    "beta": 0.012230168114818207,
+    "certified_among_sufficient": [
+     220,
+     270
+    ],
+    "false_certificates": [
+     0,
+     290
+    ]
+   },
+   "3.16e+08": {
+    "beta": 0.00687752889544747,
+    "certified_among_sufficient": [
+     220,
+     270
+    ],
+    "false_certificates": [
+     0,
+     290
+    ]
+   },
+   "1e+09": {
+    "beta": 0.0038675186961452173,
+    "certified_among_sufficient": [
+     220,
+     270
+    ],
+    "false_certificates": [
+     0,
+     290
+    ]
+   },
+   "3.16e+09": {
+    "beta": 0.0021748655903544036,
+    "certified_among_sufficient": [
+     220,
+     270
+    ],
+    "false_certificates": [
+     0,
+     290
+    ]
+   },
+   "1e+10": {
+    "beta": 0.0012230167981606439,
+    "certified_among_sufficient": [
+     270,
+     270
+    ],
+    "false_certificates": [
+     0,
+     290
+    ]
+   }
+  },
+  "n_star": {
+   "AlertmanagerClusterCrashlooping#0#1": {
+    "n_star": 10000000000.0,
+    "margin": 0.0028320318196519215,
+    "n_star_margin2": 80204.04227520974
+   },
+   "AlertmanagerClusterDown#1#1": {
+    "n_star": 10000000000.0,
+    "margin": 0.0028320318196519215,
+    "n_star_margin2": 80204.04227520974
+   },
+   "KubeCPUQuotaOvercommit#6#1": {
+    "n_star": 10000000000.0,
+    "margin": 0.0028320318196519215,
+    "n_star_margin2": 80204.04227520974
+   },
+   "KubeMemoryQuotaOvercommit#7#1": {
+    "n_star": 10000000000.0,
+    "margin": 0.0028320318196519215,
+    "n_star_margin2": 80204.04227520974
+   },
+   "KubePodCrashLooping#5#1": {
+    "n_star": 31622776.60168379,
+    "margin": 0.03366299800984027,
+    "n_star_margin2": 35834.849332938444
+   },
+   "KubeStateMetricsListErrors#3#1": {
+    "n_star": 31622776.60168379,
+    "margin": 0.03366299800984027,
+    "n_star_margin2": 35834.849332938444
+   },
+   "KubeStateMetricsWatchErrors#4#1": {
+    "n_star": 31622776.60168379,
+    "margin": 0.03366299800984027,
+    "n_star_margin2": 35834.849332938444
+   },
+   "KubeletPlegDurationHigh#8#1": {
+    "n_star": 10000000000.0,
+    "margin": 0.0028320318196519215,
+    "n_star_margin2": 80204.04227520974
+   },
+   "NodeCPUHighUsage#9#1": {
+    "n_star": 31622776.60168379,
+    "margin": 0.03366299800984027,
+    "n_star_margin2": 35834.849332938444
+   },
+   "NodeClockNotSynchronising#10#1": {
+    "n_star": 31622776.60168379,
+    "margin": 0.03366299800984027,
+    "n_star_margin2": 35834.849332938444
+   },
+   "NodeDiskIOSaturation#11#1": {
+    "n_star": 31622776.60168379,
+    "margin": 0.03366299800984027,
+    "n_star_margin2": 35834.849332938444
+   },
+   "NodeFileDescriptorLimit#12#1": {
+    "n_star": 31622776.60168379,
+    "margin": 0.03366299800984027,
+    "n_star_margin2": 35834.849332938444
+   },
+   "NodeFileDescriptorLimit#13#1": {
+    "n_star": 31622776.60168379,
+    "margin": 0.03366299800984027,
+    "n_star_margin2": 35834.849332938444
+   },
+   "NodeMemoryHighUtilization#14#1": {
+    "n_star": 31622776.60168379,
+    "margin": 0.03366299800984027,
+    "n_star_margin2": 35834.849332938444
+   },
+   "NodeMemoryMajorPagesFaults#15#1": {
+    "n_star": 31622776.60168379,
+    "margin": 0.03366299800984027,
+    "n_star_margin2": 35834.849332938444
+   },
+   "NodeSystemSaturation#16#1": {
+    "n_star": 31622776.60168379,
+    "margin": 0.03366299800984027,
+    "n_star_margin2": 35834.849332938444
+   },
+   "NodeSystemdServiceCrashlooping#17#1": {
+    "n_star": 31622776.60168379,
+    "margin": 0.03366299800984027,
+    "n_star_margin2": 35834.849332938444
+   },
+   "PrometheusErrorSendingAlertsToAnyAlertmanager#18#1": {
+    "n_star": 31622776.60168379,
+    "margin": 0.03366299800984027,
+    "n_star_margin2": 35834.849332938444
+   },
+   "PrometheusErrorSendingAlertsToSomeAlertmanagers#19#1": {
+    "n_star": 31622776.60168379,
+    "margin": 0.03366299800984027,
+    "n_star_margin2": 35834.849332938444
+   },
+   "PrometheusHighQueryLoad#20#1": {
+    "n_star": 31622776.60168379,
+    "margin": 0.03366299800984027,
+    "n_star_margin2": 35834.849332938444
+   },
+   "PrometheusOperatorListErrors#23#1": {
+    "n_star": 31622776.60168379,
+    "margin": 0.03366299800984027,
+    "n_star_margin2": 35834.849332938444
+   },
+   "PrometheusOperatorNodeLookupErrors#24#1": {
+    "n_star": 31622776.60168379,
+    "margin": 0.03366299800984027,
+    "n_star_margin2": 35834.849332938444
+   },
+   "PrometheusOperatorReconcileErrors#25#1": {
+    "n_star": 31622776.60168379,
+    "margin": 0.03366299800984027,
+    "n_star_margin2": 35834.849332938444
+   },
+   "PrometheusOperatorStatusUpdateErrors#26#1": {
+    "n_star": 31622776.60168379,
+    "margin": 0.03366299800984027,
+    "n_star_margin2": 35834.849332938444
+   },
+   "PrometheusOperatorWatchErrors#27#1": {
+    "n_star": 31622776.60168379,
+    "margin": 0.03366299800984027,
+    "n_star_margin2": 35834.849332938444
+   },
+   "PrometheusRemoteStorageFailures#21#1": {
+    "n_star": 31622776.60168379,
+    "margin": 0.03366299800984027,
+    "n_star_margin2": 35834.849332938444
+   },
+   "PrometheusRemoteWriteBehind#22#1": {
+    "n_star": 31622776.60168379,
+    "margin": 0.03366299800984027,
+    "n_star_margin2": 35834.849332938444
+   }
+  }
+ },
+ "d=0.05|bernstein": {
+  "per_n": {
+   "1e+04": {
+    "beta": 1.752990962475699,
+    "certified_among_sufficient": [
+     0,
+     270
+    ],
+    "false_certificates": [
+     0,
+     290
+    ]
+   },
+   "3.16e+04": {
+    "beta": 0.9089693581398002,
+    "certified_among_sufficient": [
+     0,
+     270
+    ],
+    "false_certificates": [
+     0,
+     290
+    ]
+   },
+   "1e+05": {
+    "beta": 0.4868245671513377,
+    "certified_among_sufficient": [
+     0,
+     270
+    ],
+    "false_certificates": [
+     0,
+     290
+    ]
+   },
+   "3.16e+05": {
+    "beta": 0.26580045571724753,
+    "certified_among_sufficient": [
+     0,
+     270
+    ],
+    "false_certificates": [
+     0,
+     290
+    ]
+   },
+   "1e+06": {
+    "beta": 0.14705880084972645,
+    "certified_among_sufficient": [
+     0,
+     270
+    ],
+    "false_certificates": [
+     0,
+     290
+    ]
+   },
+   "3.16e+06": {
+    "beta": 0.08186954093590956,
+    "certified_among_sufficient": [
+     0,
+     270
+    ],
+    "false_certificates": [
+     0,
+     290
+    ]
+   },
+   "1e+07": {
+    "beta": 0.045840871150585036,
+    "certified_among_sufficient": [
+     0,
+     270
+    ],
+    "false_certificates": [
+     0,
+     290
+    ]
+   },
+   "3.16e+07": {
+    "beta": 0.025694912008072227,
+    "certified_among_sufficient": [
+     220,
+     270
+    ],
+    "false_certificates": [
+     0,
+     290
+    ]
+   },
+   "1e+08": {
+    "beta": 0.014422346230675464,
+    "certified_among_sufficient": [
+     220,
+     270
+    ],
+    "false_certificates": [
+     0,
+     290
+    ]
+   },
+   "3.16e+08": {
+    "beta": 0.008104219008926989,
+    "certified_among_sufficient": [
+     220,
+     270
+    ],
+    "false_certificates": [
+     0,
+     290
+    ]
+   },
+   "1e+09": {
+    "beta": 0.0045544895437537765,
+    "certified_among_sufficient": [
+     220,
+     270
+    ],
+    "false_certificates": [
+     0,
+     290
+    ]
+   },
+   "3.16e+09": {
+    "beta": 0.002560665566861398,
+    "certified_among_sufficient": [
+     220,
+     270
+    ],
+    "false_certificates": [
+     0,
+     290
+    ]
+   },
+   "1e+10": {
+    "beta": 0.001439696964244096,
+    "certified_among_sufficient": [
+     270,
+     270
+    ],
+    "false_certificates": [
+     0,
+     290
+    ]
+   }
+  },
+  "n_star": {
+   "AlertmanagerClusterCrashlooping#0#1": {
+    "n_star": 10000000000.0,
+    "margin": 0.0028320318196519215,
+    "n_star_margin2": 80204.04227520974
+   },
+   "AlertmanagerClusterDown#1#1": {
+    "n_star": 10000000000.0,
+    "margin": 0.0028320318196519215,
+    "n_star_margin2": 80204.04227520974
+   },
+   "KubeCPUQuotaOvercommit#6#1": {
+    "n_star": 10000000000.0,
+    "margin": 0.0028320318196519215,
+    "n_star_margin2": 80204.04227520974
+   },
+   "KubeMemoryQuotaOvercommit#7#1": {
+    "n_star": 10000000000.0,
+    "margin": 0.0028320318196519215,
+    "n_star_margin2": 80204.04227520974
+   },
+   "KubePodCrashLooping#5#1": {
+    "n_star": 31622776.60168379,
+    "margin": 0.03366299800984027,
+    "n_star_margin2": 35834.849332938444
+   },
+   "KubeStateMetricsListErrors#3#1": {
+    "n_star": 31622776.60168379,
+    "margin": 0.03366299800984027,
+    "n_star_margin2": 35834.849332938444
+   },
+   "KubeStateMetricsWatchErrors#4#1": {
+    "n_star": 31622776.60168379,
+    "margin": 0.03366299800984027,
+    "n_star_margin2": 35834.849332938444
+   },
+   "KubeletPlegDurationHigh#8#1": {
+    "n_star": 10000000000.0,
+    "margin": 0.0028320318196519215,
+    "n_star_margin2": 80204.04227520974
+   },
+   "NodeCPUHighUsage#9#1": {
+    "n_star": 31622776.60168379,
+    "margin": 0.03366299800984027,
+    "n_star_margin2": 35834.849332938444
+   },
+   "NodeClockNotSynchronising#10#1": {
+    "n_star": 31622776.60168379,
+    "margin": 0.03366299800984027,
+    "n_star_margin2": 35834.849332938444
+   },
+   "NodeDiskIOSaturation#11#1": {
+    "n_star": 31622776.60168379,
+    "margin": 0.03366299800984027,
+    "n_star_margin2": 35834.849332938444
+   },
+   "NodeFileDescriptorLimit#12#1": {
+    "n_star": 31622776.60168379,
+    "margin": 0.03366299800984027,
+    "n_star_margin2": 35834.849332938444
+   },
+   "NodeFileDescriptorLimit#13#1": {
+    "n_star": 31622776.60168379,
+    "margin": 0.03366299800984027,
+    "n_star_margin2": 35834.849332938444
+   },
+   "NodeMemoryHighUtilization#14#1": {
+    "n_star": 31622776.60168379,
+    "margin": 0.03366299800984027,
+    "n_star_margin2": 35834.849332938444
+   },
+   "NodeMemoryMajorPagesFaults#15#1": {
+    "n_star": 31622776.60168379,
+    "margin": 0.03366299800984027,
+    "n_star_margin2": 35834.849332938444
+   },
+   "NodeSystemSaturation#16#1": {
+    "n_star": 31622776.60168379,
+    "margin": 0.03366299800984027,
+    "n_star_margin2": 35834.849332938444
+   },
+   "NodeSystemdServiceCrashlooping#17#1": {
+    "n_star": 31622776.60168379,
+    "margin": 0.03366299800984027,
+    "n_star_margin2": 35834.849332938444
+   },
+   "PrometheusErrorSendingAlertsToAnyAlertmanager#18#1": {
+    "n_star": 31622776.60168379,
+    "margin": 0.03366299800984027,
+    "n_star_margin2": 35834.849332938444
+   },
+   "PrometheusErrorSendingAlertsToSomeAlertmanagers#19#1": {
+    "n_star": 31622776.60168379,
+    "margin": 0.03366299800984027,
+    "n_star_margin2": 35834.849332938444
+   },
+   "PrometheusHighQueryLoad#20#1": {
+    "n_star": 31622776.60168379,
+    "margin": 0.03366299800984027,
+    "n_star_margin2": 35834.849332938444
+   },
+   "PrometheusOperatorListErrors#23#1": {
+    "n_star": 31622776.60168379,
+    "margin": 0.03366299800984027,
+    "n_star_margin2": 35834.849332938444
+   },
+   "PrometheusOperatorNodeLookupErrors#24#1": {
+    "n_star": 31622776.60168379,
+    "margin": 0.03366299800984027,
+    "n_star_margin2": 35834.849332938444
+   },
+   "PrometheusOperatorReconcileErrors#25#1": {
+    "n_star": 31622776.60168379,
+    "margin": 0.03366299800984027,
+    "n_star_margin2": 35834.849332938444
+   },
+   "PrometheusOperatorStatusUpdateErrors#26#1": {
+    "n_star": 31622776.60168379,
+    "margin": 0.03366299800984027,
+    "n_star_margin2": 35834.849332938444
+   },
+   "PrometheusOperatorWatchErrors#27#1": {
+    "n_star": 31622776.60168379,
+    "margin": 0.03366299800984027,
+    "n_star_margin2": 35834.849332938444
+   },
+   "PrometheusRemoteStorageFailures#21#1": {
+    "n_star": 31622776.60168379,
+    "margin": 0.03366299800984027,
+    "n_star_margin2": 35834.849332938444
+   },
+   "PrometheusRemoteWriteBehind#22#1": {
+    "n_star": 31622776.60168379,
+    "margin": 0.03366299800984027,
+    "n_star_margin2": 35834.849332938444
+   }
+  }
+ },
+ "d=0.1|bernstein": {
+  "per_n": {
+   "1e+04": {
+    "beta": 1.752990962475699,
+    "certified_among_sufficient": [
+     0,
+     280
+    ],
+    "false_certificates": [
+     0,
+     280
+    ]
+   },
+   "3.16e+04": {
+    "beta": 0.9089693581398002,
+    "certified_among_sufficient": [
+     0,
+     280
+    ],
+    "false_certificates": [
+     0,
+     280
+    ]
+   },
+   "1e+05": {
+    "beta": 0.4868245671513377,
+    "certified_among_sufficient": [
+     0,
+     280
+    ],
+    "false_certificates": [
+     0,
+     280
+    ]
+   },
+   "3.16e+05": {
+    "beta": 0.26580045571724753,
+    "certified_among_sufficient": [
+     0,
+     280
+    ],
+    "false_certificates": [
+     0,
+     280
+    ]
+   },
+   "1e+06": {
+    "beta": 0.14705880084972645,
+    "certified_among_sufficient": [
+     0,
+     280
+    ],
+    "false_certificates": [
+     0,
+     280
+    ]
+   },
+   "3.16e+06": {
+    "beta": 0.08186954093590956,
+    "certified_among_sufficient": [
+     0,
+     280
+    ],
+    "false_certificates": [
+     0,
+     280
+    ]
+   },
+   "1e+07": {
+    "beta": 0.045840871150585036,
+    "certified_among_sufficient": [
+     220,
+     280
+    ],
+    "false_certificates": [
+     0,
+     280
+    ]
+   },
+   "3.16e+07": {
+    "beta": 0.025694912008072227,
+    "certified_among_sufficient": [
+     220,
+     280
+    ],
+    "false_certificates": [
+     0,
+     280
+    ]
+   },
+   "1e+08": {
+    "beta": 0.014422346230675464,
+    "certified_among_sufficient": [
+     270,
+     280
+    ],
+    "false_certificates": [
+     0,
+     280
+    ]
+   },
+   "3.16e+08": {
+    "beta": 0.008104219008926989,
+    "certified_among_sufficient": [
+     280,
+     280
+    ],
+    "false_certificates": [
+     0,
+     280
+    ]
+   },
+   "1e+09": {
+    "beta": 0.0045544895437537765,
+    "certified_among_sufficient": [
+     280,
+     280
+    ],
+    "false_certificates": [
+     0,
+     280
+    ]
+   },
+   "3.16e+09": {
+    "beta": 0.002560665566861398,
+    "certified_among_sufficient": [
+     280,
+     280
+    ],
+    "false_certificates": [
+     0,
+     280
+    ]
+   },
+   "1e+10": {
+    "beta": 0.001439696964244096,
+    "certified_among_sufficient": [
+     280,
+     280
+    ],
+    "false_certificates": [
+     0,
+     280
+    ]
+   }
+  },
+  "n_star": {
+   "AlertmanagerClusterCrashlooping#0#1": {
+    "n_star": 100000000.0,
+    "margin": 0.025990167980514484,
+    "n_star_margin2": 67548.88316553603
+   },
+   "AlertmanagerClusterDown#1#1": {
+    "n_star": 100000000.0,
+    "margin": 0.025990167980514484,
+    "n_star_margin2": 67548.88316553603
+   },
+   "KubeCPUQuotaOvercommit#6#1": {
+    "n_star": 100000000.0,
+    "margin": 0.025990167980514484,
+    "n_star_margin2": 67548.88316553603
+   },
+   "KubeMemoryQuotaOvercommit#7#1": {
+    "n_star": 100000000.0,
+    "margin": 0.025990167980514484,
+    "n_star_margin2": 67548.88316553603
+   },
+   "KubePodCrashLooping#5#1": {
+    "n_star": 10000000.0,
+    "margin": 0.07446437689859617,
+    "n_star_margin2": 55449.43426896183
+   },
+   "KubeStateMetricsListErrors#3#1": {
+    "n_star": 10000000.0,
+    "margin": 0.07446437689859617,
+    "n_star_margin2": 55449.43426896183
+   },
+   "KubeStateMetricsWatchErrors#4#1": {
+    "n_star": 10000000.0,
+    "margin": 0.07446437689859617,
+    "n_star_margin2": 55449.43426896183
+   },
+   "KubeletPlegDurationHigh#8#1": {
+    "n_star": 100000000.0,
+    "margin": 0.025990167980514484,
+    "n_star_margin2": 67548.88316553603
+   },
+   "NodeCPUHighUsage#9#1": {
+    "n_star": 10000000.0,
+    "margin": 0.07446437689859617,
+    "n_star_margin2": 55449.43426896183
+   },
+   "NodeClockNotSynchronising#10#1": {
+    "n_star": 10000000.0,
+    "margin": 0.07446437689859617,
+    "n_star_margin2": 55449.43426896183
+   },
+   "NodeDiskIOSaturation#11#1": {
+    "n_star": 10000000.0,
+    "margin": 0.07446437689859617,
+    "n_star_margin2": 55449.43426896183
+   },
+   "NodeFileDescriptorLimit#12#1": {
+    "n_star": 10000000.0,
+    "margin": 0.07446437689859617,
+    "n_star_margin2": 55449.43426896183
+   },
+   "NodeFileDescriptorLimit#13#1": {
+    "n_star": 10000000.0,
+    "margin": 0.07446437689859617,
+    "n_star_margin2": 55449.43426896183
+   },
+   "NodeMemoryHighUtilization#14#1": {
+    "n_star": 10000000.0,
+    "margin": 0.07446437689859617,
+    "n_star_margin2": 55449.43426896183
+   },
+   "NodeMemoryMajorPagesFaults#15#1": {
+    "n_star": 10000000.0,
+    "margin": 0.07446437689859617,
+    "n_star_margin2": 55449.43426896183
+   },
+   "NodeNetworkInterfaceFlapping#2#0": {
+    "n_star": 316227766.01683795,
+    "margin": 0.014639851596683795,
+    "n_star_margin2": 67775.59651783173
+   },
+   "NodeSystemSaturation#16#1": {
+    "n_star": 10000000.0,
+    "margin": 0.07446437689859617,
+    "n_star_margin2": 55449.43426896183
+   },
+   "NodeSystemdServiceCrashlooping#17#1": {
+    "n_star": 10000000.0,
+    "margin": 0.07446437689859617,
+    "n_star_margin2": 55449.43426896183
+   },
+   "PrometheusErrorSendingAlertsToAnyAlertmanager#18#1": {
+    "n_star": 10000000.0,
+    "margin": 0.07446437689859617,
+    "n_star_margin2": 55449.43426896183
+   },
+   "PrometheusErrorSendingAlertsToSomeAlertmanagers#19#1": {
+    "n_star": 10000000.0,
+    "margin": 0.07446437689859617,
+    "n_star_margin2": 55449.43426896183
+   },
+   "PrometheusHighQueryLoad#20#1": {
+    "n_star": 10000000.0,
+    "margin": 0.07446437689859617,
+    "n_star_margin2": 55449.43426896183
+   },
+   "PrometheusOperatorListErrors#23#1": {
+    "n_star": 10000000.0,
+    "margin": 0.07446437689859617,
+    "n_star_margin2": 55449.43426896183
+   },
+   "PrometheusOperatorNodeLookupErrors#24#1": {
+    "n_star": 10000000.0,
+    "margin": 0.07446437689859617,
+    "n_star_margin2": 55449.43426896183
+   },
+   "PrometheusOperatorReconcileErrors#25#1": {
+    "n_star": 10000000.0,
+    "margin": 0.07446437689859617,
+    "n_star_margin2": 55449.43426896183
+   },
+   "PrometheusOperatorStatusUpdateErrors#26#1": {
+    "n_star": 10000000.0,
+    "margin": 0.07446437689859617,
+    "n_star_margin2": 55449.43426896183
+   },
+   "PrometheusOperatorWatchErrors#27#1": {
+    "n_star": 10000000.0,
+    "margin": 0.07446437689859617,
+    "n_star_margin2": 55449.43426896183
+   },
+   "PrometheusRemoteStorageFailures#21#1": {
+    "n_star": 10000000.0,
+    "margin": 0.07446437689859617,
+    "n_star_margin2": 55449.43426896183
+   },
+   "PrometheusRemoteWriteBehind#22#1": {
+    "n_star": 10000000.0,
+    "margin": 0.07446437689859617,
+    "n_star_margin2": 55449.43426896183
+   }
+  }
+ }
+}

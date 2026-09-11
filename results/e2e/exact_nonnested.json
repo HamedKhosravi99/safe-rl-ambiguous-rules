@@ -1,0 +1,5117 @@
+{
+ "registration": "P0-C exact non-nested consequence + P0-D screen check",
+ "budgets": [
+  0.005,
+  0.01,
+  0.02,
+  0.05,
+  0.1
+ ],
+ "operating": 0.05,
+ "tol": 1e-07,
+ "aggregate": {
+  "0.005": {
+   "n_instances": 17,
+   "singleton_violation_frac": 0.6470588235294118,
+   "n_singletons": 34,
+   "n_singletons_violating": 22,
+   "instance_violation_frac": 1.0,
+   "median_hidden_gap": 0.08170134633294547,
+   "median_singleton_worst_ratio": 33.68053860370046,
+   "median_robust_worst_ratio": 1.0,
+   "median_rpoa": 0.5381988621830177,
+   "n_fire": 5,
+   "n_clear": 12,
+   "fire_violation_frac": 1.0,
+   "clear_violation_frac": 1.0,
+   "max_clear_value_gap": 0.0,
+   "label_disagreements": 0,
+   "max_lp_gap": 2.220446049250313e-16,
+   "tiesafe_ok_all": true,
+   "n_tiesafe_checked": 17,
+   "median_worst_ratio_fire": 19.444616926870154,
+   "median_worst_ratio_clear": 33.68053860370046,
+   "median_rpoa_fire": 0.37701103815580334,
+   "median_rpoa_clear": 0.5381988621830177
+  },
+  "0.01": {
+   "n_instances": 17,
+   "singleton_violation_frac": 0.6470588235294118,
+   "n_singletons": 34,
+   "n_singletons_violating": 22,
+   "instance_violation_frac": 1.0,
+   "median_hidden_gap": 0.08336627902337532,
+   "median_singleton_worst_ratio": 17.67325583993618,
+   "median_robust_worst_ratio": 1.0,
+   "median_rpoa": 0.5355808308863497,
+   "n_fire": 5,
+   "n_clear": 12,
+   "fire_violation_frac": 1.0,
+   "clear_violation_frac": 1.0,
+   "max_clear_value_gap": 2.220446049250313e-16,
+   "label_disagreements": 0,
+   "max_lp_gap": 2.7755575615628914e-16,
+   "tiesafe_ok_all": true,
+   "n_tiesafe_checked": 17,
+   "median_worst_ratio_fire": 10.886515969280923,
+   "median_worst_ratio_clear": 17.67325583993618,
+   "median_rpoa_fire": 0.3758654058802387,
+   "median_rpoa_clear": 0.5355808308863497
+  },
+  "0.02": {
+   "n_instances": 17,
+   "singleton_violation_frac": 0.5294117647058824,
+   "n_singletons": 34,
+   "n_singletons_violating": 18,
+   "instance_violation_frac": 1.0,
+   "median_hidden_gap": 0.08478137260599387,
+   "median_singleton_worst_ratio": 9.47813727822995,
+   "median_robust_worst_ratio": 0.9999999999999997,
+   "median_rpoa": 0.5262782258331286,
+   "n_fire": 1,
+   "n_clear": 16,
+   "fire_violation_frac": 1.0,
+   "clear_violation_frac": 1.0,
+   "max_clear_value_gap": 5.551115123125783e-17,
+   "label_disagreements": 4,
+   "max_lp_gap": 2.220446049250313e-16,
+   "tiesafe_ok_all": true,
+   "n_tiesafe_checked": 17,
+   "median_worst_ratio_fire": 3.1638696412540175,
+   "median_worst_ratio_clear": 9.47813727822995,
+   "median_rpoa_fire": 0.1044657700432259,
+   "median_rpoa_clear": 0.5262782258331286
+  },
+  "0.05": {
+   "n_instances": 17,
+   "singleton_violation_frac": 0.5294117647058824,
+   "n_singletons": 34,
+   "n_singletons_violating": 18,
+   "instance_violation_frac": 1.0,
+   "median_hidden_gap": 0.08885881529352375,
+   "median_singleton_worst_ratio": 4.5306314864370405,
+   "median_robust_worst_ratio": 1.0,
+   "median_rpoa": 0.5006407915438946,
+   "n_fire": 1,
+   "n_clear": 16,
+   "fire_violation_frac": 1.0,
+   "clear_violation_frac": 1.0,
+   "max_clear_value_gap": 5.551115123125783e-17,
+   "label_disagreements": 0,
+   "max_lp_gap": 4.440892098500626e-16,
+   "tiesafe_ok_all": true,
+   "n_tiesafe_checked": 17,
+   "median_worst_ratio_fire": 2.239960200435588,
+   "median_worst_ratio_clear": 4.5306314864370405,
+   "median_rpoa_fire": 0.13198382019301846,
+   "median_rpoa_clear": 0.5006407915438946
+  },
+  "0.1": {
+   "n_instances": 17,
+   "singleton_violation_frac": 0.5,
+   "n_singletons": 34,
+   "n_singletons_violating": 17,
+   "instance_violation_frac": 1.0,
+   "median_hidden_gap": 0.08885881529352384,
+   "median_singleton_worst_ratio": 2.2653157432185203,
+   "median_robust_worst_ratio": 0.9999999999999998,
+   "median_rpoa": 0.35884157164028485,
+   "n_fire": 0,
+   "n_clear": 17,
+   "fire_violation_frac": null,
+   "clear_violation_frac": 1.0,
+   "max_clear_value_gap": 0.0,
+   "label_disagreements": 0,
+   "max_lp_gap": 4.440892098500626e-16,
+   "tiesafe_ok_all": true,
+   "n_tiesafe_checked": 17,
+   "median_worst_ratio_fire": null,
+   "median_worst_ratio_clear": 2.2653157432185203,
+   "median_rpoa_fire": null,
+   "median_rpoa_clear": 0.35884157164028485
+  }
+ },
+ "instances": [
+  {
+   "uid": "AlertmanagerClusterCrashlooping",
+   "geometry": "L3-caps5-1",
+   "n_states": 37,
+   "K": 2,
+   "budgets": {
+    "0.005": {
+     "feasible": true,
+     "budget": 0.005,
+     "K": 2,
+     "V_U": 0.3603191203169217,
+     "V_best_single": 0.5783715962643876,
+     "poa": 0.2180524759474659,
+     "rpoa": 0.37701103815580334,
+     "robust_worst": 0.005,
+     "robust_worst_ratio": 1.0,
+     "screen_gap": 0.011420790225934563,
+     "fires_value": true,
+     "face_clear": false,
+     "tiesafe_ok": true,
+     "n_singletons": 2,
+     "n_singletons_violating_best": 2,
+     "any_singleton_violates_best": true,
+     "max_best_worst_ratio": 19.444616926870154,
+     "median_hidden_gap_best": 0.051083764867764385,
+     "lp_gap_max": 1.1102230246251565e-16,
+     "singletons": [
+      {
+       "k": 0,
+       "feasible": true,
+       "V": 0.5783715962643876,
+       "honored": 0.005,
+       "J_all": [
+        0.005,
+        0.09722308518890846
+       ],
+       "returned_worst": 0.09722308518890846,
+       "best_worst": 0.09722308463435077,
+       "worst_worst": 0.09722308518890846,
+       "hidden_gap_returned": 0.09222308518890845,
+       "hidden_gap_best": 0.09222308463435076,
+       "gap": 1.1102230246251565e-16
+      },
+      {
+       "k": 1,
+       "feasible": true,
+       "V": 0.37173991054285627,
+       "honored": 0.004999999999999999,
+       "J_all": [
+        0.015191311989353869,
+        0.004999999999999999
+       ],
+       "returned_worst": 0.015191311989353869,
+       "best_worst": 0.014944445101178011,
+       "worst_worst": 0.02046340591440988,
+       "hidden_gap_returned": 0.01019131198935387,
+       "hidden_gap_best": 0.009944445101178012,
+       "gap": 0.0
+      }
+     ],
+     "fires_shipped": true,
+     "label_agrees": true
+    },
+    "0.01": {
+     "feasible": true,
+     "budget": 0.01,
+     "K": 2,
+     "V_U": 0.3783791720630838,
+     "V_best_single": 0.6062461136234967,
+     "poa": 0.22786694156041287,
+     "rpoa": 0.3758654058802387,
+     "robust_worst": 0.01,
+     "robust_worst_ratio": 1.0,
+     "screen_gap": 0.007540660470133409,
+     "fires_value": true,
+     "face_clear": false,
+     "tiesafe_ok": true,
+     "n_singletons": 2,
+     "n_singletons_violating_best": 2,
+     "any_singleton_violates_best": true,
+     "max_best_worst_ratio": 10.886515969280923,
+     "median_hidden_gap_best": 0.05271552608785777,
+     "lp_gap_max": 1.6653345369377348e-16,
+     "singletons": [
+      {
+       "k": 0,
+       "feasible": true,
+       "V": 0.6062461136234967,
+       "honored": 0.01,
+       "J_all": [
+        0.01,
+        0.10886516024736664
+       ],
+       "returned_worst": 0.10886516024736664,
+       "best_worst": 0.10886515969280924,
+       "worst_worst": 0.10886516024736666,
+       "hidden_gap_returned": 0.09886516024736665,
+       "hidden_gap_best": 0.09886515969280925,
+       "gap": 1.1102230246251565e-16
+      },
+      {
+       "k": 1,
+       "feasible": true,
+       "V": 0.3859198325332172,
+       "honored": 0.01,
+       "J_all": [
+        0.01714783763679445,
+        0.01
+       ],
+       "returned_worst": 0.01714783763679445,
+       "best_worst": 0.016565892482906287,
+       "worst_worst": 0.02479358940428126,
+       "hidden_gap_returned": 0.007147837636794449,
+       "hidden_gap_best": 0.006565892482906286,
+       "gap": 0.0
+      }
+     ],
+     "fires_shipped": true,
+     "label_agrees": true
+    },
+    "0.02": {
+     "feasible": true,
+     "budget": 0.02,
+     "K": 2,
+     "V_U": 0.41427967651393927,
+     "V_best_single": 0.6419850524197559,
+     "poa": 0.22770537590581663,
+     "rpoa": 0.3546895290592118,
+     "robust_worst": 0.02,
+     "robust_worst_ratio": 1.0,
+     "screen_gap": 5.551115123125783e-17,
+     "fires_value": false,
+     "face_clear": true,
+     "tiesafe_ok": true,
+     "n_singletons": 2,
+     "n_singletons_violating_best": 1,
+     "any_singleton_violates_best": true,
+     "max_best_worst_ratio": 6.0526279022806895,
+     "median_hidden_gap_best": 0.05052627884650126,
+     "lp_gap_max": 2.220446049250313e-16,
+     "singletons": [
+      {
+       "k": 0,
+       "feasible": true,
+       "V": 0.6419850524197559,
+       "honored": 0.02,
+       "J_all": [
+        0.02,
+        0.1210525586001714
+       ],
+       "returned_worst": 0.1210525586001714,
+       "best_worst": 0.1210525580456138,
+       "worst_worst": 0.1210525586001714,
+       "hidden_gap_returned": 0.1010525586001714,
+       "hidden_gap_best": 0.10105255804561379,
+       "gap": 2.220446049250313e-16
+      },
+      {
+       "k": 1,
+       "feasible": true,
+       "V": 0.4142796765139393,
+       "honored": 0.019999999999999997,
+       "J_all": [
+        0.020643574676043108,
+        0.019999999999999997
+       ],
+       "returned_worst": 0.020643574676043108,
+       "best_worst": 0.019999999647388723,
+       "worst_worst": 0.030938952469295324,
+       "hidden_gap_returned": 0.0006435746760431113,
+       "hidden_gap_best": -3.526112735130482e-10,
+       "gap": 1.6653345369377348e-16
+      }
+     ],
+     "fires_shipped": true,
+     "label_agrees": false
+    },
+    "0.05": {
+     "feasible": true,
+     "budget": 0.05,
+     "K": 2,
+     "V_U": 0.49935920845610504,
+     "V_best_single": 0.7300672180354688,
+     "poa": 0.23070800957936377,
+     "rpoa": 0.31600927131089906,
+     "robust_worst": 0.05,
+     "robust_worst_ratio": 1.0,
+     "screen_gap": 5.551115123125783e-17,
+     "fires_value": false,
+     "face_clear": true,
+     "tiesafe_ok": true,
+     "n_singletons": 2,
+     "n_singletons_violating_best": 1,
+     "any_singleton_violates_best": true,
+     "max_best_worst_ratio": 2.9400697228820025,
+     "median_hidden_gap_best": 0.04850174289574441,
+     "lp_gap_max": 1.6653345369377348e-16,
+     "singletons": [
+      {
+       "k": 0,
+       "feasible": true,
+       "V": 0.7300672180354688,
+       "honored": 0.05,
+       "J_all": [
+        0.05,
+        0.14700348669865754
+       ],
+       "returned_worst": 0.14700348669865754,
+       "best_worst": 0.14700348614410014,
+       "worst_worst": 0.14700348669865754,
+       "hidden_gap_returned": 0.09700348669865753,
+       "hidden_gap_best": 0.09700348614410013,
+       "gap": 0.0
+      },
+      {
+       "k": 1,
+       "feasible": true,
+       "V": 0.4993592084561051,
+       "honored": 0.05000000000000001,
+       "J_all": [
+        0.03106184193994962,
+        0.05000000000000001
+       ],
+       "returned_worst": 0.05000000000000001,
+       "best_worst": 0.04999999964738869,
+       "worst_worst": 0.05,
+       "hidden_gap_returned": 0.0,
+       "hidden_gap_best": -3.5261132208530555e-10,
+       "gap": 1.6653345369377348e-16
+      }
+     ],
+     "fires_shipped": false,
+     "label_agrees": true
+    },
+    "0.1": {
+     "feasible": true,
+     "budget": 0.1,
+     "K": 2,
+     "V_U": 0.641158428359715,
+     "V_best_single": 0.8768708273949897,
+     "poa": 0.23571239903527463,
+     "rpoa": 0.2688108575074047,
+     "robust_worst": 0.1,
+     "robust_worst_ratio": 1.0,
+     "screen_gap": -1.1102230246251565e-16,
+     "fires_value": false,
+     "face_clear": true,
+     "tiesafe_ok": true,
+     "n_singletons": 2,
+     "n_singletons_violating_best": 1,
+     "any_singleton_violates_best": true,
+     "max_best_worst_ratio": 1.9025503297491027,
+     "median_hidden_gap_best": 0.04512751631114952,
+     "lp_gap_max": 2.220446049250313e-16,
+     "singletons": [
+      {
+       "k": 0,
+       "feasible": true,
+       "V": 0.8768708273949897,
+       "honored": 0.1,
+       "J_all": [
+        0.1,
+        0.1902550335294677
+       ],
+       "returned_worst": 0.1902550335294677,
+       "best_worst": 0.19025503297491028,
+       "worst_worst": 0.1902550335294677,
+       "hidden_gap_returned": 0.0902550335294677,
+       "hidden_gap_best": 0.09025503297491028,
+       "gap": 2.220446049250313e-16
+      },
+      {
+       "k": 1,
+       "feasible": true,
+       "V": 0.6411584283597149,
+       "honored": 0.09999999999999999,
+       "J_all": [
+        0.04842562071312712,
+        0.09999999999999999
+       ],
+       "returned_worst": 0.09999999999999999,
+       "best_worst": 0.09999999964738876,
+       "worst_worst": 0.10000000000000003,
+       "hidden_gap_returned": 0.0,
+       "hidden_gap_best": -3.526112318796848e-10,
+       "gap": 2.220446049250313e-16
+      }
+     ],
+     "fires_shipped": null,
+     "label_agrees": null
+    }
+   }
+  },
+  {
+   "uid": "AlertmanagerClusterDown",
+   "geometry": "L3-caps5-1",
+   "n_states": 37,
+   "K": 2,
+   "budgets": {
+    "0.005": {
+     "feasible": true,
+     "budget": 0.005,
+     "K": 2,
+     "V_U": 0.3603191203169217,
+     "V_best_single": 0.5783715962643876,
+     "poa": 0.2180524759474659,
+     "rpoa": 0.37701103815580334,
+     "robust_worst": 0.005,
+     "robust_worst_ratio": 1.0,
+     "screen_gap": 0.011420790225934563,
+     "fires_value": true,
+     "face_clear": false,
+     "tiesafe_ok": true,
+     "n_singletons": 2,
+     "n_singletons_violating_best": 2,
+     "any_singleton_violates_best": true,
+     "max_best_worst_ratio": 19.444616926870154,
+     "median_hidden_gap_best": 0.051083764867764385,
+     "lp_gap_max": 1.1102230246251565e-16,
+     "singletons": [
+      {
+       "k": 0,
+       "feasible": true,
+       "V": 0.5783715962643876,
+       "honored": 0.005,
+       "J_all": [
+        0.005,
+        0.09722308518890846
+       ],
+       "returned_worst": 0.09722308518890846,
+       "best_worst": 0.09722308463435077,
+       "worst_worst": 0.09722308518890846,
+       "hidden_gap_returned": 0.09222308518890845,
+       "hidden_gap_best": 0.09222308463435076,
+       "gap": 1.1102230246251565e-16
+      },
+      {
+       "k": 1,
+       "feasible": true,
+       "V": 0.37173991054285627,
+       "honored": 0.004999999999999999,
+       "J_all": [
+        0.015191311989353869,
+        0.004999999999999999
+       ],
+       "returned_worst": 0.015191311989353869,
+       "best_worst": 0.014944445101178011,
+       "worst_worst": 0.02046340591440988,
+       "hidden_gap_returned": 0.01019131198935387,
+       "hidden_gap_best": 0.009944445101178012,
+       "gap": 0.0
+      }
+     ],
+     "fires_shipped": true,
+     "label_agrees": true
+    },
+    "0.01": {
+     "feasible": true,
+     "budget": 0.01,
+     "K": 2,
+     "V_U": 0.3783791720630838,
+     "V_best_single": 0.6062461136234967,
+     "poa": 0.22786694156041287,
+     "rpoa": 0.3758654058802387,
+     "robust_worst": 0.01,
+     "robust_worst_ratio": 1.0,
+     "screen_gap": 0.007540660470133409,
+     "fires_value": true,
+     "face_clear": false,
+     "tiesafe_ok": true,
+     "n_singletons": 2,
+     "n_singletons_violating_best": 2,
+     "any_singleton_violates_best": true,
+     "max_best_worst_ratio": 10.886515969280923,
+     "median_hidden_gap_best": 0.05271552608785777,
+     "lp_gap_max": 1.6653345369377348e-16,
+     "singletons": [
+      {
+       "k": 0,
+       "feasible": true,
+       "V": 0.6062461136234967,
+       "honored": 0.01,
+       "J_all": [
+        0.01,
+        0.10886516024736664
+       ],
+       "returned_worst": 0.10886516024736664,
+       "best_worst": 0.10886515969280924,
+       "worst_worst": 0.10886516024736666,
+       "hidden_gap_returned": 0.09886516024736665,
+       "hidden_gap_best": 0.09886515969280925,
+       "gap": 1.1102230246251565e-16
+      },
+      {
+       "k": 1,
+       "feasible": true,
+       "V": 0.3859198325332172,
+       "honored": 0.01,
+       "J_all": [
+        0.01714783763679445,
+        0.01
+       ],
+       "returned_worst": 0.01714783763679445,
+       "best_worst": 0.016565892482906287,
+       "worst_worst": 0.02479358940428126,
+       "hidden_gap_returned": 0.007147837636794449,
+       "hidden_gap_best": 0.006565892482906286,
+       "gap": 0.0
+      }
+     ],
+     "fires_shipped": true,
+     "label_agrees": true
+    },
+    "0.02": {
+     "feasible": true,
+     "budget": 0.02,
+     "K": 2,
+     "V_U": 0.41427967651393927,
+     "V_best_single": 0.6419850524197559,
+     "poa": 0.22770537590581663,
+     "rpoa": 0.3546895290592118,
+     "robust_worst": 0.02,
+     "robust_worst_ratio": 1.0,
+     "screen_gap": 5.551115123125783e-17,
+     "fires_value": false,
+     "face_clear": true,
+     "tiesafe_ok": true,
+     "n_singletons": 2,
+     "n_singletons_violating_best": 1,
+     "any_singleton_violates_best": true,
+     "max_best_worst_ratio": 6.0526279022806895,
+     "median_hidden_gap_best": 0.05052627884650126,
+     "lp_gap_max": 2.220446049250313e-16,
+     "singletons": [
+      {
+       "k": 0,
+       "feasible": true,
+       "V": 0.6419850524197559,
+       "honored": 0.02,
+       "J_all": [
+        0.02,
+        0.1210525586001714
+       ],
+       "returned_worst": 0.1210525586001714,
+       "best_worst": 0.1210525580456138,
+       "worst_worst": 0.1210525586001714,
+       "hidden_gap_returned": 0.1010525586001714,
+       "hidden_gap_best": 0.10105255804561379,
+       "gap": 2.220446049250313e-16
+      },
+      {
+       "k": 1,
+       "feasible": true,
+       "V": 0.4142796765139393,
+       "honored": 0.019999999999999997,
+       "J_all": [
+        0.020643574676043108,
+        0.019999999999999997
+       ],
+       "returned_worst": 0.020643574676043108,
+       "best_worst": 0.019999999647388723,
+       "worst_worst": 0.030938952469295324,
+       "hidden_gap_returned": 0.0006435746760431113,
+       "hidden_gap_best": -3.526112735130482e-10,
+       "gap": 1.6653345369377348e-16
+      }
+     ],
+     "fires_shipped": true,
+     "label_agrees": false
+    },
+    "0.05": {
+     "feasible": true,
+     "budget": 0.05,
+     "K": 2,
+     "V_U": 0.49935920845610504,
+     "V_best_single": 0.7300672180354688,
+     "poa": 0.23070800957936377,
+     "rpoa": 0.31600927131089906,
+     "robust_worst": 0.05,
+     "robust_worst_ratio": 1.0,
+     "screen_gap": 5.551115123125783e-17,
+     "fires_value": false,
+     "face_clear": true,
+     "tiesafe_ok": true,
+     "n_singletons": 2,
+     "n_singletons_violating_best": 1,
+     "any_singleton_violates_best": true,
+     "max_best_worst_ratio": 2.9400697228820025,
+     "median_hidden_gap_best": 0.04850174289574441,
+     "lp_gap_max": 1.6653345369377348e-16,
+     "singletons": [
+      {
+       "k": 0,
+       "feasible": true,
+       "V": 0.7300672180354688,
+       "honored": 0.05,
+       "J_all": [
+        0.05,
+        0.14700348669865754
+       ],
+       "returned_worst": 0.14700348669865754,
+       "best_worst": 0.14700348614410014,
+       "worst_worst": 0.14700348669865754,
+       "hidden_gap_returned": 0.09700348669865753,
+       "hidden_gap_best": 0.09700348614410013,
+       "gap": 0.0
+      },
+      {
+       "k": 1,
+       "feasible": true,
+       "V": 0.4993592084561051,
+       "honored": 0.05000000000000001,
+       "J_all": [
+        0.03106184193994962,
+        0.05000000000000001
+       ],
+       "returned_worst": 0.05000000000000001,
+       "best_worst": 0.04999999964738869,
+       "worst_worst": 0.05,
+       "hidden_gap_returned": 0.0,
+       "hidden_gap_best": -3.5261132208530555e-10,
+       "gap": 1.6653345369377348e-16
+      }
+     ],
+     "fires_shipped": false,
+     "label_agrees": true
+    },
+    "0.1": {
+     "feasible": true,
+     "budget": 0.1,
+     "K": 2,
+     "V_U": 0.641158428359715,
+     "V_best_single": 0.8768708273949897,
+     "poa": 0.23571239903527463,
+     "rpoa": 0.2688108575074047,
+     "robust_worst": 0.1,
+     "robust_worst_ratio": 1.0,
+     "screen_gap": -1.1102230246251565e-16,
+     "fires_value": false,
+     "face_clear": true,
+     "tiesafe_ok": true,
+     "n_singletons": 2,
+     "n_singletons_violating_best": 1,
+     "any_singleton_violates_best": true,
+     "max_best_worst_ratio": 1.9025503297491027,
+     "median_hidden_gap_best": 0.04512751631114952,
+     "lp_gap_max": 2.220446049250313e-16,
+     "singletons": [
+      {
+       "k": 0,
+       "feasible": true,
+       "V": 0.8768708273949897,
+       "honored": 0.1,
+       "J_all": [
+        0.1,
+        0.1902550335294677
+       ],
+       "returned_worst": 0.1902550335294677,
+       "best_worst": 0.19025503297491028,
+       "worst_worst": 0.1902550335294677,
+       "hidden_gap_returned": 0.0902550335294677,
+       "hidden_gap_best": 0.09025503297491028,
+       "gap": 2.220446049250313e-16
+      },
+      {
+       "k": 1,
+       "feasible": true,
+       "V": 0.6411584283597149,
+       "honored": 0.09999999999999999,
+       "J_all": [
+        0.04842562071312712,
+        0.09999999999999999
+       ],
+       "returned_worst": 0.09999999999999999,
+       "best_worst": 0.09999999964738876,
+       "worst_worst": 0.10000000000000003,
+       "hidden_gap_returned": 0.0,
+       "hidden_gap_best": -3.526112318796848e-10,
+       "gap": 2.220446049250313e-16
+      }
+     ],
+     "fires_shipped": null,
+     "label_agrees": null
+    }
+   }
+  },
+  {
+   "uid": "NodeNetworkInterfaceFlapping",
+   "geometry": "L3-caps2-1",
+   "n_states": 19,
+   "K": 2,
+   "budgets": {
+    "0.005": {
+     "feasible": true,
+     "budget": 0.005,
+     "K": 2,
+     "V_U": 0.3290005771562153,
+     "V_best_single": 0.3717399105428562,
+     "poa": 0.04273933338664093,
+     "rpoa": 0.11497106491532796,
+     "robust_worst": 0.005,
+     "robust_worst_ratio": 1.0,
+     "screen_gap": 0.03404989362711913,
+     "fires_value": true,
+     "face_clear": false,
+     "tiesafe_ok": true,
+     "n_singletons": 2,
+     "n_singletons_violating_best": 2,
+     "any_singleton_violates_best": true,
+     "max_best_worst_ratio": 9.54773778045892,
+     "median_hidden_gap_best": 0.03221622484503027,
+     "lp_gap_max": 1.1102230246251565e-16,
+     "singletons": [
+      {
+       "k": 0,
+       "feasible": true,
+       "V": 0.3630504707833344,
+       "honored": 0.005,
+       "J_all": [
+        0.005,
+        0.026693761820665504
+       ],
+       "returned_worst": 0.026693761820665504,
+       "best_worst": 0.02669376078776594,
+       "worst_worst": 0.026693761820665504,
+       "hidden_gap_returned": 0.021693761820665503,
+       "hidden_gap_best": 0.02169376078776594,
+       "gap": 0.0
+      },
+      {
+       "k": 1,
+       "feasible": true,
+       "V": 0.3717399105428562,
+       "honored": 0.005,
+       "J_all": [
+        0.04773868990227972,
+        0.005
+       ],
+       "returned_worst": 0.04773868990227972,
+       "best_worst": 0.0477386889022946,
+       "worst_worst": 0.052738689902279715,
+       "hidden_gap_returned": 0.04273868990227972,
+       "hidden_gap_best": 0.042738688902294604,
+       "gap": 1.1102230246251565e-16
+      }
+     ],
+     "fires_shipped": true,
+     "label_agrees": true
+    },
+    "0.01": {
+     "feasible": true,
+     "budget": 0.01,
+     "K": 2,
+     "V_U": 0.3430009284686941,
+     "V_best_single": 0.38591983253321727,
+     "poa": 0.042918904064523145,
+     "rpoa": 0.1112119679955266,
+     "robust_worst": 0.01,
+     "robust_worst_ratio": 1.0,
+     "screen_gap": 0.0315505834206154,
+     "fires_value": true,
+     "face_clear": false,
+     "tiesafe_ok": true,
+     "n_singletons": 2,
+     "n_singletons_violating_best": 2,
+     "any_singleton_violates_best": true,
+     "max_best_worst_ratio": 5.2918256876556535,
+     "median_hidden_gap_best": 0.03300064449279635,
+     "lp_gap_max": 1.1102230246251565e-16,
+     "singletons": [
+      {
+       "k": 0,
+       "feasible": true,
+       "V": 0.3745515118893095,
+       "honored": 0.01,
+       "J_all": [
+        0.01,
+        0.0330830331419357
+       ],
+       "returned_worst": 0.0330830331419357,
+       "best_worst": 0.03308303210903616,
+       "worst_worst": 0.0330830331419357,
+       "hidden_gap_returned": 0.023083033141935695,
+       "hidden_gap_best": 0.02308303210903616,
+       "gap": 5.551115123125783e-17
+      },
+      {
+       "k": 1,
+       "feasible": true,
+       "V": 0.38591983253321727,
+       "honored": 0.01,
+       "J_all": [
+        0.05291825787654165,
+        0.01
+       ],
+       "returned_worst": 0.05291825787654165,
+       "best_worst": 0.05291825687655654,
+       "worst_worst": 0.06291825787654164,
+       "hidden_gap_returned": 0.042918257876541646,
+       "hidden_gap_best": 0.04291825687655654,
+       "gap": 0.0
+      }
+     ],
+     "fires_shipped": true,
+     "label_agrees": true
+    },
+    "0.02": {
+     "feasible": true,
+     "budget": 0.02,
+     "K": 2,
+     "V_U": 0.371001631093652,
+     "V_best_single": 0.41427967651393915,
+     "poa": 0.04327804542028718,
+     "rpoa": 0.1044657700432259,
+     "robust_worst": 0.02,
+     "robust_worst_ratio": 1.0,
+     "screen_gap": 0.026551963007607593,
+     "fires_value": true,
+     "face_clear": false,
+     "tiesafe_ok": true,
+     "n_singletons": 2,
+     "n_singletons_violating_best": 2,
+     "any_singleton_violates_best": true,
+     "max_best_worst_ratio": 3.1638696412540175,
+     "median_hidden_gap_best": 0.034569483788328435,
+     "lp_gap_max": 1.1102230246251565e-16,
+     "singletons": [
+      {
+       "k": 0,
+       "feasible": true,
+       "V": 0.39755359410125957,
+       "honored": 0.02,
+       "J_all": [
+        0.02,
+        0.04586157578447609
+       ],
+       "returned_worst": 0.04586157578447609,
+       "best_worst": 0.045861574751576525,
+       "worst_worst": 0.04586157578447609,
+       "hidden_gap_returned": 0.02586157578447609,
+       "hidden_gap_best": 0.025861574751576525,
+       "gap": 0.0
+      },
+      {
+       "k": 1,
+       "feasible": true,
+       "V": 0.41427967651393915,
+       "honored": 0.02,
+       "J_all": [
+        0.06327739382506548,
+        0.02
+       ],
+       "returned_worst": 0.06327739382506548,
+       "best_worst": 0.06327739282508035,
+       "worst_worst": 0.0832773938250655,
+       "hidden_gap_returned": 0.04327739382506547,
+       "hidden_gap_best": 0.04327739282508035,
+       "gap": 1.1102230246251565e-16
+      }
+     ],
+     "fires_shipped": true,
+     "label_agrees": true
+    },
+    "0.05": {
+     "feasible": true,
+     "budget": 0.05,
+     "K": 2,
+     "V_U": 0.4334518724755066,
+     "V_best_single": 0.4993592084561052,
+     "poa": 0.06590733598059861,
+     "rpoa": 0.13198382019301846,
+     "robust_worst": 0.05,
+     "robust_worst_ratio": 1.0,
+     "screen_gap": 0.013022381104013048,
+     "fires_value": true,
+     "face_clear": false,
+     "tiesafe_ok": true,
+     "n_singletons": 2,
+     "n_singletons_violating_best": 2,
+     "any_singleton_violates_best": true,
+     "max_best_worst_ratio": 2.239960200435588,
+     "median_hidden_gap_best": 0.0377244099302511,
+     "lp_gap_max": 2.220446049250313e-16,
+     "singletons": [
+      {
+       "k": 0,
+       "feasible": true,
+       "V": 0.44647425357951964,
+       "honored": 0.05,
+       "J_all": [
+        0.05,
+        0.06345081087162241
+       ],
+       "returned_worst": 0.06345081087162241,
+       "best_worst": 0.0634508098387228,
+       "worst_worst": 0.06345081087162241,
+       "hidden_gap_returned": 0.013450810871622407,
+       "hidden_gap_best": 0.013450809838722794,
+       "gap": 2.220446049250313e-16
+      },
+      {
+       "k": 1,
+       "feasible": true,
+       "V": 0.4993592084561052,
+       "honored": 0.05000000000000001,
+       "J_all": [
+        0.11199801096246376,
+        0.05000000000000001
+       ],
+       "returned_worst": 0.11199801096246376,
+       "best_worst": 0.11199801002177942,
+       "worst_worst": 0.1334540448857736,
+       "hidden_gap_returned": 0.06199801096246375,
+       "hidden_gap_best": 0.06199801002177941,
+       "gap": 1.1102230246251565e-16
+      }
+     ],
+     "fires_shipped": true,
+     "label_agrees": true
+    },
+    "0.1": {
+     "feasible": true,
+     "budget": 0.1,
+     "K": 2,
+     "V_U": 0.5208385263975615,
+     "V_best_single": 0.6411584283597148,
+     "poa": 0.12031990196215336,
+     "rpoa": 0.18766017358606604,
+     "robust_worst": 0.1,
+     "robust_worst_ratio": 1.0,
+     "screen_gap": 0.0,
+     "fires_value": false,
+     "face_clear": true,
+     "tiesafe_ok": true,
+     "n_singletons": 2,
+     "n_singletons_violating_best": 1,
+     "any_singleton_violates_best": true,
+     "max_best_worst_ratio": 1.9985023056225748,
+     "median_hidden_gap_best": 0.04992511494494583,
+     "lp_gap_max": 1.1102230246251565e-16,
+     "singletons": [
+      {
+       "k": 0,
+       "feasible": true,
+       "V": 0.5208385263975615,
+       "honored": 0.1,
+       "J_all": [
+        0.1,
+        0.08536014840331621
+       ],
+       "returned_worst": 0.1,
+       "best_worst": 0.0999999993276342,
+       "worst_worst": 0.1,
+       "hidden_gap_returned": 0.0,
+       "hidden_gap_best": -6.723658019236467e-10,
+       "gap": 0.0
+      },
+      {
+       "k": 1,
+       "feasible": true,
+       "V": 0.6411584283597148,
+       "honored": 0.10000000000000002,
+       "J_all": [
+        0.1998502315029418,
+        0.10000000000000002
+       ],
+       "returned_worst": 0.1998502315029418,
+       "best_worst": 0.19985023056225748,
+       "worst_worst": 0.21522915600181125,
+       "hidden_gap_returned": 0.09985023150294177,
+       "hidden_gap_best": 0.09985023056225746,
+       "gap": 1.1102230246251565e-16
+      }
+     ],
+     "fires_shipped": null,
+     "label_agrees": null
+    }
+   }
+  },
+  {
+   "uid": "KubeStateMetricsListErrors",
+   "geometry": "L3-caps8-1",
+   "n_states": 55,
+   "K": 2,
+   "budgets": {
+    "0.005": {
+     "feasible": true,
+     "budget": 0.005,
+     "K": 2,
+     "V_U": 0.37173991054285616,
+     "V_best_single": 0.8049783339645679,
+     "poa": 0.4332384234217117,
+     "rpoa": 0.5381988621830177,
+     "robust_worst": 0.005,
+     "robust_worst_ratio": 1.0,
+     "screen_gap": 0.0,
+     "fires_value": false,
+     "face_clear": true,
+     "tiesafe_ok": true,
+     "n_singletons": 2,
+     "n_singletons_violating_best": 1,
+     "any_singleton_violates_best": true,
+     "max_best_worst_ratio": 33.68053860370046,
+     "median_hidden_gap_best": 0.08170134633294547,
+     "lp_gap_max": 2.220446049250313e-16,
+     "singletons": [
+      {
+       "k": 0,
+       "feasible": true,
+       "V": 0.8049783339645679,
+       "honored": 0.005,
+       "J_all": [
+        0.005,
+        0.16840269347215764
+       ],
+       "returned_worst": 0.16840269347215764,
+       "best_worst": 0.1684026930185023,
+       "worst_worst": 0.16840269347215764,
+       "hidden_gap_returned": 0.16340269347215763,
+       "hidden_gap_best": 0.1634026930185023,
+       "gap": 2.220446049250313e-16
+      },
+      {
+       "k": 1,
+       "feasible": true,
+       "V": 0.37173991054285616,
+       "honored": 0.005,
+       "J_all": [
+        0.00478598660171009,
+        0.005
+       ],
+       "returned_worst": 0.005,
+       "best_worst": 0.004999999647388653,
+       "worst_worst": 0.007573242513620978,
+       "hidden_gap_returned": 0.0,
+       "hidden_gap_best": -3.5261134723879595e-10,
+       "gap": 1.1102230246251565e-16
+      }
+     ],
+     "fires_shipped": false,
+     "label_agrees": true
+    },
+    "0.01": {
+     "feasible": true,
+     "budget": 0.01,
+     "K": 2,
+     "V_U": 0.38591983253321727,
+     "V_best_single": 0.8309730911188485,
+     "poa": 0.4450532585856313,
+     "rpoa": 0.5355808308863497,
+     "robust_worst": 0.01,
+     "robust_worst_ratio": 1.0,
+     "screen_gap": 2.220446049250313e-16,
+     "fires_value": false,
+     "face_clear": true,
+     "tiesafe_ok": true,
+     "n_singletons": 2,
+     "n_singletons_violating_best": 1,
+     "any_singleton_violates_best": true,
+     "max_best_worst_ratio": 17.67325583993618,
+     "median_hidden_gap_best": 0.08336627902337532,
+     "lp_gap_max": 2.7755575615628914e-16,
+     "singletons": [
+      {
+       "k": 0,
+       "feasible": true,
+       "V": 0.8309730911188485,
+       "honored": 0.01,
+       "J_all": [
+        0.01,
+        0.17673255885301703
+       ],
+       "returned_worst": 0.17673255885301703,
+       "best_worst": 0.1767325583993618,
+       "worst_worst": 0.17673255885301703,
+       "hidden_gap_returned": 0.16673255885301702,
+       "hidden_gap_best": 0.1667325583993618,
+       "gap": 1.1102230246251565e-16
+      },
+      {
+       "k": 1,
+       "feasible": true,
+       "V": 0.3859198325332175,
+       "honored": 0.01,
+       "J_all": [
+        0.008111308404594182,
+        0.01
+       ],
+       "returned_worst": 0.01,
+       "best_worst": 0.009999999647388826,
+       "worst_worst": 0.010000000000000002,
+       "hidden_gap_returned": 0.0,
+       "hidden_gap_best": -3.526111746338101e-10,
+       "gap": 2.7755575615628914e-16
+      }
+     ],
+     "fires_shipped": false,
+     "label_agrees": true
+    },
+    "0.02": {
+     "feasible": true,
+     "budget": 0.02,
+     "K": 2,
+     "V_U": 0.4142796765139391,
+     "V_best_single": 0.8745210777835315,
+     "poa": 0.4602414012695924,
+     "rpoa": 0.5262782258331286,
+     "robust_worst": 0.019999999999999993,
+     "robust_worst_ratio": 0.9999999999999997,
+     "screen_gap": 5.551115123125783e-17,
+     "fires_value": false,
+     "face_clear": true,
+     "tiesafe_ok": true,
+     "n_singletons": 2,
+     "n_singletons_violating_best": 1,
+     "any_singleton_violates_best": true,
+     "max_best_worst_ratio": 9.47813727822995,
+     "median_hidden_gap_best": 0.08478137260599387,
+     "lp_gap_max": 2.220446049250313e-16,
+     "singletons": [
+      {
+       "k": 0,
+       "feasible": true,
+       "V": 0.8745210777835315,
+       "honored": 0.02,
+       "J_all": [
+        0.02,
+        0.1895627460182543
+       ],
+       "returned_worst": 0.1895627460182543,
+       "best_worst": 0.189562745564599,
+       "worst_worst": 0.1895627460182543,
+       "hidden_gap_returned": 0.1695627460182543,
+       "hidden_gap_best": 0.16956274556459902,
+       "gap": 2.220446049250313e-16
+      },
+      {
+       "k": 1,
+       "feasible": true,
+       "V": 0.41427967651393915,
+       "honored": 0.020000000000000004,
+       "J_all": [
+        0.01074211812341477,
+        0.020000000000000004
+       ],
+       "returned_worst": 0.020000000000000004,
+       "best_worst": 0.019999999647388723,
+       "worst_worst": 0.02,
+       "hidden_gap_returned": 0.0,
+       "hidden_gap_best": -3.526112804519421e-10,
+       "gap": 5.551115123125783e-17
+      }
+     ],
+     "fires_shipped": false,
+     "label_agrees": true
+    },
+    "0.05": {
+     "feasible": true,
+     "budget": 0.05,
+     "K": 2,
+     "V_U": 0.4993592084561053,
+     "V_best_single": 1.0,
+     "poa": 0.5006407915438946,
+     "rpoa": 0.5006407915438946,
+     "robust_worst": 0.05,
+     "robust_worst_ratio": 1.0,
+     "screen_gap": -3.3306690738754696e-16,
+     "fires_value": false,
+     "face_clear": true,
+     "tiesafe_ok": true,
+     "n_singletons": 2,
+     "n_singletons_violating_best": 1,
+     "any_singleton_violates_best": true,
+     "max_best_worst_ratio": 4.5306314864370405,
+     "median_hidden_gap_best": 0.08885881529352375,
+     "lp_gap_max": 4.440892098500626e-16,
+     "singletons": [
+      {
+       "k": 0,
+       "feasible": true,
+       "V": 1.0,
+       "honored": 0.04881394338219326,
+       "J_all": [
+        0.04881394338219326,
+        0.22653157467446328
+       ],
+       "returned_worst": 0.22653157467446328,
+       "best_worst": 0.22653157432185206,
+       "worst_worst": 0.22653157467446325,
+       "hidden_gap_returned": 0.17771763129227003,
+       "hidden_gap_best": 0.1777176309396588,
+       "gap": 4.440892098500626e-16
+      },
+      {
+       "k": 1,
+       "feasible": true,
+       "V": 0.499359208456105,
+       "honored": 0.05,
+       "J_all": [
+        0.016337001990159736,
+        0.05
+       ],
+       "returned_worst": 0.05,
+       "best_worst": 0.049999999647388695,
+       "worst_worst": 0.049999999999999996,
+       "hidden_gap_returned": 0.0,
+       "hidden_gap_best": -3.5261130820751774e-10,
+       "gap": 1.6653345369377348e-16
+      }
+     ],
+     "fires_shipped": false,
+     "label_agrees": true
+    },
+    "0.1": {
+     "feasible": true,
+     "budget": 0.1,
+     "K": 2,
+     "V_U": 0.6411584283597151,
+     "V_best_single": 1.0,
+     "poa": 0.35884157164028485,
+     "rpoa": 0.35884157164028485,
+     "robust_worst": 0.09999999999999998,
+     "robust_worst_ratio": 0.9999999999999998,
+     "screen_gap": 0.0,
+     "fires_value": false,
+     "face_clear": true,
+     "tiesafe_ok": true,
+     "n_singletons": 2,
+     "n_singletons_violating_best": 1,
+     "any_singleton_violates_best": true,
+     "max_best_worst_ratio": 2.2653157432185203,
+     "median_hidden_gap_best": 0.08885881529352384,
+     "lp_gap_max": 4.440892098500626e-16,
+     "singletons": [
+      {
+       "k": 0,
+       "feasible": true,
+       "V": 1.0,
+       "honored": 0.04881394338219326,
+       "J_all": [
+        0.04881394338219326,
+        0.22653157467446328
+       ],
+       "returned_worst": 0.22653157467446328,
+       "best_worst": 0.22653157432185206,
+       "worst_worst": 0.22653157467446325,
+       "hidden_gap_returned": 0.17771763129227003,
+       "hidden_gap_best": 0.1777176309396588,
+       "gap": 4.440892098500626e-16
+      },
+      {
+       "k": 1,
+       "feasible": true,
+       "V": 0.6411584283597151,
+       "honored": 0.1,
+       "J_all": [
+        0.025535623101403834,
+        0.1
+       ],
+       "returned_worst": 0.1,
+       "best_worst": 0.09999999964738887,
+       "worst_worst": 0.1,
+       "hidden_gap_returned": 0.0,
+       "hidden_gap_best": -3.5261113473517014e-10,
+       "gap": 1.1102230246251565e-16
+      }
+     ],
+     "fires_shipped": null,
+     "label_agrees": null
+    }
+   }
+  },
+  {
+   "uid": "KubeStateMetricsWatchErrors",
+   "geometry": "L3-caps8-1",
+   "n_states": 55,
+   "K": 2,
+   "budgets": {
+    "0.005": {
+     "feasible": true,
+     "budget": 0.005,
+     "K": 2,
+     "V_U": 0.37173991054285616,
+     "V_best_single": 0.8049783339645679,
+     "poa": 0.4332384234217117,
+     "rpoa": 0.5381988621830177,
+     "robust_worst": 0.005,
+     "robust_worst_ratio": 1.0,
+     "screen_gap": 0.0,
+     "fires_value": false,
+     "face_clear": true,
+     "tiesafe_ok": true,
+     "n_singletons": 2,
+     "n_singletons_violating_best": 1,
+     "any_singleton_violates_best": true,
+     "max_best_worst_ratio": 33.68053860370046,
+     "median_hidden_gap_best": 0.08170134633294547,
+     "lp_gap_max": 2.220446049250313e-16,
+     "singletons": [
+      {
+       "k": 0,
+       "feasible": true,
+       "V": 0.8049783339645679,
+       "honored": 0.005,
+       "J_all": [
+        0.005,
+        0.16840269347215764
+       ],
+       "returned_worst": 0.16840269347215764,
+       "best_worst": 0.1684026930185023,
+       "worst_worst": 0.16840269347215764,
+       "hidden_gap_returned": 0.16340269347215763,
+       "hidden_gap_best": 0.1634026930185023,
+       "gap": 2.220446049250313e-16
+      },
+      {
+       "k": 1,
+       "feasible": true,
+       "V": 0.37173991054285616,
+       "honored": 0.005,
+       "J_all": [
+        0.00478598660171009,
+        0.005
+       ],
+       "returned_worst": 0.005,
+       "best_worst": 0.004999999647388653,
+       "worst_worst": 0.007573242513620978,
+       "hidden_gap_returned": 0.0,
+       "hidden_gap_best": -3.5261134723879595e-10,
+       "gap": 1.1102230246251565e-16
+      }
+     ],
+     "fires_shipped": false,
+     "label_agrees": true
+    },
+    "0.01": {
+     "feasible": true,
+     "budget": 0.01,
+     "K": 2,
+     "V_U": 0.38591983253321727,
+     "V_best_single": 0.8309730911188485,
+     "poa": 0.4450532585856313,
+     "rpoa": 0.5355808308863497,
+     "robust_worst": 0.01,
+     "robust_worst_ratio": 1.0,
+     "screen_gap": 2.220446049250313e-16,
+     "fires_value": false,
+     "face_clear": true,
+     "tiesafe_ok": true,
+     "n_singletons": 2,
+     "n_singletons_violating_best": 1,
+     "any_singleton_violates_best": true,
+     "max_best_worst_ratio": 17.67325583993618,
+     "median_hidden_gap_best": 0.08336627902337532,
+     "lp_gap_max": 2.7755575615628914e-16,
+     "singletons": [
+      {
+       "k": 0,
+       "feasible": true,
+       "V": 0.8309730911188485,
+       "honored": 0.01,
+       "J_all": [
+        0.01,
+        0.17673255885301703
+       ],
+       "returned_worst": 0.17673255885301703,
+       "best_worst": 0.1767325583993618,
+       "worst_worst": 0.17673255885301703,
+       "hidden_gap_returned": 0.16673255885301702,
+       "hidden_gap_best": 0.1667325583993618,
+       "gap": 1.1102230246251565e-16
+      },
+      {
+       "k": 1,
+       "feasible": true,
+       "V": 0.3859198325332175,
+       "honored": 0.01,
+       "J_all": [
+        0.008111308404594182,
+        0.01
+       ],
+       "returned_worst": 0.01,
+       "best_worst": 0.009999999647388826,
+       "worst_worst": 0.010000000000000002,
+       "hidden_gap_returned": 0.0,
+       "hidden_gap_best": -3.526111746338101e-10,
+       "gap": 2.7755575615628914e-16
+      }
+     ],
+     "fires_shipped": false,
+     "label_agrees": true
+    },
+    "0.02": {
+     "feasible": true,
+     "budget": 0.02,
+     "K": 2,
+     "V_U": 0.4142796765139391,
+     "V_best_single": 0.8745210777835315,
+     "poa": 0.4602414012695924,
+     "rpoa": 0.5262782258331286,
+     "robust_worst": 0.019999999999999993,
+     "robust_worst_ratio": 0.9999999999999997,
+     "screen_gap": 5.551115123125783e-17,
+     "fires_value": false,
+     "face_clear": true,
+     "tiesafe_ok": true,
+     "n_singletons": 2,
+     "n_singletons_violating_best": 1,
+     "any_singleton_violates_best": true,
+     "max_best_worst_ratio": 9.47813727822995,
+     "median_hidden_gap_best": 0.08478137260599387,
+     "lp_gap_max": 2.220446049250313e-16,
+     "singletons": [
+      {
+       "k": 0,
+       "feasible": true,
+       "V": 0.8745210777835315,
+       "honored": 0.02,
+       "J_all": [
+        0.02,
+        0.1895627460182543
+       ],
+       "returned_worst": 0.1895627460182543,
+       "best_worst": 0.189562745564599,
+       "worst_worst": 0.1895627460182543,
+       "hidden_gap_returned": 0.1695627460182543,
+       "hidden_gap_best": 0.16956274556459902,
+       "gap": 2.220446049250313e-16
+      },
+      {
+       "k": 1,
+       "feasible": true,
+       "V": 0.41427967651393915,
+       "honored": 0.020000000000000004,
+       "J_all": [
+        0.01074211812341477,
+        0.020000000000000004
+       ],
+       "returned_worst": 0.020000000000000004,
+       "best_worst": 0.019999999647388723,
+       "worst_worst": 0.02,
+       "hidden_gap_returned": 0.0,
+       "hidden_gap_best": -3.526112804519421e-10,
+       "gap": 5.551115123125783e-17
+      }
+     ],
+     "fires_shipped": false,
+     "label_agrees": true
+    },
+    "0.05": {
+     "feasible": true,
+     "budget": 0.05,
+     "K": 2,
+     "V_U": 0.4993592084561053,
+     "V_best_single": 1.0,
+     "poa": 0.5006407915438946,
+     "rpoa": 0.5006407915438946,
+     "robust_worst": 0.05,
+     "robust_worst_ratio": 1.0,
+     "screen_gap": -3.3306690738754696e-16,
+     "fires_value": false,
+     "face_clear": true,
+     "tiesafe_ok": true,
+     "n_singletons": 2,
+     "n_singletons_violating_best": 1,
+     "any_singleton_violates_best": true,
+     "max_best_worst_ratio": 4.5306314864370405,
+     "median_hidden_gap_best": 0.08885881529352375,
+     "lp_gap_max": 4.440892098500626e-16,
+     "singletons": [
+      {
+       "k": 0,
+       "feasible": true,
+       "V": 1.0,
+       "honored": 0.04881394338219326,
+       "J_all": [
+        0.04881394338219326,
+        0.22653157467446328
+       ],
+       "returned_worst": 0.22653157467446328,
+       "best_worst": 0.22653157432185206,
+       "worst_worst": 0.22653157467446325,
+       "hidden_gap_returned": 0.17771763129227003,
+       "hidden_gap_best": 0.1777176309396588,
+       "gap": 4.440892098500626e-16
+      },
+      {
+       "k": 1,
+       "feasible": true,
+       "V": 0.499359208456105,
+       "honored": 0.05,
+       "J_all": [
+        0.016337001990159736,
+        0.05
+       ],
+       "returned_worst": 0.05,
+       "best_worst": 0.049999999647388695,
+       "worst_worst": 0.049999999999999996,
+       "hidden_gap_returned": 0.0,
+       "hidden_gap_best": -3.5261130820751774e-10,
+       "gap": 1.6653345369377348e-16
+      }
+     ],
+     "fires_shipped": false,
+     "label_agrees": true
+    },
+    "0.1": {
+     "feasible": true,
+     "budget": 0.1,
+     "K": 2,
+     "V_U": 0.6411584283597151,
+     "V_best_single": 1.0,
+     "poa": 0.35884157164028485,
+     "rpoa": 0.35884157164028485,
+     "robust_worst": 0.09999999999999998,
+     "robust_worst_ratio": 0.9999999999999998,
+     "screen_gap": 0.0,
+     "fires_value": false,
+     "face_clear": true,
+     "tiesafe_ok": true,
+     "n_singletons": 2,
+     "n_singletons_violating_best": 1,
+     "any_singleton_violates_best": true,
+     "max_best_worst_ratio": 2.2653157432185203,
+     "median_hidden_gap_best": 0.08885881529352384,
+     "lp_gap_max": 4.440892098500626e-16,
+     "singletons": [
+      {
+       "k": 0,
+       "feasible": true,
+       "V": 1.0,
+       "honored": 0.04881394338219326,
+       "J_all": [
+        0.04881394338219326,
+        0.22653157467446328
+       ],
+       "returned_worst": 0.22653157467446328,
+       "best_worst": 0.22653157432185206,
+       "worst_worst": 0.22653157467446325,
+       "hidden_gap_returned": 0.17771763129227003,
+       "hidden_gap_best": 0.1777176309396588,
+       "gap": 4.440892098500626e-16
+      },
+      {
+       "k": 1,
+       "feasible": true,
+       "V": 0.6411584283597151,
+       "honored": 0.1,
+       "J_all": [
+        0.025535623101403834,
+        0.1
+       ],
+       "returned_worst": 0.1,
+       "best_worst": 0.09999999964738887,
+       "worst_worst": 0.1,
+       "hidden_gap_returned": 0.0,
+       "hidden_gap_best": -3.5261113473517014e-10,
+       "gap": 1.1102230246251565e-16
+      }
+     ],
+     "fires_shipped": null,
+     "label_agrees": null
+    }
+   }
+  },
+  {
+   "uid": "KubePodCrashLooping",
+   "geometry": "L3-caps8-1",
+   "n_states": 55,
+   "K": 2,
+   "budgets": {
+    "0.005": {
+     "feasible": true,
+     "budget": 0.005,
+     "K": 2,
+     "V_U": 0.37173991054285616,
+     "V_best_single": 0.8049783339645679,
+     "poa": 0.4332384234217117,
+     "rpoa": 0.5381988621830177,
+     "robust_worst": 0.005,
+     "robust_worst_ratio": 1.0,
+     "screen_gap": 0.0,
+     "fires_value": false,
+     "face_clear": true,
+     "tiesafe_ok": true,
+     "n_singletons": 2,
+     "n_singletons_violating_best": 1,
+     "any_singleton_violates_best": true,
+     "max_best_worst_ratio": 33.68053860370046,
+     "median_hidden_gap_best": 0.08170134633294547,
+     "lp_gap_max": 2.220446049250313e-16,
+     "singletons": [
+      {
+       "k": 0,
+       "feasible": true,
+       "V": 0.8049783339645679,
+       "honored": 0.005,
+       "J_all": [
+        0.005,
+        0.16840269347215764
+       ],
+       "returned_worst": 0.16840269347215764,
+       "best_worst": 0.1684026930185023,
+       "worst_worst": 0.16840269347215764,
+       "hidden_gap_returned": 0.16340269347215763,
+       "hidden_gap_best": 0.1634026930185023,
+       "gap": 2.220446049250313e-16
+      },
+      {
+       "k": 1,
+       "feasible": true,
+       "V": 0.37173991054285616,
+       "honored": 0.005,
+       "J_all": [
+        0.00478598660171009,
+        0.005
+       ],
+       "returned_worst": 0.005,
+       "best_worst": 0.004999999647388653,
+       "worst_worst": 0.007573242513620978,
+       "hidden_gap_returned": 0.0,
+       "hidden_gap_best": -3.5261134723879595e-10,
+       "gap": 1.1102230246251565e-16
+      }
+     ],
+     "fires_shipped": false,
+     "label_agrees": true
+    },
+    "0.01": {
+     "feasible": true,
+     "budget": 0.01,
+     "K": 2,
+     "V_U": 0.38591983253321727,
+     "V_best_single": 0.8309730911188485,
+     "poa": 0.4450532585856313,
+     "rpoa": 0.5355808308863497,
+     "robust_worst": 0.01,
+     "robust_worst_ratio": 1.0,
+     "screen_gap": 2.220446049250313e-16,
+     "fires_value": false,
+     "face_clear": true,
+     "tiesafe_ok": true,
+     "n_singletons": 2,
+     "n_singletons_violating_best": 1,
+     "any_singleton_violates_best": true,
+     "max_best_worst_ratio": 17.67325583993618,
+     "median_hidden_gap_best": 0.08336627902337532,
+     "lp_gap_max": 2.7755575615628914e-16,
+     "singletons": [
+      {
+       "k": 0,
+       "feasible": true,
+       "V": 0.8309730911188485,
+       "honored": 0.01,
+       "J_all": [
+        0.01,
+        0.17673255885301703
+       ],
+       "returned_worst": 0.17673255885301703,
+       "best_worst": 0.1767325583993618,
+       "worst_worst": 0.17673255885301703,
+       "hidden_gap_returned": 0.16673255885301702,
+       "hidden_gap_best": 0.1667325583993618,
+       "gap": 1.1102230246251565e-16
+      },
+      {
+       "k": 1,
+       "feasible": true,
+       "V": 0.3859198325332175,
+       "honored": 0.01,
+       "J_all": [
+        0.008111308404594182,
+        0.01
+       ],
+       "returned_worst": 0.01,
+       "best_worst": 0.009999999647388826,
+       "worst_worst": 0.010000000000000002,
+       "hidden_gap_returned": 0.0,
+       "hidden_gap_best": -3.526111746338101e-10,
+       "gap": 2.7755575615628914e-16
+      }
+     ],
+     "fires_shipped": false,
+     "label_agrees": true
+    },
+    "0.02": {
+     "feasible": true,
+     "budget": 0.02,
+     "K": 2,
+     "V_U": 0.4142796765139391,
+     "V_best_single": 0.8745210777835315,
+     "poa": 0.4602414012695924,
+     "rpoa": 0.5262782258331286,
+     "robust_worst": 0.019999999999999993,
+     "robust_worst_ratio": 0.9999999999999997,
+     "screen_gap": 5.551115123125783e-17,
+     "fires_value": false,
+     "face_clear": true,
+     "tiesafe_ok": true,
+     "n_singletons": 2,
+     "n_singletons_violating_best": 1,
+     "any_singleton_violates_best": true,
+     "max_best_worst_ratio": 9.47813727822995,
+     "median_hidden_gap_best": 0.08478137260599387,
+     "lp_gap_max": 2.220446049250313e-16,
+     "singletons": [
+      {
+       "k": 0,
+       "feasible": true,
+       "V": 0.8745210777835315,
+       "honored": 0.02,
+       "J_all": [
+        0.02,
+        0.1895627460182543
+       ],
+       "returned_worst": 0.1895627460182543,
+       "best_worst": 0.189562745564599,
+       "worst_worst": 0.1895627460182543,
+       "hidden_gap_returned": 0.1695627460182543,
+       "hidden_gap_best": 0.16956274556459902,
+       "gap": 2.220446049250313e-16
+      },
+      {
+       "k": 1,
+       "feasible": true,
+       "V": 0.41427967651393915,
+       "honored": 0.020000000000000004,
+       "J_all": [
+        0.01074211812341477,
+        0.020000000000000004
+       ],
+       "returned_worst": 0.020000000000000004,
+       "best_worst": 0.019999999647388723,
+       "worst_worst": 0.02,
+       "hidden_gap_returned": 0.0,
+       "hidden_gap_best": -3.526112804519421e-10,
+       "gap": 5.551115123125783e-17
+      }
+     ],
+     "fires_shipped": false,
+     "label_agrees": true
+    },
+    "0.05": {
+     "feasible": true,
+     "budget": 0.05,
+     "K": 2,
+     "V_U": 0.4993592084561053,
+     "V_best_single": 1.0,
+     "poa": 0.5006407915438946,
+     "rpoa": 0.5006407915438946,
+     "robust_worst": 0.05,
+     "robust_worst_ratio": 1.0,
+     "screen_gap": -3.3306690738754696e-16,
+     "fires_value": false,
+     "face_clear": true,
+     "tiesafe_ok": true,
+     "n_singletons": 2,
+     "n_singletons_violating_best": 1,
+     "any_singleton_violates_best": true,
+     "max_best_worst_ratio": 4.5306314864370405,
+     "median_hidden_gap_best": 0.08885881529352375,
+     "lp_gap_max": 4.440892098500626e-16,
+     "singletons": [
+      {
+       "k": 0,
+       "feasible": true,
+       "V": 1.0,
+       "honored": 0.04881394338219326,
+       "J_all": [
+        0.04881394338219326,
+        0.22653157467446328
+       ],
+       "returned_worst": 0.22653157467446328,
+       "best_worst": 0.22653157432185206,
+       "worst_worst": 0.22653157467446325,
+       "hidden_gap_returned": 0.17771763129227003,
+       "hidden_gap_best": 0.1777176309396588,
+       "gap": 4.440892098500626e-16
+      },
+      {
+       "k": 1,
+       "feasible": true,
+       "V": 0.499359208456105,
+       "honored": 0.05,
+       "J_all": [
+        0.016337001990159736,
+        0.05
+       ],
+       "returned_worst": 0.05,
+       "best_worst": 0.049999999647388695,
+       "worst_worst": 0.049999999999999996,
+       "hidden_gap_returned": 0.0,
+       "hidden_gap_best": -3.5261130820751774e-10,
+       "gap": 1.6653345369377348e-16
+      }
+     ],
+     "fires_shipped": false,
+     "label_agrees": true
+    },
+    "0.1": {
+     "feasible": true,
+     "budget": 0.1,
+     "K": 2,
+     "V_U": 0.6411584283597151,
+     "V_best_single": 1.0,
+     "poa": 0.35884157164028485,
+     "rpoa": 0.35884157164028485,
+     "robust_worst": 0.09999999999999998,
+     "robust_worst_ratio": 0.9999999999999998,
+     "screen_gap": 0.0,
+     "fires_value": false,
+     "face_clear": true,
+     "tiesafe_ok": true,
+     "n_singletons": 2,
+     "n_singletons_violating_best": 1,
+     "any_singleton_violates_best": true,
+     "max_best_worst_ratio": 2.2653157432185203,
+     "median_hidden_gap_best": 0.08885881529352384,
+     "lp_gap_max": 4.440892098500626e-16,
+     "singletons": [
+      {
+       "k": 0,
+       "feasible": true,
+       "V": 1.0,
+       "honored": 0.04881394338219326,
+       "J_all": [
+        0.04881394338219326,
+        0.22653157467446328
+       ],
+       "returned_worst": 0.22653157467446328,
+       "best_worst": 0.22653157432185206,
+       "worst_worst": 0.22653157467446325,
+       "hidden_gap_returned": 0.17771763129227003,
+       "hidden_gap_best": 0.1777176309396588,
+       "gap": 4.440892098500626e-16
+      },
+      {
+       "k": 1,
+       "feasible": true,
+       "V": 0.6411584283597151,
+       "honored": 0.1,
+       "J_all": [
+        0.025535623101403834,
+        0.1
+       ],
+       "returned_worst": 0.1,
+       "best_worst": 0.09999999964738887,
+       "worst_worst": 0.1,
+       "hidden_gap_returned": 0.0,
+       "hidden_gap_best": -3.5261113473517014e-10,
+       "gap": 1.1102230246251565e-16
+      }
+     ],
+     "fires_shipped": null,
+     "label_agrees": null
+    }
+   }
+  },
+  {
+   "uid": "KubeCPUQuotaOvercommit",
+   "geometry": "L3-caps5-1",
+   "n_states": 37,
+   "K": 2,
+   "budgets": {
+    "0.005": {
+     "feasible": true,
+     "budget": 0.005,
+     "K": 2,
+     "V_U": 0.3603191203169217,
+     "V_best_single": 0.5783715962643876,
+     "poa": 0.2180524759474659,
+     "rpoa": 0.37701103815580334,
+     "robust_worst": 0.005,
+     "robust_worst_ratio": 1.0,
+     "screen_gap": 0.011420790225934563,
+     "fires_value": true,
+     "face_clear": false,
+     "tiesafe_ok": true,
+     "n_singletons": 2,
+     "n_singletons_violating_best": 2,
+     "any_singleton_violates_best": true,
+     "max_best_worst_ratio": 19.444616926870154,
+     "median_hidden_gap_best": 0.051083764867764385,
+     "lp_gap_max": 1.1102230246251565e-16,
+     "singletons": [
+      {
+       "k": 0,
+       "feasible": true,
+       "V": 0.5783715962643876,
+       "honored": 0.005,
+       "J_all": [
+        0.005,
+        0.09722308518890846
+       ],
+       "returned_worst": 0.09722308518890846,
+       "best_worst": 0.09722308463435077,
+       "worst_worst": 0.09722308518890846,
+       "hidden_gap_returned": 0.09222308518890845,
+       "hidden_gap_best": 0.09222308463435076,
+       "gap": 1.1102230246251565e-16
+      },
+      {
+       "k": 1,
+       "feasible": true,
+       "V": 0.37173991054285627,
+       "honored": 0.004999999999999999,
+       "J_all": [
+        0.015191311989353869,
+        0.004999999999999999
+       ],
+       "returned_worst": 0.015191311989353869,
+       "best_worst": 0.014944445101178011,
+       "worst_worst": 0.02046340591440988,
+       "hidden_gap_returned": 0.01019131198935387,
+       "hidden_gap_best": 0.009944445101178012,
+       "gap": 0.0
+      }
+     ],
+     "fires_shipped": true,
+     "label_agrees": true
+    },
+    "0.01": {
+     "feasible": true,
+     "budget": 0.01,
+     "K": 2,
+     "V_U": 0.3783791720630838,
+     "V_best_single": 0.6062461136234967,
+     "poa": 0.22786694156041287,
+     "rpoa": 0.3758654058802387,
+     "robust_worst": 0.01,
+     "robust_worst_ratio": 1.0,
+     "screen_gap": 0.007540660470133409,
+     "fires_value": true,
+     "face_clear": false,
+     "tiesafe_ok": true,
+     "n_singletons": 2,
+     "n_singletons_violating_best": 2,
+     "any_singleton_violates_best": true,
+     "max_best_worst_ratio": 10.886515969280923,
+     "median_hidden_gap_best": 0.05271552608785777,
+     "lp_gap_max": 1.6653345369377348e-16,
+     "singletons": [
+      {
+       "k": 0,
+       "feasible": true,
+       "V": 0.6062461136234967,
+       "honored": 0.01,
+       "J_all": [
+        0.01,
+        0.10886516024736664
+       ],
+       "returned_worst": 0.10886516024736664,
+       "best_worst": 0.10886515969280924,
+       "worst_worst": 0.10886516024736666,
+       "hidden_gap_returned": 0.09886516024736665,
+       "hidden_gap_best": 0.09886515969280925,
+       "gap": 1.1102230246251565e-16
+      },
+      {
+       "k": 1,
+       "feasible": true,
+       "V": 0.3859198325332172,
+       "honored": 0.01,
+       "J_all": [
+        0.01714783763679445,
+        0.01
+       ],
+       "returned_worst": 0.01714783763679445,
+       "best_worst": 0.016565892482906287,
+       "worst_worst": 0.02479358940428126,
+       "hidden_gap_returned": 0.007147837636794449,
+       "hidden_gap_best": 0.006565892482906286,
+       "gap": 0.0
+      }
+     ],
+     "fires_shipped": true,
+     "label_agrees": true
+    },
+    "0.02": {
+     "feasible": true,
+     "budget": 0.02,
+     "K": 2,
+     "V_U": 0.41427967651393927,
+     "V_best_single": 0.6419850524197559,
+     "poa": 0.22770537590581663,
+     "rpoa": 0.3546895290592118,
+     "robust_worst": 0.02,
+     "robust_worst_ratio": 1.0,
+     "screen_gap": 5.551115123125783e-17,
+     "fires_value": false,
+     "face_clear": true,
+     "tiesafe_ok": true,
+     "n_singletons": 2,
+     "n_singletons_violating_best": 1,
+     "any_singleton_violates_best": true,
+     "max_best_worst_ratio": 6.0526279022806895,
+     "median_hidden_gap_best": 0.05052627884650126,
+     "lp_gap_max": 2.220446049250313e-16,
+     "singletons": [
+      {
+       "k": 0,
+       "feasible": true,
+       "V": 0.6419850524197559,
+       "honored": 0.02,
+       "J_all": [
+        0.02,
+        0.1210525586001714
+       ],
+       "returned_worst": 0.1210525586001714,
+       "best_worst": 0.1210525580456138,
+       "worst_worst": 0.1210525586001714,
+       "hidden_gap_returned": 0.1010525586001714,
+       "hidden_gap_best": 0.10105255804561379,
+       "gap": 2.220446049250313e-16
+      },
+      {
+       "k": 1,
+       "feasible": true,
+       "V": 0.4142796765139393,
+       "honored": 0.019999999999999997,
+       "J_all": [
+        0.020643574676043108,
+        0.019999999999999997
+       ],
+       "returned_worst": 0.020643574676043108,
+       "best_worst": 0.019999999647388723,
+       "worst_worst": 0.030938952469295324,
+       "hidden_gap_returned": 0.0006435746760431113,
+       "hidden_gap_best": -3.526112735130482e-10,
+       "gap": 1.6653345369377348e-16
+      }
+     ],
+     "fires_shipped": true,
+     "label_agrees": false
+    },
+    "0.05": {
+     "feasible": true,
+     "budget": 0.05,
+     "K": 2,
+     "V_U": 0.49935920845610504,
+     "V_best_single": 0.7300672180354688,
+     "poa": 0.23070800957936377,
+     "rpoa": 0.31600927131089906,
+     "robust_worst": 0.05,
+     "robust_worst_ratio": 1.0,
+     "screen_gap": 5.551115123125783e-17,
+     "fires_value": false,
+     "face_clear": true,
+     "tiesafe_ok": true,
+     "n_singletons": 2,
+     "n_singletons_violating_best": 1,
+     "any_singleton_violates_best": true,
+     "max_best_worst_ratio": 2.9400697228820025,
+     "median_hidden_gap_best": 0.04850174289574441,
+     "lp_gap_max": 1.6653345369377348e-16,
+     "singletons": [
+      {
+       "k": 0,
+       "feasible": true,
+       "V": 0.7300672180354688,
+       "honored": 0.05,
+       "J_all": [
+        0.05,
+        0.14700348669865754
+       ],
+       "returned_worst": 0.14700348669865754,
+       "best_worst": 0.14700348614410014,
+       "worst_worst": 0.14700348669865754,
+       "hidden_gap_returned": 0.09700348669865753,
+       "hidden_gap_best": 0.09700348614410013,
+       "gap": 0.0
+      },
+      {
+       "k": 1,
+       "feasible": true,
+       "V": 0.4993592084561051,
+       "honored": 0.05000000000000001,
+       "J_all": [
+        0.03106184193994962,
+        0.05000000000000001
+       ],
+       "returned_worst": 0.05000000000000001,
+       "best_worst": 0.04999999964738869,
+       "worst_worst": 0.05,
+       "hidden_gap_returned": 0.0,
+       "hidden_gap_best": -3.5261132208530555e-10,
+       "gap": 1.6653345369377348e-16
+      }
+     ],
+     "fires_shipped": false,
+     "label_agrees": true
+    },
+    "0.1": {
+     "feasible": true,
+     "budget": 0.1,
+     "K": 2,
+     "V_U": 0.641158428359715,
+     "V_best_single": 0.8768708273949897,
+     "poa": 0.23571239903527463,
+     "rpoa": 0.2688108575074047,
+     "robust_worst": 0.1,
+     "robust_worst_ratio": 1.0,
+     "screen_gap": -1.1102230246251565e-16,
+     "fires_value": false,
+     "face_clear": true,
+     "tiesafe_ok": true,
+     "n_singletons": 2,
+     "n_singletons_violating_best": 1,
+     "any_singleton_violates_best": true,
+     "max_best_worst_ratio": 1.9025503297491027,
+     "median_hidden_gap_best": 0.04512751631114952,
+     "lp_gap_max": 2.220446049250313e-16,
+     "singletons": [
+      {
+       "k": 0,
+       "feasible": true,
+       "V": 0.8768708273949897,
+       "honored": 0.1,
+       "J_all": [
+        0.1,
+        0.1902550335294677
+       ],
+       "returned_worst": 0.1902550335294677,
+       "best_worst": 0.19025503297491028,
+       "worst_worst": 0.1902550335294677,
+       "hidden_gap_returned": 0.0902550335294677,
+       "hidden_gap_best": 0.09025503297491028,
+       "gap": 2.220446049250313e-16
+      },
+      {
+       "k": 1,
+       "feasible": true,
+       "V": 0.6411584283597149,
+       "honored": 0.09999999999999999,
+       "J_all": [
+        0.04842562071312712,
+        0.09999999999999999
+       ],
+       "returned_worst": 0.09999999999999999,
+       "best_worst": 0.09999999964738876,
+       "worst_worst": 0.10000000000000003,
+       "hidden_gap_returned": 0.0,
+       "hidden_gap_best": -3.526112318796848e-10,
+       "gap": 2.220446049250313e-16
+      }
+     ],
+     "fires_shipped": null,
+     "label_agrees": null
+    }
+   }
+  },
+  {
+   "uid": "KubeMemoryQuotaOvercommit",
+   "geometry": "L3-caps5-1",
+   "n_states": 37,
+   "K": 2,
+   "budgets": {
+    "0.005": {
+     "feasible": true,
+     "budget": 0.005,
+     "K": 2,
+     "V_U": 0.3603191203169217,
+     "V_best_single": 0.5783715962643876,
+     "poa": 0.2180524759474659,
+     "rpoa": 0.37701103815580334,
+     "robust_worst": 0.005,
+     "robust_worst_ratio": 1.0,
+     "screen_gap": 0.011420790225934563,
+     "fires_value": true,
+     "face_clear": false,
+     "tiesafe_ok": true,
+     "n_singletons": 2,
+     "n_singletons_violating_best": 2,
+     "any_singleton_violates_best": true,
+     "max_best_worst_ratio": 19.444616926870154,
+     "median_hidden_gap_best": 0.051083764867764385,
+     "lp_gap_max": 1.1102230246251565e-16,
+     "singletons": [
+      {
+       "k": 0,
+       "feasible": true,
+       "V": 0.5783715962643876,
+       "honored": 0.005,
+       "J_all": [
+        0.005,
+        0.09722308518890846
+       ],
+       "returned_worst": 0.09722308518890846,
+       "best_worst": 0.09722308463435077,
+       "worst_worst": 0.09722308518890846,
+       "hidden_gap_returned": 0.09222308518890845,
+       "hidden_gap_best": 0.09222308463435076,
+       "gap": 1.1102230246251565e-16
+      },
+      {
+       "k": 1,
+       "feasible": true,
+       "V": 0.37173991054285627,
+       "honored": 0.004999999999999999,
+       "J_all": [
+        0.015191311989353869,
+        0.004999999999999999
+       ],
+       "returned_worst": 0.015191311989353869,
+       "best_worst": 0.014944445101178011,
+       "worst_worst": 0.02046340591440988,
+       "hidden_gap_returned": 0.01019131198935387,
+       "hidden_gap_best": 0.009944445101178012,
+       "gap": 0.0
+      }
+     ],
+     "fires_shipped": true,
+     "label_agrees": true
+    },
+    "0.01": {
+     "feasible": true,
+     "budget": 0.01,
+     "K": 2,
+     "V_U": 0.3783791720630838,
+     "V_best_single": 0.6062461136234967,
+     "poa": 0.22786694156041287,
+     "rpoa": 0.3758654058802387,
+     "robust_worst": 0.01,
+     "robust_worst_ratio": 1.0,
+     "screen_gap": 0.007540660470133409,
+     "fires_value": true,
+     "face_clear": false,
+     "tiesafe_ok": true,
+     "n_singletons": 2,
+     "n_singletons_violating_best": 2,
+     "any_singleton_violates_best": true,
+     "max_best_worst_ratio": 10.886515969280923,
+     "median_hidden_gap_best": 0.05271552608785777,
+     "lp_gap_max": 1.6653345369377348e-16,
+     "singletons": [
+      {
+       "k": 0,
+       "feasible": true,
+       "V": 0.6062461136234967,
+       "honored": 0.01,
+       "J_all": [
+        0.01,
+        0.10886516024736664
+       ],
+       "returned_worst": 0.10886516024736664,
+       "best_worst": 0.10886515969280924,
+       "worst_worst": 0.10886516024736666,
+       "hidden_gap_returned": 0.09886516024736665,
+       "hidden_gap_best": 0.09886515969280925,
+       "gap": 1.1102230246251565e-16
+      },
+      {
+       "k": 1,
+       "feasible": true,
+       "V": 0.3859198325332172,
+       "honored": 0.01,
+       "J_all": [
+        0.01714783763679445,
+        0.01
+       ],
+       "returned_worst": 0.01714783763679445,
+       "best_worst": 0.016565892482906287,
+       "worst_worst": 0.02479358940428126,
+       "hidden_gap_returned": 0.007147837636794449,
+       "hidden_gap_best": 0.006565892482906286,
+       "gap": 0.0
+      }
+     ],
+     "fires_shipped": true,
+     "label_agrees": true
+    },
+    "0.02": {
+     "feasible": true,
+     "budget": 0.02,
+     "K": 2,
+     "V_U": 0.41427967651393927,
+     "V_best_single": 0.6419850524197559,
+     "poa": 0.22770537590581663,
+     "rpoa": 0.3546895290592118,
+     "robust_worst": 0.02,
+     "robust_worst_ratio": 1.0,
+     "screen_gap": 5.551115123125783e-17,
+     "fires_value": false,
+     "face_clear": true,
+     "tiesafe_ok": true,
+     "n_singletons": 2,
+     "n_singletons_violating_best": 1,
+     "any_singleton_violates_best": true,
+     "max_best_worst_ratio": 6.0526279022806895,
+     "median_hidden_gap_best": 0.05052627884650126,
+     "lp_gap_max": 2.220446049250313e-16,
+     "singletons": [
+      {
+       "k": 0,
+       "feasible": true,
+       "V": 0.6419850524197559,
+       "honored": 0.02,
+       "J_all": [
+        0.02,
+        0.1210525586001714
+       ],
+       "returned_worst": 0.1210525586001714,
+       "best_worst": 0.1210525580456138,
+       "worst_worst": 0.1210525586001714,
+       "hidden_gap_returned": 0.1010525586001714,
+       "hidden_gap_best": 0.10105255804561379,
+       "gap": 2.220446049250313e-16
+      },
+      {
+       "k": 1,
+       "feasible": true,
+       "V": 0.4142796765139393,
+       "honored": 0.019999999999999997,
+       "J_all": [
+        0.020643574676043108,
+        0.019999999999999997
+       ],
+       "returned_worst": 0.020643574676043108,
+       "best_worst": 0.019999999647388723,
+       "worst_worst": 0.030938952469295324,
+       "hidden_gap_returned": 0.0006435746760431113,
+       "hidden_gap_best": -3.526112735130482e-10,
+       "gap": 1.6653345369377348e-16
+      }
+     ],
+     "fires_shipped": true,
+     "label_agrees": false
+    },
+    "0.05": {
+     "feasible": true,
+     "budget": 0.05,
+     "K": 2,
+     "V_U": 0.49935920845610504,
+     "V_best_single": 0.7300672180354688,
+     "poa": 0.23070800957936377,
+     "rpoa": 0.31600927131089906,
+     "robust_worst": 0.05,
+     "robust_worst_ratio": 1.0,
+     "screen_gap": 5.551115123125783e-17,
+     "fires_value": false,
+     "face_clear": true,
+     "tiesafe_ok": true,
+     "n_singletons": 2,
+     "n_singletons_violating_best": 1,
+     "any_singleton_violates_best": true,
+     "max_best_worst_ratio": 2.9400697228820025,
+     "median_hidden_gap_best": 0.04850174289574441,
+     "lp_gap_max": 1.6653345369377348e-16,
+     "singletons": [
+      {
+       "k": 0,
+       "feasible": true,
+       "V": 0.7300672180354688,
+       "honored": 0.05,
+       "J_all": [
+        0.05,
+        0.14700348669865754
+       ],
+       "returned_worst": 0.14700348669865754,
+       "best_worst": 0.14700348614410014,
+       "worst_worst": 0.14700348669865754,
+       "hidden_gap_returned": 0.09700348669865753,
+       "hidden_gap_best": 0.09700348614410013,
+       "gap": 0.0
+      },
+      {
+       "k": 1,
+       "feasible": true,
+       "V": 0.4993592084561051,
+       "honored": 0.05000000000000001,
+       "J_all": [
+        0.03106184193994962,
+        0.05000000000000001
+       ],
+       "returned_worst": 0.05000000000000001,
+       "best_worst": 0.04999999964738869,
+       "worst_worst": 0.05,
+       "hidden_gap_returned": 0.0,
+       "hidden_gap_best": -3.5261132208530555e-10,
+       "gap": 1.6653345369377348e-16
+      }
+     ],
+     "fires_shipped": false,
+     "label_agrees": true
+    },
+    "0.1": {
+     "feasible": true,
+     "budget": 0.1,
+     "K": 2,
+     "V_U": 0.641158428359715,
+     "V_best_single": 0.8768708273949897,
+     "poa": 0.23571239903527463,
+     "rpoa": 0.2688108575074047,
+     "robust_worst": 0.1,
+     "robust_worst_ratio": 1.0,
+     "screen_gap": -1.1102230246251565e-16,
+     "fires_value": false,
+     "face_clear": true,
+     "tiesafe_ok": true,
+     "n_singletons": 2,
+     "n_singletons_violating_best": 1,
+     "any_singleton_violates_best": true,
+     "max_best_worst_ratio": 1.9025503297491027,
+     "median_hidden_gap_best": 0.04512751631114952,
+     "lp_gap_max": 2.220446049250313e-16,
+     "singletons": [
+      {
+       "k": 0,
+       "feasible": true,
+       "V": 0.8768708273949897,
+       "honored": 0.1,
+       "J_all": [
+        0.1,
+        0.1902550335294677
+       ],
+       "returned_worst": 0.1902550335294677,
+       "best_worst": 0.19025503297491028,
+       "worst_worst": 0.1902550335294677,
+       "hidden_gap_returned": 0.0902550335294677,
+       "hidden_gap_best": 0.09025503297491028,
+       "gap": 2.220446049250313e-16
+      },
+      {
+       "k": 1,
+       "feasible": true,
+       "V": 0.6411584283597149,
+       "honored": 0.09999999999999999,
+       "J_all": [
+        0.04842562071312712,
+        0.09999999999999999
+       ],
+       "returned_worst": 0.09999999999999999,
+       "best_worst": 0.09999999964738876,
+       "worst_worst": 0.10000000000000003,
+       "hidden_gap_returned": 0.0,
+       "hidden_gap_best": -3.526112318796848e-10,
+       "gap": 2.220446049250313e-16
+      }
+     ],
+     "fires_shipped": null,
+     "label_agrees": null
+    }
+   }
+  },
+  {
+   "uid": "NodeCPUHighUsage",
+   "geometry": "L3-caps8-1",
+   "n_states": 55,
+   "K": 2,
+   "budgets": {
+    "0.005": {
+     "feasible": true,
+     "budget": 0.005,
+     "K": 2,
+     "V_U": 0.37173991054285616,
+     "V_best_single": 0.8049783339645679,
+     "poa": 0.4332384234217117,
+     "rpoa": 0.5381988621830177,
+     "robust_worst": 0.005,
+     "robust_worst_ratio": 1.0,
+     "screen_gap": 0.0,
+     "fires_value": false,
+     "face_clear": true,
+     "tiesafe_ok": true,
+     "n_singletons": 2,
+     "n_singletons_violating_best": 1,
+     "any_singleton_violates_best": true,
+     "max_best_worst_ratio": 33.68053860370046,
+     "median_hidden_gap_best": 0.08170134633294547,
+     "lp_gap_max": 2.220446049250313e-16,
+     "singletons": [
+      {
+       "k": 0,
+       "feasible": true,
+       "V": 0.8049783339645679,
+       "honored": 0.005,
+       "J_all": [
+        0.005,
+        0.16840269347215764
+       ],
+       "returned_worst": 0.16840269347215764,
+       "best_worst": 0.1684026930185023,
+       "worst_worst": 0.16840269347215764,
+       "hidden_gap_returned": 0.16340269347215763,
+       "hidden_gap_best": 0.1634026930185023,
+       "gap": 2.220446049250313e-16
+      },
+      {
+       "k": 1,
+       "feasible": true,
+       "V": 0.37173991054285616,
+       "honored": 0.005,
+       "J_all": [
+        0.00478598660171009,
+        0.005
+       ],
+       "returned_worst": 0.005,
+       "best_worst": 0.004999999647388653,
+       "worst_worst": 0.007573242513620978,
+       "hidden_gap_returned": 0.0,
+       "hidden_gap_best": -3.5261134723879595e-10,
+       "gap": 1.1102230246251565e-16
+      }
+     ],
+     "fires_shipped": false,
+     "label_agrees": true
+    },
+    "0.01": {
+     "feasible": true,
+     "budget": 0.01,
+     "K": 2,
+     "V_U": 0.38591983253321727,
+     "V_best_single": 0.8309730911188485,
+     "poa": 0.4450532585856313,
+     "rpoa": 0.5355808308863497,
+     "robust_worst": 0.01,
+     "robust_worst_ratio": 1.0,
+     "screen_gap": 2.220446049250313e-16,
+     "fires_value": false,
+     "face_clear": true,
+     "tiesafe_ok": true,
+     "n_singletons": 2,
+     "n_singletons_violating_best": 1,
+     "any_singleton_violates_best": true,
+     "max_best_worst_ratio": 17.67325583993618,
+     "median_hidden_gap_best": 0.08336627902337532,
+     "lp_gap_max": 2.7755575615628914e-16,
+     "singletons": [
+      {
+       "k": 0,
+       "feasible": true,
+       "V": 0.8309730911188485,
+       "honored": 0.01,
+       "J_all": [
+        0.01,
+        0.17673255885301703
+       ],
+       "returned_worst": 0.17673255885301703,
+       "best_worst": 0.1767325583993618,
+       "worst_worst": 0.17673255885301703,
+       "hidden_gap_returned": 0.16673255885301702,
+       "hidden_gap_best": 0.1667325583993618,
+       "gap": 1.1102230246251565e-16
+      },
+      {
+       "k": 1,
+       "feasible": true,
+       "V": 0.3859198325332175,
+       "honored": 0.01,
+       "J_all": [
+        0.008111308404594182,
+        0.01
+       ],
+       "returned_worst": 0.01,
+       "best_worst": 0.009999999647388826,
+       "worst_worst": 0.010000000000000002,
+       "hidden_gap_returned": 0.0,
+       "hidden_gap_best": -3.526111746338101e-10,
+       "gap": 2.7755575615628914e-16
+      }
+     ],
+     "fires_shipped": false,
+     "label_agrees": true
+    },
+    "0.02": {
+     "feasible": true,
+     "budget": 0.02,
+     "K": 2,
+     "V_U": 0.4142796765139391,
+     "V_best_single": 0.8745210777835315,
+     "poa": 0.4602414012695924,
+     "rpoa": 0.5262782258331286,
+     "robust_worst": 0.019999999999999993,
+     "robust_worst_ratio": 0.9999999999999997,
+     "screen_gap": 5.551115123125783e-17,
+     "fires_value": false,
+     "face_clear": true,
+     "tiesafe_ok": true,
+     "n_singletons": 2,
+     "n_singletons_violating_best": 1,
+     "any_singleton_violates_best": true,
+     "max_best_worst_ratio": 9.47813727822995,
+     "median_hidden_gap_best": 0.08478137260599387,
+     "lp_gap_max": 2.220446049250313e-16,
+     "singletons": [
+      {
+       "k": 0,
+       "feasible": true,
+       "V": 0.8745210777835315,
+       "honored": 0.02,
+       "J_all": [
+        0.02,
+        0.1895627460182543
+       ],
+       "returned_worst": 0.1895627460182543,
+       "best_worst": 0.189562745564599,
+       "worst_worst": 0.1895627460182543,
+       "hidden_gap_returned": 0.1695627460182543,
+       "hidden_gap_best": 0.16956274556459902,
+       "gap": 2.220446049250313e-16
+      },
+      {
+       "k": 1,
+       "feasible": true,
+       "V": 0.41427967651393915,
+       "honored": 0.020000000000000004,
+       "J_all": [
+        0.01074211812341477,
+        0.020000000000000004
+       ],
+       "returned_worst": 0.020000000000000004,
+       "best_worst": 0.019999999647388723,
+       "worst_worst": 0.02,
+       "hidden_gap_returned": 0.0,
+       "hidden_gap_best": -3.526112804519421e-10,
+       "gap": 5.551115123125783e-17
+      }
+     ],
+     "fires_shipped": false,
+     "label_agrees": true
+    },
+    "0.05": {
+     "feasible": true,
+     "budget": 0.05,
+     "K": 2,
+     "V_U": 0.4993592084561053,
+     "V_best_single": 1.0,
+     "poa": 0.5006407915438946,
+     "rpoa": 0.5006407915438946,
+     "robust_worst": 0.05,
+     "robust_worst_ratio": 1.0,
+     "screen_gap": -3.3306690738754696e-16,
+     "fires_value": false,
+     "face_clear": true,
+     "tiesafe_ok": true,
+     "n_singletons": 2,
+     "n_singletons_violating_best": 1,
+     "any_singleton_violates_best": true,
+     "max_best_worst_ratio": 4.5306314864370405,
+     "median_hidden_gap_best": 0.08885881529352375,
+     "lp_gap_max": 4.440892098500626e-16,
+     "singletons": [
+      {
+       "k": 0,
+       "feasible": true,
+       "V": 1.0,
+       "honored": 0.04881394338219326,
+       "J_all": [
+        0.04881394338219326,
+        0.22653157467446328
+       ],
+       "returned_worst": 0.22653157467446328,
+       "best_worst": 0.22653157432185206,
+       "worst_worst": 0.22653157467446325,
+       "hidden_gap_returned": 0.17771763129227003,
+       "hidden_gap_best": 0.1777176309396588,
+       "gap": 4.440892098500626e-16
+      },
+      {
+       "k": 1,
+       "feasible": true,
+       "V": 0.499359208456105,
+       "honored": 0.05,
+       "J_all": [
+        0.016337001990159736,
+        0.05
+       ],
+       "returned_worst": 0.05,
+       "best_worst": 0.049999999647388695,
+       "worst_worst": 0.049999999999999996,
+       "hidden_gap_returned": 0.0,
+       "hidden_gap_best": -3.5261130820751774e-10,
+       "gap": 1.6653345369377348e-16
+      }
+     ],
+     "fires_shipped": false,
+     "label_agrees": true
+    },
+    "0.1": {
+     "feasible": true,
+     "budget": 0.1,
+     "K": 2,
+     "V_U": 0.6411584283597151,
+     "V_best_single": 1.0,
+     "poa": 0.35884157164028485,
+     "rpoa": 0.35884157164028485,
+     "robust_worst": 0.09999999999999998,
+     "robust_worst_ratio": 0.9999999999999998,
+     "screen_gap": 0.0,
+     "fires_value": false,
+     "face_clear": true,
+     "tiesafe_ok": true,
+     "n_singletons": 2,
+     "n_singletons_violating_best": 1,
+     "any_singleton_violates_best": true,
+     "max_best_worst_ratio": 2.2653157432185203,
+     "median_hidden_gap_best": 0.08885881529352384,
+     "lp_gap_max": 4.440892098500626e-16,
+     "singletons": [
+      {
+       "k": 0,
+       "feasible": true,
+       "V": 1.0,
+       "honored": 0.04881394338219326,
+       "J_all": [
+        0.04881394338219326,
+        0.22653157467446328
+       ],
+       "returned_worst": 0.22653157467446328,
+       "best_worst": 0.22653157432185206,
+       "worst_worst": 0.22653157467446325,
+       "hidden_gap_returned": 0.17771763129227003,
+       "hidden_gap_best": 0.1777176309396588,
+       "gap": 4.440892098500626e-16
+      },
+      {
+       "k": 1,
+       "feasible": true,
+       "V": 0.6411584283597151,
+       "honored": 0.1,
+       "J_all": [
+        0.025535623101403834,
+        0.1
+       ],
+       "returned_worst": 0.1,
+       "best_worst": 0.09999999964738887,
+       "worst_worst": 0.1,
+       "hidden_gap_returned": 0.0,
+       "hidden_gap_best": -3.5261113473517014e-10,
+       "gap": 1.1102230246251565e-16
+      }
+     ],
+     "fires_shipped": null,
+     "label_agrees": null
+    }
+   }
+  },
+  {
+   "uid": "NodeClockNotSynchronising",
+   "geometry": "L3-caps8-1",
+   "n_states": 55,
+   "K": 2,
+   "budgets": {
+    "0.005": {
+     "feasible": true,
+     "budget": 0.005,
+     "K": 2,
+     "V_U": 0.37173991054285616,
+     "V_best_single": 0.8049783339645679,
+     "poa": 0.4332384234217117,
+     "rpoa": 0.5381988621830177,
+     "robust_worst": 0.005,
+     "robust_worst_ratio": 1.0,
+     "screen_gap": 0.0,
+     "fires_value": false,
+     "face_clear": true,
+     "tiesafe_ok": true,
+     "n_singletons": 2,
+     "n_singletons_violating_best": 1,
+     "any_singleton_violates_best": true,
+     "max_best_worst_ratio": 33.68053860370046,
+     "median_hidden_gap_best": 0.08170134633294547,
+     "lp_gap_max": 2.220446049250313e-16,
+     "singletons": [
+      {
+       "k": 0,
+       "feasible": true,
+       "V": 0.8049783339645679,
+       "honored": 0.005,
+       "J_all": [
+        0.005,
+        0.16840269347215764
+       ],
+       "returned_worst": 0.16840269347215764,
+       "best_worst": 0.1684026930185023,
+       "worst_worst": 0.16840269347215764,
+       "hidden_gap_returned": 0.16340269347215763,
+       "hidden_gap_best": 0.1634026930185023,
+       "gap": 2.220446049250313e-16
+      },
+      {
+       "k": 1,
+       "feasible": true,
+       "V": 0.37173991054285616,
+       "honored": 0.005,
+       "J_all": [
+        0.00478598660171009,
+        0.005
+       ],
+       "returned_worst": 0.005,
+       "best_worst": 0.004999999647388653,
+       "worst_worst": 0.007573242513620978,
+       "hidden_gap_returned": 0.0,
+       "hidden_gap_best": -3.5261134723879595e-10,
+       "gap": 1.1102230246251565e-16
+      }
+     ],
+     "fires_shipped": false,
+     "label_agrees": true
+    },
+    "0.01": {
+     "feasible": true,
+     "budget": 0.01,
+     "K": 2,
+     "V_U": 0.38591983253321727,
+     "V_best_single": 0.8309730911188485,
+     "poa": 0.4450532585856313,
+     "rpoa": 0.5355808308863497,
+     "robust_worst": 0.01,
+     "robust_worst_ratio": 1.0,
+     "screen_gap": 2.220446049250313e-16,
+     "fires_value": false,
+     "face_clear": true,
+     "tiesafe_ok": true,
+     "n_singletons": 2,
+     "n_singletons_violating_best": 1,
+     "any_singleton_violates_best": true,
+     "max_best_worst_ratio": 17.67325583993618,
+     "median_hidden_gap_best": 0.08336627902337532,
+     "lp_gap_max": 2.7755575615628914e-16,
+     "singletons": [
+      {
+       "k": 0,
+       "feasible": true,
+       "V": 0.8309730911188485,
+       "honored": 0.01,
+       "J_all": [
+        0.01,
+        0.17673255885301703
+       ],
+       "returned_worst": 0.17673255885301703,
+       "best_worst": 0.1767325583993618,
+       "worst_worst": 0.17673255885301703,
+       "hidden_gap_returned": 0.16673255885301702,
+       "hidden_gap_best": 0.1667325583993618,
+       "gap": 1.1102230246251565e-16
+      },
+      {
+       "k": 1,
+       "feasible": true,
+       "V": 0.3859198325332175,
+       "honored": 0.01,
+       "J_all": [
+        0.008111308404594182,
+        0.01
+       ],
+       "returned_worst": 0.01,
+       "best_worst": 0.009999999647388826,
+       "worst_worst": 0.010000000000000002,
+       "hidden_gap_returned": 0.0,
+       "hidden_gap_best": -3.526111746338101e-10,
+       "gap": 2.7755575615628914e-16
+      }
+     ],
+     "fires_shipped": false,
+     "label_agrees": true
+    },
+    "0.02": {
+     "feasible": true,
+     "budget": 0.02,
+     "K": 2,
+     "V_U": 0.4142796765139391,
+     "V_best_single": 0.8745210777835315,
+     "poa": 0.4602414012695924,
+     "rpoa": 0.5262782258331286,
+     "robust_worst": 0.019999999999999993,
+     "robust_worst_ratio": 0.9999999999999997,
+     "screen_gap": 5.551115123125783e-17,
+     "fires_value": false,
+     "face_clear": true,
+     "tiesafe_ok": true,
+     "n_singletons": 2,
+     "n_singletons_violating_best": 1,
+     "any_singleton_violates_best": true,
+     "max_best_worst_ratio": 9.47813727822995,
+     "median_hidden_gap_best": 0.08478137260599387,
+     "lp_gap_max": 2.220446049250313e-16,
+     "singletons": [
+      {
+       "k": 0,
+       "feasible": true,
+       "V": 0.8745210777835315,
+       "honored": 0.02,
+       "J_all": [
+        0.02,
+        0.1895627460182543
+       ],
+       "returned_worst": 0.1895627460182543,
+       "best_worst": 0.189562745564599,
+       "worst_worst": 0.1895627460182543,
+       "hidden_gap_returned": 0.1695627460182543,
+       "hidden_gap_best": 0.16956274556459902,
+       "gap": 2.220446049250313e-16
+      },
+      {
+       "k": 1,
+       "feasible": true,
+       "V": 0.41427967651393915,
+       "honored": 0.020000000000000004,
+       "J_all": [
+        0.01074211812341477,
+        0.020000000000000004
+       ],
+       "returned_worst": 0.020000000000000004,
+       "best_worst": 0.019999999647388723,
+       "worst_worst": 0.02,
+       "hidden_gap_returned": 0.0,
+       "hidden_gap_best": -3.526112804519421e-10,
+       "gap": 5.551115123125783e-17
+      }
+     ],
+     "fires_shipped": false,
+     "label_agrees": true
+    },
+    "0.05": {
+     "feasible": true,
+     "budget": 0.05,
+     "K": 2,
+     "V_U": 0.4993592084561053,
+     "V_best_single": 1.0,
+     "poa": 0.5006407915438946,
+     "rpoa": 0.5006407915438946,
+     "robust_worst": 0.05,
+     "robust_worst_ratio": 1.0,
+     "screen_gap": -3.3306690738754696e-16,
+     "fires_value": false,
+     "face_clear": true,
+     "tiesafe_ok": true,
+     "n_singletons": 2,
+     "n_singletons_violating_best": 1,
+     "any_singleton_violates_best": true,
+     "max_best_worst_ratio": 4.5306314864370405,
+     "median_hidden_gap_best": 0.08885881529352375,
+     "lp_gap_max": 4.440892098500626e-16,
+     "singletons": [
+      {
+       "k": 0,
+       "feasible": true,
+       "V": 1.0,
+       "honored": 0.04881394338219326,
+       "J_all": [
+        0.04881394338219326,
+        0.22653157467446328
+       ],
+       "returned_worst": 0.22653157467446328,
+       "best_worst": 0.22653157432185206,
+       "worst_worst": 0.22653157467446325,
+       "hidden_gap_returned": 0.17771763129227003,
+       "hidden_gap_best": 0.1777176309396588,
+       "gap": 4.440892098500626e-16
+      },
+      {
+       "k": 1,
+       "feasible": true,
+       "V": 0.499359208456105,
+       "honored": 0.05,
+       "J_all": [
+        0.016337001990159736,
+        0.05
+       ],
+       "returned_worst": 0.05,
+       "best_worst": 0.049999999647388695,
+       "worst_worst": 0.049999999999999996,
+       "hidden_gap_returned": 0.0,
+       "hidden_gap_best": -3.5261130820751774e-10,
+       "gap": 1.6653345369377348e-16
+      }
+     ],
+     "fires_shipped": false,
+     "label_agrees": true
+    },
+    "0.1": {
+     "feasible": true,
+     "budget": 0.1,
+     "K": 2,
+     "V_U": 0.6411584283597151,
+     "V_best_single": 1.0,
+     "poa": 0.35884157164028485,
+     "rpoa": 0.35884157164028485,
+     "robust_worst": 0.09999999999999998,
+     "robust_worst_ratio": 0.9999999999999998,
+     "screen_gap": 0.0,
+     "fires_value": false,
+     "face_clear": true,
+     "tiesafe_ok": true,
+     "n_singletons": 2,
+     "n_singletons_violating_best": 1,
+     "any_singleton_violates_best": true,
+     "max_best_worst_ratio": 2.2653157432185203,
+     "median_hidden_gap_best": 0.08885881529352384,
+     "lp_gap_max": 4.440892098500626e-16,
+     "singletons": [
+      {
+       "k": 0,
+       "feasible": true,
+       "V": 1.0,
+       "honored": 0.04881394338219326,
+       "J_all": [
+        0.04881394338219326,
+        0.22653157467446328
+       ],
+       "returned_worst": 0.22653157467446328,
+       "best_worst": 0.22653157432185206,
+       "worst_worst": 0.22653157467446325,
+       "hidden_gap_returned": 0.17771763129227003,
+       "hidden_gap_best": 0.1777176309396588,
+       "gap": 4.440892098500626e-16
+      },
+      {
+       "k": 1,
+       "feasible": true,
+       "V": 0.6411584283597151,
+       "honored": 0.1,
+       "J_all": [
+        0.025535623101403834,
+        0.1
+       ],
+       "returned_worst": 0.1,
+       "best_worst": 0.09999999964738887,
+       "worst_worst": 0.1,
+       "hidden_gap_returned": 0.0,
+       "hidden_gap_best": -3.5261113473517014e-10,
+       "gap": 1.1102230246251565e-16
+      }
+     ],
+     "fires_shipped": null,
+     "label_agrees": null
+    }
+   }
+  },
+  {
+   "uid": "NodeDiskIOSaturation",
+   "geometry": "L3-caps8-1",
+   "n_states": 55,
+   "K": 2,
+   "budgets": {
+    "0.005": {
+     "feasible": true,
+     "budget": 0.005,
+     "K": 2,
+     "V_U": 0.37173991054285616,
+     "V_best_single": 0.8049783339645679,
+     "poa": 0.4332384234217117,
+     "rpoa": 0.5381988621830177,
+     "robust_worst": 0.005,
+     "robust_worst_ratio": 1.0,
+     "screen_gap": 0.0,
+     "fires_value": false,
+     "face_clear": true,
+     "tiesafe_ok": true,
+     "n_singletons": 2,
+     "n_singletons_violating_best": 1,
+     "any_singleton_violates_best": true,
+     "max_best_worst_ratio": 33.68053860370046,
+     "median_hidden_gap_best": 0.08170134633294547,
+     "lp_gap_max": 2.220446049250313e-16,
+     "singletons": [
+      {
+       "k": 0,
+       "feasible": true,
+       "V": 0.8049783339645679,
+       "honored": 0.005,
+       "J_all": [
+        0.005,
+        0.16840269347215764
+       ],
+       "returned_worst": 0.16840269347215764,
+       "best_worst": 0.1684026930185023,
+       "worst_worst": 0.16840269347215764,
+       "hidden_gap_returned": 0.16340269347215763,
+       "hidden_gap_best": 0.1634026930185023,
+       "gap": 2.220446049250313e-16
+      },
+      {
+       "k": 1,
+       "feasible": true,
+       "V": 0.37173991054285616,
+       "honored": 0.005,
+       "J_all": [
+        0.00478598660171009,
+        0.005
+       ],
+       "returned_worst": 0.005,
+       "best_worst": 0.004999999647388653,
+       "worst_worst": 0.007573242513620978,
+       "hidden_gap_returned": 0.0,
+       "hidden_gap_best": -3.5261134723879595e-10,
+       "gap": 1.1102230246251565e-16
+      }
+     ],
+     "fires_shipped": false,
+     "label_agrees": true
+    },
+    "0.01": {
+     "feasible": true,
+     "budget": 0.01,
+     "K": 2,
+     "V_U": 0.38591983253321727,
+     "V_best_single": 0.8309730911188485,
+     "poa": 0.4450532585856313,
+     "rpoa": 0.5355808308863497,
+     "robust_worst": 0.01,
+     "robust_worst_ratio": 1.0,
+     "screen_gap": 2.220446049250313e-16,
+     "fires_value": false,
+     "face_clear": true,
+     "tiesafe_ok": true,
+     "n_singletons": 2,
+     "n_singletons_violating_best": 1,
+     "any_singleton_violates_best": true,
+     "max_best_worst_ratio": 17.67325583993618,
+     "median_hidden_gap_best": 0.08336627902337532,
+     "lp_gap_max": 2.7755575615628914e-16,
+     "singletons": [
+      {
+       "k": 0,
+       "feasible": true,
+       "V": 0.8309730911188485,
+       "honored": 0.01,
+       "J_all": [
+        0.01,
+        0.17673255885301703
+       ],
+       "returned_worst": 0.17673255885301703,
+       "best_worst": 0.1767325583993618,
+       "worst_worst": 0.17673255885301703,
+       "hidden_gap_returned": 0.16673255885301702,
+       "hidden_gap_best": 0.1667325583993618,
+       "gap": 1.1102230246251565e-16
+      },
+      {
+       "k": 1,
+       "feasible": true,
+       "V": 0.3859198325332175,
+       "honored": 0.01,
+       "J_all": [
+        0.008111308404594182,
+        0.01
+       ],
+       "returned_worst": 0.01,
+       "best_worst": 0.009999999647388826,
+       "worst_worst": 0.010000000000000002,
+       "hidden_gap_returned": 0.0,
+       "hidden_gap_best": -3.526111746338101e-10,
+       "gap": 2.7755575615628914e-16
+      }
+     ],
+     "fires_shipped": false,
+     "label_agrees": true
+    },
+    "0.02": {
+     "feasible": true,
+     "budget": 0.02,
+     "K": 2,
+     "V_U": 0.4142796765139391,
+     "V_best_single": 0.8745210777835315,
+     "poa": 0.4602414012695924,
+     "rpoa": 0.5262782258331286,
+     "robust_worst": 0.019999999999999993,
+     "robust_worst_ratio": 0.9999999999999997,
+     "screen_gap": 5.551115123125783e-17,
+     "fires_value": false,
+     "face_clear": true,
+     "tiesafe_ok": true,
+     "n_singletons": 2,
+     "n_singletons_violating_best": 1,
+     "any_singleton_violates_best": true,
+     "max_best_worst_ratio": 9.47813727822995,
+     "median_hidden_gap_best": 0.08478137260599387,
+     "lp_gap_max": 2.220446049250313e-16,
+     "singletons": [
+      {
+       "k": 0,
+       "feasible": true,
+       "V": 0.8745210777835315,
+       "honored": 0.02,
+       "J_all": [
+        0.02,
+        0.1895627460182543
+       ],
+       "returned_worst": 0.1895627460182543,
+       "best_worst": 0.189562745564599,
+       "worst_worst": 0.1895627460182543,
+       "hidden_gap_returned": 0.1695627460182543,
+       "hidden_gap_best": 0.16956274556459902,
+       "gap": 2.220446049250313e-16
+      },
+      {
+       "k": 1,
+       "feasible": true,
+       "V": 0.41427967651393915,
+       "honored": 0.020000000000000004,
+       "J_all": [
+        0.01074211812341477,
+        0.020000000000000004
+       ],
+       "returned_worst": 0.020000000000000004,
+       "best_worst": 0.019999999647388723,
+       "worst_worst": 0.02,
+       "hidden_gap_returned": 0.0,
+       "hidden_gap_best": -3.526112804519421e-10,
+       "gap": 5.551115123125783e-17
+      }
+     ],
+     "fires_shipped": false,
+     "label_agrees": true
+    },
+    "0.05": {
+     "feasible": true,
+     "budget": 0.05,
+     "K": 2,
+     "V_U": 0.4993592084561053,
+     "V_best_single": 1.0,
+     "poa": 0.5006407915438946,
+     "rpoa": 0.5006407915438946,
+     "robust_worst": 0.05,
+     "robust_worst_ratio": 1.0,
+     "screen_gap": -3.3306690738754696e-16,
+     "fires_value": false,
+     "face_clear": true,
+     "tiesafe_ok": true,
+     "n_singletons": 2,
+     "n_singletons_violating_best": 1,
+     "any_singleton_violates_best": true,
+     "max_best_worst_ratio": 4.5306314864370405,
+     "median_hidden_gap_best": 0.08885881529352375,
+     "lp_gap_max": 4.440892098500626e-16,
+     "singletons": [
+      {
+       "k": 0,
+       "feasible": true,
+       "V": 1.0,
+       "honored": 0.04881394338219326,
+       "J_all": [
+        0.04881394338219326,
+        0.22653157467446328
+       ],
+       "returned_worst": 0.22653157467446328,
+       "best_worst": 0.22653157432185206,
+       "worst_worst": 0.22653157467446325,
+       "hidden_gap_returned": 0.17771763129227003,
+       "hidden_gap_best": 0.1777176309396588,
+       "gap": 4.440892098500626e-16
+      },
+      {
+       "k": 1,
+       "feasible": true,
+       "V": 0.499359208456105,
+       "honored": 0.05,
+       "J_all": [
+        0.016337001990159736,
+        0.05
+       ],
+       "returned_worst": 0.05,
+       "best_worst": 0.049999999647388695,
+       "worst_worst": 0.049999999999999996,
+       "hidden_gap_returned": 0.0,
+       "hidden_gap_best": -3.5261130820751774e-10,
+       "gap": 1.6653345369377348e-16
+      }
+     ],
+     "fires_shipped": false,
+     "label_agrees": true
+    },
+    "0.1": {
+     "feasible": true,
+     "budget": 0.1,
+     "K": 2,
+     "V_U": 0.6411584283597151,
+     "V_best_single": 1.0,
+     "poa": 0.35884157164028485,
+     "rpoa": 0.35884157164028485,
+     "robust_worst": 0.09999999999999998,
+     "robust_worst_ratio": 0.9999999999999998,
+     "screen_gap": 0.0,
+     "fires_value": false,
+     "face_clear": true,
+     "tiesafe_ok": true,
+     "n_singletons": 2,
+     "n_singletons_violating_best": 1,
+     "any_singleton_violates_best": true,
+     "max_best_worst_ratio": 2.2653157432185203,
+     "median_hidden_gap_best": 0.08885881529352384,
+     "lp_gap_max": 4.440892098500626e-16,
+     "singletons": [
+      {
+       "k": 0,
+       "feasible": true,
+       "V": 1.0,
+       "honored": 0.04881394338219326,
+       "J_all": [
+        0.04881394338219326,
+        0.22653157467446328
+       ],
+       "returned_worst": 0.22653157467446328,
+       "best_worst": 0.22653157432185206,
+       "worst_worst": 0.22653157467446325,
+       "hidden_gap_returned": 0.17771763129227003,
+       "hidden_gap_best": 0.1777176309396588,
+       "gap": 4.440892098500626e-16
+      },
+      {
+       "k": 1,
+       "feasible": true,
+       "V": 0.6411584283597151,
+       "honored": 0.1,
+       "J_all": [
+        0.025535623101403834,
+        0.1
+       ],
+       "returned_worst": 0.1,
+       "best_worst": 0.09999999964738887,
+       "worst_worst": 0.1,
+       "hidden_gap_returned": 0.0,
+       "hidden_gap_best": -3.5261113473517014e-10,
+       "gap": 1.1102230246251565e-16
+      }
+     ],
+     "fires_shipped": null,
+     "label_agrees": null
+    }
+   }
+  },
+  {
+   "uid": "PrometheusErrorSendingAlertsToAnyAlertmanager",
+   "geometry": "L3-caps8-1",
+   "n_states": 55,
+   "K": 2,
+   "budgets": {
+    "0.005": {
+     "feasible": true,
+     "budget": 0.005,
+     "K": 2,
+     "V_U": 0.37173991054285616,
+     "V_best_single": 0.8049783339645679,
+     "poa": 0.4332384234217117,
+     "rpoa": 0.5381988621830177,
+     "robust_worst": 0.005,
+     "robust_worst_ratio": 1.0,
+     "screen_gap": 0.0,
+     "fires_value": false,
+     "face_clear": true,
+     "tiesafe_ok": true,
+     "n_singletons": 2,
+     "n_singletons_violating_best": 1,
+     "any_singleton_violates_best": true,
+     "max_best_worst_ratio": 33.68053860370046,
+     "median_hidden_gap_best": 0.08170134633294547,
+     "lp_gap_max": 2.220446049250313e-16,
+     "singletons": [
+      {
+       "k": 0,
+       "feasible": true,
+       "V": 0.8049783339645679,
+       "honored": 0.005,
+       "J_all": [
+        0.005,
+        0.16840269347215764
+       ],
+       "returned_worst": 0.16840269347215764,
+       "best_worst": 0.1684026930185023,
+       "worst_worst": 0.16840269347215764,
+       "hidden_gap_returned": 0.16340269347215763,
+       "hidden_gap_best": 0.1634026930185023,
+       "gap": 2.220446049250313e-16
+      },
+      {
+       "k": 1,
+       "feasible": true,
+       "V": 0.37173991054285616,
+       "honored": 0.005,
+       "J_all": [
+        0.00478598660171009,
+        0.005
+       ],
+       "returned_worst": 0.005,
+       "best_worst": 0.004999999647388653,
+       "worst_worst": 0.007573242513620978,
+       "hidden_gap_returned": 0.0,
+       "hidden_gap_best": -3.5261134723879595e-10,
+       "gap": 1.1102230246251565e-16
+      }
+     ],
+     "fires_shipped": false,
+     "label_agrees": true
+    },
+    "0.01": {
+     "feasible": true,
+     "budget": 0.01,
+     "K": 2,
+     "V_U": 0.38591983253321727,
+     "V_best_single": 0.8309730911188485,
+     "poa": 0.4450532585856313,
+     "rpoa": 0.5355808308863497,
+     "robust_worst": 0.01,
+     "robust_worst_ratio": 1.0,
+     "screen_gap": 2.220446049250313e-16,
+     "fires_value": false,
+     "face_clear": true,
+     "tiesafe_ok": true,
+     "n_singletons": 2,
+     "n_singletons_violating_best": 1,
+     "any_singleton_violates_best": true,
+     "max_best_worst_ratio": 17.67325583993618,
+     "median_hidden_gap_best": 0.08336627902337532,
+     "lp_gap_max": 2.7755575615628914e-16,
+     "singletons": [
+      {
+       "k": 0,
+       "feasible": true,
+       "V": 0.8309730911188485,
+       "honored": 0.01,
+       "J_all": [
+        0.01,
+        0.17673255885301703
+       ],
+       "returned_worst": 0.17673255885301703,
+       "best_worst": 0.1767325583993618,
+       "worst_worst": 0.17673255885301703,
+       "hidden_gap_returned": 0.16673255885301702,
+       "hidden_gap_best": 0.1667325583993618,
+       "gap": 1.1102230246251565e-16
+      },
+      {
+       "k": 1,
+       "feasible": true,
+       "V": 0.3859198325332175,
+       "honored": 0.01,
+       "J_all": [
+        0.008111308404594182,
+        0.01
+       ],
+       "returned_worst": 0.01,
+       "best_worst": 0.009999999647388826,
+       "worst_worst": 0.010000000000000002,
+       "hidden_gap_returned": 0.0,
+       "hidden_gap_best": -3.526111746338101e-10,
+       "gap": 2.7755575615628914e-16
+      }
+     ],
+     "fires_shipped": false,
+     "label_agrees": true
+    },
+    "0.02": {
+     "feasible": true,
+     "budget": 0.02,
+     "K": 2,
+     "V_U": 0.4142796765139391,
+     "V_best_single": 0.8745210777835315,
+     "poa": 0.4602414012695924,
+     "rpoa": 0.5262782258331286,
+     "robust_worst": 0.019999999999999993,
+     "robust_worst_ratio": 0.9999999999999997,
+     "screen_gap": 5.551115123125783e-17,
+     "fires_value": false,
+     "face_clear": true,
+     "tiesafe_ok": true,
+     "n_singletons": 2,
+     "n_singletons_violating_best": 1,
+     "any_singleton_violates_best": true,
+     "max_best_worst_ratio": 9.47813727822995,
+     "median_hidden_gap_best": 0.08478137260599387,
+     "lp_gap_max": 2.220446049250313e-16,
+     "singletons": [
+      {
+       "k": 0,
+       "feasible": true,
+       "V": 0.8745210777835315,
+       "honored": 0.02,
+       "J_all": [
+        0.02,
+        0.1895627460182543
+       ],
+       "returned_worst": 0.1895627460182543,
+       "best_worst": 0.189562745564599,
+       "worst_worst": 0.1895627460182543,
+       "hidden_gap_returned": 0.1695627460182543,
+       "hidden_gap_best": 0.16956274556459902,
+       "gap": 2.220446049250313e-16
+      },
+      {
+       "k": 1,
+       "feasible": true,
+       "V": 0.41427967651393915,
+       "honored": 0.020000000000000004,
+       "J_all": [
+        0.01074211812341477,
+        0.020000000000000004
+       ],
+       "returned_worst": 0.020000000000000004,
+       "best_worst": 0.019999999647388723,
+       "worst_worst": 0.02,
+       "hidden_gap_returned": 0.0,
+       "hidden_gap_best": -3.526112804519421e-10,
+       "gap": 5.551115123125783e-17
+      }
+     ],
+     "fires_shipped": false,
+     "label_agrees": true
+    },
+    "0.05": {
+     "feasible": true,
+     "budget": 0.05,
+     "K": 2,
+     "V_U": 0.4993592084561053,
+     "V_best_single": 1.0,
+     "poa": 0.5006407915438946,
+     "rpoa": 0.5006407915438946,
+     "robust_worst": 0.05,
+     "robust_worst_ratio": 1.0,
+     "screen_gap": -3.3306690738754696e-16,
+     "fires_value": false,
+     "face_clear": true,
+     "tiesafe_ok": true,
+     "n_singletons": 2,
+     "n_singletons_violating_best": 1,
+     "any_singleton_violates_best": true,
+     "max_best_worst_ratio": 4.5306314864370405,
+     "median_hidden_gap_best": 0.08885881529352375,
+     "lp_gap_max": 4.440892098500626e-16,
+     "singletons": [
+      {
+       "k": 0,
+       "feasible": true,
+       "V": 1.0,
+       "honored": 0.04881394338219326,
+       "J_all": [
+        0.04881394338219326,
+        0.22653157467446328
+       ],
+       "returned_worst": 0.22653157467446328,
+       "best_worst": 0.22653157432185206,
+       "worst_worst": 0.22653157467446325,
+       "hidden_gap_returned": 0.17771763129227003,
+       "hidden_gap_best": 0.1777176309396588,
+       "gap": 4.440892098500626e-16
+      },
+      {
+       "k": 1,
+       "feasible": true,
+       "V": 0.499359208456105,
+       "honored": 0.05,
+       "J_all": [
+        0.016337001990159736,
+        0.05
+       ],
+       "returned_worst": 0.05,
+       "best_worst": 0.049999999647388695,
+       "worst_worst": 0.049999999999999996,
+       "hidden_gap_returned": 0.0,
+       "hidden_gap_best": -3.5261130820751774e-10,
+       "gap": 1.6653345369377348e-16
+      }
+     ],
+     "fires_shipped": false,
+     "label_agrees": true
+    },
+    "0.1": {
+     "feasible": true,
+     "budget": 0.1,
+     "K": 2,
+     "V_U": 0.6411584283597151,
+     "V_best_single": 1.0,
+     "poa": 0.35884157164028485,
+     "rpoa": 0.35884157164028485,
+     "robust_worst": 0.09999999999999998,
+     "robust_worst_ratio": 0.9999999999999998,
+     "screen_gap": 0.0,
+     "fires_value": false,
+     "face_clear": true,
+     "tiesafe_ok": true,
+     "n_singletons": 2,
+     "n_singletons_violating_best": 1,
+     "any_singleton_violates_best": true,
+     "max_best_worst_ratio": 2.2653157432185203,
+     "median_hidden_gap_best": 0.08885881529352384,
+     "lp_gap_max": 4.440892098500626e-16,
+     "singletons": [
+      {
+       "k": 0,
+       "feasible": true,
+       "V": 1.0,
+       "honored": 0.04881394338219326,
+       "J_all": [
+        0.04881394338219326,
+        0.22653157467446328
+       ],
+       "returned_worst": 0.22653157467446328,
+       "best_worst": 0.22653157432185206,
+       "worst_worst": 0.22653157467446325,
+       "hidden_gap_returned": 0.17771763129227003,
+       "hidden_gap_best": 0.1777176309396588,
+       "gap": 4.440892098500626e-16
+      },
+      {
+       "k": 1,
+       "feasible": true,
+       "V": 0.6411584283597151,
+       "honored": 0.1,
+       "J_all": [
+        0.025535623101403834,
+        0.1
+       ],
+       "returned_worst": 0.1,
+       "best_worst": 0.09999999964738887,
+       "worst_worst": 0.1,
+       "hidden_gap_returned": 0.0,
+       "hidden_gap_best": -3.5261113473517014e-10,
+       "gap": 1.1102230246251565e-16
+      }
+     ],
+     "fires_shipped": null,
+     "label_agrees": null
+    }
+   }
+  },
+  {
+   "uid": "PrometheusErrorSendingAlertsToSomeAlertmanagers",
+   "geometry": "L3-caps8-1",
+   "n_states": 55,
+   "K": 2,
+   "budgets": {
+    "0.005": {
+     "feasible": true,
+     "budget": 0.005,
+     "K": 2,
+     "V_U": 0.37173991054285616,
+     "V_best_single": 0.8049783339645679,
+     "poa": 0.4332384234217117,
+     "rpoa": 0.5381988621830177,
+     "robust_worst": 0.005,
+     "robust_worst_ratio": 1.0,
+     "screen_gap": 0.0,
+     "fires_value": false,
+     "face_clear": true,
+     "tiesafe_ok": true,
+     "n_singletons": 2,
+     "n_singletons_violating_best": 1,
+     "any_singleton_violates_best": true,
+     "max_best_worst_ratio": 33.68053860370046,
+     "median_hidden_gap_best": 0.08170134633294547,
+     "lp_gap_max": 2.220446049250313e-16,
+     "singletons": [
+      {
+       "k": 0,
+       "feasible": true,
+       "V": 0.8049783339645679,
+       "honored": 0.005,
+       "J_all": [
+        0.005,
+        0.16840269347215764
+       ],
+       "returned_worst": 0.16840269347215764,
+       "best_worst": 0.1684026930185023,
+       "worst_worst": 0.16840269347215764,
+       "hidden_gap_returned": 0.16340269347215763,
+       "hidden_gap_best": 0.1634026930185023,
+       "gap": 2.220446049250313e-16
+      },
+      {
+       "k": 1,
+       "feasible": true,
+       "V": 0.37173991054285616,
+       "honored": 0.005,
+       "J_all": [
+        0.00478598660171009,
+        0.005
+       ],
+       "returned_worst": 0.005,
+       "best_worst": 0.004999999647388653,
+       "worst_worst": 0.007573242513620978,
+       "hidden_gap_returned": 0.0,
+       "hidden_gap_best": -3.5261134723879595e-10,
+       "gap": 1.1102230246251565e-16
+      }
+     ],
+     "fires_shipped": false,
+     "label_agrees": true
+    },
+    "0.01": {
+     "feasible": true,
+     "budget": 0.01,
+     "K": 2,
+     "V_U": 0.38591983253321727,
+     "V_best_single": 0.8309730911188485,
+     "poa": 0.4450532585856313,
+     "rpoa": 0.5355808308863497,
+     "robust_worst": 0.01,
+     "robust_worst_ratio": 1.0,
+     "screen_gap": 2.220446049250313e-16,
+     "fires_value": false,
+     "face_clear": true,
+     "tiesafe_ok": true,
+     "n_singletons": 2,
+     "n_singletons_violating_best": 1,
+     "any_singleton_violates_best": true,
+     "max_best_worst_ratio": 17.67325583993618,
+     "median_hidden_gap_best": 0.08336627902337532,
+     "lp_gap_max": 2.7755575615628914e-16,
+     "singletons": [
+      {
+       "k": 0,
+       "feasible": true,
+       "V": 0.8309730911188485,
+       "honored": 0.01,
+       "J_all": [
+        0.01,
+        0.17673255885301703
+       ],
+       "returned_worst": 0.17673255885301703,
+       "best_worst": 0.1767325583993618,
+       "worst_worst": 0.17673255885301703,
+       "hidden_gap_returned": 0.16673255885301702,
+       "hidden_gap_best": 0.1667325583993618,
+       "gap": 1.1102230246251565e-16
+      },
+      {
+       "k": 1,
+       "feasible": true,
+       "V": 0.3859198325332175,
+       "honored": 0.01,
+       "J_all": [
+        0.008111308404594182,
+        0.01
+       ],
+       "returned_worst": 0.01,
+       "best_worst": 0.009999999647388826,
+       "worst_worst": 0.010000000000000002,
+       "hidden_gap_returned": 0.0,
+       "hidden_gap_best": -3.526111746338101e-10,
+       "gap": 2.7755575615628914e-16
+      }
+     ],
+     "fires_shipped": false,
+     "label_agrees": true
+    },
+    "0.02": {
+     "feasible": true,
+     "budget": 0.02,
+     "K": 2,
+     "V_U": 0.4142796765139391,
+     "V_best_single": 0.8745210777835315,
+     "poa": 0.4602414012695924,
+     "rpoa": 0.5262782258331286,
+     "robust_worst": 0.019999999999999993,
+     "robust_worst_ratio": 0.9999999999999997,
+     "screen_gap": 5.551115123125783e-17,
+     "fires_value": false,
+     "face_clear": true,
+     "tiesafe_ok": true,
+     "n_singletons": 2,
+     "n_singletons_violating_best": 1,
+     "any_singleton_violates_best": true,
+     "max_best_worst_ratio": 9.47813727822995,
+     "median_hidden_gap_best": 0.08478137260599387,
+     "lp_gap_max": 2.220446049250313e-16,
+     "singletons": [
+      {
+       "k": 0,
+       "feasible": true,
+       "V": 0.8745210777835315,
+       "honored": 0.02,
+       "J_all": [
+        0.02,
+        0.1895627460182543
+       ],
+       "returned_worst": 0.1895627460182543,
+       "best_worst": 0.189562745564599,
+       "worst_worst": 0.1895627460182543,
+       "hidden_gap_returned": 0.1695627460182543,
+       "hidden_gap_best": 0.16956274556459902,
+       "gap": 2.220446049250313e-16
+      },
+      {
+       "k": 1,
+       "feasible": true,
+       "V": 0.41427967651393915,
+       "honored": 0.020000000000000004,
+       "J_all": [
+        0.01074211812341477,
+        0.020000000000000004
+       ],
+       "returned_worst": 0.020000000000000004,
+       "best_worst": 0.019999999647388723,
+       "worst_worst": 0.02,
+       "hidden_gap_returned": 0.0,
+       "hidden_gap_best": -3.526112804519421e-10,
+       "gap": 5.551115123125783e-17
+      }
+     ],
+     "fires_shipped": false,
+     "label_agrees": true
+    },
+    "0.05": {
+     "feasible": true,
+     "budget": 0.05,
+     "K": 2,
+     "V_U": 0.4993592084561053,
+     "V_best_single": 1.0,
+     "poa": 0.5006407915438946,
+     "rpoa": 0.5006407915438946,
+     "robust_worst": 0.05,
+     "robust_worst_ratio": 1.0,
+     "screen_gap": -3.3306690738754696e-16,
+     "fires_value": false,
+     "face_clear": true,
+     "tiesafe_ok": true,
+     "n_singletons": 2,
+     "n_singletons_violating_best": 1,
+     "any_singleton_violates_best": true,
+     "max_best_worst_ratio": 4.5306314864370405,
+     "median_hidden_gap_best": 0.08885881529352375,
+     "lp_gap_max": 4.440892098500626e-16,
+     "singletons": [
+      {
+       "k": 0,
+       "feasible": true,
+       "V": 1.0,
+       "honored": 0.04881394338219326,
+       "J_all": [
+        0.04881394338219326,
+        0.22653157467446328
+       ],
+       "returned_worst": 0.22653157467446328,
+       "best_worst": 0.22653157432185206,
+       "worst_worst": 0.22653157467446325,
+       "hidden_gap_returned": 0.17771763129227003,
+       "hidden_gap_best": 0.1777176309396588,
+       "gap": 4.440892098500626e-16
+      },
+      {
+       "k": 1,
+       "feasible": true,
+       "V": 0.499359208456105,
+       "honored": 0.05,
+       "J_all": [
+        0.016337001990159736,
+        0.05
+       ],
+       "returned_worst": 0.05,
+       "best_worst": 0.049999999647388695,
+       "worst_worst": 0.049999999999999996,
+       "hidden_gap_returned": 0.0,
+       "hidden_gap_best": -3.5261130820751774e-10,
+       "gap": 1.6653345369377348e-16
+      }
+     ],
+     "fires_shipped": false,
+     "label_agrees": true
+    },
+    "0.1": {
+     "feasible": true,
+     "budget": 0.1,
+     "K": 2,
+     "V_U": 0.6411584283597151,
+     "V_best_single": 1.0,
+     "poa": 0.35884157164028485,
+     "rpoa": 0.35884157164028485,
+     "robust_worst": 0.09999999999999998,
+     "robust_worst_ratio": 0.9999999999999998,
+     "screen_gap": 0.0,
+     "fires_value": false,
+     "face_clear": true,
+     "tiesafe_ok": true,
+     "n_singletons": 2,
+     "n_singletons_violating_best": 1,
+     "any_singleton_violates_best": true,
+     "max_best_worst_ratio": 2.2653157432185203,
+     "median_hidden_gap_best": 0.08885881529352384,
+     "lp_gap_max": 4.440892098500626e-16,
+     "singletons": [
+      {
+       "k": 0,
+       "feasible": true,
+       "V": 1.0,
+       "honored": 0.04881394338219326,
+       "J_all": [
+        0.04881394338219326,
+        0.22653157467446328
+       ],
+       "returned_worst": 0.22653157467446328,
+       "best_worst": 0.22653157432185206,
+       "worst_worst": 0.22653157467446325,
+       "hidden_gap_returned": 0.17771763129227003,
+       "hidden_gap_best": 0.1777176309396588,
+       "gap": 4.440892098500626e-16
+      },
+      {
+       "k": 1,
+       "feasible": true,
+       "V": 0.6411584283597151,
+       "honored": 0.1,
+       "J_all": [
+        0.025535623101403834,
+        0.1
+       ],
+       "returned_worst": 0.1,
+       "best_worst": 0.09999999964738887,
+       "worst_worst": 0.1,
+       "hidden_gap_returned": 0.0,
+       "hidden_gap_best": -3.5261113473517014e-10,
+       "gap": 1.1102230246251565e-16
+      }
+     ],
+     "fires_shipped": null,
+     "label_agrees": null
+    }
+   }
+  },
+  {
+   "uid": "PrometheusHighQueryLoad",
+   "geometry": "L3-caps8-1",
+   "n_states": 55,
+   "K": 2,
+   "budgets": {
+    "0.005": {
+     "feasible": true,
+     "budget": 0.005,
+     "K": 2,
+     "V_U": 0.37173991054285616,
+     "V_best_single": 0.8049783339645679,
+     "poa": 0.4332384234217117,
+     "rpoa": 0.5381988621830177,
+     "robust_worst": 0.005,
+     "robust_worst_ratio": 1.0,
+     "screen_gap": 0.0,
+     "fires_value": false,
+     "face_clear": true,
+     "tiesafe_ok": true,
+     "n_singletons": 2,
+     "n_singletons_violating_best": 1,
+     "any_singleton_violates_best": true,
+     "max_best_worst_ratio": 33.68053860370046,
+     "median_hidden_gap_best": 0.08170134633294547,
+     "lp_gap_max": 2.220446049250313e-16,
+     "singletons": [
+      {
+       "k": 0,
+       "feasible": true,
+       "V": 0.8049783339645679,
+       "honored": 0.005,
+       "J_all": [
+        0.005,
+        0.16840269347215764
+       ],
+       "returned_worst": 0.16840269347215764,
+       "best_worst": 0.1684026930185023,
+       "worst_worst": 0.16840269347215764,
+       "hidden_gap_returned": 0.16340269347215763,
+       "hidden_gap_best": 0.1634026930185023,
+       "gap": 2.220446049250313e-16
+      },
+      {
+       "k": 1,
+       "feasible": true,
+       "V": 0.37173991054285616,
+       "honored": 0.005,
+       "J_all": [
+        0.00478598660171009,
+        0.005
+       ],
+       "returned_worst": 0.005,
+       "best_worst": 0.004999999647388653,
+       "worst_worst": 0.007573242513620978,
+       "hidden_gap_returned": 0.0,
+       "hidden_gap_best": -3.5261134723879595e-10,
+       "gap": 1.1102230246251565e-16
+      }
+     ],
+     "fires_shipped": false,
+     "label_agrees": true
+    },
+    "0.01": {
+     "feasible": true,
+     "budget": 0.01,
+     "K": 2,
+     "V_U": 0.38591983253321727,
+     "V_best_single": 0.8309730911188485,
+     "poa": 0.4450532585856313,
+     "rpoa": 0.5355808308863497,
+     "robust_worst": 0.01,
+     "robust_worst_ratio": 1.0,
+     "screen_gap": 2.220446049250313e-16,
+     "fires_value": false,
+     "face_clear": true,
+     "tiesafe_ok": true,
+     "n_singletons": 2,
+     "n_singletons_violating_best": 1,
+     "any_singleton_violates_best": true,
+     "max_best_worst_ratio": 17.67325583993618,
+     "median_hidden_gap_best": 0.08336627902337532,
+     "lp_gap_max": 2.7755575615628914e-16,
+     "singletons": [
+      {
+       "k": 0,
+       "feasible": true,
+       "V": 0.8309730911188485,
+       "honored": 0.01,
+       "J_all": [
+        0.01,
+        0.17673255885301703
+       ],
+       "returned_worst": 0.17673255885301703,
+       "best_worst": 0.1767325583993618,
+       "worst_worst": 0.17673255885301703,
+       "hidden_gap_returned": 0.16673255885301702,
+       "hidden_gap_best": 0.1667325583993618,
+       "gap": 1.1102230246251565e-16
+      },
+      {
+       "k": 1,
+       "feasible": true,
+       "V": 0.3859198325332175,
+       "honored": 0.01,
+       "J_all": [
+        0.008111308404594182,
+        0.01
+       ],
+       "returned_worst": 0.01,
+       "best_worst": 0.009999999647388826,
+       "worst_worst": 0.010000000000000002,
+       "hidden_gap_returned": 0.0,
+       "hidden_gap_best": -3.526111746338101e-10,
+       "gap": 2.7755575615628914e-16
+      }
+     ],
+     "fires_shipped": false,
+     "label_agrees": true
+    },
+    "0.02": {
+     "feasible": true,
+     "budget": 0.02,
+     "K": 2,
+     "V_U": 0.4142796765139391,
+     "V_best_single": 0.8745210777835315,
+     "poa": 0.4602414012695924,
+     "rpoa": 0.5262782258331286,
+     "robust_worst": 0.019999999999999993,
+     "robust_worst_ratio": 0.9999999999999997,
+     "screen_gap": 5.551115123125783e-17,
+     "fires_value": false,
+     "face_clear": true,
+     "tiesafe_ok": true,
+     "n_singletons": 2,
+     "n_singletons_violating_best": 1,
+     "any_singleton_violates_best": true,
+     "max_best_worst_ratio": 9.47813727822995,
+     "median_hidden_gap_best": 0.08478137260599387,
+     "lp_gap_max": 2.220446049250313e-16,
+     "singletons": [
+      {
+       "k": 0,
+       "feasible": true,
+       "V": 0.8745210777835315,
+       "honored": 0.02,
+       "J_all": [
+        0.02,
+        0.1895627460182543
+       ],
+       "returned_worst": 0.1895627460182543,
+       "best_worst": 0.189562745564599,
+       "worst_worst": 0.1895627460182543,
+       "hidden_gap_returned": 0.1695627460182543,
+       "hidden_gap_best": 0.16956274556459902,
+       "gap": 2.220446049250313e-16
+      },
+      {
+       "k": 1,
+       "feasible": true,
+       "V": 0.41427967651393915,
+       "honored": 0.020000000000000004,
+       "J_all": [
+        0.01074211812341477,
+        0.020000000000000004
+       ],
+       "returned_worst": 0.020000000000000004,
+       "best_worst": 0.019999999647388723,
+       "worst_worst": 0.02,
+       "hidden_gap_returned": 0.0,
+       "hidden_gap_best": -3.526112804519421e-10,
+       "gap": 5.551115123125783e-17
+      }
+     ],
+     "fires_shipped": false,
+     "label_agrees": true
+    },
+    "0.05": {
+     "feasible": true,
+     "budget": 0.05,
+     "K": 2,
+     "V_U": 0.4993592084561053,
+     "V_best_single": 1.0,
+     "poa": 0.5006407915438946,
+     "rpoa": 0.5006407915438946,
+     "robust_worst": 0.05,
+     "robust_worst_ratio": 1.0,
+     "screen_gap": -3.3306690738754696e-16,
+     "fires_value": false,
+     "face_clear": true,
+     "tiesafe_ok": true,
+     "n_singletons": 2,
+     "n_singletons_violating_best": 1,
+     "any_singleton_violates_best": true,
+     "max_best_worst_ratio": 4.5306314864370405,
+     "median_hidden_gap_best": 0.08885881529352375,
+     "lp_gap_max": 4.440892098500626e-16,
+     "singletons": [
+      {
+       "k": 0,
+       "feasible": true,
+       "V": 1.0,
+       "honored": 0.04881394338219326,
+       "J_all": [
+        0.04881394338219326,
+        0.22653157467446328
+       ],
+       "returned_worst": 0.22653157467446328,
+       "best_worst": 0.22653157432185206,
+       "worst_worst": 0.22653157467446325,
+       "hidden_gap_returned": 0.17771763129227003,
+       "hidden_gap_best": 0.1777176309396588,
+       "gap": 4.440892098500626e-16
+      },
+      {
+       "k": 1,
+       "feasible": true,
+       "V": 0.499359208456105,
+       "honored": 0.05,
+       "J_all": [
+        0.016337001990159736,
+        0.05
+       ],
+       "returned_worst": 0.05,
+       "best_worst": 0.049999999647388695,
+       "worst_worst": 0.049999999999999996,
+       "hidden_gap_returned": 0.0,
+       "hidden_gap_best": -3.5261130820751774e-10,
+       "gap": 1.6653345369377348e-16
+      }
+     ],
+     "fires_shipped": false,
+     "label_agrees": true
+    },
+    "0.1": {
+     "feasible": true,
+     "budget": 0.1,
+     "K": 2,
+     "V_U": 0.6411584283597151,
+     "V_best_single": 1.0,
+     "poa": 0.35884157164028485,
+     "rpoa": 0.35884157164028485,
+     "robust_worst": 0.09999999999999998,
+     "robust_worst_ratio": 0.9999999999999998,
+     "screen_gap": 0.0,
+     "fires_value": false,
+     "face_clear": true,
+     "tiesafe_ok": true,
+     "n_singletons": 2,
+     "n_singletons_violating_best": 1,
+     "any_singleton_violates_best": true,
+     "max_best_worst_ratio": 2.2653157432185203,
+     "median_hidden_gap_best": 0.08885881529352384,
+     "lp_gap_max": 4.440892098500626e-16,
+     "singletons": [
+      {
+       "k": 0,
+       "feasible": true,
+       "V": 1.0,
+       "honored": 0.04881394338219326,
+       "J_all": [
+        0.04881394338219326,
+        0.22653157467446328
+       ],
+       "returned_worst": 0.22653157467446328,
+       "best_worst": 0.22653157432185206,
+       "worst_worst": 0.22653157467446325,
+       "hidden_gap_returned": 0.17771763129227003,
+       "hidden_gap_best": 0.1777176309396588,
+       "gap": 4.440892098500626e-16
+      },
+      {
+       "k": 1,
+       "feasible": true,
+       "V": 0.6411584283597151,
+       "honored": 0.1,
+       "J_all": [
+        0.025535623101403834,
+        0.1
+       ],
+       "returned_worst": 0.1,
+       "best_worst": 0.09999999964738887,
+       "worst_worst": 0.1,
+       "hidden_gap_returned": 0.0,
+       "hidden_gap_best": -3.5261113473517014e-10,
+       "gap": 1.1102230246251565e-16
+      }
+     ],
+     "fires_shipped": null,
+     "label_agrees": null
+    }
+   }
+  },
+  {
+   "uid": "PrometheusOperatorListErrors",
+   "geometry": "L3-caps8-1",
+   "n_states": 55,
+   "K": 2,
+   "budgets": {
+    "0.005": {
+     "feasible": true,
+     "budget": 0.005,
+     "K": 2,
+     "V_U": 0.37173991054285616,
+     "V_best_single": 0.8049783339645679,
+     "poa": 0.4332384234217117,
+     "rpoa": 0.5381988621830177,
+     "robust_worst": 0.005,
+     "robust_worst_ratio": 1.0,
+     "screen_gap": 0.0,
+     "fires_value": false,
+     "face_clear": true,
+     "tiesafe_ok": true,
+     "n_singletons": 2,
+     "n_singletons_violating_best": 1,
+     "any_singleton_violates_best": true,
+     "max_best_worst_ratio": 33.68053860370046,
+     "median_hidden_gap_best": 0.08170134633294547,
+     "lp_gap_max": 2.220446049250313e-16,
+     "singletons": [
+      {
+       "k": 0,
+       "feasible": true,
+       "V": 0.8049783339645679,
+       "honored": 0.005,
+       "J_all": [
+        0.005,
+        0.16840269347215764
+       ],
+       "returned_worst": 0.16840269347215764,
+       "best_worst": 0.1684026930185023,
+       "worst_worst": 0.16840269347215764,
+       "hidden_gap_returned": 0.16340269347215763,
+       "hidden_gap_best": 0.1634026930185023,
+       "gap": 2.220446049250313e-16
+      },
+      {
+       "k": 1,
+       "feasible": true,
+       "V": 0.37173991054285616,
+       "honored": 0.005,
+       "J_all": [
+        0.00478598660171009,
+        0.005
+       ],
+       "returned_worst": 0.005,
+       "best_worst": 0.004999999647388653,
+       "worst_worst": 0.007573242513620978,
+       "hidden_gap_returned": 0.0,
+       "hidden_gap_best": -3.5261134723879595e-10,
+       "gap": 1.1102230246251565e-16
+      }
+     ],
+     "fires_shipped": false,
+     "label_agrees": true
+    },
+    "0.01": {
+     "feasible": true,
+     "budget": 0.01,
+     "K": 2,
+     "V_U": 0.38591983253321727,
+     "V_best_single": 0.8309730911188485,
+     "poa": 0.4450532585856313,
+     "rpoa": 0.5355808308863497,
+     "robust_worst": 0.01,
+     "robust_worst_ratio": 1.0,
+     "screen_gap": 2.220446049250313e-16,
+     "fires_value": false,
+     "face_clear": true,
+     "tiesafe_ok": true,
+     "n_singletons": 2,
+     "n_singletons_violating_best": 1,
+     "any_singleton_violates_best": true,
+     "max_best_worst_ratio": 17.67325583993618,
+     "median_hidden_gap_best": 0.08336627902337532,
+     "lp_gap_max": 2.7755575615628914e-16,
+     "singletons": [
+      {
+       "k": 0,
+       "feasible": true,
+       "V": 0.8309730911188485,
+       "honored": 0.01,
+       "J_all": [
+        0.01,
+        0.17673255885301703
+       ],
+       "returned_worst": 0.17673255885301703,
+       "best_worst": 0.1767325583993618,
+       "worst_worst": 0.17673255885301703,
+       "hidden_gap_returned": 0.16673255885301702,
+       "hidden_gap_best": 0.1667325583993618,
+       "gap": 1.1102230246251565e-16
+      },
+      {
+       "k": 1,
+       "feasible": true,
+       "V": 0.3859198325332175,
+       "honored": 0.01,
+       "J_all": [
+        0.008111308404594182,
+        0.01
+       ],
+       "returned_worst": 0.01,
+       "best_worst": 0.009999999647388826,
+       "worst_worst": 0.010000000000000002,
+       "hidden_gap_returned": 0.0,
+       "hidden_gap_best": -3.526111746338101e-10,
+       "gap": 2.7755575615628914e-16
+      }
+     ],
+     "fires_shipped": false,
+     "label_agrees": true
+    },
+    "0.02": {
+     "feasible": true,
+     "budget": 0.02,
+     "K": 2,
+     "V_U": 0.4142796765139391,
+     "V_best_single": 0.8745210777835315,
+     "poa": 0.4602414012695924,
+     "rpoa": 0.5262782258331286,
+     "robust_worst": 0.019999999999999993,
+     "robust_worst_ratio": 0.9999999999999997,
+     "screen_gap": 5.551115123125783e-17,
+     "fires_value": false,
+     "face_clear": true,
+     "tiesafe_ok": true,
+     "n_singletons": 2,
+     "n_singletons_violating_best": 1,
+     "any_singleton_violates_best": true,
+     "max_best_worst_ratio": 9.47813727822995,
+     "median_hidden_gap_best": 0.08478137260599387,
+     "lp_gap_max": 2.220446049250313e-16,
+     "singletons": [
+      {
+       "k": 0,
+       "feasible": true,
+       "V": 0.8745210777835315,
+       "honored": 0.02,
+       "J_all": [
+        0.02,
+        0.1895627460182543
+       ],
+       "returned_worst": 0.1895627460182543,
+       "best_worst": 0.189562745564599,
+       "worst_worst": 0.1895627460182543,
+       "hidden_gap_returned": 0.1695627460182543,
+       "hidden_gap_best": 0.16956274556459902,
+       "gap": 2.220446049250313e-16
+      },
+      {
+       "k": 1,
+       "feasible": true,
+       "V": 0.41427967651393915,
+       "honored": 0.020000000000000004,
+       "J_all": [
+        0.01074211812341477,
+        0.020000000000000004
+       ],
+       "returned_worst": 0.020000000000000004,
+       "best_worst": 0.019999999647388723,
+       "worst_worst": 0.02,
+       "hidden_gap_returned": 0.0,
+       "hidden_gap_best": -3.526112804519421e-10,
+       "gap": 5.551115123125783e-17
+      }
+     ],
+     "fires_shipped": false,
+     "label_agrees": true
+    },
+    "0.05": {
+     "feasible": true,
+     "budget": 0.05,
+     "K": 2,
+     "V_U": 0.4993592084561053,
+     "V_best_single": 1.0,
+     "poa": 0.5006407915438946,
+     "rpoa": 0.5006407915438946,
+     "robust_worst": 0.05,
+     "robust_worst_ratio": 1.0,
+     "screen_gap": -3.3306690738754696e-16,
+     "fires_value": false,
+     "face_clear": true,
+     "tiesafe_ok": true,
+     "n_singletons": 2,
+     "n_singletons_violating_best": 1,
+     "any_singleton_violates_best": true,
+     "max_best_worst_ratio": 4.5306314864370405,
+     "median_hidden_gap_best": 0.08885881529352375,
+     "lp_gap_max": 4.440892098500626e-16,
+     "singletons": [
+      {
+       "k": 0,
+       "feasible": true,
+       "V": 1.0,
+       "honored": 0.04881394338219326,
+       "J_all": [
+        0.04881394338219326,
+        0.22653157467446328
+       ],
+       "returned_worst": 0.22653157467446328,
+       "best_worst": 0.22653157432185206,
+       "worst_worst": 0.22653157467446325,
+       "hidden_gap_returned": 0.17771763129227003,
+       "hidden_gap_best": 0.1777176309396588,
+       "gap": 4.440892098500626e-16
+      },
+      {
+       "k": 1,
+       "feasible": true,
+       "V": 0.499359208456105,
+       "honored": 0.05,
+       "J_all": [
+        0.016337001990159736,
+        0.05
+       ],
+       "returned_worst": 0.05,
+       "best_worst": 0.049999999647388695,
+       "worst_worst": 0.049999999999999996,
+       "hidden_gap_returned": 0.0,
+       "hidden_gap_best": -3.5261130820751774e-10,
+       "gap": 1.6653345369377348e-16
+      }
+     ],
+     "fires_shipped": false,
+     "label_agrees": true
+    },
+    "0.1": {
+     "feasible": true,
+     "budget": 0.1,
+     "K": 2,
+     "V_U": 0.6411584283597151,
+     "V_best_single": 1.0,
+     "poa": 0.35884157164028485,
+     "rpoa": 0.35884157164028485,
+     "robust_worst": 0.09999999999999998,
+     "robust_worst_ratio": 0.9999999999999998,
+     "screen_gap": 0.0,
+     "fires_value": false,
+     "face_clear": true,
+     "tiesafe_ok": true,
+     "n_singletons": 2,
+     "n_singletons_violating_best": 1,
+     "any_singleton_violates_best": true,
+     "max_best_worst_ratio": 2.2653157432185203,
+     "median_hidden_gap_best": 0.08885881529352384,
+     "lp_gap_max": 4.440892098500626e-16,
+     "singletons": [
+      {
+       "k": 0,
+       "feasible": true,
+       "V": 1.0,
+       "honored": 0.04881394338219326,
+       "J_all": [
+        0.04881394338219326,
+        0.22653157467446328
+       ],
+       "returned_worst": 0.22653157467446328,
+       "best_worst": 0.22653157432185206,
+       "worst_worst": 0.22653157467446325,
+       "hidden_gap_returned": 0.17771763129227003,
+       "hidden_gap_best": 0.1777176309396588,
+       "gap": 4.440892098500626e-16
+      },
+      {
+       "k": 1,
+       "feasible": true,
+       "V": 0.6411584283597151,
+       "honored": 0.1,
+       "J_all": [
+        0.025535623101403834,
+        0.1
+       ],
+       "returned_worst": 0.1,
+       "best_worst": 0.09999999964738887,
+       "worst_worst": 0.1,
+       "hidden_gap_returned": 0.0,
+       "hidden_gap_best": -3.5261113473517014e-10,
+       "gap": 1.1102230246251565e-16
+      }
+     ],
+     "fires_shipped": null,
+     "label_agrees": null
+    }
+   }
+  },
+  {
+   "uid": "PrometheusOperatorNodeLookupErrors",
+   "geometry": "L3-caps8-1",
+   "n_states": 55,
+   "K": 2,
+   "budgets": {
+    "0.005": {
+     "feasible": true,
+     "budget": 0.005,
+     "K": 2,
+     "V_U": 0.37173991054285616,
+     "V_best_single": 0.8049783339645679,
+     "poa": 0.4332384234217117,
+     "rpoa": 0.5381988621830177,
+     "robust_worst": 0.005,
+     "robust_worst_ratio": 1.0,
+     "screen_gap": 0.0,
+     "fires_value": false,
+     "face_clear": true,
+     "tiesafe_ok": true,
+     "n_singletons": 2,
+     "n_singletons_violating_best": 1,
+     "any_singleton_violates_best": true,
+     "max_best_worst_ratio": 33.68053860370046,
+     "median_hidden_gap_best": 0.08170134633294547,
+     "lp_gap_max": 2.220446049250313e-16,
+     "singletons": [
+      {
+       "k": 0,
+       "feasible": true,
+       "V": 0.8049783339645679,
+       "honored": 0.005,
+       "J_all": [
+        0.005,
+        0.16840269347215764
+       ],
+       "returned_worst": 0.16840269347215764,
+       "best_worst": 0.1684026930185023,
+       "worst_worst": 0.16840269347215764,
+       "hidden_gap_returned": 0.16340269347215763,
+       "hidden_gap_best": 0.1634026930185023,
+       "gap": 2.220446049250313e-16
+      },
+      {
+       "k": 1,
+       "feasible": true,
+       "V": 0.37173991054285616,
+       "honored": 0.005,
+       "J_all": [
+        0.00478598660171009,
+        0.005
+       ],
+       "returned_worst": 0.005,
+       "best_worst": 0.004999999647388653,
+       "worst_worst": 0.007573242513620978,
+       "hidden_gap_returned": 0.0,
+       "hidden_gap_best": -3.5261134723879595e-10,
+       "gap": 1.1102230246251565e-16
+      }
+     ],
+     "fires_shipped": false,
+     "label_agrees": true
+    },
+    "0.01": {
+     "feasible": true,
+     "budget": 0.01,
+     "K": 2,
+     "V_U": 0.38591983253321727,
+     "V_best_single": 0.8309730911188485,
+     "poa": 0.4450532585856313,
+     "rpoa": 0.5355808308863497,
+     "robust_worst": 0.01,
+     "robust_worst_ratio": 1.0,
+     "screen_gap": 2.220446049250313e-16,
+     "fires_value": false,
+     "face_clear": true,
+     "tiesafe_ok": true,
+     "n_singletons": 2,
+     "n_singletons_violating_best": 1,
+     "any_singleton_violates_best": true,
+     "max_best_worst_ratio": 17.67325583993618,
+     "median_hidden_gap_best": 0.08336627902337532,
+     "lp_gap_max": 2.7755575615628914e-16,
+     "singletons": [
+      {
+       "k": 0,
+       "feasible": true,
+       "V": 0.8309730911188485,
+       "honored": 0.01,
+       "J_all": [
+        0.01,
+        0.17673255885301703
+       ],
+       "returned_worst": 0.17673255885301703,
+       "best_worst": 0.1767325583993618,
+       "worst_worst": 0.17673255885301703,
+       "hidden_gap_returned": 0.16673255885301702,
+       "hidden_gap_best": 0.1667325583993618,
+       "gap": 1.1102230246251565e-16
+      },
+      {
+       "k": 1,
+       "feasible": true,
+       "V": 0.3859198325332175,
+       "honored": 0.01,
+       "J_all": [
+        0.008111308404594182,
+        0.01
+       ],
+       "returned_worst": 0.01,
+       "best_worst": 0.009999999647388826,
+       "worst_worst": 0.010000000000000002,
+       "hidden_gap_returned": 0.0,
+       "hidden_gap_best": -3.526111746338101e-10,
+       "gap": 2.7755575615628914e-16
+      }
+     ],
+     "fires_shipped": false,
+     "label_agrees": true
+    },
+    "0.02": {
+     "feasible": true,
+     "budget": 0.02,
+     "K": 2,
+     "V_U": 0.4142796765139391,
+     "V_best_single": 0.8745210777835315,
+     "poa": 0.4602414012695924,
+     "rpoa": 0.5262782258331286,
+     "robust_worst": 0.019999999999999993,
+     "robust_worst_ratio": 0.9999999999999997,
+     "screen_gap": 5.551115123125783e-17,
+     "fires_value": false,
+     "face_clear": true,
+     "tiesafe_ok": true,
+     "n_singletons": 2,
+     "n_singletons_violating_best": 1,
+     "any_singleton_violates_best": true,
+     "max_best_worst_ratio": 9.47813727822995,
+     "median_hidden_gap_best": 0.08478137260599387,
+     "lp_gap_max": 2.220446049250313e-16,
+     "singletons": [
+      {
+       "k": 0,
+       "feasible": true,
+       "V": 0.8745210777835315,
+       "honored": 0.02,
+       "J_all": [
+        0.02,
+        0.1895627460182543
+       ],
+       "returned_worst": 0.1895627460182543,
+       "best_worst": 0.189562745564599,
+       "worst_worst": 0.1895627460182543,
+       "hidden_gap_returned": 0.1695627460182543,
+       "hidden_gap_best": 0.16956274556459902,
+       "gap": 2.220446049250313e-16
+      },
+      {
+       "k": 1,
+       "feasible": true,
+       "V": 0.41427967651393915,
+       "honored": 0.020000000000000004,
+       "J_all": [
+        0.01074211812341477,
+        0.020000000000000004
+       ],
+       "returned_worst": 0.020000000000000004,
+       "best_worst": 0.019999999647388723,
+       "worst_worst": 0.02,
+       "hidden_gap_returned": 0.0,
+       "hidden_gap_best": -3.526112804519421e-10,
+       "gap": 5.551115123125783e-17
+      }
+     ],
+     "fires_shipped": false,
+     "label_agrees": true
+    },
+    "0.05": {
+     "feasible": true,
+     "budget": 0.05,
+     "K": 2,
+     "V_U": 0.4993592084561053,
+     "V_best_single": 1.0,
+     "poa": 0.5006407915438946,
+     "rpoa": 0.5006407915438946,
+     "robust_worst": 0.05,
+     "robust_worst_ratio": 1.0,
+     "screen_gap": -3.3306690738754696e-16,
+     "fires_value": false,
+     "face_clear": true,
+     "tiesafe_ok": true,
+     "n_singletons": 2,
+     "n_singletons_violating_best": 1,
+     "any_singleton_violates_best": true,
+     "max_best_worst_ratio": 4.5306314864370405,
+     "median_hidden_gap_best": 0.08885881529352375,
+     "lp_gap_max": 4.440892098500626e-16,
+     "singletons": [
+      {
+       "k": 0,
+       "feasible": true,
+       "V": 1.0,
+       "honored": 0.04881394338219326,
+       "J_all": [
+        0.04881394338219326,
+        0.22653157467446328
+       ],
+       "returned_worst": 0.22653157467446328,
+       "best_worst": 0.22653157432185206,
+       "worst_worst": 0.22653157467446325,
+       "hidden_gap_returned": 0.17771763129227003,
+       "hidden_gap_best": 0.1777176309396588,
+       "gap": 4.440892098500626e-16
+      },
+      {
+       "k": 1,
+       "feasible": true,
+       "V": 0.499359208456105,
+       "honored": 0.05,
+       "J_all": [
+        0.016337001990159736,
+        0.05
+       ],
+       "returned_worst": 0.05,
+       "best_worst": 0.049999999647388695,
+       "worst_worst": 0.049999999999999996,
+       "hidden_gap_returned": 0.0,
+       "hidden_gap_best": -3.5261130820751774e-10,
+       "gap": 1.6653345369377348e-16
+      }
+     ],
+     "fires_shipped": false,
+     "label_agrees": true
+    },
+    "0.1": {
+     "feasible": true,
+     "budget": 0.1,
+     "K": 2,
+     "V_U": 0.6411584283597151,
+     "V_best_single": 1.0,
+     "poa": 0.35884157164028485,
+     "rpoa": 0.35884157164028485,
+     "robust_worst": 0.09999999999999998,
+     "robust_worst_ratio": 0.9999999999999998,
+     "screen_gap": 0.0,
+     "fires_value": false,
+     "face_clear": true,
+     "tiesafe_ok": true,
+     "n_singletons": 2,
+     "n_singletons_violating_best": 1,
+     "any_singleton_violates_best": true,
+     "max_best_worst_ratio": 2.2653157432185203,
+     "median_hidden_gap_best": 0.08885881529352384,
+     "lp_gap_max": 4.440892098500626e-16,
+     "singletons": [
+      {
+       "k": 0,
+       "feasible": true,
+       "V": 1.0,
+       "honored": 0.04881394338219326,
+       "J_all": [
+        0.04881394338219326,
+        0.22653157467446328
+       ],
+       "returned_worst": 0.22653157467446328,
+       "best_worst": 0.22653157432185206,
+       "worst_worst": 0.22653157467446325,
+       "hidden_gap_returned": 0.17771763129227003,
+       "hidden_gap_best": 0.1777176309396588,
+       "gap": 4.440892098500626e-16
+      },
+      {
+       "k": 1,
+       "feasible": true,
+       "V": 0.6411584283597151,
+       "honored": 0.1,
+       "J_all": [
+        0.025535623101403834,
+        0.1
+       ],
+       "returned_worst": 0.1,
+       "best_worst": 0.09999999964738887,
+       "worst_worst": 0.1,
+       "hidden_gap_returned": 0.0,
+       "hidden_gap_best": -3.5261113473517014e-10,
+       "gap": 1.1102230246251565e-16
+      }
+     ],
+     "fires_shipped": null,
+     "label_agrees": null
+    }
+   }
+  },
+  {
+   "uid": "PrometheusOperatorReconcileErrors",
+   "geometry": "L3-caps8-1",
+   "n_states": 55,
+   "K": 2,
+   "budgets": {
+    "0.005": {
+     "feasible": true,
+     "budget": 0.005,
+     "K": 2,
+     "V_U": 0.37173991054285616,
+     "V_best_single": 0.8049783339645679,
+     "poa": 0.4332384234217117,
+     "rpoa": 0.5381988621830177,
+     "robust_worst": 0.005,
+     "robust_worst_ratio": 1.0,
+     "screen_gap": 0.0,
+     "fires_value": false,
+     "face_clear": true,
+     "tiesafe_ok": true,
+     "n_singletons": 2,
+     "n_singletons_violating_best": 1,
+     "any_singleton_violates_best": true,
+     "max_best_worst_ratio": 33.68053860370046,
+     "median_hidden_gap_best": 0.08170134633294547,
+     "lp_gap_max": 2.220446049250313e-16,
+     "singletons": [
+      {
+       "k": 0,
+       "feasible": true,
+       "V": 0.8049783339645679,
+       "honored": 0.005,
+       "J_all": [
+        0.005,
+        0.16840269347215764
+       ],
+       "returned_worst": 0.16840269347215764,
+       "best_worst": 0.1684026930185023,
+       "worst_worst": 0.16840269347215764,
+       "hidden_gap_returned": 0.16340269347215763,
+       "hidden_gap_best": 0.1634026930185023,
+       "gap": 2.220446049250313e-16
+      },
+      {
+       "k": 1,
+       "feasible": true,
+       "V": 0.37173991054285616,
+       "honored": 0.005,
+       "J_all": [
+        0.00478598660171009,
+        0.005
+       ],
+       "returned_worst": 0.005,
+       "best_worst": 0.004999999647388653,
+       "worst_worst": 0.007573242513620978,
+       "hidden_gap_returned": 0.0,
+       "hidden_gap_best": -3.5261134723879595e-10,
+       "gap": 1.1102230246251565e-16
+      }
+     ],
+     "fires_shipped": false,
+     "label_agrees": true
+    },
+    "0.01": {
+     "feasible": true,
+     "budget": 0.01,
+     "K": 2,
+     "V_U": 0.38591983253321727,
+     "V_best_single": 0.8309730911188485,
+     "poa": 0.4450532585856313,
+     "rpoa": 0.5355808308863497,
+     "robust_worst": 0.01,
+     "robust_worst_ratio": 1.0,
+     "screen_gap": 2.220446049250313e-16,
+     "fires_value": false,
+     "face_clear": true,
+     "tiesafe_ok": true,
+     "n_singletons": 2,
+     "n_singletons_violating_best": 1,
+     "any_singleton_violates_best": true,
+     "max_best_worst_ratio": 17.67325583993618,
+     "median_hidden_gap_best": 0.08336627902337532,
+     "lp_gap_max": 2.7755575615628914e-16,
+     "singletons": [
+      {
+       "k": 0,
+       "feasible": true,
+       "V": 0.8309730911188485,
+       "honored": 0.01,
+       "J_all": [
+        0.01,
+        0.17673255885301703
+       ],
+       "returned_worst": 0.17673255885301703,
+       "best_worst": 0.1767325583993618,
+       "worst_worst": 0.17673255885301703,
+       "hidden_gap_returned": 0.16673255885301702,
+       "hidden_gap_best": 0.1667325583993618,
+       "gap": 1.1102230246251565e-16
+      },
+      {
+       "k": 1,
+       "feasible": true,
+       "V": 0.3859198325332175,
+       "honored": 0.01,
+       "J_all": [
+        0.008111308404594182,
+        0.01
+       ],
+       "returned_worst": 0.01,
+       "best_worst": 0.009999999647388826,
+       "worst_worst": 0.010000000000000002,
+       "hidden_gap_returned": 0.0,
+       "hidden_gap_best": -3.526111746338101e-10,
+       "gap": 2.7755575615628914e-16
+      }
+     ],
+     "fires_shipped": false,
+     "label_agrees": true
+    },
+    "0.02": {
+     "feasible": true,
+     "budget": 0.02,
+     "K": 2,
+     "V_U": 0.4142796765139391,
+     "V_best_single": 0.8745210777835315,
+     "poa": 0.4602414012695924,
+     "rpoa": 0.5262782258331286,
+     "robust_worst": 0.019999999999999993,
+     "robust_worst_ratio": 0.9999999999999997,
+     "screen_gap": 5.551115123125783e-17,
+     "fires_value": false,
+     "face_clear": true,
+     "tiesafe_ok": true,
+     "n_singletons": 2,
+     "n_singletons_violating_best": 1,
+     "any_singleton_violates_best": true,
+     "max_best_worst_ratio": 9.47813727822995,
+     "median_hidden_gap_best": 0.08478137260599387,
+     "lp_gap_max": 2.220446049250313e-16,
+     "singletons": [
+      {
+       "k": 0,
+       "feasible": true,
+       "V": 0.8745210777835315,
+       "honored": 0.02,
+       "J_all": [
+        0.02,
+        0.1895627460182543
+       ],
+       "returned_worst": 0.1895627460182543,
+       "best_worst": 0.189562745564599,
+       "worst_worst": 0.1895627460182543,
+       "hidden_gap_returned": 0.1695627460182543,
+       "hidden_gap_best": 0.16956274556459902,
+       "gap": 2.220446049250313e-16
+      },
+      {
+       "k": 1,
+       "feasible": true,
+       "V": 0.41427967651393915,
+       "honored": 0.020000000000000004,
+       "J_all": [
+        0.01074211812341477,
+        0.020000000000000004
+       ],
+       "returned_worst": 0.020000000000000004,
+       "best_worst": 0.019999999647388723,
+       "worst_worst": 0.02,
+       "hidden_gap_returned": 0.0,
+       "hidden_gap_best": -3.526112804519421e-10,
+       "gap": 5.551115123125783e-17
+      }
+     ],
+     "fires_shipped": false,
+     "label_agrees": true
+    },
+    "0.05": {
+     "feasible": true,
+     "budget": 0.05,
+     "K": 2,
+     "V_U": 0.4993592084561053,
+     "V_best_single": 1.0,
+     "poa": 0.5006407915438946,
+     "rpoa": 0.5006407915438946,
+     "robust_worst": 0.05,
+     "robust_worst_ratio": 1.0,
+     "screen_gap": -3.3306690738754696e-16,
+     "fires_value": false,
+     "face_clear": true,
+     "tiesafe_ok": true,
+     "n_singletons": 2,
+     "n_singletons_violating_best": 1,
+     "any_singleton_violates_best": true,
+     "max_best_worst_ratio": 4.5306314864370405,
+     "median_hidden_gap_best": 0.08885881529352375,
+     "lp_gap_max": 4.440892098500626e-16,
+     "singletons": [
+      {
+       "k": 0,
+       "feasible": true,
+       "V": 1.0,
+       "honored": 0.04881394338219326,
+       "J_all": [
+        0.04881394338219326,
+        0.22653157467446328
+       ],
+       "returned_worst": 0.22653157467446328,
+       "best_worst": 0.22653157432185206,
+       "worst_worst": 0.22653157467446325,
+       "hidden_gap_returned": 0.17771763129227003,
+       "hidden_gap_best": 0.1777176309396588,
+       "gap": 4.440892098500626e-16
+      },
+      {
+       "k": 1,
+       "feasible": true,
+       "V": 0.499359208456105,
+       "honored": 0.05,
+       "J_all": [
+        0.016337001990159736,
+        0.05
+       ],
+       "returned_worst": 0.05,
+       "best_worst": 0.049999999647388695,
+       "worst_worst": 0.049999999999999996,
+       "hidden_gap_returned": 0.0,
+       "hidden_gap_best": -3.5261130820751774e-10,
+       "gap": 1.6653345369377348e-16
+      }
+     ],
+     "fires_shipped": false,
+     "label_agrees": true
+    },
+    "0.1": {
+     "feasible": true,
+     "budget": 0.1,
+     "K": 2,
+     "V_U": 0.6411584283597151,
+     "V_best_single": 1.0,
+     "poa": 0.35884157164028485,
+     "rpoa": 0.35884157164028485,
+     "robust_worst": 0.09999999999999998,
+     "robust_worst_ratio": 0.9999999999999998,
+     "screen_gap": 0.0,
+     "fires_value": false,
+     "face_clear": true,
+     "tiesafe_ok": true,
+     "n_singletons": 2,
+     "n_singletons_violating_best": 1,
+     "any_singleton_violates_best": true,
+     "max_best_worst_ratio": 2.2653157432185203,
+     "median_hidden_gap_best": 0.08885881529352384,
+     "lp_gap_max": 4.440892098500626e-16,
+     "singletons": [
+      {
+       "k": 0,
+       "feasible": true,
+       "V": 1.0,
+       "honored": 0.04881394338219326,
+       "J_all": [
+        0.04881394338219326,
+        0.22653157467446328
+       ],
+       "returned_worst": 0.22653157467446328,
+       "best_worst": 0.22653157432185206,
+       "worst_worst": 0.22653157467446325,
+       "hidden_gap_returned": 0.17771763129227003,
+       "hidden_gap_best": 0.1777176309396588,
+       "gap": 4.440892098500626e-16
+      },
+      {
+       "k": 1,
+       "feasible": true,
+       "V": 0.6411584283597151,
+       "honored": 0.1,
+       "J_all": [
+        0.025535623101403834,
+        0.1
+       ],
+       "returned_worst": 0.1,
+       "best_worst": 0.09999999964738887,
+       "worst_worst": 0.1,
+       "hidden_gap_returned": 0.0,
+       "hidden_gap_best": -3.5261113473517014e-10,
+       "gap": 1.1102230246251565e-16
+      }
+     ],
+     "fires_shipped": null,
+     "label_agrees": null
+    }
+   }
+  }
+ ]
+}

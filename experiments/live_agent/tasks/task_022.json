@@ -1,0 +1,22 @@
+{
+  "id": "task_022",
+  "question": "What is measured in volts, amperes, and ohms?",
+  "source_docs": [
+    "electricity_basics.txt"
+  ],
+  "rubric": [
+    [
+      "voltage",
+      "volt"
+    ],
+    [
+      "current",
+      "ampere"
+    ],
+    [
+      "resistance",
+      "ohm"
+    ]
+  ],
+  "reference": "Voltage in volts, current in amperes, resistance in ohms."
+}

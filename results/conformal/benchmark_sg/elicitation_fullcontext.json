@@ -1,0 +1,12 @@
+{
+ "n_rules": 30,
+ "condition": "full context: name+summary+description (duration hints present)",
+ "per_interpreter": {
+  "A": 0.3333333333333333,
+  "B": 0.4,
+  "C": 0.3
+ },
+ "majority": 0.36666666666666664,
+ "fleiss": 0.7047566976489884,
+ "mean_pairwise_kappa": 0.7070658809789245
+}

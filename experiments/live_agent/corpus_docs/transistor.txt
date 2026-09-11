@@ -1,0 +1,34 @@
+The Invention of the Transistor
+
+The first working transistor was demonstrated on 16 December 1947 at Bell
+Telephone Laboratories in Murray Hill, New Jersey. The device was built by
+John Bardeen and Walter Brattain, working in the solid-state physics group
+led by William Shockley. Their first device was a point-contact transistor:
+two closely spaced gold contacts pressed onto a slab of germanium, a
+semiconductor element. When a small current flowed into one contact, it
+modulated a much larger current flowing to the other, so the device could
+amplify electrical signals.
+
+Shockley, initially excluded from the point-contact breakthrough, responded
+within weeks by conceiving the junction transistor, a more robust sandwich
+of n-type and p-type semiconductor layers. The junction design proved far
+easier to manufacture reliably and became the basis of the semiconductor
+industry. Bell Labs publicly announced the transistor in June 1948, and the
+name "transistor" — a contraction of "transfer resistor" — was suggested by
+John R. Pierce.
+
+The transistor replaced the vacuum tube in most electronics because it was
+smaller, generated far less heat, used less power, and was much more
+reliable. Early commercial applications included hearing aids and portable
+radios; the Regency TR-1, released in 1954, was the first mass-produced
+transistor radio. Silicon later displaced germanium as the dominant
+transistor material because silicon devices tolerate higher temperatures
+and silicon dioxide forms an excellent insulating layer.
+
+For the invention of the transistor, Bardeen, Brattain, and Shockley shared
+the Nobel Prize in Physics in 1956. Bardeen would later win a second
+physics Nobel in 1972 for the theory of superconductivity, making him the
+only person to win the physics prize twice. By the 1960s transistors were
+being integrated by the thousands onto single chips, launching the
+integrated-circuit era and the exponential scaling described by Moore's
+law.

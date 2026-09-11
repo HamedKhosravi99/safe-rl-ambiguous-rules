@@ -1,0 +1,51 @@
+{
+  "created": "20260727-232506",
+  "device": "cuda",
+  "tasks": [
+    "OfflineCarCircle-v0"
+  ],
+  "learners": [
+    "bcql"
+  ],
+  "seeds": [
+    19
+  ],
+  "U": [
+    10,
+    20,
+    40
+  ],
+  "c_single": 40,
+  "c_saorl": 10,
+  "update_steps": 100000,
+  "runs": [
+    {
+      "task": "OfflineCarCircle-v0",
+      "learner": "bcql",
+      "reading": "single",
+      "target_cost": 40,
+      "seed": 19,
+      "U": [
+        10,
+        20,
+        40
+      ],
+      "status": "error",
+      "error": "RuntimeError('repeats can not be negative')"
+    },
+    {
+      "task": "OfflineCarCircle-v0",
+      "learner": "bcql",
+      "reading": "saorl",
+      "target_cost": 10,
+      "seed": 19,
+      "U": [
+        10,
+        20,
+        40
+      ],
+      "status": "error",
+      "error": "RuntimeError('IntArrayRef contains an int that cannot be represented as a SymInt: -4849980294878583746')"
+    }
+  ]
+}

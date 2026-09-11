@@ -1,0 +1,21 @@
+{
+  "id": "task_043",
+  "question": "Why is storage important for renewable energy?",
+  "source_docs": [
+    "renewable_energy.txt"
+  ],
+  "rubric": [
+    [
+      "storage",
+      "battery",
+      "batteries"
+    ],
+    [
+      "balance",
+      "supply",
+      "not shining",
+      "not blowing"
+    ]
+  ],
+  "reference": "Storage balances supply when the sun or wind is unavailable."
+}

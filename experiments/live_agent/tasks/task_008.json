@@ -1,0 +1,17 @@
+{
+  "id": "task_008",
+  "question": "Who created Python and in what year was it first released?",
+  "source_docs": [
+    "python_language.txt"
+  ],
+  "rubric": [
+    [
+      "guido",
+      "van rossum"
+    ],
+    [
+      "1991"
+    ]
+  ],
+  "reference": "Guido van Rossum; first released in 1991."
+}

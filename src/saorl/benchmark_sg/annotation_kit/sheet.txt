@@ -1,0 +1,151 @@
+# Fill the numbered lines. Lines beginning with '#' are ignored.
+
+# 1. AlertmanagerClusterCrashlooping
+#    summary: Half or more of the Alertmanager instances within the same cluster are crashlooping.
+#    description: '{{ $value | humanizePercentage }} of Alertmanager instances within the {{$labels.job}} cluster have restarted at least 5 times in the last 10m.'
+1| , | , | , 
+
+# 2. AlertmanagerClusterDown
+#    summary: Half or more of the Alertmanager instances within the same cluster are down.
+#    description: '{{ $value | humanizePercentage }} of Alertmanager instances within the {{$labels.job}} cluster have been up for less than half of the last 5m.'
+2| , | , | , 
+
+# 3. AlertmanagerClusterFailedPeers
+#    summary: An Alertmanager instance has failed peers in the cluster.
+#    description: Alertmanager {{ $labels.namespace }}/{{ $labels.pod}} has {{ $value }} failed peers in the {{$labels.job}} cluster.
+3| , | , | , 
+
+# 4. AlertmanagerClusterFailedToSendAlerts
+#    summary: All Alertmanager instances in a cluster failed to send notifications to a critical integration.
+#    description: The minimum notification failure rate to {{ $labels.integration }} sent from any instance in the {{$labels.job}} cluster is {{ $value | humanizePercentage }}.
+4| , | , | , 
+
+# 5. AlertmanagerConfigInconsistent
+#    summary: Alertmanager instances within the same cluster have different configurations.
+#    description: Alertmanager instances within the {{$labels.job}} cluster have different configurations.
+5| , | , | , 
+
+# 6. AlertmanagerFailedReload
+#    summary: Reloading an Alertmanager configuration has failed.
+#    description: Configuration has failed to load for {{ $labels.namespace }}/{{ $labels.pod}}.
+6| , | , | , 
+
+# 7. AlertmanagerFailedToSendAlerts
+#    summary: An Alertmanager instance failed to send notifications.
+#    description: Alertmanager {{ $labels.namespace }}/{{ $labels.pod}} failed to send {{ $value | humanizePercentage }} of notifications to {{ $labels.integration }}.
+7| , | , | , 
+
+# 8. AlertmanagerMembersInconsistent
+#    summary: A member of an Alertmanager cluster has not found all other cluster members.
+#    description: Alertmanager {{ $labels.namespace }}/{{ $labels.pod}} has only found {{ $value }} members of the {{$labels.job}} cluster.
+8| , | , | , 
+
+# 9. CPUThrottlingHigh
+#    summary: Processes experience elevated CPU throttling.
+#    description: '{{ $value | humanizePercentage }} throttling of CPU in namespace {{ $labels.namespace }} for container {{ $labels.container }} in pod {{ $labels.pod }} on cluster {{ $labels.cluster }}.'
+9| , | , | , 
+
+# 10. ConfigReloaderSidecarErrors
+#    summary: config-reloader sidecar has not had a successful reload for 10m
+#    description: -
+10| , | , | , 
+
+# 11. InfoInhibitor
+#    summary: Info-level alert inhibition.
+#    description: This is an alert that is used to inhibit info alerts.
+11| , | , | , 
+
+# 12. KubeAPIDown
+#    summary: Target disappeared from Prometheus target discovery.
+#    description: KubeAPI has disappeared from Prometheus target discovery.
+12| , | , | , 
+
+# 13. KubeAPIErrorBudgetBurn
+#    summary: The Kube API server is burning too much error budget.
+#    description: The Kube API server is burning too much error budget on cluster {{ $labels.cluster }}.
+13| , | , | , 
+
+# 14. KubeAPIInstanceUnreachable
+#    summary: KubeAPI instance is unreachable.
+#    description: A KubeAPI instance has been unreachable for more than 15 minutes.
+14| , | , | , 
+
+# 15. KubeAPITerminatedRequests
+#    summary: The kubernetes apiserver has terminated {{ $value | humanizePercentage }} of its incoming requests.
+#    description: The kubernetes apiserver has terminated {{ $value | humanizePercentage }} of its incoming requests on cluster {{ $labels.cluster }}.
+15| , | , | , 
+
+# 16. KubeAggregatedAPIDown
+#    summary: Kubernetes aggregated API is down.
+#    description: Kubernetes aggregated API {{ $labels.name }}/{{ $labels.namespace }} has been only {{ $value | humanize }}% available over the last 10m on cluster {{ $labels.cluster }}.
+16| , | , | , 
+
+# 17. KubeAggregatedAPIErrors
+#    summary: Kubernetes aggregated API has reported errors.
+#    description: Kubernetes aggregated API {{ $labels.instance }}/{{ $labels.name }} has reported {{ $labels.reason }} errors on cluster {{ $labels.cluster }}.
+17| , | , | , 
+
+# 18. KubeCPUOvercommit
+#    summary: Cluster has overcommitted CPU resource requests.
+#    description: Cluster {{ $labels.cluster }} has overcommitted CPU resource requests for Pods by {{ printf "%.2f" $value }} CPU shares and cannot tolerate node failure.
+18| , | , | , 
+
+# 19. KubeCPUQuotaOvercommit
+#    summary: Cluster has overcommitted CPU resource requests.
+#    description: Cluster {{ $labels.cluster }} has overcommitted CPU resource requests for Namespaces.
+19| , | , | , 
+
+# 20. KubeClientCertificateExpiration
+#    summary: Client certificate is about to expire.
+#    description: A client certificate used to authenticate to kubernetes apiserver is expiring in less than 7.0 days on cluster {{ $labels.cluster }}.
+20| , | , | , 
+
+# 21. KubeClientErrors
+#    summary: Kubernetes API server client is experiencing errors.
+#    description: Kubernetes API server client '{{ $labels.job }}/{{ $labels.instance }}' is experiencing {{ $value | humanizePercentage }} errors on cluster {{ $labels.cluster }}.
+21| , | , | , 
+
+# 22. KubeContainerWaiting
+#    summary: Pod container waiting longer than 1 hour
+#    description: 'pod/{{ $labels.pod }} in namespace {{ $labels.namespace }} on container {{ $labels.container}} has been in waiting state for longer than 1 hour. (reason: "{{ $labels.reason }}") on cluster {{ $labels.cluster }}.'
+22| , | , | , 
+
+# 23. KubeControllerManagerDown
+#    summary: Target disappeared from Prometheus target discovery.
+#    description: KubeControllerManager has disappeared from Prometheus target discovery.
+23| , | , | , 
+
+# 24. KubeControllerManagerInstanceUnreachable
+#    summary: KubeControllerManager instance is unreachable.
+#    description: A KubeControllerManager instance has been unreachable for more than 15 minutes.
+24| , | , | , 
+
+# 25. KubeDaemonSetMisScheduled
+#    summary: DaemonSet pods are misscheduled.
+#    description: '{{ $value }} Pods of DaemonSet {{ $labels.namespace }}/{{ $labels.daemonset }} are running where they are not supposed to run on cluster {{ $labels.cluster }}.'
+25| , | , | , 
+
+# 26. KubeDaemonSetNotScheduled
+#    summary: DaemonSet pods are not scheduled.
+#    description: '{{ $value }} Pods of DaemonSet {{ $labels.namespace }}/{{ $labels.daemonset }} are not scheduled on cluster {{ $labels.cluster }}.'
+26| , | , | , 
+
+# 27. KubeDaemonSetRolloutStuck
+#    summary: DaemonSet rollout is stuck.
+#    description: DaemonSet {{ $labels.namespace }}/{{ $labels.daemonset }} has not finished or progressed for at least 15m on cluster {{ $labels.cluster }}.
+27| , | , | , 
+
+# 28. KubeDeploymentGenerationMismatch
+#    summary: Deployment generation mismatch due to possible roll-back
+#    description: Deployment generation for {{ $labels.namespace }}/{{ $labels.deployment }} does not match, this indicates that the Deployment has failed but has not been rolled back on cluster {{ $labels.cluster }}.
+28| , | , | , 
+
+# 29. KubeDeploymentReplicasMismatch
+#    summary: Deployment has not matched the expected number of replicas.
+#    description: Deployment {{ $labels.namespace }}/{{ $labels.deployment }} has not matched the expected number of replicas for longer than 15 minutes on cluster {{ $labels.cluster }}.
+29| , | , | , 
+
+# 30. KubeDeploymentRolloutStuck
+#    summary: Deployment rollout is not progressing.
+#    description: Rollout of deployment {{ $labels.namespace }}/{{ $labels.deployment }} is not progressing for longer than 15 minutes on cluster {{ $labels.cluster }}.
+30| , | , | , 

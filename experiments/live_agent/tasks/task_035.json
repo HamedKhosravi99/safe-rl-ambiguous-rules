@@ -1,0 +1,20 @@
+{
+  "id": "task_035",
+  "question": "What is the difference between supervised and unsupervised learning?",
+  "source_docs": [
+    "machine_learning.txt"
+  ],
+  "rubric": [
+    [
+      "supervised",
+      "labeled",
+      "labelled"
+    ],
+    [
+      "unsupervised",
+      "unlabeled",
+      "cluster"
+    ]
+  ],
+  "reference": "Supervised uses labeled data; unsupervised finds structure in unlabeled data."
+}

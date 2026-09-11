@@ -1,0 +1,22 @@
+{
+  "id": "task_030",
+  "question": "How many chambers does the human heart have and what are they?",
+  "source_docs": [
+    "human_heart.txt"
+  ],
+  "rubric": [
+    [
+      "four",
+      "4"
+    ],
+    [
+      "atria",
+      "atrium"
+    ],
+    [
+      "ventricle",
+      "ventricles"
+    ]
+  ],
+  "reference": "Four: two atria and two ventricles."
+}

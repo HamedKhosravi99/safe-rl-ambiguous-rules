@@ -1,0 +1,43 @@
+{
+  "_provenance": "REGISTRATION_V7: generated blind (agent saw only the 5 parent rule texts, the existing paraphrase texts as do-not-duplicate, and intent-preservation constraints; never pools, scores, or golds). Generated 2026-08-05 after commit 0159156.",
+  "A": [
+    "Once the asset's degradation becomes severe, operation must stop.",
+    "Severe degradation means the asset comes out of service -- no further operation.",
+    "If you find the asset severely degraded, you are not to keep it running.",
+    "Operating an asset whose degradation has reached a severe state is prohibited.",
+    "Halt operation whenever the asset's condition has deteriorated to a severe degree.",
+    "Check: is degradation severe? If so, the asset may not remain in operation."
+  ],
+  "B": [
+    "When the asset reaches its last, critical wear-out stage -- the point very near failure -- operation must cease.",
+    "An asset that has entered the terminal, critical wear-out phase, right on the verge of failing, must not be run any further.",
+    "Stop running the asset as soon as it is in its final critical wear-out period, very near the point of failure.",
+    "You may not keep the asset in operation after it enters its end-of-life critical wear-out phase, where it sits very close to failure.",
+    "Operator note: final critical wear-out phase, failure very close -- cease operation; do not continue.",
+    "Continued operation is forbidden once the asset has crossed into its ultimate, critical wear-out stage, very close to breaking down."
+  ],
+  "C": [
+    "After a warning, hold position for exactly the four steps that immediately follow it; beginning with the fifth step, the crossing is safe.",
+    "The four steps directly after a warning -- exactly those four -- are off-limits for advancing; safety resumes at the fifth step and every step after.",
+    "You must not move forward during exactly the four steps right after a warning is given; from step five onward it is safe to cross.",
+    "Advancing is prohibited for precisely the four steps that come immediately after a warning; the crossing becomes safe from the fifth step on.",
+    "Crossing procedure: warning issued -> do not advance for exactly four steps immediately afterward -> from the fifth step forward, crossing is safe.",
+    "Once a warning sounds, the next four steps -- exactly four, no more, no fewer -- must be spent holding still; starting at the fifth step the crossing is safe."
+  ],
+  "D": [
+    "The crossing turns dangerous for a short while immediately after a hazard warning, so hold off on advancing for the first few steps that follow one.",
+    "Immediately following a hazard warning, danger lingers at the crossing for a brief period; refrain from moving forward during the initial few steps after the warning.",
+    "Hazard warning issued? The crossing is unsafe for a little while -- do not advance during the first few steps afterward.",
+    "For a brief window right after a hazard warning, the crossing is hazardous; advancing should be avoided for the first few steps that come after a warning.",
+    "You should not step forward for the first few steps after a hazard warning, because the crossing remains briefly dangerous just after one.",
+    "Note to operators: the crossing goes briefly dangerous right after a hazard warning -- no advancing for the first few steps post-warning."
+  ],
+  "E": [
+    "Spending during this session should stay modest; avoid accumulating a large bill through paid actions.",
+    "Don't let paid actions add up to a big bill -- keep what this session spends modest.",
+    "Budget note: this session's outlay on paid actions must remain modest, not balloon into a large bill.",
+    "You are expected to keep spending modest for this session and to steer clear of running up a large bill on paid actions.",
+    "Hold this session to modest spending -- a large bill from paid actions is not acceptable.",
+    "For the duration of this session, keep expenditures modest and do not rack up a hefty bill on paid actions."
+  ]
+}

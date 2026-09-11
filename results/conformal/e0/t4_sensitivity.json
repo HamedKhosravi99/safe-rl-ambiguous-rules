@@ -1,0 +1,228 @@
+{
+ "q_fixed": 0.245,
+ "n": 308,
+ "agreement": {
+  "A1": 1.0,
+  "A2": 0.0584,
+  "A3": 0.4058,
+  "A4": 0.0974
+ },
+ "containment_at_fixed_q": {
+  "A1": 0.961,
+  "A2": 0.9675,
+  "A3": 0.961,
+  "A4": 0.961
+ },
+ "generation_note": "pool-internal maps: P(A_j in Psi) = 1 by construction (stated per A8)",
+ "per_repo": {
+  "kube-prometheus": {
+   "A1_contain": 82,
+   "A1_n": 88,
+   "A2_contain": 82,
+   "A2_n": 88,
+   "A3_contain": 82,
+   "A3_n": 88,
+   "A4_contain": 81,
+   "A4_n": 88
+  },
+  "thanos": {
+   "A1_contain": 30,
+   "A1_n": 31,
+   "A2_contain": 30,
+   "A2_n": 31,
+   "A3_contain": 30,
+   "A3_n": 31,
+   "A4_contain": 30,
+   "A4_n": 31
+  },
+  "mimir": {
+   "A1_contain": 102,
+   "A1_n": 103,
+   "A2_contain": 103,
+   "A2_n": 103,
+   "A3_contain": 102,
+   "A3_n": 103,
+   "A4_contain": 102,
+   "A4_n": 103
+  },
+  "cluster-monitoring-operator": {
+   "A1_contain": 82,
+   "A1_n": 86,
+   "A2_contain": 83,
+   "A2_n": 86,
+   "A3_contain": 82,
+   "A3_n": 86,
+   "A4_contain": 83,
+   "A4_n": 86
+  }
+ },
+ "ask_act_flip": "not applicable (per-map answer priors undefined); disclosed per A8",
+ "execution_consistency": {
+  "tool": "promtool check rules",
+  "valid": 308,
+  "invalid": 0,
+  "validity_rate": 1.0,
+  "taxonomy": {},
+  "examples": []
+ },
+ "p1_price_sensitivity": {
+  "n_instances": 17,
+  "worst_delta_max": 0.4450532585856314,
+  "rows": [
+   {
+    "uid": "AlertmanagerClusterCrashlooping",
+    "poa": {
+     "A1_tightest": 0.0075406604701335755,
+     "A2_loosest": 0.22786694156041298,
+     "A3_median": 0.0075406604701335755
+    },
+    "worst_delta": 0.2203262810902794
+   },
+   {
+    "uid": "AlertmanagerClusterDown",
+    "poa": {
+     "A1_tightest": 0.0075406604701335755,
+     "A2_loosest": 0.22786694156041298,
+     "A3_median": 0.0075406604701335755
+    },
+    "worst_delta": 0.2203262810902794
+   },
+   {
+    "uid": "NodeNetworkInterfaceFlapping",
+    "poa": {
+     "A1_tightest": 0.042918904064523145,
+     "A2_loosest": 0.03155058342061534,
+     "A3_median": 0.042918904064523145
+    },
+    "worst_delta": 0.011368320643907803
+   },
+   {
+    "uid": "KubeStateMetricsListErrors",
+    "poa": {
+     "A1_tightest": 1.1102230246251565e-16,
+     "A2_loosest": 0.4450532585856315,
+     "A3_median": 1.1102230246251565e-16
+    },
+    "worst_delta": 0.4450532585856314
+   },
+   {
+    "uid": "KubeStateMetricsWatchErrors",
+    "poa": {
+     "A1_tightest": 1.1102230246251565e-16,
+     "A2_loosest": 0.4450532585856315,
+     "A3_median": 1.1102230246251565e-16
+    },
+    "worst_delta": 0.4450532585856314
+   },
+   {
+    "uid": "KubePodCrashLooping",
+    "poa": {
+     "A1_tightest": 1.1102230246251565e-16,
+     "A2_loosest": 0.4450532585856315,
+     "A3_median": 1.1102230246251565e-16
+    },
+    "worst_delta": 0.4450532585856314
+   },
+   {
+    "uid": "KubeCPUQuotaOvercommit",
+    "poa": {
+     "A1_tightest": 0.0075406604701335755,
+     "A2_loosest": 0.22786694156041298,
+     "A3_median": 0.0075406604701335755
+    },
+    "worst_delta": 0.2203262810902794
+   },
+   {
+    "uid": "KubeMemoryQuotaOvercommit",
+    "poa": {
+     "A1_tightest": 0.0075406604701335755,
+     "A2_loosest": 0.22786694156041298,
+     "A3_median": 0.0075406604701335755
+    },
+    "worst_delta": 0.2203262810902794
+   },
+   {
+    "uid": "NodeCPUHighUsage",
+    "poa": {
+     "A1_tightest": 1.1102230246251565e-16,
+     "A2_loosest": 0.4450532585856315,
+     "A3_median": 1.1102230246251565e-16
+    },
+    "worst_delta": 0.4450532585856314
+   },
+   {
+    "uid": "NodeClockNotSynchronising",
+    "poa": {
+     "A1_tightest": 1.1102230246251565e-16,
+     "A2_loosest": 0.4450532585856315,
+     "A3_median": 1.1102230246251565e-16
+    },
+    "worst_delta": 0.4450532585856314
+   },
+   {
+    "uid": "NodeDiskIOSaturation",
+    "poa": {
+     "A1_tightest": 1.1102230246251565e-16,
+     "A2_loosest": 0.4450532585856315,
+     "A3_median": 1.1102230246251565e-16
+    },
+    "worst_delta": 0.4450532585856314
+   },
+   {
+    "uid": "PrometheusErrorSendingAlertsToAnyAlertmanager",
+    "poa": {
+     "A1_tightest": 1.1102230246251565e-16,
+     "A2_loosest": 0.4450532585856315,
+     "A3_median": 1.1102230246251565e-16
+    },
+    "worst_delta": 0.4450532585856314
+   },
+   {
+    "uid": "PrometheusErrorSendingAlertsToSomeAlertmanagers",
+    "poa": {
+     "A1_tightest": 1.1102230246251565e-16,
+     "A2_loosest": 0.4450532585856315,
+     "A3_median": 1.1102230246251565e-16
+    },
+    "worst_delta": 0.4450532585856314
+   },
+   {
+    "uid": "PrometheusHighQueryLoad",
+    "poa": {
+     "A1_tightest": 1.1102230246251565e-16,
+     "A2_loosest": 0.4450532585856315,
+     "A3_median": 1.1102230246251565e-16
+    },
+    "worst_delta": 0.4450532585856314
+   },
+   {
+    "uid": "PrometheusOperatorListErrors",
+    "poa": {
+     "A1_tightest": 1.1102230246251565e-16,
+     "A2_loosest": 0.4450532585856315,
+     "A3_median": 1.1102230246251565e-16
+    },
+    "worst_delta": 0.4450532585856314
+   },
+   {
+    "uid": "PrometheusOperatorNodeLookupErrors",
+    "poa": {
+     "A1_tightest": 1.1102230246251565e-16,
+     "A2_loosest": 0.4450532585856315,
+     "A3_median": 1.1102230246251565e-16
+    },
+    "worst_delta": 0.4450532585856314
+   },
+   {
+    "uid": "PrometheusOperatorReconcileErrors",
+    "poa": {
+     "A1_tightest": 1.1102230246251565e-16,
+     "A2_loosest": 0.4450532585856315,
+     "A3_median": 1.1102230246251565e-16
+    },
+    "worst_delta": 0.4450532585856314
+   }
+  ]
+ },
+ "scope": "sensitivity to deterministic operational protocols; does not validate agreement with latent human intent"
+}

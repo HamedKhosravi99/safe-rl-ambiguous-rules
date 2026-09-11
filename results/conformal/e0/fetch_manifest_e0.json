@@ -1,0 +1,921 @@
+{
+ "repos": {
+  "awesome-prometheus-alerts": {
+   "url": "https://github.com/samber/awesome-prometheus-alerts",
+   "commit": "a8533189af0246de5e21a6d8d25bd37816894f07",
+   "n_files": 112
+  },
+  "ceph": {
+   "url": "https://github.com/ceph/ceph",
+   "commit": "8482cb11bc58942906e2343ebd87ef2c7a1dd01d",
+   "n_files": 1
+  },
+  "victoriametrics": {
+   "url": "https://github.com/VictoriaMetrics/VictoriaMetrics",
+   "commit": "a8759a539c199849ead239c79ba4df04ade089bb",
+   "n_files": 8
+  },
+  "gitlab-runbooks": {
+   "url": "https://gitlab.com/gitlab-com/runbooks",
+   "commit": "83b01523fc8875f83b321892270b8b83f5cf7804",
+   "n_files": 0
+  },
+  "loki": {
+   "url": "https://github.com/grafana/loki",
+   "commit": "6a48053e33111390c82bebfe01f1c020e1357826",
+   "n_files": 1
+  },
+  "tempo": {
+   "url": "https://github.com/grafana/tempo",
+   "commit": "df7893faf3e772ad271415e9f0bfb4764375f7c5",
+   "n_files": 1
+  },
+  "rook": {
+   "url": "https://github.com/rook/rook",
+   "commit": "5238f377f27fb3e717c260485134ff32508d0e01",
+   "n_files": 2
+  },
+  "tidb": {
+   "url": "https://github.com/pingcap/tidb",
+   "commit": "6f5bfe198fa01d9171a3772e72945947998b5b36",
+   "n_files": 0
+  }
+ },
+ "files": [
+  {
+   "repo": "awesome-prometheus-alerts",
+   "family": "prometheus",
+   "rel_path": "dist/rules/apache/lusitaniae-apache-exporter.yml",
+   "abs_path": "data/rule_corpora/awesome-prometheus-alerts/dist/rules/apache/lusitaniae-apache-exporter.yml",
+   "last_commit_ts": 1775500725
+  },
+  {
+   "repo": "awesome-prometheus-alerts",
+   "family": "prometheus",
+   "rel_path": "dist/rules/apache-flink/flink-prometheus-reporter.yml",
+   "abs_path": "data/rule_corpora/awesome-prometheus-alerts/dist/rules/apache-flink/flink-prometheus-reporter.yml",
+   "last_commit_ts": 1775500725
+  },
+  {
+   "repo": "awesome-prometheus-alerts",
+   "family": "prometheus",
+   "rel_path": "dist/rules/apache-spark/spark-prometheus.yml",
+   "abs_path": "data/rule_corpora/awesome-prometheus-alerts/dist/rules/apache-spark/spark-prometheus.yml",
+   "last_commit_ts": 1773853594
+  },
+  {
+   "repo": "awesome-prometheus-alerts",
+   "family": "prometheus",
+   "rel_path": "dist/rules/apc-ups/apcupsd_exporter.yml",
+   "abs_path": "data/rule_corpora/awesome-prometheus-alerts/dist/rules/apc-ups/apcupsd_exporter.yml",
+   "last_commit_ts": 1775500725
+  },
+  {
+   "repo": "awesome-prometheus-alerts",
+   "family": "prometheus",
+   "rel_path": "dist/rules/argocd/embedded-exporter.yml",
+   "abs_path": "data/rule_corpora/awesome-prometheus-alerts/dist/rules/argocd/embedded-exporter.yml",
+   "last_commit_ts": 1762358696
+  },
+  {
+   "repo": "awesome-prometheus-alerts",
+   "family": "prometheus",
+   "rel_path": "dist/rules/aws-cloudwatch/prometheus-cloudwatch-exporter.yml",
+   "abs_path": "data/rule_corpora/awesome-prometheus-alerts/dist/rules/aws-cloudwatch/prometheus-cloudwatch-exporter.yml",
+   "last_commit_ts": 1773833005
+  },
+  {
+   "repo": "awesome-prometheus-alerts",
+   "family": "prometheus",
+   "rel_path": "dist/rules/azure/azure-metrics-exporter.yml",
+   "abs_path": "data/rule_corpora/awesome-prometheus-alerts/dist/rules/azure/azure-metrics-exporter.yml",
+   "last_commit_ts": 1773853594
+  },
+  {
+   "repo": "awesome-prometheus-alerts",
+   "family": "prometheus",
+   "rel_path": "dist/rules/blackbox/blackbox-exporter.yml",
+   "abs_path": "data/rule_corpora/awesome-prometheus-alerts/dist/rules/blackbox/blackbox-exporter.yml",
+   "last_commit_ts": 1775500725
+  },
+  {
+   "repo": "awesome-prometheus-alerts",
+   "family": "prometheus",
+   "rel_path": "dist/rules/caddy/embedded-exporter.yml",
+   "abs_path": "data/rule_corpora/awesome-prometheus-alerts/dist/rules/caddy/embedded-exporter.yml",
+   "last_commit_ts": 1775500725
+  },
+  {
+   "repo": "awesome-prometheus-alerts",
+   "family": "prometheus",
+   "rel_path": "dist/rules/cassandra/criteo-cassandra-exporter.yml",
+   "abs_path": "data/rule_corpora/awesome-prometheus-alerts/dist/rules/cassandra/criteo-cassandra-exporter.yml",
+   "last_commit_ts": 1775500725
+  },
+  {
+   "repo": "awesome-prometheus-alerts",
+   "family": "prometheus",
+   "rel_path": "dist/rules/cassandra/instaclustr-cassandra-exporter.yml",
+   "abs_path": "data/rule_corpora/awesome-prometheus-alerts/dist/rules/cassandra/instaclustr-cassandra-exporter.yml",
+   "last_commit_ts": 1775500725
+  },
+  {
+   "repo": "awesome-prometheus-alerts",
+   "family": "prometheus",
+   "rel_path": "dist/rules/ceph/embedded-exporter.yml",
+   "abs_path": "data/rule_corpora/awesome-prometheus-alerts/dist/rules/ceph/embedded-exporter.yml",
+   "last_commit_ts": 1775502886
+  },
+  {
+   "repo": "awesome-prometheus-alerts",
+   "family": "prometheus",
+   "rel_path": "dist/rules/cert-manager/embedded-exporter.yml",
+   "abs_path": "data/rule_corpora/awesome-prometheus-alerts/dist/rules/cert-manager/embedded-exporter.yml",
+   "last_commit_ts": 1775500725
+  },
+  {
+   "repo": "awesome-prometheus-alerts",
+   "family": "prometheus",
+   "rel_path": "dist/rules/cilium/embedded-exporter.yml",
+   "abs_path": "data/rule_corpora/awesome-prometheus-alerts/dist/rules/cilium/embedded-exporter.yml",
+   "last_commit_ts": 1775500725
+  },
+  {
+   "repo": "awesome-prometheus-alerts",
+   "family": "prometheus",
+   "rel_path": "dist/rules/clickhouse/embedded-exporter.yml",
+   "abs_path": "data/rule_corpora/awesome-prometheus-alerts/dist/rules/clickhouse/embedded-exporter.yml",
+   "last_commit_ts": 1775500725
+  },
+  {
+   "repo": "awesome-prometheus-alerts",
+   "family": "prometheus",
+   "rel_path": "dist/rules/cloudflare/lablabs-cloudflare-exporter.yml",
+   "abs_path": "data/rule_corpora/awesome-prometheus-alerts/dist/rules/cloudflare/lablabs-cloudflare-exporter.yml",
+   "last_commit_ts": 1773853594
+  },
+  {
+   "repo": "awesome-prometheus-alerts",
+   "family": "prometheus",
+   "rel_path": "dist/rules/consul/consul-exporter.yml",
+   "abs_path": "data/rule_corpora/awesome-prometheus-alerts/dist/rules/consul/consul-exporter.yml",
+   "last_commit_ts": 1762358696
+  },
+  {
+   "repo": "awesome-prometheus-alerts",
+   "family": "prometheus",
+   "rel_path": "dist/rules/coredns/embedded-exporter.yml",
+   "abs_path": "data/rule_corpora/awesome-prometheus-alerts/dist/rules/coredns/embedded-exporter.yml",
+   "last_commit_ts": 1762358696
+  },
+  {
+   "repo": "awesome-prometheus-alerts",
+   "family": "prometheus",
+   "rel_path": "dist/rules/cortex/embedded-exporter.yml",
+   "abs_path": "data/rule_corpora/awesome-prometheus-alerts/dist/rules/cortex/embedded-exporter.yml",
+   "last_commit_ts": 1775500725
+  },
+  {
+   "repo": "awesome-prometheus-alerts",
+   "family": "prometheus",
+   "rel_path": "dist/rules/couchdb/gesellix-couchdb-prometheus-exporter.yml",
+   "abs_path": "data/rule_corpora/awesome-prometheus-alerts/dist/rules/couchdb/gesellix-couchdb-prometheus-exporter.yml",
+   "last_commit_ts": 1775500725
+  },
+  {
+   "repo": "awesome-prometheus-alerts",
+   "family": "prometheus",
+   "rel_path": "dist/rules/digitalocean/digitalocean-exporter.yml",
+   "abs_path": "data/rule_corpora/awesome-prometheus-alerts/dist/rules/digitalocean/digitalocean-exporter.yml",
+   "last_commit_ts": 1775500725
+  },
+  {
+   "repo": "awesome-prometheus-alerts",
+   "family": "prometheus",
+   "rel_path": "dist/rules/docker-containers/google-cadvisor.yml",
+   "abs_path": "data/rule_corpora/awesome-prometheus-alerts/dist/rules/docker-containers/google-cadvisor.yml",
+   "last_commit_ts": 1775500725
+  },
+  {
+   "repo": "awesome-prometheus-alerts",
+   "family": "prometheus",
+   "rel_path": "dist/rules/ebpf/ebpf-exporter.yml",
+   "abs_path": "data/rule_corpora/awesome-prometheus-alerts/dist/rules/ebpf/ebpf-exporter.yml",
+   "last_commit_ts": 1775500725
+  },
+  {
+   "repo": "awesome-prometheus-alerts",
+   "family": "prometheus",
+   "rel_path": "dist/rules/elasticsearch/prometheus-community-elasticsearch-exporter.yml",
+   "abs_path": "data/rule_corpora/awesome-prometheus-alerts/dist/rules/elasticsearch/prometheus-community-elasticsearch-exporter.yml",
+   "last_commit_ts": 1775500725
+  },
+  {
+   "repo": "awesome-prometheus-alerts",
+   "family": "prometheus",
+   "rel_path": "dist/rules/envoy/embedded-exporter.yml",
+   "abs_path": "data/rule_corpora/awesome-prometheus-alerts/dist/rules/envoy/embedded-exporter.yml",
+   "last_commit_ts": 1775500725
+  },
+  {
+   "repo": "awesome-prometheus-alerts",
+   "family": "prometheus",
+   "rel_path": "dist/rules/etcd/embedded-exporter.yml",
+   "abs_path": "data/rule_corpora/awesome-prometheus-alerts/dist/rules/etcd/embedded-exporter.yml",
+   "last_commit_ts": 1775500725
+  },
+  {
+   "repo": "awesome-prometheus-alerts",
+   "family": "prometheus",
+   "rel_path": "dist/rules/fluxcd/embedded-exporter.yml",
+   "abs_path": "data/rule_corpora/awesome-prometheus-alerts/dist/rules/fluxcd/embedded-exporter.yml",
+   "last_commit_ts": 1762358696
+  },
+  {
+   "repo": "awesome-prometheus-alerts",
+   "family": "prometheus",
+   "rel_path": "dist/rules/freeswitch/znerol-freeswitch-exporter.yml",
+   "abs_path": "data/rule_corpora/awesome-prometheus-alerts/dist/rules/freeswitch/znerol-freeswitch-exporter.yml",
+   "last_commit_ts": 1775500725
+  },
+  {
+   "repo": "awesome-prometheus-alerts",
+   "family": "prometheus",
+   "rel_path": "dist/rules/gitlab-ci/gitaly.yml",
+   "abs_path": "data/rule_corpora/awesome-prometheus-alerts/dist/rules/gitlab-ci/gitaly.yml",
+   "last_commit_ts": 1775500725
+  },
+  {
+   "repo": "awesome-prometheus-alerts",
+   "family": "prometheus",
+   "rel_path": "dist/rules/gitlab-ci/gitlab-built-in-exporter.yml",
+   "abs_path": "data/rule_corpora/awesome-prometheus-alerts/dist/rules/gitlab-ci/gitlab-built-in-exporter.yml",
+   "last_commit_ts": 1775500725
+  },
+  {
+   "repo": "awesome-prometheus-alerts",
+   "family": "prometheus",
+   "rel_path": "dist/rules/gitlab-ci/workhorse.yml",
+   "abs_path": "data/rule_corpora/awesome-prometheus-alerts/dist/rules/gitlab-ci/workhorse.yml",
+   "last_commit_ts": 1773833005
+  },
+  {
+   "repo": "awesome-prometheus-alerts",
+   "family": "prometheus",
+   "rel_path": "dist/rules/golang/golang-exporter.yml",
+   "abs_path": "data/rule_corpora/awesome-prometheus-alerts/dist/rules/golang/golang-exporter.yml",
+   "last_commit_ts": 1775500725
+  },
+  {
+   "repo": "awesome-prometheus-alerts",
+   "family": "prometheus",
+   "rel_path": "dist/rules/google-cloud-stackdriver/stackdriver-exporter.yml",
+   "abs_path": "data/rule_corpora/awesome-prometheus-alerts/dist/rules/google-cloud-stackdriver/stackdriver-exporter.yml",
+   "last_commit_ts": 1773666465
+  },
+  {
+   "repo": "awesome-prometheus-alerts",
+   "family": "prometheus",
+   "rel_path": "dist/rules/grafana-alloy/embedded-exporter.yml",
+   "abs_path": "data/rule_corpora/awesome-prometheus-alerts/dist/rules/grafana-alloy/embedded-exporter.yml",
+   "last_commit_ts": 1773833005
+  },
+  {
+   "repo": "awesome-prometheus-alerts",
+   "family": "prometheus",
+   "rel_path": "dist/rules/grafana-mimir/embedded-exporter.yml",
+   "abs_path": "data/rule_corpora/awesome-prometheus-alerts/dist/rules/grafana-mimir/embedded-exporter.yml",
+   "last_commit_ts": 1775500725
+  },
+  {
+   "repo": "awesome-prometheus-alerts",
+   "family": "prometheus",
+   "rel_path": "dist/rules/grafana-tempo/embedded-exporter.yml",
+   "abs_path": "data/rule_corpora/awesome-prometheus-alerts/dist/rules/grafana-tempo/embedded-exporter.yml",
+   "last_commit_ts": 1775500725
+  },
+  {
+   "repo": "awesome-prometheus-alerts",
+   "family": "prometheus",
+   "rel_path": "dist/rules/graph-node/embedded-exporter.yml",
+   "abs_path": "data/rule_corpora/awesome-prometheus-alerts/dist/rules/graph-node/embedded-exporter.yml",
+   "last_commit_ts": 1775500725
+  },
+  {
+   "repo": "awesome-prometheus-alerts",
+   "family": "prometheus",
+   "rel_path": "dist/rules/hadoop/jmx_exporter.yml",
+   "abs_path": "data/rule_corpora/awesome-prometheus-alerts/dist/rules/hadoop/jmx_exporter.yml",
+   "last_commit_ts": 1775500725
+  },
+  {
+   "repo": "awesome-prometheus-alerts",
+   "family": "prometheus",
+   "rel_path": "dist/rules/haproxy/embedded-exporter-v2.yml",
+   "abs_path": "data/rule_corpora/awesome-prometheus-alerts/dist/rules/haproxy/embedded-exporter-v2.yml",
+   "last_commit_ts": 1775500725
+  },
+  {
+   "repo": "awesome-prometheus-alerts",
+   "family": "prometheus",
+   "rel_path": "dist/rules/haproxy/haproxy-exporter-v1.yml",
+   "abs_path": "data/rule_corpora/awesome-prometheus-alerts/dist/rules/haproxy/haproxy-exporter-v1.yml",
+   "last_commit_ts": 1775500725
+  },
+  {
+   "repo": "awesome-prometheus-alerts",
+   "family": "prometheus",
+   "rel_path": "dist/rules/hashicorp-vault/embedded-exporter.yml",
+   "abs_path": "data/rule_corpora/awesome-prometheus-alerts/dist/rules/hashicorp-vault/embedded-exporter.yml",
+   "last_commit_ts": 1775500725
+  },
+  {
+   "repo": "awesome-prometheus-alerts",
+   "family": "prometheus",
+   "rel_path": "dist/rules/host-and-hardware/node-exporter.yml",
+   "abs_path": "data/rule_corpora/awesome-prometheus-alerts/dist/rules/host-and-hardware/node-exporter.yml",
+   "last_commit_ts": 1775500725
+  },
+  {
+   "repo": "awesome-prometheus-alerts",
+   "family": "prometheus",
+   "rel_path": "dist/rules/ipmi/ipmi-exporter.yml",
+   "abs_path": "data/rule_corpora/awesome-prometheus-alerts/dist/rules/ipmi/ipmi-exporter.yml",
+   "last_commit_ts": 1773833005
+  },
+  {
+   "repo": "awesome-prometheus-alerts",
+   "family": "prometheus",
+   "rel_path": "dist/rules/istio/embedded-exporter.yml",
+   "abs_path": "data/rule_corpora/awesome-prometheus-alerts/dist/rules/istio/embedded-exporter.yml",
+   "last_commit_ts": 1775500725
+  },
+  {
+   "repo": "awesome-prometheus-alerts",
+   "family": "prometheus",
+   "rel_path": "dist/rules/jaeger/embedded-exporter-legacy.yml",
+   "abs_path": "data/rule_corpora/awesome-prometheus-alerts/dist/rules/jaeger/embedded-exporter-legacy.yml",
+   "last_commit_ts": 1776812164
+  },
+  {
+   "repo": "awesome-prometheus-alerts",
+   "family": "prometheus",
+   "rel_path": "dist/rules/jaeger/embedded-exporter.yml",
+   "abs_path": "data/rule_corpora/awesome-prometheus-alerts/dist/rules/jaeger/embedded-exporter.yml",
+   "last_commit_ts": 1776812164
+  },
+  {
+   "repo": "awesome-prometheus-alerts",
+   "family": "prometheus",
+   "rel_path": "dist/rules/jenkins/metric-plugin.yml",
+   "abs_path": "data/rule_corpora/awesome-prometheus-alerts/dist/rules/jenkins/metric-plugin.yml",
+   "last_commit_ts": 1775500725
+  },
+  {
+   "repo": "awesome-prometheus-alerts",
+   "family": "prometheus",
+   "rel_path": "dist/rules/juniper/czerwonk-junos-exporter.yml",
+   "abs_path": "data/rule_corpora/awesome-prometheus-alerts/dist/rules/juniper/czerwonk-junos-exporter.yml",
+   "last_commit_ts": 1773866461
+  },
+  {
+   "repo": "awesome-prometheus-alerts",
+   "family": "prometheus",
+   "rel_path": "dist/rules/jvm/jvm-exporter.yml",
+   "abs_path": "data/rule_corpora/awesome-prometheus-alerts/dist/rules/jvm/jvm-exporter.yml",
+   "last_commit_ts": 1773853594
+  },
+  {
+   "repo": "awesome-prometheus-alerts",
+   "family": "prometheus",
+   "rel_path": "dist/rules/kafka/danielqsj-kafka-exporter.yml",
+   "abs_path": "data/rule_corpora/awesome-prometheus-alerts/dist/rules/kafka/danielqsj-kafka-exporter.yml",
+   "last_commit_ts": 1775500725
+  },
+  {
+   "repo": "awesome-prometheus-alerts",
+   "family": "prometheus",
+   "rel_path": "dist/rules/kafka/linkedin-kafka-exporter.yml",
+   "abs_path": "data/rule_corpora/awesome-prometheus-alerts/dist/rules/kafka/linkedin-kafka-exporter.yml",
+   "last_commit_ts": 1762358696
+  },
+  {
+   "repo": "awesome-prometheus-alerts",
+   "family": "prometheus",
+   "rel_path": "dist/rules/keycloak/aerogear-keycloak-metrics-spi.yml",
+   "abs_path": "data/rule_corpora/awesome-prometheus-alerts/dist/rules/keycloak/aerogear-keycloak-metrics-spi.yml",
+   "last_commit_ts": 1773833005
+  },
+  {
+   "repo": "awesome-prometheus-alerts",
+   "family": "prometheus",
+   "rel_path": "dist/rules/kubernetes/kubestate-exporter.yml",
+   "abs_path": "data/rule_corpora/awesome-prometheus-alerts/dist/rules/kubernetes/kubestate-exporter.yml",
+   "last_commit_ts": 1775500725
+  },
+  {
+   "repo": "awesome-prometheus-alerts",
+   "family": "prometheus",
+   "rel_path": "dist/rules/linkerd/embedded-exporter.yml",
+   "abs_path": "data/rule_corpora/awesome-prometheus-alerts/dist/rules/linkerd/embedded-exporter.yml",
+   "last_commit_ts": 1773853594
+  },
+  {
+   "repo": "awesome-prometheus-alerts",
+   "family": "prometheus",
+   "rel_path": "dist/rules/litellm/embedded-exporter.yml",
+   "abs_path": "data/rule_corpora/awesome-prometheus-alerts/dist/rules/litellm/embedded-exporter.yml",
+   "last_commit_ts": 1777467817
+  },
+  {
+   "repo": "awesome-prometheus-alerts",
+   "family": "prometheus",
+   "rel_path": "dist/rules/loki/embedded-exporter.yml",
+   "abs_path": "data/rule_corpora/awesome-prometheus-alerts/dist/rules/loki/embedded-exporter.yml",
+   "last_commit_ts": 1775500725
+  },
+  {
+   "repo": "awesome-prometheus-alerts",
+   "family": "prometheus",
+   "rel_path": "dist/rules/meilisearch/embedded-exporter.yml",
+   "abs_path": "data/rule_corpora/awesome-prometheus-alerts/dist/rules/meilisearch/embedded-exporter.yml",
+   "last_commit_ts": 1773620860
+  },
+  {
+   "repo": "awesome-prometheus-alerts",
+   "family": "prometheus",
+   "rel_path": "dist/rules/memcached/memcached-exporter.yml",
+   "abs_path": "data/rule_corpora/awesome-prometheus-alerts/dist/rules/memcached/memcached-exporter.yml",
+   "last_commit_ts": 1775500725
+  },
+  {
+   "repo": "awesome-prometheus-alerts",
+   "family": "prometheus",
+   "rel_path": "dist/rules/minio/embedded-exporter.yml",
+   "abs_path": "data/rule_corpora/awesome-prometheus-alerts/dist/rules/minio/embedded-exporter.yml",
+   "last_commit_ts": 1773853594
+  },
+  {
+   "repo": "awesome-prometheus-alerts",
+   "family": "prometheus",
+   "rel_path": "dist/rules/mongodb/dcu-mongodb-exporter.yml",
+   "abs_path": "data/rule_corpora/awesome-prometheus-alerts/dist/rules/mongodb/dcu-mongodb-exporter.yml",
+   "last_commit_ts": 1773866461
+  },
+  {
+   "repo": "awesome-prometheus-alerts",
+   "family": "prometheus",
+   "rel_path": "dist/rules/mongodb/percona-mongodb-exporter.yml",
+   "abs_path": "data/rule_corpora/awesome-prometheus-alerts/dist/rules/mongodb/percona-mongodb-exporter.yml",
+   "last_commit_ts": 1773866461
+  },
+  {
+   "repo": "awesome-prometheus-alerts",
+   "family": "prometheus",
+   "rel_path": "dist/rules/mongodb/stefanprodan-mgob-exporter.yml",
+   "abs_path": "data/rule_corpora/awesome-prometheus-alerts/dist/rules/mongodb/stefanprodan-mgob-exporter.yml",
+   "last_commit_ts": 1762358696
+  },
+  {
+   "repo": "awesome-prometheus-alerts",
+   "family": "prometheus",
+   "rel_path": "dist/rules/mysql/mysqld-exporter.yml",
+   "abs_path": "data/rule_corpora/awesome-prometheus-alerts/dist/rules/mysql/mysqld-exporter.yml",
+   "last_commit_ts": 1775500725
+  },
+  {
+   "repo": "awesome-prometheus-alerts",
+   "family": "prometheus",
+   "rel_path": "dist/rules/nats/nats-exporter.yml",
+   "abs_path": "data/rule_corpora/awesome-prometheus-alerts/dist/rules/nats/nats-exporter.yml",
+   "last_commit_ts": 1775500725
+  },
+  {
+   "repo": "awesome-prometheus-alerts",
+   "family": "prometheus",
+   "rel_path": "dist/rules/netdata/embedded-exporter.yml",
+   "abs_path": "data/rule_corpora/awesome-prometheus-alerts/dist/rules/netdata/embedded-exporter.yml",
+   "last_commit_ts": 1773866461
+  },
+  {
+   "repo": "awesome-prometheus-alerts",
+   "family": "prometheus",
+   "rel_path": "dist/rules/nginx/knyar-nginx-exporter.yml",
+   "abs_path": "data/rule_corpora/awesome-prometheus-alerts/dist/rules/nginx/knyar-nginx-exporter.yml",
+   "last_commit_ts": 1773853594
+  },
+  {
+   "repo": "awesome-prometheus-alerts",
+   "family": "prometheus",
+   "rel_path": "dist/rules/nomad/embedded-exporter.yml",
+   "abs_path": "data/rule_corpora/awesome-prometheus-alerts/dist/rules/nomad/embedded-exporter.yml",
+   "last_commit_ts": 1775500725
+  },
+  {
+   "repo": "awesome-prometheus-alerts",
+   "family": "prometheus",
+   "rel_path": "dist/rules/openebs/embedded-exporter.yml",
+   "abs_path": "data/rule_corpora/awesome-prometheus-alerts/dist/rules/openebs/embedded-exporter.yml",
+   "last_commit_ts": 1762358696
+  },
+  {
+   "repo": "awesome-prometheus-alerts",
+   "family": "prometheus",
+   "rel_path": "dist/rules/opensearch/opensearch-project-opensearch-prometheus-exporter.yml",
+   "abs_path": "data/rule_corpora/awesome-prometheus-alerts/dist/rules/opensearch/opensearch-project-opensearch-prometheus-exporter.yml",
+   "last_commit_ts": 1774968008
+  },
+  {
+   "repo": "awesome-prometheus-alerts",
+   "family": "prometheus",
+   "rel_path": "dist/rules/openstack/openstack-exporter.yml",
+   "abs_path": "data/rule_corpora/awesome-prometheus-alerts/dist/rules/openstack/openstack-exporter.yml",
+   "last_commit_ts": 1775500725
+  },
+  {
+   "repo": "awesome-prometheus-alerts",
+   "family": "prometheus",
+   "rel_path": "dist/rules/opentelemetry-collector/embedded-exporter.yml",
+   "abs_path": "data/rule_corpora/awesome-prometheus-alerts/dist/rules/opentelemetry-collector/embedded-exporter.yml",
+   "last_commit_ts": 1775500725
+  },
+  {
+   "repo": "awesome-prometheus-alerts",
+   "family": "prometheus",
+   "rel_path": "dist/rules/oracle-database/iamseth-oracledb-exporter.yml",
+   "abs_path": "data/rule_corpora/awesome-prometheus-alerts/dist/rules/oracle-database/iamseth-oracledb-exporter.yml",
+   "last_commit_ts": 1773833005
+  },
+  {
+   "repo": "awesome-prometheus-alerts",
+   "family": "prometheus",
+   "rel_path": "dist/rules/patroni/embedded-exporter-patroni.yml",
+   "abs_path": "data/rule_corpora/awesome-prometheus-alerts/dist/rules/patroni/embedded-exporter-patroni.yml",
+   "last_commit_ts": 1773620860
+  },
+  {
+   "repo": "awesome-prometheus-alerts",
+   "family": "prometheus",
+   "rel_path": "dist/rules/pgbouncer/spreaker-pgbouncer-exporter.yml",
+   "abs_path": "data/rule_corpora/awesome-prometheus-alerts/dist/rules/pgbouncer/spreaker-pgbouncer-exporter.yml",
+   "last_commit_ts": 1773620860
+  },
+  {
+   "repo": "awesome-prometheus-alerts",
+   "family": "prometheus",
+   "rel_path": "dist/rules/php-fpm/bakins-fpm-exporter.yml",
+   "abs_path": "data/rule_corpora/awesome-prometheus-alerts/dist/rules/php-fpm/bakins-fpm-exporter.yml",
+   "last_commit_ts": 1773866461
+  },
+  {
+   "repo": "awesome-prometheus-alerts",
+   "family": "prometheus",
+   "rel_path": "dist/rules/postgresql/postgres-exporter.yml",
+   "abs_path": "data/rule_corpora/awesome-prometheus-alerts/dist/rules/postgresql/postgres-exporter.yml",
+   "last_commit_ts": 1775500725
+  },
+  {
+   "repo": "awesome-prometheus-alerts",
+   "family": "prometheus",
+   "rel_path": "dist/rules/process-exporter/process-exporter.yml",
+   "abs_path": "data/rule_corpora/awesome-prometheus-alerts/dist/rules/process-exporter/process-exporter.yml",
+   "last_commit_ts": 1773833005
+  },
+  {
+   "repo": "awesome-prometheus-alerts",
+   "family": "prometheus",
+   "rel_path": "dist/rules/prometheus-self-monitoring/embedded-exporter.yml",
+   "abs_path": "data/rule_corpora/awesome-prometheus-alerts/dist/rules/prometheus-self-monitoring/embedded-exporter.yml",
+   "last_commit_ts": 1775500725
+  },
+  {
+   "repo": "awesome-prometheus-alerts",
+   "family": "prometheus",
+   "rel_path": "dist/rules/promtail/embedded-exporter.yml",
+   "abs_path": "data/rule_corpora/awesome-prometheus-alerts/dist/rules/promtail/embedded-exporter.yml",
+   "last_commit_ts": 1775500725
+  },
+  {
+   "repo": "awesome-prometheus-alerts",
+   "family": "prometheus",
+   "rel_path": "dist/rules/proxmox-ve/prometheus-pve-exporter.yml",
+   "abs_path": "data/rule_corpora/awesome-prometheus-alerts/dist/rules/proxmox-ve/prometheus-pve-exporter.yml",
+   "last_commit_ts": 1773833005
+  },
+  {
+   "repo": "awesome-prometheus-alerts",
+   "family": "prometheus",
+   "rel_path": "dist/rules/pulsar/embedded-exporter.yml",
+   "abs_path": "data/rule_corpora/awesome-prometheus-alerts/dist/rules/pulsar/embedded-exporter.yml",
+   "last_commit_ts": 1775500725
+  },
+  {
+   "repo": "awesome-prometheus-alerts",
+   "family": "prometheus",
+   "rel_path": "dist/rules/python/python-exporter.yml",
+   "abs_path": "data/rule_corpora/awesome-prometheus-alerts/dist/rules/python/python-exporter.yml",
+   "last_commit_ts": 1775500725
+  },
+  {
+   "repo": "awesome-prometheus-alerts",
+   "family": "prometheus",
+   "rel_path": "dist/rules/rabbitmq/kbudde-rabbitmq-exporter.yml",
+   "abs_path": "data/rule_corpora/awesome-prometheus-alerts/dist/rules/rabbitmq/kbudde-rabbitmq-exporter.yml",
+   "last_commit_ts": 1775500725
+  },
+  {
+   "repo": "awesome-prometheus-alerts",
+   "family": "prometheus",
+   "rel_path": "dist/rules/rabbitmq/rabbitmq-exporter.yml",
+   "abs_path": "data/rule_corpora/awesome-prometheus-alerts/dist/rules/rabbitmq/rabbitmq-exporter.yml",
+   "last_commit_ts": 1775500725
+  },
+  {
+   "repo": "awesome-prometheus-alerts",
+   "family": "prometheus",
+   "rel_path": "dist/rules/redis/oliver006-redis-exporter.yml",
+   "abs_path": "data/rule_corpora/awesome-prometheus-alerts/dist/rules/redis/oliver006-redis-exporter.yml",
+   "last_commit_ts": 1773853594
+  },
+  {
+   "repo": "awesome-prometheus-alerts",
+   "family": "prometheus",
+   "rel_path": "dist/rules/ruby/ruby-exporter.yml",
+   "abs_path": "data/rule_corpora/awesome-prometheus-alerts/dist/rules/ruby/ruby-exporter.yml",
+   "last_commit_ts": 1775500725
+  },
+  {
+   "repo": "awesome-prometheus-alerts",
+   "family": "prometheus",
+   "rel_path": "dist/rules/s.m.a.r.t-device-monitoring/smartctl-exporter.yml",
+   "abs_path": "data/rule_corpora/awesome-prometheus-alerts/dist/rules/s.m.a.r.t-device-monitoring/smartctl-exporter.yml",
+   "last_commit_ts": 1775500725
+  },
+  {
+   "repo": "awesome-prometheus-alerts",
+   "family": "prometheus",
+   "rel_path": "dist/rules/sidekiq/strech-sidekiq-exporter.yml",
+   "abs_path": "data/rule_corpora/awesome-prometheus-alerts/dist/rules/sidekiq/strech-sidekiq-exporter.yml",
+   "last_commit_ts": 1775500725
+  },
+  {
+   "repo": "awesome-prometheus-alerts",
+   "family": "prometheus",
+   "rel_path": "dist/rules/snmp/snmp-exporter.yml",
+   "abs_path": "data/rule_corpora/awesome-prometheus-alerts/dist/rules/snmp/snmp-exporter.yml",
+   "last_commit_ts": 1775500725
+  },
+  {
+   "repo": "awesome-prometheus-alerts",
+   "family": "prometheus",
+   "rel_path": "dist/rules/solr/embedded-exporter.yml",
+   "abs_path": "data/rule_corpora/awesome-prometheus-alerts/dist/rules/solr/embedded-exporter.yml",
+   "last_commit_ts": 1773620860
+  },
+  {
+   "repo": "awesome-prometheus-alerts",
+   "family": "prometheus",
+   "rel_path": "dist/rules/speedtest/nlamirault-speedtest-exporter.yml",
+   "abs_path": "data/rule_corpora/awesome-prometheus-alerts/dist/rules/speedtest/nlamirault-speedtest-exporter.yml",
+   "last_commit_ts": 1762358696
+  },
+  {
+   "repo": "awesome-prometheus-alerts",
+   "family": "prometheus",
+   "rel_path": "dist/rules/spinnaker/embedded-exporter.yml",
+   "abs_path": "data/rule_corpora/awesome-prometheus-alerts/dist/rules/spinnaker/embedded-exporter.yml",
+   "last_commit_ts": 1775500725
+  },
+  {
+   "repo": "awesome-prometheus-alerts",
+   "family": "prometheus",
+   "rel_path": "dist/rules/sql-server/ozarklake-mssql-exporter.yml",
+   "abs_path": "data/rule_corpora/awesome-prometheus-alerts/dist/rules/sql-server/ozarklake-mssql-exporter.yml",
+   "last_commit_ts": 1773620860
+  },
+  {
+   "repo": "awesome-prometheus-alerts",
+   "family": "prometheus",
+   "rel_path": "dist/rules/ssl/tls/ribbybibby-ssl-exporter.yml",
+   "abs_path": "data/rule_corpora/awesome-prometheus-alerts/dist/rules/ssl/tls/ribbybibby-ssl-exporter.yml",
+   "last_commit_ts": 1775500725
+  },
+  {
+   "repo": "awesome-prometheus-alerts",
+   "family": "prometheus",
+   "rel_path": "dist/rules/systemd/systemd-exporter.yml",
+   "abs_path": "data/rule_corpora/awesome-prometheus-alerts/dist/rules/systemd/systemd-exporter.yml",
+   "last_commit_ts": 1775500725
+  },
+  {
+   "repo": "awesome-prometheus-alerts",
+   "family": "prometheus",
+   "rel_path": "dist/rules/thanos/thanos-bucket-replicate.yml",
+   "abs_path": "data/rule_corpora/awesome-prometheus-alerts/dist/rules/thanos/thanos-bucket-replicate.yml",
+   "last_commit_ts": 1775500725
+  },
+  {
+   "repo": "awesome-prometheus-alerts",
+   "family": "prometheus",
+   "rel_path": "dist/rules/thanos/thanos-compactor.yml",
+   "abs_path": "data/rule_corpora/awesome-prometheus-alerts/dist/rules/thanos/thanos-compactor.yml",
+   "last_commit_ts": 1775500725
+  },
+  {
+   "repo": "awesome-prometheus-alerts",
+   "family": "prometheus",
+   "rel_path": "dist/rules/thanos/thanos-component-absent.yml",
+   "abs_path": "data/rule_corpora/awesome-prometheus-alerts/dist/rules/thanos/thanos-component-absent.yml",
+   "last_commit_ts": 1762358696
+  },
+  {
+   "repo": "awesome-prometheus-alerts",
+   "family": "prometheus",
+   "rel_path": "dist/rules/thanos/thanos-query.yml",
+   "abs_path": "data/rule_corpora/awesome-prometheus-alerts/dist/rules/thanos/thanos-query.yml",
+   "last_commit_ts": 1775500725
+  },
+  {
+   "repo": "awesome-prometheus-alerts",
+   "family": "prometheus",
+   "rel_path": "dist/rules/thanos/thanos-receiver.yml",
+   "abs_path": "data/rule_corpora/awesome-prometheus-alerts/dist/rules/thanos/thanos-receiver.yml",
+   "last_commit_ts": 1775500725
+  },
+  {
+   "repo": "awesome-prometheus-alerts",
+   "family": "prometheus",
+   "rel_path": "dist/rules/thanos/thanos-ruler.yml",
+   "abs_path": "data/rule_corpora/awesome-prometheus-alerts/dist/rules/thanos/thanos-ruler.yml",
+   "last_commit_ts": 1775500725
+  },
+  {
+   "repo": "awesome-prometheus-alerts",
+   "family": "prometheus",
+   "rel_path": "dist/rules/thanos/thanos-sidecar.yml",
+   "abs_path": "data/rule_corpora/awesome-prometheus-alerts/dist/rules/thanos/thanos-sidecar.yml",
+   "last_commit_ts": 1775500725
+  },
+  {
+   "repo": "awesome-prometheus-alerts",
+   "family": "prometheus",
+   "rel_path": "dist/rules/thanos/thanos-store.yml",
+   "abs_path": "data/rule_corpora/awesome-prometheus-alerts/dist/rules/thanos/thanos-store.yml",
+   "last_commit_ts": 1775500725
+  },
+  {
+   "repo": "awesome-prometheus-alerts",
+   "family": "prometheus",
+   "rel_path": "dist/rules/traefik/embedded-exporter-v1.yml",
+   "abs_path": "data/rule_corpora/awesome-prometheus-alerts/dist/rules/traefik/embedded-exporter-v1.yml",
+   "last_commit_ts": 1773853594
+  },
+  {
+   "repo": "awesome-prometheus-alerts",
+   "family": "prometheus",
+   "rel_path": "dist/rules/traefik/embedded-exporter-v2.yml",
+   "abs_path": "data/rule_corpora/awesome-prometheus-alerts/dist/rules/traefik/embedded-exporter-v2.yml",
+   "last_commit_ts": 1773853594
+  },
+  {
+   "repo": "awesome-prometheus-alerts",
+   "family": "prometheus",
+   "rel_path": "dist/rules/vmware/pryorda-vmware-exporter.yml",
+   "abs_path": "data/rule_corpora/awesome-prometheus-alerts/dist/rules/vmware/pryorda-vmware-exporter.yml",
+   "last_commit_ts": 1762358696
+  },
+  {
+   "repo": "awesome-prometheus-alerts",
+   "family": "prometheus",
+   "rel_path": "dist/rules/windows-server/windows-exporter.yml",
+   "abs_path": "data/rule_corpora/awesome-prometheus-alerts/dist/rules/windows-server/windows-exporter.yml",
+   "last_commit_ts": 1773853594
+  },
+  {
+   "repo": "awesome-prometheus-alerts",
+   "family": "prometheus",
+   "rel_path": "dist/rules/wireguard/mindflavor-prometheus-wireguard-exporter.yml",
+   "abs_path": "data/rule_corpora/awesome-prometheus-alerts/dist/rules/wireguard/mindflavor-prometheus-wireguard-exporter.yml",
+   "last_commit_ts": 1773833005
+  },
+  {
+   "repo": "awesome-prometheus-alerts",
+   "family": "prometheus",
+   "rel_path": "dist/rules/zfs/node-exporter.yml",
+   "abs_path": "data/rule_corpora/awesome-prometheus-alerts/dist/rules/zfs/node-exporter.yml",
+   "last_commit_ts": 1762358696
+  },
+  {
+   "repo": "awesome-prometheus-alerts",
+   "family": "prometheus",
+   "rel_path": "dist/rules/zfs/zfs_exporter.yml",
+   "abs_path": "data/rule_corpora/awesome-prometheus-alerts/dist/rules/zfs/zfs_exporter.yml",
+   "last_commit_ts": 1775500725
+  },
+  {
+   "repo": "awesome-prometheus-alerts",
+   "family": "prometheus",
+   "rel_path": "dist/rules/zookeeper/cloudflare-kafka-zookeeper-exporter.yml",
+   "abs_path": "data/rule_corpora/awesome-prometheus-alerts/dist/rules/zookeeper/cloudflare-kafka-zookeeper-exporter.yml",
+   "last_commit_ts": 1762358696
+  },
+  {
+   "repo": "awesome-prometheus-alerts",
+   "family": "prometheus",
+   "rel_path": "dist/rules/zookeeper/dabealu-zookeeper-exporter.yml",
+   "abs_path": "data/rule_corpora/awesome-prometheus-alerts/dist/rules/zookeeper/dabealu-zookeeper-exporter.yml",
+   "last_commit_ts": 1775500725
+  },
+  {
+   "repo": "ceph",
+   "family": "prometheus",
+   "rel_path": "monitoring/ceph-mixin/prometheus_alerts.yml",
+   "abs_path": "data/rule_corpora/ceph/monitoring/ceph-mixin/prometheus_alerts.yml",
+   "last_commit_ts": 1783021538
+  },
+  {
+   "repo": "victoriametrics",
+   "family": "prometheus",
+   "rel_path": "deployment/docker/rules/alerts-cluster.yml",
+   "abs_path": "data/rule_corpora/victoriametrics/deployment/docker/rules/alerts-cluster.yml",
+   "last_commit_ts": 1776678201
+  },
+  {
+   "repo": "victoriametrics",
+   "family": "prometheus",
+   "rel_path": "deployment/docker/rules/alerts-health.yml",
+   "abs_path": "data/rule_corpora/victoriametrics/deployment/docker/rules/alerts-health.yml",
+   "last_commit_ts": 1776678201
+  },
+  {
+   "repo": "victoriametrics",
+   "family": "prometheus",
+   "rel_path": "deployment/docker/rules/alerts-single-node.yml",
+   "abs_path": "data/rule_corpora/victoriametrics/deployment/docker/rules/alerts-single-node.yml",
+   "last_commit_ts": 1776678201
+  },
+  {
+   "repo": "victoriametrics",
+   "family": "prometheus",
+   "rel_path": "deployment/docker/rules/alerts-vmagent.yml",
+   "abs_path": "data/rule_corpora/victoriametrics/deployment/docker/rules/alerts-vmagent.yml",
+   "last_commit_ts": 1784737738
+  },
+  {
+   "repo": "victoriametrics",
+   "family": "prometheus",
+   "rel_path": "deployment/docker/rules/alerts-vmalert.yml",
+   "abs_path": "data/rule_corpora/victoriametrics/deployment/docker/rules/alerts-vmalert.yml",
+   "last_commit_ts": 1783083597
+  },
+  {
+   "repo": "victoriametrics",
+   "family": "prometheus",
+   "rel_path": "deployment/docker/rules/alerts-vmanomaly.yml",
+   "abs_path": "data/rule_corpora/victoriametrics/deployment/docker/rules/alerts-vmanomaly.yml",
+   "last_commit_ts": 1784875246
+  },
+  {
+   "repo": "victoriametrics",
+   "family": "prometheus",
+   "rel_path": "deployment/docker/rules/alerts-vmauth.yml",
+   "abs_path": "data/rule_corpora/victoriametrics/deployment/docker/rules/alerts-vmauth.yml",
+   "last_commit_ts": 1782996150
+  },
+  {
+   "repo": "victoriametrics",
+   "family": "prometheus",
+   "rel_path": "deployment/docker/rules/alerts-vmbackupmanager.yml",
+   "abs_path": "data/rule_corpora/victoriametrics/deployment/docker/rules/alerts-vmbackupmanager.yml",
+   "last_commit_ts": 1784816141
+  },
+  {
+   "repo": "loki",
+   "family": "prometheus",
+   "rel_path": "production/loki-mixin-compiled/alerts.yaml",
+   "abs_path": "data/rule_corpora/loki/production/loki-mixin-compiled/alerts.yaml",
+   "last_commit_ts": 1727860807
+  },
+  {
+   "repo": "tempo",
+   "family": "prometheus",
+   "rel_path": "operations/tempo-mixin-compiled/alerts.yaml",
+   "abs_path": "data/rule_corpora/tempo/operations/tempo-mixin-compiled/alerts.yaml",
+   "last_commit_ts": 1784640123
+  },
+  {
+   "repo": "rook",
+   "family": "prometheus",
+   "rel_path": "deploy/examples/monitoring/externalrules.yaml",
+   "abs_path": "data/rule_corpora/rook/deploy/examples/monitoring/externalrules.yaml",
+   "last_commit_ts": 1778882107
+  },
+  {
+   "repo": "rook",
+   "family": "prometheus",
+   "rel_path": "deploy/examples/monitoring/localrules.yaml",
+   "abs_path": "data/rule_corpora/rook/deploy/examples/monitoring/localrules.yaml",
+   "last_commit_ts": 1783723788
+  }
+ ]
+}

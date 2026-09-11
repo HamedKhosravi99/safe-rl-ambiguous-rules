@@ -1,0 +1,77 @@
+{
+  "policy": "real-a02-slack-posting-rate",
+  "personas": [
+    "a reliability engineer who reads the rule strictly and literally",
+    "a safety auditor who errs toward catching unsafe operation early",
+    "a plain-language reader with no engineering background",
+    "a skeptical linguist who penalizes readings that are broader or narrower than the words actually say",
+    "a prognostics ML practitioner who knows these features well",
+    "a cost-conscious operations manager who dislikes needless early action",
+    "a careful neutral annotator weighing faithfulness on the merits"
+  ],
+  "scores": {
+    "psi_calls>=2": [
+      0.3,
+      0.5,
+      0.3,
+      0.15,
+      0.35,
+      0.3,
+      0.35
+    ],
+    "psi_calls>=3": [
+      0.6,
+      0.5,
+      0.6,
+      0.6,
+      0.6,
+      0.6,
+      0.6
+    ],
+    "psi_calls>=4": [
+      0.6,
+      0.6,
+      0.5,
+      0.4,
+      0.55,
+      0.7,
+      0.55
+    ],
+    "psi_calls>=5": [
+      0.6,
+      0.6,
+      0.7,
+      0.55,
+      0.75,
+      0.6,
+      0.7
+    ],
+    "psi_calls>=6": [
+      0.4,
+      0.6,
+      0.6,
+      0.5,
+      0.6,
+      0.6,
+      0.7
+    ],
+    "psi_calls>=8": [
+      0.4,
+      0.6,
+      0.6,
+      0.35,
+      0.6,
+      0.7,
+      0.6
+    ],
+    "psi_bot": [
+      0.0,
+      0.1,
+      0.1,
+      0.1,
+      0.0,
+      0.0,
+      0.1
+    ]
+  }
+}

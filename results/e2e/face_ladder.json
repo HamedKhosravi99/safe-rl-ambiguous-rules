@@ -1,0 +1,4074 @@
+{
+ "registration": "V14 (REGISTRATION_V14.md): face-level ladder + admission face pass at the operating budget",
+ "operating": 0.05,
+ "subset_cap": 60,
+ "aggregate": {
+  "prometheus": {
+   "n_pools": 88,
+   "k0_fires": 0,
+   "k1_fires": 7,
+   "k2_some": 64,
+   "k2_all": 4,
+   "free_fires": 61,
+   "frontier_one": 7,
+   "frontier_two": 57,
+   "frontier_never": 24,
+   "non_monotone": 3,
+   "common_free_fires": 61,
+   "common_n": 88
+  },
+  "kyverno": {
+   "n_pools": 44,
+   "k0_fires": 0,
+   "k1_fires": 0,
+   "k2_some": 2,
+   "k2_all": 0,
+   "free_fires": 9,
+   "frontier_one": 0,
+   "frontier_two": 2,
+   "frontier_never": 35,
+   "non_monotone": 0,
+   "common_free_fires": 0,
+   "common_n": 0
+  }
+ },
+ "pools": [
+  {
+   "uid": "AlertmanagerFailedReload#0",
+   "family": "prometheus",
+   "K": 3,
+   "rungs": {
+    "0": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 1
+    },
+    "1": {
+     "fires_some": true,
+     "all_fire": false,
+     "n_subsets": 3
+    },
+    "2": {
+     "fires_some": true,
+     "all_fire": false,
+     "n_subsets": 3
+    },
+    "3": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 1
+    }
+   },
+   "free_face_need": false,
+   "frontier": 1,
+   "in_compiled_common": true,
+   "non_monotone": true
+  },
+  {
+   "uid": "AlertmanagerConfigInconsistent#1",
+   "family": "prometheus",
+   "K": 8,
+   "rungs": {
+    "0": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 1
+    },
+    "1": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 8
+    },
+    "2": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 28
+    },
+    "8": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 1
+    }
+   },
+   "free_face_need": false,
+   "frontier": null,
+   "in_compiled_common": true,
+   "non_monotone": false
+  },
+  {
+   "uid": "AlertmanagerClusterDown#2",
+   "family": "prometheus",
+   "K": 16,
+   "rungs": {
+    "0": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 1
+    },
+    "1": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 16
+    },
+    "2": {
+     "fires_some": true,
+     "all_fire": false,
+     "n_subsets": 60
+    },
+    "16": {
+     "fires_some": true,
+     "all_fire": true,
+     "n_subsets": 1
+    }
+   },
+   "free_face_need": true,
+   "frontier": 2,
+   "in_compiled_common": true,
+   "non_monotone": false
+  },
+  {
+   "uid": "AlertmanagerClusterCrashlooping#3",
+   "family": "prometheus",
+   "K": 14,
+   "rungs": {
+    "0": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 1
+    },
+    "1": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 14
+    },
+    "2": {
+     "fires_some": true,
+     "all_fire": false,
+     "n_subsets": 60
+    },
+    "14": {
+     "fires_some": true,
+     "all_fire": true,
+     "n_subsets": 1
+    }
+   },
+   "free_face_need": true,
+   "frontier": 2,
+   "in_compiled_common": true,
+   "non_monotone": false
+  },
+  {
+   "uid": "AlertmanagerClusterFailedPeers#4",
+   "family": "prometheus",
+   "K": 13,
+   "rungs": {
+    "0": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 1
+    },
+    "1": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 13
+    },
+    "2": {
+     "fires_some": true,
+     "all_fire": false,
+     "n_subsets": 60
+    },
+    "13": {
+     "fires_some": true,
+     "all_fire": true,
+     "n_subsets": 1
+    }
+   },
+   "free_face_need": true,
+   "frontier": 2,
+   "in_compiled_common": true,
+   "non_monotone": false
+  },
+  {
+   "uid": "NodeNetworkInterfaceFlapping#5",
+   "family": "prometheus",
+   "K": 16,
+   "rungs": {
+    "0": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 1
+    },
+    "1": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 16
+    },
+    "2": {
+     "fires_some": true,
+     "all_fire": false,
+     "n_subsets": 60
+    },
+    "16": {
+     "fires_some": true,
+     "all_fire": true,
+     "n_subsets": 1
+    }
+   },
+   "free_face_need": true,
+   "frontier": 2,
+   "in_compiled_common": true,
+   "non_monotone": false
+  },
+  {
+   "uid": "KubeStateMetricsListErrors#6",
+   "family": "prometheus",
+   "K": 16,
+   "rungs": {
+    "0": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 1
+    },
+    "1": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 16
+    },
+    "2": {
+     "fires_some": true,
+     "all_fire": false,
+     "n_subsets": 60
+    },
+    "16": {
+     "fires_some": true,
+     "all_fire": true,
+     "n_subsets": 1
+    }
+   },
+   "free_face_need": true,
+   "frontier": 2,
+   "in_compiled_common": true,
+   "non_monotone": false
+  },
+  {
+   "uid": "KubeStateMetricsWatchErrors#7",
+   "family": "prometheus",
+   "K": 16,
+   "rungs": {
+    "0": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 1
+    },
+    "1": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 16
+    },
+    "2": {
+     "fires_some": true,
+     "all_fire": false,
+     "n_subsets": 60
+    },
+    "16": {
+     "fires_some": true,
+     "all_fire": true,
+     "n_subsets": 1
+    }
+   },
+   "free_face_need": true,
+   "frontier": 2,
+   "in_compiled_common": true,
+   "non_monotone": false
+  },
+  {
+   "uid": "KubeStateMetricsShardingMismatch#8",
+   "family": "prometheus",
+   "K": 5,
+   "rungs": {
+    "0": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 1
+    },
+    "1": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 5
+    },
+    "2": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 10
+    },
+    "5": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 1
+    }
+   },
+   "free_face_need": false,
+   "frontier": null,
+   "in_compiled_common": true,
+   "non_monotone": false
+  },
+  {
+   "uid": "KubeStateMetricsShardsMissing#9",
+   "family": "prometheus",
+   "K": 5,
+   "rungs": {
+    "0": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 1
+    },
+    "1": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 5
+    },
+    "2": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 10
+    },
+    "5": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 1
+    }
+   },
+   "free_face_need": false,
+   "frontier": null,
+   "in_compiled_common": true,
+   "non_monotone": false
+  },
+  {
+   "uid": "KubePodCrashLooping#10",
+   "family": "prometheus",
+   "K": 17,
+   "rungs": {
+    "0": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 1
+    },
+    "1": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 17
+    },
+    "2": {
+     "fires_some": true,
+     "all_fire": false,
+     "n_subsets": 60
+    },
+    "17": {
+     "fires_some": true,
+     "all_fire": true,
+     "n_subsets": 1
+    }
+   },
+   "free_face_need": true,
+   "frontier": 2,
+   "in_compiled_common": true,
+   "non_monotone": false
+  },
+  {
+   "uid": "KubeDeploymentReplicasMismatch#11",
+   "family": "prometheus",
+   "K": 2,
+   "rungs": {
+    "0": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 1
+    },
+    "1": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 2
+    },
+    "2": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 1
+    }
+   },
+   "free_face_need": false,
+   "frontier": null,
+   "in_compiled_common": true,
+   "non_monotone": false
+  },
+  {
+   "uid": "KubeDeploymentRolloutStuck#12",
+   "family": "prometheus",
+   "K": 5,
+   "rungs": {
+    "0": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 1
+    },
+    "1": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 5
+    },
+    "2": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 10
+    },
+    "5": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 1
+    }
+   },
+   "free_face_need": false,
+   "frontier": null,
+   "in_compiled_common": true,
+   "non_monotone": false
+  },
+  {
+   "uid": "KubeStatefulSetReplicasMismatch#13",
+   "family": "prometheus",
+   "K": 2,
+   "rungs": {
+    "0": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 1
+    },
+    "1": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 2
+    },
+    "2": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 1
+    }
+   },
+   "free_face_need": false,
+   "frontier": null,
+   "in_compiled_common": true,
+   "non_monotone": false
+  },
+  {
+   "uid": "KubeContainerWaiting#14",
+   "family": "prometheus",
+   "K": 7,
+   "rungs": {
+    "0": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 1
+    },
+    "1": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 7
+    },
+    "2": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 21
+    },
+    "7": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 1
+    }
+   },
+   "free_face_need": false,
+   "frontier": null,
+   "in_compiled_common": true,
+   "non_monotone": false
+  },
+  {
+   "uid": "KubeDaemonSetNotScheduled#15",
+   "family": "prometheus",
+   "K": 13,
+   "rungs": {
+    "0": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 1
+    },
+    "1": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 13
+    },
+    "2": {
+     "fires_some": true,
+     "all_fire": false,
+     "n_subsets": 60
+    },
+    "13": {
+     "fires_some": true,
+     "all_fire": true,
+     "n_subsets": 1
+    }
+   },
+   "free_face_need": true,
+   "frontier": 2,
+   "in_compiled_common": true,
+   "non_monotone": false
+  },
+  {
+   "uid": "KubeDaemonSetMisScheduled#16",
+   "family": "prometheus",
+   "K": 13,
+   "rungs": {
+    "0": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 1
+    },
+    "1": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 13
+    },
+    "2": {
+     "fires_some": true,
+     "all_fire": false,
+     "n_subsets": 60
+    },
+    "13": {
+     "fires_some": true,
+     "all_fire": true,
+     "n_subsets": 1
+    }
+   },
+   "free_face_need": true,
+   "frontier": 2,
+   "in_compiled_common": true,
+   "non_monotone": false
+  },
+  {
+   "uid": "KubeJobNotCompleted#17",
+   "family": "prometheus",
+   "K": 15,
+   "rungs": {
+    "0": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 1
+    },
+    "1": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 15
+    },
+    "2": {
+     "fires_some": true,
+     "all_fire": false,
+     "n_subsets": 60
+    },
+    "15": {
+     "fires_some": true,
+     "all_fire": true,
+     "n_subsets": 1
+    }
+   },
+   "free_face_need": true,
+   "frontier": 2,
+   "in_compiled_common": true,
+   "non_monotone": false
+  },
+  {
+   "uid": "KubeJobFailed#18",
+   "family": "prometheus",
+   "K": 13,
+   "rungs": {
+    "0": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 1
+    },
+    "1": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 13
+    },
+    "2": {
+     "fires_some": true,
+     "all_fire": false,
+     "n_subsets": 60
+    },
+    "13": {
+     "fires_some": true,
+     "all_fire": true,
+     "n_subsets": 1
+    }
+   },
+   "free_face_need": true,
+   "frontier": 2,
+   "in_compiled_common": true,
+   "non_monotone": false
+  },
+  {
+   "uid": "KubeHpaReplicasMismatch#19",
+   "family": "prometheus",
+   "K": 2,
+   "rungs": {
+    "0": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 1
+    },
+    "1": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 2
+    },
+    "2": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 1
+    }
+   },
+   "free_face_need": false,
+   "frontier": null,
+   "in_compiled_common": true,
+   "non_monotone": false
+  },
+  {
+   "uid": "KubePdbNotEnoughHealthyPods#20",
+   "family": "prometheus",
+   "K": 13,
+   "rungs": {
+    "0": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 1
+    },
+    "1": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 13
+    },
+    "2": {
+     "fires_some": true,
+     "all_fire": false,
+     "n_subsets": 60
+    },
+    "13": {
+     "fires_some": true,
+     "all_fire": true,
+     "n_subsets": 1
+    }
+   },
+   "free_face_need": true,
+   "frontier": 2,
+   "in_compiled_common": true,
+   "non_monotone": false
+  },
+  {
+   "uid": "KubeCPUQuotaOvercommit#21",
+   "family": "prometheus",
+   "K": 14,
+   "rungs": {
+    "0": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 1
+    },
+    "1": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 14
+    },
+    "2": {
+     "fires_some": true,
+     "all_fire": false,
+     "n_subsets": 60
+    },
+    "14": {
+     "fires_some": true,
+     "all_fire": true,
+     "n_subsets": 1
+    }
+   },
+   "free_face_need": true,
+   "frontier": 2,
+   "in_compiled_common": true,
+   "non_monotone": false
+  },
+  {
+   "uid": "KubeMemoryQuotaOvercommit#22",
+   "family": "prometheus",
+   "K": 14,
+   "rungs": {
+    "0": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 1
+    },
+    "1": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 14
+    },
+    "2": {
+     "fires_some": true,
+     "all_fire": false,
+     "n_subsets": 60
+    },
+    "14": {
+     "fires_some": true,
+     "all_fire": true,
+     "n_subsets": 1
+    }
+   },
+   "free_face_need": true,
+   "frontier": 2,
+   "in_compiled_common": true,
+   "non_monotone": false
+  },
+  {
+   "uid": "KubePersistentVolumeErrors#23",
+   "family": "prometheus",
+   "K": 13,
+   "rungs": {
+    "0": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 1
+    },
+    "1": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 13
+    },
+    "2": {
+     "fires_some": true,
+     "all_fire": false,
+     "n_subsets": 60
+    },
+    "13": {
+     "fires_some": true,
+     "all_fire": true,
+     "n_subsets": 1
+    }
+   },
+   "free_face_need": true,
+   "frontier": 2,
+   "in_compiled_common": true,
+   "non_monotone": false
+  },
+  {
+   "uid": "KubeClientErrors#24",
+   "family": "prometheus",
+   "K": 14,
+   "rungs": {
+    "0": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 1
+    },
+    "1": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 14
+    },
+    "2": {
+     "fires_some": true,
+     "all_fire": false,
+     "n_subsets": 60
+    },
+    "14": {
+     "fires_some": true,
+     "all_fire": true,
+     "n_subsets": 1
+    }
+   },
+   "free_face_need": true,
+   "frontier": 2,
+   "in_compiled_common": true,
+   "non_monotone": false
+  },
+  {
+   "uid": "KubeAggregatedAPIErrors#25",
+   "family": "prometheus",
+   "K": 12,
+   "rungs": {
+    "0": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 1
+    },
+    "1": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 12
+    },
+    "2": {
+     "fires_some": true,
+     "all_fire": false,
+     "n_subsets": 60
+    },
+    "12": {
+     "fires_some": true,
+     "all_fire": true,
+     "n_subsets": 1
+    }
+   },
+   "free_face_need": true,
+   "frontier": 2,
+   "in_compiled_common": true,
+   "non_monotone": false
+  },
+  {
+   "uid": "KubeAggregatedAPIDown#26",
+   "family": "prometheus",
+   "K": 7,
+   "rungs": {
+    "0": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 1
+    },
+    "1": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 7
+    },
+    "2": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 21
+    },
+    "7": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 1
+    }
+   },
+   "free_face_need": false,
+   "frontier": null,
+   "in_compiled_common": true,
+   "non_monotone": false
+  },
+  {
+   "uid": "KubeAPIInstanceUnreachable#27",
+   "family": "prometheus",
+   "K": 2,
+   "rungs": {
+    "0": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 1
+    },
+    "1": {
+     "fires_some": true,
+     "all_fire": true,
+     "n_subsets": 2
+    },
+    "2": {
+     "fires_some": true,
+     "all_fire": true,
+     "n_subsets": 1
+    }
+   },
+   "free_face_need": true,
+   "frontier": 1,
+   "in_compiled_common": true,
+   "non_monotone": false
+  },
+  {
+   "uid": "KubeAPITerminatedRequests#28",
+   "family": "prometheus",
+   "K": 12,
+   "rungs": {
+    "0": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 1
+    },
+    "1": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 12
+    },
+    "2": {
+     "fires_some": true,
+     "all_fire": false,
+     "n_subsets": 60
+    },
+    "12": {
+     "fires_some": true,
+     "all_fire": true,
+     "n_subsets": 1
+    }
+   },
+   "free_face_need": true,
+   "frontier": 2,
+   "in_compiled_common": true,
+   "non_monotone": false
+  },
+  {
+   "uid": "KubeletPlegDurationHigh#29",
+   "family": "prometheus",
+   "K": 17,
+   "rungs": {
+    "0": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 1
+    },
+    "1": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 17
+    },
+    "2": {
+     "fires_some": true,
+     "all_fire": false,
+     "n_subsets": 60
+    },
+    "17": {
+     "fires_some": true,
+     "all_fire": true,
+     "n_subsets": 1
+    }
+   },
+   "free_face_need": true,
+   "frontier": 2,
+   "in_compiled_common": true,
+   "non_monotone": false
+  },
+  {
+   "uid": "KubeletClientCertificateExpiration#30",
+   "family": "prometheus",
+   "K": 7,
+   "rungs": {
+    "0": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 1
+    },
+    "1": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 7
+    },
+    "2": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 21
+    },
+    "7": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 1
+    }
+   },
+   "free_face_need": false,
+   "frontier": null,
+   "in_compiled_common": true,
+   "non_monotone": false
+  },
+  {
+   "uid": "KubeletClientCertificateExpiration#31",
+   "family": "prometheus",
+   "K": 8,
+   "rungs": {
+    "0": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 1
+    },
+    "1": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 8
+    },
+    "2": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 28
+    },
+    "8": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 1
+    }
+   },
+   "free_face_need": false,
+   "frontier": null,
+   "in_compiled_common": true,
+   "non_monotone": false
+  },
+  {
+   "uid": "KubeletServerCertificateExpiration#32",
+   "family": "prometheus",
+   "K": 7,
+   "rungs": {
+    "0": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 1
+    },
+    "1": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 7
+    },
+    "2": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 21
+    },
+    "7": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 1
+    }
+   },
+   "free_face_need": false,
+   "frontier": null,
+   "in_compiled_common": true,
+   "non_monotone": false
+  },
+  {
+   "uid": "KubeletServerCertificateExpiration#33",
+   "family": "prometheus",
+   "K": 8,
+   "rungs": {
+    "0": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 1
+    },
+    "1": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 8
+    },
+    "2": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 28
+    },
+    "8": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 1
+    }
+   },
+   "free_face_need": false,
+   "frontier": null,
+   "in_compiled_common": true,
+   "non_monotone": false
+  },
+  {
+   "uid": "KubeletClientCertificateRenewalErrors#34",
+   "family": "prometheus",
+   "K": 12,
+   "rungs": {
+    "0": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 1
+    },
+    "1": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 12
+    },
+    "2": {
+     "fires_some": true,
+     "all_fire": false,
+     "n_subsets": 60
+    },
+    "12": {
+     "fires_some": true,
+     "all_fire": true,
+     "n_subsets": 1
+    }
+   },
+   "free_face_need": true,
+   "frontier": 2,
+   "in_compiled_common": true,
+   "non_monotone": false
+  },
+  {
+   "uid": "KubeletServerCertificateRenewalErrors#35",
+   "family": "prometheus",
+   "K": 12,
+   "rungs": {
+    "0": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 1
+    },
+    "1": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 12
+    },
+    "2": {
+     "fires_some": true,
+     "all_fire": false,
+     "n_subsets": 60
+    },
+    "12": {
+     "fires_some": true,
+     "all_fire": true,
+     "n_subsets": 1
+    }
+   },
+   "free_face_need": true,
+   "frontier": 2,
+   "in_compiled_common": true,
+   "non_monotone": false
+  },
+  {
+   "uid": "KubeletInstanceUnreachable#36",
+   "family": "prometheus",
+   "K": 2,
+   "rungs": {
+    "0": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 1
+    },
+    "1": {
+     "fires_some": true,
+     "all_fire": true,
+     "n_subsets": 2
+    },
+    "2": {
+     "fires_some": true,
+     "all_fire": true,
+     "n_subsets": 1
+    }
+   },
+   "free_face_need": true,
+   "frontier": 1,
+   "in_compiled_common": true,
+   "non_monotone": false
+  },
+  {
+   "uid": "KubeSchedulerInstanceUnreachable#37",
+   "family": "prometheus",
+   "K": 2,
+   "rungs": {
+    "0": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 1
+    },
+    "1": {
+     "fires_some": true,
+     "all_fire": true,
+     "n_subsets": 2
+    },
+    "2": {
+     "fires_some": true,
+     "all_fire": true,
+     "n_subsets": 1
+    }
+   },
+   "free_face_need": true,
+   "frontier": 1,
+   "in_compiled_common": true,
+   "non_monotone": false
+  },
+  {
+   "uid": "KubeControllerManagerInstanceUnreachable#38",
+   "family": "prometheus",
+   "K": 2,
+   "rungs": {
+    "0": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 1
+    },
+    "1": {
+     "fires_some": true,
+     "all_fire": true,
+     "n_subsets": 2
+    },
+    "2": {
+     "fires_some": true,
+     "all_fire": true,
+     "n_subsets": 1
+    }
+   },
+   "free_face_need": true,
+   "frontier": 1,
+   "in_compiled_common": true,
+   "non_monotone": false
+  },
+  {
+   "uid": "NodeFilesystemAlmostOutOfSpace#39",
+   "family": "prometheus",
+   "K": 8,
+   "rungs": {
+    "0": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 1
+    },
+    "1": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 8
+    },
+    "2": {
+     "fires_some": true,
+     "all_fire": false,
+     "n_subsets": 28
+    },
+    "8": {
+     "fires_some": true,
+     "all_fire": true,
+     "n_subsets": 1
+    }
+   },
+   "free_face_need": true,
+   "frontier": 2,
+   "in_compiled_common": true,
+   "non_monotone": false
+  },
+  {
+   "uid": "NodeFilesystemAlmostOutOfSpace#40",
+   "family": "prometheus",
+   "K": 8,
+   "rungs": {
+    "0": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 1
+    },
+    "1": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 8
+    },
+    "2": {
+     "fires_some": true,
+     "all_fire": false,
+     "n_subsets": 28
+    },
+    "8": {
+     "fires_some": true,
+     "all_fire": true,
+     "n_subsets": 1
+    }
+   },
+   "free_face_need": true,
+   "frontier": 2,
+   "in_compiled_common": true,
+   "non_monotone": false
+  },
+  {
+   "uid": "NodeFilesystemAlmostOutOfFiles#41",
+   "family": "prometheus",
+   "K": 3,
+   "rungs": {
+    "0": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 1
+    },
+    "1": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 3
+    },
+    "2": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 3
+    },
+    "3": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 1
+    }
+   },
+   "free_face_need": false,
+   "frontier": null,
+   "in_compiled_common": true,
+   "non_monotone": false
+  },
+  {
+   "uid": "NodeFilesystemAlmostOutOfFiles#42",
+   "family": "prometheus",
+   "K": 3,
+   "rungs": {
+    "0": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 1
+    },
+    "1": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 3
+    },
+    "2": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 3
+    },
+    "3": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 1
+    }
+   },
+   "free_face_need": false,
+   "frontier": null,
+   "in_compiled_common": true,
+   "non_monotone": false
+  },
+  {
+   "uid": "NodeNetworkReceiveErrs#43",
+   "family": "prometheus",
+   "K": 7,
+   "rungs": {
+    "0": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 1
+    },
+    "1": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 7
+    },
+    "2": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 21
+    },
+    "7": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 1
+    }
+   },
+   "free_face_need": false,
+   "frontier": null,
+   "in_compiled_common": true,
+   "non_monotone": false
+  },
+  {
+   "uid": "NodeNetworkTransmitErrs#44",
+   "family": "prometheus",
+   "K": 7,
+   "rungs": {
+    "0": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 1
+    },
+    "1": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 7
+    },
+    "2": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 21
+    },
+    "7": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 1
+    }
+   },
+   "free_face_need": false,
+   "frontier": null,
+   "in_compiled_common": true,
+   "non_monotone": false
+  },
+  {
+   "uid": "NodeHighNumberConntrackEntriesUsed#45",
+   "family": "prometheus",
+   "K": 15,
+   "rungs": {
+    "0": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 1
+    },
+    "1": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 15
+    },
+    "2": {
+     "fires_some": true,
+     "all_fire": false,
+     "n_subsets": 60
+    },
+    "15": {
+     "fires_some": true,
+     "all_fire": true,
+     "n_subsets": 1
+    }
+   },
+   "free_face_need": true,
+   "frontier": 2,
+   "in_compiled_common": true,
+   "non_monotone": false
+  },
+  {
+   "uid": "NodeTextFileCollectorScrapeError#46",
+   "family": "prometheus",
+   "K": 6,
+   "rungs": {
+    "0": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 1
+    },
+    "1": {
+     "fires_some": true,
+     "all_fire": false,
+     "n_subsets": 6
+    },
+    "2": {
+     "fires_some": true,
+     "all_fire": false,
+     "n_subsets": 15
+    },
+    "6": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 1
+    }
+   },
+   "free_face_need": false,
+   "frontier": 1,
+   "in_compiled_common": true,
+   "non_monotone": true
+  },
+  {
+   "uid": "NodeClockNotSynchronising#47",
+   "family": "prometheus",
+   "K": 17,
+   "rungs": {
+    "0": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 1
+    },
+    "1": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 17
+    },
+    "2": {
+     "fires_some": true,
+     "all_fire": false,
+     "n_subsets": 60
+    },
+    "17": {
+     "fires_some": true,
+     "all_fire": true,
+     "n_subsets": 1
+    }
+   },
+   "free_face_need": true,
+   "frontier": 2,
+   "in_compiled_common": true,
+   "non_monotone": false
+  },
+  {
+   "uid": "NodeRAIDDiskFailure#48",
+   "family": "prometheus",
+   "K": 13,
+   "rungs": {
+    "0": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 1
+    },
+    "1": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 13
+    },
+    "2": {
+     "fires_some": true,
+     "all_fire": false,
+     "n_subsets": 60
+    },
+    "13": {
+     "fires_some": true,
+     "all_fire": true,
+     "n_subsets": 1
+    }
+   },
+   "free_face_need": true,
+   "frontier": 2,
+   "in_compiled_common": true,
+   "non_monotone": false
+  },
+  {
+   "uid": "NodeFileDescriptorLimit#49",
+   "family": "prometheus",
+   "K": 16,
+   "rungs": {
+    "0": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 1
+    },
+    "1": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 16
+    },
+    "2": {
+     "fires_some": true,
+     "all_fire": false,
+     "n_subsets": 60
+    },
+    "16": {
+     "fires_some": true,
+     "all_fire": true,
+     "n_subsets": 1
+    }
+   },
+   "free_face_need": true,
+   "frontier": 2,
+   "in_compiled_common": true,
+   "non_monotone": false
+  },
+  {
+   "uid": "NodeFileDescriptorLimit#50",
+   "family": "prometheus",
+   "K": 16,
+   "rungs": {
+    "0": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 1
+    },
+    "1": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 16
+    },
+    "2": {
+     "fires_some": true,
+     "all_fire": false,
+     "n_subsets": 60
+    },
+    "16": {
+     "fires_some": true,
+     "all_fire": true,
+     "n_subsets": 1
+    }
+   },
+   "free_face_need": true,
+   "frontier": 2,
+   "in_compiled_common": true,
+   "non_monotone": false
+  },
+  {
+   "uid": "NodeCPUHighUsage#51",
+   "family": "prometheus",
+   "K": 16,
+   "rungs": {
+    "0": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 1
+    },
+    "1": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 16
+    },
+    "2": {
+     "fires_some": true,
+     "all_fire": false,
+     "n_subsets": 60
+    },
+    "16": {
+     "fires_some": true,
+     "all_fire": true,
+     "n_subsets": 1
+    }
+   },
+   "free_face_need": true,
+   "frontier": 2,
+   "in_compiled_common": true,
+   "non_monotone": false
+  },
+  {
+   "uid": "NodeSystemSaturation#52",
+   "family": "prometheus",
+   "K": 16,
+   "rungs": {
+    "0": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 1
+    },
+    "1": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 16
+    },
+    "2": {
+     "fires_some": true,
+     "all_fire": false,
+     "n_subsets": 60
+    },
+    "16": {
+     "fires_some": true,
+     "all_fire": true,
+     "n_subsets": 1
+    }
+   },
+   "free_face_need": true,
+   "frontier": 2,
+   "in_compiled_common": true,
+   "non_monotone": false
+  },
+  {
+   "uid": "NodeMemoryMajorPagesFaults#53",
+   "family": "prometheus",
+   "K": 15,
+   "rungs": {
+    "0": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 1
+    },
+    "1": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 15
+    },
+    "2": {
+     "fires_some": true,
+     "all_fire": false,
+     "n_subsets": 60
+    },
+    "15": {
+     "fires_some": true,
+     "all_fire": true,
+     "n_subsets": 1
+    }
+   },
+   "free_face_need": true,
+   "frontier": 2,
+   "in_compiled_common": true,
+   "non_monotone": false
+  },
+  {
+   "uid": "NodeMemoryHighUtilization#54",
+   "family": "prometheus",
+   "K": 16,
+   "rungs": {
+    "0": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 1
+    },
+    "1": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 16
+    },
+    "2": {
+     "fires_some": true,
+     "all_fire": false,
+     "n_subsets": 60
+    },
+    "16": {
+     "fires_some": true,
+     "all_fire": true,
+     "n_subsets": 1
+    }
+   },
+   "free_face_need": true,
+   "frontier": 2,
+   "in_compiled_common": true,
+   "non_monotone": false
+  },
+  {
+   "uid": "NodeDiskIOSaturation#55",
+   "family": "prometheus",
+   "K": 16,
+   "rungs": {
+    "0": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 1
+    },
+    "1": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 16
+    },
+    "2": {
+     "fires_some": true,
+     "all_fire": false,
+     "n_subsets": 60
+    },
+    "16": {
+     "fires_some": true,
+     "all_fire": true,
+     "n_subsets": 1
+    }
+   },
+   "free_face_need": true,
+   "frontier": 2,
+   "in_compiled_common": true,
+   "non_monotone": false
+  },
+  {
+   "uid": "NodeSystemdServiceFailed#56",
+   "family": "prometheus",
+   "K": 6,
+   "rungs": {
+    "0": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 1
+    },
+    "1": {
+     "fires_some": true,
+     "all_fire": false,
+     "n_subsets": 6
+    },
+    "2": {
+     "fires_some": true,
+     "all_fire": false,
+     "n_subsets": 15
+    },
+    "6": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 1
+    }
+   },
+   "free_face_need": false,
+   "frontier": 1,
+   "in_compiled_common": true,
+   "non_monotone": true
+  },
+  {
+   "uid": "NodeSystemdServiceCrashlooping#57",
+   "family": "prometheus",
+   "K": 16,
+   "rungs": {
+    "0": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 1
+    },
+    "1": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 16
+    },
+    "2": {
+     "fires_some": true,
+     "all_fire": false,
+     "n_subsets": 60
+    },
+    "16": {
+     "fires_some": true,
+     "all_fire": true,
+     "n_subsets": 1
+    }
+   },
+   "free_face_need": true,
+   "frontier": 2,
+   "in_compiled_common": true,
+   "non_monotone": false
+  },
+  {
+   "uid": "NodeBondingDegraded#58",
+   "family": "prometheus",
+   "K": 5,
+   "rungs": {
+    "0": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 1
+    },
+    "1": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 5
+    },
+    "2": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 10
+    },
+    "5": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 1
+    }
+   },
+   "free_face_need": false,
+   "frontier": null,
+   "in_compiled_common": true,
+   "non_monotone": false
+  },
+  {
+   "uid": "PrometheusBadConfig#59",
+   "family": "prometheus",
+   "K": 2,
+   "rungs": {
+    "0": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 1
+    },
+    "1": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 2
+    },
+    "2": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 1
+    }
+   },
+   "free_face_need": false,
+   "frontier": null,
+   "in_compiled_common": true,
+   "non_monotone": false
+  },
+  {
+   "uid": "PrometheusSDRefreshFailure#60",
+   "family": "prometheus",
+   "K": 13,
+   "rungs": {
+    "0": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 1
+    },
+    "1": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 13
+    },
+    "2": {
+     "fires_some": true,
+     "all_fire": false,
+     "n_subsets": 60
+    },
+    "13": {
+     "fires_some": true,
+     "all_fire": true,
+     "n_subsets": 1
+    }
+   },
+   "free_face_need": true,
+   "frontier": 2,
+   "in_compiled_common": true,
+   "non_monotone": false
+  },
+  {
+   "uid": "PrometheusKubernetesListWatchFailures#61",
+   "family": "prometheus",
+   "K": 13,
+   "rungs": {
+    "0": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 1
+    },
+    "1": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 13
+    },
+    "2": {
+     "fires_some": true,
+     "all_fire": false,
+     "n_subsets": 60
+    },
+    "13": {
+     "fires_some": true,
+     "all_fire": true,
+     "n_subsets": 1
+    }
+   },
+   "free_face_need": true,
+   "frontier": 2,
+   "in_compiled_common": true,
+   "non_monotone": false
+  },
+  {
+   "uid": "PrometheusErrorSendingAlertsToSomeAlertmanagers#62",
+   "family": "prometheus",
+   "K": 16,
+   "rungs": {
+    "0": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 1
+    },
+    "1": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 16
+    },
+    "2": {
+     "fires_some": true,
+     "all_fire": false,
+     "n_subsets": 60
+    },
+    "16": {
+     "fires_some": true,
+     "all_fire": true,
+     "n_subsets": 1
+    }
+   },
+   "free_face_need": true,
+   "frontier": 2,
+   "in_compiled_common": true,
+   "non_monotone": false
+  },
+  {
+   "uid": "PrometheusNotConnectedToAlertmanagers#63",
+   "family": "prometheus",
+   "K": 8,
+   "rungs": {
+    "0": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 1
+    },
+    "1": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 8
+    },
+    "2": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 28
+    },
+    "8": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 1
+    }
+   },
+   "free_face_need": false,
+   "frontier": null,
+   "in_compiled_common": true,
+   "non_monotone": false
+  },
+  {
+   "uid": "PrometheusTSDBReloadsFailing#64",
+   "family": "prometheus",
+   "K": 6,
+   "rungs": {
+    "0": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 1
+    },
+    "1": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 6
+    },
+    "2": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 15
+    },
+    "6": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 1
+    }
+   },
+   "free_face_need": false,
+   "frontier": null,
+   "in_compiled_common": true,
+   "non_monotone": false
+  },
+  {
+   "uid": "PrometheusTSDBCompactionsFailing#65",
+   "family": "prometheus",
+   "K": 6,
+   "rungs": {
+    "0": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 1
+    },
+    "1": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 6
+    },
+    "2": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 15
+    },
+    "6": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 1
+    }
+   },
+   "free_face_need": false,
+   "frontier": null,
+   "in_compiled_common": true,
+   "non_monotone": false
+  },
+  {
+   "uid": "PrometheusDuplicateTimestamps#66",
+   "family": "prometheus",
+   "K": 13,
+   "rungs": {
+    "0": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 1
+    },
+    "1": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 13
+    },
+    "2": {
+     "fires_some": true,
+     "all_fire": false,
+     "n_subsets": 60
+    },
+    "13": {
+     "fires_some": true,
+     "all_fire": true,
+     "n_subsets": 1
+    }
+   },
+   "free_face_need": true,
+   "frontier": 2,
+   "in_compiled_common": true,
+   "non_monotone": false
+  },
+  {
+   "uid": "PrometheusOutOfOrderTimestamps#67",
+   "family": "prometheus",
+   "K": 13,
+   "rungs": {
+    "0": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 1
+    },
+    "1": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 13
+    },
+    "2": {
+     "fires_some": true,
+     "all_fire": false,
+     "n_subsets": 60
+    },
+    "13": {
+     "fires_some": true,
+     "all_fire": true,
+     "n_subsets": 1
+    }
+   },
+   "free_face_need": true,
+   "frontier": 2,
+   "in_compiled_common": true,
+   "non_monotone": false
+  },
+  {
+   "uid": "PrometheusRemoteStorageFailures#68",
+   "family": "prometheus",
+   "K": 16,
+   "rungs": {
+    "0": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 1
+    },
+    "1": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 16
+    },
+    "2": {
+     "fires_some": true,
+     "all_fire": false,
+     "n_subsets": 60
+    },
+    "16": {
+     "fires_some": true,
+     "all_fire": true,
+     "n_subsets": 1
+    }
+   },
+   "free_face_need": true,
+   "frontier": 2,
+   "in_compiled_common": true,
+   "non_monotone": false
+  },
+  {
+   "uid": "PrometheusRemoteWriteBehind#69",
+   "family": "prometheus",
+   "K": 15,
+   "rungs": {
+    "0": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 1
+    },
+    "1": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 15
+    },
+    "2": {
+     "fires_some": true,
+     "all_fire": false,
+     "n_subsets": 60
+    },
+    "15": {
+     "fires_some": true,
+     "all_fire": true,
+     "n_subsets": 1
+    }
+   },
+   "free_face_need": true,
+   "frontier": 2,
+   "in_compiled_common": true,
+   "non_monotone": false
+  },
+  {
+   "uid": "PrometheusRuleFailures#70",
+   "family": "prometheus",
+   "K": 13,
+   "rungs": {
+    "0": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 1
+    },
+    "1": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 13
+    },
+    "2": {
+     "fires_some": true,
+     "all_fire": false,
+     "n_subsets": 60
+    },
+    "13": {
+     "fires_some": true,
+     "all_fire": true,
+     "n_subsets": 1
+    }
+   },
+   "free_face_need": true,
+   "frontier": 2,
+   "in_compiled_common": true,
+   "non_monotone": false
+  },
+  {
+   "uid": "PrometheusMissingRuleEvaluations#71",
+   "family": "prometheus",
+   "K": 13,
+   "rungs": {
+    "0": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 1
+    },
+    "1": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 13
+    },
+    "2": {
+     "fires_some": true,
+     "all_fire": false,
+     "n_subsets": 60
+    },
+    "13": {
+     "fires_some": true,
+     "all_fire": true,
+     "n_subsets": 1
+    }
+   },
+   "free_face_need": true,
+   "frontier": 2,
+   "in_compiled_common": true,
+   "non_monotone": false
+  },
+  {
+   "uid": "PrometheusTargetLimitHit#72",
+   "family": "prometheus",
+   "K": 13,
+   "rungs": {
+    "0": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 1
+    },
+    "1": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 13
+    },
+    "2": {
+     "fires_some": true,
+     "all_fire": false,
+     "n_subsets": 60
+    },
+    "13": {
+     "fires_some": true,
+     "all_fire": true,
+     "n_subsets": 1
+    }
+   },
+   "free_face_need": true,
+   "frontier": 2,
+   "in_compiled_common": true,
+   "non_monotone": false
+  },
+  {
+   "uid": "PrometheusLabelLimitHit#73",
+   "family": "prometheus",
+   "K": 13,
+   "rungs": {
+    "0": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 1
+    },
+    "1": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 13
+    },
+    "2": {
+     "fires_some": true,
+     "all_fire": false,
+     "n_subsets": 60
+    },
+    "13": {
+     "fires_some": true,
+     "all_fire": true,
+     "n_subsets": 1
+    }
+   },
+   "free_face_need": true,
+   "frontier": 2,
+   "in_compiled_common": true,
+   "non_monotone": false
+  },
+  {
+   "uid": "PrometheusScrapeBodySizeLimitHit#74",
+   "family": "prometheus",
+   "K": 13,
+   "rungs": {
+    "0": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 1
+    },
+    "1": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 13
+    },
+    "2": {
+     "fires_some": true,
+     "all_fire": false,
+     "n_subsets": 60
+    },
+    "13": {
+     "fires_some": true,
+     "all_fire": true,
+     "n_subsets": 1
+    }
+   },
+   "free_face_need": true,
+   "frontier": 2,
+   "in_compiled_common": true,
+   "non_monotone": false
+  },
+  {
+   "uid": "PrometheusScrapeSampleLimitHit#75",
+   "family": "prometheus",
+   "K": 13,
+   "rungs": {
+    "0": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 1
+    },
+    "1": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 13
+    },
+    "2": {
+     "fires_some": true,
+     "all_fire": false,
+     "n_subsets": 60
+    },
+    "13": {
+     "fires_some": true,
+     "all_fire": true,
+     "n_subsets": 1
+    }
+   },
+   "free_face_need": true,
+   "frontier": 2,
+   "in_compiled_common": true,
+   "non_monotone": false
+  },
+  {
+   "uid": "PrometheusTargetSyncFailure#76",
+   "family": "prometheus",
+   "K": 12,
+   "rungs": {
+    "0": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 1
+    },
+    "1": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 12
+    },
+    "2": {
+     "fires_some": true,
+     "all_fire": false,
+     "n_subsets": 60
+    },
+    "12": {
+     "fires_some": true,
+     "all_fire": true,
+     "n_subsets": 1
+    }
+   },
+   "free_face_need": true,
+   "frontier": 2,
+   "in_compiled_common": true,
+   "non_monotone": false
+  },
+  {
+   "uid": "PrometheusHighQueryLoad#77",
+   "family": "prometheus",
+   "K": 17,
+   "rungs": {
+    "0": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 1
+    },
+    "1": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 17
+    },
+    "2": {
+     "fires_some": true,
+     "all_fire": false,
+     "n_subsets": 60
+    },
+    "17": {
+     "fires_some": true,
+     "all_fire": true,
+     "n_subsets": 1
+    }
+   },
+   "free_face_need": true,
+   "frontier": 2,
+   "in_compiled_common": true,
+   "non_monotone": false
+  },
+  {
+   "uid": "PrometheusErrorSendingAlertsToAnyAlertmanager#78",
+   "family": "prometheus",
+   "K": 15,
+   "rungs": {
+    "0": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 1
+    },
+    "1": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 15
+    },
+    "2": {
+     "fires_some": true,
+     "all_fire": false,
+     "n_subsets": 60
+    },
+    "15": {
+     "fires_some": true,
+     "all_fire": true,
+     "n_subsets": 1
+    }
+   },
+   "free_face_need": true,
+   "frontier": 2,
+   "in_compiled_common": true,
+   "non_monotone": false
+  },
+  {
+   "uid": "PrometheusOperatorListErrors#79",
+   "family": "prometheus",
+   "K": 14,
+   "rungs": {
+    "0": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 1
+    },
+    "1": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 14
+    },
+    "2": {
+     "fires_some": true,
+     "all_fire": false,
+     "n_subsets": 60
+    },
+    "14": {
+     "fires_some": true,
+     "all_fire": true,
+     "n_subsets": 1
+    }
+   },
+   "free_face_need": true,
+   "frontier": 2,
+   "in_compiled_common": true,
+   "non_monotone": false
+  },
+  {
+   "uid": "PrometheusOperatorWatchErrors#80",
+   "family": "prometheus",
+   "K": 14,
+   "rungs": {
+    "0": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 1
+    },
+    "1": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 14
+    },
+    "2": {
+     "fires_some": true,
+     "all_fire": false,
+     "n_subsets": 60
+    },
+    "14": {
+     "fires_some": true,
+     "all_fire": true,
+     "n_subsets": 1
+    }
+   },
+   "free_face_need": true,
+   "frontier": 2,
+   "in_compiled_common": true,
+   "non_monotone": false
+  },
+  {
+   "uid": "PrometheusOperatorSyncFailed#81",
+   "family": "prometheus",
+   "K": 13,
+   "rungs": {
+    "0": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 1
+    },
+    "1": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 13
+    },
+    "2": {
+     "fires_some": true,
+     "all_fire": false,
+     "n_subsets": 60
+    },
+    "13": {
+     "fires_some": true,
+     "all_fire": true,
+     "n_subsets": 1
+    }
+   },
+   "free_face_need": true,
+   "frontier": 2,
+   "in_compiled_common": true,
+   "non_monotone": false
+  },
+  {
+   "uid": "PrometheusOperatorReconcileErrors#82",
+   "family": "prometheus",
+   "K": 13,
+   "rungs": {
+    "0": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 1
+    },
+    "1": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 13
+    },
+    "2": {
+     "fires_some": true,
+     "all_fire": false,
+     "n_subsets": 60
+    },
+    "13": {
+     "fires_some": true,
+     "all_fire": true,
+     "n_subsets": 1
+    }
+   },
+   "free_face_need": true,
+   "frontier": 2,
+   "in_compiled_common": true,
+   "non_monotone": false
+  },
+  {
+   "uid": "PrometheusOperatorStatusUpdateErrors#83",
+   "family": "prometheus",
+   "K": 13,
+   "rungs": {
+    "0": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 1
+    },
+    "1": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 13
+    },
+    "2": {
+     "fires_some": true,
+     "all_fire": false,
+     "n_subsets": 60
+    },
+    "13": {
+     "fires_some": true,
+     "all_fire": true,
+     "n_subsets": 1
+    }
+   },
+   "free_face_need": true,
+   "frontier": 2,
+   "in_compiled_common": true,
+   "non_monotone": false
+  },
+  {
+   "uid": "PrometheusOperatorNodeLookupErrors#84",
+   "family": "prometheus",
+   "K": 14,
+   "rungs": {
+    "0": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 1
+    },
+    "1": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 14
+    },
+    "2": {
+     "fires_some": true,
+     "all_fire": false,
+     "n_subsets": 60
+    },
+    "14": {
+     "fires_some": true,
+     "all_fire": true,
+     "n_subsets": 1
+    }
+   },
+   "free_face_need": true,
+   "frontier": 2,
+   "in_compiled_common": true,
+   "non_monotone": false
+  },
+  {
+   "uid": "PrometheusOperatorNotReady#85",
+   "family": "prometheus",
+   "K": 2,
+   "rungs": {
+    "0": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 1
+    },
+    "1": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 2
+    },
+    "2": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 1
+    }
+   },
+   "free_face_need": false,
+   "frontier": null,
+   "in_compiled_common": true,
+   "non_monotone": false
+  },
+  {
+   "uid": "PrometheusOperatorRejectedResources#86",
+   "family": "prometheus",
+   "K": 14,
+   "rungs": {
+    "0": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 1
+    },
+    "1": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 14
+    },
+    "2": {
+     "fires_some": true,
+     "all_fire": false,
+     "n_subsets": 60
+    },
+    "14": {
+     "fires_some": true,
+     "all_fire": true,
+     "n_subsets": 1
+    }
+   },
+   "free_face_need": true,
+   "frontier": 2,
+   "in_compiled_common": true,
+   "non_monotone": false
+  },
+  {
+   "uid": "ConfigReloaderSidecarErrors#87",
+   "family": "prometheus",
+   "K": 1,
+   "rungs": {
+    "0": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 1
+    },
+    "1": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 1
+    }
+   },
+   "free_face_need": false,
+   "frontier": null,
+   "in_compiled_common": true,
+   "non_monotone": false
+  },
+  {
+   "uid": "application-field-validation#0",
+   "family": "kyverno",
+   "K": 5,
+   "rungs": {
+    "0": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 1
+    },
+    "1": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 5
+    },
+    "2": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 10
+    },
+    "5": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 1
+    }
+   },
+   "free_face_need": false,
+   "frontier": null,
+   "in_compiled_common": false,
+   "non_monotone": false
+  },
+  {
+   "uid": "application-field-validation#1",
+   "family": "kyverno",
+   "K": 5,
+   "rungs": {
+    "0": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 1
+    },
+    "1": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 5
+    },
+    "2": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 10
+    },
+    "5": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 1
+    }
+   },
+   "free_face_need": false,
+   "frontier": null,
+   "in_compiled_common": false,
+   "non_monotone": false
+  },
+  {
+   "uid": "application-prevent-default-project#2",
+   "family": "kyverno",
+   "K": 5,
+   "rungs": {
+    "0": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 1
+    },
+    "1": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 5
+    },
+    "2": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 10
+    },
+    "5": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 1
+    }
+   },
+   "free_face_need": false,
+   "frontier": null,
+   "in_compiled_common": false,
+   "non_monotone": false
+  },
+  {
+   "uid": "applicationset-name-matches-project#3",
+   "family": "kyverno",
+   "K": 5,
+   "rungs": {
+    "0": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 1
+    },
+    "1": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 5
+    },
+    "2": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 10
+    },
+    "5": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 1
+    }
+   },
+   "free_face_need": false,
+   "frontier": null,
+   "in_compiled_common": false,
+   "non_monotone": false
+  },
+  {
+   "uid": "disallow-container-sock-mounts#4",
+   "family": "kyverno",
+   "K": 5,
+   "rungs": {
+    "0": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 1
+    },
+    "1": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 5
+    },
+    "2": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 10
+    },
+    "5": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 1
+    }
+   },
+   "free_face_need": false,
+   "frontier": null,
+   "in_compiled_common": false,
+   "non_monotone": false
+  },
+  {
+   "uid": "disallow-container-sock-mounts#5",
+   "family": "kyverno",
+   "K": 5,
+   "rungs": {
+    "0": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 1
+    },
+    "1": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 5
+    },
+    "2": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 10
+    },
+    "5": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 1
+    }
+   },
+   "free_face_need": false,
+   "frontier": null,
+   "in_compiled_common": false,
+   "non_monotone": false
+  },
+  {
+   "uid": "disallow-container-sock-mounts#6",
+   "family": "kyverno",
+   "K": 5,
+   "rungs": {
+    "0": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 1
+    },
+    "1": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 5
+    },
+    "2": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 10
+    },
+    "5": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 1
+    }
+   },
+   "free_face_need": false,
+   "frontier": null,
+   "in_compiled_common": false,
+   "non_monotone": false
+  },
+  {
+   "uid": "disallow-container-sock-mounts#7",
+   "family": "kyverno",
+   "K": 5,
+   "rungs": {
+    "0": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 1
+    },
+    "1": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 5
+    },
+    "2": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 10
+    },
+    "5": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 1
+    }
+   },
+   "free_face_need": false,
+   "frontier": null,
+   "in_compiled_common": false,
+   "non_monotone": false
+  },
+  {
+   "uid": "disallow-default-namespace#8",
+   "family": "kyverno",
+   "K": 5,
+   "rungs": {
+    "0": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 1
+    },
+    "1": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 5
+    },
+    "2": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 10
+    },
+    "5": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 1
+    }
+   },
+   "free_face_need": false,
+   "frontier": null,
+   "in_compiled_common": false,
+   "non_monotone": false
+  },
+  {
+   "uid": "disallow-default-namespace#9",
+   "family": "kyverno",
+   "K": 4,
+   "rungs": {
+    "0": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 1
+    },
+    "1": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 4
+    },
+    "2": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 6
+    },
+    "4": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 1
+    }
+   },
+   "free_face_need": false,
+   "frontier": null,
+   "in_compiled_common": false,
+   "non_monotone": false
+  },
+  {
+   "uid": "require-labels#10",
+   "family": "kyverno",
+   "K": 6,
+   "rungs": {
+    "0": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 1
+    },
+    "1": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 6
+    },
+    "2": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 15
+    },
+    "6": {
+     "fires_some": true,
+     "all_fire": true,
+     "n_subsets": 1
+    }
+   },
+   "free_face_need": true,
+   "frontier": 6,
+   "in_compiled_common": false,
+   "non_monotone": false
+  },
+  {
+   "uid": "require-requests-limits#11",
+   "family": "kyverno",
+   "K": 7,
+   "rungs": {
+    "0": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 1
+    },
+    "1": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 7
+    },
+    "2": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 21
+    },
+    "7": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 1
+    }
+   },
+   "free_face_need": false,
+   "frontier": null,
+   "in_compiled_common": false,
+   "non_monotone": false
+  },
+  {
+   "uid": "require-ro-rootfs#12",
+   "family": "kyverno",
+   "K": 5,
+   "rungs": {
+    "0": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 1
+    },
+    "1": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 5
+    },
+    "2": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 10
+    },
+    "5": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 1
+    }
+   },
+   "free_face_need": false,
+   "frontier": null,
+   "in_compiled_common": false,
+   "non_monotone": false
+  },
+  {
+   "uid": "restrict-image-registries#13",
+   "family": "kyverno",
+   "K": 7,
+   "rungs": {
+    "0": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 1
+    },
+    "1": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 7
+    },
+    "2": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 21
+    },
+    "7": {
+     "fires_some": true,
+     "all_fire": true,
+     "n_subsets": 1
+    }
+   },
+   "free_face_need": true,
+   "frontier": 7,
+   "in_compiled_common": false,
+   "non_monotone": false
+  },
+  {
+   "uid": "restrict-nodeport#14",
+   "family": "kyverno",
+   "K": 5,
+   "rungs": {
+    "0": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 1
+    },
+    "1": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 5
+    },
+    "2": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 10
+    },
+    "5": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 1
+    }
+   },
+   "free_face_need": false,
+   "frontier": null,
+   "in_compiled_common": false,
+   "non_monotone": false
+  },
+  {
+   "uid": "cert-manager-restrict-issuer#15",
+   "family": "kyverno",
+   "K": 5,
+   "rungs": {
+    "0": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 1
+    },
+    "1": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 5
+    },
+    "2": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 10
+    },
+    "5": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 1
+    }
+   },
+   "free_face_need": false,
+   "frontier": null,
+   "in_compiled_common": false,
+   "non_monotone": false
+  },
+  {
+   "uid": "verify-flux-sources#16",
+   "family": "kyverno",
+   "K": 6,
+   "rungs": {
+    "0": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 1
+    },
+    "1": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 6
+    },
+    "2": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 15
+    },
+    "6": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 1
+    }
+   },
+   "free_face_need": false,
+   "frontier": null,
+   "in_compiled_common": false,
+   "non_monotone": false
+  },
+  {
+   "uid": "service-mesh-require-run-as-nonroot#17",
+   "family": "kyverno",
+   "K": 5,
+   "rungs": {
+    "0": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 1
+    },
+    "1": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 5
+    },
+    "2": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 10
+    },
+    "5": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 1
+    }
+   },
+   "free_face_need": false,
+   "frontier": null,
+   "in_compiled_common": false,
+   "non_monotone": false
+  },
+  {
+   "uid": "require-kubecost-labels#18",
+   "family": "kyverno",
+   "K": 7,
+   "rungs": {
+    "0": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 1
+    },
+    "1": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 7
+    },
+    "2": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 21
+    },
+    "7": {
+     "fires_some": true,
+     "all_fire": true,
+     "n_subsets": 1
+    }
+   },
+   "free_face_need": true,
+   "frontier": 7,
+   "in_compiled_common": false,
+   "non_monotone": false
+  },
+  {
+   "uid": "block-ephemeral-containers#19",
+   "family": "kyverno",
+   "K": 5,
+   "rungs": {
+    "0": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 1
+    },
+    "1": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 5
+    },
+    "2": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 10
+    },
+    "5": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 1
+    }
+   },
+   "free_face_need": false,
+   "frontier": null,
+   "in_compiled_common": false,
+   "non_monotone": false
+  },
+  {
+   "uid": "check-env-vars#20",
+   "family": "kyverno",
+   "K": 5,
+   "rungs": {
+    "0": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 1
+    },
+    "1": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 5
+    },
+    "2": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 10
+    },
+    "5": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 1
+    }
+   },
+   "free_face_need": false,
+   "frontier": null,
+   "in_compiled_common": false,
+   "non_monotone": false
+  },
+  {
+   "uid": "check-ingress-nginx-controller-version-and-annotation-policy#21",
+   "family": "kyverno",
+   "K": 5,
+   "rungs": {
+    "0": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 1
+    },
+    "1": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 5
+    },
+    "2": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 10
+    },
+    "5": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 1
+    }
+   },
+   "free_face_need": false,
+   "frontier": null,
+   "in_compiled_common": false,
+   "non_monotone": false
+  },
+  {
+   "uid": "check-sa#22",
+   "family": "kyverno",
+   "K": 5,
+   "rungs": {
+    "0": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 1
+    },
+    "1": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 5
+    },
+    "2": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 10
+    },
+    "5": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 1
+    }
+   },
+   "free_face_need": false,
+   "frontier": null,
+   "in_compiled_common": false,
+   "non_monotone": false
+  },
+  {
+   "uid": "check-serviceaccount-secrets#23",
+   "family": "kyverno",
+   "K": 5,
+   "rungs": {
+    "0": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 1
+    },
+    "1": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 5
+    },
+    "2": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 10
+    },
+    "5": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 1
+    }
+   },
+   "free_face_need": false,
+   "frontier": null,
+   "in_compiled_common": false,
+   "non_monotone": false
+  },
+  {
+   "uid": "deny-secret-service-account-token-type#24",
+   "family": "kyverno",
+   "K": 5,
+   "rungs": {
+    "0": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 1
+    },
+    "1": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 5
+    },
+    "2": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 10
+    },
+    "5": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 1
+    }
+   },
+   "free_face_need": false,
+   "frontier": null,
+   "in_compiled_common": false,
+   "non_monotone": false
+  },
+  {
+   "uid": "deployment-has-multiple-replicas#25",
+   "family": "kyverno",
+   "K": 4,
+   "rungs": {
+    "0": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 1
+    },
+    "1": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 4
+    },
+    "2": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 6
+    },
+    "4": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 1
+    }
+   },
+   "free_face_need": false,
+   "frontier": null,
+   "in_compiled_common": false,
+   "non_monotone": false
+  },
+  {
+   "uid": "docker-socket-check#26",
+   "family": "kyverno",
+   "K": 5,
+   "rungs": {
+    "0": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 1
+    },
+    "1": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 5
+    },
+    "2": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 10
+    },
+    "5": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 1
+    }
+   },
+   "free_face_need": false,
+   "frontier": null,
+   "in_compiled_common": false,
+   "non_monotone": false
+  },
+  {
+   "uid": "exclude-namespaces-example#27",
+   "family": "kyverno",
+   "K": 6,
+   "rungs": {
+    "0": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 1
+    },
+    "1": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 6
+    },
+    "2": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 15
+    },
+    "6": {
+     "fires_some": true,
+     "all_fire": true,
+     "n_subsets": 1
+    }
+   },
+   "free_face_need": true,
+   "frontier": 6,
+   "in_compiled_common": false,
+   "non_monotone": false
+  },
+  {
+   "uid": "forbid-cpu-limits#28",
+   "family": "kyverno",
+   "K": 7,
+   "rungs": {
+    "0": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 1
+    },
+    "1": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 7
+    },
+    "2": {
+     "fires_some": true,
+     "all_fire": false,
+     "n_subsets": 21
+    },
+    "7": {
+     "fires_some": true,
+     "all_fire": true,
+     "n_subsets": 1
+    }
+   },
+   "free_face_need": true,
+   "frontier": 2,
+   "in_compiled_common": false,
+   "non_monotone": false
+  },
+  {
+   "uid": "limit-hostpath-type-pv#29",
+   "family": "kyverno",
+   "K": 5,
+   "rungs": {
+    "0": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 1
+    },
+    "1": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 5
+    },
+    "2": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 10
+    },
+    "5": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 1
+    }
+   },
+   "free_face_need": false,
+   "frontier": null,
+   "in_compiled_common": false,
+   "non_monotone": false
+  },
+  {
+   "uid": "protect-node-label-foo#30",
+   "family": "kyverno",
+   "K": 6,
+   "rungs": {
+    "0": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 1
+    },
+    "1": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 6
+    },
+    "2": {
+     "fires_some": true,
+     "all_fire": false,
+     "n_subsets": 15
+    },
+    "6": {
+     "fires_some": true,
+     "all_fire": true,
+     "n_subsets": 1
+    }
+   },
+   "free_face_need": true,
+   "frontier": 2,
+   "in_compiled_common": false,
+   "non_monotone": false
+  },
+  {
+   "uid": "require-cpu-limits#31",
+   "family": "kyverno",
+   "K": 7,
+   "rungs": {
+    "0": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 1
+    },
+    "1": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 7
+    },
+    "2": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 21
+    },
+    "7": {
+     "fires_some": true,
+     "all_fire": true,
+     "n_subsets": 1
+    }
+   },
+   "free_face_need": true,
+   "frontier": 7,
+   "in_compiled_common": false,
+   "non_monotone": false
+  },
+  {
+   "uid": "time-bound-policy#32",
+   "family": "kyverno",
+   "K": 6,
+   "rungs": {
+    "0": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 1
+    },
+    "1": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 6
+    },
+    "2": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 15
+    },
+    "6": {
+     "fires_some": true,
+     "all_fire": true,
+     "n_subsets": 1
+    }
+   },
+   "free_face_need": true,
+   "frontier": 6,
+   "in_compiled_common": false,
+   "non_monotone": false
+  },
+  {
+   "uid": "disallow-host-namespaces#33",
+   "family": "kyverno",
+   "K": 5,
+   "rungs": {
+    "0": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 1
+    },
+    "1": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 5
+    },
+    "2": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 10
+    },
+    "5": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 1
+    }
+   },
+   "free_face_need": false,
+   "frontier": null,
+   "in_compiled_common": false,
+   "non_monotone": false
+  },
+  {
+   "uid": "disallow-host-path#34",
+   "family": "kyverno",
+   "K": 5,
+   "rungs": {
+    "0": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 1
+    },
+    "1": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 5
+    },
+    "2": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 10
+    },
+    "5": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 1
+    }
+   },
+   "free_face_need": false,
+   "frontier": null,
+   "in_compiled_common": false,
+   "non_monotone": false
+  },
+  {
+   "uid": "disallow-host-ports#35",
+   "family": "kyverno",
+   "K": 5,
+   "rungs": {
+    "0": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 1
+    },
+    "1": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 5
+    },
+    "2": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 10
+    },
+    "5": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 1
+    }
+   },
+   "free_face_need": false,
+   "frontier": null,
+   "in_compiled_common": false,
+   "non_monotone": false
+  },
+  {
+   "uid": "disallow-privilege-escalation#36",
+   "family": "kyverno",
+   "K": 5,
+   "rungs": {
+    "0": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 1
+    },
+    "1": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 5
+    },
+    "2": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 10
+    },
+    "5": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 1
+    }
+   },
+   "free_face_need": false,
+   "frontier": null,
+   "in_compiled_common": false,
+   "non_monotone": false
+  },
+  {
+   "uid": "disallow-privileged-containers#37",
+   "family": "kyverno",
+   "K": 5,
+   "rungs": {
+    "0": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 1
+    },
+    "1": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 5
+    },
+    "2": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 10
+    },
+    "5": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 1
+    }
+   },
+   "free_face_need": false,
+   "frontier": null,
+   "in_compiled_common": false,
+   "non_monotone": false
+  },
+  {
+   "uid": "require-run-as-nonroot#38",
+   "family": "kyverno",
+   "K": 5,
+   "rungs": {
+    "0": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 1
+    },
+    "1": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 5
+    },
+    "2": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 10
+    },
+    "5": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 1
+    }
+   },
+   "free_face_need": false,
+   "frontier": null,
+   "in_compiled_common": false,
+   "non_monotone": false
+  },
+  {
+   "uid": "restrict-seccomp#39",
+   "family": "kyverno",
+   "K": 5,
+   "rungs": {
+    "0": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 1
+    },
+    "1": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 5
+    },
+    "2": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 10
+    },
+    "5": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 1
+    }
+   },
+   "free_face_need": false,
+   "frontier": null,
+   "in_compiled_common": false,
+   "non_monotone": false
+  },
+  {
+   "uid": "restrict-seccomp-strict#40",
+   "family": "kyverno",
+   "K": 5,
+   "rungs": {
+    "0": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 1
+    },
+    "1": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 5
+    },
+    "2": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 10
+    },
+    "5": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 1
+    }
+   },
+   "free_face_need": false,
+   "frontier": null,
+   "in_compiled_common": false,
+   "non_monotone": false
+  },
+  {
+   "uid": "restrict-sysctls#41",
+   "family": "kyverno",
+   "K": 5,
+   "rungs": {
+    "0": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 1
+    },
+    "1": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 5
+    },
+    "2": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 10
+    },
+    "5": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 1
+    }
+   },
+   "free_face_need": false,
+   "frontier": null,
+   "in_compiled_common": false,
+   "non_monotone": false
+  },
+  {
+   "uid": "add-psa-namespace-reporting#42",
+   "family": "kyverno",
+   "K": 6,
+   "rungs": {
+    "0": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 1
+    },
+    "1": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 6
+    },
+    "2": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 15
+    },
+    "6": {
+     "fires_some": true,
+     "all_fire": true,
+     "n_subsets": 1
+    }
+   },
+   "free_face_need": true,
+   "frontier": 6,
+   "in_compiled_common": false,
+   "non_monotone": false
+  },
+  {
+   "uid": "require-tekton-securitycontext#43",
+   "family": "kyverno",
+   "K": 5,
+   "rungs": {
+    "0": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 1
+    },
+    "1": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 5
+    },
+    "2": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 10
+    },
+    "5": {
+     "fires_some": false,
+     "all_fire": false,
+     "n_subsets": 1
+    }
+   },
+   "free_face_need": false,
+   "frontier": null,
+   "in_compiled_common": false,
+   "non_monotone": false
+  }
+ ]
+}

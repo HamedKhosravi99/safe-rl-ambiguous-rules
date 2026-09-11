@@ -1,0 +1,87 @@
+{
+  "created": "20260729-144145",
+  "device": "cuda",
+  "tasks": [
+    "OfflineCarRun-v0"
+  ],
+  "learners": [
+    "caps"
+  ],
+  "seeds": [
+    2
+  ],
+  "U": [
+    10,
+    20,
+    40
+  ],
+  "c_single": 40,
+  "c_saorl": 10,
+  "update_steps": 100000,
+  "runs": [
+    {
+      "raw_return": 568.187959037538,
+      "raw_cost": 4.15,
+      "ep_length": 200.0,
+      "episode_len": 200,
+      "update_steps": 100000,
+      "eval_episodes": 20,
+      "max_epi_r": 574.6533203125,
+      "min_epi_r": 204.28726196289062,
+      "train_sec": 3090.9,
+      "target_cost": 40,
+      "num_heads": 5,
+      "normalized_reward": 0.9825433213189855,
+      "normalized_cost_per_reading": {
+        "10": 0.41500000000000004,
+        "20": 0.20750000000000002,
+        "40": 0.10375000000000001
+      },
+      "worst_retained_normalized_cost": 0.41500000000000004,
+      "satisfies_all_retained": true,
+      "task": "OfflineCarRun-v0",
+      "learner": "caps",
+      "learner_long": "CAPS",
+      "reading": "single",
+      "seed": 2,
+      "U": [
+        10,
+        20,
+        40
+      ],
+      "status": "ok"
+    },
+    {
+      "raw_return": 569.0859621982709,
+      "raw_cost": 4.6,
+      "ep_length": 200.0,
+      "episode_len": 200,
+      "update_steps": 100000,
+      "eval_episodes": 20,
+      "max_epi_r": 574.6533203125,
+      "min_epi_r": 204.28726196289062,
+      "train_sec": 3090.9,
+      "target_cost": 10,
+      "num_heads": 5,
+      "normalized_reward": 0.9849679580816911,
+      "normalized_cost_per_reading": {
+        "10": 0.45999999999999996,
+        "20": 0.22999999999999998,
+        "40": 0.11499999999999999
+      },
+      "worst_retained_normalized_cost": 0.45999999999999996,
+      "satisfies_all_retained": true,
+      "task": "OfflineCarRun-v0",
+      "learner": "caps",
+      "learner_long": "CAPS",
+      "reading": "saorl",
+      "seed": 2,
+      "U": [
+        10,
+        20,
+        40
+      ],
+      "status": "ok"
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "id": "task_014",
+  "question": "What is transpiration?",
+  "source_docs": [
+    "water_cycle.txt"
+  ],
+  "rubric": [
+    [
+      "plants",
+      "plant"
+    ],
+    [
+      "water vapor",
+      "vapor",
+      "vapour"
+    ]
+  ],
+  "reference": "The release of water vapor from plants."
+}

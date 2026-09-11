@@ -1,0 +1,24 @@
+groups:
+
+- name: StrechSidekiqExporter
+
+  
+  rules:
+
+    - alert: SidekiqQueueSize
+      expr: 'sidekiq_queue_enqueued_jobs > 100'
+      for: 1m
+      labels:
+        severity: warning
+      annotations:
+        summary: Sidekiq queue size (instance {{ $labels.instance }})
+        description: "Sidekiq queue {{ $labels.name }} is growing ({{ $value }} enqueued jobs)\n  VALUE = {{ $value }}\n  LABELS = {{ $labels }}"
+
+    - alert: SidekiqSchedulingLatencyTooHigh
+      expr: 'max(sidekiq_queue_latency_seconds) > 60'
+      for: 0m
+      labels:
+        severity: critical
+      annotations:
+        summary: Sidekiq scheduling latency too high (instance {{ $labels.instance }})
+        description: "Sidekiq jobs are taking more than 1min to be picked up. Users may be seeing delays in background processing.\n  VALUE = {{ $value }}\n  LABELS = {{ $labels }}"

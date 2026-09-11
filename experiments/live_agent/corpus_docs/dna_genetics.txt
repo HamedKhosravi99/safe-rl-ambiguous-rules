@@ -1,0 +1,8 @@
+DNA, or deoxyribonucleic acid, carries the genetic instructions for living organisms.
+Its structure is a double helix, discovered by James Watson and Francis Crick in 1953, building on the X-ray work of Rosalind Franklin.
+DNA is made of four bases: adenine, thymine, guanine, and cytosine.
+Adenine pairs with thymine, and guanine pairs with cytosine.
+A gene is a segment of DNA that codes for a protein.
+The complete set of an organism's DNA is called its genome.
+During cell division, DNA is copied so each new cell receives an identical set of instructions.
+Mutations are changes in the DNA sequence and are a source of genetic variation.

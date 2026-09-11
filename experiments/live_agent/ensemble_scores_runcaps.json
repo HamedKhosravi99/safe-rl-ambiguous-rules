@@ -1,0 +1,59 @@
+{
+ "registration": "post-hoc run-cap scoring through the frozen ensemble; frozen cache untouched",
+ "date": "2026-09-01",
+ "cli_version": "2.1.243 (Claude Code)",
+ "qhat": 0.5,
+ "personas": [
+  "a reliability engineer who reads the rule strictly and literally",
+  "a safety auditor who errs toward catching unsafe operation early",
+  "a plain-language reader with no engineering background",
+  "a skeptical linguist who penalizes readings that are broader or narrower than the words actually say",
+  "a prognostics ML practitioner who knows these features well",
+  "a cost-conscious operations manager who dislikes needless early action",
+  "a careful neutral annotator weighing faithfulness on the merits"
+ ],
+ "per_candidate": {
+  "psi_run>=2": {
+   "gloss": "allow bursts of at most 2 messages in a row -- i.e. forbid posting exactly when the app has already posted in each of the last 2 consecutive posting opportunities, so a burst must pause after 2 back-to-back messages (equivalently, at most 2 messages in any 3 consecutive opportunities); the total number of messages in the window is otherwise unlimited",
+   "scores": [
+    0.3,
+    0.3,
+    0.3,
+    0.2,
+    0.3,
+    0.2,
+    0.4
+   ],
+   "mean": 0.285714,
+   "retained": false
+  },
+  "psi_run>=3": {
+   "gloss": "allow bursts of at most 3 messages in a row -- i.e. forbid posting exactly when the app has already posted in each of the last 3 consecutive posting opportunities, so a burst must pause after 3 back-to-back messages (equivalently, at most 3 messages in any 4 consecutive opportunities); the total number of messages in the window is otherwise unlimited",
+   "scores": [
+    0.6,
+    0.4,
+    0.5,
+    0.5,
+    0.55,
+    0.4,
+    0.6
+   ],
+   "mean": 0.507143,
+   "retained": true
+  },
+  "psi_run>=4": {
+   "gloss": "allow bursts of at most 4 messages in a row -- i.e. forbid posting exactly when the app has already posted in each of the last 4 consecutive posting opportunities, so a burst must pause after 4 back-to-back messages (equivalently, at most 4 messages in any 5 consecutive opportunities); the total number of messages in the window is otherwise unlimited",
+   "scores": [
+    0.5,
+    0.4,
+    0.5,
+    0.6,
+    0.3,
+    0.3,
+    0.6
+   ],
+   "mean": 0.457143,
+   "retained": false
+  }
+ }
+}

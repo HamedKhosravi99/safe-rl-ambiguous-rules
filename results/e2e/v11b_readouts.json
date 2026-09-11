@@ -1,0 +1,32 @@
+{
+ "registration": "V11B endpoints 1-2 (see REGISTRATION_V11B.md)",
+ "note": "synthesis conditional on licensing is exactly 1 in complete mode (every non-metric axis carries its full grid); the funnel therefore has no separate retrieval/synthesis rows for this instantiation, by structure rather than by merger",
+ "funnel": {
+  "n_corpus": 4390,
+  "n_expr": 315,
+  "n_avail": 262,
+  "n_lic": 181,
+  "n_lic_avail": 181,
+  "n_lic_verbatim_only": 0,
+  "n_ret": 158,
+  "cond": {
+   "expr": 0.07175398633257403,
+   "avail": 0.8317460317460318,
+   "lic_given_avail": 0.6908396946564885,
+   "ret_given_lic": 0.8729281767955801
+  },
+  "of_corpus": {
+   "expr": 0.07175398633257403,
+   "avail": 0.05968109339407745,
+   "lic": 0.04123006833712984,
+   "ret": 0.03599088838268793
+  }
+ },
+ "recall_fine": {
+  "1": 0.17142857142857143,
+  "4": 0.33015873015873015,
+  "16": 0.46984126984126984,
+  "64": 0.5746031746031746,
+  "256": 0.6666666666666666
+ }
+}

@@ -1,0 +1,19 @@
+{
+  "id": "task_029",
+  "question": "What does DNS do?",
+  "source_docs": [
+    "internet_history.txt"
+  ],
+  "rubric": [
+    [
+      "domain",
+      "domain name"
+    ],
+    [
+      "ip address",
+      "ip",
+      "numeric"
+    ]
+  ],
+  "reference": "It translates domain names into numeric IP addresses."
+}

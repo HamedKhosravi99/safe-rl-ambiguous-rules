@@ -1,0 +1,55 @@
+{
+ "registration": "REGISTRATION_V10 E4",
+ "budgets": [
+  0.01,
+  0.02,
+  0.05,
+  0.1
+ ],
+ "families": {
+  "kyverno": {
+   "n_pools": 44,
+   "fires": {
+    "d=0.01": {
+     "n": 10,
+     "frac": 0.2273
+    },
+    "d=0.02": {
+     "n": 9,
+     "frac": 0.2045
+    },
+    "d=0.05": {
+     "n": 9,
+     "frac": 0.2045
+    },
+    "d=0.1": {
+     "n": 2,
+     "frac": 0.0455
+    }
+   },
+   "monotone": true
+  },
+  "prometheus": {
+   "n_pools": 88,
+   "fires": {
+    "d=0.01": {
+     "n": 74,
+     "frac": 0.8409
+    },
+    "d=0.02": {
+     "n": 74,
+     "frac": 0.8409
+    },
+    "d=0.05": {
+     "n": 66,
+     "frac": 0.75
+    },
+    "d=0.1": {
+     "n": 61,
+     "frac": 0.6932
+    }
+   },
+   "monotone": true
+  }
+ }
+}

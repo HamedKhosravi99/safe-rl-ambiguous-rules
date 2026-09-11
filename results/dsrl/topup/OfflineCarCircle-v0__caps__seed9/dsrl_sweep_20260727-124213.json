@@ -1,0 +1,87 @@
+{
+  "created": "20260727-124213",
+  "device": "cuda",
+  "tasks": [
+    "OfflineCarCircle-v0"
+  ],
+  "learners": [
+    "caps"
+  ],
+  "seeds": [
+    9
+  ],
+  "U": [
+    10,
+    20,
+    40
+  ],
+  "c_single": 40,
+  "c_saorl": 10,
+  "update_steps": 100000,
+  "runs": [
+    {
+      "raw_return": 400.5567232268229,
+      "raw_cost": 35.2,
+      "ep_length": 300.0,
+      "episode_len": 300,
+      "update_steps": 100000,
+      "eval_episodes": 20,
+      "max_epi_r": 534.3060913085938,
+      "min_epi_r": 3.484419822692871,
+      "train_sec": 1311.5,
+      "target_cost": 40,
+      "num_heads": 5,
+      "normalized_reward": 0.7480333315944427,
+      "normalized_cost_per_reading": {
+        "10": 3.5200000000000005,
+        "20": 1.7600000000000002,
+        "40": 0.8800000000000001
+      },
+      "worst_retained_normalized_cost": 3.5200000000000005,
+      "satisfies_all_retained": false,
+      "task": "OfflineCarCircle-v0",
+      "learner": "caps",
+      "learner_long": "CAPS",
+      "reading": "single",
+      "seed": 9,
+      "U": [
+        10,
+        20,
+        40
+      ],
+      "status": "ok"
+    },
+    {
+      "raw_return": 323.4433359951048,
+      "raw_cost": 4.7,
+      "ep_length": 300.0,
+      "episode_len": 300,
+      "update_steps": 100000,
+      "eval_episodes": 20,
+      "max_epi_r": 534.3060913085938,
+      "min_epi_r": 3.484419822692871,
+      "train_sec": 1311.5,
+      "target_cost": 10,
+      "num_heads": 5,
+      "normalized_reward": 0.6027615927525478,
+      "normalized_cost_per_reading": {
+        "10": 0.47000000000000003,
+        "20": 0.23500000000000001,
+        "40": 0.11750000000000001
+      },
+      "worst_retained_normalized_cost": 0.47000000000000003,
+      "satisfies_all_retained": true,
+      "task": "OfflineCarCircle-v0",
+      "learner": "caps",
+      "learner_long": "CAPS",
+      "reading": "saorl",
+      "seed": 9,
+      "U": [
+        10,
+        20,
+        40
+      ],
+      "status": "ok"
+    }
+  ]
+}

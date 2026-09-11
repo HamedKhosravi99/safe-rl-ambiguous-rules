@@ -1,0 +1,2354 @@
+{
+ "registration": "V13 (REGISTRATION_V13.md): exact optimal-face policy sufficiency vs the published value screen; archived verdicts asserted; tie-break stress seeded 20260901, N=100",
+ "budgets": [
+  0.005,
+  0.01,
+  0.02,
+  0.05,
+  0.1
+ ],
+ "operating": 0.05,
+ "aggregate_at_operating": {
+  "n_instances": 28,
+  "n_value_clear": 27,
+  "n_policy_sufficient_exists": 27,
+  "n_value_clear_policy_fail": 0,
+  "overshoot_med": null,
+  "overshoot_max": null,
+  "tiebreak_value_only_med": null,
+  "tiebreak_value_only_min": null
+ },
+ "rows": [
+  {
+   "rule_id": "AlertmanagerClusterDown#2",
+   "budget": 0.005,
+   "K": 2,
+   "V_U": 0.36031912031692176,
+   "screen_fires": true,
+   "value_sufficient_exists": false,
+   "policy_sufficient_exists": false,
+   "readings": []
+  },
+  {
+   "rule_id": "AlertmanagerClusterDown#2",
+   "budget": 0.01,
+   "K": 2,
+   "V_U": 0.3783791720630837,
+   "screen_fires": true,
+   "value_sufficient_exists": false,
+   "policy_sufficient_exists": false,
+   "readings": []
+  },
+  {
+   "rule_id": "AlertmanagerClusterDown#2",
+   "budget": 0.02,
+   "K": 2,
+   "V_U": 0.4142796765139393,
+   "screen_fires": false,
+   "value_sufficient_exists": true,
+   "policy_sufficient_exists": false,
+   "readings": [
+    {
+     "reading": 1,
+     "V": 0.41427967651393927,
+     "W": 0.030938952469295324,
+     "policy_sufficient": false
+    }
+   ]
+  },
+  {
+   "rule_id": "AlertmanagerClusterDown#2",
+   "budget": 0.05,
+   "K": 2,
+   "V_U": 0.49935920845610515,
+   "screen_fires": false,
+   "value_sufficient_exists": true,
+   "policy_sufficient_exists": true,
+   "readings": [
+    {
+     "reading": 1,
+     "V": 0.4993592084561051,
+     "W": 0.04716796818034808,
+     "policy_sufficient": true,
+     "tiebreak_safe_frac": 1.0
+    }
+   ]
+  },
+  {
+   "rule_id": "AlertmanagerClusterDown#2",
+   "budget": 0.1,
+   "K": 2,
+   "V_U": 0.641158428359715,
+   "screen_fires": false,
+   "value_sufficient_exists": true,
+   "policy_sufficient_exists": true,
+   "readings": [
+    {
+     "reading": 1,
+     "V": 0.6411584283597149,
+     "W": 0.07400983201948552,
+     "policy_sufficient": true
+    }
+   ]
+  },
+  {
+   "rule_id": "AlertmanagerClusterCrashlooping#3",
+   "budget": 0.005,
+   "K": 2,
+   "V_U": 0.36031912031692176,
+   "screen_fires": true,
+   "value_sufficient_exists": false,
+   "policy_sufficient_exists": false,
+   "readings": []
+  },
+  {
+   "rule_id": "AlertmanagerClusterCrashlooping#3",
+   "budget": 0.01,
+   "K": 2,
+   "V_U": 0.3783791720630837,
+   "screen_fires": true,
+   "value_sufficient_exists": false,
+   "policy_sufficient_exists": false,
+   "readings": []
+  },
+  {
+   "rule_id": "AlertmanagerClusterCrashlooping#3",
+   "budget": 0.02,
+   "K": 2,
+   "V_U": 0.4142796765139393,
+   "screen_fires": false,
+   "value_sufficient_exists": true,
+   "policy_sufficient_exists": false,
+   "readings": [
+    {
+     "reading": 1,
+     "V": 0.41427967651393927,
+     "W": 0.030938952469295324,
+     "policy_sufficient": false
+    }
+   ]
+  },
+  {
+   "rule_id": "AlertmanagerClusterCrashlooping#3",
+   "budget": 0.05,
+   "K": 2,
+   "V_U": 0.49935920845610515,
+   "screen_fires": false,
+   "value_sufficient_exists": true,
+   "policy_sufficient_exists": true,
+   "readings": [
+    {
+     "reading": 1,
+     "V": 0.4993592084561051,
+     "W": 0.04716796818034808,
+     "policy_sufficient": true,
+     "tiebreak_safe_frac": 1.0
+    }
+   ]
+  },
+  {
+   "rule_id": "AlertmanagerClusterCrashlooping#3",
+   "budget": 0.1,
+   "K": 2,
+   "V_U": 0.641158428359715,
+   "screen_fires": false,
+   "value_sufficient_exists": true,
+   "policy_sufficient_exists": true,
+   "readings": [
+    {
+     "reading": 1,
+     "V": 0.6411584283597149,
+     "W": 0.07400983201948552,
+     "policy_sufficient": true
+    }
+   ]
+  },
+  {
+   "rule_id": "NodeNetworkInterfaceFlapping#5",
+   "budget": 0.005,
+   "K": 2,
+   "V_U": 0.3290005771562153,
+   "screen_fires": true,
+   "value_sufficient_exists": false,
+   "policy_sufficient_exists": false,
+   "readings": []
+  },
+  {
+   "rule_id": "NodeNetworkInterfaceFlapping#5",
+   "budget": 0.01,
+   "K": 2,
+   "V_U": 0.3430009284686942,
+   "screen_fires": true,
+   "value_sufficient_exists": false,
+   "policy_sufficient_exists": false,
+   "readings": []
+  },
+  {
+   "rule_id": "NodeNetworkInterfaceFlapping#5",
+   "budget": 0.02,
+   "K": 2,
+   "V_U": 0.37100163109365203,
+   "screen_fires": true,
+   "value_sufficient_exists": false,
+   "policy_sufficient_exists": false,
+   "readings": []
+  },
+  {
+   "rule_id": "NodeNetworkInterfaceFlapping#5",
+   "budget": 0.05,
+   "K": 2,
+   "V_U": 0.4334518724755066,
+   "screen_fires": true,
+   "value_sufficient_exists": false,
+   "policy_sufficient_exists": false,
+   "readings": []
+  },
+  {
+   "rule_id": "NodeNetworkInterfaceFlapping#5",
+   "budget": 0.1,
+   "K": 2,
+   "V_U": 0.5208385263975613,
+   "screen_fires": false,
+   "value_sufficient_exists": true,
+   "policy_sufficient_exists": true,
+   "readings": [
+    {
+     "reading": 0,
+     "V": 0.5208385263975613,
+     "W": 0.08536014840331621,
+     "policy_sufficient": true
+    }
+   ]
+  },
+  {
+   "rule_id": "KubeStateMetricsListErrors#6",
+   "budget": 0.005,
+   "K": 2,
+   "V_U": 0.3717399105428562,
+   "screen_fires": false,
+   "value_sufficient_exists": true,
+   "policy_sufficient_exists": false,
+   "readings": [
+    {
+     "reading": 1,
+     "V": 0.37173991054285616,
+     "W": 0.007573242513620978,
+     "policy_sufficient": false,
+     "tiebreak_safe_frac": 0.74
+    }
+   ]
+  },
+  {
+   "rule_id": "KubeStateMetricsListErrors#6",
+   "budget": 0.01,
+   "K": 2,
+   "V_U": 0.38591983253321727,
+   "screen_fires": false,
+   "value_sufficient_exists": true,
+   "policy_sufficient_exists": true,
+   "readings": [
+    {
+     "reading": 1,
+     "V": 0.3859198325332174,
+     "W": 0.008774810468413705,
+     "policy_sufficient": true
+    }
+   ]
+  },
+  {
+   "rule_id": "KubeStateMetricsListErrors#6",
+   "budget": 0.02,
+   "K": 2,
+   "V_U": 0.41427967651393915,
+   "screen_fires": false,
+   "value_sufficient_exists": true,
+   "policy_sufficient_exists": true,
+   "readings": [
+    {
+     "reading": 1,
+     "V": 0.4142796765139392,
+     "W": 0.010787743780532157,
+     "policy_sufficient": true
+    }
+   ]
+  },
+  {
+   "rule_id": "KubeStateMetricsListErrors#6",
+   "budget": 0.05,
+   "K": 2,
+   "V_U": 0.49935920845610526,
+   "screen_fires": false,
+   "value_sufficient_exists": true,
+   "policy_sufficient_exists": true,
+   "readings": [
+    {
+     "reading": 1,
+     "V": 0.499359208456105,
+     "W": 0.016337001990159736,
+     "policy_sufficient": true,
+     "tiebreak_safe_frac": 1.0
+    }
+   ]
+  },
+  {
+   "rule_id": "KubeStateMetricsListErrors#6",
+   "budget": 0.1,
+   "K": 2,
+   "V_U": 0.6411584283597151,
+   "screen_fires": false,
+   "value_sufficient_exists": true,
+   "policy_sufficient_exists": true,
+   "readings": [
+    {
+     "reading": 1,
+     "V": 0.6411584283597151,
+     "W": 0.025535623101403834,
+     "policy_sufficient": true
+    }
+   ]
+  },
+  {
+   "rule_id": "KubeStateMetricsWatchErrors#7",
+   "budget": 0.005,
+   "K": 2,
+   "V_U": 0.3717399105428562,
+   "screen_fires": false,
+   "value_sufficient_exists": true,
+   "policy_sufficient_exists": false,
+   "readings": [
+    {
+     "reading": 1,
+     "V": 0.37173991054285616,
+     "W": 0.007573242513620978,
+     "policy_sufficient": false,
+     "tiebreak_safe_frac": 0.67
+    }
+   ]
+  },
+  {
+   "rule_id": "KubeStateMetricsWatchErrors#7",
+   "budget": 0.01,
+   "K": 2,
+   "V_U": 0.38591983253321727,
+   "screen_fires": false,
+   "value_sufficient_exists": true,
+   "policy_sufficient_exists": true,
+   "readings": [
+    {
+     "reading": 1,
+     "V": 0.3859198325332174,
+     "W": 0.008774810468413705,
+     "policy_sufficient": true
+    }
+   ]
+  },
+  {
+   "rule_id": "KubeStateMetricsWatchErrors#7",
+   "budget": 0.02,
+   "K": 2,
+   "V_U": 0.41427967651393915,
+   "screen_fires": false,
+   "value_sufficient_exists": true,
+   "policy_sufficient_exists": true,
+   "readings": [
+    {
+     "reading": 1,
+     "V": 0.4142796765139392,
+     "W": 0.010787743780532157,
+     "policy_sufficient": true
+    }
+   ]
+  },
+  {
+   "rule_id": "KubeStateMetricsWatchErrors#7",
+   "budget": 0.05,
+   "K": 2,
+   "V_U": 0.49935920845610526,
+   "screen_fires": false,
+   "value_sufficient_exists": true,
+   "policy_sufficient_exists": true,
+   "readings": [
+    {
+     "reading": 1,
+     "V": 0.499359208456105,
+     "W": 0.016337001990159736,
+     "policy_sufficient": true,
+     "tiebreak_safe_frac": 1.0
+    }
+   ]
+  },
+  {
+   "rule_id": "KubeStateMetricsWatchErrors#7",
+   "budget": 0.1,
+   "K": 2,
+   "V_U": 0.6411584283597151,
+   "screen_fires": false,
+   "value_sufficient_exists": true,
+   "policy_sufficient_exists": true,
+   "readings": [
+    {
+     "reading": 1,
+     "V": 0.6411584283597151,
+     "W": 0.025535623101403834,
+     "policy_sufficient": true
+    }
+   ]
+  },
+  {
+   "rule_id": "KubePodCrashLooping#10",
+   "budget": 0.005,
+   "K": 2,
+   "V_U": 0.3717399105428562,
+   "screen_fires": false,
+   "value_sufficient_exists": true,
+   "policy_sufficient_exists": false,
+   "readings": [
+    {
+     "reading": 1,
+     "V": 0.37173991054285616,
+     "W": 0.007573242513620978,
+     "policy_sufficient": false,
+     "tiebreak_safe_frac": 0.69
+    }
+   ]
+  },
+  {
+   "rule_id": "KubePodCrashLooping#10",
+   "budget": 0.01,
+   "K": 2,
+   "V_U": 0.38591983253321727,
+   "screen_fires": false,
+   "value_sufficient_exists": true,
+   "policy_sufficient_exists": true,
+   "readings": [
+    {
+     "reading": 1,
+     "V": 0.3859198325332174,
+     "W": 0.008774810468413705,
+     "policy_sufficient": true
+    }
+   ]
+  },
+  {
+   "rule_id": "KubePodCrashLooping#10",
+   "budget": 0.02,
+   "K": 2,
+   "V_U": 0.41427967651393915,
+   "screen_fires": false,
+   "value_sufficient_exists": true,
+   "policy_sufficient_exists": true,
+   "readings": [
+    {
+     "reading": 1,
+     "V": 0.4142796765139392,
+     "W": 0.010787743780532157,
+     "policy_sufficient": true
+    }
+   ]
+  },
+  {
+   "rule_id": "KubePodCrashLooping#10",
+   "budget": 0.05,
+   "K": 2,
+   "V_U": 0.49935920845610526,
+   "screen_fires": false,
+   "value_sufficient_exists": true,
+   "policy_sufficient_exists": true,
+   "readings": [
+    {
+     "reading": 1,
+     "V": 0.499359208456105,
+     "W": 0.016337001990159736,
+     "policy_sufficient": true,
+     "tiebreak_safe_frac": 1.0
+    }
+   ]
+  },
+  {
+   "rule_id": "KubePodCrashLooping#10",
+   "budget": 0.1,
+   "K": 2,
+   "V_U": 0.6411584283597151,
+   "screen_fires": false,
+   "value_sufficient_exists": true,
+   "policy_sufficient_exists": true,
+   "readings": [
+    {
+     "reading": 1,
+     "V": 0.6411584283597151,
+     "W": 0.025535623101403834,
+     "policy_sufficient": true
+    }
+   ]
+  },
+  {
+   "rule_id": "KubeCPUQuotaOvercommit#21",
+   "budget": 0.005,
+   "K": 2,
+   "V_U": 0.36031912031692176,
+   "screen_fires": true,
+   "value_sufficient_exists": false,
+   "policy_sufficient_exists": false,
+   "readings": []
+  },
+  {
+   "rule_id": "KubeCPUQuotaOvercommit#21",
+   "budget": 0.01,
+   "K": 2,
+   "V_U": 0.3783791720630837,
+   "screen_fires": true,
+   "value_sufficient_exists": false,
+   "policy_sufficient_exists": false,
+   "readings": []
+  },
+  {
+   "rule_id": "KubeCPUQuotaOvercommit#21",
+   "budget": 0.02,
+   "K": 2,
+   "V_U": 0.4142796765139393,
+   "screen_fires": false,
+   "value_sufficient_exists": true,
+   "policy_sufficient_exists": false,
+   "readings": [
+    {
+     "reading": 1,
+     "V": 0.41427967651393927,
+     "W": 0.030938952469295324,
+     "policy_sufficient": false
+    }
+   ]
+  },
+  {
+   "rule_id": "KubeCPUQuotaOvercommit#21",
+   "budget": 0.05,
+   "K": 2,
+   "V_U": 0.49935920845610515,
+   "screen_fires": false,
+   "value_sufficient_exists": true,
+   "policy_sufficient_exists": true,
+   "readings": [
+    {
+     "reading": 1,
+     "V": 0.4993592084561051,
+     "W": 0.04716796818034808,
+     "policy_sufficient": true,
+     "tiebreak_safe_frac": 1.0
+    }
+   ]
+  },
+  {
+   "rule_id": "KubeCPUQuotaOvercommit#21",
+   "budget": 0.1,
+   "K": 2,
+   "V_U": 0.641158428359715,
+   "screen_fires": false,
+   "value_sufficient_exists": true,
+   "policy_sufficient_exists": true,
+   "readings": [
+    {
+     "reading": 1,
+     "V": 0.6411584283597149,
+     "W": 0.07400983201948552,
+     "policy_sufficient": true
+    }
+   ]
+  },
+  {
+   "rule_id": "KubeMemoryQuotaOvercommit#22",
+   "budget": 0.005,
+   "K": 2,
+   "V_U": 0.36031912031692176,
+   "screen_fires": true,
+   "value_sufficient_exists": false,
+   "policy_sufficient_exists": false,
+   "readings": []
+  },
+  {
+   "rule_id": "KubeMemoryQuotaOvercommit#22",
+   "budget": 0.01,
+   "K": 2,
+   "V_U": 0.3783791720630837,
+   "screen_fires": true,
+   "value_sufficient_exists": false,
+   "policy_sufficient_exists": false,
+   "readings": []
+  },
+  {
+   "rule_id": "KubeMemoryQuotaOvercommit#22",
+   "budget": 0.02,
+   "K": 2,
+   "V_U": 0.4142796765139393,
+   "screen_fires": false,
+   "value_sufficient_exists": true,
+   "policy_sufficient_exists": false,
+   "readings": [
+    {
+     "reading": 1,
+     "V": 0.41427967651393927,
+     "W": 0.030938952469295324,
+     "policy_sufficient": false
+    }
+   ]
+  },
+  {
+   "rule_id": "KubeMemoryQuotaOvercommit#22",
+   "budget": 0.05,
+   "K": 2,
+   "V_U": 0.49935920845610515,
+   "screen_fires": false,
+   "value_sufficient_exists": true,
+   "policy_sufficient_exists": true,
+   "readings": [
+    {
+     "reading": 1,
+     "V": 0.4993592084561051,
+     "W": 0.04716796818034808,
+     "policy_sufficient": true,
+     "tiebreak_safe_frac": 1.0
+    }
+   ]
+  },
+  {
+   "rule_id": "KubeMemoryQuotaOvercommit#22",
+   "budget": 0.1,
+   "K": 2,
+   "V_U": 0.641158428359715,
+   "screen_fires": false,
+   "value_sufficient_exists": true,
+   "policy_sufficient_exists": true,
+   "readings": [
+    {
+     "reading": 1,
+     "V": 0.6411584283597149,
+     "W": 0.07400983201948552,
+     "policy_sufficient": true
+    }
+   ]
+  },
+  {
+   "rule_id": "KubeletPlegDurationHigh#29",
+   "budget": 0.005,
+   "K": 2,
+   "V_U": 0.36031912031692176,
+   "screen_fires": true,
+   "value_sufficient_exists": false,
+   "policy_sufficient_exists": false,
+   "readings": []
+  },
+  {
+   "rule_id": "KubeletPlegDurationHigh#29",
+   "budget": 0.01,
+   "K": 2,
+   "V_U": 0.3783791720630837,
+   "screen_fires": true,
+   "value_sufficient_exists": false,
+   "policy_sufficient_exists": false,
+   "readings": []
+  },
+  {
+   "rule_id": "KubeletPlegDurationHigh#29",
+   "budget": 0.02,
+   "K": 2,
+   "V_U": 0.4142796765139393,
+   "screen_fires": false,
+   "value_sufficient_exists": true,
+   "policy_sufficient_exists": false,
+   "readings": [
+    {
+     "reading": 1,
+     "V": 0.41427967651393927,
+     "W": 0.030938952469295324,
+     "policy_sufficient": false
+    }
+   ]
+  },
+  {
+   "rule_id": "KubeletPlegDurationHigh#29",
+   "budget": 0.05,
+   "K": 2,
+   "V_U": 0.49935920845610515,
+   "screen_fires": false,
+   "value_sufficient_exists": true,
+   "policy_sufficient_exists": true,
+   "readings": [
+    {
+     "reading": 1,
+     "V": 0.4993592084561051,
+     "W": 0.04716796818034808,
+     "policy_sufficient": true,
+     "tiebreak_safe_frac": 1.0
+    }
+   ]
+  },
+  {
+   "rule_id": "KubeletPlegDurationHigh#29",
+   "budget": 0.1,
+   "K": 2,
+   "V_U": 0.641158428359715,
+   "screen_fires": false,
+   "value_sufficient_exists": true,
+   "policy_sufficient_exists": true,
+   "readings": [
+    {
+     "reading": 1,
+     "V": 0.6411584283597149,
+     "W": 0.07400983201948552,
+     "policy_sufficient": true
+    }
+   ]
+  },
+  {
+   "rule_id": "NodeClockNotSynchronising#47",
+   "budget": 0.005,
+   "K": 2,
+   "V_U": 0.3717399105428562,
+   "screen_fires": false,
+   "value_sufficient_exists": true,
+   "policy_sufficient_exists": false,
+   "readings": [
+    {
+     "reading": 1,
+     "V": 0.37173991054285616,
+     "W": 0.007573242513620978,
+     "policy_sufficient": false,
+     "tiebreak_safe_frac": 0.68
+    }
+   ]
+  },
+  {
+   "rule_id": "NodeClockNotSynchronising#47",
+   "budget": 0.01,
+   "K": 2,
+   "V_U": 0.38591983253321727,
+   "screen_fires": false,
+   "value_sufficient_exists": true,
+   "policy_sufficient_exists": true,
+   "readings": [
+    {
+     "reading": 1,
+     "V": 0.3859198325332174,
+     "W": 0.008774810468413705,
+     "policy_sufficient": true
+    }
+   ]
+  },
+  {
+   "rule_id": "NodeClockNotSynchronising#47",
+   "budget": 0.02,
+   "K": 2,
+   "V_U": 0.41427967651393915,
+   "screen_fires": false,
+   "value_sufficient_exists": true,
+   "policy_sufficient_exists": true,
+   "readings": [
+    {
+     "reading": 1,
+     "V": 0.4142796765139392,
+     "W": 0.010787743780532157,
+     "policy_sufficient": true
+    }
+   ]
+  },
+  {
+   "rule_id": "NodeClockNotSynchronising#47",
+   "budget": 0.05,
+   "K": 2,
+   "V_U": 0.49935920845610526,
+   "screen_fires": false,
+   "value_sufficient_exists": true,
+   "policy_sufficient_exists": true,
+   "readings": [
+    {
+     "reading": 1,
+     "V": 0.499359208456105,
+     "W": 0.016337001990159736,
+     "policy_sufficient": true,
+     "tiebreak_safe_frac": 1.0
+    }
+   ]
+  },
+  {
+   "rule_id": "NodeClockNotSynchronising#47",
+   "budget": 0.1,
+   "K": 2,
+   "V_U": 0.6411584283597151,
+   "screen_fires": false,
+   "value_sufficient_exists": true,
+   "policy_sufficient_exists": true,
+   "readings": [
+    {
+     "reading": 1,
+     "V": 0.6411584283597151,
+     "W": 0.025535623101403834,
+     "policy_sufficient": true
+    }
+   ]
+  },
+  {
+   "rule_id": "NodeFileDescriptorLimit#49",
+   "budget": 0.005,
+   "K": 2,
+   "V_U": 0.3717399105428562,
+   "screen_fires": false,
+   "value_sufficient_exists": true,
+   "policy_sufficient_exists": false,
+   "readings": [
+    {
+     "reading": 1,
+     "V": 0.37173991054285616,
+     "W": 0.007573242513620978,
+     "policy_sufficient": false,
+     "tiebreak_safe_frac": 0.71
+    }
+   ]
+  },
+  {
+   "rule_id": "NodeFileDescriptorLimit#49",
+   "budget": 0.01,
+   "K": 2,
+   "V_U": 0.38591983253321727,
+   "screen_fires": false,
+   "value_sufficient_exists": true,
+   "policy_sufficient_exists": true,
+   "readings": [
+    {
+     "reading": 1,
+     "V": 0.3859198325332174,
+     "W": 0.008774810468413705,
+     "policy_sufficient": true
+    }
+   ]
+  },
+  {
+   "rule_id": "NodeFileDescriptorLimit#49",
+   "budget": 0.02,
+   "K": 2,
+   "V_U": 0.41427967651393915,
+   "screen_fires": false,
+   "value_sufficient_exists": true,
+   "policy_sufficient_exists": true,
+   "readings": [
+    {
+     "reading": 1,
+     "V": 0.4142796765139392,
+     "W": 0.010787743780532157,
+     "policy_sufficient": true
+    }
+   ]
+  },
+  {
+   "rule_id": "NodeFileDescriptorLimit#49",
+   "budget": 0.05,
+   "K": 2,
+   "V_U": 0.49935920845610526,
+   "screen_fires": false,
+   "value_sufficient_exists": true,
+   "policy_sufficient_exists": true,
+   "readings": [
+    {
+     "reading": 1,
+     "V": 0.499359208456105,
+     "W": 0.016337001990159736,
+     "policy_sufficient": true,
+     "tiebreak_safe_frac": 1.0
+    }
+   ]
+  },
+  {
+   "rule_id": "NodeFileDescriptorLimit#49",
+   "budget": 0.1,
+   "K": 2,
+   "V_U": 0.6411584283597151,
+   "screen_fires": false,
+   "value_sufficient_exists": true,
+   "policy_sufficient_exists": true,
+   "readings": [
+    {
+     "reading": 1,
+     "V": 0.6411584283597151,
+     "W": 0.025535623101403834,
+     "policy_sufficient": true
+    }
+   ]
+  },
+  {
+   "rule_id": "NodeFileDescriptorLimit#50",
+   "budget": 0.005,
+   "K": 2,
+   "V_U": 0.3717399105428562,
+   "screen_fires": false,
+   "value_sufficient_exists": true,
+   "policy_sufficient_exists": false,
+   "readings": [
+    {
+     "reading": 1,
+     "V": 0.37173991054285616,
+     "W": 0.007573242513620978,
+     "policy_sufficient": false,
+     "tiebreak_safe_frac": 0.73
+    }
+   ]
+  },
+  {
+   "rule_id": "NodeFileDescriptorLimit#50",
+   "budget": 0.01,
+   "K": 2,
+   "V_U": 0.38591983253321727,
+   "screen_fires": false,
+   "value_sufficient_exists": true,
+   "policy_sufficient_exists": true,
+   "readings": [
+    {
+     "reading": 1,
+     "V": 0.3859198325332174,
+     "W": 0.008774810468413705,
+     "policy_sufficient": true
+    }
+   ]
+  },
+  {
+   "rule_id": "NodeFileDescriptorLimit#50",
+   "budget": 0.02,
+   "K": 2,
+   "V_U": 0.41427967651393915,
+   "screen_fires": false,
+   "value_sufficient_exists": true,
+   "policy_sufficient_exists": true,
+   "readings": [
+    {
+     "reading": 1,
+     "V": 0.4142796765139392,
+     "W": 0.010787743780532157,
+     "policy_sufficient": true
+    }
+   ]
+  },
+  {
+   "rule_id": "NodeFileDescriptorLimit#50",
+   "budget": 0.05,
+   "K": 2,
+   "V_U": 0.49935920845610526,
+   "screen_fires": false,
+   "value_sufficient_exists": true,
+   "policy_sufficient_exists": true,
+   "readings": [
+    {
+     "reading": 1,
+     "V": 0.499359208456105,
+     "W": 0.016337001990159736,
+     "policy_sufficient": true,
+     "tiebreak_safe_frac": 1.0
+    }
+   ]
+  },
+  {
+   "rule_id": "NodeFileDescriptorLimit#50",
+   "budget": 0.1,
+   "K": 2,
+   "V_U": 0.6411584283597151,
+   "screen_fires": false,
+   "value_sufficient_exists": true,
+   "policy_sufficient_exists": true,
+   "readings": [
+    {
+     "reading": 1,
+     "V": 0.6411584283597151,
+     "W": 0.025535623101403834,
+     "policy_sufficient": true
+    }
+   ]
+  },
+  {
+   "rule_id": "NodeCPUHighUsage#51",
+   "budget": 0.005,
+   "K": 2,
+   "V_U": 0.3717399105428562,
+   "screen_fires": false,
+   "value_sufficient_exists": true,
+   "policy_sufficient_exists": false,
+   "readings": [
+    {
+     "reading": 1,
+     "V": 0.37173991054285616,
+     "W": 0.007573242513620978,
+     "policy_sufficient": false,
+     "tiebreak_safe_frac": 0.7
+    }
+   ]
+  },
+  {
+   "rule_id": "NodeCPUHighUsage#51",
+   "budget": 0.01,
+   "K": 2,
+   "V_U": 0.38591983253321727,
+   "screen_fires": false,
+   "value_sufficient_exists": true,
+   "policy_sufficient_exists": true,
+   "readings": [
+    {
+     "reading": 1,
+     "V": 0.3859198325332174,
+     "W": 0.008774810468413705,
+     "policy_sufficient": true
+    }
+   ]
+  },
+  {
+   "rule_id": "NodeCPUHighUsage#51",
+   "budget": 0.02,
+   "K": 2,
+   "V_U": 0.41427967651393915,
+   "screen_fires": false,
+   "value_sufficient_exists": true,
+   "policy_sufficient_exists": true,
+   "readings": [
+    {
+     "reading": 1,
+     "V": 0.4142796765139392,
+     "W": 0.010787743780532157,
+     "policy_sufficient": true
+    }
+   ]
+  },
+  {
+   "rule_id": "NodeCPUHighUsage#51",
+   "budget": 0.05,
+   "K": 2,
+   "V_U": 0.49935920845610526,
+   "screen_fires": false,
+   "value_sufficient_exists": true,
+   "policy_sufficient_exists": true,
+   "readings": [
+    {
+     "reading": 1,
+     "V": 0.499359208456105,
+     "W": 0.016337001990159736,
+     "policy_sufficient": true,
+     "tiebreak_safe_frac": 1.0
+    }
+   ]
+  },
+  {
+   "rule_id": "NodeCPUHighUsage#51",
+   "budget": 0.1,
+   "K": 2,
+   "V_U": 0.6411584283597151,
+   "screen_fires": false,
+   "value_sufficient_exists": true,
+   "policy_sufficient_exists": true,
+   "readings": [
+    {
+     "reading": 1,
+     "V": 0.6411584283597151,
+     "W": 0.025535623101403834,
+     "policy_sufficient": true
+    }
+   ]
+  },
+  {
+   "rule_id": "NodeSystemSaturation#52",
+   "budget": 0.005,
+   "K": 2,
+   "V_U": 0.3717399105428562,
+   "screen_fires": false,
+   "value_sufficient_exists": true,
+   "policy_sufficient_exists": false,
+   "readings": [
+    {
+     "reading": 1,
+     "V": 0.37173991054285616,
+     "W": 0.007573242513620978,
+     "policy_sufficient": false,
+     "tiebreak_safe_frac": 0.75
+    }
+   ]
+  },
+  {
+   "rule_id": "NodeSystemSaturation#52",
+   "budget": 0.01,
+   "K": 2,
+   "V_U": 0.38591983253321727,
+   "screen_fires": false,
+   "value_sufficient_exists": true,
+   "policy_sufficient_exists": true,
+   "readings": [
+    {
+     "reading": 1,
+     "V": 0.3859198325332174,
+     "W": 0.008774810468413705,
+     "policy_sufficient": true
+    }
+   ]
+  },
+  {
+   "rule_id": "NodeSystemSaturation#52",
+   "budget": 0.02,
+   "K": 2,
+   "V_U": 0.41427967651393915,
+   "screen_fires": false,
+   "value_sufficient_exists": true,
+   "policy_sufficient_exists": true,
+   "readings": [
+    {
+     "reading": 1,
+     "V": 0.4142796765139392,
+     "W": 0.010787743780532157,
+     "policy_sufficient": true
+    }
+   ]
+  },
+  {
+   "rule_id": "NodeSystemSaturation#52",
+   "budget": 0.05,
+   "K": 2,
+   "V_U": 0.49935920845610526,
+   "screen_fires": false,
+   "value_sufficient_exists": true,
+   "policy_sufficient_exists": true,
+   "readings": [
+    {
+     "reading": 1,
+     "V": 0.499359208456105,
+     "W": 0.016337001990159736,
+     "policy_sufficient": true,
+     "tiebreak_safe_frac": 1.0
+    }
+   ]
+  },
+  {
+   "rule_id": "NodeSystemSaturation#52",
+   "budget": 0.1,
+   "K": 2,
+   "V_U": 0.6411584283597151,
+   "screen_fires": false,
+   "value_sufficient_exists": true,
+   "policy_sufficient_exists": true,
+   "readings": [
+    {
+     "reading": 1,
+     "V": 0.6411584283597151,
+     "W": 0.025535623101403834,
+     "policy_sufficient": true
+    }
+   ]
+  },
+  {
+   "rule_id": "NodeMemoryMajorPagesFaults#53",
+   "budget": 0.005,
+   "K": 2,
+   "V_U": 0.3717399105428562,
+   "screen_fires": false,
+   "value_sufficient_exists": true,
+   "policy_sufficient_exists": false,
+   "readings": [
+    {
+     "reading": 1,
+     "V": 0.37173991054285616,
+     "W": 0.007573242513620978,
+     "policy_sufficient": false,
+     "tiebreak_safe_frac": 0.7
+    }
+   ]
+  },
+  {
+   "rule_id": "NodeMemoryMajorPagesFaults#53",
+   "budget": 0.01,
+   "K": 2,
+   "V_U": 0.38591983253321727,
+   "screen_fires": false,
+   "value_sufficient_exists": true,
+   "policy_sufficient_exists": true,
+   "readings": [
+    {
+     "reading": 1,
+     "V": 0.3859198325332174,
+     "W": 0.008774810468413705,
+     "policy_sufficient": true
+    }
+   ]
+  },
+  {
+   "rule_id": "NodeMemoryMajorPagesFaults#53",
+   "budget": 0.02,
+   "K": 2,
+   "V_U": 0.41427967651393915,
+   "screen_fires": false,
+   "value_sufficient_exists": true,
+   "policy_sufficient_exists": true,
+   "readings": [
+    {
+     "reading": 1,
+     "V": 0.4142796765139392,
+     "W": 0.010787743780532157,
+     "policy_sufficient": true
+    }
+   ]
+  },
+  {
+   "rule_id": "NodeMemoryMajorPagesFaults#53",
+   "budget": 0.05,
+   "K": 2,
+   "V_U": 0.49935920845610526,
+   "screen_fires": false,
+   "value_sufficient_exists": true,
+   "policy_sufficient_exists": true,
+   "readings": [
+    {
+     "reading": 1,
+     "V": 0.499359208456105,
+     "W": 0.016337001990159736,
+     "policy_sufficient": true,
+     "tiebreak_safe_frac": 1.0
+    }
+   ]
+  },
+  {
+   "rule_id": "NodeMemoryMajorPagesFaults#53",
+   "budget": 0.1,
+   "K": 2,
+   "V_U": 0.6411584283597151,
+   "screen_fires": false,
+   "value_sufficient_exists": true,
+   "policy_sufficient_exists": true,
+   "readings": [
+    {
+     "reading": 1,
+     "V": 0.6411584283597151,
+     "W": 0.025535623101403834,
+     "policy_sufficient": true
+    }
+   ]
+  },
+  {
+   "rule_id": "NodeMemoryHighUtilization#54",
+   "budget": 0.005,
+   "K": 2,
+   "V_U": 0.3717399105428562,
+   "screen_fires": false,
+   "value_sufficient_exists": true,
+   "policy_sufficient_exists": false,
+   "readings": [
+    {
+     "reading": 1,
+     "V": 0.37173991054285616,
+     "W": 0.007573242513620978,
+     "policy_sufficient": false,
+     "tiebreak_safe_frac": 0.71
+    }
+   ]
+  },
+  {
+   "rule_id": "NodeMemoryHighUtilization#54",
+   "budget": 0.01,
+   "K": 2,
+   "V_U": 0.38591983253321727,
+   "screen_fires": false,
+   "value_sufficient_exists": true,
+   "policy_sufficient_exists": true,
+   "readings": [
+    {
+     "reading": 1,
+     "V": 0.3859198325332174,
+     "W": 0.008774810468413705,
+     "policy_sufficient": true
+    }
+   ]
+  },
+  {
+   "rule_id": "NodeMemoryHighUtilization#54",
+   "budget": 0.02,
+   "K": 2,
+   "V_U": 0.41427967651393915,
+   "screen_fires": false,
+   "value_sufficient_exists": true,
+   "policy_sufficient_exists": true,
+   "readings": [
+    {
+     "reading": 1,
+     "V": 0.4142796765139392,
+     "W": 0.010787743780532157,
+     "policy_sufficient": true
+    }
+   ]
+  },
+  {
+   "rule_id": "NodeMemoryHighUtilization#54",
+   "budget": 0.05,
+   "K": 2,
+   "V_U": 0.49935920845610526,
+   "screen_fires": false,
+   "value_sufficient_exists": true,
+   "policy_sufficient_exists": true,
+   "readings": [
+    {
+     "reading": 1,
+     "V": 0.499359208456105,
+     "W": 0.016337001990159736,
+     "policy_sufficient": true,
+     "tiebreak_safe_frac": 1.0
+    }
+   ]
+  },
+  {
+   "rule_id": "NodeMemoryHighUtilization#54",
+   "budget": 0.1,
+   "K": 2,
+   "V_U": 0.6411584283597151,
+   "screen_fires": false,
+   "value_sufficient_exists": true,
+   "policy_sufficient_exists": true,
+   "readings": [
+    {
+     "reading": 1,
+     "V": 0.6411584283597151,
+     "W": 0.025535623101403834,
+     "policy_sufficient": true
+    }
+   ]
+  },
+  {
+   "rule_id": "NodeDiskIOSaturation#55",
+   "budget": 0.005,
+   "K": 2,
+   "V_U": 0.3717399105428562,
+   "screen_fires": false,
+   "value_sufficient_exists": true,
+   "policy_sufficient_exists": false,
+   "readings": [
+    {
+     "reading": 1,
+     "V": 0.37173991054285616,
+     "W": 0.007573242513620978,
+     "policy_sufficient": false,
+     "tiebreak_safe_frac": 0.74
+    }
+   ]
+  },
+  {
+   "rule_id": "NodeDiskIOSaturation#55",
+   "budget": 0.01,
+   "K": 2,
+   "V_U": 0.38591983253321727,
+   "screen_fires": false,
+   "value_sufficient_exists": true,
+   "policy_sufficient_exists": true,
+   "readings": [
+    {
+     "reading": 1,
+     "V": 0.3859198325332174,
+     "W": 0.008774810468413705,
+     "policy_sufficient": true
+    }
+   ]
+  },
+  {
+   "rule_id": "NodeDiskIOSaturation#55",
+   "budget": 0.02,
+   "K": 2,
+   "V_U": 0.41427967651393915,
+   "screen_fires": false,
+   "value_sufficient_exists": true,
+   "policy_sufficient_exists": true,
+   "readings": [
+    {
+     "reading": 1,
+     "V": 0.4142796765139392,
+     "W": 0.010787743780532157,
+     "policy_sufficient": true
+    }
+   ]
+  },
+  {
+   "rule_id": "NodeDiskIOSaturation#55",
+   "budget": 0.05,
+   "K": 2,
+   "V_U": 0.49935920845610526,
+   "screen_fires": false,
+   "value_sufficient_exists": true,
+   "policy_sufficient_exists": true,
+   "readings": [
+    {
+     "reading": 1,
+     "V": 0.499359208456105,
+     "W": 0.016337001990159736,
+     "policy_sufficient": true,
+     "tiebreak_safe_frac": 1.0
+    }
+   ]
+  },
+  {
+   "rule_id": "NodeDiskIOSaturation#55",
+   "budget": 0.1,
+   "K": 2,
+   "V_U": 0.6411584283597151,
+   "screen_fires": false,
+   "value_sufficient_exists": true,
+   "policy_sufficient_exists": true,
+   "readings": [
+    {
+     "reading": 1,
+     "V": 0.6411584283597151,
+     "W": 0.025535623101403834,
+     "policy_sufficient": true
+    }
+   ]
+  },
+  {
+   "rule_id": "NodeSystemdServiceCrashlooping#57",
+   "budget": 0.005,
+   "K": 2,
+   "V_U": 0.3717399105428562,
+   "screen_fires": false,
+   "value_sufficient_exists": true,
+   "policy_sufficient_exists": false,
+   "readings": [
+    {
+     "reading": 1,
+     "V": 0.37173991054285616,
+     "W": 0.007573242513620978,
+     "policy_sufficient": false,
+     "tiebreak_safe_frac": 0.64
+    }
+   ]
+  },
+  {
+   "rule_id": "NodeSystemdServiceCrashlooping#57",
+   "budget": 0.01,
+   "K": 2,
+   "V_U": 0.38591983253321727,
+   "screen_fires": false,
+   "value_sufficient_exists": true,
+   "policy_sufficient_exists": true,
+   "readings": [
+    {
+     "reading": 1,
+     "V": 0.3859198325332174,
+     "W": 0.008774810468413705,
+     "policy_sufficient": true
+    }
+   ]
+  },
+  {
+   "rule_id": "NodeSystemdServiceCrashlooping#57",
+   "budget": 0.02,
+   "K": 2,
+   "V_U": 0.41427967651393915,
+   "screen_fires": false,
+   "value_sufficient_exists": true,
+   "policy_sufficient_exists": true,
+   "readings": [
+    {
+     "reading": 1,
+     "V": 0.4142796765139392,
+     "W": 0.010787743780532157,
+     "policy_sufficient": true
+    }
+   ]
+  },
+  {
+   "rule_id": "NodeSystemdServiceCrashlooping#57",
+   "budget": 0.05,
+   "K": 2,
+   "V_U": 0.49935920845610526,
+   "screen_fires": false,
+   "value_sufficient_exists": true,
+   "policy_sufficient_exists": true,
+   "readings": [
+    {
+     "reading": 1,
+     "V": 0.499359208456105,
+     "W": 0.016337001990159736,
+     "policy_sufficient": true,
+     "tiebreak_safe_frac": 1.0
+    }
+   ]
+  },
+  {
+   "rule_id": "NodeSystemdServiceCrashlooping#57",
+   "budget": 0.1,
+   "K": 2,
+   "V_U": 0.6411584283597151,
+   "screen_fires": false,
+   "value_sufficient_exists": true,
+   "policy_sufficient_exists": true,
+   "readings": [
+    {
+     "reading": 1,
+     "V": 0.6411584283597151,
+     "W": 0.025535623101403834,
+     "policy_sufficient": true
+    }
+   ]
+  },
+  {
+   "rule_id": "PrometheusErrorSendingAlertsToSomeAlertmanagers#62",
+   "budget": 0.005,
+   "K": 2,
+   "V_U": 0.3717399105428562,
+   "screen_fires": false,
+   "value_sufficient_exists": true,
+   "policy_sufficient_exists": false,
+   "readings": [
+    {
+     "reading": 1,
+     "V": 0.37173991054285616,
+     "W": 0.007573242513620978,
+     "policy_sufficient": false,
+     "tiebreak_safe_frac": 0.77
+    }
+   ]
+  },
+  {
+   "rule_id": "PrometheusErrorSendingAlertsToSomeAlertmanagers#62",
+   "budget": 0.01,
+   "K": 2,
+   "V_U": 0.38591983253321727,
+   "screen_fires": false,
+   "value_sufficient_exists": true,
+   "policy_sufficient_exists": true,
+   "readings": [
+    {
+     "reading": 1,
+     "V": 0.3859198325332174,
+     "W": 0.008774810468413705,
+     "policy_sufficient": true
+    }
+   ]
+  },
+  {
+   "rule_id": "PrometheusErrorSendingAlertsToSomeAlertmanagers#62",
+   "budget": 0.02,
+   "K": 2,
+   "V_U": 0.41427967651393915,
+   "screen_fires": false,
+   "value_sufficient_exists": true,
+   "policy_sufficient_exists": true,
+   "readings": [
+    {
+     "reading": 1,
+     "V": 0.4142796765139392,
+     "W": 0.010787743780532157,
+     "policy_sufficient": true
+    }
+   ]
+  },
+  {
+   "rule_id": "PrometheusErrorSendingAlertsToSomeAlertmanagers#62",
+   "budget": 0.05,
+   "K": 2,
+   "V_U": 0.49935920845610526,
+   "screen_fires": false,
+   "value_sufficient_exists": true,
+   "policy_sufficient_exists": true,
+   "readings": [
+    {
+     "reading": 1,
+     "V": 0.499359208456105,
+     "W": 0.016337001990159736,
+     "policy_sufficient": true,
+     "tiebreak_safe_frac": 1.0
+    }
+   ]
+  },
+  {
+   "rule_id": "PrometheusErrorSendingAlertsToSomeAlertmanagers#62",
+   "budget": 0.1,
+   "K": 2,
+   "V_U": 0.6411584283597151,
+   "screen_fires": false,
+   "value_sufficient_exists": true,
+   "policy_sufficient_exists": true,
+   "readings": [
+    {
+     "reading": 1,
+     "V": 0.6411584283597151,
+     "W": 0.025535623101403834,
+     "policy_sufficient": true
+    }
+   ]
+  },
+  {
+   "rule_id": "PrometheusRemoteStorageFailures#68",
+   "budget": 0.005,
+   "K": 2,
+   "V_U": 0.3717399105428562,
+   "screen_fires": false,
+   "value_sufficient_exists": true,
+   "policy_sufficient_exists": false,
+   "readings": [
+    {
+     "reading": 1,
+     "V": 0.37173991054285616,
+     "W": 0.007573242513620978,
+     "policy_sufficient": false,
+     "tiebreak_safe_frac": 0.68
+    }
+   ]
+  },
+  {
+   "rule_id": "PrometheusRemoteStorageFailures#68",
+   "budget": 0.01,
+   "K": 2,
+   "V_U": 0.38591983253321727,
+   "screen_fires": false,
+   "value_sufficient_exists": true,
+   "policy_sufficient_exists": true,
+   "readings": [
+    {
+     "reading": 1,
+     "V": 0.3859198325332174,
+     "W": 0.008774810468413705,
+     "policy_sufficient": true
+    }
+   ]
+  },
+  {
+   "rule_id": "PrometheusRemoteStorageFailures#68",
+   "budget": 0.02,
+   "K": 2,
+   "V_U": 0.41427967651393915,
+   "screen_fires": false,
+   "value_sufficient_exists": true,
+   "policy_sufficient_exists": true,
+   "readings": [
+    {
+     "reading": 1,
+     "V": 0.4142796765139392,
+     "W": 0.010787743780532157,
+     "policy_sufficient": true
+    }
+   ]
+  },
+  {
+   "rule_id": "PrometheusRemoteStorageFailures#68",
+   "budget": 0.05,
+   "K": 2,
+   "V_U": 0.49935920845610526,
+   "screen_fires": false,
+   "value_sufficient_exists": true,
+   "policy_sufficient_exists": true,
+   "readings": [
+    {
+     "reading": 1,
+     "V": 0.499359208456105,
+     "W": 0.016337001990159736,
+     "policy_sufficient": true,
+     "tiebreak_safe_frac": 1.0
+    }
+   ]
+  },
+  {
+   "rule_id": "PrometheusRemoteStorageFailures#68",
+   "budget": 0.1,
+   "K": 2,
+   "V_U": 0.6411584283597151,
+   "screen_fires": false,
+   "value_sufficient_exists": true,
+   "policy_sufficient_exists": true,
+   "readings": [
+    {
+     "reading": 1,
+     "V": 0.6411584283597151,
+     "W": 0.025535623101403834,
+     "policy_sufficient": true
+    }
+   ]
+  },
+  {
+   "rule_id": "PrometheusRemoteWriteBehind#69",
+   "budget": 0.005,
+   "K": 2,
+   "V_U": 0.3717399105428562,
+   "screen_fires": false,
+   "value_sufficient_exists": true,
+   "policy_sufficient_exists": false,
+   "readings": [
+    {
+     "reading": 1,
+     "V": 0.37173991054285616,
+     "W": 0.007573242513620978,
+     "policy_sufficient": false,
+     "tiebreak_safe_frac": 0.73
+    }
+   ]
+  },
+  {
+   "rule_id": "PrometheusRemoteWriteBehind#69",
+   "budget": 0.01,
+   "K": 2,
+   "V_U": 0.38591983253321727,
+   "screen_fires": false,
+   "value_sufficient_exists": true,
+   "policy_sufficient_exists": true,
+   "readings": [
+    {
+     "reading": 1,
+     "V": 0.3859198325332174,
+     "W": 0.008774810468413705,
+     "policy_sufficient": true
+    }
+   ]
+  },
+  {
+   "rule_id": "PrometheusRemoteWriteBehind#69",
+   "budget": 0.02,
+   "K": 2,
+   "V_U": 0.41427967651393915,
+   "screen_fires": false,
+   "value_sufficient_exists": true,
+   "policy_sufficient_exists": true,
+   "readings": [
+    {
+     "reading": 1,
+     "V": 0.4142796765139392,
+     "W": 0.010787743780532157,
+     "policy_sufficient": true
+    }
+   ]
+  },
+  {
+   "rule_id": "PrometheusRemoteWriteBehind#69",
+   "budget": 0.05,
+   "K": 2,
+   "V_U": 0.49935920845610526,
+   "screen_fires": false,
+   "value_sufficient_exists": true,
+   "policy_sufficient_exists": true,
+   "readings": [
+    {
+     "reading": 1,
+     "V": 0.499359208456105,
+     "W": 0.016337001990159736,
+     "policy_sufficient": true,
+     "tiebreak_safe_frac": 1.0
+    }
+   ]
+  },
+  {
+   "rule_id": "PrometheusRemoteWriteBehind#69",
+   "budget": 0.1,
+   "K": 2,
+   "V_U": 0.6411584283597151,
+   "screen_fires": false,
+   "value_sufficient_exists": true,
+   "policy_sufficient_exists": true,
+   "readings": [
+    {
+     "reading": 1,
+     "V": 0.6411584283597151,
+     "W": 0.025535623101403834,
+     "policy_sufficient": true
+    }
+   ]
+  },
+  {
+   "rule_id": "PrometheusHighQueryLoad#77",
+   "budget": 0.005,
+   "K": 2,
+   "V_U": 0.3717399105428562,
+   "screen_fires": false,
+   "value_sufficient_exists": true,
+   "policy_sufficient_exists": false,
+   "readings": [
+    {
+     "reading": 1,
+     "V": 0.37173991054285616,
+     "W": 0.007573242513620978,
+     "policy_sufficient": false,
+     "tiebreak_safe_frac": 0.72
+    }
+   ]
+  },
+  {
+   "rule_id": "PrometheusHighQueryLoad#77",
+   "budget": 0.01,
+   "K": 2,
+   "V_U": 0.38591983253321727,
+   "screen_fires": false,
+   "value_sufficient_exists": true,
+   "policy_sufficient_exists": true,
+   "readings": [
+    {
+     "reading": 1,
+     "V": 0.3859198325332174,
+     "W": 0.008774810468413705,
+     "policy_sufficient": true
+    }
+   ]
+  },
+  {
+   "rule_id": "PrometheusHighQueryLoad#77",
+   "budget": 0.02,
+   "K": 2,
+   "V_U": 0.41427967651393915,
+   "screen_fires": false,
+   "value_sufficient_exists": true,
+   "policy_sufficient_exists": true,
+   "readings": [
+    {
+     "reading": 1,
+     "V": 0.4142796765139392,
+     "W": 0.010787743780532157,
+     "policy_sufficient": true
+    }
+   ]
+  },
+  {
+   "rule_id": "PrometheusHighQueryLoad#77",
+   "budget": 0.05,
+   "K": 2,
+   "V_U": 0.49935920845610526,
+   "screen_fires": false,
+   "value_sufficient_exists": true,
+   "policy_sufficient_exists": true,
+   "readings": [
+    {
+     "reading": 1,
+     "V": 0.499359208456105,
+     "W": 0.016337001990159736,
+     "policy_sufficient": true,
+     "tiebreak_safe_frac": 1.0
+    }
+   ]
+  },
+  {
+   "rule_id": "PrometheusHighQueryLoad#77",
+   "budget": 0.1,
+   "K": 2,
+   "V_U": 0.6411584283597151,
+   "screen_fires": false,
+   "value_sufficient_exists": true,
+   "policy_sufficient_exists": true,
+   "readings": [
+    {
+     "reading": 1,
+     "V": 0.6411584283597151,
+     "W": 0.025535623101403834,
+     "policy_sufficient": true
+    }
+   ]
+  },
+  {
+   "rule_id": "PrometheusErrorSendingAlertsToAnyAlertmanager#78",
+   "budget": 0.005,
+   "K": 2,
+   "V_U": 0.3717399105428562,
+   "screen_fires": false,
+   "value_sufficient_exists": true,
+   "policy_sufficient_exists": false,
+   "readings": [
+    {
+     "reading": 1,
+     "V": 0.37173991054285616,
+     "W": 0.007573242513620978,
+     "policy_sufficient": false,
+     "tiebreak_safe_frac": 0.66
+    }
+   ]
+  },
+  {
+   "rule_id": "PrometheusErrorSendingAlertsToAnyAlertmanager#78",
+   "budget": 0.01,
+   "K": 2,
+   "V_U": 0.38591983253321727,
+   "screen_fires": false,
+   "value_sufficient_exists": true,
+   "policy_sufficient_exists": true,
+   "readings": [
+    {
+     "reading": 1,
+     "V": 0.3859198325332174,
+     "W": 0.008774810468413705,
+     "policy_sufficient": true
+    }
+   ]
+  },
+  {
+   "rule_id": "PrometheusErrorSendingAlertsToAnyAlertmanager#78",
+   "budget": 0.02,
+   "K": 2,
+   "V_U": 0.41427967651393915,
+   "screen_fires": false,
+   "value_sufficient_exists": true,
+   "policy_sufficient_exists": true,
+   "readings": [
+    {
+     "reading": 1,
+     "V": 0.4142796765139392,
+     "W": 0.010787743780532157,
+     "policy_sufficient": true
+    }
+   ]
+  },
+  {
+   "rule_id": "PrometheusErrorSendingAlertsToAnyAlertmanager#78",
+   "budget": 0.05,
+   "K": 2,
+   "V_U": 0.49935920845610526,
+   "screen_fires": false,
+   "value_sufficient_exists": true,
+   "policy_sufficient_exists": true,
+   "readings": [
+    {
+     "reading": 1,
+     "V": 0.499359208456105,
+     "W": 0.016337001990159736,
+     "policy_sufficient": true,
+     "tiebreak_safe_frac": 1.0
+    }
+   ]
+  },
+  {
+   "rule_id": "PrometheusErrorSendingAlertsToAnyAlertmanager#78",
+   "budget": 0.1,
+   "K": 2,
+   "V_U": 0.6411584283597151,
+   "screen_fires": false,
+   "value_sufficient_exists": true,
+   "policy_sufficient_exists": true,
+   "readings": [
+    {
+     "reading": 1,
+     "V": 0.6411584283597151,
+     "W": 0.025535623101403834,
+     "policy_sufficient": true
+    }
+   ]
+  },
+  {
+   "rule_id": "PrometheusOperatorListErrors#79",
+   "budget": 0.005,
+   "K": 2,
+   "V_U": 0.3717399105428562,
+   "screen_fires": false,
+   "value_sufficient_exists": true,
+   "policy_sufficient_exists": false,
+   "readings": [
+    {
+     "reading": 1,
+     "V": 0.37173991054285616,
+     "W": 0.007573242513620978,
+     "policy_sufficient": false,
+     "tiebreak_safe_frac": 0.65
+    }
+   ]
+  },
+  {
+   "rule_id": "PrometheusOperatorListErrors#79",
+   "budget": 0.01,
+   "K": 2,
+   "V_U": 0.38591983253321727,
+   "screen_fires": false,
+   "value_sufficient_exists": true,
+   "policy_sufficient_exists": true,
+   "readings": [
+    {
+     "reading": 1,
+     "V": 0.3859198325332174,
+     "W": 0.008774810468413705,
+     "policy_sufficient": true
+    }
+   ]
+  },
+  {
+   "rule_id": "PrometheusOperatorListErrors#79",
+   "budget": 0.02,
+   "K": 2,
+   "V_U": 0.41427967651393915,
+   "screen_fires": false,
+   "value_sufficient_exists": true,
+   "policy_sufficient_exists": true,
+   "readings": [
+    {
+     "reading": 1,
+     "V": 0.4142796765139392,
+     "W": 0.010787743780532157,
+     "policy_sufficient": true
+    }
+   ]
+  },
+  {
+   "rule_id": "PrometheusOperatorListErrors#79",
+   "budget": 0.05,
+   "K": 2,
+   "V_U": 0.49935920845610526,
+   "screen_fires": false,
+   "value_sufficient_exists": true,
+   "policy_sufficient_exists": true,
+   "readings": [
+    {
+     "reading": 1,
+     "V": 0.499359208456105,
+     "W": 0.016337001990159736,
+     "policy_sufficient": true,
+     "tiebreak_safe_frac": 1.0
+    }
+   ]
+  },
+  {
+   "rule_id": "PrometheusOperatorListErrors#79",
+   "budget": 0.1,
+   "K": 2,
+   "V_U": 0.6411584283597151,
+   "screen_fires": false,
+   "value_sufficient_exists": true,
+   "policy_sufficient_exists": true,
+   "readings": [
+    {
+     "reading": 1,
+     "V": 0.6411584283597151,
+     "W": 0.025535623101403834,
+     "policy_sufficient": true
+    }
+   ]
+  },
+  {
+   "rule_id": "PrometheusOperatorWatchErrors#80",
+   "budget": 0.005,
+   "K": 2,
+   "V_U": 0.3717399105428562,
+   "screen_fires": false,
+   "value_sufficient_exists": true,
+   "policy_sufficient_exists": false,
+   "readings": [
+    {
+     "reading": 1,
+     "V": 0.37173991054285616,
+     "W": 0.007573242513620978,
+     "policy_sufficient": false,
+     "tiebreak_safe_frac": 0.72
+    }
+   ]
+  },
+  {
+   "rule_id": "PrometheusOperatorWatchErrors#80",
+   "budget": 0.01,
+   "K": 2,
+   "V_U": 0.38591983253321727,
+   "screen_fires": false,
+   "value_sufficient_exists": true,
+   "policy_sufficient_exists": true,
+   "readings": [
+    {
+     "reading": 1,
+     "V": 0.3859198325332174,
+     "W": 0.008774810468413705,
+     "policy_sufficient": true
+    }
+   ]
+  },
+  {
+   "rule_id": "PrometheusOperatorWatchErrors#80",
+   "budget": 0.02,
+   "K": 2,
+   "V_U": 0.41427967651393915,
+   "screen_fires": false,
+   "value_sufficient_exists": true,
+   "policy_sufficient_exists": true,
+   "readings": [
+    {
+     "reading": 1,
+     "V": 0.4142796765139392,
+     "W": 0.010787743780532157,
+     "policy_sufficient": true
+    }
+   ]
+  },
+  {
+   "rule_id": "PrometheusOperatorWatchErrors#80",
+   "budget": 0.05,
+   "K": 2,
+   "V_U": 0.49935920845610526,
+   "screen_fires": false,
+   "value_sufficient_exists": true,
+   "policy_sufficient_exists": true,
+   "readings": [
+    {
+     "reading": 1,
+     "V": 0.499359208456105,
+     "W": 0.016337001990159736,
+     "policy_sufficient": true,
+     "tiebreak_safe_frac": 1.0
+    }
+   ]
+  },
+  {
+   "rule_id": "PrometheusOperatorWatchErrors#80",
+   "budget": 0.1,
+   "K": 2,
+   "V_U": 0.6411584283597151,
+   "screen_fires": false,
+   "value_sufficient_exists": true,
+   "policy_sufficient_exists": true,
+   "readings": [
+    {
+     "reading": 1,
+     "V": 0.6411584283597151,
+     "W": 0.025535623101403834,
+     "policy_sufficient": true
+    }
+   ]
+  },
+  {
+   "rule_id": "PrometheusOperatorReconcileErrors#82",
+   "budget": 0.005,
+   "K": 2,
+   "V_U": 0.3717399105428562,
+   "screen_fires": false,
+   "value_sufficient_exists": true,
+   "policy_sufficient_exists": false,
+   "readings": [
+    {
+     "reading": 1,
+     "V": 0.37173991054285616,
+     "W": 0.007573242513620978,
+     "policy_sufficient": false,
+     "tiebreak_safe_frac": 0.71
+    }
+   ]
+  },
+  {
+   "rule_id": "PrometheusOperatorReconcileErrors#82",
+   "budget": 0.01,
+   "K": 2,
+   "V_U": 0.38591983253321727,
+   "screen_fires": false,
+   "value_sufficient_exists": true,
+   "policy_sufficient_exists": true,
+   "readings": [
+    {
+     "reading": 1,
+     "V": 0.3859198325332174,
+     "W": 0.008774810468413705,
+     "policy_sufficient": true
+    }
+   ]
+  },
+  {
+   "rule_id": "PrometheusOperatorReconcileErrors#82",
+   "budget": 0.02,
+   "K": 2,
+   "V_U": 0.41427967651393915,
+   "screen_fires": false,
+   "value_sufficient_exists": true,
+   "policy_sufficient_exists": true,
+   "readings": [
+    {
+     "reading": 1,
+     "V": 0.4142796765139392,
+     "W": 0.010787743780532157,
+     "policy_sufficient": true
+    }
+   ]
+  },
+  {
+   "rule_id": "PrometheusOperatorReconcileErrors#82",
+   "budget": 0.05,
+   "K": 2,
+   "V_U": 0.49935920845610526,
+   "screen_fires": false,
+   "value_sufficient_exists": true,
+   "policy_sufficient_exists": true,
+   "readings": [
+    {
+     "reading": 1,
+     "V": 0.499359208456105,
+     "W": 0.016337001990159736,
+     "policy_sufficient": true,
+     "tiebreak_safe_frac": 1.0
+    }
+   ]
+  },
+  {
+   "rule_id": "PrometheusOperatorReconcileErrors#82",
+   "budget": 0.1,
+   "K": 2,
+   "V_U": 0.6411584283597151,
+   "screen_fires": false,
+   "value_sufficient_exists": true,
+   "policy_sufficient_exists": true,
+   "readings": [
+    {
+     "reading": 1,
+     "V": 0.6411584283597151,
+     "W": 0.025535623101403834,
+     "policy_sufficient": true
+    }
+   ]
+  },
+  {
+   "rule_id": "PrometheusOperatorStatusUpdateErrors#83",
+   "budget": 0.005,
+   "K": 2,
+   "V_U": 0.3717399105428562,
+   "screen_fires": false,
+   "value_sufficient_exists": true,
+   "policy_sufficient_exists": false,
+   "readings": [
+    {
+     "reading": 1,
+     "V": 0.37173991054285616,
+     "W": 0.007573242513620978,
+     "policy_sufficient": false,
+     "tiebreak_safe_frac": 0.64
+    }
+   ]
+  },
+  {
+   "rule_id": "PrometheusOperatorStatusUpdateErrors#83",
+   "budget": 0.01,
+   "K": 2,
+   "V_U": 0.38591983253321727,
+   "screen_fires": false,
+   "value_sufficient_exists": true,
+   "policy_sufficient_exists": true,
+   "readings": [
+    {
+     "reading": 1,
+     "V": 0.3859198325332174,
+     "W": 0.008774810468413705,
+     "policy_sufficient": true
+    }
+   ]
+  },
+  {
+   "rule_id": "PrometheusOperatorStatusUpdateErrors#83",
+   "budget": 0.02,
+   "K": 2,
+   "V_U": 0.41427967651393915,
+   "screen_fires": false,
+   "value_sufficient_exists": true,
+   "policy_sufficient_exists": true,
+   "readings": [
+    {
+     "reading": 1,
+     "V": 0.4142796765139392,
+     "W": 0.010787743780532157,
+     "policy_sufficient": true
+    }
+   ]
+  },
+  {
+   "rule_id": "PrometheusOperatorStatusUpdateErrors#83",
+   "budget": 0.05,
+   "K": 2,
+   "V_U": 0.49935920845610526,
+   "screen_fires": false,
+   "value_sufficient_exists": true,
+   "policy_sufficient_exists": true,
+   "readings": [
+    {
+     "reading": 1,
+     "V": 0.499359208456105,
+     "W": 0.016337001990159736,
+     "policy_sufficient": true,
+     "tiebreak_safe_frac": 1.0
+    }
+   ]
+  },
+  {
+   "rule_id": "PrometheusOperatorStatusUpdateErrors#83",
+   "budget": 0.1,
+   "K": 2,
+   "V_U": 0.6411584283597151,
+   "screen_fires": false,
+   "value_sufficient_exists": true,
+   "policy_sufficient_exists": true,
+   "readings": [
+    {
+     "reading": 1,
+     "V": 0.6411584283597151,
+     "W": 0.025535623101403834,
+     "policy_sufficient": true
+    }
+   ]
+  },
+  {
+   "rule_id": "PrometheusOperatorNodeLookupErrors#84",
+   "budget": 0.005,
+   "K": 2,
+   "V_U": 0.3717399105428562,
+   "screen_fires": false,
+   "value_sufficient_exists": true,
+   "policy_sufficient_exists": false,
+   "readings": [
+    {
+     "reading": 1,
+     "V": 0.37173991054285616,
+     "W": 0.007573242513620978,
+     "policy_sufficient": false,
+     "tiebreak_safe_frac": 0.74
+    }
+   ]
+  },
+  {
+   "rule_id": "PrometheusOperatorNodeLookupErrors#84",
+   "budget": 0.01,
+   "K": 2,
+   "V_U": 0.38591983253321727,
+   "screen_fires": false,
+   "value_sufficient_exists": true,
+   "policy_sufficient_exists": true,
+   "readings": [
+    {
+     "reading": 1,
+     "V": 0.3859198325332174,
+     "W": 0.008774810468413705,
+     "policy_sufficient": true
+    }
+   ]
+  },
+  {
+   "rule_id": "PrometheusOperatorNodeLookupErrors#84",
+   "budget": 0.02,
+   "K": 2,
+   "V_U": 0.41427967651393915,
+   "screen_fires": false,
+   "value_sufficient_exists": true,
+   "policy_sufficient_exists": true,
+   "readings": [
+    {
+     "reading": 1,
+     "V": 0.4142796765139392,
+     "W": 0.010787743780532157,
+     "policy_sufficient": true
+    }
+   ]
+  },
+  {
+   "rule_id": "PrometheusOperatorNodeLookupErrors#84",
+   "budget": 0.05,
+   "K": 2,
+   "V_U": 0.49935920845610526,
+   "screen_fires": false,
+   "value_sufficient_exists": true,
+   "policy_sufficient_exists": true,
+   "readings": [
+    {
+     "reading": 1,
+     "V": 0.499359208456105,
+     "W": 0.016337001990159736,
+     "policy_sufficient": true,
+     "tiebreak_safe_frac": 1.0
+    }
+   ]
+  },
+  {
+   "rule_id": "PrometheusOperatorNodeLookupErrors#84",
+   "budget": 0.1,
+   "K": 2,
+   "V_U": 0.6411584283597151,
+   "screen_fires": false,
+   "value_sufficient_exists": true,
+   "policy_sufficient_exists": true,
+   "readings": [
+    {
+     "reading": 1,
+     "V": 0.6411584283597151,
+     "W": 0.025535623101403834,
+     "policy_sufficient": true
+    }
+   ]
+  }
+ ]
+}

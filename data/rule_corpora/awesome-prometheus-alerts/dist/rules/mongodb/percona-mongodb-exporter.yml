@@ -1,0 +1,72 @@
+groups:
+
+- name: PerconaMongodbExporter
+
+  
+  rules:
+
+    # 1m delay allows a restart without triggering an alert.
+    - alert: MongodbDown
+      expr: 'mongodb_up == 0'
+      for: 1m
+      labels:
+        severity: critical
+      annotations:
+        summary: MongoDB Down (instance {{ $labels.instance }})
+        description: "MongoDB instance is down\n  VALUE = {{ $value }}\n  LABELS = {{ $labels }}"
+
+    # 1m delay allows a restart without triggering an alert.
+    - alert: MongodbReplicaMemberUnhealthy
+      expr: 'mongodb_rs_members_health == 0'
+      for: 1m
+      labels:
+        severity: critical
+      annotations:
+        summary: Mongodb replica member unhealthy (instance {{ $labels.instance }})
+        description: "MongoDB replica member is not healthy\n  VALUE = {{ $value }}\n  LABELS = {{ $labels }}"
+
+    - alert: MongodbReplicationLag(percona)
+      expr: '(mongodb_rs_members_optimeDate{member_state="PRIMARY"} - on (set) group_right mongodb_rs_members_optimeDate{member_state="SECONDARY"}) / 1000 > 10'
+      for: 0m
+      labels:
+        severity: critical
+      annotations:
+        summary: MongoDB replication lag (Percona) (instance {{ $labels.instance }})
+        description: "Mongodb replication lag is more than 10s\n  VALUE = {{ $value }}\n  LABELS = {{ $labels }}"
+
+    # This query mixes old (mongodb_mongod_*) and new (mongodb_rs_*) metric names. It requires the Percona exporter to run with --compatible-mode to expose both.
+    - alert: MongodbReplicationHeadroom
+      expr: 'sum(avg(mongodb_mongod_replset_oplog_head_timestamp - mongodb_mongod_replset_oplog_tail_timestamp)) - sum(avg(mongodb_rs_members_optimeDate{member_state="PRIMARY"} - on (set) group_right mongodb_rs_members_optimeDate{member_state="SECONDARY"})) <= 0'
+      for: 0m
+      labels:
+        severity: critical
+      annotations:
+        summary: MongoDB replication headroom (instance {{ $labels.instance }})
+        description: "MongoDB replication headroom is <= 0\n  VALUE = {{ $value }}\n  LABELS = {{ $labels }}"
+
+    - alert: MongodbNumberCursorsOpen(percona)
+      expr: 'mongodb_ss_metrics_cursor_open{csr_type="total"} > 10 * 1000'
+      for: 2m
+      labels:
+        severity: warning
+      annotations:
+        summary: MongoDB number cursors open (Percona) (instance {{ $labels.instance }})
+        description: "Too many cursors opened by MongoDB for clients (> 10k)\n  VALUE = {{ $value }}\n  LABELS = {{ $labels }}"
+
+    - alert: MongodbCursorsTimeouts(percona)
+      expr: 'increase(mongodb_ss_metrics_cursor_timedOut[1m]) > 100'
+      for: 2m
+      labels:
+        severity: warning
+      annotations:
+        summary: MongoDB cursors timeouts (Percona) (instance {{ $labels.instance }})
+        description: "Too many cursors are timing out ({{ $value }} in the last minute)\n  VALUE = {{ $value }}\n  LABELS = {{ $labels }}"
+
+    - alert: MongodbTooManyConnections(percona)
+      expr: 'mongodb_ss_connections{conn_type="current"} / (mongodb_ss_connections{conn_type="current"} + mongodb_ss_connections{conn_type="available"}) * 100 > 80 and (mongodb_ss_connections{conn_type="current"} + mongodb_ss_connections{conn_type="available"}) > 0'
+      for: 2m
+      labels:
+        severity: warning
+      annotations:
+        summary: MongoDB too many connections (Percona) (instance {{ $labels.instance }})
+        description: "Too many connections (> 80%)\n  VALUE = {{ $value }}\n  LABELS = {{ $labels }}"

@@ -1,0 +1,15 @@
+{
+  "id": "task_011",
+  "question": "What is Python named after?",
+  "source_docs": [
+    "python_language.txt"
+  ],
+  "rubric": [
+    [
+      "monty python",
+      "comedy",
+      "monty"
+    ]
+  ],
+  "reference": "The comedy group Monty Python, not the snake."
+}

@@ -1,0 +1,82 @@
+{
+ "task": "OfflineBallCircle-v0",
+ "learner": "bcql",
+ "crossing": "hi_scope",
+ "seed": 2,
+ "witness": {
+  "s_hi": 11.398621845245362,
+  "s_scope": 9.871522426605225,
+  "r_scope": 0.8850005567073822,
+  "frac_a_only": 0.04512415349887133,
+  "frac_b_only": 0.030457110609480812,
+  "frac_both": 0.054875846501128665
+ },
+ "arms": {
+  "single_a": {
+   "agg": {
+    "ret": 794.5701012040829,
+    "cost_a": 20.99,
+    "cost_b": 16.63,
+    "cost_native": 57.47,
+    "len": 200.0,
+    "viol_a": 0.5,
+    "viol_b": 0.13,
+    "train_sec": 2597.5,
+    "ret_norm": 0.9013787029446334,
+    "cost_a_norm": 1.0494999999999999,
+    "cost_b_norm": 0.8314999999999999
+   },
+   "certs": {
+    "a": {
+     "viol": 50,
+     "n": 100,
+     "cp_upper": 0.6017,
+     "ships": false,
+     "hoeffding_expcost_upper": 50.59,
+     "hoeffding_vacuous": true
+    },
+    "b": {
+     "viol": 13,
+     "n": 100,
+     "cp_upper": 0.212,
+     "ships": false,
+     "hoeffding_expcost_upper": 46.23,
+     "hoeffding_vacuous": true
+    }
+   }
+  },
+  "vector": {
+   "agg": {
+    "ret": 786.6586515358448,
+    "cost_a": 19.0,
+    "cost_b": 15.81,
+    "cost_native": 56.47,
+    "len": 200.0,
+    "viol_a": 0.28,
+    "viol_b": 0.04,
+    "train_sec": 3801.3,
+    "ret_norm": 0.8923994418498429,
+    "cost_a_norm": 0.95,
+    "cost_b_norm": 0.7905
+   },
+   "certs": {
+    "a": {
+     "viol": 28,
+     "n": 100,
+     "cp_upper": 0.3787,
+     "ships": false,
+     "hoeffding_expcost_upper": 48.6,
+     "hoeffding_vacuous": true
+    },
+    "b": {
+     "viol": 4,
+     "n": 100,
+     "cp_upper": 0.0993,
+     "ships": true,
+     "hoeffding_expcost_upper": 45.41,
+     "hoeffding_vacuous": true
+    }
+   }
+  }
+ }
+}

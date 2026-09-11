@@ -1,0 +1,613 @@
+{
+ "delta_sem": 0.1,
+ "n_corpus": 11,
+ "corpus_seed": 0,
+ "achievable_delta_note": "k=floor(delta*(n+1))=1; guarantee level 1-1/12",
+ "loo": {
+  "maint-sharp": {
+   "sigma": 0.6571,
+   "qhat_loo": 0.5,
+   "covered": true,
+   "gold": "phi1: RUL_hat<15",
+   "provenance": "authored design gloss: the wear-out rule's faithful reading"
+  },
+  "maint-conservative": {
+   "sigma": 0.7429,
+   "qhat_loo": 0.5,
+   "covered": true,
+   "gold": "mid: RUL<22",
+   "provenance": "authored incident label RUL<=20 (env.py); tightest covering pool reading"
+  },
+  "maint-ambiguous": {
+   "sigma": 0.8357,
+   "qhat_loo": 0.5,
+   "covered": true,
+   "gold": "psi1: RUL_hat<20",
+   "provenance": "authored incident label RUL<=20 (env.py); the pool reading matching it"
+  },
+  "window-sharp": {
+   "sigma": 0.6286,
+   "qhat_loo": 0.5,
+   "covered": true,
+   "gold": "psi_W4: Within_4(warn)",
+   "provenance": "rule text names the reading: 'exactly the four steps'"
+  },
+  "window-ambiguous": {
+   "sigma": 0.6357,
+   "qhat_loo": 0.5,
+   "covered": true,
+   "gold": "psi_W5: Within_5(warn)",
+   "provenance": "authored hazard duration D~U{3..5} (gridworld.py dur_max=5)"
+  },
+  "window-conservative": {
+   "sigma": 0.5143,
+   "qhat_loo": 0.5,
+   "covered": true,
+   "gold": "psi_W5: Within_5(warn)",
+   "provenance": "authored hazard duration D~U{3..5} (gridworld.py dur_max=5)"
+  },
+  "budget-ambiguous": {
+   "sigma": 0.5429,
+   "qhat_loo": 0.5,
+   "covered": true,
+   "gold": "psi_$60: spend>=60",
+   "provenance": "authored over-budget label spend>=$55 (budget.py); smallest covering cap"
+  },
+  "budget-conservative": {
+   "sigma": 0.5,
+   "qhat_loo": 0.5143,
+   "covered": false,
+   "gold": "psi_$60: spend>=60",
+   "provenance": "authored over-budget label spend>=$55 (budget.py); smallest covering cap"
+  },
+  "maint-paraphrase-1": {
+   "sigma": 0.8929,
+   "qhat_loo": 0.5,
+   "covered": true,
+   "gold": "mid: RUL<22",
+   "provenance": "paraphrase of the SEVERE rule (live re-query, frozen); authored incident label RUL<=20"
+  },
+  "maint-paraphrase-2": {
+   "sigma": 0.8714,
+   "qhat_loo": 0.5,
+   "covered": true,
+   "gold": "mid: RUL<22",
+   "provenance": "paraphrase of the SEVERE rule (live re-query, frozen); authored incident label RUL<=20"
+  },
+  "maint-paraphrase-3": {
+   "sigma": 0.8714,
+   "qhat_loo": 0.5,
+   "covered": true,
+   "gold": "mid: RUL<22",
+   "provenance": "paraphrase of the SEVERE rule (live re-query, frozen); authored incident label RUL<=20"
+  }
+ },
+ "loo_coverage": 0.9090909090909091,
+ "qhat_full_corpus": 0.5,
+ "deployed": {
+  "maint-sharp": {
+   "qhat": 0.5,
+   "U_conformal": [
+    "phi1: RUL_hat<15"
+   ],
+   "U_alpha_old": [
+    "phi1: RUL_hat<15"
+   ],
+   "gold": "phi1: RUL_hat<15",
+   "gold_in_conformal": true,
+   "gold_in_old": true,
+   "binding_equal_to_old": true
+  },
+  "maint-conservative": {
+   "qhat": 0.5,
+   "U_conformal": [
+    "consv: anom>0.6",
+    "mid: RUL<22",
+    "vconsv: RUL<40"
+   ],
+   "U_alpha_old": [
+    "consv: anom>0.6",
+    "mid: RUL<22"
+   ],
+   "gold": "mid: RUL<22",
+   "gold_in_conformal": true,
+   "gold_in_old": true,
+   "binding_equal_to_old": false
+  },
+  "maint-ambiguous": {
+   "qhat": 0.5,
+   "U_conformal": [
+    "psi1: RUL_hat<20",
+    "psi2: Q05<10",
+    "psi3: anom>0.8"
+   ],
+   "U_alpha_old": [
+    "psi1: RUL_hat<20",
+    "psi2: Q05<10",
+    "psi3: anom>0.8"
+   ],
+   "gold": "psi1: RUL_hat<20",
+   "gold_in_conformal": true,
+   "gold_in_old": true,
+   "binding_equal_to_old": true
+  },
+  "window-sharp": {
+   "qhat": 0.5,
+   "U_conformal": [
+    "psi_W4: Within_4(warn)"
+   ],
+   "U_alpha_old": [
+    "psi_W4: Within_4(warn)"
+   ],
+   "gold": "psi_W4: Within_4(warn)",
+   "gold_in_conformal": true,
+   "gold_in_old": true,
+   "binding_equal_to_old": true
+  },
+  "window-ambiguous": {
+   "qhat": 0.5,
+   "U_conformal": [
+    "psi_W3: Within_3(warn)",
+    "psi_W4: Within_4(warn)",
+    "psi_W5: Within_5(warn)",
+    "psi_W6: Within_6(warn)"
+   ],
+   "U_alpha_old": [
+    "psi_W3: Within_3(warn)",
+    "psi_W4: Within_4(warn)",
+    "psi_W5: Within_5(warn)",
+    "psi_W6: Within_6(warn)"
+   ],
+   "gold": "psi_W5: Within_5(warn)",
+   "gold_in_conformal": true,
+   "gold_in_old": true,
+   "binding_equal_to_old": true
+  },
+  "window-conservative": {
+   "qhat": 0.5,
+   "U_conformal": [
+    "psi_W3: Within_3(warn)",
+    "psi_W5: Within_5(warn)"
+   ],
+   "U_alpha_old": [
+    "psi_W3: Within_3(warn)",
+    "psi_W5: Within_5(warn)"
+   ],
+   "gold": "psi_W5: Within_5(warn)",
+   "gold_in_conformal": true,
+   "gold_in_old": true,
+   "binding_equal_to_old": true
+  },
+  "budget-ambiguous": {
+   "qhat": 0.5,
+   "U_conformal": [
+    "psi_$60: spend>=60",
+    "psi_$80: spend>=80"
+   ],
+   "U_alpha_old": [
+    "psi_$60: spend>=60",
+    "psi_$80: spend>=80"
+   ],
+   "gold": "psi_$60: spend>=60",
+   "gold_in_conformal": true,
+   "gold_in_old": true,
+   "binding_equal_to_old": true
+  },
+  "budget-conservative": {
+   "qhat": 0.5143,
+   "U_conformal": [],
+   "U_alpha_old": [
+    "psi_$45: spend>=45",
+    "psi_$60: spend>=60"
+   ],
+   "gold": "psi_$60: spend>=60",
+   "gold_in_conformal": false,
+   "gold_in_old": true,
+   "binding_equal_to_old": false
+  },
+  "cmapss-FD001": {
+   "qhat": 0.5,
+   "U_conformal": [
+    "consv: anom>0.6",
+    "mid: RUL<22",
+    "vconsv: RUL<40"
+   ],
+   "U_alpha_old": [
+    "consv: anom>0.6",
+    "mid: RUL<22"
+   ],
+   "gold": "mid: RUL<22",
+   "gold_in_conformal": true,
+   "gold_in_old": true,
+   "binding_equal_to_old": false,
+   "scores": {
+    "liberal: RUL<12": 0.0,
+    "mid: RUL<22": 0.7429,
+    "consv: anom>0.6": 0.5286,
+    "vconsv: RUL<40": 0.5
+   }
+  },
+  "cmapss-FD002": {
+   "qhat": 0.5,
+   "U_conformal": [
+    "mid: RUL<22",
+    "vconsv: RUL<40"
+   ],
+   "U_alpha_old": [
+    "mid: RUL<22"
+   ],
+   "gold": "mid: RUL<22",
+   "gold_in_conformal": true,
+   "gold_in_old": true,
+   "binding_equal_to_old": false,
+   "scores": {
+    "liberal: RUL<12": 0.0,
+    "mid: RUL<22": 0.7429,
+    "consv: anom>0.6": 0.0,
+    "vconsv: RUL<40": 0.5
+   }
+  },
+  "cmapss-FD003": {
+   "qhat": 0.5,
+   "U_conformal": [
+    "consv: anom>0.6",
+    "mid: RUL<22",
+    "vconsv: RUL<40"
+   ],
+   "U_alpha_old": [
+    "consv: anom>0.6",
+    "mid: RUL<22"
+   ],
+   "gold": "mid: RUL<22",
+   "gold_in_conformal": true,
+   "gold_in_old": true,
+   "binding_equal_to_old": false,
+   "scores": {
+    "liberal: RUL<12": 0.0,
+    "mid: RUL<22": 0.7429,
+    "consv: anom>0.6": 0.5286,
+    "vconsv: RUL<40": 0.5
+   }
+  },
+  "cmapss-FD004": {
+   "qhat": 0.5,
+   "U_conformal": [
+    "consv: anom>0.6",
+    "mid: RUL<22",
+    "vconsv: RUL<40"
+   ],
+   "U_alpha_old": [
+    "consv: anom>0.6",
+    "mid: RUL<22"
+   ],
+   "gold": "mid: RUL<22",
+   "gold_in_conformal": true,
+   "gold_in_old": true,
+   "binding_equal_to_old": false,
+   "scores": {
+    "liberal: RUL<12": 0.0,
+    "mid: RUL<22": 0.7429,
+    "consv: anom>0.6": 0.5286,
+    "vconsv: RUL<40": 0.5
+   }
+  },
+  "dsrl-cost": {
+   "qhat": 0.5,
+   "U_conformal": [
+    "psi_b10: cost<=10",
+    "psi_b20: cost<=20",
+    "psi_b40: cost<=40"
+   ],
+   "U_alpha_old": [
+    "psi_b10: cost<=10",
+    "psi_b20: cost<=20",
+    "psi_b40: cost<=40"
+   ],
+   "gold": null,
+   "note": "fresh rule at deployment; canonical OSRL thresholds as pool; no data gates (no labeled semantic split on DSRL)",
+   "scores": {
+    "psi_b10: cost<=10": 0.657143,
+    "psi_b20: cost<=20": 0.847143,
+    "psi_b40: cost<=40": 0.542857
+   },
+   "rule_text": "Keep the robot's accumulated safety cost low over an episode -- brief, incidental contact with the constraint region is tolerable, but do not run up a substantial total violation."
+  }
+ },
+ "misspecification_showcase": {
+  "rule": "budget-sharp ($50 cap)",
+  "scores": {
+   "psi_$20: spend>=20": 0.0,
+   "psi_$30: spend>=30": 0.0071,
+   "psi_$45: spend>=45": 0.1571,
+   "psi_$60: spend>=60": 0.0,
+   "psi_$80: spend>=80": 0.0
+  },
+  "U_conformal_at_full_qhat": [],
+  "note": "gold spend>=50 is not in the DSL pool; every candidate scores ~0 and the conformal set is empty: the construction abstains"
+ },
+ "per_judge": {
+  "judge_0": {
+   "loo_coverage": 1.0,
+   "mean_set_size": 2.25
+  },
+  "judge_1": {
+   "loo_coverage": 0.9091,
+   "mean_set_size": 2.5
+  },
+  "judge_2": {
+   "loo_coverage": 1.0,
+   "mean_set_size": 2.625
+  },
+  "judge_3": {
+   "loo_coverage": 1.0,
+   "mean_set_size": 2.0
+  },
+  "judge_4": {
+   "loo_coverage": 1.0,
+   "mean_set_size": 2.625
+  },
+  "judge_5": {
+   "loo_coverage": 1.0,
+   "mean_set_size": 2.625
+  },
+  "judge_6": {
+   "loo_coverage": 1.0,
+   "mean_set_size": 2.375
+  }
+ },
+ "ensemble_mean_set_size": 2.0,
+ "gate_detail": {
+  "ambiguous": {
+   "psi1: RUL_hat<20": {
+    "gate": true,
+    "p_inc": 0.8824,
+    "p_norm": 0.0,
+    "plaus_mean": 0.8357
+   },
+   "psi2: Q05<10": {
+    "gate": true,
+    "p_inc": 0.6886,
+    "p_norm": 0.0,
+    "plaus_mean": 0.6143
+   },
+   "psi3: anom>0.8": {
+    "gate": true,
+    "p_inc": 0.872,
+    "p_norm": 0.0,
+    "plaus_mean": 0.5786
+   },
+   "psi4: Persist3(RUL<25)": {
+    "gate": false,
+    "p_inc": 0.4221,
+    "p_norm": 0.0,
+    "plaus_mean": 0.6429
+   }
+  },
+  "sharp": {
+   "phi1: RUL_hat<15": {
+    "gate": true,
+    "p_inc": 0.6298,
+    "p_norm": 0.0,
+    "plaus_mean": 0.6571
+   },
+   "phi2: anom>0.3": {
+    "gate": true,
+    "p_inc": 1.0,
+    "p_norm": 0.0001,
+    "plaus_mean": 0.1071
+   },
+   "phi3: RUL_hat<85": {
+    "gate": true,
+    "p_inc": 1.0,
+    "p_norm": 0.0345,
+    "plaus_mean": 0.2429
+   },
+   "phi4: RUL_hat<3": {
+    "gate": false,
+    "p_inc": 0.0311,
+    "p_norm": 0.0,
+    "plaus_mean": 0.4643
+   }
+  },
+  "conservative": {
+   "liberal: RUL<12": {
+    "gate": false,
+    "p_inc": 0.4048,
+    "p_norm": 0.0,
+    "plaus_mean": 0.6071
+   },
+   "mid: RUL<22": {
+    "gate": true,
+    "p_inc": 0.9446,
+    "p_norm": 0.0,
+    "plaus_mean": 0.7429
+   },
+   "consv: anom>0.6": {
+    "gate": true,
+    "p_inc": 1.0,
+    "p_norm": 0.0,
+    "plaus_mean": 0.5286
+   },
+   "vconsv: RUL<40": {
+    "gate": true,
+    "p_inc": 1.0,
+    "p_norm": 0.0,
+    "plaus_mean": 0.5
+   }
+  },
+  "window_ambiguous": {
+   "psi_W1: Within_1(warn)": {
+    "gate": false,
+    "p_inc": 0.2567,
+    "p_norm": 0.0,
+    "plaus_mean": 0.4286
+   },
+   "psi_W2: Within_2(warn)": {
+    "gate": false,
+    "p_inc": 0.5097,
+    "p_norm": 0.0,
+    "plaus_mean": 0.6
+   },
+   "psi_W3: Within_3(warn)": {
+    "gate": true,
+    "p_inc": 0.7565,
+    "p_norm": 0.0,
+    "plaus_mean": 0.6429
+   },
+   "psi_W4: Within_4(warn)": {
+    "gate": true,
+    "p_inc": 0.9191,
+    "p_norm": 0.0249,
+    "plaus_mean": 0.5571
+   },
+   "psi_W5: Within_5(warn)": {
+    "gate": true,
+    "p_inc": 1.0,
+    "p_norm": 0.0744,
+    "plaus_mean": 0.6357
+   },
+   "psi_W6: Within_6(warn)": {
+    "gate": true,
+    "p_inc": 1.0,
+    "p_norm": 0.1481,
+    "plaus_mean": 0.5571
+   }
+  },
+  "window_sharp": {
+   "psi_W1: Within_1(warn)": {
+    "gate": false,
+    "p_inc": 0.2567,
+    "p_norm": 0.0,
+    "plaus_mean": 0.1
+   },
+   "psi_W2: Within_2(warn)": {
+    "gate": false,
+    "p_inc": 0.5097,
+    "p_norm": 0.0,
+    "plaus_mean": 0.0643
+   },
+   "psi_W3: Within_3(warn)": {
+    "gate": true,
+    "p_inc": 0.7565,
+    "p_norm": 0.0,
+    "plaus_mean": 0.2429
+   },
+   "psi_W4: Within_4(warn)": {
+    "gate": true,
+    "p_inc": 0.9191,
+    "p_norm": 0.0249,
+    "plaus_mean": 0.6286
+   },
+   "psi_W5: Within_5(warn)": {
+    "gate": true,
+    "p_inc": 1.0,
+    "p_norm": 0.0744,
+    "plaus_mean": 0.4429
+   },
+   "psi_W6: Within_6(warn)": {
+    "gate": true,
+    "p_inc": 1.0,
+    "p_norm": 0.1481,
+    "plaus_mean": 0.15
+   }
+  },
+  "window_conservative": {
+   "psi_W3: Within_3(warn)": {
+    "gate": true,
+    "p_inc": 0.7565,
+    "p_norm": 0.0,
+    "plaus_mean": 0.5429
+   },
+   "psi_W5: Within_5(warn)": {
+    "gate": true,
+    "p_inc": 1.0,
+    "p_norm": 0.0744,
+    "plaus_mean": 0.5143
+   }
+  },
+  "budget_ambiguous": {
+   "psi_$20: spend>=20": {
+    "gate": false,
+    "p_inc": 1.0,
+    "p_norm": 0.3252,
+    "plaus_mean": 0.5714
+   },
+   "psi_$30: spend>=30": {
+    "gate": true,
+    "p_inc": 1.0,
+    "p_norm": 0.0,
+    "plaus_mean": 0.4714
+   },
+   "psi_$45: spend>=45": {
+    "gate": true,
+    "p_inc": 1.0,
+    "p_norm": 0.0,
+    "plaus_mean": 0.4786
+   },
+   "psi_$60: spend>=60": {
+    "gate": true,
+    "p_inc": 1.0,
+    "p_norm": 0.0,
+    "plaus_mean": 0.5429
+   },
+   "psi_$80: spend>=80": {
+    "gate": true,
+    "p_inc": 0.7091,
+    "p_norm": 0.0,
+    "plaus_mean": 0.7
+   }
+  },
+  "budget_sharp": {
+   "psi_$20: spend>=20": {
+    "gate": false,
+    "p_inc": 1.0,
+    "p_norm": 0.3252,
+    "plaus_mean": 0.0
+   },
+   "psi_$30: spend>=30": {
+    "gate": true,
+    "p_inc": 1.0,
+    "p_norm": 0.0,
+    "plaus_mean": 0.0071
+   },
+   "psi_$45: spend>=45": {
+    "gate": true,
+    "p_inc": 1.0,
+    "p_norm": 0.0,
+    "plaus_mean": 0.1571
+   },
+   "psi_$60: spend>=60": {
+    "gate": true,
+    "p_inc": 1.0,
+    "p_norm": 0.0,
+    "plaus_mean": 0.0
+   },
+   "psi_$80: spend>=80": {
+    "gate": true,
+    "p_inc": 0.7091,
+    "p_norm": 0.0,
+    "plaus_mean": 0.0
+   }
+  },
+  "budget_conservative": {
+   "psi_$30: spend>=30": {
+    "gate": true,
+    "p_inc": 1.0,
+    "p_norm": 0.0,
+    "plaus_mean": 0.4286
+   },
+   "psi_$45: spend>=45": {
+    "gate": true,
+    "p_inc": 1.0,
+    "p_norm": 0.0,
+    "plaus_mean": 0.5
+   },
+   "psi_$60: spend>=60": {
+    "gate": true,
+    "p_inc": 1.0,
+    "p_norm": 0.0,
+    "plaus_mean": 0.5
+   }
+  }
+ }
+}

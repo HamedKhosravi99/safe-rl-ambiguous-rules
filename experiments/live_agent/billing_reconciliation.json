@@ -1,0 +1,42 @@
+{
+  "billing_log": "billing_log.jsonl",
+  "price_sheet_date": "2026-07-26",
+  "primary_ledger_spend": 0.11487794999999963,
+  "partial_run1_spend": 0.0792235499999998,
+  "partial_run1_calls": 2727,
+  "partial_run1_note": "a first log-gen attempt was aborted mid-run by a transient TLS connection reset; its real charges are preserved in logs/billing_partial_run1.jsonl and included in the grand total below (honest accounting -- the fix added network-error retries).",
+  "total_billed_spend": 0.19410149999999943,
+  "total_billed_spend_2dp": 0.19,
+  "internal_reconciliation": {
+    "n_calls": 3960,
+    "resummed_total": 0.11487794999999963,
+    "stored_total": 0.11487794999999963,
+    "abs_diff": 0.0,
+    "max_per_line_diff": 0.0,
+    "exact": true,
+    "first_ts": 1785206093.521893,
+    "last_ts": 1785207117.238282
+  },
+  "synthetic_accounting_proof": {
+    "all_match": true,
+    "cases": [
+      {
+        "expect": 0.00045,
+        "got": 0.00045,
+        "match": true
+      },
+      {
+        "expect": 0.00048,
+        "got": 0.00048000000000000007,
+        "match": true
+      }
+    ]
+  },
+  "provider_costs_api": {
+    "available": false,
+    "reason": "HTTP 403 on https://api.openai.com/v1/organization/costs -- the Costs API needs an ADMIN (organization) key; the configured key is project/user scope. Internal reconciliation (billing_log vs summed usage fields) still holds to the cent.",
+    "http_status": 403,
+    "ledger_total": 0.11487794999999963
+  },
+  "scope_note": "costs are project/user-scope, reconciled internally (billing_log vs re-derived usage x pinned price sheet); the org Costs API needs an admin key (documented 403)."
+}

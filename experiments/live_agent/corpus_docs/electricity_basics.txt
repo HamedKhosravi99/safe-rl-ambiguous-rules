@@ -1,0 +1,8 @@
+Electricity is the flow of electric charge, usually carried by electrons moving through a conductor.
+Voltage is the electrical potential difference that pushes charge through a circuit, measured in volts.
+Current is the rate of flow of charge, measured in amperes.
+Resistance opposes the flow of current and is measured in ohms.
+Ohm's law states that voltage equals current times resistance.
+Conductors like copper allow charge to flow easily, while insulators like rubber resist it.
+Direct current flows in one direction, while alternating current periodically reverses direction.
+Power, measured in watts, equals voltage times current.

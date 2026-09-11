@@ -1,0 +1,3147 @@
+{
+ "config": {
+  "seeds": [
+   0,
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7,
+   8,
+   9,
+   10,
+   11,
+   12,
+   13,
+   14
+  ],
+  "eps": 0.05,
+  "n_episodes": 300,
+  "construction": "conformal"
+ },
+ "domains": {
+  "synthetic": {
+   "rows": [
+    {
+     "seed": 0,
+     "v_robust": 364.0,
+     "u_names": [
+      "mid: RUL<22",
+      "consv: anom>0.6",
+      "vconsv: RUL<40"
+     ],
+     "r_range": [
+      -40.0,
+      4.0
+     ],
+     "per_psi": [
+      {
+       "psi": "mid: RUL<22",
+       "posterior": 0.41935483870967744,
+       "v_psi": 375.0,
+       "realized_price": 11.0,
+       "surgery_certificate": 4.75,
+       "v_surgery": 370.25,
+       "surgery_worst": 0.0,
+       "predicted_bound": 2798.1066666666666,
+       "mean_remaining_after_hit": 63.593333333333334,
+       "hit_fraction": 1.0,
+       "bound_holds": true
+      },
+      {
+       "psi": "consv: anom>0.6",
+       "posterior": 0.29838709677419356,
+       "v_psi": 364.0,
+       "realized_price": 0.0,
+       "surgery_certificate": -0.25,
+       "v_surgery": 364.25,
+       "surgery_worst": 0.015993907083015995,
+       "predicted_bound": 66.58666666666667,
+       "mean_remaining_after_hit": 1.5133333333333334,
+       "hit_fraction": 0.03333333333333333,
+       "bound_holds": true
+      },
+      {
+       "psi": "vconsv: RUL<40",
+       "posterior": 0.282258064516129,
+       "v_psi": 364.0,
+       "realized_price": 0.0,
+       "surgery_certificate": 0.0,
+       "v_surgery": 364.0,
+       "surgery_worst": 0.010662604722010662,
+       "predicted_bound": 103.83999999999999,
+       "mean_remaining_after_hit": 2.36,
+       "hit_fraction": 0.06,
+       "bound_holds": true
+      }
+     ],
+     "wpoa_realized": 11.0,
+     "wpoa_surgery": 4.75,
+     "wpoa_predicted": 2798.1066666666666,
+     "voq": 4.612903225806463
+    },
+    {
+     "seed": 1,
+     "v_robust": 368.0,
+     "u_names": [
+      "mid: RUL<22",
+      "consv: anom>0.6",
+      "vconsv: RUL<40"
+     ],
+     "r_range": [
+      -40.0,
+      4.0
+     ],
+     "per_psi": [
+      {
+       "psi": "mid: RUL<22",
+       "posterior": 0.41935483870967744,
+       "v_psi": 371.75,
+       "realized_price": 3.75,
+       "surgery_certificate": 1.5,
+       "v_surgery": 370.25,
+       "surgery_worst": 0.0007680491551459293,
+       "predicted_bound": 2445.666666666667,
+       "mean_remaining_after_hit": 55.583333333333336,
+       "hit_fraction": 0.9866666666666667,
+       "bound_holds": true
+      },
+      {
+       "psi": "consv: anom>0.6",
+       "posterior": 0.29838709677419356,
+       "v_psi": 370.75,
+       "realized_price": 2.75,
+       "surgery_certificate": 0.5,
+       "v_surgery": 370.25,
+       "surgery_worst": 0.010752688172043012,
+       "predicted_bound": 1235.2266666666667,
+       "mean_remaining_after_hit": 28.073333333333334,
+       "hit_fraction": 0.65,
+       "bound_holds": true
+      },
+      {
+       "psi": "vconsv: RUL<40",
+       "posterior": 0.282258064516129,
+       "v_psi": 368.0,
+       "realized_price": 0.0,
+       "surgery_certificate": 0.0,
+       "v_surgery": 368.0,
+       "surgery_worst": 0.02534562211981567,
+       "predicted_bound": 92.83999999999999,
+       "mean_remaining_after_hit": 2.11,
+       "hit_fraction": 0.04,
+       "bound_holds": true
+      }
+     ],
+     "wpoa_realized": 3.75,
+     "wpoa_surgery": 1.5,
+     "wpoa_predicted": 2445.666666666667,
+     "voq": 2.393145161290363
+    },
+    {
+     "seed": 2,
+     "v_robust": 367.55,
+     "u_names": [
+      "mid: RUL<22",
+      "consv: anom>0.6",
+      "vconsv: RUL<40"
+     ],
+     "r_range": [
+      -40.0,
+      4.0
+     ],
+     "per_psi": [
+      {
+       "psi": "mid: RUL<22",
+       "posterior": 0.41935483870967744,
+       "v_psi": 367.55,
+       "realized_price": 0.0,
+       "surgery_certificate": -0.5,
+       "v_surgery": 368.05,
+       "surgery_worst": 0.0,
+       "predicted_bound": 533.1333333333333,
+       "mean_remaining_after_hit": 12.116666666666667,
+       "hit_fraction": 0.28,
+       "bound_holds": true
+      },
+      {
+       "psi": "consv: anom>0.6",
+       "posterior": 0.29838709677419356,
+       "v_psi": 367.55,
+       "realized_price": 0.0,
+       "surgery_certificate": -0.25,
+       "v_surgery": 367.8,
+       "surgery_worst": 0.00816326530612245,
+       "predicted_bound": 28.45333333333333,
+       "mean_remaining_after_hit": 0.6466666666666666,
+       "hit_fraction": 0.016666666666666666,
+       "bound_holds": true
+      },
+      {
+       "psi": "vconsv: RUL<40",
+       "posterior": 0.282258064516129,
+       "v_psi": 367.55,
+       "realized_price": 0.0,
+       "surgery_certificate": 0.0,
+       "v_surgery": 367.55,
+       "surgery_worst": 0.00641399416909621,
+       "predicted_bound": 498.37333333333333,
+       "mean_remaining_after_hit": 11.326666666666666,
+       "hit_fraction": 0.26,
+       "bound_holds": true
+      }
+     ],
+     "wpoa_realized": 0.0,
+     "wpoa_surgery": 0.0,
+     "wpoa_predicted": 533.1333333333333,
+     "voq": 0.0
+    },
+    {
+     "seed": 3,
+     "v_robust": 366.25,
+     "u_names": [
+      "mid: RUL<22",
+      "consv: anom>0.6",
+      "vconsv: RUL<40"
+     ],
+     "r_range": [
+      -40.0,
+      4.0
+     ],
+     "per_psi": [
+      {
+       "psi": "mid: RUL<22",
+       "posterior": 0.41935483870967744,
+       "v_psi": 373.25,
+       "realized_price": 7.0,
+       "surgery_certificate": 4.25,
+       "v_surgery": 369.0,
+       "surgery_worst": 0.0024752475247524753,
+       "predicted_bound": 2165.0933333333332,
+       "mean_remaining_after_hit": 49.20666666666666,
+       "hit_fraction": 0.9466666666666667,
+       "bound_holds": true
+      },
+      {
+       "psi": "consv: anom>0.6",
+       "posterior": 0.29838709677419356,
+       "v_psi": 366.25,
+       "realized_price": 0.0,
+       "surgery_certificate": 0.0,
+       "v_surgery": 366.25,
+       "surgery_worst": 0.0033003300330033004,
+       "predicted_bound": 0.0,
+       "mean_remaining_after_hit": 0.0,
+       "hit_fraction": 0.0,
+       "bound_holds": true
+      },
+      {
+       "psi": "vconsv: RUL<40",
+       "posterior": 0.282258064516129,
+       "v_psi": 366.25,
+       "realized_price": 0.0,
+       "surgery_certificate": 0.0,
+       "v_surgery": 366.25,
+       "surgery_worst": 0.0016501650165016502,
+       "predicted_bound": 56.61333333333333,
+       "mean_remaining_after_hit": 1.2866666666666666,
+       "hit_fraction": 0.02666666666666667,
+       "bound_holds": true
+      }
+     ],
+     "wpoa_realized": 7.0,
+     "wpoa_surgery": 4.25,
+     "wpoa_predicted": 2165.0933333333332,
+     "voq": 2.9354838709677438
+    },
+    {
+     "seed": 4,
+     "v_robust": 368.75,
+     "u_names": [
+      "mid: RUL<22",
+      "consv: anom>0.6",
+      "vconsv: RUL<40"
+     ],
+     "r_range": [
+      -40.0,
+      4.0
+     ],
+     "per_psi": [
+      {
+       "psi": "mid: RUL<22",
+       "posterior": 0.41935483870967744,
+       "v_psi": 368.75,
+       "realized_price": 0.0,
+       "surgery_certificate": 0.0,
+       "v_surgery": 368.75,
+       "surgery_worst": 0.0,
+       "predicted_bound": 66.14666666666668,
+       "mean_remaining_after_hit": 1.5033333333333334,
+       "hit_fraction": 0.03666666666666667,
+       "bound_holds": true
+      },
+      {
+       "psi": "consv: anom>0.6",
+       "posterior": 0.29838709677419356,
+       "v_psi": 368.75,
+       "realized_price": 0.0,
+       "surgery_certificate": 0.0,
+       "v_surgery": 368.75,
+       "surgery_worst": 0.02821316614420063,
+       "predicted_bound": 27.72,
+       "mean_remaining_after_hit": 0.63,
+       "hit_fraction": 0.016666666666666666,
+       "bound_holds": true
+      },
+      {
+       "psi": "vconsv: RUL<40",
+       "posterior": 0.282258064516129,
+       "v_psi": 368.75,
+       "realized_price": 0.0,
+       "surgery_certificate": 0.0,
+       "v_surgery": 368.75,
+       "surgery_worst": 0.005642633228840125,
+       "predicted_bound": 47.96,
+       "mean_remaining_after_hit": 1.09,
+       "hit_fraction": 0.02666666666666667,
+       "bound_holds": true
+      }
+     ],
+     "wpoa_realized": 0.0,
+     "wpoa_surgery": 0.0,
+     "wpoa_predicted": 66.14666666666668,
+     "voq": 0.0
+    },
+    {
+     "seed": 5,
+     "v_robust": 362.0,
+     "u_names": [
+      "mid: RUL<22",
+      "consv: anom>0.6",
+      "vconsv: RUL<40"
+     ],
+     "r_range": [
+      -40.0,
+      4.0
+     ],
+     "per_psi": [
+      {
+       "psi": "mid: RUL<22",
+       "posterior": 0.41935483870967744,
+       "v_psi": 363.75,
+       "realized_price": 1.75,
+       "surgery_certificate": 0.0,
+       "v_surgery": 363.75,
+       "surgery_worst": 0.0026338893766461808,
+       "predicted_bound": 57.64,
+       "mean_remaining_after_hit": 1.31,
+       "hit_fraction": 0.02666666666666667,
+       "bound_holds": true
+      },
+      {
+       "psi": "consv: anom>0.6",
+       "posterior": 0.29838709677419356,
+       "v_psi": 363.75,
+       "realized_price": 1.75,
+       "surgery_certificate": 0.0,
+       "v_surgery": 363.75,
+       "surgery_worst": 0.007901668129938543,
+       "predicted_bound": 0.0,
+       "mean_remaining_after_hit": 0.0,
+       "hit_fraction": 0.0,
+       "bound_holds": false
+      },
+      {
+       "psi": "vconsv: RUL<40",
+       "posterior": 0.282258064516129,
+       "v_psi": 363.75,
+       "realized_price": 1.75,
+       "surgery_certificate": 0.0,
+       "v_surgery": 363.75,
+       "surgery_worst": 0.004389815627743635,
+       "predicted_bound": 0.0,
+       "mean_remaining_after_hit": 0.0,
+       "hit_fraction": 0.0,
+       "bound_holds": false
+      }
+     ],
+     "wpoa_realized": 1.75,
+     "wpoa_surgery": 0.0,
+     "wpoa_predicted": 57.64,
+     "voq": 1.75
+    },
+    {
+     "seed": 6,
+     "v_robust": 370.25,
+     "u_names": [
+      "mid: RUL<22",
+      "consv: anom>0.6",
+      "vconsv: RUL<40"
+     ],
+     "r_range": [
+      -40.0,
+      4.0
+     ],
+     "per_psi": [
+      {
+       "psi": "mid: RUL<22",
+       "posterior": 0.41935483870967744,
+       "v_psi": 374.25,
+       "realized_price": 4.0,
+       "surgery_certificate": 4.0,
+       "v_surgery": 370.25,
+       "surgery_worst": 0.002004008016032064,
+       "predicted_bound": 2796.4933333333333,
+       "mean_remaining_after_hit": 63.556666666666665,
+       "hit_fraction": 1.0,
+       "bound_holds": true
+      },
+      {
+       "psi": "consv: anom>0.6",
+       "posterior": 0.29838709677419356,
+       "v_psi": 371.0,
+       "realized_price": 0.75,
+       "surgery_certificate": 0.75,
+       "v_surgery": 370.25,
+       "surgery_worst": 0.008016032064128256,
+       "predicted_bound": 1456.5466666666666,
+       "mean_remaining_after_hit": 33.10333333333333,
+       "hit_fraction": 0.74,
+       "bound_holds": true
+      },
+      {
+       "psi": "vconsv: RUL<40",
+       "posterior": 0.282258064516129,
+       "v_psi": 370.25,
+       "realized_price": 0.0,
+       "surgery_certificate": 0.0,
+       "v_surgery": 370.25,
+       "surgery_worst": 0.0026720106880427524,
+       "predicted_bound": 1493.8000000000002,
+       "mean_remaining_after_hit": 33.95,
+       "hit_fraction": 0.74,
+       "bound_holds": true
+      }
+     ],
+     "wpoa_realized": 4.0,
+     "wpoa_surgery": 4.0,
+     "wpoa_predicted": 2796.4933333333333,
+     "voq": 1.901209677419331
+    },
+    {
+     "seed": 7,
+     "v_robust": 362.75,
+     "u_names": [
+      "mid: RUL<22",
+      "consv: anom>0.6",
+      "vconsv: RUL<40"
+     ],
+     "r_range": [
+      -40.0,
+      4.0
+     ],
+     "per_psi": [
+      {
+       "psi": "mid: RUL<22",
+       "posterior": 0.41935483870967744,
+       "v_psi": 362.75,
+       "realized_price": 0.0,
+       "surgery_certificate": 0.0,
+       "v_surgery": 362.75,
+       "surgery_worst": 0.003912363067292645,
+       "predicted_bound": 0.0,
+       "mean_remaining_after_hit": 0.0,
+       "hit_fraction": 0.0,
+       "bound_holds": true
+      },
+      {
+       "psi": "consv: anom>0.6",
+       "posterior": 0.29838709677419356,
+       "v_psi": 362.75,
+       "realized_price": 0.0,
+       "surgery_certificate": 0.0,
+       "v_surgery": 362.75,
+       "surgery_worst": 0.03051643192488263,
+       "predicted_bound": 0.0,
+       "mean_remaining_after_hit": 0.0,
+       "hit_fraction": 0.0,
+       "bound_holds": true
+      },
+      {
+       "psi": "vconsv: RUL<40",
+       "posterior": 0.282258064516129,
+       "v_psi": 362.75,
+       "realized_price": 0.0,
+       "surgery_certificate": 0.0,
+       "v_surgery": 362.75,
+       "surgery_worst": 0.03442879499217527,
+       "predicted_bound": 0.0,
+       "mean_remaining_after_hit": 0.0,
+       "hit_fraction": 0.0,
+       "bound_holds": true
+      }
+     ],
+     "wpoa_realized": 0.0,
+     "wpoa_surgery": 0.0,
+     "wpoa_predicted": 0.0,
+     "voq": 0.0
+    },
+    {
+     "seed": 8,
+     "v_robust": 364.0,
+     "u_names": [
+      "mid: RUL<22",
+      "consv: anom>0.6",
+      "vconsv: RUL<40"
+     ],
+     "r_range": [
+      -40.0,
+      4.0
+     ],
+     "per_psi": [
+      {
+       "psi": "mid: RUL<22",
+       "posterior": 0.41935483870967744,
+       "v_psi": 364.0,
+       "realized_price": 0.0,
+       "surgery_certificate": 0.0,
+       "v_surgery": 364.0,
+       "surgery_worst": 0.004137115839243499,
+       "predicted_bound": 1.6133333333333333,
+       "mean_remaining_after_hit": 0.03666666666666667,
+       "hit_fraction": 0.0033333333333333335,
+       "bound_holds": true
+      },
+      {
+       "psi": "consv: anom>0.6",
+       "posterior": 0.29838709677419356,
+       "v_psi": 364.0,
+       "realized_price": 0.0,
+       "surgery_certificate": 0.0,
+       "v_surgery": 364.0,
+       "surgery_worst": 0.01182033096926714,
+       "predicted_bound": 0.0,
+       "mean_remaining_after_hit": 0.0,
+       "hit_fraction": 0.0,
+       "bound_holds": true
+      },
+      {
+       "psi": "vconsv: RUL<40",
+       "posterior": 0.282258064516129,
+       "v_psi": 364.0,
+       "realized_price": 0.0,
+       "surgery_certificate": 0.0,
+       "v_surgery": 364.0,
+       "surgery_worst": 0.013593380614657211,
+       "predicted_bound": 1.6133333333333333,
+       "mean_remaining_after_hit": 0.03666666666666667,
+       "hit_fraction": 0.0033333333333333335,
+       "bound_holds": true
+      }
+     ],
+     "wpoa_realized": 0.0,
+     "wpoa_surgery": 0.0,
+     "wpoa_predicted": 1.6133333333333333,
+     "voq": 0.0
+    },
+    {
+     "seed": 9,
+     "v_robust": 370.0,
+     "u_names": [
+      "mid: RUL<22",
+      "consv: anom>0.6",
+      "vconsv: RUL<40"
+     ],
+     "r_range": [
+      -40.0,
+      4.0
+     ],
+     "per_psi": [
+      {
+       "psi": "mid: RUL<22",
+       "posterior": 0.41935483870967744,
+       "v_psi": 372.5,
+       "realized_price": 2.5,
+       "surgery_certificate": 2.25,
+       "v_surgery": 370.25,
+       "surgery_worst": 0.004262574595055414,
+       "predicted_bound": 2059.9333333333334,
+       "mean_remaining_after_hit": 46.81666666666667,
+       "hit_fraction": 0.94,
+       "bound_holds": true
+      },
+      {
+       "psi": "consv: anom>0.6",
+       "posterior": 0.29838709677419356,
+       "v_psi": 370.0,
+       "realized_price": 0.0,
+       "surgery_certificate": 0.0,
+       "v_surgery": 370.0,
+       "surgery_worst": 0.03154305200341006,
+       "predicted_bound": 146.52,
+       "mean_remaining_after_hit": 3.33,
+       "hit_fraction": 0.08333333333333333,
+       "bound_holds": true
+      },
+      {
+       "psi": "vconsv: RUL<40",
+       "posterior": 0.282258064516129,
+       "v_psi": 370.0,
+       "realized_price": 0.0,
+       "surgery_certificate": 0.0,
+       "v_surgery": 370.0,
+       "surgery_worst": 0.03154305200341006,
+       "predicted_bound": 1215.72,
+       "mean_remaining_after_hit": 27.63,
+       "hit_fraction": 0.6233333333333333,
+       "bound_holds": true
+      }
+     ],
+     "wpoa_realized": 2.5,
+     "wpoa_surgery": 2.25,
+     "wpoa_predicted": 2059.9333333333334,
+     "voq": 1.0483870967742064
+    },
+    {
+     "seed": 10,
+     "v_robust": 363.75,
+     "u_names": [
+      "mid: RUL<22",
+      "consv: anom>0.6",
+      "vconsv: RUL<40"
+     ],
+     "r_range": [
+      -40.0,
+      4.0
+     ],
+     "per_psi": [
+      {
+       "psi": "mid: RUL<22",
+       "posterior": 0.41935483870967744,
+       "v_psi": 363.75,
+       "realized_price": 0.0,
+       "surgery_certificate": 0.0,
+       "v_surgery": 363.75,
+       "surgery_worst": 0.005405405405405406,
+       "predicted_bound": 10.559999999999999,
+       "mean_remaining_after_hit": 0.24,
+       "hit_fraction": 0.006666666666666667,
+       "bound_holds": true
+      },
+      {
+       "psi": "consv: anom>0.6",
+       "posterior": 0.29838709677419356,
+       "v_psi": 363.75,
+       "realized_price": 0.0,
+       "surgery_certificate": 0.0,
+       "v_surgery": 363.75,
+       "surgery_worst": 0.02027027027027027,
+       "predicted_bound": 3.2266666666666666,
+       "mean_remaining_after_hit": 0.07333333333333333,
+       "hit_fraction": 0.0033333333333333335,
+       "bound_holds": true
+      },
+      {
+       "psi": "vconsv: RUL<40",
+       "posterior": 0.282258064516129,
+       "v_psi": 363.75,
+       "realized_price": 0.0,
+       "surgery_certificate": 0.0,
+       "v_surgery": 363.75,
+       "surgery_worst": 0.010810810810810811,
+       "predicted_bound": 7.333333333333333,
+       "mean_remaining_after_hit": 0.16666666666666666,
+       "hit_fraction": 0.0033333333333333335,
+       "bound_holds": true
+      }
+     ],
+     "wpoa_realized": 0.0,
+     "wpoa_surgery": 0.0,
+     "wpoa_predicted": 10.559999999999999,
+     "voq": 0.0
+    },
+    {
+     "seed": 11,
+     "v_robust": 364.0,
+     "u_names": [
+      "mid: RUL<22",
+      "consv: anom>0.6",
+      "vconsv: RUL<40"
+     ],
+     "r_range": [
+      -40.0,
+      4.0
+     ],
+     "per_psi": [
+      {
+       "psi": "mid: RUL<22",
+       "posterior": 0.41935483870967744,
+       "v_psi": 364.0,
+       "realized_price": 0.0,
+       "surgery_certificate": 0.0,
+       "v_surgery": 364.0,
+       "surgery_worst": 0.0007112375533428165,
+       "predicted_bound": 0.0,
+       "mean_remaining_after_hit": 0.0,
+       "hit_fraction": 0.0,
+       "bound_holds": true
+      },
+      {
+       "psi": "consv: anom>0.6",
+       "posterior": 0.29838709677419356,
+       "v_psi": 364.0,
+       "realized_price": 0.0,
+       "surgery_certificate": 0.0,
+       "v_surgery": 364.0,
+       "surgery_worst": 0.005689900426742532,
+       "predicted_bound": 0.0,
+       "mean_remaining_after_hit": 0.0,
+       "hit_fraction": 0.0,
+       "bound_holds": true
+      },
+      {
+       "psi": "vconsv: RUL<40",
+       "posterior": 0.282258064516129,
+       "v_psi": 364.0,
+       "realized_price": 0.0,
+       "surgery_certificate": 0.0,
+       "v_surgery": 364.0,
+       "surgery_worst": 0.001422475106685633,
+       "predicted_bound": 0.0,
+       "mean_remaining_after_hit": 0.0,
+       "hit_fraction": 0.0,
+       "bound_holds": true
+      }
+     ],
+     "wpoa_realized": 0.0,
+     "wpoa_surgery": 0.0,
+     "wpoa_predicted": 0.0,
+     "voq": 0.0
+    },
+    {
+     "seed": 12,
+     "v_robust": 363.0,
+     "u_names": [
+      "mid: RUL<22",
+      "consv: anom>0.6",
+      "vconsv: RUL<40"
+     ],
+     "r_range": [
+      -40.0,
+      4.0
+     ],
+     "per_psi": [
+      {
+       "psi": "mid: RUL<22",
+       "posterior": 0.41935483870967744,
+       "v_psi": 363.0,
+       "realized_price": 0.0,
+       "surgery_certificate": 0.0,
+       "v_surgery": 363.0,
+       "surgery_worst": 0.0005724098454493417,
+       "predicted_bound": 14.520000000000001,
+       "mean_remaining_after_hit": 0.33,
+       "hit_fraction": 0.01,
+       "bound_holds": true
+      },
+      {
+       "psi": "consv: anom>0.6",
+       "posterior": 0.29838709677419356,
+       "v_psi": 363.0,
+       "realized_price": 0.0,
+       "surgery_certificate": 0.0,
+       "v_surgery": 363.0,
+       "surgery_worst": 0.013737836290784202,
+       "predicted_bound": 8.946666666666667,
+       "mean_remaining_after_hit": 0.20333333333333334,
+       "hit_fraction": 0.006666666666666667,
+       "bound_holds": true
+      },
+      {
+       "psi": "vconsv: RUL<40",
+       "posterior": 0.282258064516129,
+       "v_psi": 363.0,
+       "realized_price": 0.0,
+       "surgery_certificate": 0.0,
+       "v_surgery": 363.0,
+       "surgery_worst": 0.006296508299942759,
+       "predicted_bound": 5.573333333333334,
+       "mean_remaining_after_hit": 0.12666666666666668,
+       "hit_fraction": 0.0033333333333333335,
+       "bound_holds": true
+      }
+     ],
+     "wpoa_realized": 0.0,
+     "wpoa_surgery": 0.0,
+     "wpoa_predicted": 14.520000000000001,
+     "voq": -5.684341886080802e-14
+    },
+    {
+     "seed": 13,
+     "v_robust": 369.0,
+     "u_names": [
+      "mid: RUL<22",
+      "consv: anom>0.6",
+      "vconsv: RUL<40"
+     ],
+     "r_range": [
+      -40.0,
+      4.0
+     ],
+     "per_psi": [
+      {
+       "psi": "mid: RUL<22",
+       "posterior": 0.41935483870967744,
+       "v_psi": 369.25,
+       "realized_price": 0.25,
+       "surgery_certificate": -0.5,
+       "v_surgery": 369.75,
+       "surgery_worst": 0.004720161834120027,
+       "predicted_bound": 603.5333333333333,
+       "mean_remaining_after_hit": 13.716666666666667,
+       "hit_fraction": 0.34,
+       "bound_holds": true
+      },
+      {
+       "psi": "consv: anom>0.6",
+       "posterior": 0.29838709677419356,
+       "v_psi": 369.0,
+       "realized_price": 0.0,
+       "surgery_certificate": 0.0,
+       "v_surgery": 369.0,
+       "surgery_worst": 0.016857720836142953,
+       "predicted_bound": 22.0,
+       "mean_remaining_after_hit": 0.5,
+       "hit_fraction": 0.01,
+       "bound_holds": true
+      },
+      {
+       "psi": "vconsv: RUL<40",
+       "posterior": 0.282258064516129,
+       "v_psi": 369.0,
+       "realized_price": 0.0,
+       "surgery_certificate": -0.25,
+       "v_surgery": 369.25,
+       "surgery_worst": 0.018880647336480108,
+       "predicted_bound": 483.4133333333333,
+       "mean_remaining_after_hit": 10.986666666666666,
+       "hit_fraction": 0.2633333333333333,
+       "bound_holds": true
+      }
+     ],
+     "wpoa_realized": 0.25,
+     "wpoa_surgery": 0.0,
+     "wpoa_predicted": 603.5333333333333,
+     "voq": 0.10483870967738085
+    },
+    {
+     "seed": 14,
+     "v_robust": 370.25,
+     "u_names": [
+      "mid: RUL<22",
+      "consv: anom>0.6",
+      "vconsv: RUL<40"
+     ],
+     "r_range": [
+      -40.0,
+      4.0
+     ],
+     "per_psi": [
+      {
+       "psi": "mid: RUL<22",
+       "posterior": 0.41935483870967744,
+       "v_psi": 371.25,
+       "realized_price": 1.0,
+       "surgery_certificate": 1.0,
+       "v_surgery": 370.25,
+       "surgery_worst": 0.0,
+       "predicted_bound": 1890.8266666666668,
+       "mean_remaining_after_hit": 42.973333333333336,
+       "hit_fraction": 0.88,
+       "bound_holds": true
+      },
+      {
+       "psi": "consv: anom>0.6",
+       "posterior": 0.29838709677419356,
+       "v_psi": 370.75,
+       "realized_price": 0.5,
+       "surgery_certificate": 0.5,
+       "v_surgery": 370.25,
+       "surgery_worst": 0.006038647342995169,
+       "predicted_bound": 1022.2666666666667,
+       "mean_remaining_after_hit": 23.233333333333334,
+       "hit_fraction": 0.5466666666666666,
+       "bound_holds": true
+      },
+      {
+       "psi": "vconsv: RUL<40",
+       "posterior": 0.282258064516129,
+       "v_psi": 370.25,
+       "realized_price": 0.0,
+       "surgery_certificate": 0.0,
+       "v_surgery": 370.25,
+       "surgery_worst": 0.022342995169082124,
+       "predicted_bound": 1233.3200000000002,
+       "mean_remaining_after_hit": 28.03,
+       "hit_fraction": 0.63,
+       "bound_holds": true
+      }
+     ],
+     "wpoa_realized": 1.0,
+     "wpoa_surgery": 1.0,
+     "wpoa_predicted": 1890.8266666666668,
+     "voq": 0.5685483870967687
+    }
+   ],
+   "agg": {
+    "wpoa_realized": 2.0833333333333335,
+    "wpoa_realized_sd": 3.1126980079810003,
+    "wpoa_surgery": 1.1833333333333333,
+    "wpoa_surgery_sd": 1.711399687065792,
+    "wpoa_predicted": 1029.5511111111111,
+    "voq": 1.02096774193548,
+    "voq_sd": 1.368646794099806,
+    "bound_violations": 2,
+    "n_bound_checks": 45
+   }
+  },
+  "real": {
+   "rows": [
+    {
+     "seed": 0,
+     "v_robust": 351.05,
+     "u_names": [
+      "mid: RUL<22",
+      "consv: anom>0.6",
+      "vconsv: RUL<40"
+     ],
+     "r_range": [
+      -40.0,
+      4.0
+     ],
+     "per_psi": [
+      {
+       "psi": "mid: RUL<22",
+       "posterior": 0.41935483870967744,
+       "v_psi": 476.0,
+       "realized_price": 124.94999999999999,
+       "surgery_certificate": 150.25,
+       "v_surgery": 325.75,
+       "surgery_worst": 0.00026673779674579886,
+       "predicted_bound": 2765.5466666666666,
+       "mean_remaining_after_hit": 62.85333333333333,
+       "hit_fraction": 0.6366666666666667,
+       "bound_holds": true
+      },
+      {
+       "psi": "consv: anom>0.6",
+       "posterior": 0.29838709677419356,
+       "v_psi": 351.05,
+       "realized_price": 0.0,
+       "surgery_certificate": 0.0,
+       "v_surgery": 351.05,
+       "surgery_worst": 0.0005334755934915977,
+       "predicted_bound": 22.880000000000003,
+       "mean_remaining_after_hit": 0.52,
+       "hit_fraction": 0.03666666666666667,
+       "bound_holds": true
+      },
+      {
+       "psi": "vconsv: RUL<40",
+       "posterior": 0.282258064516129,
+       "v_psi": 476.0,
+       "realized_price": 124.94999999999999,
+       "surgery_certificate": 150.25,
+       "v_surgery": 325.75,
+       "surgery_worst": 0.0005334755934915977,
+       "predicted_bound": 2744.866666666667,
+       "mean_remaining_after_hit": 62.38333333333333,
+       "hit_fraction": 0.6133333333333333,
+       "bound_holds": true
+      }
+     ],
+     "wpoa_realized": 124.94999999999999,
+     "wpoa_surgery": 150.25,
+     "wpoa_predicted": 2765.5466666666666,
+     "voq": 87.66653225806448
+    },
+    {
+     "seed": 1,
+     "v_robust": 355.3,
+     "u_names": [
+      "mid: RUL<22",
+      "consv: anom>0.6",
+      "vconsv: RUL<40"
+     ],
+     "r_range": [
+      -40.0,
+      4.0
+     ],
+     "per_psi": [
+      {
+       "psi": "mid: RUL<22",
+       "posterior": 0.41935483870967744,
+       "v_psi": 476.25,
+       "realized_price": 120.94999999999999,
+       "surgery_certificate": 151.0,
+       "v_surgery": 325.25,
+       "surgery_worst": 0.000536480686695279,
+       "predicted_bound": 2862.2,
+       "mean_remaining_after_hit": 65.05,
+       "hit_fraction": 0.6433333333333333,
+       "bound_holds": true
+      },
+      {
+       "psi": "consv: anom>0.6",
+       "posterior": 0.29838709677419356,
+       "v_psi": 355.3,
+       "realized_price": 0.0,
+       "surgery_certificate": 0.0,
+       "v_surgery": 355.3,
+       "surgery_worst": 0.009120171673819743,
+       "predicted_bound": 30.066666666666666,
+       "mean_remaining_after_hit": 0.6833333333333333,
+       "hit_fraction": 0.04,
+       "bound_holds": true
+      },
+      {
+       "psi": "vconsv: RUL<40",
+       "posterior": 0.282258064516129,
+       "v_psi": 476.25,
+       "realized_price": 120.94999999999999,
+       "surgery_certificate": 151.0,
+       "v_surgery": 325.25,
+       "surgery_worst": 0.0008047210300429185,
+       "predicted_bound": 2836.68,
+       "mean_remaining_after_hit": 64.47,
+       "hit_fraction": 0.6166666666666667,
+       "bound_holds": true
+      }
+     ],
+     "wpoa_realized": 120.94999999999999,
+     "wpoa_surgery": 151.0,
+     "wpoa_predicted": 2862.2,
+     "voq": 84.8600806451613
+    },
+    {
+     "seed": 2,
+     "v_robust": 352.6,
+     "u_names": [
+      "mid: RUL<22",
+      "consv: anom>0.6",
+      "vconsv: RUL<40"
+     ],
+     "r_range": [
+      -40.0,
+      4.0
+     ],
+     "per_psi": [
+      {
+       "psi": "mid: RUL<22",
+       "posterior": 0.41935483870967744,
+       "v_psi": 474.7,
+       "realized_price": 122.09999999999997,
+       "surgery_certificate": 150.25,
+       "v_surgery": 324.45,
+       "surgery_worst": 0.0002707092582566324,
+       "predicted_bound": 2429.826666666667,
+       "mean_remaining_after_hit": 55.223333333333336,
+       "hit_fraction": 0.57,
+       "bound_holds": true
+      },
+      {
+       "psi": "consv: anom>0.6",
+       "posterior": 0.29838709677419356,
+       "v_psi": 352.6,
+       "realized_price": 0.0,
+       "surgery_certificate": 0.0,
+       "v_surgery": 352.6,
+       "surgery_worst": 0.006226312939902545,
+       "predicted_bound": 2.6399999999999997,
+       "mean_remaining_after_hit": 0.06,
+       "hit_fraction": 0.006666666666666667,
+       "bound_holds": true
+      },
+      {
+       "psi": "vconsv: RUL<40",
+       "posterior": 0.282258064516129,
+       "v_psi": 474.7,
+       "realized_price": 122.09999999999997,
+       "surgery_certificate": 150.25,
+       "v_surgery": 324.45,
+       "surgery_worst": 0.0008121277747698972,
+       "predicted_bound": 2419.8533333333335,
+       "mean_remaining_after_hit": 54.99666666666667,
+       "hit_fraction": 0.5566666666666666,
+       "bound_holds": true
+      }
+     ],
+     "wpoa_realized": 122.09999999999997,
+     "wpoa_surgery": 150.25,
+     "wpoa_predicted": 2429.826666666667,
+     "voq": 85.66693548387093
+    },
+    {
+     "seed": 3,
+     "v_robust": 348.85,
+     "u_names": [
+      "mid: RUL<22",
+      "consv: anom>0.6",
+      "vconsv: RUL<40"
+     ],
+     "r_range": [
+      -40.0,
+      4.0
+     ],
+     "per_psi": [
+      {
+       "psi": "mid: RUL<22",
+       "posterior": 0.41935483870967744,
+       "v_psi": 475.55,
+       "realized_price": 126.69999999999999,
+       "surgery_certificate": 153.0,
+       "v_surgery": 322.55,
+       "surgery_worst": 0.0,
+       "predicted_bound": 2786.52,
+       "mean_remaining_after_hit": 63.33,
+       "hit_fraction": 0.6566666666666666,
+       "bound_holds": true
+      },
+      {
+       "psi": "consv: anom>0.6",
+       "posterior": 0.29838709677419356,
+       "v_psi": 348.85,
+       "realized_price": 0.0,
+       "surgery_certificate": 0.0,
+       "v_surgery": 348.85,
+       "surgery_worst": 0.004993429697766097,
+       "predicted_bound": 8.946666666666667,
+       "mean_remaining_after_hit": 0.20333333333333334,
+       "hit_fraction": 0.023333333333333334,
+       "bound_holds": true
+      },
+      {
+       "psi": "vconsv: RUL<40",
+       "posterior": 0.282258064516129,
+       "v_psi": 475.55,
+       "realized_price": 126.69999999999999,
+       "surgery_certificate": 153.0,
+       "v_surgery": 322.55,
+       "surgery_worst": 0.0007884362680683311,
+       "predicted_bound": 2779.92,
+       "mean_remaining_after_hit": 63.18,
+       "hit_fraction": 0.64,
+       "bound_holds": true
+      }
+     ],
+     "wpoa_realized": 126.69999999999999,
+     "wpoa_surgery": 153.0,
+     "wpoa_predicted": 2786.52,
+     "voq": 88.89435483870966
+    },
+    {
+     "seed": 4,
+     "v_robust": 384.0,
+     "u_names": [
+      "mid: RUL<22",
+      "consv: anom>0.6",
+      "vconsv: RUL<40"
+     ],
+     "r_range": [
+      -40.0,
+      4.0
+     ],
+     "per_psi": [
+      {
+       "psi": "mid: RUL<22",
+       "posterior": 0.41935483870967744,
+       "v_psi": 473.3,
+       "realized_price": 89.30000000000001,
+       "surgery_certificate": 148.3,
+       "v_surgery": 325.0,
+       "surgery_worst": 0.00026574541589157585,
+       "predicted_bound": 2776.1066666666666,
+       "mean_remaining_after_hit": 63.093333333333334,
+       "hit_fraction": 0.64,
+       "bound_holds": true
+      },
+      {
+       "psi": "consv: anom>0.6",
+       "posterior": 0.29838709677419356,
+       "v_psi": 384.75,
+       "realized_price": 0.75,
+       "surgery_certificate": 0.75,
+       "v_surgery": 384.0,
+       "surgery_worst": 0.00026574541589157585,
+       "predicted_bound": 9.826666666666666,
+       "mean_remaining_after_hit": 0.22333333333333333,
+       "hit_fraction": 0.023333333333333334,
+       "bound_holds": true
+      },
+      {
+       "psi": "vconsv: RUL<40",
+       "posterior": 0.282258064516129,
+       "v_psi": 472.55,
+       "realized_price": 88.55000000000001,
+       "surgery_certificate": 147.55,
+       "v_surgery": 325.0,
+       "surgery_worst": 0.0010629816635663034,
+       "predicted_bound": 2761.2933333333335,
+       "mean_remaining_after_hit": 62.75666666666667,
+       "hit_fraction": 0.6166666666666667,
+       "bound_holds": true
+      }
+     ],
+     "wpoa_realized": 89.30000000000001,
+     "wpoa_surgery": 148.3,
+     "wpoa_predicted": 2776.1066666666666,
+     "voq": 62.666129032258084
+    },
+    {
+     "seed": 5,
+     "v_robust": 362.55,
+     "u_names": [
+      "mid: RUL<22",
+      "consv: anom>0.6",
+      "vconsv: RUL<40"
+     ],
+     "r_range": [
+      -40.0,
+      4.0
+     ],
+     "per_psi": [
+      {
+       "psi": "mid: RUL<22",
+       "posterior": 0.41935483870967744,
+       "v_psi": 469.75,
+       "realized_price": 107.19999999999999,
+       "surgery_certificate": 149.25,
+       "v_surgery": 320.5,
+       "surgery_worst": 0.0,
+       "predicted_bound": 2523.253333333333,
+       "mean_remaining_after_hit": 57.346666666666664,
+       "hit_fraction": 0.5766666666666667,
+       "bound_holds": true
+      },
+      {
+       "psi": "consv: anom>0.6",
+       "posterior": 0.29838709677419356,
+       "v_psi": 360.35,
+       "realized_price": -2.1999999999999886,
+       "surgery_certificate": 0.5,
+       "v_surgery": 359.85,
+       "surgery_worst": 0.0053585098239346774,
+       "predicted_bound": 2.6399999999999997,
+       "mean_remaining_after_hit": 0.06,
+       "hit_fraction": 0.02,
+       "bound_holds": true
+      },
+      {
+       "psi": "vconsv: RUL<40",
+       "posterior": 0.282258064516129,
+       "v_psi": 469.75,
+       "realized_price": 107.19999999999999,
+       "surgery_certificate": 149.25,
+       "v_surgery": 320.5,
+       "surgery_worst": 0.0010206685378923194,
+       "predicted_bound": 2523.253333333333,
+       "mean_remaining_after_hit": 57.346666666666664,
+       "hit_fraction": 0.5766666666666667,
+       "bound_holds": true
+      }
+     ],
+     "wpoa_realized": 107.19999999999999,
+     "wpoa_surgery": 149.25,
+     "wpoa_predicted": 2523.253333333333,
+     "voq": 74.55645161290323
+    },
+    {
+     "seed": 6,
+     "v_robust": 378.15,
+     "u_names": [
+      "mid: RUL<22",
+      "consv: anom>0.6",
+      "vconsv: RUL<40"
+     ],
+     "r_range": [
+      -40.0,
+      4.0
+     ],
+     "per_psi": [
+      {
+       "psi": "mid: RUL<22",
+       "posterior": 0.41935483870967744,
+       "v_psi": 470.0,
+       "realized_price": 91.85000000000002,
+       "surgery_certificate": 150.5,
+       "v_surgery": 319.5,
+       "surgery_worst": 0.00026896180742334586,
+       "predicted_bound": 2827.44,
+       "mean_remaining_after_hit": 64.26,
+       "hit_fraction": 0.6466666666666666,
+       "bound_holds": true
+      },
+      {
+       "psi": "consv: anom>0.6",
+       "posterior": 0.29838709677419356,
+       "v_psi": 378.15,
+       "realized_price": 0.0,
+       "surgery_certificate": 0.0,
+       "v_surgery": 378.15,
+       "surgery_worst": 0.006724045185583647,
+       "predicted_bound": 43.266666666666666,
+       "mean_remaining_after_hit": 0.9833333333333333,
+       "hit_fraction": 0.03333333333333333,
+       "bound_holds": true
+      },
+      {
+       "psi": "vconsv: RUL<40",
+       "posterior": 0.282258064516129,
+       "v_psi": 470.0,
+       "realized_price": 91.85000000000002,
+       "surgery_certificate": 150.5,
+       "v_surgery": 319.5,
+       "surgery_worst": 0.0008068854222700376,
+       "predicted_bound": 2782.8533333333335,
+       "mean_remaining_after_hit": 63.24666666666667,
+       "hit_fraction": 0.6133333333333333,
+       "bound_holds": true
+      }
+     ],
+     "wpoa_realized": 91.85000000000002,
+     "wpoa_surgery": 150.5,
+     "wpoa_predicted": 2827.44,
+     "voq": 64.44314516129032
+    },
+    {
+     "seed": 7,
+     "v_robust": 352.7,
+     "u_names": [
+      "mid: RUL<22",
+      "consv: anom>0.6",
+      "vconsv: RUL<40"
+     ],
+     "r_range": [
+      -40.0,
+      4.0
+     ],
+     "per_psi": [
+      {
+       "psi": "mid: RUL<22",
+       "posterior": 0.41935483870967744,
+       "v_psi": 472.65,
+       "realized_price": 119.94999999999999,
+       "surgery_certificate": 148.5,
+       "v_surgery": 324.15,
+       "surgery_worst": 0.0002581977794990963,
+       "predicted_bound": 2713.1866666666665,
+       "mean_remaining_after_hit": 61.663333333333334,
+       "hit_fraction": 0.6066666666666667,
+       "bound_holds": true
+      },
+      {
+       "psi": "consv: anom>0.6",
+       "posterior": 0.29838709677419356,
+       "v_psi": 352.7,
+       "realized_price": 0.0,
+       "surgery_certificate": 0.0,
+       "v_surgery": 352.7,
+       "surgery_worst": 0.0018073844564936742,
+       "predicted_bound": 0.0,
+       "mean_remaining_after_hit": 0.0,
+       "hit_fraction": 0.0,
+       "bound_holds": true
+      },
+      {
+       "psi": "vconsv: RUL<40",
+       "posterior": 0.282258064516129,
+       "v_psi": 472.4,
+       "realized_price": 119.69999999999999,
+       "surgery_certificate": 148.25,
+       "v_surgery": 324.15,
+       "surgery_worst": 0.000774593338497289,
+       "predicted_bound": 2713.1866666666665,
+       "mean_remaining_after_hit": 61.663333333333334,
+       "hit_fraction": 0.6066666666666667,
+       "bound_holds": true
+      }
+     ],
+     "wpoa_realized": 119.94999999999999,
+     "wpoa_surgery": 148.5,
+     "wpoa_predicted": 2713.1866666666665,
+     "voq": 84.08790322580649
+    },
+    {
+     "seed": 8,
+     "v_robust": 356.2,
+     "u_names": [
+      "mid: RUL<22",
+      "consv: anom>0.6",
+      "vconsv: RUL<40"
+     ],
+     "r_range": [
+      -40.0,
+      4.0
+     ],
+     "per_psi": [
+      {
+       "psi": "mid: RUL<22",
+       "posterior": 0.41935483870967744,
+       "v_psi": 469.3,
+       "realized_price": 113.10000000000002,
+       "surgery_certificate": 146.15000000000003,
+       "v_surgery": 323.15,
+       "surgery_worst": 0.0,
+       "predicted_bound": 2734.6,
+       "mean_remaining_after_hit": 62.15,
+       "hit_fraction": 0.6033333333333334,
+       "bound_holds": true
+      },
+      {
+       "psi": "consv: anom>0.6",
+       "posterior": 0.29838709677419356,
+       "v_psi": 356.95,
+       "realized_price": 0.75,
+       "surgery_certificate": 1.0,
+       "v_surgery": 355.95,
+       "surgery_worst": 0.01059322033898305,
+       "predicted_bound": 46.49333333333333,
+       "mean_remaining_after_hit": 1.0566666666666666,
+       "hit_fraction": 0.08666666666666667,
+       "bound_holds": true
+      },
+      {
+       "psi": "vconsv: RUL<40",
+       "posterior": 0.282258064516129,
+       "v_psi": 469.3,
+       "realized_price": 113.10000000000002,
+       "surgery_certificate": 146.15000000000003,
+       "v_surgery": 323.15,
+       "surgery_worst": 0.0013241525423728813,
+       "predicted_bound": 2734.6,
+       "mean_remaining_after_hit": 62.15,
+       "hit_fraction": 0.6033333333333334,
+       "bound_holds": true
+      }
+     ],
+     "wpoa_realized": 113.10000000000002,
+     "wpoa_surgery": 146.15000000000003,
+     "wpoa_predicted": 2734.6,
+     "voq": 79.57620967741934
+    },
+    {
+     "seed": 9,
+     "v_robust": 351.5,
+     "u_names": [
+      "mid: RUL<22",
+      "consv: anom>0.6",
+      "vconsv: RUL<40"
+     ],
+     "r_range": [
+      -40.0,
+      4.0
+     ],
+     "per_psi": [
+      {
+       "psi": "mid: RUL<22",
+       "posterior": 0.41935483870967744,
+       "v_psi": 475.7,
+       "realized_price": 124.19999999999999,
+       "surgery_certificate": 150.5,
+       "v_surgery": 325.2,
+       "surgery_worst": 0.0010108668182966893,
+       "predicted_bound": 2800.16,
+       "mean_remaining_after_hit": 63.64,
+       "hit_fraction": 0.64,
+       "bound_holds": true
+      },
+      {
+       "psi": "consv: anom>0.6",
+       "posterior": 0.29838709677419356,
+       "v_psi": 351.5,
+       "realized_price": 0.0,
+       "surgery_certificate": 0.0,
+       "v_surgery": 351.5,
+       "surgery_worst": 0.0025271670457417236,
+       "predicted_bound": 23.61333333333333,
+       "mean_remaining_after_hit": 0.5366666666666666,
+       "hit_fraction": 0.023333333333333334,
+       "bound_holds": true
+      },
+      {
+       "psi": "vconsv: RUL<40",
+       "posterior": 0.282258064516129,
+       "v_psi": 475.7,
+       "realized_price": 124.19999999999999,
+       "surgery_certificate": 150.5,
+       "v_surgery": 325.2,
+       "surgery_worst": 0.0005054334091483447,
+       "predicted_bound": 2787.5466666666666,
+       "mean_remaining_after_hit": 63.35333333333333,
+       "hit_fraction": 0.6333333333333333,
+       "bound_holds": true
+      }
+     ],
+     "wpoa_realized": 124.19999999999999,
+     "wpoa_surgery": 150.5,
+     "wpoa_predicted": 2800.16,
+     "voq": 87.14032258064515
+    },
+    {
+     "seed": 10,
+     "v_robust": 353.45,
+     "u_names": [
+      "mid: RUL<22",
+      "consv: anom>0.6",
+      "vconsv: RUL<40"
+     ],
+     "r_range": [
+      -40.0,
+      4.0
+     ],
+     "per_psi": [
+      {
+       "psi": "mid: RUL<22",
+       "posterior": 0.41935483870967744,
+       "v_psi": 471.65,
+       "realized_price": 118.19999999999999,
+       "surgery_certificate": 150.5,
+       "v_surgery": 321.15,
+       "surgery_worst": 0.0008,
+       "predicted_bound": 2716.266666666667,
+       "mean_remaining_after_hit": 61.733333333333334,
+       "hit_fraction": 0.6166666666666667,
+       "bound_holds": true
+      },
+      {
+       "psi": "consv: anom>0.6",
+       "posterior": 0.29838709677419356,
+       "v_psi": 353.45,
+       "realized_price": 0.0,
+       "surgery_certificate": 0.0,
+       "v_surgery": 353.45,
+       "surgery_worst": 0.0064,
+       "predicted_bound": 2.3466666666666667,
+       "mean_remaining_after_hit": 0.05333333333333334,
+       "hit_fraction": 0.006666666666666667,
+       "bound_holds": true
+      },
+      {
+       "psi": "vconsv: RUL<40",
+       "posterior": 0.282258064516129,
+       "v_psi": 471.65,
+       "realized_price": 118.19999999999999,
+       "surgery_certificate": 150.5,
+       "v_surgery": 321.15,
+       "surgery_worst": 0.0018666666666666666,
+       "predicted_bound": 2716.266666666667,
+       "mean_remaining_after_hit": 61.733333333333334,
+       "hit_fraction": 0.6166666666666667,
+       "bound_holds": true
+      }
+     ],
+     "wpoa_realized": 118.19999999999999,
+     "wpoa_surgery": 150.5,
+     "wpoa_predicted": 2716.266666666667,
+     "voq": 82.93064516129033
+    },
+    {
+     "seed": 11,
+     "v_robust": 351.05,
+     "u_names": [
+      "mid: RUL<22",
+      "consv: anom>0.6",
+      "vconsv: RUL<40"
+     ],
+     "r_range": [
+      -40.0,
+      4.0
+     ],
+     "per_psi": [
+      {
+       "psi": "mid: RUL<22",
+       "posterior": 0.41935483870967744,
+       "v_psi": 472.0,
+       "realized_price": 120.94999999999999,
+       "surgery_certificate": 148.0,
+       "v_surgery": 324.0,
+       "surgery_worst": 0.001100715465052284,
+       "predicted_bound": 2656.5733333333333,
+       "mean_remaining_after_hit": 60.376666666666665,
+       "hit_fraction": 0.6033333333333334,
+       "bound_holds": true
+      },
+      {
+       "psi": "consv: anom>0.6",
+       "posterior": 0.29838709677419356,
+       "v_psi": 351.05,
+       "realized_price": 0.0,
+       "surgery_certificate": 0.0,
+       "v_surgery": 351.05,
+       "surgery_worst": 0.0085305448541552,
+       "predicted_bound": 0.0,
+       "mean_remaining_after_hit": 0.0,
+       "hit_fraction": 0.0,
+       "bound_holds": true
+      },
+      {
+       "psi": "vconsv: RUL<40",
+       "posterior": 0.282258064516129,
+       "v_psi": 472.0,
+       "realized_price": 120.94999999999999,
+       "surgery_certificate": 148.0,
+       "v_surgery": 324.0,
+       "surgery_worst": 0.001375894331315355,
+       "predicted_bound": 2656.5733333333333,
+       "mean_remaining_after_hit": 60.376666666666665,
+       "hit_fraction": 0.6033333333333334,
+       "bound_holds": true
+      }
+     ],
+     "wpoa_realized": 120.94999999999999,
+     "wpoa_surgery": 148.0,
+     "wpoa_predicted": 2656.5733333333333,
+     "voq": 84.8600806451613
+    },
+    {
+     "seed": 12,
+     "v_robust": 350.3,
+     "u_names": [
+      "mid: RUL<22",
+      "consv: anom>0.6",
+      "vconsv: RUL<40"
+     ],
+     "r_range": [
+      -40.0,
+      4.0
+     ],
+     "per_psi": [
+      {
+       "psi": "mid: RUL<22",
+       "posterior": 0.41935483870967744,
+       "v_psi": 467.25,
+       "realized_price": 116.94999999999999,
+       "surgery_certificate": 145.85000000000002,
+       "v_surgery": 321.4,
+       "surgery_worst": 0.0002782415136338342,
+       "predicted_bound": 2798.84,
+       "mean_remaining_after_hit": 63.61,
+       "hit_fraction": 0.6333333333333333,
+       "bound_holds": true
+      },
+      {
+       "psi": "consv: anom>0.6",
+       "posterior": 0.29838709677419356,
+       "v_psi": 350.3,
+       "realized_price": 0.0,
+       "surgery_certificate": 0.0,
+       "v_surgery": 350.3,
+       "surgery_worst": 0.005008347245409015,
+       "predicted_bound": 1.1733333333333333,
+       "mean_remaining_after_hit": 0.02666666666666667,
+       "hit_fraction": 0.0033333333333333335,
+       "bound_holds": true
+      },
+      {
+       "psi": "vconsv: RUL<40",
+       "posterior": 0.282258064516129,
+       "v_psi": 467.25,
+       "realized_price": 116.94999999999999,
+       "surgery_certificate": 145.85000000000002,
+       "v_surgery": 321.4,
+       "surgery_worst": 0.0002782415136338342,
+       "predicted_bound": 2798.84,
+       "mean_remaining_after_hit": 63.61,
+       "hit_fraction": 0.6333333333333333,
+       "bound_holds": true
+      }
+     ],
+     "wpoa_realized": 116.94999999999999,
+     "wpoa_surgery": 145.85000000000002,
+     "wpoa_predicted": 2798.84,
+     "voq": 82.05362903225807
+    },
+    {
+     "seed": 13,
+     "v_robust": 348.35,
+     "u_names": [
+      "mid: RUL<22",
+      "consv: anom>0.6",
+      "vconsv: RUL<40"
+     ],
+     "r_range": [
+      -40.0,
+      4.0
+     ],
+     "per_psi": [
+      {
+       "psi": "mid: RUL<22",
+       "posterior": 0.41935483870967744,
+       "v_psi": 469.95,
+       "realized_price": 121.59999999999997,
+       "surgery_certificate": 146.39999999999998,
+       "v_surgery": 323.55,
+       "surgery_worst": 0.0005122950819672131,
+       "predicted_bound": 2621.2266666666665,
+       "mean_remaining_after_hit": 59.57333333333333,
+       "hit_fraction": 0.6033333333333334,
+       "bound_holds": true
+      },
+      {
+       "psi": "consv: anom>0.6",
+       "posterior": 0.29838709677419356,
+       "v_psi": 348.0,
+       "realized_price": -0.35000000000002274,
+       "surgery_certificate": -0.35000000000002274,
+       "v_surgery": 348.35,
+       "surgery_worst": 0.0012807377049180327,
+       "predicted_bound": 22.44,
+       "mean_remaining_after_hit": 0.51,
+       "hit_fraction": 0.02,
+       "bound_holds": true
+      },
+      {
+       "psi": "vconsv: RUL<40",
+       "posterior": 0.282258064516129,
+       "v_psi": 470.3,
+       "realized_price": 121.94999999999999,
+       "surgery_certificate": 146.75,
+       "v_surgery": 323.55,
+       "surgery_worst": 0.0010245901639344263,
+       "predicted_bound": 2620.4933333333333,
+       "mean_remaining_after_hit": 59.556666666666665,
+       "hit_fraction": 0.5933333333333334,
+       "bound_holds": true
+      }
+     ],
+     "wpoa_realized": 121.94999999999999,
+     "wpoa_surgery": 146.75,
+     "wpoa_predicted": 2621.2266666666665,
+     "voq": 85.31048387096774
+    },
+    {
+     "seed": 14,
+     "v_robust": 347.05,
+     "u_names": [
+      "mid: RUL<22",
+      "consv: anom>0.6",
+      "vconsv: RUL<40"
+     ],
+     "r_range": [
+      -40.0,
+      4.0
+     ],
+     "per_psi": [
+      {
+       "psi": "mid: RUL<22",
+       "posterior": 0.41935483870967744,
+       "v_psi": 470.25,
+       "realized_price": 123.19999999999999,
+       "surgery_certificate": 150.25,
+       "v_surgery": 320.0,
+       "surgery_worst": 0.0,
+       "predicted_bound": 2536.8933333333334,
+       "mean_remaining_after_hit": 57.656666666666666,
+       "hit_fraction": 0.5733333333333334,
+       "bound_holds": true
+      },
+      {
+       "psi": "consv: anom>0.6",
+       "posterior": 0.29838709677419356,
+       "v_psi": 347.05,
+       "realized_price": 0.0,
+       "surgery_certificate": 0.0,
+       "v_surgery": 347.05,
+       "surgery_worst": 0.009834492684096906,
+       "predicted_bound": 0.0,
+       "mean_remaining_after_hit": 0.0,
+       "hit_fraction": 0.0,
+       "bound_holds": true
+      },
+      {
+       "psi": "vconsv: RUL<40",
+       "posterior": 0.282258064516129,
+       "v_psi": 470.25,
+       "realized_price": 123.19999999999999,
+       "surgery_certificate": 150.25,
+       "v_surgery": 320.0,
+       "surgery_worst": 0.000959462700887503,
+       "predicted_bound": 2536.8933333333334,
+       "mean_remaining_after_hit": 57.656666666666666,
+       "hit_fraction": 0.5733333333333334,
+       "bound_holds": true
+      }
+     ],
+     "wpoa_realized": 123.19999999999999,
+     "wpoa_surgery": 150.25,
+     "wpoa_predicted": 2536.8933333333334,
+     "voq": 86.43870967741935
+    }
+   ],
+   "agg": {
+    "wpoa_realized": 116.10333333333334,
+    "wpoa_realized_sd": 11.070794410921406,
+    "wpoa_surgery": 149.27,
+    "wpoa_surgery_sd": 1.919270694821336,
+    "wpoa_predicted": 2703.242666666667,
+    "voq": 81.41010752688175,
+    "voq_sd": 7.788299892229113,
+    "bound_violations": 0,
+    "n_bound_checks": 45
+   }
+  },
+  "gridworld": {
+   "rows": [
+    {
+     "seed": 0,
+     "v_robust": 40.23,
+     "u_names": [
+      "psi_W3: Within_3(warn)",
+      "psi_W5: Within_5(warn)"
+     ],
+     "r_range": [
+      -2.0,
+      1.0
+     ],
+     "per_psi": [
+      {
+       "psi": "psi_W3: Within_3(warn)",
+       "posterior": 0.5135135135135135,
+       "v_psi": 40.964999999999996,
+       "realized_price": 0.7349999999999994,
+       "surgery_certificate": 0.7349999999999994,
+       "v_surgery": 40.23,
+       "surgery_worst": 0.0,
+       "predicted_bound": 145.5,
+       "mean_remaining_after_hit": 48.5,
+       "hit_fraction": 0.9966666666666667,
+       "bound_holds": true
+      },
+      {
+       "psi": "psi_W5: Within_5(warn)",
+       "posterior": 0.4864864864864865,
+       "v_psi": 40.23,
+       "realized_price": 0.0,
+       "surgery_certificate": 0.0,
+       "v_surgery": 40.23,
+       "surgery_worst": 0.0,
+       "predicted_bound": 0.0,
+       "mean_remaining_after_hit": 0.0,
+       "hit_fraction": 0.0,
+       "bound_holds": true
+      }
+     ],
+     "wpoa_realized": 0.7349999999999994,
+     "wpoa_surgery": 0.7349999999999994,
+     "wpoa_predicted": 145.5,
+     "voq": 0.3774324324324354
+    },
+    {
+     "seed": 1,
+     "v_robust": 40.23,
+     "u_names": [
+      "psi_W3: Within_3(warn)",
+      "psi_W5: Within_5(warn)"
+     ],
+     "r_range": [
+      -2.0,
+      1.0
+     ],
+     "per_psi": [
+      {
+       "psi": "psi_W3: Within_3(warn)",
+       "posterior": 0.5135135135135135,
+       "v_psi": 40.964999999999996,
+       "realized_price": 0.7349999999999994,
+       "surgery_certificate": 0.7349999999999994,
+       "v_surgery": 40.23,
+       "surgery_worst": 0.0,
+       "predicted_bound": 147.99,
+       "mean_remaining_after_hit": 49.33,
+       "hit_fraction": 0.9966666666666667,
+       "bound_holds": true
+      },
+      {
+       "psi": "psi_W5: Within_5(warn)",
+       "posterior": 0.4864864864864865,
+       "v_psi": 40.23,
+       "realized_price": 0.0,
+       "surgery_certificate": 0.0,
+       "v_surgery": 40.23,
+       "surgery_worst": 0.0,
+       "predicted_bound": 0.0,
+       "mean_remaining_after_hit": 0.0,
+       "hit_fraction": 0.0,
+       "bound_holds": true
+      }
+     ],
+     "wpoa_realized": 0.7349999999999994,
+     "wpoa_surgery": 0.7349999999999994,
+     "wpoa_predicted": 147.99,
+     "voq": 0.3774324324324354
+    },
+    {
+     "seed": 2,
+     "v_robust": 40.23,
+     "u_names": [
+      "psi_W3: Within_3(warn)",
+      "psi_W5: Within_5(warn)"
+     ],
+     "r_range": [
+      -2.0,
+      1.0
+     ],
+     "per_psi": [
+      {
+       "psi": "psi_W3: Within_3(warn)",
+       "posterior": 0.5135135135135135,
+       "v_psi": 40.964999999999996,
+       "realized_price": 0.7349999999999994,
+       "surgery_certificate": 0.7349999999999994,
+       "v_surgery": 40.23,
+       "surgery_worst": 0.0,
+       "predicted_bound": 147.35,
+       "mean_remaining_after_hit": 49.11666666666667,
+       "hit_fraction": 1.0,
+       "bound_holds": true
+      },
+      {
+       "psi": "psi_W5: Within_5(warn)",
+       "posterior": 0.4864864864864865,
+       "v_psi": 40.23,
+       "realized_price": 0.0,
+       "surgery_certificate": 0.0,
+       "v_surgery": 40.23,
+       "surgery_worst": 0.0,
+       "predicted_bound": 0.0,
+       "mean_remaining_after_hit": 0.0,
+       "hit_fraction": 0.0,
+       "bound_holds": true
+      }
+     ],
+     "wpoa_realized": 0.7349999999999994,
+     "wpoa_surgery": 0.7349999999999994,
+     "wpoa_predicted": 147.35,
+     "voq": 0.3774324324324354
+    },
+    {
+     "seed": 3,
+     "v_robust": 40.23,
+     "u_names": [
+      "psi_W3: Within_3(warn)",
+      "psi_W5: Within_5(warn)"
+     ],
+     "r_range": [
+      -2.0,
+      1.0
+     ],
+     "per_psi": [
+      {
+       "psi": "psi_W3: Within_3(warn)",
+       "posterior": 0.5135135135135135,
+       "v_psi": 40.964999999999996,
+       "realized_price": 0.7349999999999994,
+       "surgery_certificate": 0.7349999999999994,
+       "v_surgery": 40.23,
+       "surgery_worst": 0.0,
+       "predicted_bound": 145.02,
+       "mean_remaining_after_hit": 48.34,
+       "hit_fraction": 1.0,
+       "bound_holds": true
+      },
+      {
+       "psi": "psi_W5: Within_5(warn)",
+       "posterior": 0.4864864864864865,
+       "v_psi": 40.23,
+       "realized_price": 0.0,
+       "surgery_certificate": 0.0,
+       "v_surgery": 40.23,
+       "surgery_worst": 0.0,
+       "predicted_bound": 0.0,
+       "mean_remaining_after_hit": 0.0,
+       "hit_fraction": 0.0,
+       "bound_holds": true
+      }
+     ],
+     "wpoa_realized": 0.7349999999999994,
+     "wpoa_surgery": 0.7349999999999994,
+     "wpoa_predicted": 145.02,
+     "voq": 0.3774324324324354
+    },
+    {
+     "seed": 4,
+     "v_robust": 40.23,
+     "u_names": [
+      "psi_W3: Within_3(warn)",
+      "psi_W5: Within_5(warn)"
+     ],
+     "r_range": [
+      -2.0,
+      1.0
+     ],
+     "per_psi": [
+      {
+       "psi": "psi_W3: Within_3(warn)",
+       "posterior": 0.5135135135135135,
+       "v_psi": 40.964999999999996,
+       "realized_price": 0.7349999999999994,
+       "surgery_certificate": 0.7349999999999994,
+       "v_surgery": 40.23,
+       "surgery_worst": 0.0,
+       "predicted_bound": 145.48,
+       "mean_remaining_after_hit": 48.49333333333333,
+       "hit_fraction": 1.0,
+       "bound_holds": true
+      },
+      {
+       "psi": "psi_W5: Within_5(warn)",
+       "posterior": 0.4864864864864865,
+       "v_psi": 40.23,
+       "realized_price": 0.0,
+       "surgery_certificate": 0.0,
+       "v_surgery": 40.23,
+       "surgery_worst": 0.0,
+       "predicted_bound": 0.0,
+       "mean_remaining_after_hit": 0.0,
+       "hit_fraction": 0.0,
+       "bound_holds": true
+      }
+     ],
+     "wpoa_realized": 0.7349999999999994,
+     "wpoa_surgery": 0.7349999999999994,
+     "wpoa_predicted": 145.48,
+     "voq": 0.3774324324324354
+    },
+    {
+     "seed": 5,
+     "v_robust": 40.23,
+     "u_names": [
+      "psi_W3: Within_3(warn)",
+      "psi_W5: Within_5(warn)"
+     ],
+     "r_range": [
+      -2.0,
+      1.0
+     ],
+     "per_psi": [
+      {
+       "psi": "psi_W3: Within_3(warn)",
+       "posterior": 0.5135135135135135,
+       "v_psi": 40.964999999999996,
+       "realized_price": 0.7349999999999994,
+       "surgery_certificate": 0.7349999999999994,
+       "v_surgery": 40.23,
+       "surgery_worst": 0.0,
+       "predicted_bound": 146.88,
+       "mean_remaining_after_hit": 48.96,
+       "hit_fraction": 1.0,
+       "bound_holds": true
+      },
+      {
+       "psi": "psi_W5: Within_5(warn)",
+       "posterior": 0.4864864864864865,
+       "v_psi": 40.23,
+       "realized_price": 0.0,
+       "surgery_certificate": 0.0,
+       "v_surgery": 40.23,
+       "surgery_worst": 0.0,
+       "predicted_bound": 0.0,
+       "mean_remaining_after_hit": 0.0,
+       "hit_fraction": 0.0,
+       "bound_holds": true
+      }
+     ],
+     "wpoa_realized": 0.7349999999999994,
+     "wpoa_surgery": 0.7349999999999994,
+     "wpoa_predicted": 146.88,
+     "voq": 0.3774324324324354
+    },
+    {
+     "seed": 6,
+     "v_robust": 40.23,
+     "u_names": [
+      "psi_W3: Within_3(warn)",
+      "psi_W5: Within_5(warn)"
+     ],
+     "r_range": [
+      -2.0,
+      1.0
+     ],
+     "per_psi": [
+      {
+       "psi": "psi_W3: Within_3(warn)",
+       "posterior": 0.5135135135135135,
+       "v_psi": 40.964999999999996,
+       "realized_price": 0.7349999999999994,
+       "surgery_certificate": 0.7349999999999994,
+       "v_surgery": 40.23,
+       "surgery_worst": 0.0,
+       "predicted_bound": 144.65,
+       "mean_remaining_after_hit": 48.21666666666667,
+       "hit_fraction": 1.0,
+       "bound_holds": true
+      },
+      {
+       "psi": "psi_W5: Within_5(warn)",
+       "posterior": 0.4864864864864865,
+       "v_psi": 40.23,
+       "realized_price": 0.0,
+       "surgery_certificate": 0.0,
+       "v_surgery": 40.23,
+       "surgery_worst": 0.0,
+       "predicted_bound": 0.0,
+       "mean_remaining_after_hit": 0.0,
+       "hit_fraction": 0.0,
+       "bound_holds": true
+      }
+     ],
+     "wpoa_realized": 0.7349999999999994,
+     "wpoa_surgery": 0.7349999999999994,
+     "wpoa_predicted": 144.65,
+     "voq": 0.3774324324324354
+    },
+    {
+     "seed": 7,
+     "v_robust": 40.23,
+     "u_names": [
+      "psi_W3: Within_3(warn)",
+      "psi_W5: Within_5(warn)"
+     ],
+     "r_range": [
+      -2.0,
+      1.0
+     ],
+     "per_psi": [
+      {
+       "psi": "psi_W3: Within_3(warn)",
+       "posterior": 0.5135135135135135,
+       "v_psi": 40.964999999999996,
+       "realized_price": 0.7349999999999994,
+       "surgery_certificate": 0.7349999999999994,
+       "v_surgery": 40.23,
+       "surgery_worst": 0.0,
+       "predicted_bound": 144.23000000000002,
+       "mean_remaining_after_hit": 48.07666666666667,
+       "hit_fraction": 0.9966666666666667,
+       "bound_holds": true
+      },
+      {
+       "psi": "psi_W5: Within_5(warn)",
+       "posterior": 0.4864864864864865,
+       "v_psi": 40.23,
+       "realized_price": 0.0,
+       "surgery_certificate": 0.0,
+       "v_surgery": 40.23,
+       "surgery_worst": 0.0,
+       "predicted_bound": 0.0,
+       "mean_remaining_after_hit": 0.0,
+       "hit_fraction": 0.0,
+       "bound_holds": true
+      }
+     ],
+     "wpoa_realized": 0.7349999999999994,
+     "wpoa_surgery": 0.7349999999999994,
+     "wpoa_predicted": 144.23000000000002,
+     "voq": 0.3774324324324354
+    },
+    {
+     "seed": 8,
+     "v_robust": 40.23,
+     "u_names": [
+      "psi_W3: Within_3(warn)",
+      "psi_W5: Within_5(warn)"
+     ],
+     "r_range": [
+      -2.0,
+      1.0
+     ],
+     "per_psi": [
+      {
+       "psi": "psi_W3: Within_3(warn)",
+       "posterior": 0.5135135135135135,
+       "v_psi": 40.964999999999996,
+       "realized_price": 0.7349999999999994,
+       "surgery_certificate": 0.7349999999999994,
+       "v_surgery": 40.23,
+       "surgery_worst": 0.0,
+       "predicted_bound": 147.64,
+       "mean_remaining_after_hit": 49.21333333333333,
+       "hit_fraction": 1.0,
+       "bound_holds": true
+      },
+      {
+       "psi": "psi_W5: Within_5(warn)",
+       "posterior": 0.4864864864864865,
+       "v_psi": 40.23,
+       "realized_price": 0.0,
+       "surgery_certificate": 0.0,
+       "v_surgery": 40.23,
+       "surgery_worst": 0.0,
+       "predicted_bound": 0.0,
+       "mean_remaining_after_hit": 0.0,
+       "hit_fraction": 0.0,
+       "bound_holds": true
+      }
+     ],
+     "wpoa_realized": 0.7349999999999994,
+     "wpoa_surgery": 0.7349999999999994,
+     "wpoa_predicted": 147.64,
+     "voq": 0.3774324324324354
+    },
+    {
+     "seed": 9,
+     "v_robust": 40.23,
+     "u_names": [
+      "psi_W3: Within_3(warn)",
+      "psi_W5: Within_5(warn)"
+     ],
+     "r_range": [
+      -2.0,
+      1.0
+     ],
+     "per_psi": [
+      {
+       "psi": "psi_W3: Within_3(warn)",
+       "posterior": 0.5135135135135135,
+       "v_psi": 40.964999999999996,
+       "realized_price": 0.7349999999999994,
+       "surgery_certificate": 0.7349999999999994,
+       "v_surgery": 40.23,
+       "surgery_worst": 0.0,
+       "predicted_bound": 147.72,
+       "mean_remaining_after_hit": 49.24,
+       "hit_fraction": 1.0,
+       "bound_holds": true
+      },
+      {
+       "psi": "psi_W5: Within_5(warn)",
+       "posterior": 0.4864864864864865,
+       "v_psi": 40.23,
+       "realized_price": 0.0,
+       "surgery_certificate": 0.0,
+       "v_surgery": 40.23,
+       "surgery_worst": 0.0,
+       "predicted_bound": 0.0,
+       "mean_remaining_after_hit": 0.0,
+       "hit_fraction": 0.0,
+       "bound_holds": true
+      }
+     ],
+     "wpoa_realized": 0.7349999999999994,
+     "wpoa_surgery": 0.7349999999999994,
+     "wpoa_predicted": 147.72,
+     "voq": 0.3774324324324354
+    },
+    {
+     "seed": 10,
+     "v_robust": 40.23,
+     "u_names": [
+      "psi_W3: Within_3(warn)",
+      "psi_W5: Within_5(warn)"
+     ],
+     "r_range": [
+      -2.0,
+      1.0
+     ],
+     "per_psi": [
+      {
+       "psi": "psi_W3: Within_3(warn)",
+       "posterior": 0.5135135135135135,
+       "v_psi": 40.964999999999996,
+       "realized_price": 0.7349999999999994,
+       "surgery_certificate": 0.7349999999999994,
+       "v_surgery": 40.23,
+       "surgery_worst": 0.0,
+       "predicted_bound": 144.05,
+       "mean_remaining_after_hit": 48.016666666666666,
+       "hit_fraction": 1.0,
+       "bound_holds": true
+      },
+      {
+       "psi": "psi_W5: Within_5(warn)",
+       "posterior": 0.4864864864864865,
+       "v_psi": 40.23,
+       "realized_price": 0.0,
+       "surgery_certificate": 0.0,
+       "v_surgery": 40.23,
+       "surgery_worst": 0.0,
+       "predicted_bound": 0.0,
+       "mean_remaining_after_hit": 0.0,
+       "hit_fraction": 0.0,
+       "bound_holds": true
+      }
+     ],
+     "wpoa_realized": 0.7349999999999994,
+     "wpoa_surgery": 0.7349999999999994,
+     "wpoa_predicted": 144.05,
+     "voq": 0.3774324324324354
+    },
+    {
+     "seed": 11,
+     "v_robust": 40.23,
+     "u_names": [
+      "psi_W3: Within_3(warn)",
+      "psi_W5: Within_5(warn)"
+     ],
+     "r_range": [
+      -2.0,
+      1.0
+     ],
+     "per_psi": [
+      {
+       "psi": "psi_W3: Within_3(warn)",
+       "posterior": 0.5135135135135135,
+       "v_psi": 40.964999999999996,
+       "realized_price": 0.7349999999999994,
+       "surgery_certificate": 0.7349999999999994,
+       "v_surgery": 40.23,
+       "surgery_worst": 0.0,
+       "predicted_bound": 144.87,
+       "mean_remaining_after_hit": 48.29,
+       "hit_fraction": 1.0,
+       "bound_holds": true
+      },
+      {
+       "psi": "psi_W5: Within_5(warn)",
+       "posterior": 0.4864864864864865,
+       "v_psi": 40.23,
+       "realized_price": 0.0,
+       "surgery_certificate": 0.0,
+       "v_surgery": 40.23,
+       "surgery_worst": 0.0,
+       "predicted_bound": 0.0,
+       "mean_remaining_after_hit": 0.0,
+       "hit_fraction": 0.0,
+       "bound_holds": true
+      }
+     ],
+     "wpoa_realized": 0.7349999999999994,
+     "wpoa_surgery": 0.7349999999999994,
+     "wpoa_predicted": 144.87,
+     "voq": 0.3774324324324354
+    },
+    {
+     "seed": 12,
+     "v_robust": 40.23,
+     "u_names": [
+      "psi_W3: Within_3(warn)",
+      "psi_W5: Within_5(warn)"
+     ],
+     "r_range": [
+      -2.0,
+      1.0
+     ],
+     "per_psi": [
+      {
+       "psi": "psi_W3: Within_3(warn)",
+       "posterior": 0.5135135135135135,
+       "v_psi": 40.964999999999996,
+       "realized_price": 0.7349999999999994,
+       "surgery_certificate": 0.7349999999999994,
+       "v_surgery": 40.23,
+       "surgery_worst": 0.0,
+       "predicted_bound": 148.18,
+       "mean_remaining_after_hit": 49.39333333333333,
+       "hit_fraction": 1.0,
+       "bound_holds": true
+      },
+      {
+       "psi": "psi_W5: Within_5(warn)",
+       "posterior": 0.4864864864864865,
+       "v_psi": 40.23,
+       "realized_price": 0.0,
+       "surgery_certificate": 0.0,
+       "v_surgery": 40.23,
+       "surgery_worst": 0.0,
+       "predicted_bound": 0.0,
+       "mean_remaining_after_hit": 0.0,
+       "hit_fraction": 0.0,
+       "bound_holds": true
+      }
+     ],
+     "wpoa_realized": 0.7349999999999994,
+     "wpoa_surgery": 0.7349999999999994,
+     "wpoa_predicted": 148.18,
+     "voq": 0.3774324324324354
+    },
+    {
+     "seed": 13,
+     "v_robust": 40.23,
+     "u_names": [
+      "psi_W3: Within_3(warn)",
+      "psi_W5: Within_5(warn)"
+     ],
+     "r_range": [
+      -2.0,
+      1.0
+     ],
+     "per_psi": [
+      {
+       "psi": "psi_W3: Within_3(warn)",
+       "posterior": 0.5135135135135135,
+       "v_psi": 40.23,
+       "realized_price": 0.0,
+       "surgery_certificate": 0.0,
+       "v_surgery": 40.23,
+       "surgery_worst": 0.0,
+       "predicted_bound": 0.0,
+       "mean_remaining_after_hit": 0.0,
+       "hit_fraction": 0.0,
+       "bound_holds": true
+      },
+      {
+       "psi": "psi_W5: Within_5(warn)",
+       "posterior": 0.4864864864864865,
+       "v_psi": 40.23,
+       "realized_price": 0.0,
+       "surgery_certificate": 0.0,
+       "v_surgery": 40.23,
+       "surgery_worst": 0.0,
+       "predicted_bound": 0.0,
+       "mean_remaining_after_hit": 0.0,
+       "hit_fraction": 0.0,
+       "bound_holds": true
+      }
+     ],
+     "wpoa_realized": 0.0,
+     "wpoa_surgery": 0.0,
+     "wpoa_predicted": 0.0,
+     "voq": 0.0
+    },
+    {
+     "seed": 14,
+     "v_robust": 40.23,
+     "u_names": [
+      "psi_W3: Within_3(warn)",
+      "psi_W5: Within_5(warn)"
+     ],
+     "r_range": [
+      -2.0,
+      1.0
+     ],
+     "per_psi": [
+      {
+       "psi": "psi_W3: Within_3(warn)",
+       "posterior": 0.5135135135135135,
+       "v_psi": 40.964999999999996,
+       "realized_price": 0.7349999999999994,
+       "surgery_certificate": 0.7349999999999994,
+       "v_surgery": 40.23,
+       "surgery_worst": 0.0,
+       "predicted_bound": 146.12,
+       "mean_remaining_after_hit": 48.70666666666666,
+       "hit_fraction": 1.0,
+       "bound_holds": true
+      },
+      {
+       "psi": "psi_W5: Within_5(warn)",
+       "posterior": 0.4864864864864865,
+       "v_psi": 40.23,
+       "realized_price": 0.0,
+       "surgery_certificate": 0.0,
+       "v_surgery": 40.23,
+       "surgery_worst": 0.0,
+       "predicted_bound": 0.0,
+       "mean_remaining_after_hit": 0.0,
+       "hit_fraction": 0.0,
+       "bound_holds": true
+      }
+     ],
+     "wpoa_realized": 0.7349999999999994,
+     "wpoa_surgery": 0.7349999999999994,
+     "wpoa_predicted": 146.12,
+     "voq": 0.3774324324324354
+    }
+   ],
+   "agg": {
+    "wpoa_realized": 0.6859999999999995,
+    "wpoa_realized_sd": 0.18334121195192296,
+    "wpoa_surgery": 0.6859999999999995,
+    "wpoa_surgery_sd": 0.18334121195192296,
+    "wpoa_predicted": 136.37866666666665,
+    "voq": 0.352270270270273,
+    "voq_sd": 0.09414818992125856,
+    "bound_violations": 0,
+    "n_bound_checks": 30
+   }
+  },
+  "budget": {
+   "rows": [
+    {
+     "seed": 0,
+     "v_robust": 6.0,
+     "u_names": [
+      "psi_$60: spend>=60",
+      "psi_$80: spend>=80"
+     ],
+     "r_range": [
+      0.0,
+      1.0
+     ],
+     "per_psi": [
+      {
+       "psi": "psi_$60: spend>=60",
+       "posterior": 0.43678160919540227,
+       "v_psi": 6.0,
+       "realized_price": 0.0,
+       "surgery_certificate": 0.0,
+       "v_surgery": 6.0,
+       "surgery_worst": 0.0,
+       "predicted_bound": 0.0,
+       "mean_remaining_after_hit": 0.0,
+       "hit_fraction": 0.0,
+       "bound_holds": true
+      },
+      {
+       "psi": "psi_$80: spend>=80",
+       "posterior": 0.5632183908045978,
+       "v_psi": 8.0,
+       "realized_price": 2.0,
+       "surgery_certificate": 2.0,
+       "v_surgery": 6.0,
+       "surgery_worst": 0.0,
+       "predicted_bound": 24.0,
+       "mean_remaining_after_hit": 24.0,
+       "hit_fraction": 1.0,
+       "bound_holds": true
+      }
+     ],
+     "wpoa_realized": 2.0,
+     "wpoa_surgery": 2.0,
+     "wpoa_predicted": 24.0,
+     "voq": 1.126436781609196
+    },
+    {
+     "seed": 1,
+     "v_robust": 6.0,
+     "u_names": [
+      "psi_$60: spend>=60",
+      "psi_$80: spend>=80"
+     ],
+     "r_range": [
+      0.0,
+      1.0
+     ],
+     "per_psi": [
+      {
+       "psi": "psi_$60: spend>=60",
+       "posterior": 0.43678160919540227,
+       "v_psi": 6.0,
+       "realized_price": 0.0,
+       "surgery_certificate": 0.0,
+       "v_surgery": 6.0,
+       "surgery_worst": 0.0,
+       "predicted_bound": 0.0,
+       "mean_remaining_after_hit": 0.0,
+       "hit_fraction": 0.0,
+       "bound_holds": true
+      },
+      {
+       "psi": "psi_$80: spend>=80",
+       "posterior": 0.5632183908045978,
+       "v_psi": 8.0,
+       "realized_price": 2.0,
+       "surgery_certificate": 2.0,
+       "v_surgery": 6.0,
+       "surgery_worst": 0.0,
+       "predicted_bound": 24.0,
+       "mean_remaining_after_hit": 24.0,
+       "hit_fraction": 1.0,
+       "bound_holds": true
+      }
+     ],
+     "wpoa_realized": 2.0,
+     "wpoa_surgery": 2.0,
+     "wpoa_predicted": 24.0,
+     "voq": 1.126436781609196
+    },
+    {
+     "seed": 2,
+     "v_robust": 6.0,
+     "u_names": [
+      "psi_$60: spend>=60",
+      "psi_$80: spend>=80"
+     ],
+     "r_range": [
+      0.0,
+      1.0
+     ],
+     "per_psi": [
+      {
+       "psi": "psi_$60: spend>=60",
+       "posterior": 0.43678160919540227,
+       "v_psi": 6.0,
+       "realized_price": 0.0,
+       "surgery_certificate": 0.0,
+       "v_surgery": 6.0,
+       "surgery_worst": 0.0,
+       "predicted_bound": 0.0,
+       "mean_remaining_after_hit": 0.0,
+       "hit_fraction": 0.0,
+       "bound_holds": true
+      },
+      {
+       "psi": "psi_$80: spend>=80",
+       "posterior": 0.5632183908045978,
+       "v_psi": 8.0,
+       "realized_price": 2.0,
+       "surgery_certificate": 2.0,
+       "v_surgery": 6.0,
+       "surgery_worst": 0.0,
+       "predicted_bound": 24.0,
+       "mean_remaining_after_hit": 24.0,
+       "hit_fraction": 1.0,
+       "bound_holds": true
+      }
+     ],
+     "wpoa_realized": 2.0,
+     "wpoa_surgery": 2.0,
+     "wpoa_predicted": 24.0,
+     "voq": 1.126436781609196
+    },
+    {
+     "seed": 3,
+     "v_robust": 6.0,
+     "u_names": [
+      "psi_$60: spend>=60",
+      "psi_$80: spend>=80"
+     ],
+     "r_range": [
+      0.0,
+      1.0
+     ],
+     "per_psi": [
+      {
+       "psi": "psi_$60: spend>=60",
+       "posterior": 0.43678160919540227,
+       "v_psi": 6.0,
+       "realized_price": 0.0,
+       "surgery_certificate": 0.0,
+       "v_surgery": 6.0,
+       "surgery_worst": 0.0,
+       "predicted_bound": 0.0,
+       "mean_remaining_after_hit": 0.0,
+       "hit_fraction": 0.0,
+       "bound_holds": true
+      },
+      {
+       "psi": "psi_$80: spend>=80",
+       "posterior": 0.5632183908045978,
+       "v_psi": 8.0,
+       "realized_price": 2.0,
+       "surgery_certificate": 2.0,
+       "v_surgery": 6.0,
+       "surgery_worst": 0.0,
+       "predicted_bound": 24.0,
+       "mean_remaining_after_hit": 24.0,
+       "hit_fraction": 1.0,
+       "bound_holds": true
+      }
+     ],
+     "wpoa_realized": 2.0,
+     "wpoa_surgery": 2.0,
+     "wpoa_predicted": 24.0,
+     "voq": 1.126436781609196
+    },
+    {
+     "seed": 4,
+     "v_robust": 6.0,
+     "u_names": [
+      "psi_$60: spend>=60",
+      "psi_$80: spend>=80"
+     ],
+     "r_range": [
+      0.0,
+      1.0
+     ],
+     "per_psi": [
+      {
+       "psi": "psi_$60: spend>=60",
+       "posterior": 0.43678160919540227,
+       "v_psi": 6.0,
+       "realized_price": 0.0,
+       "surgery_certificate": 0.0,
+       "v_surgery": 6.0,
+       "surgery_worst": 0.0,
+       "predicted_bound": 0.0,
+       "mean_remaining_after_hit": 0.0,
+       "hit_fraction": 0.0,
+       "bound_holds": true
+      },
+      {
+       "psi": "psi_$80: spend>=80",
+       "posterior": 0.5632183908045978,
+       "v_psi": 8.0,
+       "realized_price": 2.0,
+       "surgery_certificate": 2.0,
+       "v_surgery": 6.0,
+       "surgery_worst": 0.0,
+       "predicted_bound": 24.0,
+       "mean_remaining_after_hit": 24.0,
+       "hit_fraction": 1.0,
+       "bound_holds": true
+      }
+     ],
+     "wpoa_realized": 2.0,
+     "wpoa_surgery": 2.0,
+     "wpoa_predicted": 24.0,
+     "voq": 1.126436781609196
+    },
+    {
+     "seed": 5,
+     "v_robust": 6.0,
+     "u_names": [
+      "psi_$60: spend>=60",
+      "psi_$80: spend>=80"
+     ],
+     "r_range": [
+      0.0,
+      1.0
+     ],
+     "per_psi": [
+      {
+       "psi": "psi_$60: spend>=60",
+       "posterior": 0.43678160919540227,
+       "v_psi": 6.0,
+       "realized_price": 0.0,
+       "surgery_certificate": 0.0,
+       "v_surgery": 6.0,
+       "surgery_worst": 0.0,
+       "predicted_bound": 0.0,
+       "mean_remaining_after_hit": 0.0,
+       "hit_fraction": 0.0,
+       "bound_holds": true
+      },
+      {
+       "psi": "psi_$80: spend>=80",
+       "posterior": 0.5632183908045978,
+       "v_psi": 8.0,
+       "realized_price": 2.0,
+       "surgery_certificate": 2.0,
+       "v_surgery": 6.0,
+       "surgery_worst": 0.0,
+       "predicted_bound": 24.0,
+       "mean_remaining_after_hit": 24.0,
+       "hit_fraction": 1.0,
+       "bound_holds": true
+      }
+     ],
+     "wpoa_realized": 2.0,
+     "wpoa_surgery": 2.0,
+     "wpoa_predicted": 24.0,
+     "voq": 1.126436781609196
+    },
+    {
+     "seed": 6,
+     "v_robust": 6.0,
+     "u_names": [
+      "psi_$60: spend>=60",
+      "psi_$80: spend>=80"
+     ],
+     "r_range": [
+      0.0,
+      1.0
+     ],
+     "per_psi": [
+      {
+       "psi": "psi_$60: spend>=60",
+       "posterior": 0.43678160919540227,
+       "v_psi": 6.0,
+       "realized_price": 0.0,
+       "surgery_certificate": 0.0,
+       "v_surgery": 6.0,
+       "surgery_worst": 0.0,
+       "predicted_bound": 0.0,
+       "mean_remaining_after_hit": 0.0,
+       "hit_fraction": 0.0,
+       "bound_holds": true
+      },
+      {
+       "psi": "psi_$80: spend>=80",
+       "posterior": 0.5632183908045978,
+       "v_psi": 8.0,
+       "realized_price": 2.0,
+       "surgery_certificate": 2.0,
+       "v_surgery": 6.0,
+       "surgery_worst": 0.0,
+       "predicted_bound": 24.0,
+       "mean_remaining_after_hit": 24.0,
+       "hit_fraction": 1.0,
+       "bound_holds": true
+      }
+     ],
+     "wpoa_realized": 2.0,
+     "wpoa_surgery": 2.0,
+     "wpoa_predicted": 24.0,
+     "voq": 1.126436781609196
+    },
+    {
+     "seed": 7,
+     "v_robust": 6.0,
+     "u_names": [
+      "psi_$60: spend>=60",
+      "psi_$80: spend>=80"
+     ],
+     "r_range": [
+      0.0,
+      1.0
+     ],
+     "per_psi": [
+      {
+       "psi": "psi_$60: spend>=60",
+       "posterior": 0.43678160919540227,
+       "v_psi": 6.0,
+       "realized_price": 0.0,
+       "surgery_certificate": 0.0,
+       "v_surgery": 6.0,
+       "surgery_worst": 0.0,
+       "predicted_bound": 0.0,
+       "mean_remaining_after_hit": 0.0,
+       "hit_fraction": 0.0,
+       "bound_holds": true
+      },
+      {
+       "psi": "psi_$80: spend>=80",
+       "posterior": 0.5632183908045978,
+       "v_psi": 8.0,
+       "realized_price": 2.0,
+       "surgery_certificate": 2.0,
+       "v_surgery": 6.0,
+       "surgery_worst": 0.0,
+       "predicted_bound": 24.0,
+       "mean_remaining_after_hit": 24.0,
+       "hit_fraction": 1.0,
+       "bound_holds": true
+      }
+     ],
+     "wpoa_realized": 2.0,
+     "wpoa_surgery": 2.0,
+     "wpoa_predicted": 24.0,
+     "voq": 1.126436781609196
+    },
+    {
+     "seed": 8,
+     "v_robust": 6.0,
+     "u_names": [
+      "psi_$60: spend>=60",
+      "psi_$80: spend>=80"
+     ],
+     "r_range": [
+      0.0,
+      1.0
+     ],
+     "per_psi": [
+      {
+       "psi": "psi_$60: spend>=60",
+       "posterior": 0.43678160919540227,
+       "v_psi": 6.0,
+       "realized_price": 0.0,
+       "surgery_certificate": 0.0,
+       "v_surgery": 6.0,
+       "surgery_worst": 0.0,
+       "predicted_bound": 0.0,
+       "mean_remaining_after_hit": 0.0,
+       "hit_fraction": 0.0,
+       "bound_holds": true
+      },
+      {
+       "psi": "psi_$80: spend>=80",
+       "posterior": 0.5632183908045978,
+       "v_psi": 8.0,
+       "realized_price": 2.0,
+       "surgery_certificate": 2.0,
+       "v_surgery": 6.0,
+       "surgery_worst": 0.0,
+       "predicted_bound": 24.0,
+       "mean_remaining_after_hit": 24.0,
+       "hit_fraction": 1.0,
+       "bound_holds": true
+      }
+     ],
+     "wpoa_realized": 2.0,
+     "wpoa_surgery": 2.0,
+     "wpoa_predicted": 24.0,
+     "voq": 1.126436781609196
+    },
+    {
+     "seed": 9,
+     "v_robust": 6.0,
+     "u_names": [
+      "psi_$60: spend>=60",
+      "psi_$80: spend>=80"
+     ],
+     "r_range": [
+      0.0,
+      1.0
+     ],
+     "per_psi": [
+      {
+       "psi": "psi_$60: spend>=60",
+       "posterior": 0.43678160919540227,
+       "v_psi": 6.0,
+       "realized_price": 0.0,
+       "surgery_certificate": 0.0,
+       "v_surgery": 6.0,
+       "surgery_worst": 0.0,
+       "predicted_bound": 0.0,
+       "mean_remaining_after_hit": 0.0,
+       "hit_fraction": 0.0,
+       "bound_holds": true
+      },
+      {
+       "psi": "psi_$80: spend>=80",
+       "posterior": 0.5632183908045978,
+       "v_psi": 8.0,
+       "realized_price": 2.0,
+       "surgery_certificate": 2.0,
+       "v_surgery": 6.0,
+       "surgery_worst": 0.0,
+       "predicted_bound": 24.0,
+       "mean_remaining_after_hit": 24.0,
+       "hit_fraction": 1.0,
+       "bound_holds": true
+      }
+     ],
+     "wpoa_realized": 2.0,
+     "wpoa_surgery": 2.0,
+     "wpoa_predicted": 24.0,
+     "voq": 1.126436781609196
+    },
+    {
+     "seed": 10,
+     "v_robust": 6.0,
+     "u_names": [
+      "psi_$60: spend>=60",
+      "psi_$80: spend>=80"
+     ],
+     "r_range": [
+      0.0,
+      1.0
+     ],
+     "per_psi": [
+      {
+       "psi": "psi_$60: spend>=60",
+       "posterior": 0.43678160919540227,
+       "v_psi": 6.0,
+       "realized_price": 0.0,
+       "surgery_certificate": 0.0,
+       "v_surgery": 6.0,
+       "surgery_worst": 0.0,
+       "predicted_bound": 0.0,
+       "mean_remaining_after_hit": 0.0,
+       "hit_fraction": 0.0,
+       "bound_holds": true
+      },
+      {
+       "psi": "psi_$80: spend>=80",
+       "posterior": 0.5632183908045978,
+       "v_psi": 8.0,
+       "realized_price": 2.0,
+       "surgery_certificate": 2.0,
+       "v_surgery": 6.0,
+       "surgery_worst": 0.0,
+       "predicted_bound": 24.0,
+       "mean_remaining_after_hit": 24.0,
+       "hit_fraction": 1.0,
+       "bound_holds": true
+      }
+     ],
+     "wpoa_realized": 2.0,
+     "wpoa_surgery": 2.0,
+     "wpoa_predicted": 24.0,
+     "voq": 1.126436781609196
+    },
+    {
+     "seed": 11,
+     "v_robust": 6.0,
+     "u_names": [
+      "psi_$60: spend>=60",
+      "psi_$80: spend>=80"
+     ],
+     "r_range": [
+      0.0,
+      1.0
+     ],
+     "per_psi": [
+      {
+       "psi": "psi_$60: spend>=60",
+       "posterior": 0.43678160919540227,
+       "v_psi": 6.0,
+       "realized_price": 0.0,
+       "surgery_certificate": 0.0,
+       "v_surgery": 6.0,
+       "surgery_worst": 0.0,
+       "predicted_bound": 0.0,
+       "mean_remaining_after_hit": 0.0,
+       "hit_fraction": 0.0,
+       "bound_holds": true
+      },
+      {
+       "psi": "psi_$80: spend>=80",
+       "posterior": 0.5632183908045978,
+       "v_psi": 8.0,
+       "realized_price": 2.0,
+       "surgery_certificate": 2.0,
+       "v_surgery": 6.0,
+       "surgery_worst": 0.0,
+       "predicted_bound": 24.0,
+       "mean_remaining_after_hit": 24.0,
+       "hit_fraction": 1.0,
+       "bound_holds": true
+      }
+     ],
+     "wpoa_realized": 2.0,
+     "wpoa_surgery": 2.0,
+     "wpoa_predicted": 24.0,
+     "voq": 1.126436781609196
+    },
+    {
+     "seed": 12,
+     "v_robust": 6.0,
+     "u_names": [
+      "psi_$60: spend>=60",
+      "psi_$80: spend>=80"
+     ],
+     "r_range": [
+      0.0,
+      1.0
+     ],
+     "per_psi": [
+      {
+       "psi": "psi_$60: spend>=60",
+       "posterior": 0.43678160919540227,
+       "v_psi": 6.0,
+       "realized_price": 0.0,
+       "surgery_certificate": 0.0,
+       "v_surgery": 6.0,
+       "surgery_worst": 0.0,
+       "predicted_bound": 0.0,
+       "mean_remaining_after_hit": 0.0,
+       "hit_fraction": 0.0,
+       "bound_holds": true
+      },
+      {
+       "psi": "psi_$80: spend>=80",
+       "posterior": 0.5632183908045978,
+       "v_psi": 8.0,
+       "realized_price": 2.0,
+       "surgery_certificate": 2.0,
+       "v_surgery": 6.0,
+       "surgery_worst": 0.0,
+       "predicted_bound": 24.0,
+       "mean_remaining_after_hit": 24.0,
+       "hit_fraction": 1.0,
+       "bound_holds": true
+      }
+     ],
+     "wpoa_realized": 2.0,
+     "wpoa_surgery": 2.0,
+     "wpoa_predicted": 24.0,
+     "voq": 1.126436781609196
+    },
+    {
+     "seed": 13,
+     "v_robust": 6.0,
+     "u_names": [
+      "psi_$60: spend>=60",
+      "psi_$80: spend>=80"
+     ],
+     "r_range": [
+      0.0,
+      1.0
+     ],
+     "per_psi": [
+      {
+       "psi": "psi_$60: spend>=60",
+       "posterior": 0.43678160919540227,
+       "v_psi": 6.0,
+       "realized_price": 0.0,
+       "surgery_certificate": 0.0,
+       "v_surgery": 6.0,
+       "surgery_worst": 0.0,
+       "predicted_bound": 0.0,
+       "mean_remaining_after_hit": 0.0,
+       "hit_fraction": 0.0,
+       "bound_holds": true
+      },
+      {
+       "psi": "psi_$80: spend>=80",
+       "posterior": 0.5632183908045978,
+       "v_psi": 8.0,
+       "realized_price": 2.0,
+       "surgery_certificate": 2.0,
+       "v_surgery": 6.0,
+       "surgery_worst": 0.0,
+       "predicted_bound": 24.0,
+       "mean_remaining_after_hit": 24.0,
+       "hit_fraction": 1.0,
+       "bound_holds": true
+      }
+     ],
+     "wpoa_realized": 2.0,
+     "wpoa_surgery": 2.0,
+     "wpoa_predicted": 24.0,
+     "voq": 1.126436781609196
+    },
+    {
+     "seed": 14,
+     "v_robust": 6.0,
+     "u_names": [
+      "psi_$60: spend>=60",
+      "psi_$80: spend>=80"
+     ],
+     "r_range": [
+      0.0,
+      1.0
+     ],
+     "per_psi": [
+      {
+       "psi": "psi_$60: spend>=60",
+       "posterior": 0.43678160919540227,
+       "v_psi": 6.0,
+       "realized_price": 0.0,
+       "surgery_certificate": 0.0,
+       "v_surgery": 6.0,
+       "surgery_worst": 0.0,
+       "predicted_bound": 0.0,
+       "mean_remaining_after_hit": 0.0,
+       "hit_fraction": 0.0,
+       "bound_holds": true
+      },
+      {
+       "psi": "psi_$80: spend>=80",
+       "posterior": 0.5632183908045978,
+       "v_psi": 8.0,
+       "realized_price": 2.0,
+       "surgery_certificate": 2.0,
+       "v_surgery": 6.0,
+       "surgery_worst": 0.0,
+       "predicted_bound": 24.0,
+       "mean_remaining_after_hit": 24.0,
+       "hit_fraction": 1.0,
+       "bound_holds": true
+      }
+     ],
+     "wpoa_realized": 2.0,
+     "wpoa_surgery": 2.0,
+     "wpoa_predicted": 24.0,
+     "voq": 1.126436781609196
+    }
+   ],
+   "agg": {
+    "wpoa_realized": 2.0,
+    "wpoa_realized_sd": 0.0,
+    "wpoa_surgery": 2.0,
+    "wpoa_surgery_sd": 0.0,
+    "wpoa_predicted": 24.0,
+    "voq": 1.1264367816091965,
+    "voq_sd": 4.440892098500626e-16,
+    "bound_violations": 0,
+    "n_bound_checks": 30
+   }
+  }
+ },
+ "elapsed_s": 228.59235906600952
+}

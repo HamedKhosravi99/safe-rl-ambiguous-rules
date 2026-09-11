@@ -1,0 +1,22 @@
+{
+  "id": "task_021",
+  "question": "State Ohm's law.",
+  "source_docs": [
+    "electricity_basics.txt"
+  ],
+  "rubric": [
+    [
+      "voltage",
+      "volt"
+    ],
+    [
+      "current",
+      "ampere"
+    ],
+    [
+      "resistance",
+      "ohm"
+    ]
+  ],
+  "reference": "Voltage equals current times resistance."
+}

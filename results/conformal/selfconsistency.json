@@ -1,0 +1,456 @@
+{
+ "n_programs": 7,
+ "majority": 4,
+ "rows": [
+  {
+   "sample": -1,
+   "seed": 0,
+   "u_size": 3,
+   "policy": "run-to-failure",
+   "ret": 376.0,
+   "worst": 0.8926123381568926,
+   "chance": 1.0,
+   "cvar": 43.53333333333333
+  },
+  {
+   "sample": -1,
+   "seed": 0,
+   "u_size": 3,
+   "policy": "llm-code",
+   "ret": 375.0,
+   "worst": 0.4607768469154608,
+   "chance": 1.0,
+   "cvar": 30.833333333333332
+  },
+  {
+   "sample": -1,
+   "seed": 0,
+   "u_size": 3,
+   "policy": "SA-ORL",
+   "ret": 364.0,
+   "worst": 0.027418126428027417,
+   "chance": 0.0033333333333333335,
+   "cvar": 0.03333333333333333
+  },
+  {
+   "sample": -1,
+   "seed": 1,
+   "u_size": 3,
+   "policy": "run-to-failure",
+   "ret": 376.0,
+   "worst": 0.9062980030721967,
+   "chance": 1.0,
+   "cvar": 43.53333333333333
+  },
+  {
+   "sample": -1,
+   "seed": 1,
+   "u_size": 3,
+   "policy": "llm-code",
+   "ret": 371.75,
+   "worst": 0.3794162826420891,
+   "chance": 0.9866666666666667,
+   "cvar": 23.033333333333335
+  },
+  {
+   "sample": -1,
+   "seed": 1,
+   "u_size": 3,
+   "policy": "SA-ORL",
+   "ret": 368.0,
+   "worst": 0.03225806451612903,
+   "chance": 0.016666666666666666,
+   "cvar": 0.16666666666666666
+  },
+  {
+   "sample": -1,
+   "seed": 2,
+   "u_size": 3,
+   "policy": "run-to-failure",
+   "ret": 376.0,
+   "worst": 0.9084548104956268,
+   "chance": 1.0,
+   "cvar": 43.53333333333333
+  },
+  {
+   "sample": -1,
+   "seed": 2,
+   "u_size": 3,
+   "policy": "llm-code",
+   "ret": 367.55,
+   "worst": 0.32653061224489793,
+   "chance": 0.21666666666666667,
+   "cvar": 1.6666666666666667
+  },
+  {
+   "sample": -1,
+   "seed": 2,
+   "u_size": 3,
+   "policy": "SA-ORL",
+   "ret": 367.55,
+   "worst": 0.010495626822157435,
+   "chance": 0.016666666666666666,
+   "cvar": 0.16666666666666666
+  },
+  {
+   "sample": -1,
+   "seed": 3,
+   "u_size": 3,
+   "policy": "run-to-failure",
+   "ret": 376.0,
+   "worst": 0.8861386138613861,
+   "chance": 1.0,
+   "cvar": 43.53333333333333
+  },
+  {
+   "sample": -1,
+   "seed": 3,
+   "u_size": 3,
+   "policy": "llm-code",
+   "ret": 373.25,
+   "worst": 0.4513201320132013,
+   "chance": 0.9566666666666667,
+   "cvar": 28.666666666666668
+  },
+  {
+   "sample": -1,
+   "seed": 3,
+   "u_size": 3,
+   "policy": "SA-ORL",
+   "ret": 366.25,
+   "worst": 0.0033003300330033004,
+   "chance": 0.0,
+   "cvar": 0.0
+  },
+  {
+   "sample": -1,
+   "seed": 4,
+   "u_size": 3,
+   "policy": "run-to-failure",
+   "ret": 376.0,
+   "worst": 0.9078369905956113,
+   "chance": 1.0,
+   "cvar": 43.53333333333333
+  },
+  {
+   "sample": -1,
+   "seed": 4,
+   "u_size": 3,
+   "policy": "llm-code",
+   "ret": 368.75,
+   "worst": 0.2601880877742947,
+   "chance": 0.04666666666666667,
+   "cvar": 0.5666666666666667
+  },
+  {
+   "sample": -1,
+   "seed": 4,
+   "u_size": 3,
+   "policy": "SA-ORL",
+   "ret": 368.75,
+   "worst": 0.04012539184952978,
+   "chance": 0.03666666666666667,
+   "cvar": 0.4
+  },
+  {
+   "sample": -1,
+   "seed": 5,
+   "u_size": 3,
+   "policy": "run-to-failure",
+   "ret": 376.0,
+   "worst": 0.8928884986830553,
+   "chance": 1.0,
+   "cvar": 43.53333333333333
+  },
+  {
+   "sample": -1,
+   "seed": 5,
+   "u_size": 3,
+   "policy": "llm-code",
+   "ret": 363.75,
+   "worst": 0.2993854258121159,
+   "chance": 0.016666666666666666,
+   "cvar": 0.26666666666666666
+  },
+  {
+   "sample": -1,
+   "seed": 5,
+   "u_size": 3,
+   "policy": "SA-ORL",
+   "ret": 362.0,
+   "worst": 0.010535557506584723,
+   "chance": 0.0,
+   "cvar": 0.0
+  },
+  {
+   "sample": -1,
+   "seed": 6,
+   "u_size": 3,
+   "policy": "run-to-failure",
+   "ret": 376.0,
+   "worst": 0.9091516366065464,
+   "chance": 1.0,
+   "cvar": 43.53333333333333
+  },
+  {
+   "sample": -1,
+   "seed": 6,
+   "u_size": 3,
+   "policy": "llm-code",
+   "ret": 374.25,
+   "worst": 0.40414161656646624,
+   "chance": 1.0,
+   "cvar": 25.6
+  },
+  {
+   "sample": -1,
+   "seed": 6,
+   "u_size": 3,
+   "policy": "SA-ORL",
+   "ret": 370.25,
+   "worst": 0.03406813627254509,
+   "chance": 0.32,
+   "cvar": 1.4333333333333333
+  },
+  {
+   "sample": -1,
+   "seed": 7,
+   "u_size": 3,
+   "policy": "run-to-failure",
+   "ret": 376.0,
+   "worst": 0.8912363067292645,
+   "chance": 1.0,
+   "cvar": 43.53333333333333
+  },
+  {
+   "sample": -1,
+   "seed": 7,
+   "u_size": 3,
+   "policy": "llm-code",
+   "ret": 362.75,
+   "worst": 0.19092331768388107,
+   "chance": 0.0,
+   "cvar": 0.0
+  },
+  {
+   "sample": -1,
+   "seed": 7,
+   "u_size": 3,
+   "policy": "SA-ORL",
+   "ret": 362.75,
+   "worst": 0.04538341158059468,
+   "chance": 0.0,
+   "cvar": 0.0
+  },
+  {
+   "sample": -1,
+   "seed": 8,
+   "u_size": 3,
+   "policy": "run-to-failure",
+   "ret": 376.0,
+   "worst": 0.9048463356973995,
+   "chance": 1.0,
+   "cvar": 43.53333333333333
+  },
+  {
+   "sample": -1,
+   "seed": 8,
+   "u_size": 3,
+   "policy": "llm-code",
+   "ret": 364.0,
+   "worst": 0.3546099290780142,
+   "chance": 0.006666666666666667,
+   "cvar": 0.2
+  },
+  {
+   "sample": -1,
+   "seed": 8,
+   "u_size": 3,
+   "policy": "SA-ORL",
+   "ret": 364.0,
+   "worst": 0.026595744680851064,
+   "chance": 0.0033333333333333335,
+   "cvar": 0.03333333333333333
+  },
+  {
+   "sample": -1,
+   "seed": 9,
+   "u_size": 3,
+   "policy": "run-to-failure",
+   "ret": 376.0,
+   "worst": 0.9045183290707587,
+   "chance": 1.0,
+   "cvar": 43.53333333333333
+  },
+  {
+   "sample": -1,
+   "seed": 9,
+   "u_size": 3,
+   "policy": "llm-code",
+   "ret": 372.0,
+   "worst": 0.3998294970161978,
+   "chance": 0.93,
+   "cvar": 16.466666666666665
+  },
+  {
+   "sample": -1,
+   "seed": 9,
+   "u_size": 3,
+   "policy": "SA-ORL",
+   "ret": 370.0,
+   "worst": 0.03836317135549872,
+   "chance": 0.043333333333333335,
+   "cvar": 0.43333333333333335
+  },
+  {
+   "sample": -1,
+   "seed": 10,
+   "u_size": 3,
+   "policy": "run-to-failure",
+   "ret": 376.0,
+   "worst": 0.9121621621621622,
+   "chance": 1.0,
+   "cvar": 43.53333333333333
+  },
+  {
+   "sample": -1,
+   "seed": 10,
+   "u_size": 3,
+   "policy": "llm-code",
+   "ret": 363.75,
+   "worst": 0.4135135135135135,
+   "chance": 0.01,
+   "cvar": 0.1
+  },
+  {
+   "sample": -1,
+   "seed": 10,
+   "u_size": 3,
+   "policy": "SA-ORL",
+   "ret": 363.75,
+   "worst": 0.020945945945945947,
+   "chance": 0.0,
+   "cvar": 0.0
+  },
+  {
+   "sample": -1,
+   "seed": 11,
+   "u_size": 3,
+   "policy": "run-to-failure",
+   "ret": 376.0,
+   "worst": 0.8926031294452347,
+   "chance": 1.0,
+   "cvar": 43.53333333333333
+  },
+  {
+   "sample": -1,
+   "seed": 11,
+   "u_size": 3,
+   "policy": "llm-code",
+   "ret": 364.0,
+   "worst": 0.2716927453769559,
+   "chance": 0.0,
+   "cvar": 0.0
+  },
+  {
+   "sample": -1,
+   "seed": 11,
+   "u_size": 3,
+   "policy": "SA-ORL",
+   "ret": 364.0,
+   "worst": 0.007112375533428165,
+   "chance": 0.0,
+   "cvar": 0.0
+  },
+  {
+   "sample": -1,
+   "seed": 12,
+   "u_size": 3,
+   "policy": "run-to-failure",
+   "ret": 376.0,
+   "worst": 0.8952489982827705,
+   "chance": 1.0,
+   "cvar": 43.53333333333333
+  },
+  {
+   "sample": -1,
+   "seed": 12,
+   "u_size": 3,
+   "policy": "llm-code",
+   "ret": 363.0,
+   "worst": 0.21465369204350315,
+   "chance": 0.013333333333333334,
+   "cvar": 0.4
+  },
+  {
+   "sample": -1,
+   "seed": 12,
+   "u_size": 3,
+   "policy": "SA-ORL",
+   "ret": 363.0,
+   "worst": 0.022323983972524327,
+   "chance": 0.0,
+   "cvar": 0.0
+  },
+  {
+   "sample": -1,
+   "seed": 13,
+   "u_size": 3,
+   "policy": "run-to-failure",
+   "ret": 376.0,
+   "worst": 0.9069453809844908,
+   "chance": 1.0,
+   "cvar": 43.53333333333333
+  },
+  {
+   "sample": -1,
+   "seed": 13,
+   "u_size": 3,
+   "policy": "llm-code",
+   "ret": 369.25,
+   "worst": 0.15441672285906946,
+   "chance": 0.3233333333333333,
+   "cvar": 3.6
+  },
+  {
+   "sample": -1,
+   "seed": 13,
+   "u_size": 3,
+   "policy": "SA-ORL",
+   "ret": 369.0,
+   "worst": 0.016857720836142953,
+   "chance": 0.02,
+   "cvar": 0.2
+  },
+  {
+   "sample": -1,
+   "seed": 14,
+   "u_size": 3,
+   "policy": "run-to-failure",
+   "ret": 376.0,
+   "worst": 0.8967391304347826,
+   "chance": 1.0,
+   "cvar": 43.53333333333333
+  },
+  {
+   "sample": -1,
+   "seed": 14,
+   "u_size": 3,
+   "policy": "llm-code",
+   "ret": 371.25,
+   "worst": 0.16908212560386474,
+   "chance": 0.8333333333333334,
+   "cvar": 4.566666666666666
+  },
+  {
+   "sample": -1,
+   "seed": 14,
+   "u_size": 3,
+   "policy": "SA-ORL",
+   "ret": 370.25,
+   "worst": 0.008454106280193236,
+   "chance": 0.26666666666666666,
+   "cvar": 1.3666666666666667
+  }
+ ]
+}

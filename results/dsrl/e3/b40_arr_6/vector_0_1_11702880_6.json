@@ -1,0 +1,82 @@
+{
+ "task": "OfflineCarRun-v0",
+ "learner": "cpq",
+ "crossing": "hi_sus",
+ "seed": 1,
+ "witness": {
+  "s_lo": 1.4227149963378907,
+  "s_hi": 1.4943349599838256,
+  "k": 10,
+  "frac_hi_only": 0.03532258064516129,
+  "frac_sus_only": 0.17526881720430107,
+  "frac_both": 0.06467741935483871
+ },
+ "arms": {
+  "single_a": {
+   "agg": {
+    "ret": 533.0549256297526,
+    "cost_a": 28.97,
+    "cost_b": 38.38,
+    "cost_native": 27.46,
+    "len": 200.0,
+    "viol_a": 0.0,
+    "viol_b": 0.02,
+    "train_sec": 2021.9,
+    "ret_norm": 0.8876830267111563,
+    "cost_a_norm": 0.72425,
+    "cost_b_norm": 0.9595
+   },
+   "certs": {
+    "a": {
+     "viol": 0,
+     "n": 100,
+     "cp_upper": 0.0362,
+     "ships": true,
+     "hoeffding_expcost_upper": 58.57,
+     "hoeffding_vacuous": true
+    },
+    "b": {
+     "viol": 2,
+     "n": 100,
+     "cp_upper": 0.0704,
+     "ships": true,
+     "hoeffding_expcost_upper": 67.98,
+     "hoeffding_vacuous": true
+    }
+   }
+  },
+  "vector": {
+   "agg": {
+    "ret": 566.8876014409655,
+    "cost_a": 88.64,
+    "cost_b": 116.22,
+    "cost_native": 84.36,
+    "len": 200.0,
+    "viol_a": 1.0,
+    "viol_b": 1.0,
+    "train_sec": 2504.5,
+    "ret_norm": 0.9790323149315048,
+    "cost_a_norm": 2.216,
+    "cost_b_norm": 2.9055
+   },
+   "certs": {
+    "a": {
+     "viol": 100,
+     "n": 100,
+     "cp_upper": 1.0,
+     "ships": false,
+     "hoeffding_expcost_upper": 118.24,
+     "hoeffding_vacuous": true
+    },
+    "b": {
+     "viol": 100,
+     "n": 100,
+     "cp_upper": 1.0,
+     "ships": false,
+     "hoeffding_expcost_upper": 145.82,
+     "hoeffding_vacuous": true
+    }
+   }
+  }
+ }
+}

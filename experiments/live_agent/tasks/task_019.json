@@ -1,0 +1,22 @@
+{
+  "id": "task_019",
+  "question": "What are the four DNA bases and how do they pair?",
+  "source_docs": [
+    "dna_genetics.txt"
+  ],
+  "rubric": [
+    [
+      "adenine"
+    ],
+    [
+      "thymine"
+    ],
+    [
+      "guanine"
+    ],
+    [
+      "cytosine"
+    ]
+  ],
+  "reference": "Adenine-thymine and guanine-cytosine."
+}

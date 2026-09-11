@@ -1,0 +1,29 @@
+{
+ "registration": "V13 endpoint 4 (REGISTRATION_V13.md): exact face enumeration over 4096 schedules on the live pools",
+ "pools": {
+  "stipulated": {
+   "V_U": 6.983333333333334,
+   "value_sufficient": {
+    "total3": {
+     "V": 6.983333333333334,
+     "face_size": 1,
+     "n_unsafe": 0,
+     "exists_safe": true,
+     "policy_sufficient": true
+    }
+   }
+  },
+  "calibrated": {
+   "V_U": 6.983333333333334,
+   "value_sufficient": {
+    "total3": {
+     "V": 6.983333333333334,
+     "face_size": 1,
+     "n_unsafe": 0,
+     "exists_safe": true,
+     "policy_sufficient": true
+    }
+   }
+  }
+ }
+}

@@ -1,0 +1,19 @@
+{
+  "id": "task_018",
+  "question": "Who discovered the structure of DNA and in what year?",
+  "source_docs": [
+    "dna_genetics.txt"
+  ],
+  "rubric": [
+    [
+      "watson"
+    ],
+    [
+      "crick"
+    ],
+    [
+      "1953"
+    ]
+  ],
+  "reference": "James Watson and Francis Crick in 1953."
+}

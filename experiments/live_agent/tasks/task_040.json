@@ -1,0 +1,18 @@
+{
+  "id": "task_040",
+  "question": "Who arranged the periodic table and how are elements ordered?",
+  "source_docs": [
+    "periodic_table.txt"
+  ],
+  "rubric": [
+    [
+      "mendeleev"
+    ],
+    [
+      "atomic number",
+      "protons",
+      "number"
+    ]
+  ],
+  "reference": "Dmitri Mendeleev; ordered by increasing atomic number."
+}

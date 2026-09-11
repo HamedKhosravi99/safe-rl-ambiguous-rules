@@ -1,0 +1,423 @@
+{
+ "manifest": "Addendum A9 @ 2cb16c9 (+ execution note @ f79281f)",
+ "n_cells_reported": 7,
+ "n_cells_registered": 9,
+ "missing_cells": [
+  "BallRun/bcql/hi_sus",
+  "BallRun/cpq/hi_sus"
+ ],
+ "clean_ambiguity_cells": 0,
+ "threshold": 3,
+ "threshold_met": false,
+ "v6_3_branch": "TRIGGERED: ambiguity claim stays scoped to tabular and source-grounded evidence",
+ "set_defense_successes": 2,
+ "union_defense_successes": 2,
+ "cells": [
+  {
+   "cell": "OfflineBallCircle-v0/bcql/hi_scope",
+   "n_seeds": 5,
+   "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ],
+   "costs": {
+    "single_a": {
+     "a": 1.672,
+     "b": 1.596,
+     "ret": 0.85
+    },
+    "single_b": {
+     "a": 2.11,
+     "b": 1.519,
+     "ret": 0.834
+    },
+    "union": {
+     "a": 1.733,
+     "b": 1.575,
+     "ret": 0.866
+    },
+    "vector": {
+     "a": 1.702,
+     "b": 1.575,
+     "ret": 0.844
+    }
+   },
+   "taxonomy": {
+    "capacity": "global capacity failure",
+    "clean": false,
+    "set_defense": "set-learner failure",
+    "union_defense": "failure"
+   },
+   "cert_pass": {
+    "single_a": {
+     "pass_rate": 0.0,
+     "n_seeds": 5
+    },
+    "single_b": {
+     "pass_rate": 0.0,
+     "n_seeds": 5
+    },
+    "union": {
+     "pass_rate": 0.0,
+     "n_seeds": 5
+    },
+    "vector": {
+     "pass_rate": 0.0,
+     "n_seeds": 5
+    }
+   },
+   "vector_return_price": 0.0066
+  },
+  {
+   "cell": "OfflineBallCircle-v0/bcql/hi_sus",
+   "n_seeds": 5,
+   "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ],
+   "costs": {
+    "single_a": {
+     "a": 1.672,
+     "b": 1.889,
+     "ret": 0.85
+    },
+    "single_b": {
+     "a": 1.939,
+     "b": 2.03,
+     "ret": 0.844
+    },
+    "union": {
+     "a": 1.775,
+     "b": 1.812,
+     "ret": 0.84
+    },
+    "vector": {
+     "a": 1.802,
+     "b": 1.853,
+     "ret": 0.84
+    }
+   },
+   "taxonomy": {
+    "capacity": "global capacity failure",
+    "clean": false,
+    "set_defense": "set-learner failure",
+    "union_defense": "failure"
+   },
+   "cert_pass": {
+    "single_a": {
+     "pass_rate": 0.0,
+     "n_seeds": 5
+    },
+    "single_b": {
+     "pass_rate": 0.0,
+     "n_seeds": 5
+    },
+    "union": {
+     "pass_rate": 0.0,
+     "n_seeds": 5
+    },
+    "vector": {
+     "pass_rate": 0.0,
+     "n_seeds": 5
+    }
+   },
+   "vector_return_price": 0.0117
+  },
+  {
+   "cell": "OfflineBallCircle-v0/cpq/hi_sus",
+   "n_seeds": 5,
+   "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ],
+   "costs": {
+    "single_a": {
+     "a": 0.303,
+     "b": 0.248,
+     "ret": 0.771
+    },
+    "single_b": {
+     "a": 0.285,
+     "b": 0.503,
+     "ret": 0.749
+    },
+    "union": {
+     "a": 0.435,
+     "b": 0.26,
+     "ret": 0.743
+    },
+    "vector": {
+     "a": 0.125,
+     "b": 0.429,
+     "ret": 0.787
+    }
+   },
+   "taxonomy": {
+    "capacity": "no crossing (both singletons feasible for both)",
+    "clean": false,
+    "set_defense": "success",
+    "union_defense": "success"
+   },
+   "cert_pass": {
+    "single_a": {
+     "pass_rate": 0.8,
+     "n_seeds": 5
+    },
+    "single_b": {
+     "pass_rate": 0.6,
+     "n_seeds": 5
+    },
+    "union": {
+     "pass_rate": 0.6,
+     "n_seeds": 5
+    },
+    "vector": {
+     "pass_rate": 0.6,
+     "n_seeds": 5
+    }
+   },
+   "vector_return_price": -0.0204
+  },
+  {
+   "cell": "OfflineCarCircle-v0/bcql/hi_sus",
+   "n_seeds": 5,
+   "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ],
+   "costs": {
+    "single_a": {
+     "a": 0.018,
+     "b": 2.913,
+     "ret": 0.828
+    },
+    "single_b": {
+     "a": 0.0,
+     "b": 0.01,
+     "ret": 0.807
+    },
+    "union": {
+     "a": 0.0,
+     "b": 0.066,
+     "ret": 0.815
+    },
+    "vector": {
+     "a": 0.0,
+     "b": 0.143,
+     "ret": 0.809
+    }
+   },
+   "taxonomy": {
+    "capacity": "no crossing (both singletons feasible for both)",
+    "clean": false,
+    "set_defense": "success",
+    "union_defense": "success"
+   },
+   "cert_pass": {
+    "single_a": {
+     "pass_rate": 0.0,
+     "n_seeds": 5
+    },
+    "single_b": {
+     "pass_rate": 1.0,
+     "n_seeds": 5
+    },
+    "union": {
+     "pass_rate": 0.8,
+     "n_seeds": 5
+    },
+    "vector": {
+     "pass_rate": 0.8,
+     "n_seeds": 5
+    }
+   },
+   "vector_return_price": 0.0231
+  },
+  {
+   "cell": "OfflineCarCircle-v0/cpq/hi_sus",
+   "n_seeds": 5,
+   "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ],
+   "costs": {
+    "single_a": {
+     "a": 0.001,
+     "b": 0.828,
+     "ret": 0.723
+    },
+    "single_b": {
+     "a": 0.023,
+     "b": 2.662,
+     "ret": 0.756
+    },
+    "union": {
+     "a": 0.003,
+     "b": 2.391,
+     "ret": 0.6
+    },
+    "vector": {
+     "a": 0.002,
+     "b": 1.028,
+     "ret": 0.735
+    }
+   },
+   "taxonomy": {
+    "capacity": "one-sided capacity failure",
+    "clean": false,
+    "set_defense": "set-learner failure",
+    "union_defense": "failure"
+   },
+   "cert_pass": {
+    "single_a": {
+     "pass_rate": 0.4,
+     "n_seeds": 5
+    },
+    "single_b": {
+     "pass_rate": 0.2,
+     "n_seeds": 5
+    },
+    "union": {
+     "pass_rate": 0.4,
+     "n_seeds": 5
+    },
+    "vector": {
+     "pass_rate": 0.2,
+     "n_seeds": 5
+    }
+   },
+   "vector_return_price": 0.0282
+  },
+  {
+   "cell": "OfflineCarRun-v0/bcql/hi_sus",
+   "n_seeds": 5,
+   "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ],
+   "costs": {
+    "single_a": {
+     "a": 1.323,
+     "b": 11.728,
+     "ret": 0.919
+    },
+    "single_b": {
+     "a": 0.701,
+     "b": 9.987,
+     "ret": 0.931
+    },
+    "union": {
+     "a": 0.493,
+     "b": 4.21,
+     "ret": 0.849
+    },
+    "vector": {
+     "a": 2.548,
+     "b": 14.145,
+     "ret": 0.961
+    }
+   },
+   "taxonomy": {
+    "capacity": "global capacity failure",
+    "clean": false,
+    "set_defense": "set-learner failure",
+    "union_defense": "failure"
+   },
+   "cert_pass": {
+    "single_a": {
+     "pass_rate": 0.0,
+     "n_seeds": 5
+    },
+    "single_b": {
+     "pass_rate": 0.0,
+     "n_seeds": 5
+    },
+    "union": {
+     "pass_rate": 0.0,
+     "n_seeds": 5
+    },
+    "vector": {
+     "pass_rate": 0.0,
+     "n_seeds": 5
+    }
+   },
+   "vector_return_price": -0.0325
+  },
+  {
+   "cell": "OfflineCarRun-v0/cpq/hi_sus",
+   "n_seeds": 5,
+   "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ],
+   "costs": {
+    "single_a": {
+     "a": 0.795,
+     "b": 7.239,
+     "ret": 0.915
+    },
+    "single_b": {
+     "a": 8.671,
+     "b": 9.587,
+     "ret": 0.948
+    },
+    "union": {
+     "a": 0.336,
+     "b": 1.97,
+     "ret": 0.873
+    },
+    "vector": {
+     "a": 2.528,
+     "b": 4.651,
+     "ret": 0.676
+    }
+   },
+   "taxonomy": {
+    "capacity": "one-sided capacity failure",
+    "clean": false,
+    "set_defense": "set-learner failure",
+    "union_defense": "failure"
+   },
+   "cert_pass": {
+    "single_a": {
+     "pass_rate": 0.2,
+     "n_seeds": 5
+    },
+    "single_b": {
+     "pass_rate": 0.0,
+     "n_seeds": 5
+    },
+    "union": {
+     "pass_rate": 0.6,
+     "n_seeds": 5
+    },
+    "vector": {
+     "pass_rate": 0.2,
+     "n_seeds": 5
+    }
+   },
+   "vector_return_price": 0.2868
+  }
+ ]
+}

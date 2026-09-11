@@ -1,0 +1,19 @@
+{
+  "id": "task_012",
+  "question": "What drives evaporation in the water cycle?",
+  "source_docs": [
+    "water_cycle.txt"
+  ],
+  "rubric": [
+    [
+      "sun",
+      "solar",
+      "energy from the sun"
+    ],
+    [
+      "evaporation",
+      "evaporate"
+    ]
+  ],
+  "reference": "Energy from the Sun drives evaporation of liquid water."
+}

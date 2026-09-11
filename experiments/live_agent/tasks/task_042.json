@@ -1,0 +1,21 @@
+{
+  "id": "task_042",
+  "question": "Name three renewable energy sources and what they use.",
+  "source_docs": [
+    "renewable_energy.txt"
+  ],
+  "rubric": [
+    [
+      "solar",
+      "sunlight"
+    ],
+    [
+      "wind"
+    ],
+    [
+      "hydro",
+      "water"
+    ]
+  ],
+  "reference": "Solar (sunlight), wind (turbines), and hydroelectric (water)."
+}

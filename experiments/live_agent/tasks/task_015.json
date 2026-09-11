@@ -1,0 +1,16 @@
+{
+  "id": "task_015",
+  "question": "When did the Roman Empire begin and who was the first emperor?",
+  "source_docs": [
+    "roman_empire.txt"
+  ],
+  "rubric": [
+    [
+      "27 bc"
+    ],
+    [
+      "augustus"
+    ]
+  ],
+  "reference": "27 BC, when Augustus became the first emperor."
+}

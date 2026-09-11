@@ -1,0 +1,41 @@
+{
+  "mode": "single",
+  "honors": [
+    "psi_calls>=5"
+  ],
+  "eval_readings": [
+    "psi_calls>=3",
+    "psi_calls>=4",
+    "psi_calls>=5",
+    "psi_calls>=6",
+    "psi_calls>=8",
+    "psi_calls>=2"
+  ],
+  "lam": 1.0,
+  "honored_cost_train_aug": 0.0,
+  "true_worst_retained_original": 0.277996,
+  "allow_by_calls": [
+    true,
+    true,
+    true,
+    true,
+    true,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false
+  ],
+  "effective_cap": 5,
+  "per_reading_cost": {
+    "psi_calls>=3": 0.277996,
+    "psi_calls>=4": 0.143113,
+    "psi_calls>=5": 0.0,
+    "psi_calls>=6": 0.0,
+    "psi_calls>=8": 0.0,
+    "psi_calls>=2": 0.426834
+  }
+}

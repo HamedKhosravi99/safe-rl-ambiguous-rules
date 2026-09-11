@@ -1,0 +1,21 @@
+{
+  "id": "task_010",
+  "question": "Name two popular Python libraries and what they are for.",
+  "source_docs": [
+    "python_language.txt"
+  ],
+  "rubric": [
+    [
+      "numpy"
+    ],
+    [
+      "pandas"
+    ],
+    [
+      "numerical",
+      "data analysis",
+      "data"
+    ]
+  ],
+  "reference": "NumPy for numerical computing and pandas for data analysis."
+}

@@ -1,0 +1,17 @@
+{
+  "id": "task_016",
+  "question": "What governed Rome before the empire?",
+  "source_docs": [
+    "roman_empire.txt"
+  ],
+  "rubric": [
+    [
+      "republic"
+    ],
+    [
+      "senate",
+      "elected"
+    ]
+  ],
+  "reference": "A republic with elected officials and the Senate."
+}

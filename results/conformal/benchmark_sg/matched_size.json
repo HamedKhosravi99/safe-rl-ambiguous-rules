@@ -1,0 +1,90 @@
+[
+ {
+  "family": "prometheus",
+  "delta": 0.05,
+  "conf_mean_size": 10.340909090909092,
+  "conf_coverage": 0.9772727272727273,
+  "tuned_tau": 0.225,
+  "tuned_mean_size": 10.340909090909092,
+  "tuned_coverage": 0.9772727272727273,
+  "size_gap": 0.0,
+  "coverage_delta": 0.0
+ },
+ {
+  "family": "prometheus",
+  "delta": 0.1,
+  "conf_mean_size": 9.920454545454545,
+  "conf_coverage": 0.9090909090909091,
+  "tuned_tau": 0.25875,
+  "tuned_mean_size": 9.931818181818182,
+  "tuned_coverage": 0.9090909090909091,
+  "size_gap": 0.011363636363636687,
+  "coverage_delta": 0.0
+ },
+ {
+  "family": "prometheus",
+  "delta": 0.15,
+  "conf_mean_size": 9.102272727272727,
+  "conf_coverage": 0.8522727272727273,
+  "tuned_tau": 0.33375,
+  "tuned_mean_size": 9.102272727272727,
+  "tuned_coverage": 0.8522727272727273,
+  "size_gap": 0.0,
+  "coverage_delta": 0.0
+ },
+ {
+  "family": "prometheus",
+  "delta": 0.2,
+  "conf_mean_size": 8.636363636363637,
+  "conf_coverage": 0.8181818181818182,
+  "tuned_tau": 0.35,
+  "tuned_mean_size": 8.636363636363637,
+  "tuned_coverage": 0.8181818181818182,
+  "size_gap": 0.0,
+  "coverage_delta": 0.0
+ },
+ {
+  "family": "kyverno",
+  "delta": 0.05,
+  "conf_mean_size": 5.2272727272727275,
+  "conf_coverage": 1.0,
+  "tuned_tau": 0.175,
+  "tuned_mean_size": 5.2272727272727275,
+  "tuned_coverage": 1.0,
+  "size_gap": 0.0,
+  "coverage_delta": 0.0
+ },
+ {
+  "family": "kyverno",
+  "delta": 0.1,
+  "conf_mean_size": 4.954545454545454,
+  "conf_coverage": 0.9090909090909091,
+  "tuned_tau": 0.194355,
+  "tuned_mean_size": 4.954545454545454,
+  "tuned_coverage": 0.9090909090909091,
+  "size_gap": 0.0,
+  "coverage_delta": 0.0
+ },
+ {
+  "family": "kyverno",
+  "delta": 0.15,
+  "conf_mean_size": 4.613636363636363,
+  "conf_coverage": 0.8636363636363636,
+  "tuned_tau": 0.233571,
+  "tuned_mean_size": 4.613636363636363,
+  "tuned_coverage": 0.8636363636363636,
+  "size_gap": 0.0,
+  "coverage_delta": 0.0
+ },
+ {
+  "family": "kyverno",
+  "delta": 0.2,
+  "conf_mean_size": 4.431818181818182,
+  "conf_coverage": 0.8181818181818182,
+  "tuned_tau": 0.258108,
+  "tuned_mean_size": 4.431818181818182,
+  "tuned_coverage": 0.8181818181818182,
+  "size_gap": 0.0,
+  "coverage_delta": 0.0
+ }
+]

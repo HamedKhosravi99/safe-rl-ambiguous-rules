@@ -1,0 +1,17 @@
+{
+  "id": "task_009",
+  "question": "What is Python's package installer and where are packages published?",
+  "source_docs": [
+    "python_language.txt"
+  ],
+  "rubric": [
+    [
+      "pip"
+    ],
+    [
+      "pypi",
+      "package index"
+    ]
+  ],
+  "reference": "pip; packages are published on PyPI, the Python Package Index."
+}

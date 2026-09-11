@@ -1,0 +1,280 @@
+{
+ "registration": "W4 runtime accounting, 2026-09-02; every archived aggregate re-derived and asserted",
+ "parts": {
+  "class_ladder": {
+   "run": "class ladder (capability frontier)",
+   "objects": "16669 rule x class x budget rows",
+   "n_rows": 16669,
+   "wall_seconds": 29.58,
+   "reproduces_archive": true,
+   "n_value_or_face_lps": 0,
+   "n_milps": 210015,
+   "solver_seconds_lp": 0.0,
+   "solver_seconds_milp": 21.692,
+   "largest_program_rows": 0,
+   "largest_program_cols": 31,
+   "hardware": {
+    "cpu": "Apple M4",
+    "n_cores": 10,
+    "python": "3.9.6",
+    "scipy": "1.13.1",
+    "numpy": "1.26.4",
+    "solver": "HiGHS via scipy.optimize",
+    "ram_bytes": 17179869184
+   },
+   "peak_rss_mb": 88.5
+  },
+  "e16": {
+   "run": "admission exact screen (subset enumeration, no LP)",
+   "objects": "44 admission pools x 4 budgets",
+   "n_value_or_face_lps": 0,
+   "n_milps": 0,
+   "enumeration": "all 2^|F| fixture subsets, |F| <= 18",
+   "wall_seconds": 2.39,
+   "reproduces_archive": true,
+   "hardware": {
+    "cpu": "Apple M4",
+    "n_cores": 10,
+    "python": "3.9.6",
+    "scipy": "1.13.1",
+    "numpy": "1.26.4",
+    "solver": "HiGHS via scipy.optimize",
+    "ram_bytes": 17179869184
+   },
+   "peak_rss_mb": 147.2
+  },
+  "exact_nonnested": {
+   "run": "exact non-nested suite (Table: exact)",
+   "objects": "17 compiled instances x 5 budgets",
+   "n_candidate_readings": 34,
+   "n_behaviour_classes": 34,
+   "max_antichain": 2,
+   "n_states": [
+    19,
+    37,
+    55
+   ],
+   "wall_seconds": 0.36,
+   "reproduces_archive": true,
+   "n_value_or_face_lps": 765,
+   "n_milps": 0,
+   "solver_seconds_lp": 0.291,
+   "solver_seconds_milp": 0.0,
+   "largest_program_rows": 59,
+   "largest_program_cols": 111,
+   "hardware": {
+    "cpu": "Apple M4",
+    "n_cores": 10,
+    "python": "3.9.6",
+    "scipy": "1.13.1",
+    "numpy": "1.26.4",
+    "solver": "HiGHS via scipy.optimize",
+    "ram_bytes": 17179869184
+   },
+   "peak_rss_mb": 59.8
+  },
+  "face_ladder": {
+   "run": "face-level ladder + admission face pass (V14)",
+   "objects": "132 pools at the operating budget",
+   "wall_seconds": 13.92,
+   "reproduces_archive": true,
+   "n_value_or_face_lps": 0,
+   "n_milps": 13777,
+   "solver_seconds_lp": 0.0,
+   "solver_seconds_milp": 1.625,
+   "largest_program_rows": 0,
+   "largest_program_cols": 31,
+   "hardware": {
+    "cpu": "Apple M4",
+    "n_cores": 10,
+    "python": "3.9.6",
+    "scipy": "1.13.1",
+    "numpy": "1.26.4",
+    "solver": "HiGHS via scipy.optimize",
+    "ram_bytes": 17179869184
+   },
+   "peak_rss_mb": 60.7
+  },
+  "policy_class_budget": {
+   "run": "policy-class x budget audit (compiled + free classes, both families)",
+   "objects": "88 monitoring + 44 admission pools x 5 budgets",
+   "n_candidate_readings": 1179,
+   "n_behaviour_classes": 1179,
+   "max_antichain_width": 6,
+   "wall_seconds": 4.67,
+   "reproduces_archive": true,
+   "n_value_or_face_lps": 1260,
+   "n_milps": 6555,
+   "solver_seconds_lp": 0.451,
+   "solver_seconds_milp": 0.693,
+   "largest_program_rows": 59,
+   "largest_program_cols": 111,
+   "hardware": {
+    "cpu": "Apple M4",
+    "n_cores": 10,
+    "python": "3.9.6",
+    "scipy": "1.13.1",
+    "numpy": "1.26.4",
+    "solver": "HiGHS via scipy.optimize",
+    "ram_bytes": 17179869184
+   },
+   "peak_rss_mb": 77.2
+  },
+  "policy_sufficiency": {
+   "run": "policy sufficiency (face certificates, V13)",
+   "objects": "28 compiled instances x 5 budgets",
+   "n_candidate_readings": 56,
+   "max_antichain": 2,
+   "n_value_lps_by_construction": 420,
+   "n_face_lps_by_construction": 126,
+   "n_tiebreak_lps_by_construction": 2700,
+   "wall_seconds": 3.5,
+   "reproduces_archive": true,
+   "n_value_or_face_lps": 5446,
+   "n_milps": 0,
+   "solver_seconds_lp": 2.121,
+   "solver_seconds_milp": 0.0,
+   "largest_program_rows": 57,
+   "largest_program_cols": 110,
+   "hardware": {
+    "cpu": "Apple M4",
+    "n_cores": 10,
+    "python": "3.9.6",
+    "scipy": "1.13.1",
+    "numpy": "1.26.4",
+    "solver": "HiGHS via scipy.optimize",
+    "ram_bytes": 17179869184
+   },
+   "peak_rss_mb": 60.4
+  },
+  "scale": {
+   "run": "LP stage at calibrated antichain scale (synthetic readings on the largest real compiled MDP)",
+   "geometry": "L3-caps8-1",
+   "budget": 0.05,
+   "antichain_median_e2e": 18150,
+   "rows": [
+    {
+     "K": 10,
+     "n_states": 55,
+     "n_lp_vars": 110,
+     "V_U": 0.42489473560012814,
+     "n_value_sufficient": 0,
+     "value_lps": 11,
+     "face_lps_run": 0,
+     "face_lps_worst_case": 0,
+     "seconds_value_lp": 0.01,
+     "seconds_single_lps": 0.0,
+     "seconds_face_lps": 0.0,
+     "face_certified": false
+    },
+    {
+     "K": 100,
+     "n_states": 55,
+     "n_lp_vars": 110,
+     "V_U": 0.39153045770925904,
+     "n_value_sufficient": 1,
+     "value_lps": 101,
+     "face_lps_run": 99,
+     "face_lps_worst_case": 99,
+     "seconds_value_lp": 0.001,
+     "seconds_single_lps": 0.04,
+     "seconds_face_lps": 0.04,
+     "face_certified": true
+    },
+    {
+     "K": 1000,
+     "n_states": 55,
+     "n_lp_vars": 110,
+     "V_U": 0.381561218367707,
+     "n_value_sufficient": 1,
+     "value_lps": 1001,
+     "face_lps_run": 999,
+     "face_lps_worst_case": 999,
+     "seconds_value_lp": 0.004,
+     "seconds_single_lps": 0.34,
+     "seconds_face_lps": 0.35,
+     "face_certified": true
+    },
+    {
+     "K": 18150,
+     "n_states": 55,
+     "n_lp_vars": 110,
+     "V_U": 0.36137600712287976,
+     "n_value_sufficient": 0,
+     "value_lps": 18151,
+     "face_lps_run": 0,
+     "face_lps_worst_case": 0,
+     "seconds_value_lp": 0.059,
+     "seconds_single_lps": 5.88,
+     "seconds_face_lps": 0.0,
+     "face_certified": false
+    }
+   ],
+   "compiled_state_space_growth": [
+    {
+     "K": 2,
+     "cap": 8,
+     "n_states": 244
+    },
+    {
+     "K": 3,
+     "cap": 8,
+     "n_states": 2917
+    },
+    {
+     "K": 4,
+     "cap": 8,
+     "n_states": 32806
+    },
+    {
+     "K": 5,
+     "cap": 8,
+     "n_states": 354295
+    },
+    {
+     "K": 6,
+     "cap": 8,
+     "n_states": 3720088
+    },
+    {
+     "K": 8,
+     "cap": 8,
+     "n_states": 387420490
+    }
+   ],
+   "note": "readings are synthetic cost rows on a real 55-state compiled MDP; this times the LP stage only -- the compiled monitoring model itself has |S| = 1 + L*prod(cap_k+1) states, exponential in K, which is why compiled instances carry K <= 4",
+   "hardware": {
+    "cpu": "Apple M4",
+    "n_cores": 10,
+    "python": "3.9.6",
+    "scipy": "1.13.1",
+    "numpy": "1.26.4",
+    "solver": "HiGHS via scipy.optimize",
+    "ram_bytes": 17179869184
+   },
+   "peak_rss_mb": 153.7
+  },
+  "surrogate_price": {
+   "run": "single-cost surrogate price",
+   "objects": "28 compiled instances x 5 budgets",
+   "wall_seconds": 1.33,
+   "reproduces_archive": true,
+   "n_value_or_face_lps": 560,
+   "n_milps": 0,
+   "solver_seconds_lp": 0.2,
+   "solver_seconds_milp": 0.0,
+   "largest_program_rows": 57,
+   "largest_program_cols": 110,
+   "hardware": {
+    "cpu": "Apple M4",
+    "n_cores": 10,
+    "python": "3.9.6",
+    "scipy": "1.13.1",
+    "numpy": "1.26.4",
+    "solver": "HiGHS via scipy.optimize",
+    "ram_bytes": 17179869184
+   },
+   "peak_rss_mb": 60.0
+  }
+ }
+}

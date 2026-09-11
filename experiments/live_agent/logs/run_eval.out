@@ -1,0 +1,13 @@
+== Phase 4 LIVE EVAL: 50 episodes x no_guard,single,corset,post_clarify (paired), model=gpt-4o-mini ==
+  [no_guard    ] spend=$0.017426 value=11.86+-0.06 n_paid=12.0 | cond spend=$0.017426
+       viol psi_calls>=3: 1.00         viol psi_calls>=4: 1.00         viol psi_calls>=5: 1.00         viol psi_calls>=6: 1.00         viol psi_calls>=8: 1.00  | anchor(k=2) 1.00
+  [single      ] spend=$0.007266 value=8.02+-0.26 n_paid=5.0 | cond spend=$0.007266
+       viol psi_calls>=3: 1.00         viol psi_calls>=4: 1.00         viol psi_calls>=5: 0.00         viol psi_calls>=6: 0.00         viol psi_calls>=8: 0.00  | anchor(k=2) 1.00
+  [corset      ] spend=$0.004349 value=6.93+-0.30 n_paid=3.0 | cond spend=$0.004349
+       viol psi_calls>=3: 0.00         viol psi_calls>=4: 0.00         viol psi_calls>=5: 0.00         viol psi_calls>=6: 0.00         viol psi_calls>=8: 0.00  | anchor(k=2) 1.00
+  [post_clarify] spend=$0.002891 value=6.37+-0.33 n_paid=2.0 | cond spend=$0.002891
+       viol psi_calls>=3: 0.00         viol psi_calls>=4: 0.00         viol psi_calls>=5: 0.00         viol psi_calls>=6: 0.00         viol psi_calls>=8: 0.00  | anchor(k=2) 0.00
+
+  EVAL billed spend: $0.031932
+  demo cumulative spend: $0.031932
+  wrote logs/eval_*.jsonl and logs/eval_summary.json

@@ -1,0 +1,356 @@
+{
+ "catalog_version": "v4",
+ "dsl": {
+  "dsl_version": "corset-e2e-dsl-v1",
+  "comparators": [
+   ">",
+   ">=",
+   "<",
+   "<=",
+   "==",
+   "!="
+  ],
+  "aggregations": [
+   "none",
+   "sum",
+   "avg",
+   "max",
+   "min",
+   "count"
+  ],
+  "rate_windows_s": [
+   "none",
+   60.0,
+   120.0,
+   180.0,
+   300.0,
+   600.0,
+   900.0,
+   1800.0,
+   3600.0,
+   7200.0,
+   10800.0,
+   21600.0,
+   43200.0,
+   86400.0
+  ],
+  "for_s": [
+   0.0,
+   60.0,
+   120.0,
+   180.0,
+   300.0,
+   600.0,
+   900.0,
+   1200.0,
+   1800.0,
+   3600.0,
+   7200.0,
+   14400.0,
+   21600.0,
+   43200.0,
+   86400.0,
+   604800.0
+  ],
+  "n_thresholds": 174,
+  "threshold_min": 0.0,
+  "threshold_max": 10000000000.0,
+  "dsl_hash": "42e29a62951e05201ef378ffd036fab62543add80299a50d4d8839cddcc6ea7d"
+ },
+ "weights": {
+  "var": 0.5,
+  "num": 0.1,
+  "op": 0.2,
+  "win": 0.06,
+  "forx": 0.04,
+  "agg": 0.08
+ },
+ "dev_fit": {
+  "weights": {
+   "var": 0.5,
+   "num": 0.1,
+   "op": 0.2,
+   "win": 0.06,
+   "forx": 0.04,
+   "agg": 0.08
+  },
+  "dev_objective": 8.771272205864479,
+  "n_dev_units": 220
+ },
+ "delta_sem": 0.1,
+ "ood_target_recall": 0.8,
+ "splits": {
+  "dev": 1094,
+  "cal": 4292,
+  "test": 4390
+ },
+ "leak_audit": {
+  "dependency_scan": {
+   "passed": true,
+   "offenders": []
+  },
+  "file_access_trace": {
+   "passed": true,
+   "note": "no hidden-store file opened during generation"
+  },
+  "unmounted_target": {
+   "passed": true,
+   "n_units": 300,
+   "note": "generation reads only the visible store; hidden store never opened"
+  },
+  "target_swap_invariance": {
+   "passed": true,
+   "n_units": 300,
+   "n_identical": 300,
+   "offenders": []
+  },
+  "canary": {
+   "passed": true,
+   "offenders": [],
+   "canary_value": 987654.321
+  },
+  "ALL_PASS": true
+ },
+ "modes": {
+  "complete": {
+   "qhat": 0.4847142857142857,
+   "qood": 0.0,
+   "n_cal_in_dsl": 140,
+   "k": 14,
+   "calibration": {
+    "n_units": 4292,
+    "n_in_dsl": 140,
+    "n_grammar_reachable": 516,
+    "n_ood": 3776,
+    "n_clusters": 431,
+    "eligibility": {
+     "GEN_MISS": 376,
+     "IN_DSL": 140,
+     "PARSER_FAILURE": 3241,
+     "OUT_OF_DSL_WINDOW": 118,
+     "OUT_OF_DSL_CONSTANT": 417
+    },
+    "in_dsl_fraction": 0.0326,
+    "rho_gen": {
+     "point": 0.2713,
+     "lo": 0.1967,
+     "hi": 0.3522
+    },
+    "rho_ret_given_gen": {
+     "point": 0.9071,
+     "lo": 0.8525,
+     "hi": 0.9524
+    },
+    "rho_e2e": {
+     "point": 0.0296,
+     "lo": 0.0169,
+     "hi": 0.0439
+    },
+    "ood_recall": {
+     "point": 1.0,
+     "lo": 1.0,
+     "hi": 1.0
+    },
+    "false_abstention": {
+     "point": 1.0,
+     "lo": 1.0,
+     "hi": 1.0
+    },
+    "set_size": {
+     "mean": 31445097.37,
+     "median": 29515114,
+     "p90": 57962528
+    },
+    "maximal_set_size": {
+     "mean": 15358.7,
+     "median": 12592,
+     "p90": 32256
+    },
+    "pool_size": {
+     "mean": 89788281.1,
+     "median": 89800704,
+     "p90": 89800704
+    },
+    "qhat": 0.4847142857142857,
+    "qood": 0.0
+   },
+   "test": {
+    "n_units": 4390,
+    "n_in_dsl": 111,
+    "n_grammar_reachable": 315,
+    "n_ood": 4075,
+    "n_clusters": 464,
+    "eligibility": {
+     "PARSER_FAILURE": 3495,
+     "IN_DSL": 111,
+     "GEN_MISS": 204,
+     "OUT_OF_DSL_CONSTANT": 504,
+     "OUT_OF_DSL_WINDOW": 76
+    },
+    "in_dsl_fraction": 0.0253,
+    "rho_gen": {
+     "point": 0.3524,
+     "lo": 0.2698,
+     "hi": 0.4347
+    },
+    "rho_ret_given_gen": {
+     "point": 0.9459,
+     "lo": 0.9125,
+     "hi": 0.9756
+    },
+    "rho_e2e": {
+     "point": 0.0239,
+     "lo": 0.0127,
+     "hi": 0.037
+    },
+    "ood_recall": {
+     "point": 1.0,
+     "lo": 1.0,
+     "hi": 1.0
+    },
+    "false_abstention": {
+     "point": 1.0,
+     "lo": 1.0,
+     "hi": 1.0
+    },
+    "set_size": {
+     "mean": 29518813.23,
+     "median": 28697316,
+     "p90": 48615866
+    },
+    "maximal_set_size": {
+     "mean": 15203.48,
+     "median": 13408,
+     "p90": 31728
+    },
+    "pool_size": {
+     "mean": 89804539.5,
+     "median": 89800704,
+     "p90": 89800704
+    },
+    "qhat": 0.4847142857142857,
+    "qood": 0.0
+   }
+  },
+  "budgeted": {
+   "qhat": 0.575,
+   "qood": 0.0,
+   "n_cal_in_dsl": 20,
+   "k": 2,
+   "calibration": {
+    "n_units": 4292,
+    "n_in_dsl": 20,
+    "n_grammar_reachable": 516,
+    "n_ood": 3776,
+    "n_clusters": 431,
+    "eligibility": {
+     "GEN_MISS": 496,
+     "PARSER_FAILURE": 3241,
+     "OUT_OF_DSL_WINDOW": 118,
+     "IN_DSL": 20,
+     "OUT_OF_DSL_CONSTANT": 417
+    },
+    "in_dsl_fraction": 0.0047,
+    "rho_gen": {
+     "point": 0.0388,
+     "lo": 0.0179,
+     "hi": 0.0665
+    },
+    "rho_ret_given_gen": {
+     "point": 0.95,
+     "lo": 0.8621,
+     "hi": 1.0
+    },
+    "rho_e2e": {
+     "point": 0.0044,
+     "lo": 0.0016,
+     "hi": 0.0082
+    },
+    "ood_recall": {
+     "point": 1.0,
+     "lo": 1.0,
+     "hi": 1.0
+    },
+    "false_abstention": {
+     "point": 1.0,
+     "lo": 1.0,
+     "hi": 1.0
+    },
+    "set_size": {
+     "mean": 698667.4,
+     "median": 935424,
+     "p90": 1069056
+    },
+    "maximal_set_size": {
+     "mean": 670.2,
+     "median": 384,
+     "p90": 1488
+    },
+    "pool_size": {
+     "mean": 8527915.1,
+     "median": 1069056,
+     "p90": 29933568
+    },
+    "qhat": 0.575,
+    "qood": 0.0
+   },
+   "test": {
+    "n_units": 4390,
+    "n_in_dsl": 12,
+    "n_grammar_reachable": 315,
+    "n_ood": 4075,
+    "n_clusters": 464,
+    "eligibility": {
+     "PARSER_FAILURE": 3495,
+     "GEN_MISS": 303,
+     "IN_DSL": 12,
+     "OUT_OF_DSL_CONSTANT": 504,
+     "OUT_OF_DSL_WINDOW": 76
+    },
+    "in_dsl_fraction": 0.0027,
+    "rho_gen": {
+     "point": 0.0381,
+     "lo": 0.0133,
+     "hi": 0.0793
+    },
+    "rho_ret_given_gen": {
+     "point": 0.9167,
+     "lo": 0.625,
+     "hi": 1.0
+    },
+    "rho_e2e": {
+     "point": 0.0025,
+     "lo": 0.0006,
+     "hi": 0.0055
+    },
+    "ood_recall": {
+     "point": 1.0,
+     "lo": 1.0,
+     "hi": 1.0
+    },
+    "false_abstention": {
+     "point": 1.0,
+     "lo": 1.0,
+     "hi": 1.0
+    },
+    "set_size": {
+     "mean": 212728.33,
+     "median": 10256,
+     "p90": 935424
+    },
+    "maximal_set_size": {
+     "mean": 963.0,
+     "median": 252,
+     "p90": 3584
+    },
+    "pool_size": {
+     "mean": 9701153.4,
+     "median": 1069056,
+     "p90": 29933568
+    },
+    "qhat": 0.575,
+    "qood": 0.0
+   }
+  }
+ }
+}

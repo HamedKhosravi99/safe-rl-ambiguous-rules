@@ -1,0 +1,18 @@
+== Workstream-G clarification transcript (paper section 22.5) ==
+policy: real-a02-slack-posting-rate
+retained set U = ['psi_calls>=3', 'psi_calls>=4', 'psi_calls>=5', 'psi_calls>=6', 'psi_calls>=8']  (q-hat = 0.5)
+posterior over U (plausibility-normalized): {'k=3': 0.201, 'k=4': 0.192, 'k=5': 0.221, 'k=6': 0.197, 'k=8': 0.189}
+v_psi (per-reading return, from logs): {'k=3': 7.027, 'k=4': 7.533, 'k=5': 8.089, 'k=6': 8.63, 'k=8': 9.738}
+v_robust (CORSET, cap at k=3) = 7.027
+VoQ(plausibility) = 1.160   VoQ(robust) = 0.000   kappa = 0.500 return units
+
+DECISION: VoQ (1.160) > kappa (0.500)  ->  ASK.
+
+AGENT ->  platform owner:
+  "The posting-rate policy says apps 'may post no more than one message per second per channel' but that we 'allow bursts over that limit for short periods'. For this channel session (a short burst window), what is the maximum number of messages my app may post before it must throttle? (The documented hard anchor is 1 message/second/channel.)"
+
+PLATFORM OWNER ->  agent (documented anchor):
+  "The hard limit is one message per second per channel. Treat that as the cap: do not post a burst beyond the 1/second rate. (Strict reading, k=2.)"
+
+POST-CLARIFY: honor the anchored strict reading psi_calls>=2; realized per-episode value from logs v = 6.470.
+NOTE: the strict anchor was OUTSIDE U (scored < q-hat); the query recovered the true reading a plausibility-only agent would have missed.

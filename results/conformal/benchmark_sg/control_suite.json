@@ -1,0 +1,2018 @@
+{
+ "config": {
+  "manifest": "paper/Plans/EVIDENCE_FREEZE_MANIFEST.md@91074b3",
+  "gamma": 0.97,
+  "r_cont": 1.0,
+  "r_int": 0.3,
+  "budgets": [
+   0.005,
+   0.01,
+   0.02,
+   0.05
+  ],
+  "d_star": 0.01,
+  "max_instances": 20,
+  "per_family_cap": 3,
+  "dur_cap": 8
+ },
+ "n_universe": 88,
+ "skipped": {
+  "|Max|=1 outside [2,4]": 25,
+  "non-upper comparator": 28,
+  "singleton antichain": 5,
+  "no threshold/duration crossing": 2,
+  "family cap": 11
+ },
+ "n_selected": 17,
+ "instances": [
+  {
+   "uid": "AlertmanagerClusterCrashlooping",
+   "family": "manifests/alertmanager-prometheusRule.yaml",
+   "group": "alertmanager.rules",
+   "geometry": "L3-caps5-1",
+   "metric": "process_start_time_seconds",
+   "readings": [
+    {
+     "theta": 0.45,
+     "for_s": 300.0
+    },
+    {
+     "theta": 0.5,
+     "for_s": 0.0
+    }
+   ],
+   "caps": [
+    5,
+    1
+   ],
+   "n_states": 37,
+   "budgets": {
+    "0.005": {
+     "unconstrained": 0.9999999999999996,
+     "singleton_rets": [
+      0.5783715962643876,
+      0.37173991054285627
+     ],
+     "singleton_worst": [
+      0.09722308518890846,
+      0.015191311989353869
+     ],
+     "robust_ret": 0.36031912031692176,
+     "robust_feasible": true,
+     "pairwise": {},
+     "nu_pi": 0.015626053857964155,
+     "oracle_singleton": {
+      "k": 1,
+      "ret": 0.37173991054285627,
+      "worst": 0.015191311989353869,
+      "fullset_feasible": false
+     },
+     "no_singleton_fullset_feasible": true,
+     "robust_minus_oracle_gap": null
+    },
+    "0.01": {
+     "unconstrained": 0.9999999999999996,
+     "singleton_rets": [
+      0.6062461136234967,
+      0.38591983253321727
+     ],
+     "singleton_worst": [
+      0.10886516024736664,
+      0.01714783763679445
+     ],
+     "robust_ret": 0.3783791720630837,
+     "robust_feasible": true,
+     "pairwise": {},
+     "nu_pi": 0.015626053857964155,
+     "oracle_singleton": {
+      "k": 1,
+      "ret": 0.38591983253321727,
+      "worst": 0.01714783763679445,
+      "fullset_feasible": false
+     },
+     "no_singleton_fullset_feasible": true,
+     "robust_minus_oracle_gap": null
+    },
+    "0.02": {
+     "unconstrained": 0.9999999999999996,
+     "singleton_rets": [
+      0.641985052419756,
+      0.41427967651393927
+     ],
+     "singleton_worst": [
+      0.1210525586001714,
+      0.020643574676043108
+     ],
+     "robust_ret": 0.4142796765139393,
+     "robust_feasible": true,
+     "pairwise": {},
+     "nu_pi": 0.015626053857964155,
+     "oracle_singleton": {
+      "k": 1,
+      "ret": 0.41427967651393927,
+      "worst": 0.020643574676043108,
+      "fullset_feasible": false
+     },
+     "no_singleton_fullset_feasible": true,
+     "robust_minus_oracle_gap": null
+    },
+    "0.05": {
+     "unconstrained": 0.9999999999999996,
+     "singleton_rets": [
+      0.7300672180354688,
+      0.4993592084561051
+     ],
+     "singleton_worst": [
+      0.14700348669865754,
+      0.05000000000000001
+     ],
+     "robust_ret": 0.49935920845610515,
+     "robust_feasible": true,
+     "pairwise": {},
+     "nu_pi": 0.015626053857964155,
+     "oracle_singleton": {
+      "k": 1,
+      "ret": 0.4993592084561051,
+      "worst": 0.05000000000000001,
+      "fullset_feasible": true
+     },
+     "no_singleton_fullset_feasible": false,
+     "robust_minus_oracle_gap": 5.551115123125783e-17
+    }
+   }
+  },
+  {
+   "uid": "AlertmanagerClusterDown",
+   "family": "manifests/alertmanager-prometheusRule.yaml",
+   "group": "alertmanager.rules",
+   "geometry": "L3-caps5-1",
+   "metric": "up",
+   "readings": [
+    {
+     "theta": 0.0,
+     "for_s": 300.0
+    },
+    {
+     "theta": 0.5,
+     "for_s": 0.0
+    }
+   ],
+   "caps": [
+    5,
+    1
+   ],
+   "n_states": 37,
+   "budgets": {
+    "0.005": {
+     "unconstrained": 0.9999999999999996,
+     "singleton_rets": [
+      0.5783715962643876,
+      0.37173991054285627
+     ],
+     "singleton_worst": [
+      0.09722308518890846,
+      0.015191311989353869
+     ],
+     "robust_ret": 0.36031912031692176,
+     "robust_feasible": true,
+     "pairwise": {},
+     "nu_pi": 0.015626053857964155,
+     "oracle_singleton": {
+      "k": 1,
+      "ret": 0.37173991054285627,
+      "worst": 0.015191311989353869,
+      "fullset_feasible": false
+     },
+     "no_singleton_fullset_feasible": true,
+     "robust_minus_oracle_gap": null
+    },
+    "0.01": {
+     "unconstrained": 0.9999999999999996,
+     "singleton_rets": [
+      0.6062461136234967,
+      0.38591983253321727
+     ],
+     "singleton_worst": [
+      0.10886516024736664,
+      0.01714783763679445
+     ],
+     "robust_ret": 0.3783791720630837,
+     "robust_feasible": true,
+     "pairwise": {},
+     "nu_pi": 0.015626053857964155,
+     "oracle_singleton": {
+      "k": 1,
+      "ret": 0.38591983253321727,
+      "worst": 0.01714783763679445,
+      "fullset_feasible": false
+     },
+     "no_singleton_fullset_feasible": true,
+     "robust_minus_oracle_gap": null
+    },
+    "0.02": {
+     "unconstrained": 0.9999999999999996,
+     "singleton_rets": [
+      0.641985052419756,
+      0.41427967651393927
+     ],
+     "singleton_worst": [
+      0.1210525586001714,
+      0.020643574676043108
+     ],
+     "robust_ret": 0.4142796765139393,
+     "robust_feasible": true,
+     "pairwise": {},
+     "nu_pi": 0.015626053857964155,
+     "oracle_singleton": {
+      "k": 1,
+      "ret": 0.41427967651393927,
+      "worst": 0.020643574676043108,
+      "fullset_feasible": false
+     },
+     "no_singleton_fullset_feasible": true,
+     "robust_minus_oracle_gap": null
+    },
+    "0.05": {
+     "unconstrained": 0.9999999999999996,
+     "singleton_rets": [
+      0.7300672180354688,
+      0.4993592084561051
+     ],
+     "singleton_worst": [
+      0.14700348669865754,
+      0.05000000000000001
+     ],
+     "robust_ret": 0.49935920845610515,
+     "robust_feasible": true,
+     "pairwise": {},
+     "nu_pi": 0.015626053857964155,
+     "oracle_singleton": {
+      "k": 1,
+      "ret": 0.4993592084561051,
+      "worst": 0.05000000000000001,
+      "fullset_feasible": true
+     },
+     "no_singleton_fullset_feasible": false,
+     "robust_minus_oracle_gap": 5.551115123125783e-17
+    }
+   }
+  },
+  {
+   "uid": "NodeNetworkInterfaceFlapping",
+   "family": "manifests/kubePrometheus-prometheusRule.yaml",
+   "group": "node-network",
+   "geometry": "L3-caps2-1",
+   "metric": "node_network_up",
+   "readings": [
+    {
+     "theta": 1.0,
+     "for_s": 120.0
+    },
+    {
+     "theta": 2.0,
+     "for_s": 0.0
+    }
+   ],
+   "caps": [
+    2,
+    1
+   ],
+   "n_states": 19,
+   "budgets": {
+    "0.005": {
+     "unconstrained": 1.0000000000000004,
+     "singleton_rets": [
+      0.3630504707833344,
+      0.3717399105428562
+     ],
+     "singleton_worst": [
+      0.026693761820665504,
+      0.04773868990227972
+     ],
+     "robust_ret": 0.3290005771562153,
+     "robust_feasible": true,
+     "pairwise": {},
+     "nu_pi": 0.027332017641288932,
+     "oracle_singleton": {
+      "k": 0,
+      "ret": 0.3630504707833344,
+      "worst": 0.026693761820665504,
+      "fullset_feasible": false
+     },
+     "no_singleton_fullset_feasible": true,
+     "robust_minus_oracle_gap": null
+    },
+    "0.01": {
+     "unconstrained": 1.0000000000000004,
+     "singleton_rets": [
+      0.3745515118893095,
+      0.3859198325332173
+     ],
+     "singleton_worst": [
+      0.0330830331419357,
+      0.05291825787654165
+     ],
+     "robust_ret": 0.3430009284686942,
+     "robust_feasible": true,
+     "pairwise": {},
+     "nu_pi": 0.027332017641288932,
+     "oracle_singleton": {
+      "k": 0,
+      "ret": 0.3745515118893095,
+      "worst": 0.0330830331419357,
+      "fullset_feasible": false
+     },
+     "no_singleton_fullset_feasible": true,
+     "robust_minus_oracle_gap": null
+    },
+    "0.02": {
+     "unconstrained": 1.0000000000000004,
+     "singleton_rets": [
+      0.39755359410125957,
+      0.4142796765139392
+     ],
+     "singleton_worst": [
+      0.04586157578447609,
+      0.06327739382506548
+     ],
+     "robust_ret": 0.37100163109365203,
+     "robust_feasible": true,
+     "pairwise": {},
+     "nu_pi": 0.027332017641288932,
+     "oracle_singleton": {
+      "k": 0,
+      "ret": 0.39755359410125957,
+      "worst": 0.04586157578447609,
+      "fullset_feasible": false
+     },
+     "no_singleton_fullset_feasible": true,
+     "robust_minus_oracle_gap": null
+    },
+    "0.05": {
+     "unconstrained": 1.0000000000000004,
+     "singleton_rets": [
+      0.44647425357951964,
+      0.49935920845610526
+     ],
+     "singleton_worst": [
+      0.06345081087162241,
+      0.11199801096246376
+     ],
+     "robust_ret": 0.4334518724755066,
+     "robust_feasible": true,
+     "pairwise": {},
+     "nu_pi": 0.027332017641288932,
+     "oracle_singleton": {
+      "k": 0,
+      "ret": 0.44647425357951964,
+      "worst": 0.06345081087162241,
+      "fullset_feasible": false
+     },
+     "no_singleton_fullset_feasible": true,
+     "robust_minus_oracle_gap": null
+    }
+   }
+  },
+  {
+   "uid": "KubeStateMetricsListErrors",
+   "family": "manifests/kubeStateMetrics-prometheusRule.yaml",
+   "group": "kube-state-metrics",
+   "geometry": "L3-caps8-1",
+   "metric": "kube_state_metrics_list_total",
+   "readings": [
+    {
+     "theta": 0.0,
+     "for_s": 900.0
+    },
+    {
+     "theta": 0.01,
+     "for_s": 0.0
+    }
+   ],
+   "caps": [
+    8,
+    1
+   ],
+   "n_states": 55,
+   "budgets": {
+    "0.005": {
+     "unconstrained": 1.0000000000000002,
+     "singleton_rets": [
+      0.804978333964568,
+      0.37173991054285616
+     ],
+     "singleton_worst": [
+      0.16840269347215764,
+      0.005
+     ],
+     "robust_ret": 0.3717399105428562,
+     "robust_feasible": true,
+     "pairwise": {},
+     "nu_pi": 0.004542644752816972,
+     "oracle_singleton": {
+      "k": 1,
+      "ret": 0.37173991054285616,
+      "worst": 0.005,
+      "fullset_feasible": true
+     },
+     "no_singleton_fullset_feasible": false,
+     "robust_minus_oracle_gap": 5.551115123125783e-17
+    },
+    "0.01": {
+     "unconstrained": 1.0000000000000002,
+     "singleton_rets": [
+      0.8309730911188488,
+      0.3859198325332174
+     ],
+     "singleton_worst": [
+      0.17673255885301703,
+      0.01
+     ],
+     "robust_ret": 0.38591983253321727,
+     "robust_feasible": true,
+     "pairwise": {},
+     "nu_pi": 0.004542644752816972,
+     "oracle_singleton": {
+      "k": 1,
+      "ret": 0.3859198325332174,
+      "worst": 0.01,
+      "fullset_feasible": true
+     },
+     "no_singleton_fullset_feasible": false,
+     "robust_minus_oracle_gap": -1.1102230246251565e-16
+    },
+    "0.02": {
+     "unconstrained": 1.0000000000000002,
+     "singleton_rets": [
+      0.8745210777835316,
+      0.4142796765139392
+     ],
+     "singleton_worst": [
+      0.1895627460182543,
+      0.020000000000000004
+     ],
+     "robust_ret": 0.41427967651393915,
+     "robust_feasible": true,
+     "pairwise": {},
+     "nu_pi": 0.004542644752816972,
+     "oracle_singleton": {
+      "k": 1,
+      "ret": 0.4142796765139392,
+      "worst": 0.020000000000000004,
+      "fullset_feasible": true
+     },
+     "no_singleton_fullset_feasible": false,
+     "robust_minus_oracle_gap": -5.551115123125783e-17
+    },
+    "0.05": {
+     "unconstrained": 1.0000000000000002,
+     "singleton_rets": [
+      1.0000000000000002,
+      0.499359208456105
+     ],
+     "singleton_worst": [
+      0.22653157467446328,
+      0.05
+     ],
+     "robust_ret": 0.49935920845610526,
+     "robust_feasible": true,
+     "pairwise": {},
+     "nu_pi": 0.004542644752816972,
+     "oracle_singleton": {
+      "k": 1,
+      "ret": 0.499359208456105,
+      "worst": 0.05,
+      "fullset_feasible": true
+     },
+     "no_singleton_fullset_feasible": false,
+     "robust_minus_oracle_gap": 2.7755575615628914e-16
+    }
+   }
+  },
+  {
+   "uid": "KubeStateMetricsWatchErrors",
+   "family": "manifests/kubeStateMetrics-prometheusRule.yaml",
+   "group": "kube-state-metrics",
+   "geometry": "L3-caps8-1",
+   "metric": "kube_state_metrics_watch_total",
+   "readings": [
+    {
+     "theta": 0.0,
+     "for_s": 900.0
+    },
+    {
+     "theta": 0.01,
+     "for_s": 0.0
+    }
+   ],
+   "caps": [
+    8,
+    1
+   ],
+   "n_states": 55,
+   "budgets": {
+    "0.005": {
+     "unconstrained": 1.0000000000000002,
+     "singleton_rets": [
+      0.804978333964568,
+      0.37173991054285616
+     ],
+     "singleton_worst": [
+      0.16840269347215764,
+      0.005
+     ],
+     "robust_ret": 0.3717399105428562,
+     "robust_feasible": true,
+     "pairwise": {},
+     "nu_pi": 0.004542644752816972,
+     "oracle_singleton": {
+      "k": 1,
+      "ret": 0.37173991054285616,
+      "worst": 0.005,
+      "fullset_feasible": true
+     },
+     "no_singleton_fullset_feasible": false,
+     "robust_minus_oracle_gap": 5.551115123125783e-17
+    },
+    "0.01": {
+     "unconstrained": 1.0000000000000002,
+     "singleton_rets": [
+      0.8309730911188488,
+      0.3859198325332174
+     ],
+     "singleton_worst": [
+      0.17673255885301703,
+      0.01
+     ],
+     "robust_ret": 0.38591983253321727,
+     "robust_feasible": true,
+     "pairwise": {},
+     "nu_pi": 0.004542644752816972,
+     "oracle_singleton": {
+      "k": 1,
+      "ret": 0.3859198325332174,
+      "worst": 0.01,
+      "fullset_feasible": true
+     },
+     "no_singleton_fullset_feasible": false,
+     "robust_minus_oracle_gap": -1.1102230246251565e-16
+    },
+    "0.02": {
+     "unconstrained": 1.0000000000000002,
+     "singleton_rets": [
+      0.8745210777835316,
+      0.4142796765139392
+     ],
+     "singleton_worst": [
+      0.1895627460182543,
+      0.020000000000000004
+     ],
+     "robust_ret": 0.41427967651393915,
+     "robust_feasible": true,
+     "pairwise": {},
+     "nu_pi": 0.004542644752816972,
+     "oracle_singleton": {
+      "k": 1,
+      "ret": 0.4142796765139392,
+      "worst": 0.020000000000000004,
+      "fullset_feasible": true
+     },
+     "no_singleton_fullset_feasible": false,
+     "robust_minus_oracle_gap": -5.551115123125783e-17
+    },
+    "0.05": {
+     "unconstrained": 1.0000000000000002,
+     "singleton_rets": [
+      1.0000000000000002,
+      0.499359208456105
+     ],
+     "singleton_worst": [
+      0.22653157467446328,
+      0.05
+     ],
+     "robust_ret": 0.49935920845610526,
+     "robust_feasible": true,
+     "pairwise": {},
+     "nu_pi": 0.004542644752816972,
+     "oracle_singleton": {
+      "k": 1,
+      "ret": 0.499359208456105,
+      "worst": 0.05,
+      "fullset_feasible": true
+     },
+     "no_singleton_fullset_feasible": false,
+     "robust_minus_oracle_gap": 2.7755575615628914e-16
+    }
+   }
+  },
+  {
+   "uid": "KubePodCrashLooping",
+   "family": "manifests/kubernetesControlPlane-prometheusRule.yaml",
+   "group": "kubernetes-apps",
+   "geometry": "L3-caps8-1",
+   "metric": "kube_pod_container_status_waiting_reason",
+   "readings": [
+    {
+     "theta": 0.01,
+     "for_s": 900.0
+    },
+    {
+     "theta": 1.0,
+     "for_s": 0.0
+    }
+   ],
+   "caps": [
+    8,
+    1
+   ],
+   "n_states": 55,
+   "budgets": {
+    "0.005": {
+     "unconstrained": 1.0000000000000002,
+     "singleton_rets": [
+      0.804978333964568,
+      0.37173991054285616
+     ],
+     "singleton_worst": [
+      0.16840269347215764,
+      0.005
+     ],
+     "robust_ret": 0.3717399105428562,
+     "robust_feasible": true,
+     "pairwise": {},
+     "nu_pi": 0.004542644752816972,
+     "oracle_singleton": {
+      "k": 1,
+      "ret": 0.37173991054285616,
+      "worst": 0.005,
+      "fullset_feasible": true
+     },
+     "no_singleton_fullset_feasible": false,
+     "robust_minus_oracle_gap": 5.551115123125783e-17
+    },
+    "0.01": {
+     "unconstrained": 1.0000000000000002,
+     "singleton_rets": [
+      0.8309730911188488,
+      0.3859198325332174
+     ],
+     "singleton_worst": [
+      0.17673255885301703,
+      0.01
+     ],
+     "robust_ret": 0.38591983253321727,
+     "robust_feasible": true,
+     "pairwise": {},
+     "nu_pi": 0.004542644752816972,
+     "oracle_singleton": {
+      "k": 1,
+      "ret": 0.3859198325332174,
+      "worst": 0.01,
+      "fullset_feasible": true
+     },
+     "no_singleton_fullset_feasible": false,
+     "robust_minus_oracle_gap": -1.1102230246251565e-16
+    },
+    "0.02": {
+     "unconstrained": 1.0000000000000002,
+     "singleton_rets": [
+      0.8745210777835316,
+      0.4142796765139392
+     ],
+     "singleton_worst": [
+      0.1895627460182543,
+      0.020000000000000004
+     ],
+     "robust_ret": 0.41427967651393915,
+     "robust_feasible": true,
+     "pairwise": {},
+     "nu_pi": 0.004542644752816972,
+     "oracle_singleton": {
+      "k": 1,
+      "ret": 0.4142796765139392,
+      "worst": 0.020000000000000004,
+      "fullset_feasible": true
+     },
+     "no_singleton_fullset_feasible": false,
+     "robust_minus_oracle_gap": -5.551115123125783e-17
+    },
+    "0.05": {
+     "unconstrained": 1.0000000000000002,
+     "singleton_rets": [
+      1.0000000000000002,
+      0.499359208456105
+     ],
+     "singleton_worst": [
+      0.22653157467446328,
+      0.05
+     ],
+     "robust_ret": 0.49935920845610526,
+     "robust_feasible": true,
+     "pairwise": {},
+     "nu_pi": 0.004542644752816972,
+     "oracle_singleton": {
+      "k": 1,
+      "ret": 0.499359208456105,
+      "worst": 0.05,
+      "fullset_feasible": true
+     },
+     "no_singleton_fullset_feasible": false,
+     "robust_minus_oracle_gap": 2.7755575615628914e-16
+    }
+   }
+  },
+  {
+   "uid": "KubeCPUQuotaOvercommit",
+   "family": "manifests/kubernetesControlPlane-prometheusRule.yaml",
+   "group": "kubernetes-resources",
+   "geometry": "L3-caps5-1",
+   "metric": "kube_resourcequota",
+   "readings": [
+    {
+     "theta": 1.0,
+     "for_s": 300.0
+    },
+    {
+     "theta": 1.5,
+     "for_s": 0.0
+    }
+   ],
+   "caps": [
+    5,
+    1
+   ],
+   "n_states": 37,
+   "budgets": {
+    "0.005": {
+     "unconstrained": 0.9999999999999996,
+     "singleton_rets": [
+      0.5783715962643876,
+      0.37173991054285627
+     ],
+     "singleton_worst": [
+      0.09722308518890846,
+      0.015191311989353869
+     ],
+     "robust_ret": 0.36031912031692176,
+     "robust_feasible": true,
+     "pairwise": {},
+     "nu_pi": 0.015626053857964155,
+     "oracle_singleton": {
+      "k": 1,
+      "ret": 0.37173991054285627,
+      "worst": 0.015191311989353869,
+      "fullset_feasible": false
+     },
+     "no_singleton_fullset_feasible": true,
+     "robust_minus_oracle_gap": null
+    },
+    "0.01": {
+     "unconstrained": 0.9999999999999996,
+     "singleton_rets": [
+      0.6062461136234967,
+      0.38591983253321727
+     ],
+     "singleton_worst": [
+      0.10886516024736664,
+      0.01714783763679445
+     ],
+     "robust_ret": 0.3783791720630837,
+     "robust_feasible": true,
+     "pairwise": {},
+     "nu_pi": 0.015626053857964155,
+     "oracle_singleton": {
+      "k": 1,
+      "ret": 0.38591983253321727,
+      "worst": 0.01714783763679445,
+      "fullset_feasible": false
+     },
+     "no_singleton_fullset_feasible": true,
+     "robust_minus_oracle_gap": null
+    },
+    "0.02": {
+     "unconstrained": 0.9999999999999996,
+     "singleton_rets": [
+      0.641985052419756,
+      0.41427967651393927
+     ],
+     "singleton_worst": [
+      0.1210525586001714,
+      0.020643574676043108
+     ],
+     "robust_ret": 0.4142796765139393,
+     "robust_feasible": true,
+     "pairwise": {},
+     "nu_pi": 0.015626053857964155,
+     "oracle_singleton": {
+      "k": 1,
+      "ret": 0.41427967651393927,
+      "worst": 0.020643574676043108,
+      "fullset_feasible": false
+     },
+     "no_singleton_fullset_feasible": true,
+     "robust_minus_oracle_gap": null
+    },
+    "0.05": {
+     "unconstrained": 0.9999999999999996,
+     "singleton_rets": [
+      0.7300672180354688,
+      0.4993592084561051
+     ],
+     "singleton_worst": [
+      0.14700348669865754,
+      0.05000000000000001
+     ],
+     "robust_ret": 0.49935920845610515,
+     "robust_feasible": true,
+     "pairwise": {},
+     "nu_pi": 0.015626053857964155,
+     "oracle_singleton": {
+      "k": 1,
+      "ret": 0.4993592084561051,
+      "worst": 0.05000000000000001,
+      "fullset_feasible": true
+     },
+     "no_singleton_fullset_feasible": false,
+     "robust_minus_oracle_gap": 5.551115123125783e-17
+    }
+   }
+  },
+  {
+   "uid": "KubeMemoryQuotaOvercommit",
+   "family": "manifests/kubernetesControlPlane-prometheusRule.yaml",
+   "group": "kubernetes-resources",
+   "geometry": "L3-caps5-1",
+   "metric": "kube_resourcequota",
+   "readings": [
+    {
+     "theta": 1.0,
+     "for_s": 300.0
+    },
+    {
+     "theta": 1.5,
+     "for_s": 0.0
+    }
+   ],
+   "caps": [
+    5,
+    1
+   ],
+   "n_states": 37,
+   "budgets": {
+    "0.005": {
+     "unconstrained": 0.9999999999999996,
+     "singleton_rets": [
+      0.5783715962643876,
+      0.37173991054285627
+     ],
+     "singleton_worst": [
+      0.09722308518890846,
+      0.015191311989353869
+     ],
+     "robust_ret": 0.36031912031692176,
+     "robust_feasible": true,
+     "pairwise": {},
+     "nu_pi": 0.015626053857964155,
+     "oracle_singleton": {
+      "k": 1,
+      "ret": 0.37173991054285627,
+      "worst": 0.015191311989353869,
+      "fullset_feasible": false
+     },
+     "no_singleton_fullset_feasible": true,
+     "robust_minus_oracle_gap": null
+    },
+    "0.01": {
+     "unconstrained": 0.9999999999999996,
+     "singleton_rets": [
+      0.6062461136234967,
+      0.38591983253321727
+     ],
+     "singleton_worst": [
+      0.10886516024736664,
+      0.01714783763679445
+     ],
+     "robust_ret": 0.3783791720630837,
+     "robust_feasible": true,
+     "pairwise": {},
+     "nu_pi": 0.015626053857964155,
+     "oracle_singleton": {
+      "k": 1,
+      "ret": 0.38591983253321727,
+      "worst": 0.01714783763679445,
+      "fullset_feasible": false
+     },
+     "no_singleton_fullset_feasible": true,
+     "robust_minus_oracle_gap": null
+    },
+    "0.02": {
+     "unconstrained": 0.9999999999999996,
+     "singleton_rets": [
+      0.641985052419756,
+      0.41427967651393927
+     ],
+     "singleton_worst": [
+      0.1210525586001714,
+      0.020643574676043108
+     ],
+     "robust_ret": 0.4142796765139393,
+     "robust_feasible": true,
+     "pairwise": {},
+     "nu_pi": 0.015626053857964155,
+     "oracle_singleton": {
+      "k": 1,
+      "ret": 0.41427967651393927,
+      "worst": 0.020643574676043108,
+      "fullset_feasible": false
+     },
+     "no_singleton_fullset_feasible": true,
+     "robust_minus_oracle_gap": null
+    },
+    "0.05": {
+     "unconstrained": 0.9999999999999996,
+     "singleton_rets": [
+      0.7300672180354688,
+      0.4993592084561051
+     ],
+     "singleton_worst": [
+      0.14700348669865754,
+      0.05000000000000001
+     ],
+     "robust_ret": 0.49935920845610515,
+     "robust_feasible": true,
+     "pairwise": {},
+     "nu_pi": 0.015626053857964155,
+     "oracle_singleton": {
+      "k": 1,
+      "ret": 0.4993592084561051,
+      "worst": 0.05000000000000001,
+      "fullset_feasible": true
+     },
+     "no_singleton_fullset_feasible": false,
+     "robust_minus_oracle_gap": 5.551115123125783e-17
+    }
+   }
+  },
+  {
+   "uid": "NodeCPUHighUsage",
+   "family": "manifests/nodeExporter-prometheusRule.yaml",
+   "group": "node-exporter",
+   "geometry": "L3-caps8-1",
+   "metric": "node_cpu_seconds_total",
+   "readings": [
+    {
+     "theta": 70.0,
+     "for_s": 900.0
+    },
+    {
+     "theta": 90.0,
+     "for_s": 0.0
+    }
+   ],
+   "caps": [
+    8,
+    1
+   ],
+   "n_states": 55,
+   "budgets": {
+    "0.005": {
+     "unconstrained": 1.0000000000000002,
+     "singleton_rets": [
+      0.804978333964568,
+      0.37173991054285616
+     ],
+     "singleton_worst": [
+      0.16840269347215764,
+      0.005
+     ],
+     "robust_ret": 0.3717399105428562,
+     "robust_feasible": true,
+     "pairwise": {},
+     "nu_pi": 0.004542644752816972,
+     "oracle_singleton": {
+      "k": 1,
+      "ret": 0.37173991054285616,
+      "worst": 0.005,
+      "fullset_feasible": true
+     },
+     "no_singleton_fullset_feasible": false,
+     "robust_minus_oracle_gap": 5.551115123125783e-17
+    },
+    "0.01": {
+     "unconstrained": 1.0000000000000002,
+     "singleton_rets": [
+      0.8309730911188488,
+      0.3859198325332174
+     ],
+     "singleton_worst": [
+      0.17673255885301703,
+      0.01
+     ],
+     "robust_ret": 0.38591983253321727,
+     "robust_feasible": true,
+     "pairwise": {},
+     "nu_pi": 0.004542644752816972,
+     "oracle_singleton": {
+      "k": 1,
+      "ret": 0.3859198325332174,
+      "worst": 0.01,
+      "fullset_feasible": true
+     },
+     "no_singleton_fullset_feasible": false,
+     "robust_minus_oracle_gap": -1.1102230246251565e-16
+    },
+    "0.02": {
+     "unconstrained": 1.0000000000000002,
+     "singleton_rets": [
+      0.8745210777835316,
+      0.4142796765139392
+     ],
+     "singleton_worst": [
+      0.1895627460182543,
+      0.020000000000000004
+     ],
+     "robust_ret": 0.41427967651393915,
+     "robust_feasible": true,
+     "pairwise": {},
+     "nu_pi": 0.004542644752816972,
+     "oracle_singleton": {
+      "k": 1,
+      "ret": 0.4142796765139392,
+      "worst": 0.020000000000000004,
+      "fullset_feasible": true
+     },
+     "no_singleton_fullset_feasible": false,
+     "robust_minus_oracle_gap": -5.551115123125783e-17
+    },
+    "0.05": {
+     "unconstrained": 1.0000000000000002,
+     "singleton_rets": [
+      1.0000000000000002,
+      0.499359208456105
+     ],
+     "singleton_worst": [
+      0.22653157467446328,
+      0.05
+     ],
+     "robust_ret": 0.49935920845610526,
+     "robust_feasible": true,
+     "pairwise": {},
+     "nu_pi": 0.004542644752816972,
+     "oracle_singleton": {
+      "k": 1,
+      "ret": 0.499359208456105,
+      "worst": 0.05,
+      "fullset_feasible": true
+     },
+     "no_singleton_fullset_feasible": false,
+     "robust_minus_oracle_gap": 2.7755575615628914e-16
+    }
+   }
+  },
+  {
+   "uid": "NodeClockNotSynchronising",
+   "family": "manifests/nodeExporter-prometheusRule.yaml",
+   "group": "node-exporter",
+   "geometry": "L3-caps8-1",
+   "metric": "node_timex_sync_status",
+   "readings": [
+    {
+     "theta": 10.0,
+     "for_s": 600.0
+    },
+    {
+     "theta": 16.0,
+     "for_s": 0.0
+    }
+   ],
+   "caps": [
+    8,
+    1
+   ],
+   "n_states": 55,
+   "budgets": {
+    "0.005": {
+     "unconstrained": 1.0000000000000002,
+     "singleton_rets": [
+      0.804978333964568,
+      0.37173991054285616
+     ],
+     "singleton_worst": [
+      0.16840269347215764,
+      0.005
+     ],
+     "robust_ret": 0.3717399105428562,
+     "robust_feasible": true,
+     "pairwise": {},
+     "nu_pi": 0.004542644752816972,
+     "oracle_singleton": {
+      "k": 1,
+      "ret": 0.37173991054285616,
+      "worst": 0.005,
+      "fullset_feasible": true
+     },
+     "no_singleton_fullset_feasible": false,
+     "robust_minus_oracle_gap": 5.551115123125783e-17
+    },
+    "0.01": {
+     "unconstrained": 1.0000000000000002,
+     "singleton_rets": [
+      0.8309730911188488,
+      0.3859198325332174
+     ],
+     "singleton_worst": [
+      0.17673255885301703,
+      0.01
+     ],
+     "robust_ret": 0.38591983253321727,
+     "robust_feasible": true,
+     "pairwise": {},
+     "nu_pi": 0.004542644752816972,
+     "oracle_singleton": {
+      "k": 1,
+      "ret": 0.3859198325332174,
+      "worst": 0.01,
+      "fullset_feasible": true
+     },
+     "no_singleton_fullset_feasible": false,
+     "robust_minus_oracle_gap": -1.1102230246251565e-16
+    },
+    "0.02": {
+     "unconstrained": 1.0000000000000002,
+     "singleton_rets": [
+      0.8745210777835316,
+      0.4142796765139392
+     ],
+     "singleton_worst": [
+      0.1895627460182543,
+      0.020000000000000004
+     ],
+     "robust_ret": 0.41427967651393915,
+     "robust_feasible": true,
+     "pairwise": {},
+     "nu_pi": 0.004542644752816972,
+     "oracle_singleton": {
+      "k": 1,
+      "ret": 0.4142796765139392,
+      "worst": 0.020000000000000004,
+      "fullset_feasible": true
+     },
+     "no_singleton_fullset_feasible": false,
+     "robust_minus_oracle_gap": -5.551115123125783e-17
+    },
+    "0.05": {
+     "unconstrained": 1.0000000000000002,
+     "singleton_rets": [
+      1.0000000000000002,
+      0.499359208456105
+     ],
+     "singleton_worst": [
+      0.22653157467446328,
+      0.05
+     ],
+     "robust_ret": 0.49935920845610526,
+     "robust_feasible": true,
+     "pairwise": {},
+     "nu_pi": 0.004542644752816972,
+     "oracle_singleton": {
+      "k": 1,
+      "ret": 0.499359208456105,
+      "worst": 0.05,
+      "fullset_feasible": true
+     },
+     "no_singleton_fullset_feasible": false,
+     "robust_minus_oracle_gap": 2.7755575615628914e-16
+    }
+   }
+  },
+  {
+   "uid": "NodeDiskIOSaturation",
+   "family": "manifests/nodeExporter-prometheusRule.yaml",
+   "group": "node-exporter",
+   "geometry": "L3-caps8-1",
+   "metric": "node_disk_io_time_weighted_seconds_total",
+   "readings": [
+    {
+     "theta": 5.0,
+     "for_s": 1800.0
+    },
+    {
+     "theta": 10.0,
+     "for_s": 0.0
+    }
+   ],
+   "caps": [
+    8,
+    1
+   ],
+   "n_states": 55,
+   "budgets": {
+    "0.005": {
+     "unconstrained": 1.0000000000000002,
+     "singleton_rets": [
+      0.804978333964568,
+      0.37173991054285616
+     ],
+     "singleton_worst": [
+      0.16840269347215764,
+      0.005
+     ],
+     "robust_ret": 0.3717399105428562,
+     "robust_feasible": true,
+     "pairwise": {},
+     "nu_pi": 0.004542644752816972,
+     "oracle_singleton": {
+      "k": 1,
+      "ret": 0.37173991054285616,
+      "worst": 0.005,
+      "fullset_feasible": true
+     },
+     "no_singleton_fullset_feasible": false,
+     "robust_minus_oracle_gap": 5.551115123125783e-17
+    },
+    "0.01": {
+     "unconstrained": 1.0000000000000002,
+     "singleton_rets": [
+      0.8309730911188488,
+      0.3859198325332174
+     ],
+     "singleton_worst": [
+      0.17673255885301703,
+      0.01
+     ],
+     "robust_ret": 0.38591983253321727,
+     "robust_feasible": true,
+     "pairwise": {},
+     "nu_pi": 0.004542644752816972,
+     "oracle_singleton": {
+      "k": 1,
+      "ret": 0.3859198325332174,
+      "worst": 0.01,
+      "fullset_feasible": true
+     },
+     "no_singleton_fullset_feasible": false,
+     "robust_minus_oracle_gap": -1.1102230246251565e-16
+    },
+    "0.02": {
+     "unconstrained": 1.0000000000000002,
+     "singleton_rets": [
+      0.8745210777835316,
+      0.4142796765139392
+     ],
+     "singleton_worst": [
+      0.1895627460182543,
+      0.020000000000000004
+     ],
+     "robust_ret": 0.41427967651393915,
+     "robust_feasible": true,
+     "pairwise": {},
+     "nu_pi": 0.004542644752816972,
+     "oracle_singleton": {
+      "k": 1,
+      "ret": 0.4142796765139392,
+      "worst": 0.020000000000000004,
+      "fullset_feasible": true
+     },
+     "no_singleton_fullset_feasible": false,
+     "robust_minus_oracle_gap": -5.551115123125783e-17
+    },
+    "0.05": {
+     "unconstrained": 1.0000000000000002,
+     "singleton_rets": [
+      1.0000000000000002,
+      0.499359208456105
+     ],
+     "singleton_worst": [
+      0.22653157467446328,
+      0.05
+     ],
+     "robust_ret": 0.49935920845610526,
+     "robust_feasible": true,
+     "pairwise": {},
+     "nu_pi": 0.004542644752816972,
+     "oracle_singleton": {
+      "k": 1,
+      "ret": 0.499359208456105,
+      "worst": 0.05,
+      "fullset_feasible": true
+     },
+     "no_singleton_fullset_feasible": false,
+     "robust_minus_oracle_gap": 2.7755575615628914e-16
+    }
+   }
+  },
+  {
+   "uid": "PrometheusErrorSendingAlertsToAnyAlertmanager",
+   "family": "manifests/prometheus-prometheusRule.yaml",
+   "group": "prometheus",
+   "geometry": "L3-caps8-1",
+   "metric": "prometheus_notifications_errors_total",
+   "readings": [
+    {
+     "theta": 1.0,
+     "for_s": 900.0
+    },
+    {
+     "theta": 3.0,
+     "for_s": 0.0
+    }
+   ],
+   "caps": [
+    8,
+    1
+   ],
+   "n_states": 55,
+   "budgets": {
+    "0.005": {
+     "unconstrained": 1.0000000000000002,
+     "singleton_rets": [
+      0.804978333964568,
+      0.37173991054285616
+     ],
+     "singleton_worst": [
+      0.16840269347215764,
+      0.005
+     ],
+     "robust_ret": 0.3717399105428562,
+     "robust_feasible": true,
+     "pairwise": {},
+     "nu_pi": 0.004542644752816972,
+     "oracle_singleton": {
+      "k": 1,
+      "ret": 0.37173991054285616,
+      "worst": 0.005,
+      "fullset_feasible": true
+     },
+     "no_singleton_fullset_feasible": false,
+     "robust_minus_oracle_gap": 5.551115123125783e-17
+    },
+    "0.01": {
+     "unconstrained": 1.0000000000000002,
+     "singleton_rets": [
+      0.8309730911188488,
+      0.3859198325332174
+     ],
+     "singleton_worst": [
+      0.17673255885301703,
+      0.01
+     ],
+     "robust_ret": 0.38591983253321727,
+     "robust_feasible": true,
+     "pairwise": {},
+     "nu_pi": 0.004542644752816972,
+     "oracle_singleton": {
+      "k": 1,
+      "ret": 0.3859198325332174,
+      "worst": 0.01,
+      "fullset_feasible": true
+     },
+     "no_singleton_fullset_feasible": false,
+     "robust_minus_oracle_gap": -1.1102230246251565e-16
+    },
+    "0.02": {
+     "unconstrained": 1.0000000000000002,
+     "singleton_rets": [
+      0.8745210777835316,
+      0.4142796765139392
+     ],
+     "singleton_worst": [
+      0.1895627460182543,
+      0.020000000000000004
+     ],
+     "robust_ret": 0.41427967651393915,
+     "robust_feasible": true,
+     "pairwise": {},
+     "nu_pi": 0.004542644752816972,
+     "oracle_singleton": {
+      "k": 1,
+      "ret": 0.4142796765139392,
+      "worst": 0.020000000000000004,
+      "fullset_feasible": true
+     },
+     "no_singleton_fullset_feasible": false,
+     "robust_minus_oracle_gap": -5.551115123125783e-17
+    },
+    "0.05": {
+     "unconstrained": 1.0000000000000002,
+     "singleton_rets": [
+      1.0000000000000002,
+      0.499359208456105
+     ],
+     "singleton_worst": [
+      0.22653157467446328,
+      0.05
+     ],
+     "robust_ret": 0.49935920845610526,
+     "robust_feasible": true,
+     "pairwise": {},
+     "nu_pi": 0.004542644752816972,
+     "oracle_singleton": {
+      "k": 1,
+      "ret": 0.499359208456105,
+      "worst": 0.05,
+      "fullset_feasible": true
+     },
+     "no_singleton_fullset_feasible": false,
+     "robust_minus_oracle_gap": 2.7755575615628914e-16
+    }
+   }
+  },
+  {
+   "uid": "PrometheusErrorSendingAlertsToSomeAlertmanagers",
+   "family": "manifests/prometheus-prometheusRule.yaml",
+   "group": "prometheus",
+   "geometry": "L3-caps8-1",
+   "metric": "prometheus_notifications_errors_total",
+   "readings": [
+    {
+     "theta": 0.8,
+     "for_s": 900.0
+    },
+    {
+     "theta": 1.0,
+     "for_s": 0.0
+    }
+   ],
+   "caps": [
+    8,
+    1
+   ],
+   "n_states": 55,
+   "budgets": {
+    "0.005": {
+     "unconstrained": 1.0000000000000002,
+     "singleton_rets": [
+      0.804978333964568,
+      0.37173991054285616
+     ],
+     "singleton_worst": [
+      0.16840269347215764,
+      0.005
+     ],
+     "robust_ret": 0.3717399105428562,
+     "robust_feasible": true,
+     "pairwise": {},
+     "nu_pi": 0.004542644752816972,
+     "oracle_singleton": {
+      "k": 1,
+      "ret": 0.37173991054285616,
+      "worst": 0.005,
+      "fullset_feasible": true
+     },
+     "no_singleton_fullset_feasible": false,
+     "robust_minus_oracle_gap": 5.551115123125783e-17
+    },
+    "0.01": {
+     "unconstrained": 1.0000000000000002,
+     "singleton_rets": [
+      0.8309730911188488,
+      0.3859198325332174
+     ],
+     "singleton_worst": [
+      0.17673255885301703,
+      0.01
+     ],
+     "robust_ret": 0.38591983253321727,
+     "robust_feasible": true,
+     "pairwise": {},
+     "nu_pi": 0.004542644752816972,
+     "oracle_singleton": {
+      "k": 1,
+      "ret": 0.3859198325332174,
+      "worst": 0.01,
+      "fullset_feasible": true
+     },
+     "no_singleton_fullset_feasible": false,
+     "robust_minus_oracle_gap": -1.1102230246251565e-16
+    },
+    "0.02": {
+     "unconstrained": 1.0000000000000002,
+     "singleton_rets": [
+      0.8745210777835316,
+      0.4142796765139392
+     ],
+     "singleton_worst": [
+      0.1895627460182543,
+      0.020000000000000004
+     ],
+     "robust_ret": 0.41427967651393915,
+     "robust_feasible": true,
+     "pairwise": {},
+     "nu_pi": 0.004542644752816972,
+     "oracle_singleton": {
+      "k": 1,
+      "ret": 0.4142796765139392,
+      "worst": 0.020000000000000004,
+      "fullset_feasible": true
+     },
+     "no_singleton_fullset_feasible": false,
+     "robust_minus_oracle_gap": -5.551115123125783e-17
+    },
+    "0.05": {
+     "unconstrained": 1.0000000000000002,
+     "singleton_rets": [
+      1.0000000000000002,
+      0.499359208456105
+     ],
+     "singleton_worst": [
+      0.22653157467446328,
+      0.05
+     ],
+     "robust_ret": 0.49935920845610526,
+     "robust_feasible": true,
+     "pairwise": {},
+     "nu_pi": 0.004542644752816972,
+     "oracle_singleton": {
+      "k": 1,
+      "ret": 0.499359208456105,
+      "worst": 0.05,
+      "fullset_feasible": true
+     },
+     "no_singleton_fullset_feasible": false,
+     "robust_minus_oracle_gap": 2.7755575615628914e-16
+    }
+   }
+  },
+  {
+   "uid": "PrometheusHighQueryLoad",
+   "family": "manifests/prometheus-prometheusRule.yaml",
+   "group": "prometheus",
+   "geometry": "L3-caps8-1",
+   "metric": "prometheus_engine_queries",
+   "readings": [
+    {
+     "theta": 0.4,
+     "for_s": 900.0
+    },
+    {
+     "theta": 0.8,
+     "for_s": 0.0
+    }
+   ],
+   "caps": [
+    8,
+    1
+   ],
+   "n_states": 55,
+   "budgets": {
+    "0.005": {
+     "unconstrained": 1.0000000000000002,
+     "singleton_rets": [
+      0.804978333964568,
+      0.37173991054285616
+     ],
+     "singleton_worst": [
+      0.16840269347215764,
+      0.005
+     ],
+     "robust_ret": 0.3717399105428562,
+     "robust_feasible": true,
+     "pairwise": {},
+     "nu_pi": 0.004542644752816972,
+     "oracle_singleton": {
+      "k": 1,
+      "ret": 0.37173991054285616,
+      "worst": 0.005,
+      "fullset_feasible": true
+     },
+     "no_singleton_fullset_feasible": false,
+     "robust_minus_oracle_gap": 5.551115123125783e-17
+    },
+    "0.01": {
+     "unconstrained": 1.0000000000000002,
+     "singleton_rets": [
+      0.8309730911188488,
+      0.3859198325332174
+     ],
+     "singleton_worst": [
+      0.17673255885301703,
+      0.01
+     ],
+     "robust_ret": 0.38591983253321727,
+     "robust_feasible": true,
+     "pairwise": {},
+     "nu_pi": 0.004542644752816972,
+     "oracle_singleton": {
+      "k": 1,
+      "ret": 0.3859198325332174,
+      "worst": 0.01,
+      "fullset_feasible": true
+     },
+     "no_singleton_fullset_feasible": false,
+     "robust_minus_oracle_gap": -1.1102230246251565e-16
+    },
+    "0.02": {
+     "unconstrained": 1.0000000000000002,
+     "singleton_rets": [
+      0.8745210777835316,
+      0.4142796765139392
+     ],
+     "singleton_worst": [
+      0.1895627460182543,
+      0.020000000000000004
+     ],
+     "robust_ret": 0.41427967651393915,
+     "robust_feasible": true,
+     "pairwise": {},
+     "nu_pi": 0.004542644752816972,
+     "oracle_singleton": {
+      "k": 1,
+      "ret": 0.4142796765139392,
+      "worst": 0.020000000000000004,
+      "fullset_feasible": true
+     },
+     "no_singleton_fullset_feasible": false,
+     "robust_minus_oracle_gap": -5.551115123125783e-17
+    },
+    "0.05": {
+     "unconstrained": 1.0000000000000002,
+     "singleton_rets": [
+      1.0000000000000002,
+      0.499359208456105
+     ],
+     "singleton_worst": [
+      0.22653157467446328,
+      0.05
+     ],
+     "robust_ret": 0.49935920845610526,
+     "robust_feasible": true,
+     "pairwise": {},
+     "nu_pi": 0.004542644752816972,
+     "oracle_singleton": {
+      "k": 1,
+      "ret": 0.499359208456105,
+      "worst": 0.05,
+      "fullset_feasible": true
+     },
+     "no_singleton_fullset_feasible": false,
+     "robust_minus_oracle_gap": 2.7755575615628914e-16
+    }
+   }
+  },
+  {
+   "uid": "PrometheusOperatorListErrors",
+   "family": "manifests/prometheusOperator-prometheusRule.yaml",
+   "group": "prometheus-operator",
+   "geometry": "L3-caps8-1",
+   "metric": "prometheus_operator_list_operations_failed_total",
+   "readings": [
+    {
+     "theta": 0.1,
+     "for_s": 900.0
+    },
+    {
+     "theta": 0.4,
+     "for_s": 0.0
+    }
+   ],
+   "caps": [
+    8,
+    1
+   ],
+   "n_states": 55,
+   "budgets": {
+    "0.005": {
+     "unconstrained": 1.0000000000000002,
+     "singleton_rets": [
+      0.804978333964568,
+      0.37173991054285616
+     ],
+     "singleton_worst": [
+      0.16840269347215764,
+      0.005
+     ],
+     "robust_ret": 0.3717399105428562,
+     "robust_feasible": true,
+     "pairwise": {},
+     "nu_pi": 0.004542644752816972,
+     "oracle_singleton": {
+      "k": 1,
+      "ret": 0.37173991054285616,
+      "worst": 0.005,
+      "fullset_feasible": true
+     },
+     "no_singleton_fullset_feasible": false,
+     "robust_minus_oracle_gap": 5.551115123125783e-17
+    },
+    "0.01": {
+     "unconstrained": 1.0000000000000002,
+     "singleton_rets": [
+      0.8309730911188488,
+      0.3859198325332174
+     ],
+     "singleton_worst": [
+      0.17673255885301703,
+      0.01
+     ],
+     "robust_ret": 0.38591983253321727,
+     "robust_feasible": true,
+     "pairwise": {},
+     "nu_pi": 0.004542644752816972,
+     "oracle_singleton": {
+      "k": 1,
+      "ret": 0.3859198325332174,
+      "worst": 0.01,
+      "fullset_feasible": true
+     },
+     "no_singleton_fullset_feasible": false,
+     "robust_minus_oracle_gap": -1.1102230246251565e-16
+    },
+    "0.02": {
+     "unconstrained": 1.0000000000000002,
+     "singleton_rets": [
+      0.8745210777835316,
+      0.4142796765139392
+     ],
+     "singleton_worst": [
+      0.1895627460182543,
+      0.020000000000000004
+     ],
+     "robust_ret": 0.41427967651393915,
+     "robust_feasible": true,
+     "pairwise": {},
+     "nu_pi": 0.004542644752816972,
+     "oracle_singleton": {
+      "k": 1,
+      "ret": 0.4142796765139392,
+      "worst": 0.020000000000000004,
+      "fullset_feasible": true
+     },
+     "no_singleton_fullset_feasible": false,
+     "robust_minus_oracle_gap": -5.551115123125783e-17
+    },
+    "0.05": {
+     "unconstrained": 1.0000000000000002,
+     "singleton_rets": [
+      1.0000000000000002,
+      0.499359208456105
+     ],
+     "singleton_worst": [
+      0.22653157467446328,
+      0.05
+     ],
+     "robust_ret": 0.49935920845610526,
+     "robust_feasible": true,
+     "pairwise": {},
+     "nu_pi": 0.004542644752816972,
+     "oracle_singleton": {
+      "k": 1,
+      "ret": 0.499359208456105,
+      "worst": 0.05,
+      "fullset_feasible": true
+     },
+     "no_singleton_fullset_feasible": false,
+     "robust_minus_oracle_gap": 2.7755575615628914e-16
+    }
+   }
+  },
+  {
+   "uid": "PrometheusOperatorNodeLookupErrors",
+   "family": "manifests/prometheusOperator-prometheusRule.yaml",
+   "group": "prometheus-operator",
+   "geometry": "L3-caps8-1",
+   "metric": "prometheus_operator_node_address_lookup_errors_total",
+   "readings": [
+    {
+     "theta": 0.0,
+     "for_s": 600.0
+    },
+    {
+     "theta": 0.1,
+     "for_s": 0.0
+    }
+   ],
+   "caps": [
+    8,
+    1
+   ],
+   "n_states": 55,
+   "budgets": {
+    "0.005": {
+     "unconstrained": 1.0000000000000002,
+     "singleton_rets": [
+      0.804978333964568,
+      0.37173991054285616
+     ],
+     "singleton_worst": [
+      0.16840269347215764,
+      0.005
+     ],
+     "robust_ret": 0.3717399105428562,
+     "robust_feasible": true,
+     "pairwise": {},
+     "nu_pi": 0.004542644752816972,
+     "oracle_singleton": {
+      "k": 1,
+      "ret": 0.37173991054285616,
+      "worst": 0.005,
+      "fullset_feasible": true
+     },
+     "no_singleton_fullset_feasible": false,
+     "robust_minus_oracle_gap": 5.551115123125783e-17
+    },
+    "0.01": {
+     "unconstrained": 1.0000000000000002,
+     "singleton_rets": [
+      0.8309730911188488,
+      0.3859198325332174
+     ],
+     "singleton_worst": [
+      0.17673255885301703,
+      0.01
+     ],
+     "robust_ret": 0.38591983253321727,
+     "robust_feasible": true,
+     "pairwise": {},
+     "nu_pi": 0.004542644752816972,
+     "oracle_singleton": {
+      "k": 1,
+      "ret": 0.3859198325332174,
+      "worst": 0.01,
+      "fullset_feasible": true
+     },
+     "no_singleton_fullset_feasible": false,
+     "robust_minus_oracle_gap": -1.1102230246251565e-16
+    },
+    "0.02": {
+     "unconstrained": 1.0000000000000002,
+     "singleton_rets": [
+      0.8745210777835316,
+      0.4142796765139392
+     ],
+     "singleton_worst": [
+      0.1895627460182543,
+      0.020000000000000004
+     ],
+     "robust_ret": 0.41427967651393915,
+     "robust_feasible": true,
+     "pairwise": {},
+     "nu_pi": 0.004542644752816972,
+     "oracle_singleton": {
+      "k": 1,
+      "ret": 0.4142796765139392,
+      "worst": 0.020000000000000004,
+      "fullset_feasible": true
+     },
+     "no_singleton_fullset_feasible": false,
+     "robust_minus_oracle_gap": -5.551115123125783e-17
+    },
+    "0.05": {
+     "unconstrained": 1.0000000000000002,
+     "singleton_rets": [
+      1.0000000000000002,
+      0.499359208456105
+     ],
+     "singleton_worst": [
+      0.22653157467446328,
+      0.05
+     ],
+     "robust_ret": 0.49935920845610526,
+     "robust_feasible": true,
+     "pairwise": {},
+     "nu_pi": 0.004542644752816972,
+     "oracle_singleton": {
+      "k": 1,
+      "ret": 0.499359208456105,
+      "worst": 0.05,
+      "fullset_feasible": true
+     },
+     "no_singleton_fullset_feasible": false,
+     "robust_minus_oracle_gap": 2.7755575615628914e-16
+    }
+   }
+  },
+  {
+   "uid": "PrometheusOperatorReconcileErrors",
+   "family": "manifests/prometheusOperator-prometheusRule.yaml",
+   "group": "prometheus-operator",
+   "geometry": "L3-caps8-1",
+   "metric": "prometheus_operator_reconcile_errors_total",
+   "readings": [
+    {
+     "theta": 0.0,
+     "for_s": 600.0
+    },
+    {
+     "theta": 0.1,
+     "for_s": 0.0
+    }
+   ],
+   "caps": [
+    8,
+    1
+   ],
+   "n_states": 55,
+   "budgets": {
+    "0.005": {
+     "unconstrained": 1.0000000000000002,
+     "singleton_rets": [
+      0.804978333964568,
+      0.37173991054285616
+     ],
+     "singleton_worst": [
+      0.16840269347215764,
+      0.005
+     ],
+     "robust_ret": 0.3717399105428562,
+     "robust_feasible": true,
+     "pairwise": {},
+     "nu_pi": 0.004542644752816972,
+     "oracle_singleton": {
+      "k": 1,
+      "ret": 0.37173991054285616,
+      "worst": 0.005,
+      "fullset_feasible": true
+     },
+     "no_singleton_fullset_feasible": false,
+     "robust_minus_oracle_gap": 5.551115123125783e-17
+    },
+    "0.01": {
+     "unconstrained": 1.0000000000000002,
+     "singleton_rets": [
+      0.8309730911188488,
+      0.3859198325332174
+     ],
+     "singleton_worst": [
+      0.17673255885301703,
+      0.01
+     ],
+     "robust_ret": 0.38591983253321727,
+     "robust_feasible": true,
+     "pairwise": {},
+     "nu_pi": 0.004542644752816972,
+     "oracle_singleton": {
+      "k": 1,
+      "ret": 0.3859198325332174,
+      "worst": 0.01,
+      "fullset_feasible": true
+     },
+     "no_singleton_fullset_feasible": false,
+     "robust_minus_oracle_gap": -1.1102230246251565e-16
+    },
+    "0.02": {
+     "unconstrained": 1.0000000000000002,
+     "singleton_rets": [
+      0.8745210777835316,
+      0.4142796765139392
+     ],
+     "singleton_worst": [
+      0.1895627460182543,
+      0.020000000000000004
+     ],
+     "robust_ret": 0.41427967651393915,
+     "robust_feasible": true,
+     "pairwise": {},
+     "nu_pi": 0.004542644752816972,
+     "oracle_singleton": {
+      "k": 1,
+      "ret": 0.4142796765139392,
+      "worst": 0.020000000000000004,
+      "fullset_feasible": true
+     },
+     "no_singleton_fullset_feasible": false,
+     "robust_minus_oracle_gap": -5.551115123125783e-17
+    },
+    "0.05": {
+     "unconstrained": 1.0000000000000002,
+     "singleton_rets": [
+      1.0000000000000002,
+      0.499359208456105
+     ],
+     "singleton_worst": [
+      0.22653157467446328,
+      0.05
+     ],
+     "robust_ret": 0.49935920845610526,
+     "robust_feasible": true,
+     "pairwise": {},
+     "nu_pi": 0.004542644752816972,
+     "oracle_singleton": {
+      "k": 1,
+      "ret": 0.499359208456105,
+      "worst": 0.05,
+      "fullset_feasible": true
+     },
+     "no_singleton_fullset_feasible": false,
+     "robust_minus_oracle_gap": 2.7755575615628914e-16
+    }
+   }
+  }
+ ],
+ "distinct_geometries": [
+  "L3-caps2-1",
+  "L3-caps5-1",
+  "L3-caps8-1"
+ ],
+ "primary_endpoint": {
+  "n_distinct_geometries": 3,
+  "d_star": 0.01,
+  "n_instances": 17,
+  "frac_no_singleton_fullset_feasible": 0.29411764705882354,
+  "n_with_feasible_oracle": 12,
+  "oracle_gap_positive_frac": 0.0,
+  "oracle_gap_mean": -1.1102230246251565e-16,
+  "oracle_gap_median": -1.1102230246251565e-16,
+  "nu_pi_mean": 0.008491057065114658,
+  "nu_pi_positive_frac": 1.0
+ }
+}

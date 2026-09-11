@@ -1,0 +1,16 @@
+{
+  "id": "task_026",
+  "question": "Who proposed continental drift and when?",
+  "source_docs": [
+    "plate_tectonics.txt"
+  ],
+  "rubric": [
+    [
+      "wegener"
+    ],
+    [
+      "1912"
+    ]
+  ],
+  "reference": "Alfred Wegener in 1912."
+}

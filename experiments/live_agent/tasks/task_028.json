@@ -1,0 +1,20 @@
+{
+  "id": "task_028",
+  "question": "Who invented the World Wide Web and where?",
+  "source_docs": [
+    "internet_history.txt"
+  ],
+  "rubric": [
+    [
+      "berners-lee",
+      "berners"
+    ],
+    [
+      "cern"
+    ],
+    [
+      "1989"
+    ]
+  ],
+  "reference": "Tim Berners-Lee at CERN in 1989."
+}

@@ -1,0 +1,83 @@
+{
+ "n_units": 4390,
+ "g0": {
+  "n": 315,
+  "faithful": 173,
+  "structural": 128,
+  "representational": 14,
+  "reasons": {
+   "arith_vector": 98,
+   "setop_and": 27,
+   "no_comparison": 23,
+   "nested_comparison": 21,
+   "agg_nested": 9,
+   "setop_or": 7,
+   "fn_avg_over_time": 4,
+   "fn_max_over_time": 3,
+   "fn_changes": 2,
+   "threshold_expr_vector": 2,
+   "agg_param": 2,
+   "fn_last_over_time": 1,
+   "threshold_const_expr": 1,
+   "fn_stddev_over_time": 1,
+   "subquery": 1,
+   "fn_delta": 1,
+   "fn_min_over_time": 1,
+   "<unparsed>": 1
+  }
+ },
+ "reference_class": {
+  "n": 1196,
+  "faithful": 1049,
+  "structural": 55,
+  "representational": 92,
+  "reasons": {
+   "fn_predict_linear": 92,
+   "agg_param": 53,
+   "arith_vector": 53,
+   "nested_comparison": 53,
+   "threshold_expr_vector": 53,
+   "setop_and": 2
+  }
+ },
+ "headline": {
+  "v11_published": {
+   "covered": 158,
+   "raw_rate": 0.03599088838268793,
+   "faithful": 102,
+   "faithful_rate": 0.023234624145785875,
+   "lossy_structural": 51,
+   "other": 5
+  },
+  "g1_v15": {
+   "covered": 549,
+   "raw_rate": 0.12505694760820046,
+   "faithful": 412,
+   "faithful_rate": 0.0938496583143508,
+   "lossy_structural": 43,
+   "other": 94
+  },
+  "g1_mondrian": {
+   "covered": 563,
+   "raw_rate": 0.12824601366742597,
+   "faithful": 417,
+   "faithful_rate": 0.09498861047835991,
+   "lossy_structural": 51,
+   "other": 95
+  }
+ },
+ "structural_capabilities": [
+  "agg_nested",
+  "agg_param",
+  "arith_vector",
+  "nested_comparison",
+  "no_comparison",
+  "setop_and",
+  "setop_or",
+  "setop_unless",
+  "subquery",
+  "threshold_expr_vector",
+  "unary"
+ ],
+ "root_cause": "saorl/benchmark_sg/parse.py:parse_prom_expr takes the first LHS metric by regex and does not reject binary arithmetic between vector operands"
+}

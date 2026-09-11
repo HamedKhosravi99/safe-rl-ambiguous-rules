@@ -1,0 +1,87 @@
+{
+  "created": "20260729-041201",
+  "device": "cuda",
+  "tasks": [
+    "OfflineBallCircle-v0"
+  ],
+  "learners": [
+    "cdt"
+  ],
+  "seeds": [
+    19
+  ],
+  "U": [
+    10,
+    20,
+    40
+  ],
+  "c_single": 40,
+  "c_saorl": 10,
+  "update_steps": 100000,
+  "runs": [
+    {
+      "raw_return": 755.3771597589565,
+      "raw_cost": 40.6,
+      "ep_length": 200.0,
+      "episode_len": 200,
+      "update_steps": 100000,
+      "eval_episodes": 20,
+      "max_epi_r": 881.46337890625,
+      "min_epi_r": 0.38312244415283203,
+      "train_sec": 8365.6,
+      "target_return": 800.0,
+      "target_cost": 40,
+      "normalized_reward": 0.8568958750096355,
+      "normalized_cost_per_reading": {
+        "10": 4.0600000000000005,
+        "20": 2.0300000000000002,
+        "40": 1.0150000000000001
+      },
+      "worst_retained_normalized_cost": 4.0600000000000005,
+      "satisfies_all_retained": false,
+      "task": "OfflineBallCircle-v0",
+      "learner": "cdt",
+      "learner_long": "CDT",
+      "reading": "single",
+      "seed": 19,
+      "U": [
+        10,
+        20,
+        40
+      ],
+      "status": "ok"
+    },
+    {
+      "raw_return": 646.3774590413211,
+      "raw_cost": 17.15,
+      "ep_length": 200.0,
+      "episode_len": 200,
+      "update_steps": 100000,
+      "eval_episodes": 20,
+      "max_epi_r": 881.46337890625,
+      "min_epi_r": 0.38312244415283203,
+      "train_sec": 8365.6,
+      "target_return": 700.0,
+      "target_cost": 10,
+      "normalized_reward": 0.7331844424605573,
+      "normalized_cost_per_reading": {
+        "10": 1.7149999999999999,
+        "20": 0.8574999999999999,
+        "40": 0.42874999999999996
+      },
+      "worst_retained_normalized_cost": 1.7149999999999999,
+      "satisfies_all_retained": false,
+      "task": "OfflineBallCircle-v0",
+      "learner": "cdt",
+      "learner_long": "CDT",
+      "reading": "saorl",
+      "seed": 19,
+      "U": [
+        10,
+        20,
+        40
+      ],
+      "status": "ok"
+    }
+  ]
+}
