@@ -45,6 +45,8 @@ for n in panel_sizes:
 open(os.path.join(ROOT, "paper", "generated", "gen_finite_panelc.tex"), "w").write("".join(rows))
 c_a = cert_count(0.05, "bernstein", 10 ** 7.5); c_all = cert_count(0.05, "bernstein", 1e10)
 assert c_a == 22 and c_all == 27, (c_a, c_all)
+c_first = cert_count(0.05, "bernstein", min(sizes, key=lambda s: abs(math.log10(s) - 7)))
+assert c_first == 0, c_first   # the first panel size certifies no sufficient reading yet (Appendix D.2 text)
 assert cert_count(0.05, "weissman", 10 ** 7.5) == c_a
 # margins, n*, collapse
 ns = fd["d=0.05|bernstein"]["n_star"]
@@ -67,6 +69,7 @@ ucb = lambda x, m: float(beta_dist.ppf(0.95, x + 1, m - x))
 u_f, u_e = ucb(m_f - g_f, m_f), ucb(m_e - g_f, m_e)
 assert abs(u_f - 0.4227) < 5e-3 and abs(u_e - 0.6923) < 5e-3, (u_f, u_e)
 out += [macro("FdSuffN", len(suff[0.05])), macro("FdNonN", len(nonsuff[0.05])), macro("FdCertA", c_a), macro("FdNa", fmt_n(10 ** 7.5)),
+        macro("FdCertFirst", c_first), macro("FdNfirst", fmt_n(1e7)),
         macro("FdNall", fmt_n(1e10)), macro("FdFalse", total_false), macro("FdNonTotal", f"{total_non:,}".replace(",", "{,}")),
         macro("FdSizes", len(sizes)), macro("FdCollapseLo", f"{lo/1e4:.1f}"), macro("FdCollapseHi", f"{hi/1e4:.1f}"),
         macro("FdCollapseRatio", f"{hi/lo:.1f}"), macro("FdMarginLo", f"{min(mg):.4f}"), macro("FdMarginHi", f"{max(mg):.4f}"),

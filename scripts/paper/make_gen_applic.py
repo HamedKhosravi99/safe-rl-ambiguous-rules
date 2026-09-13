@@ -86,6 +86,14 @@ for K in Ks:
     rows.append(f"{lab} & {pct(res['P1'][K][0])} & {pct(res['P1'][K][1])} & {pct(res['P2'][K][0])} & {pct(res['P2'][K][1])} \\\\\n")
 tables["gen_artemis_recall_table.tex"] = "".join(rows)
 macro("ArRecOne", pct(res["P2"][1][0])); macro("ArRecTen", pct(res["P2"][10][0])); macro("ArRecAll", pct(res["P2"][None][0]))
+# generation term of the deployment theorem on the union pool: any-plausible coverage by candidate budget K, the number of
+# generation misses among the 182 units, and a one-sided 95% Clopper-Pearson upper confidence bound on the miss probability
+from scipy.stats import beta as _beta
+_m = res["P2"][None][2]; _g = int(round(_m * (1 - res["P2"][None][1])))
+assert _m == 182 and abs(_m * (1 - res["P2"][None][1]) - _g) < 1e-6, (_m, res["P2"][None][1])
+assert res["P2"][1][1] < res["P2"][10][1] < res["P2"][None][1], "coverage must rise with the candidate budget; text must change"
+macro("ArKOneAny", pct(res["P2"][1][1])); macro("ArKTenAny", pct(res["P2"][10][1])); macro("ArGenMisses", _g)
+macro("ArDgenUcb", f"{100 * _beta.ppf(0.95, _g + 1, _m - _g):.1f}\\%")
 macro("ArAnyOne", pct(res["P2"][1][1])); macro("ArAnyTen", pct(res["P2"][10][1])); macro("ArAnyAll", pct(res["P2"][None][1]))
 macro("ArPtwoN", res["P2"][None][2]); macro("ArPoneN", res["P1"][None][2])
 # ---- margin law from the finite-data run ----

@@ -1,9 +1,10 @@
 # Safe RL under ambiguous written rules — code, archived results, and paper generators
 
-Code and data behind *Ambiguity Relevance for Reinforcement Learning Over Written Rules (ARROW)*.
-Every number, table, and figure in the paper is produced by a script in this repository from an
-archived result file under `results/`; `scripts/reproduce_paper.py` regenerates all of them and
-checks them byte-for-byte against the fragments compiled into the submitted PDF.
+Code and data behind *When Is One Reading Enough? Decision-Relevant Ambiguity in Constrained
+Reinforcement Learning* (ARROW). Every number, table, and figure in the paper is produced by a
+script in this repository from an archived result file under `results/` or `experiments/`;
+`scripts/reproduce_paper.py` regenerates all of them and checks them byte-for-byte against the
+fragments compiled into the submitted PDF.
 
 ## Repository layout
 
@@ -14,32 +15,39 @@ checks them byte-for-byte against the fragments compiled into the submitted PDF.
 │   │   │                      #   benchmark_sg/control_mdp.py, control_suite.py), the ARROW decision
 │   │   │                      #   (benchmark_sg/policy_sufficiency.py), SAFE-KEEP (benchmark_sg/safe_keep.py),
 │   │   │                      #   the certified fixed-data planner (benchmark_sg/certified_protect.py),
-│   │   │                      #   clarification studies (query_loop.py, safe_collapse.py), rule parsing and
+│   │   │                      #   clarification studies (query_loop.py, safe_collapse.py), the agent-service
+│   │   │                      #   domain and its learners (benchmark_sg/scope_agent*.py), rule parsing and
 │   │   │                      #   corpus tooling (parse.py, candidates.py, fetch.py), learning arms
 │   │   │                      #   (experiments.py, budget_rl.py, cmapss*.py) and every experiment driver
 │   │   └── benchmark_sg/
 │   └── corset_e2e/            # open-domain generation pipeline: candidate generation, calibration,
-│                              #   coverage analyses, the ARTEMIS external study
+│                              #   coverage analyses, the ARTEMIS external study (external/artemis_*.py)
 ├── experiments/
-│   ├── live_agent/            # the tool-using agent under a published rate limit (Appendix E), with logs
-│   ├── theory_extension/      # finite-data certificate experiment on the 28 compiled rules
+│   ├── live_agent/            # the tool-using agent under a published rate limit (Table 10), with logs
+│   ├── theory_extension/      # offline certificates on the 28 compiled rules: real_rules_experiment.py
+│   │                          #   (archived generic certificate) and certificate_v53.py (registered V53 study:
+│   │                          #   generic uniform, occupancy-weighted and robust-dual certificates on identical
+│   │                          #   draws, budget tightening, decision-information radius)
 │   └── dsrl_learners/         # wrappers that ran the published offline safe-RL learners (results/dsrl/)
 ├── scripts/
-│   ├── paper/                 # make_gen_*.py, make_figs_*.py: archived results -> LaTeX fragments and figures
+│   ├── paper/                 # make_gen_*.py, make_fig*.py: archived results -> LaTeX fragments and figures
 │   └── reproduce_paper.py     # runs them all in dependency order and diffs against paper/reference/
 ├── results/                   # archived experiment outputs read by the generators
 │   ├── e2e/                   #   exact decision suites, clarification, class ladder, coverage, ARTEMIS,
-│   │                          #   and the pre-registration notes REGISTRATION_V18-V21.md
+│   │                          #   the agent-service archives (scope_agent*.json), and the pre-registration
+│   │                          #   notes REGISTRATION_V17, V18-V21, V23, V50-V53
 │   ├── compiler_audit/        #   compiler-faithfulness audit behind SAFE-KEEP's implication relation
 │   ├── conformal/             #   learning arms (agnostic50, main50, ...), LP certificates (lp/), corpus manifests
 │   ├── dsrl/                  #   published offline safe-RL learners on DSRL/OSRL
-│   ├── safe_keep_final/, final_pipeline/   # SAFE-KEEP on 579 families and the fixed-data pipeline (Table 4)
-│   ├── theory_extension/      #   offline certificate on the 28 rules (Section 5.3)
+│   ├── safe_keep_final/, final_pipeline/   # SAFE-KEEP on 579 families and the fixed-data pipeline (Table 16)
+│   ├── theory_extension/      #   offline certificates on the 28 rules: the archived generic sweep and
+│   │                          #   certificate_v53.json (Tables 12-15, Figure 2)
 │   ├── paper_extra/, corpus_eval/, fragments/
 ├── data/rule_corpora/         # the third-party rule files the pipeline reads, at pinned commits (NOTICE.md inside)
 ├── paper/
 │   ├── reference/             # the exact fragments (generated/) and figures (figure/) compiled into the PDF
 │   ├── generated/, figure/    # outputs of scripts/reproduce_paper.py (ignored by git)
+│   └── supplementary_derivations.tex   # long-form derivations the appendix now states compactly
 ├── tests/                     # unit tests (construction, gridworld, offline learner, C-MAPSS)
 └── requirements.txt
 ```
@@ -66,11 +74,12 @@ Re-running the learning arms additionally needs `torch`, `scikit-learn`, and `pa
 python3 scripts/reproduce_paper.py
 ```
 
-This runs the 30 generators in `scripts/paper/` in dependency order, writes the fragments to
+This runs the 38 generators in `scripts/paper/` in dependency order, writes the fragments to
 `paper/generated/` and the figures to `paper/figure/`, and reports the comparison with
-`paper/reference/`. At release time all 52 fragments are byte-identical and the six PDF
-figures regenerate (PDFs embed a timestamp, so they are not byte-compared). Run a subset with
-`python3 scripts/reproduce_paper.py --only make_gen_v13 make_figs_mpl`.
+`paper/reference/`. At release time all 61 fragments the paper inputs are byte-identical and the
+three PDF figures regenerate (PDFs embed a timestamp, so they are not byte-compared); the whole
+run takes about 20 seconds. Run a subset with
+`python3 scripts/reproduce_paper.py --only make_gen_v53 make_fig_v53`.
 
 ## Re-running experiments
 
@@ -78,114 +87,128 @@ Every archived result lists its driver in the tables below. Drivers run from the
 root with `PYTHONPATH=src`. For example
 
 ```bash
-python3 src/saorl/benchmark_sg/policy_sufficiency.py      # exact ARROW verdicts behind Tables 1 and 2
-python3 src/saorl/benchmark_sg/safe_keep_final_run.py     # SAFE-KEEP on 579 families (Table 4), ~30 s
-python3 src/saorl/benchmark_sg/final_pipeline_run.py      # fixed-data pipeline, 1,600 records (Table 4), ~30 s
-python3 experiments/theory_extension/real_rules_experiment.py   # offline certificate on the 28 rules
+python3 src/saorl/benchmark_sg/policy_sufficiency.py        # exact ARROW verdicts behind Table 2
+python3 src/saorl/benchmark_sg/safe_keep_final_run.py       # SAFE-KEEP on 579 families (Table 16), ~30 s
+python3 src/saorl/benchmark_sg/final_pipeline_run.py        # fixed-data pipeline, 1,600 records (Table 16), ~30 s
+python3 experiments/theory_extension/certificate_v53.py     # three offline certificates on the 28 rules (Tables 12-15), ~4 min
+python3 src/saorl/benchmark_sg/scope_agent.py               # exact surface of the agent-service family (Table 3, Tables 17-18)
+python3 src/corset_e2e/external/artemis_per_method.py       # every archived ARTEMIS method on its own samples (Table 4, Table 23)
 ```
 
-The exact-LP experiments take seconds to minutes. The learning arms (`src/saorl/experiments.py`,
-50 seeds per cell) and the DSRL wrappers take hours and need the `learners` extra; the C-MAPSS
-replay needs the public NASA C-MAPSS files in `data/cmapss/` (not redistributed). The live agent
+The exact-LP experiments take seconds to minutes. The learning arms (`src/saorl/experiments.py`
+and `src/saorl/benchmark_sg/scope_agent_learn.py`, `scope_agent_native.py`, `scope_agent_check.py`)
+and the DSRL wrappers take hours and need the `learners` extra; the C-MAPSS replay needs the
+public NASA C-MAPSS files in `data/cmapss/` (not redistributed). The live agent
 (`experiments/live_agent/`) bills a metered API and is archived rather than meant to be re-run.
 
 ## Map: main-text tables and figures → code
 
-| Display | Fragment(s) compiled into the paper | Generator | Archived data | Experiment driver that produced the data |
-|---|---|---|---|---|
-| Table 1 (22 monitoring rules, tied optima) | `gen_v28.tex` (rows), `gen_v13.tex` (the 22 count) | `scripts/paper/make_gen_v28.py`, `make_gen_v13.py` | `results/e2e/safe_face_select.json`, `results/e2e/policy_sufficiency.json` | `src/saorl/benchmark_sg/safe_face_select.py` (default optimum, 100 random tie-breaks, ARROW's counterexample, full-set optimum), `src/saorl/benchmark_sg/policy_sufficiency.py` |
-| Table 2 (28 rules, value test vs ARROW by budget) | `gen_v13.tex` | `scripts/paper/make_gen_v13.py` | `results/e2e/policy_sufficiency.json`, `results/e2e/face_live.json` | `src/saorl/benchmark_sg/policy_sufficiency.py`, `experiments/live_agent/face_live.py` |
-| Table 3 panel A (violation rates, four domains) | `gen_e5_side.tex` (joined by `make_gen_e5_side.py` from `gen_learn_table.tex`) | `scripts/paper/make_gen_revision.py` | `results/conformal/lp/deploy_certificate.json`, `shadow_price.json`, `certificate_audit.json` | `src/saorl/deploy_certificate.py`, `src/saorl/shadow_price.py`, `src/saorl/certificate_audit.py` (learning arms from `src/saorl/experiments.py`) |
-| Table 3 panel B (four constraint mechanisms) | `gen_e5_side.tex` (from `gen_e5b.tex` ← `gen_agnostic.tex`) | `scripts/paper/make_gen_e5b.py`, `scripts/paper/make_corset_tables.py` | `results/conformal/agnostic50/experiments_*.json`, `results/conformal/main50/experiments_*.json` | `src/saorl/experiments.py` (BCQ-FQI, CQL, PID-Lagrangian, CPQ arms) |
-| Figure 1 panel A (safe stopping vs identification) | `fig_e3_questions.pdf` | `scripts/paper/make_figs_mpl.py` | `results/e2e/safe_collapse.json` | `src/saorl/benchmark_sg/safe_collapse.py` |
-| Figure 1 panel B (return recovered by the first question) | `fig_e3_panelb.pdf` | `scripts/paper/make_figs_mpl.py` (reads `gen_query_table.tex` from `make_gen_applic.py`) | `results/e2e/query_loop.json` | `src/saorl/benchmark_sg/query_loop.py` |
-| Table 4 (SAFE-KEEP on 579 families) and the fixed-data pipeline numbers in Section 5.3 | `gen_safekeep.tex` | `scripts/paper/make_gen_safekeep.py` | `results/safe_keep_final/safekeep_final.json`, `results/final_pipeline/pipeline_rows.json` | `src/saorl/benchmark_sg/safe_keep_final_run.py`, `src/saorl/benchmark_sg/final_pipeline_run.py` (library: `safe_keep.py`, `certified_protect.py`, `parse.py`, `candidates.py`) |
-| Section 5.3 offline-certificate numbers (15,600 tests, 22/27 and 27/27 certified, slope 1.09, correlation 0.995) | `gen_finite.tex`, `gen_applic.tex` | `scripts/paper/make_gen_finite.py`, `make_gen_applic.py` | `results/theory_extension/real_rules_finite_data.json`, `real_rules_finite_data_records.json`, `real_rules_exact.json` | `experiments/theory_extension/real_rules_experiment.py` |
+Page numbers refer to the submitted PDF.
 
-Numbers quoted in the running text come from the same macro files; the fragment table below
-lists every fragment the paper inputs.
+| Display | Page | What it reports | Generator | Archived data |
+|---|---|---|---|---|
+| **Table 1** | 7 | Experimental roadmap (four questions, evidence, theory link) | hand-written | -- |
+| **Table 2** | 8 | ARROW detects decision-relevant ambiguity beyond the value test | `scripts/paper/make_gen_v13.py` | `results/e2e/face_live.json`, `results/e2e/policy_sufficiency.json` |
+| **Figure 1** | 8 | Decision-focused clarification reaches sufficiency before identification | `scripts/paper/make_figs_mpl.py` (`fig_e3_questions.pdf`) | `results/e2e/safe_collapse.json` |
+| **Table 3** | 8 | Return recovered by ARROW on the sufficient agent-service instances (single-signal learners) | `scripts/paper/make_gen_v50.py` | `results/e2e/scope_agent.json`, `results/e2e/scope_agent_learn.json` |
+| **Table 4** | 9 | Comparison with nine language-to-specification methods on 182 ARTEMIS requirements | `scripts/paper/make_gen_artemis_methods.py`, `scripts/paper/make_gen_artemis.py` | `results/e2e/artemis_per_method.json`, `results/e2e/artemis_external.json` |
 
 ## Map: appendix tables and figures → code
 
-| Display | Label | Fragment(s) / figure file | Generator script |
-|---|---|---|---|
-| Table 5 | `tab:runtime` (Every exact run, re-derived) | `gen_runtime_table.tex` | `scripts/paper/make_gen_revision.py` |
-| Figure 2 | `fig:c1` (Candidate-set scaling of exact Decide) | `fig_c1_scale.pdf`, `gen_revision.tex` | `scripts/paper/make_figs_appendix.py`, `scripts/paper/make_gen_revision.py` |
-| Table 6 | `tab:exact` (What single-reading optimization hides, solved exactly) | `gen_csuite_bind.tex` | `scripts/paper/make_gen_csuite_bind.py` |
-| Table 7 | `tab:thirdcorpus` (Eight further organizations, same pipeline) | `gen_revision.tex`, `gen_third_corpus.tex` | `scripts/paper/make_gen_revision.py` |
-| Table 8 | `tab:sweep` (Threshold sweep of the live crossed pool) | `gen_sweep_table.tex` | `scripts/paper/make_gen_revision.py` |
-| Figure 3 | `fig:d1` (Return recovered by oracle-answered questions) | `fig_d1_query.pdf` | `scripts/paper/make_figs_appendix.py` |
-| Table 9 | `tab:refine` (Safe collapse versus identification by question count) | `gen_v43_table.tex` | `scripts/paper/make_gen_v43.py` |
-| Table 10 | `tab:e4` (Finite-data certification on the 28 compiled rules) | `gen_finite.tex`, `gen_finite_panelc.tex`, `gen_v13.tex` | `scripts/paper/make_gen_finite.py`, `scripts/paper/make_gen_v13.py` |
-| Figure 4 | `fig:marginlaw` (Certification cost follows the margin law) | `fig_margin_scaling.tex` | `scripts/paper/make_fig_margin_scaling.py` |
-| Table 11 | `tab:v48finite` (Finite-sample residue) | `gen_v48_finite.tex` | `scripts/paper/make_gen_v47_51_tables.py` |
-| Table 12 | `tab:agnostic` (The effect is not an artifact of the inner optimizer) | `gen_agnostic.tex` | `scripts/paper/make_corset_tables.py` |
-| Table 13 | `tab:dsrl` (Five published offline-safe-RL learners on DSRL/OSRL) | `gen_dsrl.tex` | `scripts/paper/make_corset_tables.py` |
-| Table 14 | `tab:slack` (A live agent under a published rate limit) | transcribed from `experiments/live_agent/gen_demo.tex`, generated by `experiments/live_agent/make_table.py` from `experiments/live_agent/logs/eval_summary.json` | `experiments/live_agent/make_table.py` |
-| Table 15 | `tab:sweepbudget` (Budget sweep: both arms re-learned at every budget) | `gen_sweep_budget.tex`, `gen_sweep_macros.tex` | `scripts/paper/make_gen_extra.py` |
-| Figure 5 | `fig:e2` (Tail-level sweep: headline policies re-scored) | `fig_e2_tail.pdf`, `gen_sweep_macros.tex` | `scripts/paper/make_figs_appendix.py`, `scripts/paper/make_gen_extra.py` |
-| Table 16 | `tab:e6` (Simple alternatives do not reproduce ARROW) | `gen_revision.tex`, `gen_v14.tex` | `scripts/paper/make_gen_revision.py`, `scripts/paper/make_gen_v14.py` |
-| Table 17 | `tab:baselines` (Practical baselines at the operating budget) | `gen_baseline_table.tex`, `gen_revision.tex` | `scripts/paper/make_gen_revision.py` |
-| Figure 6 | `fig:e1` (Exact price of the pointwise-maximum surrogate) | `fig_e1_surrogate.pdf`, `gen_v47_51.tex` | `scripts/paper/make_figs_appendix.py`, `scripts/paper/make_gen_v47_51.py` |
-| Table 18 | `tab:selfcons` (Majority-voting several translations still commits to one reading) | `gen_selfcons_macros.tex`, `gen_selfcons_table.tex` | `scripts/paper/make_gen_extra.py` |
-| Table 19 | `tab:pipeline-compare` (The sequential pipeline against ARROW) | `gen_v47_51.tex`, `gen_v47_pipeline.tex` | `scripts/paper/make_gen_v47_51.py`, `scripts/paper/make_gen_v47_51_tables.py` |
-| Table 20 | `tab:positioning` (Positioning relative to prior work) | hand-written comparison of prior work (no data) | — |
+| Display | Page | Appendix | What it reports | Generator | Archived data |
+|---|---|---|---|---|---|
+| **Table 5** | 14 | A | Positioning by problem solved, safety input, output and guarantee | hand-written | -- |
+| **Table 6** | 16 | B.1 | Retention and deployment combinations used by the pipeline | hand-written | -- |
+| **Table 7** | 29 | D | Appendix roadmap (question, evidence, theory link, what it establishes) | hand-written; one count from `scripts/paper/make_gen_v52.py` | `results/e2e/scope_agent_check.json` |
+| **Table 8** | 29 | D.1 | What single-reading optimization hides, solved exactly (compiled suite) | `scripts/paper/make_gen_csuite_bind.py` joining fragments of `scripts/paper/make_corset_tables.py` | `results/conformal/benchmark_sg/control_suite.json`, `results/e2e/exact_nonnested.json` |
+| **Table 9** | 30 | D.1 | Cross-organization replication: 465 pools from eight further organizations, value-screen vs ARROW clears at d=0.005 | `scripts/paper/make_gen_revision.py` (`gen_third_corpus_compact.tex`) | `results/e2e/third_corpus.json` |
+| **Table 10** | 30 | D.1 | Live service agent under a published rate limit (50 paired billed sessions per condition) | `scripts/paper/make_gen_live.py` | `experiments/live_agent/logs/eval_summary.json` |
+| **Table 11** | 31 | D.1 | Safe collapse versus identification by question count | `scripts/paper/make_gen_v43.py` | `results/e2e/safe_collapse.json`, `results/e2e/basis_size.json`, `results/e2e/learner_slack.json` |
+| **Table 12** | 31 | D.2 | Three offline certificates on identical chain draws (uniform / occupancy-weighted / robust dual), certified counts and false certificates by log size (V53) | `scripts/paper/make_gen_v53.py` (`gen_v53_table.tex`) | `results/theory_extension/certificate_v53.json` |
+| **Table 13** | 31 | D.2 | Three data scales per sufficient-reading class: n* of each certificate and the information floor kl(1-delta,delta)/I* | `scripts/paper/make_gen_v53.py` (`gen_v53_classes.tex`) | `results/theory_extension/certificate_v53.json` |
+| **Figure 2** | 32 | D.2 | Generic certificate, decision-specific certificate and information floor against 1/kappa^2 | `scripts/paper/make_fig_v53.py` (`fig_v53_scales.pdf`) | `results/theory_extension/certificate_v53.json` |
+| **Table 14** | 32 | D.2 | Smallest certified budget tightening for the hard class, with exact return prices | `scripts/paper/make_gen_v53.py` (`gen_v53_tightening.tex`) | `results/theory_extension/certificate_v53.json` |
+| **Table 15** | 32 | D.2 | Counts from sampled load-chain paths (secondary of V53) | `scripts/paper/make_gen_v53.py` (`gen_v53_secondary.tex`) | `results/theory_extension/certificate_v53.json` |
+| **Table 16** | 33 | D.2 | Safe-Keep audit: reduction, coverage and deployment records | `scripts/paper/make_gen_safekeep.py` | `results/safe_keep_final/safekeep_final.json`, `results/final_pipeline/pipeline_rows.json` |
+| **Figure 3** | 33 | D.3 | Exact price of the pointwise-maximum surrogate by budget | `scripts/paper/make_figs_appendix.py` (`fig_e1_surrogate.pdf`) over `scripts/paper/make_gen_v47_51_tables.py` | `results/e2e/collapse_readout.json` |
+| **Table 17** | 34 | D.3 | Single-signal learners under the union surrogate and the sufficient reading (all instances) | `scripts/paper/make_gen_v50.py` | `results/e2e/scope_agent.json`, `results/e2e/scope_agent_learn.json` |
+| **Table 18** | 34 | D.3 | Per-instance gains of the ARROW-selected reading over the union surrogate (9 sufficient instances, 4 learners) | `scripts/paper/make_gen_v50.py` (`gen_v50_perinst.tex`) | `results/e2e/scope_agent.json`, `results/e2e/scope_agent_learn.json` |
+| **Table 19** | 35 | D.3 | Native multi-constraint learners: K separate constraints versus the sufficient reading | `scripts/paper/make_gen_v51.py` | `results/e2e/scope_agent_native.json` |
+| **Table 20** | 35 | D.3 | Checked deployment on all learned agent-service policies | `scripts/paper/make_gen_v52.py`, `scripts/paper/make_gen_v50.py` | `results/e2e/scope_agent_check.json`, `results/e2e/scope_agent.json` |
+| **Table 21** | 36 | D.3 | Budget sweep on the maintenance domains: both arms re-learned at every budget | `scripts/paper/make_gen_extra.py` | `results/conformal/selfconsistency.json`, `results/e2e/e2e_report_v4.json` |
+| **Table 22** | 37 | D.3 | Portability across five released offline safe-RL learners on DSRL/OSRL (**GPU**: PACE, V100) | `scripts/paper/make_corset_tables.py` (`gen_dsrl.tex`, `gen_dsrl_seedinfo.tex`) | `results/dsrl/` |
+| **Table 23** | 38 | D.4 | Every archived ARTEMIS method on its own samples | `scripts/paper/make_gen_artemis_methods.py` | `results/e2e/artemis_per_method.json` |
+| **Table 24** | 38 | D.4 | Expert-plausible readings preserved (union pool, 190 samples) | `scripts/paper/make_gen_artemis.py` | `results/e2e/artemis_external.json` |
+| **Table 25** | 38 | D.4 | Simple alternatives address different parts of the problem | `scripts/paper/make_gen_revision.py`, `scripts/paper/make_gen_v14.py` | `results/e2e/baseline_table.json`, `results/e2e/face_ladder.json` |
+
+Table 22 is the one GPU result (five released offline safe-RL learners on DSRL/OSRL, run on V100s
+through the wrappers in `experiments/dsrl_learners/`); everything else was produced on CPU.
 
 ## Every LaTeX fragment the paper inputs
 
 | Fragment | Generator | Archived data read |
 |---|---|---|
-| `gen_agnostic.tex` | `scripts/paper/make_corset_tables.py` | `results/corpus_eval/` `bot_augmented_report.json`, `test_report_openai.json`; `paper/` `corset_iclr_appendix_short.tex`; `results/conformal/agnostic50/` `experiments_20260724-004227.json` … |
-| `gen_applic.tex` | `scripts/paper/make_gen_applic.py` | `experiments/theory_extension/` `real_rules_finite_data.json`, `real_rules_finite_data_records.json`; `results/conformal/lp/` `evaluator_scale_50k.json`, `exposure_ceiling.json`; `results/e2e/` `artemis_units.json`, `query_loop.json` |
+| `gen_applic.tex` | `scripts/paper/make_gen_applic.py` | `results/conformal/lp/` `evaluator_scale_50k.json`, `exposure_ceiling.json`; `results/e2e/` `artemis_units.json`, `query_loop.json`; `results/theory_extension/` `real_rules_finite_data.json`, `real_rules_finite_data_records.json` |
 | `gen_artemis.tex` | `scripts/paper/make_gen_artemis.py` | `results/e2e/` `artemis_external.json`, `natural2ctl_external.json` |
-| `gen_avail.tex` | `scripts/paper/make_gen_avail.py` | `results/corpus_eval/` `test_report_openai.json`; `results/conformal/e0/` `e0_report.json`; `results/conformal/lp/` `certified_at_scale.json`, `certified_at_scale_d05.json` … |
-| `gen_baseline_table.tex` | `scripts/paper/make_gen_revision.py` | `results/conformal/lp/` (4 files); `results/conformal/` `selfconsistency.json`; `results/e2e/` (8 files) |
-| `gen_certprice.tex` | `scripts/paper/make_corset_tables.py` | `results/corpus_eval/` `bot_augmented_report.json`, `test_report_openai.json`; `paper/` `corset_iclr_appendix_short.tex`; `results/conformal/agnostic50/` `experiments_20260724-004227.json` … |
-| `gen_certscale_caption.tex` | `scripts/paper/make_corset_tables.py` | `results/corpus_eval/` `bot_augmented_report.json`, `test_report_openai.json`; `paper/` `corset_iclr_appendix_short.tex`; `results/conformal/agnostic50/` `experiments_20260724-004227.json` … |
-| `gen_control_suite_caption.tex` | `scripts/paper/make_corset_tables.py` | `results/corpus_eval/` `bot_augmented_report.json`, `test_report_openai.json`; `paper/` `corset_iclr_appendix_short.tex`; `results/conformal/agnostic50/` `experiments_20260724-004227.json` … |
+| `gen_artemis_decide.tex` | `scripts/paper/make_gen_artemis_decide.py` | `results/e2e/` `artemis_decide.json` |
+| `gen_artemis_methods.tex` | `scripts/paper/make_gen_artemis_methods.py` | `results/e2e/` `artemis_per_method.json` |
+| `gen_artemis_methods_app.tex` | `scripts/paper/make_gen_artemis_methods.py` | `results/e2e/` `artemis_per_method.json` |
+| `gen_artemis_methods_table.tex` | `scripts/paper/make_gen_artemis_methods.py` | `results/e2e/` `artemis_per_method.json` |
+| `gen_avail.tex` | `scripts/paper/make_gen_avail.py` | `results/conformal/e0/` `e0_report.json`; `results/conformal/lp/` `certified_at_scale.json`, `certified_at_scale_d05.json`; `results/corpus_eval/` `test_report_openai.json`; … |
+| `gen_certprice.tex` | `scripts/paper/make_corset_tables.py` | `results/conformal/agnostic50/` `experiments_20260724-004227.json`; `results/conformal/benchmark_sg/` `calib_vs_fixed.json`, `control_suite.json`, `matched_size.json` …; `results/conformal/budget50/` `experiments_20260723-235413.json`; … |
+| `gen_certscale_caption.tex` | `scripts/paper/make_corset_tables.py` | `results/conformal/agnostic50/` `experiments_20260724-004227.json`; `results/conformal/benchmark_sg/` `calib_vs_fixed.json`, `control_suite.json`, `matched_size.json` …; `results/conformal/budget50/` `experiments_20260723-235413.json`; … |
+| `gen_control_suite_caption.tex` | `scripts/paper/make_corset_tables.py` | `results/conformal/agnostic50/` `experiments_20260724-004227.json`; `results/conformal/benchmark_sg/` `calib_vs_fixed.json`, `control_suite.json`, `matched_size.json` …; `results/conformal/budget50/` `experiments_20260723-235413.json`; … |
 | `gen_cov.tex` | `scripts/paper/make_gen_cov.py` | `results/e2e/` `coverage_anatomy.json`, `e2e_report_g1.json`, `e2e_report_g1_mondrian.json` |
-| `gen_csuite_bind.tex` | `scripts/paper/make_gen_csuite_bind.py` |  |
-| `gen_dsrl.tex` | `scripts/paper/make_corset_tables.py` | `results/corpus_eval/` `bot_augmented_report.json`, `test_report_openai.json`; `paper/` `corset_iclr_appendix_short.tex`; `results/conformal/agnostic50/` `experiments_20260724-004227.json` … |
-| `gen_dsrl_seedinfo.tex` | `scripts/paper/make_corset_tables.py` | `results/corpus_eval/` `bot_augmented_report.json`, `test_report_openai.json`; `paper/` `corset_iclr_appendix_short.tex`; `results/conformal/agnostic50/` `experiments_20260724-004227.json` … |
-| `gen_dsrlcount.tex` | `scripts/paper/make_corset_tables.py` | `results/corpus_eval/` `bot_augmented_report.json`, `test_report_openai.json`; `paper/` `corset_iclr_appendix_short.tex`; `results/conformal/agnostic50/` `experiments_20260724-004227.json` … |
-| `gen_e0_caption.tex` | `scripts/paper/make_corset_tables.py` | `results/corpus_eval/` `bot_augmented_report.json`, `test_report_openai.json`; `paper/` `corset_iclr_appendix_short.tex`; `results/conformal/agnostic50/` `experiments_20260724-004227.json` … |
-| `gen_e2e.tex` | `scripts/paper/make_gen_e2e.py` | `results/e2e/catalog_v4/` (7 files); `results/e2e/` (7 files) |
-| `gen_e5_prose.tex` | `scripts/paper/make_gen_e5_prose.py` |  |
-| `gen_e5_side.tex` | `scripts/paper/make_gen_e5_side.py` |  |
-| `gen_e9_margin.tex` | `scripts/paper/make_corset_tables.py` | `results/corpus_eval/` `bot_augmented_report.json`, `test_report_openai.json`; `paper/` `corset_iclr_appendix_short.tex`; `results/conformal/agnostic50/` `experiments_20260724-004227.json` … |
-| `gen_extension_caption.tex` | `scripts/paper/make_corset_tables.py` | `results/corpus_eval/` `bot_augmented_report.json`, `test_report_openai.json`; `paper/` `corset_iclr_appendix_short.tex`; `results/conformal/agnostic50/` `experiments_20260724-004227.json` … |
-| `gen_finite.tex` | `scripts/paper/make_gen_finite.py` | `experiments/theory_extension/` `real_rules_exact.json`, `real_rules_finite_data.json`, `real_rules_finite_data_records.json`; `results/e2e/` `control_suite_uncapped.json` |
-| `gen_finite_panelc.tex` | `scripts/paper/make_gen_finite.py` | `experiments/theory_extension/` `real_rules_exact.json`, `real_rules_finite_data.json`, `real_rules_finite_data_records.json`; `results/e2e/` `control_suite_uncapped.json` |
+| `gen_csuite_bind.tex` | `scripts/paper/make_gen_csuite_bind.py` | joins `gen_control_suite.tex` and `gen_bind.tex` (both from `make_corset_tables.py`) |
+| `gen_dsrl.tex` | `scripts/paper/make_corset_tables.py` | `results/conformal/agnostic50/` `experiments_20260724-004227.json`; `results/conformal/benchmark_sg/` `calib_vs_fixed.json`, `control_suite.json`, `matched_size.json` …; `results/conformal/budget50/` `experiments_20260723-235413.json`; … |
+| `gen_dsrl_seedinfo.tex` | `scripts/paper/make_corset_tables.py` | `results/conformal/agnostic50/` `experiments_20260724-004227.json`; `results/conformal/benchmark_sg/` `calib_vs_fixed.json`, `control_suite.json`, `matched_size.json` …; `results/conformal/budget50/` `experiments_20260723-235413.json`; … |
+| `gen_dsrlcount.tex` | `scripts/paper/make_corset_tables.py` | `results/conformal/agnostic50/` `experiments_20260724-004227.json`; `results/conformal/benchmark_sg/` `calib_vs_fixed.json`, `control_suite.json`, `matched_size.json` …; `results/conformal/budget50/` `experiments_20260723-235413.json`; … |
+| `gen_e0_caption.tex` | `scripts/paper/make_corset_tables.py` | `results/conformal/agnostic50/` `experiments_20260724-004227.json`; `results/conformal/benchmark_sg/` `calib_vs_fixed.json`, `control_suite.json`, `matched_size.json` …; `results/conformal/budget50/` `experiments_20260723-235413.json`; … |
+| `gen_e2e.tex` | `scripts/paper/make_gen_e2e.py` | `results/e2e/catalog_v4/` token files; `results/e2e/` `e2e_report_v4.json`, `e2e_test_rows_v4_complete.json` … |
+| `gen_e5_prose.tex` | `scripts/paper/make_gen_e5_prose.py` | reads `gen_learn_table.tex` and `gen_e5_side.tex` (fragments) |
+| `gen_e9_margin.tex` | `scripts/paper/make_corset_tables.py` | `results/conformal/agnostic50/` `experiments_20260724-004227.json`; `results/conformal/benchmark_sg/` `calib_vs_fixed.json`, `control_suite.json`, `matched_size.json` …; `results/conformal/budget50/` `experiments_20260723-235413.json`; … |
+| `gen_extension_caption.tex` | `scripts/paper/make_corset_tables.py` | `results/conformal/agnostic50/` `experiments_20260724-004227.json`; `results/conformal/benchmark_sg/` `calib_vs_fixed.json`, `control_suite.json`, `matched_size.json` …; `results/conformal/budget50/` `experiments_20260723-235413.json`; … |
+| `gen_finite.tex` | `scripts/paper/make_gen_finite.py` | `results/e2e/` `control_suite_uncapped.json`; `results/theory_extension/` `real_rules_exact.json`, `real_rules_finite_data.json`, `real_rules_finite_data_records.json` |
 | `gen_frontier_macros.tex` | `scripts/paper/make_gen_extra.py` | `results/conformal/` `selfconsistency.json`; `results/e2e/` `e2e_report_v4.json`; `results/paper_extra/pareto/` `pareto_risk_20260724-013218.json` |
 | `gen_funnel.tex` | `scripts/paper/make_gen_extra.py` | `results/conformal/` `selfconsistency.json`; `results/e2e/` `e2e_report_v4.json`; `results/paper_extra/pareto/` `pareto_risk_20260724-013218.json` |
 | `gen_ladder.tex` | `scripts/paper/make_gen_ladder.py` | `results/e2e/` `class_ladder.json` |
+| `gen_live.tex` | `scripts/paper/make_gen_live.py` | `experiments/live_agent/logs/` `eval_summary.json` |
+| `gen_live_agent.tex` | `scripts/paper/make_gen_live.py` | `experiments/live_agent/logs/` `eval_summary.json` |
 | `gen_livecross.tex` | `scripts/paper/make_gen_livecross.py` | `results/e2e/` `live_crossing_keep.json`, `live_crossing_keep_stability.json`, `live_crossing_replay.json` |
-| `gen_lmbase_caption.tex` | `scripts/paper/make_corset_tables.py` | `results/corpus_eval/` `bot_augmented_report.json`, `test_report_openai.json`; `paper/` `corset_iclr_appendix_short.tex`; `results/conformal/agnostic50/` `experiments_20260724-004227.json` … |
-| `gen_matchedsize_macros.tex` | `scripts/paper/make_corset_tables.py` | `results/corpus_eval/` `bot_augmented_report.json`, `test_report_openai.json`; `paper/` `corset_iclr_appendix_short.tex`; `results/conformal/agnostic50/` `experiments_20260724-004227.json` … |
-| `gen_prov.tex` | `scripts/paper/make_gen_prov.py` | `results/e2e/` (8 files) |
-| `gen_r6.tex` | `scripts/paper/make_gen_r6.py` | `experiments/live_agent/` `ensemble_scores_runcaps_stability.json`; `results/conformal/benchmark_sg/_src/kyverno-policies/argo-cel/application-field-validation/` `application-field-validation.yaml`; `results/conformal/benchmark_sg/_src/kyverno-policies/argo-cel/application-prevent-default-project/` `application-prevent-default-project.yaml` … |
-| `gen_revision.tex` | `scripts/paper/make_gen_revision.py` | `results/conformal/lp/` (4 files); `results/conformal/` `selfconsistency.json`; `results/e2e/` (8 files) |
-| `gen_runtime_table.tex` | `scripts/paper/make_gen_revision.py` | `results/conformal/lp/` (4 files); `results/conformal/` `selfconsistency.json`; `results/e2e/` (8 files) |
+| `gen_lmbase_caption.tex` | `scripts/paper/make_corset_tables.py` | `results/conformal/agnostic50/` `experiments_20260724-004227.json`; `results/conformal/benchmark_sg/` `calib_vs_fixed.json`, `control_suite.json`, `matched_size.json` …; `results/conformal/budget50/` `experiments_20260723-235413.json`; … |
+| `gen_matchedsize_macros.tex` | `scripts/paper/make_corset_tables.py` | `results/conformal/agnostic50/` `experiments_20260724-004227.json`; `results/conformal/benchmark_sg/` `calib_vs_fixed.json`, `control_suite.json`, `matched_size.json` …; `results/conformal/budget50/` `experiments_20260723-235413.json`; … |
+| `gen_prov.tex` | `scripts/paper/make_gen_prov.py` | `results/e2e/` `downstream_provenance.json`, `g2_test_reach.json`, `gold_ast.json` … |
+| `gen_r6.tex` | `scripts/paper/make_gen_r6.py` | `data/rule_corpora/kyverno-policies/argo-cel/application-field-validation/` `application-field-validation.yaml`; `data/rule_corpora/kyverno-policies/argo-cel/application-prevent-default-project/` `application-prevent-default-project.yaml`; `data/rule_corpora/kyverno-policies/argo-cel/application-prevent-updates-project/` `application-prevent-updates-project.yaml`; … |
+| `gen_revision.tex` | `scripts/paper/make_gen_revision.py` | `results/conformal/lp/` `certificate_audit.json`, `deploy_certificate.json`, `evaluator_scale.json` …; `results/conformal/` `selfconsistency.json`; `results/e2e/` `baseline_table.json`, `decide_runtime.json`, `faithful_recalibration.json` … |
 | `gen_safekeep.tex` | `scripts/paper/make_gen_safekeep.py` | `results/final_pipeline/` `pipeline_rows.json`; `results/safe_keep_final/` `safekeep_final.json` |
-| `gen_screencost.tex` | `scripts/paper/make_corset_tables.py` | `results/corpus_eval/` `bot_augmented_report.json`, `test_report_openai.json`; `paper/` `corset_iclr_appendix_short.tex`; `results/conformal/agnostic50/` `experiments_20260724-004227.json` … |
+| `gen_screencost.tex` | `scripts/paper/make_corset_tables.py` | `results/conformal/agnostic50/` `experiments_20260724-004227.json`; `results/conformal/benchmark_sg/` `calib_vs_fixed.json`, `control_suite.json`, `matched_size.json` …; `results/conformal/budget50/` `experiments_20260723-235413.json`; … |
 | `gen_selfcons_macros.tex` | `scripts/paper/make_gen_extra.py` | `results/conformal/` `selfconsistency.json`; `results/e2e/` `e2e_report_v4.json`; `results/paper_extra/pareto/` `pareto_risk_20260724-013218.json` |
-| `gen_selfcons_table.tex` | `scripts/paper/make_gen_extra.py` | `results/conformal/` `selfconsistency.json`; `results/e2e/` `e2e_report_v4.json`; `results/paper_extra/pareto/` `pareto_risk_20260724-013218.json` |
-| `gen_shadow_caption.tex` | `scripts/paper/make_corset_tables.py` | `results/corpus_eval/` `bot_augmented_report.json`, `test_report_openai.json`; `paper/` `corset_iclr_appendix_short.tex`; `results/conformal/agnostic50/` `experiments_20260724-004227.json` … |
+| `gen_shadow_caption.tex` | `scripts/paper/make_corset_tables.py` | `results/conformal/agnostic50/` `experiments_20260724-004227.json`; `results/conformal/benchmark_sg/` `calib_vs_fixed.json`, `control_suite.json`, `matched_size.json` …; `results/conformal/budget50/` `experiments_20260723-235413.json`; … |
+| `gen_sota.tex` | `scripts/paper/make_gen_sota.py` | `results/e2e/` `baseline_table.json` |
 | `gen_sweep_budget.tex` | `scripts/paper/make_gen_extra.py` | `results/conformal/` `selfconsistency.json`; `results/e2e/` `e2e_report_v4.json`; `results/paper_extra/pareto/` `pareto_risk_20260724-013218.json` |
 | `gen_sweep_macros.tex` | `scripts/paper/make_gen_extra.py` | `results/conformal/` `selfconsistency.json`; `results/e2e/` `e2e_report_v4.json`; `results/paper_extra/pareto/` `pareto_risk_20260724-013218.json` |
-| `gen_sweep_table.tex` | `scripts/paper/make_gen_revision.py` | `results/conformal/lp/` (4 files); `results/conformal/` `selfconsistency.json`; `results/e2e/` (8 files) |
-| `gen_third_corpus.tex` | `scripts/paper/make_gen_revision.py` | `results/conformal/lp/` (4 files); `results/conformal/` `selfconsistency.json`; `results/e2e/` (8 files) |
-| `gen_unified_numbers.tex` | `scripts/paper/make_unified_numbers.py` | `results/conformal/benchmark_sg/` `control_suite.json`, `report.json`, `report_extension.json`; `results/conformal/e0/` `e0_report.json`; `results/conformal/lp/` (4 files) … |
-| `gen_v11b.tex` | `scripts/paper/make_gen_v11b.py` | `results/e2e/` (4 files) |
+| `gen_third_corpus_compact.tex` | `scripts/paper/make_gen_revision.py` | `results/conformal/lp/` `certificate_audit.json`, `deploy_certificate.json`, `evaluator_scale.json` …; `results/conformal/` `selfconsistency.json`; `results/e2e/` `baseline_table.json`, `decide_runtime.json`, `faithful_recalibration.json` … |
+| `gen_unified_numbers.tex` | `scripts/paper/make_unified_numbers.py` | `results/conformal/benchmark_sg/` `control_suite.json`, `report.json`, `report_extension.json`; `results/conformal/e0/` `e0_report.json`; `results/conformal/lp/` `deploy_certificate.json`, `expected_cost_certificate.json`, `shadow_price.json` …; … |
+| `gen_v11b.tex` | `scripts/paper/make_gen_v11b.py` | `results/e2e/` `e2e_report_v11.json`, `ksweep_v11.json`, `pool_axes_witnesses.json` … |
 | `gen_v13.tex` | `scripts/paper/make_gen_v13.py` | `results/e2e/` `face_live.json`, `policy_sufficiency.json` |
 | `gen_v14.tex` | `scripts/paper/make_gen_v14.py` | `results/e2e/` `face_ladder.json` |
 | `gen_v28.tex` | `scripts/paper/make_gen_v28.py` | `results/e2e/` `policy_sufficiency.json`, `safe_face_select.json` |
 | `gen_v41.tex` | `scripts/paper/make_gen_v41.py` | `results/e2e/` `decision_equivalence_readout.json`, `k_scaling.json` |
 | `gen_v43.tex` | `scripts/paper/make_gen_v43.py` | `results/e2e/` `basis_size.json`, `learner_slack.json`, `safe_collapse.json` |
 | `gen_v43_table.tex` | `scripts/paper/make_gen_v43.py` | `results/e2e/` `basis_size.json`, `learner_slack.json`, `safe_collapse.json` |
-| `gen_v47_51.tex` | `scripts/paper/make_gen_v47_51.py` | `results/e2e/` (10 files) |
-| `gen_v47_pipeline.tex` | `scripts/paper/make_gen_v47_51_tables.py` | `results/e2e/` (7 files) |
-| `gen_v48_finite.tex` | `scripts/paper/make_gen_v47_51_tables.py` | `results/e2e/` (7 files) |
+| `gen_v47_51.tex` | `scripts/paper/make_gen_v47_51.py` | `results/e2e/` `answer_noise_check.json`, `collapse_readout.json`, `collapse_utility.json` … |
+| `gen_v50_macros.tex` | `scripts/paper/make_gen_v50.py` | `results/e2e/` `scope_agent.json`, `scope_agent_learn.json` |
+| `gen_v50_perinst.tex` | `scripts/paper/make_gen_v50.py` | `results/e2e/` `scope_agent.json`, `scope_agent_learn.json` |
+| `gen_v50_table_full.tex` | `scripts/paper/make_gen_v50.py` | `results/e2e/` `scope_agent.json`, `scope_agent_learn.json` |
+| `gen_v50_table_main.tex` | `scripts/paper/make_gen_v50.py` | `results/e2e/` `scope_agent.json`, `scope_agent_learn.json` |
+| `gen_v51.tex` | `scripts/paper/make_gen_v51.py` | `results/e2e/` `scope_agent_native.json`, `scope_agent_native_smalln.json` |
+| `gen_v52.tex` | `scripts/paper/make_gen_v52.py` | `results/e2e/` `scope_agent_check.json` |
+| `gen_v52_table_compact.tex` | `scripts/paper/make_gen_v52.py` | `results/e2e/` `scope_agent_check.json` |
+| `gen_v53.tex` | `scripts/paper/make_gen_v53.py` | `results/theory_extension/` `certificate_v53.json`, `real_rules_exact.json` |
+| `gen_v53_classes.tex` | `scripts/paper/make_gen_v53.py` | `results/theory_extension/` `certificate_v53.json`, `real_rules_exact.json` |
+| `gen_v53_secondary.tex` | `scripts/paper/make_gen_v53.py` | `results/theory_extension/` `certificate_v53.json`, `real_rules_exact.json` |
+| `gen_v53_table.tex` | `scripts/paper/make_gen_v53.py` | `results/theory_extension/` `certificate_v53.json`, `real_rules_exact.json` |
+| `gen_v53_tightening.tex` | `scripts/paper/make_gen_v53.py` | `results/theory_extension/` `certificate_v53.json`, `real_rules_exact.json` |
 
 ## Archived results → experiment scripts
 
@@ -239,4 +262,12 @@ lists every fragment the paper inputs.
 | `results/final_pipeline/pipeline_rows.json` | `src/saorl/benchmark_sg/final_pipeline_run.py` (recovered driver, re-run reproduces all 1,600 rows within LP tolerance and yields identical paper macros) |
 | `results/conformal/agnostic50/`, `main50/`, `budget50/`, `cmapss4/`, `risk50/` … | `src/saorl/experiments.py` (learning arms, 50 seeds per cell) |
 | `results/dsrl/**` | `experiments/dsrl_learners/dsrl_sweep.py`, `dsrl_vector.py`, `dsrl_e3.py`, `dsrl_nondominated.py` (wrappers around the published OSRL/DSRL learners; the SLURM job files are omitted) |
+| `scope_agent.json` (exact surface of the agent-service family: candidate geometry, exact optima, sufficient instances) | `src/saorl/benchmark_sg/scope_agent.py` |
+| `scope_agent_learn.json` (four single-signal learners under the union surrogate and the ARROW reading; REGISTRATION_V50) | `src/saorl/benchmark_sg/scope_agent_learn.py` |
+| `scope_agent_native.json`, `scope_agent_native_smalln.json` (native multi-constraint learners, learner-aware tolerance; REGISTRATION_V51) | `src/saorl/benchmark_sg/scope_agent_native.py` |
+| `scope_agent_check.json` (CHECK on every learned agent-service policy; REGISTRATION_V52) | `src/saorl/benchmark_sg/scope_agent_check.py` |
+| `artemis_per_method.json` (every archived ARTEMIS generator on its own samples) | `src/corset_e2e/external/artemis_per_method.py` |
+| `artemis_decide.json` (entailment structure of the retained sets; REGISTRATION_V23) | `src/corset_e2e/external/artemis_decide.py` |
+| `results/theory_extension/certificate_v53.json` (three offline certificates on identical draws, tightening sweep, decision-information radius; REGISTRATION_V53) | `experiments/theory_extension/certificate_v53.py` (about four minutes on one CPU core; `certificate_v53_stdout.txt` is its log) |
+| `experiments/live_agent/logs/eval_summary.json` (50 paired live sessions per condition) | `experiments/live_agent/run_eval.py` (billed API calls; archived, not meant to be re-run) |
 

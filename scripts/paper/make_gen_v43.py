@@ -29,7 +29,7 @@ ties=sum(1 for p in sc.values() if abs(p["summary"]["rules"]["witness"]["safe_by
 hm=mon["rules"]["hec"]; ha=adm["rules"]["hec"]; h4,_=need_safe_at(sc["monitoring_free"],"hec",4)
 M.update(ScAdmSafeOneHec=pct(ha["safe_by_q"][1]),ScMonSafeOneHec=pct(hm["safe_by_q"][1]),ScMonSafeTwoHec=pct(hm["safe_by_q"][2]),ScMonSafeThreeHec=pct(hm["safe_by_q"][3]),
          ScMonSafeFourHec=pct(hm["safe_by_q"][4]),ScMonRelaxedFourHec=pct(hm["relaxed_by_q"][4]),ScMonUnresolvedHec=str(hm["unresolved_by_qmax"]),
-         ScMonBeforeIdHec=f"{hm['safe_before_id']}/{mon['n_not_safe_at_0']}",ScMonNeedSafeFourHec=f"{h4}/{mn}",ScMonIdFourSplit=pct(mon["rules"]["split"]["identified_by_q"][4]),
+         ScMonBeforeIdHec=f"{hm['safe_before_id']}/{mon['n_not_safe_at_0']}",ScMonBeforeIdHecNum=str(hm['safe_before_id']),ScMonNeedSafeFourHec=f"{h4}/{mn}",ScMonIdFourSplit=pct(mon["rules"]["split"]["identified_by_q"][4]),
          ScMonSafeTwoPoa=pct(mon["rules"]["poa"]["safe_by_q"][2]),ScMonSafeThreePoa=pct(mon["rules"]["poa"]["safe_by_q"][3]),
          ScKRegAdm=f"{adm['k_regions_median']:.0f}",ScKRegAdmMax=str(adm["k_regions_max"]),ScKRegMon=f"{mon['k_regions_median']:.0f}",ScKRegMonMax=str(mon["k_regions_max"]),ScKRegComp=f"{ct['k_regions_median']:.0f}")
 rel_only=sum(p["summary"]["rules"][r]["relaxed_before_strict"] for p in sc.values() for r in ("split","poa","witness","hec")); M["ScRelaxedOnly"]=str(rel_only)

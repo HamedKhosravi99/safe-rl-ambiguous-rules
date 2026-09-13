@@ -34,7 +34,7 @@ def f2(x, nd=2):
 
 # ---- V47b: compiled suite at a fixed evaluator budget (equal split)
 pd_ = load("pipeline_compare_delta.json")
-LAB = {"seq_other_reading": "sequential, other reading first", "seq_certified_reading": "sequential, certified reading first", "arrow": "\\method{}"}
+LAB = {"seq_other_reading": "sequential, other reading first", "seq_certified_reading": "sequential, certified reading first", "arrow": "\\method{} (Decide, then one Check)"}
 rows = []
 for d in (0.05, 0.005):
     for n in (2000, 20000):

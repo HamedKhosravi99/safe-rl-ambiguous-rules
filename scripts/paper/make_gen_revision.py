@@ -455,6 +455,15 @@ _rows.append("\\midrule\n")
 _rows.append(f"\\textbf{{Total}} & \\textbf{{{_tot['pools']}}} & \\textbf{{{_tot['elig']}}} & \\textbf{{{_tot['f05']}}} & "
              f"\\textbf{{{_tot['f005']}}} & \\textbf{{{_tot['vc']} / {_tot['fc']}}} & \\textbf{{{_tot['free']}}} \\\\\n")
 write("gen_third_corpus_main.tex", "".join(_rows))
+# compact four-column presentation (Appendix D.1): pools, value-screen clears and face clears at d=0.005
+_compact = [("mimir", "Grafana Mimir"), ("loki", "Grafana Loki"), ("cluster-monitoring-operator", "OpenShift cluster-monitoring-operator"),
+            ("victoriametrics", "VictoriaMetrics"), ("rook", "Rook"), ("ceph", "Ceph"), ("thanos", "Thanos"), ("tidb", "TiDB")]
+_crows = [f"{label} & {_tc['per_repo'][key]['n_pools']} & {_tc['per_repo'][key]['value_clear_0.005']} & {_tc['per_repo'][key]['face_clear_0.005']} \\\\\n"
+          for key, label in _compact]
+assert sum(_tc['per_repo'][k]['value_clear_0.005'] for k, _ in _compact) == _tot["vc"] == 57 and _tot["fc"] == 0
+_crows.append("\\midrule\n")
+_crows.append(f"All eight & {_tot['pools']} & {_tot['vc']} & {_tot['fc']} \\\\\n")
+write("gen_third_corpus_compact.tex", "".join(_crows))
 M += [mac("TcMainPools", _tot["pools"]), mac("TcMainExact", _tot["elig"]), mac("TcMainValue", _tot["vc"]),
       mac("TcMainPolicy", _tot["fc"]), mac("TcMainFiresOp", _tot["f05"]), mac("TcMainFiresTight", _tot["f005"]),
       mac("TcMainFree", _tot["free"]), mac("TcMainOrgs", len(_names))]

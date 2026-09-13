@@ -218,7 +218,7 @@ def fig_e2():
         arrow = np.array([num(x[3]) for x in sub])
         assert np.all(arrow < single), dom
         ax.plot(b, single, "o-", color=CRULE, label="single reading")
-        ax.plot(b, arrow, "s-", color=CREAD, label="ARROW")
+        ax.plot(b, arrow, "s-", color=CREAD, label="full retained set")
         ax.set_yscale("log")
         ax.set_xticks(b)
         ax.set_xlabel(r"tail level $\beta$")

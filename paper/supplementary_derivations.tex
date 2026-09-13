@@ -1,0 +1,1066 @@
+% Supplementary derivations removed from arrow_v3.tex on 2026-09-12 (commit after baf00ff).
+% These blocks are the long-form versions of results that the paper now states compactly or in prose.
+% They compile only with the paper's preamble and macros (\input the paper's generated/ files first).
+
+%==============================================================================
+% Exact optimal face and value-test lemmas (former Lemmas C.1-C.2)
+%==============================================================================
+\subsubsection*{Theorem~\ref{thm:sufficiency}: the sufficiency radius}
+\label{app:proof-eps}\label{app:proof-screen}
+
+Dropping $\varepsilon$ from a symbol means $\varepsilon=0$ throughout the appendix:
+$F_\psi(d)=F^0_\psi(d)$ is the exact optimal face and
+$\Gamma_\psi(d)=\Gamma^0_\psi(\Uc,d)$ the exact margin. Write
+$W_\psi(\Uc;d)=\max_{\phi\in\Uc\setminus\{\psi\}}\ \sup_{\pi\in F_\psi(d)}\Jc{\phi}(\pi)$
+for the worst competing cost over that face.
+
+\begin{lemma}[Exact optimal face]
+\label{prop:exactface}
+Suppose $V_\psi(d)$, $V_{\Uc}(d)$ and that supremum are
+attained. For any $\psi\in\Uc$, the following are equivalent:
+(i) every policy optimal under $\psi$ is safe under the full retained set,
+$F_\psi(d)\subseteq\Pi_{\Uc}(d)$;
+(ii) optimizing under $\psi$ and under $\Uc$ gives the same set of optimal
+policies, $F_\psi(d)=F_{\Uc}(d)$;
+(iii) the worst competing cost over the entire optimal set of $\psi$ is
+within budget, $W_\psi(\Uc;d)\le d$.
+Each implies $V_\psi(d)=V_{\Uc}(d)$; equality of optimal values alone
+implies none of them.
+\end{lemma}
+
+\begin{proof}
+\emph{(i)$\Leftrightarrow$(iii).}
+\begin{align*}
+\text{(i) holds}\ &\iff\ \Jc{\phi}(\pi)\le d\ \ \forall\pi\in F_\psi(d),\ \forall\phi\in\Uc
+   \why{definition of $\Pi_{\Uc}(d)$}\\
+   &\iff\ \sup_{\pi\in F_\psi(d)}\Jc{\phi}(\pi)\le d\ \ \forall\phi\ne\psi
+   \why{a sup is $\le d$ iff every member is}\\
+   &\iff\ W_\psi(\Uc;d)\le d
+   \why{definition of $W_\psi$}
+\end{align*}
+
+\emph{(i)$\Rightarrow$(ii).} Pick any $\pi^\star\in F_\psi(d)$, nonempty by
+attainment.
+\begin{align*}
+\pi^\star\ &\in\ \Pi_{\Uc}(d) \why{(i)}\\
+V_{\Uc}(d)\ &\ge\ \Jr(\pi^\star)\ =\ V_\psi(d)
+   \why{$\pi^\star$ competes in the full-set program}\\
+V_\psi(d)\ &\ge\ V_{\Uc}(d) \why{$\Pi_{\Uc}(d)\subseteq\Pi_\psi(d)$}\\
+V_\psi(d)\ &=\ V_{\Uc}(d) \why{the two inequalities}\\
+F_\psi(d)\ &\subseteq\ F_{\Uc}(d)
+   \why{$\Uc$-feasible with $\Jr=V_{\Uc}(d)$}\\
+F_{\Uc}(d)\ &\subseteq\ F_\psi(d)
+   \why{$\psi$-feasible with $\Jr=V_\psi(d)$}
+\end{align*}
+so $F_\psi(d)=F_{\Uc}(d)$, which is (ii). \emph{(ii)$\Rightarrow$(i)} because
+$F_\psi(d)=F_{\Uc}(d)\subseteq\Pi_{\Uc}(d)$. Value equality was derived en route.
+
+\emph{The converse fails.} Three actions, $r(a)=r(b)=1$, $r(c)=0$, $d=0$,
+$\psi$ admitting all three and $\phi$ excluding $b$:
+\begin{align*}
+V_\psi\ &=\ V_{\{\psi,\phi\}}\ =\ 1 \why{$a$ optimal, admitted by both}\\
+F_\psi\ &=\ \{a,b\}\ \ne\ \{a\}\ =\ F_{\{\psi,\phi\}}
+   \why{$b$ is $\psi$-optimal, $\phi$-infeasible}
+\end{align*}
+value-sufficient, not policy-sufficient. The $\varepsilon$-optimal face is
+treated in Appendix~\ref{app:proof-eps}.
+\end{proof}
+
+\noindent Sufficiency is not monotone in the policy class: with actions $a,b,c,z$,
+rewards $2,2,1,3$, $d=0$, $\psi_1$ admitting $\{a,c,z\}$ and $\psi_2$ admitting
+$\{b,c,z\}$, the classes $\{c\}\subset\{a,b,c\}\subset\{a,b,c,z\}$ give a sufficient
+reading, then none ($F_{\psi_1}=\{a\}$, $F_{\psi_2}=\{b\}$, $F_U=\{c\}$), then both again
+($F=\{z\}$), the ladder of Appendix~\ref{app:ladder} in miniature.
+
+Equal optimal values are necessary but not sufficient for one reading to replace the set;
+the necessary half is the existence statement the value pre-screen computes. Call
+$\psi\in\Uc$ \emph{value-sufficient at budget $d$} when some optimal policy under $\psi$
+alone is feasible for every retained reading:
+\begin{equation}
+\exists\,\pi^\star_\psi\in\arg\max_{\pi\in\Pi:\,\Jc{\psi}(\pi)\le d}\Jr(\pi)
+\quad\text{with}\quad
+\max_{\phi\in\Uc}\ \Jc{\phi}(\pi^\star_\psi)\;\le\;d .
+\label{eq:sufficient}
+\end{equation}
+
+\begin{lemma}[Value sufficiency is a value test]
+\label{prop:tiesafe}
+Suppose the optima are attained. Some $\psi\in\Uc$ satisfies
+\eqref{eq:sufficient} if and only if
+\begin{equation}
+\min_{\psi\in\Uc}\ \big[V_\psi(d)-V_{\Uc}(d)\big]\;=\;0 ,
+\label{eq:screen}
+\end{equation}
+a function of optimal values only, so no solver's choice among tied optima
+changes its verdict. Equivalently, $V_\psi(d)=V_{\Uc}(d)$ holds if and
+only if at least one policy of $F_\psi(d)$ also lies in $\Pi_{\Uc}(d)$.
+\end{lemma}
+
+\begin{proof}
+Throughout, $\Pi_{\Uc}(d)\subseteq\Pi_\psi(d)$ for every $\psi\in\Uc$,
+because the left side intersects one more family of constraints; taking
+maxima of $\Jr$ over the two sets gives $V_\psi(d)\ge V_{\Uc}(d)$. Call
+this the \emph{containment}.
+
+\emph{($\Leftarrow$) Sufficiency implies a zero screen.} Let $\pi$ be
+$\psi$-optimal and feasible for all of $\Uc$, i.e.\ \eqref{eq:sufficient}.
+\begin{align*}
+\pi\ &\in\ \Pi_{\Uc}(d) \why{$\pi$ feasible for every reading}\\
+V_{\Uc}(d)\ &\ge\ \Jr(\pi)\ =\ V_\psi(d)
+   \why{$\pi$ competes in the full-set program; $\pi$ is $\psi$-optimal}\\
+V_\psi(d)\ &\ge\ V_{\Uc}(d) \why{containment}\\
+V_\psi(d)-V_{\Uc}(d)\ &=\ 0
+   \why{the two inequalities}\\
+\min_{\phi\in\Uc}\big[V_\phi(d)-V_{\Uc}(d)\big]\ &=\ 0
+   \why{min of nonnegative terms, attained}
+\end{align*}
+
+\emph{($\Rightarrow$) A zero screen implies sufficiency.} Let $\psi$ attain
+the minimum and let $\pi^\star$ attain $V_{\Uc}(d)$, which exists because
+the occupancy polytope is compact and the feasible set nonempty.
+\begin{align*}
+V_\psi(d)\ &=\ V_{\Uc}(d) \why{$\psi$ attains a zero screen}\\
+\pi^\star\ &\in\ \Pi_{\Uc}(d)\ \subseteq\ \Pi_\psi(d)
+   \why{containment}\\
+\Jr(\pi^\star)\ &=\ V_{\Uc}(d)\ =\ V_\psi(d)
+   \why{$\pi^\star$ is full-set optimal; line above}\\
+\pi^\star\ &\in\ F_\psi(d)\cap\Pi_{\Uc}(d)
+   \why{$\psi$-optimal and $\Uc$-feasible}
+\end{align*}
+so $\pi^\star$ witnesses \eqref{eq:sufficient}.
+
+\emph{Tie-safety.} The screen reads only $V_\psi(d)$ and $V_{\Uc}(d)$, which
+are optimal \emph{values}; these are unique even when optimal policies are
+not, so no solver's choice among tied optima changes the verdict.
+\end{proof}
+
+\noindent A solver returns one point of the optimal face, which may contain both $\Uc$-feasible
+and $\Uc$-infeasible points, so testing the returned point is not tie-safe; the value form is,
+a cleared screen licenses only equality of optimal values, and Theorem~\ref{thm:deploy} checks
+whatever policy the optimizer returns.
+
+The maximum in $W_\psi$ and \eqref{eq:margin} runs over $\Uc\setminus\{\psi\}$; including
+$\psi$ changes no verdict but would pin the margin at zero whenever the budget binds. We
+write $W^\varepsilon_\psi(\Uc;d)=\Gamma^\varepsilon_\psi(d)+d$ and
+$F^\varepsilon_{\Uc}(d)=\{\pi\in\Pi_{\Uc}(d):\Jr(\pi)\ge V_{\Uc}(d)-\varepsilon\}$. Since the
+faces grow with $\varepsilon$, $\Gamma^\varepsilon_\psi(C,d)$ is nondecreasing in
+$\varepsilon$; part (a) of the theorem identifies the right end of the sufficient interval as
+the radius $\varepsilon^\star_\psi(C,d)$ of \eqref{eq:radius}, computed in the occupancy
+representation by Proposition~\ref{prop:radius-lp}.
+
+%==============================================================================
+% Fragility of the exact optimum (former Proposition C.3)
+%==============================================================================
+\subsubsection*{Theorem~\ref{thm:finite}: certification from fixed data}
+\label{app:proof-finite}\label{app:proof-knife}
+
+The \emph{robust-dual certificate} is the offline test of Algorithm~\ref{alg:arrow} and the
+subject of Theorem~\ref{thm:finite}(a)--(b); it robustifies only the pointwise inequalities of
+the dual witness of Proposition~\ref{prop:dual}. The \emph{generic uniform certificate}
+propagates a uniform transition error through every policy value; it is the proof device
+behind the worst-case margin law (Corollary~\ref{cor:margin}) and the comparison arm of
+Appendix~\ref{app:certdeploy}. Part (c) is a change-of-measure bound for every procedure.
+Both certificates carry a tolerance $\varepsilon>0$ because the exact decision is a knife
+edge:
+
+\begin{proposition}[Fragility of the exact optimum]
+\label{prop:knife}
+For every \(\tau>0\) there are two constrained MDPs differing in one transition
+probability by \(\tau\) with opposite sufficiency decisions for the exact optimal
+policy set, and distinguishing them with error probability at most
+\(\delta\in(0,1)\) requires
+\(\Omega\!\left(\log(1/\delta)/\tau^{2}\right)\) transitions. For the same
+construction, once \(\varepsilon\geq\tau\) the minimum margin agrees in both.
+\end{proposition}
+
+\begin{proof}
+Fix $d\in(0,1)$, $c_0\in(d,\min\{2d,1\})$, $q\in(0,1)$ and
+$\tau\in(0,1-q)$. States $s_0,s_R,s_\emptyset$; $\mu_0=\delta_{s_0}$; at
+$s_0$ the actions are $a_1,a_2$, elsewhere a single action;
+$s_R,s_\emptyset$ absorbing; horizon $2$; reward $1$ at $s_R$, else $0$.
+Transitions $P(s_R\mid s_0,a_1)=q$ in both worlds, while
+$P(s_R\mid s_0,a_2)=q$ in $M_A$ and $q+\tau$ in $M_B$.
+Costs $c_\psi(s_0,a_2)=c_\phi(s_0,a_1)=c_0$, zero elsewhere,
+$\Uc=\{\psi,\phi\}$. Parameterise a policy by $\theta=\pi(a_1\mid s_0)$:
+\begin{align*}
+\Jc\psi(\theta)\ &=\ c_0(1-\theta),\qquad \Jc\phi(\theta)\ =\ c_0\theta
+   \why{cost is charged on the other action}\\
+\Jr(\theta)\ &=\ q \ \ (M_A),\qquad q+\tau(1-\theta)\ \ (M_B)
+   \why{only $a_2$'s transition differs}
+\end{align*}
+
+\emph{World $M_A$: the exact margin is positive.}
+\begin{align*}
+F_\psi(d)\ &=\ \Pi_\psi(d)\ =\ \{\theta\ge1-d/c_0\}
+   \why{$\Jr$ constant, so every feasible $\theta$ is optimal}\\
+W_\psi\ &=\ \max_\theta \Jc\phi(\theta)\ =\ \Jc\phi(1)\ =\ c_0
+   \why{$\Jc\phi$ increasing, $\theta=1$ feasible}\\
+\Gamma_\psi\ &=\ c_0-d\ >\ 0,\qquad \Gamma_\phi\ =\ c_0-d
+   \why{definition of $\Gamma$; symmetry}\\
+\min_\psi\Gamma_\psi\ &=\ c_0-d\ >\ 0 \why{$c_0>d$}
+\end{align*}
+
+\emph{World $M_B$: the exact margin is negative.}
+\begin{align*}
+F_\psi(d)\ &=\ \{1-d/c_0\}
+   \why{$\Jr$ strictly decreasing in $\theta$: take the smallest feasible}\\
+W_\psi\ &=\ \Jc\phi(1-d/c_0)\ =\ c_0-d
+   \why{evaluate the competing cost there}\\
+\Gamma_\psi\ &=\ c_0-2d\ <\ 0 \why{$c_0<2d$}\\
+\Gamma_\phi\ &=\ \Jc\psi(0)-d\ =\ c_0-d\ >\ 0
+   \why{$\Pi_\phi(d)=\{\theta\le d/c_0\}$, optimum at $\theta=0$}\\
+\min_\psi\Gamma_\psi\ &=\ c_0-2d\ <\ 0 \why{the two lines}
+\end{align*}
+Neither value depends on $\tau$.
+
+\emph{The $\varepsilon$-face is stable.} In $M_B$,
+$V_\psi(d)=q+\tau d/c_0$.
+\begin{align*}
+\theta\in F^\varepsilon_\psi(d)\ &\iff\ \tau(1-\theta)\ \ge\ \tau d/c_0-\varepsilon
+   \why{definition of the $\varepsilon$-face}\\
+   &\Leftarrow\ \varepsilon\ \ge\ \tau
+   \why{the right side is then $\le0$}\\
+F^\varepsilon_\psi(d)\ &=\ \Pi_\psi(d)\ \Rightarrow\ \Gamma^\varepsilon_\psi=c_0-d
+   \why{as in world $M_A$}
+\end{align*}
+and in $M_A$ the $\varepsilon$-face equals the exact face, so
+$\min_\psi\Gamma^\varepsilon_\psi=c_0-d$ in both worlds for every
+$\varepsilon\ge\tau$.
+
+\emph{Sample complexity.} The worlds differ only in the next state of
+$(s_0,a_2)$: $\mathrm{Ber}(q)$ against $\mathrm{Ber}(q+\tau)$. Let $E$ be the
+event that the procedure outputs \textsc{protect}.
+\begin{align*}
+\Pr_A(E^c)+\Pr_B(E)\ &\ge\ \tfrac12\exp\{-\mathrm{KL}(\Pr_A\Vert\Pr_B)\}
+   \why{Bretagnolle--Huber}\\
+\mathrm{KL}(\Pr_A\Vert\Pr_B)\ &=\ n\,\mathrm{KL}\big(\mathrm{Ber}(q)\Vert\mathrm{Ber}(q+\tau)\big)
+   \why{tensorisation over $n$ transitions}\\
+   &\le\ \frac{n\tau^2}{(q+\tau)(1-q-\tau)}
+   \why{$\mathrm{KL}\le\chi^2$ for Bernoulli}\\
+\Pr_A(E^c)\le\delta,\ \Pr_B(E)\ &\le\ \delta \why{correctness in both worlds}\\
+n\ &\ge\ \frac{(q+\tau)(1-q-\tau)}{\tau^{2}}\ln\frac{1}{4\delta}
+   \why{combine the previous three lines}
+\end{align*}
+\end{proof}
+
+\noindent With $d=0.3$, $c_0=0.5$, $q=0.5$, $\tau=0.01$, the exact
+margins are $+0.2$ and $-0.1$ and the $\varepsilon$-margin is $+0.2$ in both
+worlds for $\varepsilon=0.05$; the LP evaluation reproduces these values.
+
+%==============================================================================
+% Generic uniform certificate: full derivation (former Corollary C.5 proofs, Lemma C.6, Assumption C.7, Lemma C.8)
+%==============================================================================
+\begin{corollary}[Worst-case margin law]
+\label{cor:margin}
+Under Assumption~\ref{ass:reg}, if $\Gamma^\varepsilon_{\psi,P}(C,d)\le-\kappa$ then every
+$Q\in\mathcal B_\psi$ satisfies $\max_z\|P_z-Q_z\|_1\ge\rho(\kappa)$ with
+$\rho(\kappa)=\min\{\kappa/\Cinst,\ \bar b/(2c_{\max}),\ \bar b/(4r_{\max}+2\lambda c_{\max})\}/(L_Hf_{\max})$,
+hence $I^\star_\psi(P)\ge w_{\min}\rho(\kappa)^2/2=\Omega(\kappa^2)$. The generic uniform
+certificate below is sound on its confidence event and certifies once
+$n_{\min}=O\big((|S|+\log(|S||A|N_{\max}/\ddec))/\kappa^2\big)$, and there are instances on
+which every procedure needs $\Omega(\log(1/\ddec)/\kappa^2)$ transitions, so the
+$1/\kappa^2$ dependence is worst-case tight.
+\end{corollary}
+
+\noindent The three claims about the generic certificate are proved below as (i) soundness,
+(ii) completeness and (iii) the lower bound. The distance statement follows from (i) and (ii):
+if some $Q\in\mathcal B_\psi$ had $\max_z\|P_z-Q_z\|_1=t<\rho(\kappa)$, the generic certificate
+run on the model $P$ itself with uniform radius $t$ would certify by (ii), its true model $P$
+having margin $-\kappa$ and error $L_Hf_{\max}t<\kappa/\Cinst$, while (i) applied with $Q$ as
+the true model, which lies within $t$ of $P$, would give $\Gamma^\varepsilon_{\psi,Q}\le0$,
+contradicting $Q\in\mathcal B_\psi$. Pinsker's inequality then gives
+$\sum_zw_z\mathrm{KL}(P_z\|Q_z)\ge w_{\min}\max_z\|P_z-Q_z\|_1^2/2$. In the construction of
+(iii) the two worlds differ in one Bernoulli row by $2\kappa$, so $I^\star_\psi=\Theta(\kappa^2)$
+there and part (c) recovers the same rate.
+
+\paragraph{The generic uniform certificate (proof device).}
+Fix $C\subseteq\Uc$; throughout, every maximum over competing readings
+ranges over $C\setminus\{\psi\}$, and the argument written for $C=\Uc$ is
+unchanged for any $C$.
+
+\paragraph{Data model.} A finite tabular MDP with $S$ states, $A$ actions, unknown
+transitions $P$, known initial distribution, known reward $r\in[0,r_{\max}]$ and known
+compiled costs $c_\phi\in[0,c_{\max}]$ per step, and finite horizon $H$ (the discounted case
+is treated at the end). The log holds at most $N_{\max}$ transitions $(s_i,a_i,s_i')$ from an
+arbitrary, possibly adaptive, behavior policy, subject only to the Markov property. $N(s,a)$
+counts the transitions from $(s,a)$, $\Kc$ is the set of pairs with $N(s,a)\ge n_{\min}$,
+$\Ph$ the empirical model and $\Pih=\{\pi\in\Pi:\pi(a\mid s)=0\ \forall(s,a)\notin\Kc\}$ the
+policies supported on covered pairs, relative to which all quantities are taken; $\Jh f(\pi)$
+is the value of $f$ under $\Ph$, $J_f(\pi)$ under $P$, and
+\[
+\beta_n=\frac{H(H-1)}{2}\sqrt{\frac{2\big(S\ln2+\ln(SAN_{\max}/\ddec)\big)}{n_{\min}}},
+\qquad \beta_c=c_{\max}\beta_n,\quad\beta_r=r_{\max}\beta_n .
+\]
+\begin{lemma}[Uniform model error]
+\label{lem:uniform}
+With probability at least $1-\ddec$, simultaneously for every $\pi\in\Pih$
+and every per-step $f$ with $0\le f\le f_{\max}$,
+$|J_f(\pi)-\Jh f(\pi)|\le f_{\max}\beta_n$.
+\end{lemma}
+\begin{proof}
+\emph{Reduction to independent samples.} Draw in advance, for every pair
+$(s,a)$, an infinite i.i.d.\ sequence
+$X^{s,a}_1,X^{s,a}_2,\dots\sim P(\cdot\mid s,a)$, independent across pairs
+and of the behavior policy's internal randomness, and generate the data by
+sending the $j$-th transition recorded from $(s,a)$ to $X^{s,a}_j$.
+Conditionally on the history before step $i$, the entry consumed at step
+$i$ is a fresh draw from $P(\cdot\mid s_i,a_i)$, so this construction has
+exactly the joint law assumed of the data. Under it,
+$\Ph(\cdot\mid s,a)$ is the empirical distribution of the first $N(s,a)$
+entries of a fixed i.i.d.\ sequence, where $N(s,a)\le N_{\max}$ is random and
+may depend on the entries.
+\emph{Union over counts.} Write $\Ph^{(n)}$ for the empirical distribution
+of the first $n$ entries of a pair's sequence,
+$\Delta_n(s,a):=\|\Ph^{(n)}(\cdot\mid s,a)-P(\cdot\mid s,a)\|_1$, and
+$M:=SAN_{\max}$.
+\begin{align*}
+\Pr\big[\Delta_n(s,a)\ge t_n\big]\ &\le\ (2^S-2)\,e^{-nt_n^2/2}
+   \why{\citet{weissman2003l1}}\\
+t_n\ &:=\ \sqrt{2\big(S\ln2+\ln(M/\ddec)\big)/n}
+   \why{choose the radius}\\
+\Rightarrow\ \Pr\big[\Delta_n(s,a)\ge t_n\big]\ &\le\ 2^S e^{-S\ln2}\cdot\frac{\ddec}{M}\ =\ \frac{\ddec}{M}
+   \why{substitute $t_n$}\\
+\Pr\Big[\bigcup_{s,a}\bigcup_{n\le N_{\max}}\!\!\{\Delta_n\ge t_n\}\Big]\
+   &\le\ M\cdot\frac{\ddec}{M}\ =\ \ddec
+   \why{union over $SA$ pairs and $n\le N_{\max}$}\\
+\Delta_{N(s,a)}(s,a)\ &\le\ t_{N(s,a)}\ \le\ t_{\min}\quad\forall(s,a)\in\Kc
+   \why{$t_n$ decreasing, $N(s,a)\ge n_{\min}$ on $\Kc$}
+\end{align*}
+with $t_{\min}=\sqrt{2(S\ln2+\ln(M/\ddec))/n_{\min}}$, whichever pairs $\Kc$
+turns out to contain.
+
+\emph{Simulation lemma.} On that event fix $\pi\in\Pih$ and $f$, and let
+$V_h$ be the value-to-go under $P$ from step $h$, $V_H\equiv0$.
+\begin{align*}
+J_f(\pi)-\Jh f(\pi)\ &=\ \sum_{h=0}^{H-2}\mathbb E^{\Ph}_\pi\big[(P-\Ph)(\cdot\mid s_h,a_h)\cdot V_{h+1}\big]
+   \why{telescoping over the horizon}\\
+0\ \le\ V_{h+1}\ &\le\ (H-h-1)f_{\max} \why{$f\le f_{\max}$, $H-h-1$ steps left}\\
+\big|(P-\Ph)\cdot V_{h+1}\big|\ &\le\ t_{\min}\,(H-h-1)f_{\max}
+   \why{H\"older, $\ell_1$ against $\ell_\infty$}\\
+\big|J_f(\pi)-\Jh f(\pi)\big|\ &\le\ t_{\min}f_{\max}\sum_{h=0}^{H-2}(H-h-1)
+   \why{sum the previous line}\\
+   &=\ t_{\min}f_{\max}\,\frac{H(H-1)}{2}
+   \why{$\sum_{j=1}^{H-1}j=H(H-1)/2$}
+\end{align*}
+\end{proof}
+
+\noindent The bound does not depend on $|\Uc|$, since the union is over pairs and counts
+and every compiled cost is a known function of the pairs; adaptive collection costs only the
+$\ln N_{\max}$ inside the root.
+
+\paragraph{The certificate.} For $\psi\in\Uc$, budget $d$, tolerance
+$\varepsilon\ge0$ and level $\ddec$:
+(1) $\widehat V^-\gets\widehat V_\psi(d-\beta_c)-\beta_r$, where
+$\widehat V_\psi(b)=\sup\{\Jh r(\pi):\pi\in\Pih,\ \Jh{c_\psi}(\pi)\le b\}$
+(one LP); if infeasible, return \textsc{protect}.
+(2) $\widehat G\gets\{\pi\in\Pih:\ \Jh{c_\psi}(\pi)\le d+\beta_c,\ \Jh r(\pi)\ge\widehat V^--\beta_r-\varepsilon\}$.
+(3) $\widehat W\gets\max_{\phi\ne\psi}\sup_{\pi\in\widehat G}\Jh{c_\phi}(\pi)+\beta_c$
+(one LP per competing reading).
+(4) Certify $\psi$ iff $\widehat W\le d$.
+
+\paragraph{Corollary~\ref{cor:margin}, proof of (i): soundness of the generic certificate.} Work on the event of
+Lemma~\ref{lem:uniform}: $|J_f(\pi)-\Jh f(\pi)|\le\beta_f$ for every
+$\pi\in\Pih$ and every $f\in\{r\}\cup\{c_\phi\}_{\phi\in\Uc}$.
+
+\emph{(a) The reward reference is not optimistic.}
+\begin{align*}
+\Jh{c_\psi}(\pi')\le d-\beta_c\ &\Rightarrow\ \Jc\psi(\pi')\le d
+   \why{Lemma~\ref{lem:uniform} for $c_\psi$}\\
+   &\Rightarrow\ J_r(\pi')\le V_\psi(d)
+   \why{$\pi'$ is feasible for $V_\psi(d)$}\\
+   &\Rightarrow\ \Jh r(\pi')\le V_\psi(d)+\beta_r
+   \why{Lemma~\ref{lem:uniform} for $r$}\\
+\widehat V^-=\widehat V_\psi(d-\beta_c)\ &\le\ V_\psi(d)
+   \why{take the supremum over such $\pi'$}
+\end{align*}
+
+\emph{(b) The true face lies inside the surrogate face.} For
+$\pi\in F^\varepsilon_\psi(d)$,
+\begin{align*}
+\Jh{c_\psi}(\pi)\ &\le\ \Jc\psi(\pi)+\beta_c\ \le\ d+\beta_c
+   \why{$\pi$ is feasible under $\psi$}\\
+\Jh r(\pi)\ &\ge\ J_r(\pi)-\beta_r\ \ge\ V_\psi(d)-\varepsilon-\beta_r
+   \why{$\pi$ is $\varepsilon$-optimal under $\psi$}\\
+   &\ge\ \widehat V^--\varepsilon-\beta_r \why{step (a)}\\
+F^\varepsilon_\psi(d)\ &\subseteq\ \widehat G
+   \why{the two defining inequalities of $\widehat G$}
+\end{align*}
+
+\emph{(c) The reported worst competing cost is not optimistic.} For every
+$\phi\ne\psi$,
+\begin{align*}
+\sup_{\widehat G}\Jh{c_\phi}\ &\ge\ \sup_{F^\varepsilon_\psi(d)}\Jh{c_\phi}
+   \why{step (b): supremum over a larger set}\\
+   &\ge\ \sup_{F^\varepsilon_\psi(d)}\Jc\phi-\beta_c
+   \why{Lemma~\ref{lem:uniform} for $c_\phi$}\\
+\widehat W\ &\ge\ W^\varepsilon_\psi(\Uc;d)
+   \why{maximise over $\phi$, restore the $+\beta_c$}\\
+\widehat W\le d\ &\Rightarrow\ \Gamma^\varepsilon_\psi(d)\le0
+   \why{definition of the margin}\\
+   &\Rightarrow\ F^\varepsilon_\psi(d)\subseteq\Pi_{\Uc}(d)
+   \why{Theorem~\ref{thm:sufficiency}(b)}
+\end{align*}
+The bad event is contained in the complement of the event of
+Lemma~\ref{lem:uniform}, of probability at most $\ddec$. \qed
+
+\noindent \emph{Adaptive reuse.} Lemma~\ref{lem:uniform} is one event, uniform over
+$\Pih$ and over every per-step function, and each offline \textsc{Decide} call is a
+deterministic function of $\Ph$, so soundness holds simultaneously for every clarification
+round without spending a fresh $\ddec$. Failure to certify leaves the decision open.
+
+\begin{assumption}[Regularity]
+\label{ass:reg}
+Fix $\psi$, $d$, $\varepsilon>0$ and $\Pih$, and let
+$\Phi(d',t)=\max_{\phi\ne\psi}\sup\{\Jc\phi(\pi):\pi\in\Pih,\ \Jc\psi(\pi)\le d',\ \Jr(\pi)\ge t\}$,
+so that $W^\varepsilon_\psi(\Uc;d)=\Phi(d,V_\psi(d)-\varepsilon)$. There are
+$\bar b>0$ and $\lambda,\Lambda<\infty$ such that (a) $V_\psi$ is finite and
+$\lambda$-Lipschitz on $[d-\bar b,d]$, and (b) $\Phi$ is finite and
+$\Lambda$-Lipschitz (for $|\Delta d'|+|\Delta t|$) on
+$[d,d+\bar b]\times[V_\psi(d)-\varepsilon-\bar b,\,V_\psi(d)-\varepsilon]$.
+We write $\Cinst=c_{\max}(2+2\Lambda(1+\lambda))+4\Lambda r_{\max}$.
+\end{assumption}
+
+\begin{lemma}[The LP case is regular]
+\label{lem:lpreg}
+In the LP case, if some $\pi_S\in\Pih$ has $\Jc\psi(\pi_S)<d$ and
+$\varepsilon>0$, Assumption~\ref{ass:reg} holds, with $\lambda$ a bound on
+the optimal dual multiplier of the budget constraint on $[d-\bar b,d]$ and
+$\Lambda$ a bound on the $\ell_1$ norm of the optimal dual multipliers of the
+two side constraints of the face LPs on the box.
+\end{lemma}
+\begin{proof}
+Write $\val(b)$ for the optimal value of an LP as a function of the
+right-hand side $b$ of its side constraints, and $D(b)$ for the
+corresponding optimal dual set.
+\begin{align*}
+\val(b)\ &=\ \min_{y\ge0}\ \{b^\top y+\text{const}(y)\}
+   \why{LP duality, strong duality when feasible}\\
+   &\ \text{concave and finite in }b
+   \why{pointwise minimum of affine functions}\\
+\partial\val(b)\ &=\ D(b)
+   \why{superdifferential of an LP value function}\\
+|\val(b_1)-\val(b_2)|\ &\le\ \Big(\sup_{b\in B}\ \sup_{y\in D(b)}\|y\|\Big)\,\|b_1-b_2\|
+   \why{concave with bounded supergradients on $B$}
+\end{align*}
+It therefore suffices to keep the right-hand sides strictly feasible, so that
+Slater's condition bounds $D$ on the relevant window. Let $\pi^\star$ be
+$\tfrac\varepsilon2$-optimal in $\Pi_\psi(d)$.
+\begin{align*}
+\Jc\psi(\pi_S)\ &<\ d \why{hypothesis: a Slater point exists}\\
+\bar b\ &<\ d-\Jc\psi(\pi_S)\ \Rightarrow\ \Jc\psi(\pi_S)<b\ \ \forall b\in[d-\bar b,d]
+   \why{$\pi_S$ strictly feasible throughout: gives (a)}\\
+\pi_\alpha\ &:=\ (1-\alpha)\pi^\star+\alpha\pi_S
+   \why{mix in occupancy space}\\
+\Jc\psi(\pi_\alpha)\ &=\ (1-\alpha)\Jc\psi(\pi^\star)+\alpha\Jc\psi(\pi_S)\ <\ d\ \le\ d'
+   \why{costs are affine in occupancy, $\alpha>0$}\\
+\Jr(\pi_\alpha)\ &\ge\ V_\psi(d)-\tfrac\varepsilon2-2\alpha r_{\max}\ >\ V_\psi(d)-\varepsilon\ \ge\ t
+   \why{take $\alpha<\varepsilon/(4r_{\max})$}
+\end{align*}
+So $\pi_\alpha$ is strictly feasible for every $(d',t)$ in the box of
+Assumption~\ref{ass:reg}(b) once $\bar b$ is small enough; Slater's condition
+bounds the dual optimal sets there, which gives (b) with $\Lambda$ the stated
+$\ell_1$ dual bound and $\lambda$ the budget multiplier bound in (a).
+\end{proof}
+
+\paragraph{Corollary~\ref{cor:margin}, proof of (ii): completeness of the generic certificate.} Suppose
+$W^\varepsilon_\psi(\Uc;d)\le d-\kappa$ and
+$\beta_n\le\min\{\kappa/\Cinst,\ \bar b/(2c_{\max}),\ \bar b/(4r_{\max}+2\lambda c_{\max})\}$;
+since $\beta_n\propto\sqrt{(S\ln2+\ln(SAN_{\max}/\ddec))/n_{\min}}$, this is
+the sample condition of the corollary with $L_H=H(H-1)/2$. Work on the event
+of Lemma~\ref{lem:uniform}.
+
+\emph{The first program is feasible and its value is not too pessimistic.}
+\begin{align*}
+2\beta_c\ \le\ \bar b\ &\Rightarrow\ V_\psi(d-2\beta_c)\ \text{finite}
+   \why{Assumption~\ref{ass:reg}(a)}\\
+   &\Rightarrow\ \exists\,\pi'\in\Pih:\ \Jc\psi(\pi')\le d-2\beta_c
+   \why{a witness of that finite value}\\
+\Jh{c_\psi}(\pi')\ &\le\ \Jc\psi(\pi')+\beta_c\ \le\ d-\beta_c
+   \why{Lemma~\ref{lem:uniform}: the first program is feasible}\\
+\widehat V^-\ \ge\ \Jh r(\pi')\ &\ge\ J_r(\pi')-\beta_r\
+   \Rightarrow\ \widehat V^-\ \ge\ V_\psi(d-2\beta_c)-2\beta_r
+   \why{supremum over all such $\pi'$}
+\end{align*}
+
+\emph{Every surrogate-face policy is nearly on the true face.} For
+$\pi\in\widehat G$,
+\begin{align*}
+\Jc\psi(\pi)\ &\le\ \Jh{c_\psi}(\pi)+\beta_c\ \le\ d+2\beta_c
+   \why{definition of $\widehat G$}\\
+J_r(\pi)\ &\ge\ \Jh r(\pi)-\beta_r\ \ge\ \widehat V^--\varepsilon-2\beta_r
+   \why{definition of $\widehat G$}\\
+   &\ge\ V_\psi(d-2\beta_c)-\varepsilon-4\beta_r
+   \why{previous display}\\
+   &\ge\ V_\psi(d)-\varepsilon-4\beta_r-2\lambda\beta_c
+   \why{$V_\psi$ is $\lambda$-Lipschitz on $[d-\bar b,d]$}
+\end{align*}
+
+\emph{Conclusion.} $\Phi$ is nondecreasing in $d'$, nonincreasing in $t$.
+\begin{align*}
+\widehat W-\beta_c\ &\le\ \max_{\phi\ne\psi}\ \sup_{\widehat G}\Jc\phi+\beta_c
+   \why{Lemma~\ref{lem:uniform} for each $c_\phi$}\\
+   &\le\ \Phi\big(d+2\beta_c,\ V_\psi(d)-\varepsilon-4\beta_r-2\lambda\beta_c\big)+\beta_c
+   \why{previous display and monotonicity of $\Phi$}\\
+\widehat W\ &\le\ \Phi\big(d,\ V_\psi(d)-\varepsilon\big)+\Lambda\big(2\beta_c+4\beta_r+2\lambda\beta_c\big)+2\beta_c
+   \why{$\Lambda$-Lipschitz on the box of (b)}\\
+   &\le\ (d-\kappa)+\Cinst\beta_n
+   \why{hypothesis $W^\varepsilon_\psi\le d-\kappa$; collect constants}\\
+   &\le\ d \why{$\beta_n\le\kappa/\Cinst$}
+\end{align*}
+so step (4) certifies $\psi$. \qed
+
+\paragraph{Corollary~\ref{cor:margin}, proof of (iii): the $1/\kappa^2$ lower bound.} States
+$s_0,s_{\rm good},s_{\rm bad}$, actions $a_1,a_2$ at $s_0$, horizon $2$.
+$a_1$ earns reward $1$ and moves to $s_{\rm bad}$ with probability $p$, else
+to $s_{\rm good}$; $a_2$ earns $1/2$ and moves to $s_{\rm good}$;
+$c_\psi\equiv0$, $c_\phi=1$ at $s_{\rm bad}$. Write $\theta=\pi(a_1\mid s_0)$.
+\begin{align*}
+\Jr(\theta)\ &=\ \theta+\tfrac12(1-\theta)\ =\ \tfrac{1+\theta}{2},\qquad
+   \Jc\phi(\theta)\ =\ p\,\theta
+   \why{expectation over the two actions at $s_0$}\\
+V_\psi(d)\ &=\ \max_\theta\ \Jr(\theta)\ =\ 1
+   \why{$c_\psi\equiv0$, so the budget never binds}\\
+F^\varepsilon_\psi(d)\ &=\ \{\theta:\ \tfrac{1+\theta}{2}\ge1-\varepsilon\}\ =\ \{\theta\ge1-2\varepsilon\}\ \ni\ 1
+   \why{definition of the $\varepsilon$-face, $\varepsilon<1/2$}\\
+\Gamma^\varepsilon_\psi(d)\ &=\ \max_{\theta\in F^\varepsilon_\psi(d)}\Jc\phi(\theta)-d\ =\ p-d
+   \why{$\Jc\phi$ increasing, $\theta=1$ attainable}
+\end{align*}
+Take $p=d-\kappa$ and $p=d+\kappa$ with $\kappa<\min\{d,1-d\}$: the correct
+verdict flips, while the two worlds differ only in the $\mathrm{Ber}(p)$ law
+of the $(s_0,a_1)$ transition.
+\begin{align*}
+\mathrm{KL}\big(\mathrm{Ber}(d-\kappa)\Vert\mathrm{Ber}(d+\kappa)\big)\ &\le\ \frac{(2\kappa)^2}{(d+\kappa)(1-d-\kappa)}
+   \why{$\mathrm{KL}\le\chi^2$ for Bernoulli, gap $2\kappa$}\\
+n\ &\ge\ \frac{(d+\kappa)(1-d-\kappa)}{4\kappa^{2}}\,\ln\frac{1}{4\ddec}
+   \why{Bretagnolle--Huber, as in App.~\ref{app:proof-knife}}
+\end{align*}
+for any procedure with error at most $\ddec$ in both worlds. \qed
+
+\paragraph{The discounted case.} For a discounted model in the normalized
+occupancy convention of Appendix~\ref{app:units}, $J_f(\pi)=(1-\gamma)\mu_0\cdot V^\pi_P$
+with $V^\pi_P\in[f_{\min},f_{\max}]/(1-\gamma)$, and
+$V^\pi_P-V^\pi_{\Ph}=\gamma(I-\gamma P_\pi)^{-1}(P_\pi-\Ph_\pi)V^\pi_{\Ph}$.
+Since each row of $P_\pi-\Ph_\pi$ sums to zero,
+$|(P_\pi-\Ph_\pi)V|_\infty\le t\,\mathrm{span}(V)/2$ when every row has $L_1$
+error at most $t$, and $\|(I-\gamma P_\pi)^{-1}\|_\infty\le1/(1-\gamma)$;
+hence $|J_f(\pi)-\Jh f(\pi)|\le\frac{\gamma}{2(1-\gamma)}\,t\,(f_{\max}-f_{\min})$,
+which is the constant $L_H=\gamma/(2(1-\gamma))$ with $\mathrm{span}(f)$ in
+place of $f_{\max}$; the same centering halves the finite-horizon constant.
+The rest of the argument is unchanged.
+
+\paragraph{What the constants mean.} $\kappa$ is the cost slack of the $\varepsilon$-face, $\lambda$
+the shadow price of the budget, and $\Lambda$ the growth rate of the worst competing cost as the
+face widens, which diverges as $\varepsilon\to0$ near a tie (Proposition~\ref{prop:knife} is the
+limit case).
+
+%==============================================================================
+% Deployment safety: staged lemmas and corollaries (former Lemmas C.9-C.10, Corollaries C.11-C.12)
+%==============================================================================
+\subsubsection*{Theorem~\ref{thm:deploy}: deployment safety}
+\label{app:proof-coverage}\label{app:proof-deploy}
+
+\paragraph{Calibrated retention.} The checked deployment route of Theorem~\ref{thm:deploy}(a) uses one fact about the
+\textsc{Score-Keep} filter. \textsc{Score-Keep} scores
+a generated pool $\Psi_\ell$ with a plausibility score $\sigma(\ell,\psi)$ fixed before
+the deployment rule is seen and retains
+$\Uc=\{\psi\in\Psi_\ell: \sigma(\ell,\psi)\ge\qhat\}$, where $\qhat$ is the
+$m_{\mathrm{sem}}=\lfloor\dsem(n+1)\rfloor$-th smallest score of the governing readings of $n$
+held-out calibration rules \citep{vovk2005conformal,angelopoulos2023conformal};
+with no corpus Keep runs in keep-all mode, $\Uc=\Psi_\ell$.
+
+\begin{lemma}[Retention of the governing reading]
+\label{lem:coverage}
+If the held-out and deployment rules are exchangeable conditionally on
+$\psid\in\Psi_\ell$, then $\Pr[\psid\in\Uc\mid\psid\in\Psi_\ell]\ge1-\dsem$; in
+keep-all mode that conditional probability is one.
+\end{lemma}
+
+\begin{proof}
+Work on the event $\{\psid\in\Psi_\ell\}$. Write $z_i=\sigma(\ell_i,\psid_i)$
+for the score of the $i$-th calibration rule and $z_{n+1}=\sigma(\ell,\psid)$
+for the deployed one, and let $z_{(m)}$ be the $m$-th smallest of
+$z_1,\dots,z_n$, with $m=m_{\mathrm{sem}}=\lfloor\dsem(n+1)\rfloor$.
+\begin{align*}
+(\ell_1,\psid_1),\dots,(\ell,\psid)\ &\text{exchangeable}
+   \why{hypothesis of the lemma}\\
+z_1,\dots,z_{n+1}\ &\text{exchangeable}
+   \why{$\sigma$ fixed before the draw, measurable}\\
+\{\psid\notin\Uc(\ell)\}\ &=\ \{z_{n+1}<\qhat\}
+   \why{the retention rule above}\\
+   &=\ \{z_{n+1}<z_{(m)}\}
+   \why{definition of $\qhat$}\\
+   &\subseteq\ \{R\le m\},\qquad R:=\operatorname{rank}(z_{n+1})
+   \why{at most $m-1$ others fall below}\\
+\Pr[R\le m]\ &=\ \frac{m}{n+1}
+   \why{exchangeability: all ranks equally likely}\\
+   &=\ \frac{\lfloor\dsem(n+1)\rfloor}{n+1}\ \le\ \dsem
+   \why{$\lfloor x\rfloor\le x$}
+\end{align*}
+which is the conditional statement. Ties at the threshold are retained by
+the ``$\ge$'' in the retention rule, which only enlarges $\Uc$ and so
+cannot increase miscoverage. Unconditionally,
+\begin{align*}
+\Pr[\psid\in\Uc(\ell)]\
+ &\ge\ \Pr[\psid\in\Uc(\ell)\mid\psid\in\Psi_\ell]\;\Pr[\psid\in\Psi_\ell]
+ \why{drop the complementary event}\\
+ &\ge\ (1-\dsem)\,\Pr[\psid\in\Psi_\ell]
+ \why{the display above}.
+\end{align*}
+No property of $s$ beyond measurability and being fixed before the draw was
+used.
+\end{proof}
+
+\noindent Validity comes from calibration, not from the score, which need only be fixed before
+the draw; a nontrivial threshold needs $n\ge1/\dsem-1$, and if no candidate clears $\qhat$ then
+$\Uc=\emptyset$ and Algorithm~\ref{alg:pipeline} abstains. $U_T$ denotes the survivors at the
+stopping round, fixed with $\hat\pi$ before the evaluation episodes are drawn. Two events carry
+the theorem:
+\[
+G=\{\psid\in U_0\},
+\qquad
+E=\Big\{\max_{\psi\in U_T}\Jc{\psi}(\hat\pi)\le\mathcal B(\hat\pi,U_T)\Big\},
+\]
+retention of the governing reading and validity of \textsc{Check}'s upper confidence bound
+of Appendix~\ref{app:pipeline}; Lemma~\ref{lem:coverage} gives
+$\Pr[G^c\mid\psid\in\Psi_\ell]\le\dsem$.
+
+\begin{lemma}[Given retention]
+\label{lem:deploycond}
+Under the hypotheses of Theorem~\ref{thm:deploy} and on the event $G$, that is when
+$\psid\in U_0$,
+$\Pr[\textsc{ship}\wedge\Jc{\psid}(\hat\pi)>d]\le\dev$.
+\end{lemma}
+
+\begin{proof}
+\emph{Pathwise reduction to the antichain.} This evaluator antichain is distinct
+from \textsc{Safe-Keep}'s trace-semantic implication relation: \textsc{Check} may use
+raw pointwise dominance as a sufficient reduction for a fixed compiled cost array,
+whereas \textsc{Safe-Keep} is defined before joint control compilation and therefore
+uses implication on valid executable traces (Appendix~\ref{app:safekeep}).
+Write $\psi\preceq\psi'$ when
+$c_\psi(s,a)\le c_{\psi'}(s,a)$ for every state--action pair, and let
+$\mathrm{Max}(U_t)$ be the $\preceq$-maximal survivors.
+\begin{align*}
+Z^\psi=\textstyle\sum_t c_\psi(s_t,a_t)\ &\le\ Z^{\psi'}
+   \quad\text{whenever }\psi\preceq\psi'
+   \why{sum a pointwise inequality along the trajectory}\\
+\max_{\psi\in U_t}Z^\psi\ &=\ \max_{\psi\in\mathrm{Max}(U_t)}Z^\psi
+   \why{$U_t$ finite: each $\psi$ sits below a maximal}\\
+\max_{\psi\in U_t}\Jc{\psi}\ &=\ \max_{\psi\in\mathrm{Max}(U_t)}\Jc{\psi}
+   \why{take expectations of the previous line}
+\end{align*}
+
+\emph{Concentration on the antichain.} Fix $\hat\pi$ and $U_t$ and put
+$w=|\mathrm{Max}(U_t)|$.
+\begin{align*}
+Z^\psi\ &\in\ [0,H],\quad\text{episodes i.i.d.\ under a fixed }\hat\pi
+   \why{$\hat\pi$ frozen before rollout}\\
+r(\delta')\ &:=\ H\sqrt{\log(1/\delta')/(2n)}
+   \why{Hoeffding radius at level $\delta'$}\\
+\Pr\big[\Jc{\psi}(\hat\pi)>\widehat J_\psi+r(\delta')\big]\ &\le\ \delta'
+   \why{Hoeffding, one fixed $\psi$}\\
+\delta'\ &\leftarrow\ \dev/w \why{split the budget over the antichain}\\
+\Pr[E\mid U_t,\hat\pi]\ &\ge\ 1-\dev
+   \why{union bound over $w$ events}
+\end{align*}
+where $E$ is the event that the resulting bound
+$\mathcal B(\hat\pi,U_t)$ on $\max_{\psi\in U_t}\Jc{\psi}(\hat\pi)$ is valid. The
+conditioning is the theorem's hypothesis on the evaluator: its bound is valid at
+level $\dev$ conditional on everything fixed before evaluation, and $U_t$ and
+$\hat\pi$ are among those things.
+
+\emph{The selection form.} Candidate coverage and truthful answers put $\psid$ in
+every surviving set: $\psid\in U$ by hypothesis, and $q_j(\psid)=a_j$ for every
+question asked, so $\psid\in U_t$. On $E\cap\textsc{ship}$,
+\begin{align*}
+\Jc{\psid}(\hat\pi)\ &\le\ \max_{\psi\in U_t}\Jc{\psi}(\hat\pi)
+   \why{$\psid\in U_t$}\\
+   &\le\ \mathcal B(\hat\pi,U_t) \why{the bound is valid on $E$}\\
+   &\le\ d \why{definition of \textsc{ship}}\\
+\Pr\big[\textsc{ship}\wedge\Jc{\psid}(\hat\pi)>d\big]\
+   &\le\ \Pr[E^c]\ \le\ \dev
+   \why{the chain fails only off $E$; tower property over $(U_t,\hat\pi)$}
+\end{align*}
+\end{proof}
+
+\noindent $\ddec$ controls the representation decision and $\dev$ the validation of the realized
+policy; since \textsc{Check} evaluates $\hat\pi$ against $U_T$, the two guarantees sit side by
+side, and generation enters through $\dgen$, one term per relaxed stage.
+
+\begin{corollary}[Given generation: the first display of Theorem~\ref{thm:deploy}]
+\label{cor:keeplevel}
+Under the hypotheses of Theorem~\ref{thm:deploy},
+$\Pr[\textsc{ship}\wedge\Jc{\psid}(\hat\pi)>d\mid\psid\in\Psi_\ell]\le\dsem+\dev$.
+\end{corollary}
+
+\begin{proof}
+On $G$, truthful answers give $\psid\in U_T$ and Lemma~\ref{lem:deploycond}
+applies, so the chain can fail only off $G\cap E$.
+$G$ and $E$ are \emph{not} independent, since $\Uc$ and $\hat\pi$ are both
+functions of the calibration corpus, so we condition rather than multiply:
+$\mathbb I_G$ is $(\Uc,\hat\pi,\psid)$-measurable and
+$\Pr[E\mid \Uc,\hat\pi,\psid]\ge1-\dev$, whence
+$\Pr[G\cap E^c]=\mathbb E[\mathbb I_G\Pr[E^c\mid \Uc,\hat\pi,\psid]]\le\dev$ by the
+tower property. Lemma~\ref{lem:coverage} gives $\Pr[G^c\mid\psid\in\Psi_\ell]\le\dsem$,
+and the union bound closes it.
+\end{proof}
+
+\begin{corollary}[Unconditional: the second display of Theorem~\ref{thm:deploy}]
+\label{cor:uncond}
+Writing $\dgen=\Pr[\psid\notin\Psi_\ell]$ for the probability that
+\textsc{Generate} never proposes $\psid$, and under the remaining hypotheses of
+Theorem~\ref{thm:deploy},
+$\Pr[\textsc{ship}\ \text{and}\ \Jc{\psid}(\hat\pi)>d]\le\dgen+\dsem+\dev$.
+\end{corollary}
+
+\begin{proof}
+Split on whether Generate proposed $\psid$:
+$\{\textsc{ship}\wedge\Jc{\psid}(\hat\pi)>d\}\subseteq
+\{\psid\notin\Psi_\ell\}\cup
+\big(\{\psid\in\Psi_\ell\}\cap\{\textsc{ship}\wedge\Jc{\psid}(\hat\pi)>d\}\big)$.
+The first event has probability $\dgen$ and the second at most
+$\Pr[\psid\in\Psi_\ell](\dsem+\dev)\le\dsem+\dev$ by
+Corollary~\ref{cor:keeplevel}.
+\end{proof}
+
+\noindent The three statements are one guarantee at three levels of assumption; on an open-domain
+corpus $\dgen$ dominates the two calibrated terms, so candidate coverage is the lever that most
+improves the bound.
+
+\noindent The evaluator used in the experiments is a different valid
+instantiation of the same hypothesis: with $W=\max_\psi C_\psi/Z_\psi\in[0,B]$
+and $\{W>0\}$ the violation event, $\mathbb E[W]\le B\Pr[W>0]$, and an
+exact one-sided binomial bound on $\Pr[W>0]$ at level $1-\dev/2$ is valid
+conditionally on the fixed policy, so $B\cdot\mathrm{CP}(k,n)$ is a
+conditionally valid bound on $\max_\psi\mathbb E[C_\psi/Z_\psi]$ with no
+union over readings.
+
+\noindent Nothing above constrains how $\hat\pi$ was produced, which is why learned and
+exactly solved policies sit in the same pipeline.
+
+\noindent The generation term splits as $\dgen=\Pr[A]+\Pr[N]$ with $A=\{\Psi_\ell=\emptyset\}$ and
+$N=\{\Psi_\ell\neq\emptyset,\ \psid\notin\Psi_\ell\}$. On $A$ the pipeline abstains, so
+$\Pr[\textsc{ship}\wedge\Jc{\psid}(\hat\pi)>d]\le\Pr[N]+\dsem+\dev$ and the corollary's $\dgen$
+adds $\Pr[A]$ as slack; on $N$ every stage reasons inside the represented survivors and truthful
+answers cannot restore a reading that was never a candidate. $\dgen$ is therefore a property of
+the generation stage on the deployment population, used conservatively by the theorem.
+
+\paragraph{Estimating and reducing the generation term.} On $m$ exchangeable annotated
+requirements with $g$ generation misses, a one-sided Clopper--Pearson bound gives a
+population-level upper confidence bound on $\dgen$; on the ARTEMIS requirements
+$g/m=\ArGenMisses{}/\ArUnits{}=\ArTwoDeltaGen{}$, with a one-sided 95\% upper bound of
+\ArDgenUcb{}. Generation coverage is a controllable accuracy--computation trade-off:
+raising the candidate budget from one sample per requirement to ten and to all archived
+samples raises the pooled generator's coverage from \ArKOneAny{} to \ArKTenAny{} and
+\AmPoolAll{}, and pooling two generators raises it from the best single method's
+\AmBestSingleAll{} to \AmPoolAll{}. Generation uncertainty disappears on the admitted
+threshold--duration family: deterministic parsing includes the governing executable reading,
+so $\dgen=0$ conditional on admission, after which \textsc{Safe-Keep} reduces the enumerated
+set without changing its feasible policy set.
+
+%==============================================================================
+% Query guarantee for Refine (former Theorem C.15)
+%==============================================================================
+\subsubsection*{Query guarantee for \textsc{Refine}}
+
+\paragraph{Decision regions and the question rule.}
+\textsc{Refine} chooses questions according to which distinctions still prevent one
+reading from being sufficient. For each proposed training reading \(\psi\in U_0\),
+define its \emph{decision region}
+\begin{equation}
+R^\varepsilon_\psi(d)
+=\left\{\phi\in U_0\ \middle|\ \sup_{\pi\in F^\varepsilon_\psi(d)}J_{c_\phi}(\pi)\leq d\right\}.
+\label{eq:region}
+\end{equation}
+Reading \(\psi\) is sufficient for the survivors exactly when \(U_t\subseteq R^\varepsilon_\psi(d)\);
+such a \(\psi\) is an \emph{anchor}. A surviving anchor gives a \emph{set-value-preserving}
+stop, \(V_\psi(d)=V_{U_t}(d)\) by Theorem~\ref{thm:stop}; a non-surviving anchor gives a
+\emph{safe} stop that may reduce return. When no anchor exists, \textsc{Refine} scores each
+question by the prior-weighted mass of the minimal uncovered subsets it splits and asks the
+maximizer. Let \(\mathcal H_t\) contain the smallest subsets \(e\subseteq U_t\) for which no
+reading is sufficient, i.e.\ \(e\nsubseteq R^\varepsilon_\psi(d)\) for every
+\(\psi\in U_0\) while every proper subset is covered by some \(\psi\). With prior
+\(p(\psi)>0\), \(\sum_\psi p(\psi)=1\), put \(w(e)=\prod_{\phi\in e}p(\phi)\); for
+\(q\in Q\) let \(\mathcal Y_t(q)=\{q(\phi)\mid\phi\in U_t\}\),
+\(U_t(q,y)=\{\phi\in U_t\mid q(\phi)=y\}\) and
+\(\rho_t(y\mid q)=\sum_{\phi\in U_t(q,y)}p(\phi)\big/\sum_{\phi\in U_t}p(\phi)\).
+\textsc{Refine} chooses
+\begin{equation}
+q_t=\arg\max_{q\in Q}\mathcal J(q;U_t),
+\qquad
+\mathcal J(q;U_t)=\sum_{y\in\mathcal Y_t(q)}\rho_t(y\mid q)
+\sum_{e\in\mathcal H_t}w(e)\,\mathbf 1\{e\nsubseteq U_t(q,y)\},
+\label{eq:question}
+\end{equation}
+where \(\mathbf 1\{\cdot\}\) is the indicator.
+
+\begin{theorem}[Questions to reach a sufficient reading]
+\label{thm:query}\label{thm:questions}
+Assume \(P\) is known, answers are truthful, and the decision regions are computed
+exactly. Let \(p_{\min}=\min_{\psi\in U}p(\psi)>0\) and let \(m\) be the number of
+distinct decision regions \(R^\varepsilon_\psi(d)\), \(\psi\in U_0\). The greedy rule
+in \eqref{eq:question} reaches a round where some reading is sufficient using, in
+expectation, at most
+\[
+m\ln\!\left(\frac{1}{p_{\min}}\right)+1
+\]
+times as many questions as the best strategy with the same stopping condition.
+Under a uniform prior, the factor is \(m\ln|U|+1\).
+\end{theorem}
+The comparison is with the best strategy for reaching a sufficient reading, not for
+fully identifying the governing reading, under truthful answers and for the safety stop.
+Hypotheses are the readings $\Uc$ with prior $p$; a fixture query $q$ has a
+deterministic answer $y_q(\phi)$ under each reading; after answers
+$y_1,\dots,y_t$ the surviving set is $U_t$. Regions are
+$R_\psi=R^\varepsilon_\psi(d)$, and $\psi\in R_\psi$ since
+$F^\varepsilon_\psi(d)\subseteq\Pi_\psi(d)$, so every hypothesis lies in a
+region. A set $e\subseteq\Uc$ is \emph{undecided} if no region contains it;
+$\mathcal H$ is the family of minimal undecided sets, weighted by
+$w(e)=\prod_{\phi\in e}p(\phi)$; the objective after observations is the
+weight of the sets in $\mathcal H$ that have lost a member,
+$f(U_t)=\sum_{e\in\mathcal H}w(e)\,\mathbf 1\{e\not\subseteq U_t\}$, with
+$Q=\sum_{e\in\mathcal H}w(e)$.
+
+\emph{Coverage: $f(U_t)=Q$ exactly at SAFE.}
+\begin{align*}
+U_t\subseteq R_\psi\ &\Rightarrow\ \text{every }e\subseteq U_t\text{ is decided}
+   \why{subsets of a region lie in it}\\
+   &\Rightarrow\ \forall e\in\mathcal H:\ e\not\subseteq U_t
+   \why{members of $\mathcal H$ are undecided}\\
+   &\Rightarrow\ f(U_t)=Q \why{every set is cut}\\
+U_t\not\subseteq R_\psi\ \forall\psi\ &\Rightarrow\ U_t\ \text{undecided}
+   \why{definition}\\
+   &\Rightarrow\ \exists e\in\mathcal H,\ e\subseteq U_t
+   \why{a minimal undecided subset exists}\\
+   &\Rightarrow\ f(U_t)<Q \why{that $e$ is uncut}
+\end{align*}
+so the rule stops exactly under the theorem's condition, and the instance
+is self-certifying: whether $f=Q$ is determined by $U_t$ alone.
+
+\emph{Size and weights.} Let $e\in\mathcal H$ and let $R$ range over
+the $m$ distinct regions.
+\begin{align*}
+\forall R\ \exists\,\phi_R\ &\in\ e\setminus R \why{$e$ is in no region}\\
+\{\phi_R\}_R\ &\subseteq\ e,\ \text{undecided} \why{it meets no region}\\
+\{\phi_R\}_R\ &=\ e \why{minimality of $e$}\\
+|e|\ &\le\ m \why{one $\phi_R$ per region}\\
+w(e)=\textstyle\prod_{\phi\in e}p(\phi)\ &\ge\ p_{\min}^{m} \why{previous line}\\
+Q=\textstyle\sum_{e\in\mathcal H}w(e)\ &\le\ \textstyle\sum_{m\ge2}1/m!\ <\ 1
+   \why{elementary-symmetric bound}\\
+f(U_t)<Q\ &\Rightarrow\ f(U_t)\le Q-p_{\min}^{m}
+   \why{some $e$ is uncut, and each weighs $\ge p_{\min}^m$}
+\end{align*}
+
+\emph{The greedy bound.}
+\begin{align*}
+f\ &\ \text{adaptive submodular, strongly adaptive monotone}
+   \why{hyperedge cutting \citep{javdani2014drd}}\\
+\frac{\mathbb E[\text{greedy cost}]}{\mathbb E[\text{optimal cost}]}\
+   &\le\ \ln(Q/\varrho)+1
+   \why{\citet[Thm.~5.8]{golovin2011adaptive}}\\
+\varrho\ &\leftarrow\ p_{\min}^{m}
+   \why{$f>Q-p_{\min}^m$ forces $f=Q$}\\
+\ln(Q/\varrho)+1\ &\le\ \ln(1/p_{\min}^{m})+1
+   \why{$Q<1$, and each $w(e)\ge p_{\min}^m$}\\
+   &=\ m\ln(1/p_{\min})+1 \why{$\ln x^{m}=m\ln x$}
+\end{align*}
+under the uniform prior $p_{\min}=1/|\Uc|$, giving $m\ln|\Uc|+1$. The greedy policy is exactly the rule of the theorem:
+the expected gain of a fixture is the expected weight of minimal undecided
+sets its answer breaks.
+
+\emph{SAFE and FREE.} The bound is for the safety stop $\mathrm{SAFE}(U_t)$, which needs no
+surviving anchor; the return equality $V_\psi(d)=V_{U_t}(d)$ of Theorem~\ref{thm:stop} holds
+under $\mathrm{FREE}(U_t)$, for which no query guarantee is claimed. With regions estimated from
+data the same selector is a heuristic; certified regions restore the guarantee.
+
+%==============================================================================
+% Composition with an approximate learner: long-form proof (former Theorem C.16)
+%==============================================================================
+\subsubsection*{Composition with an approximate learner}
+\label{app:proof-approx}
+
+\paragraph{The learner contract.} Let \(L\) be the constrained learner and
+\(\eta\in[0,d]\) an optional tightening of the limit; \textsc{Protect} computes
+\(\hat\pi=L(D,\{c_\phi\}_{\phi\in C},d-\eta)\) if \(L\) accepts one cost per reading and
+\(\hat\pi=L(D,c_C,d-\eta)\) with \(c_C=\max_{\phi\in C}c_\phi\) otherwise, restricted to
+covered pairs when the offline certificate is used. \(L\) meets the
+\((\varepsilon_r,\eta)\) \emph{learner contract} on \(C\) when
+\begin{equation}
+J_{c_\phi}(\hat\pi)\leq d-\eta\ \text{ for every }\phi\in C,
+\qquad
+J_r(\hat\pi)\geq V_C(d-\eta)-\varepsilon_r .
+\label{eq:contract}
+\end{equation}
+Here \(\varepsilon_r\geq0\) is the learner's reward error under the tightened limit.
+When a single reading \(\psi\) is used for training, the contract is on \(\{\psi\}\)
+and the sufficiency test against a candidate set \(C\) uses
+\(\varepsilon'=\varepsilon_r+V_\psi(d)-V_\psi(d-\eta)\).
+
+\begin{theorem}[Composition with an approximate learner]
+\label{thm:approx}
+Every policy meeting the \((\varepsilon_r,\eta)\) learner contract \eqref{eq:contract}
+on the singleton \(\{\psi\}\) lies in \(F^{\varepsilon'}_\psi(d)\) with
+\(\varepsilon'=\varepsilon_r+V_\psi(d)-V_\psi(d-\eta)\). Hence, for a candidate set
+\(C\subseteq U\), if \(\Gamma^{\varepsilon'}_\psi(C,d)\leq0\) then
+\(J_{c_\phi}(\widehat\pi)\leq d\) for every \(\phi\in C\), and with
+\(\Delta_{C,\psi}(d)=V_C(d)-V_\psi(d)\),
+\[
+V_C(d)-J_r(\widehat\pi)\;\leq\;\underbrace{\Delta_{C,\psi}(d)}_{\text{anchor}}
+\;+\;\underbrace{\varepsilon_r}_{\text{learner}}
+\;+\;\underbrace{V_\psi(d)-V_\psi(d-\eta)}_{\text{tightening}} ,
+\]
+where \(\Delta_{C,\psi}(d)=0\) whenever \(\psi\in C\).
+\end{theorem}
+In the linear programming case the third term is at most \(\eta\,\lambda_\psi(d-\eta)\), where
+\(\lambda_\psi(b)\), the right derivative of \(V_\psi\) at limit \(b\), is the shadow price of
+safety. The effective tolerance \(\varepsilon'\) is what the sufficiency radius must cover: by
+Theorem~\ref{thm:sufficiency}(a), \(\Gamma^{\varepsilon'}_\psi(C,d)\le0\) whenever
+\(\varepsilon'<\varepsilon^\star_\psi(C,d)\), the equality case being decided by the
+fixed-tolerance test of Theorem~\ref{thm:sufficiency}(b).
+\begin{proof}
+Fix $C\subseteq\Uc$ and recall
+$\varepsilon'=\varepsilon_r+V_\psi(d)-V_\psi(d-\eta)$.
+
+\emph{The learner's output lies in an $\varepsilon'$-face.}
+\begin{align*}
+\Jc{\psi}(\hat\pi)\ &\le\ d \why{$(\varepsilon_r,\eta)$ contract}\\
+\Jr(\hat\pi)\ &\ge\ V_\psi(d-\eta)-\varepsilon_r \why{contract}\\
+   &=\ V_\psi(d)-\varepsilon' \why{definition of $\varepsilon'$}\\
+\hat\pi\ &\in\ F^{\varepsilon'}_\psi(d) \why{previous two lines}
+\end{align*}
+
+\emph{Feasibility for $C$.} Assume
+$\Gamma^{\varepsilon'}_\psi(C;d)\le0$.
+\begin{align*}
+\sup_{\pi\in F^{\varepsilon'}_\psi(d)}\Jc{\phi}(\pi)\ &\le\ d
+   \quad\forall\phi\in C\setminus\{\psi\} \why{definition of $\Gamma$}\\
+F^{\varepsilon'}_\psi(d)\ &\subseteq\ \Pi_\psi(d) \why{faces are feasible}\\
+F^{\varepsilon'}_\psi(d)\ &\subseteq\ \Pi_C(d) \why{the two lines}\\
+\hat\pi\ &\in\ \Pi_C(d) \why{$\hat\pi$ is in that face}
+\end{align*}
+
+\emph{The utility bound.} Let $\pi^\star_\psi$ attain $V_\psi(d)$.
+\begin{align*}
+\pi^\star_\psi\ &\in\ F^{\varepsilon'}_\psi(d)\subseteq\Pi_C(d)
+   \why{the containment just shown}\\
+V_C(d)\ &\ge\ V_\psi(d),\qquad \Delta_{C,\psi}(d)\ \ge\ 0
+   \why{it competes in the $C$ program}\\
+V_C(d)-\Jr(\hat\pi)\ &\le\ V_C(d)-V_\psi(d)+\varepsilon'
+   \why{$\Jr(\hat\pi)\ge V_\psi(d)-\varepsilon'$}\\
+   &=\ \Delta_{C,\psi}(d)+\varepsilon_r+\big[V_\psi(d)-V_\psi(d-\eta)\big]
+   \why{expand $\varepsilon'$}\\
+   &\le\ \Delta_{C,\psi}(d)+\varepsilon_r+\eta\,\lambda_\psi(d-\eta)
+   \why{$V_\psi$ concave in the budget}
+\end{align*}
+the last step because $V_\psi(d)-V_\psi(d-\eta)\le\eta\,\partial_+V_\psi(d-\eta)$
+and the right derivative is the smallest optimal dual multiplier of $\psi$'s
+budget at $d-\eta$, the shadow price.
+
+\emph{The free cover $\psi\in C$.}
+\begin{align*}
+\Pi_C(d)\ &\subseteq\ \Pi_\psi(d)\ \Rightarrow\ V_C(d)\le V_\psi(d)
+   \why{$\psi\in C$}\\
+\Delta_{C,\psi}(d)\ &=\ 0 \why{with $V_C(d)\ge V_\psi(d)$ above}\\
+V_\psi(d-\eta)\ &\ge\ V_C(d-\eta)
+   \why{$\Pi_C(d-\eta)\subseteq\Pi_\psi(d-\eta)$}\\
+V_\psi(d)-V_\psi(d-\eta)\ &\le\ V_C(d)-V_C(d-\eta)
+   \why{previous line and $V_C(d)=V_\psi(d)$}\\
+V_C(d)-\Jr(\hat\pi)\ &\le\ \varepsilon_r+\eta\,\lambda_C(d-\eta)
+   \why{the utility bound at $\Delta=0$, concavity of $V_C$}
+\end{align*}
+
+\emph{From a log.} $V_\psi(d)$ and $V_\psi(d-\eta)$ are two LPs on the
+estimated model; bounding them with the confidence set of
+Appendix~\ref{app:proof-finite} gives an upper confidence bound on
+$\varepsilon'$, and running the certificate against $C$ at that tolerance
+keeps part (a) of Theorem~\ref{thm:finite}.
+\end{proof}
+
+%==============================================================================
+% Safe-Keep: proposition, dominance, audits and diagnostics (former Proposition C.17)
+%==============================================================================
+\subsubsection*{Safety-preserving semantic compression (\textsc{Safe-Keep})}
+\label{app:safekeep}
+
+\begin{proposition}[Removing redundant readings]
+\label{prop:safekeep}\label{prop:redundancy}
+Let \(\Psi\) be a finite set of readings and \(U'\subseteq\Psi\).
+If for every \(\psi\in\Psi\) there is some \(\phi\in U'\) with
+\(J_{c_\psi}(\pi)\le J_{c_\phi}(\pi)\) for every \(\pi\in\Pi\), then
+\(\Pi_{U'}(d)=\Pi_\Psi(d)\) and \(V_{U'}(d)=V_\Psi(d)\) for every \(d\).
+\end{proposition}
+
+\paragraph{Proof of Proposition~\ref{prop:safekeep}.}
+\(U'\subseteq\Psi\) gives \(\Pi_\Psi(d)\subseteq\Pi_{U'}(d)\). Conversely let
+\(\pi\in\Pi_{U'}(d)\) and fix \(\psi\in\Psi\); there is \(\phi\in U'\) with
+\(J_{c_\psi}(\pi)\leq J_{c_\phi}(\pi)\leq d\), so \(\pi\in\Pi_\psi(d)\). This holds
+for every \(\psi\in\Psi\), so the feasible sets are equal and maximizing the same
+reward over equal sets gives equal values. \qed
+
+\paragraph{Trace-semantic dominance.}
+For threshold-duration readings compiled to a level \(\mathrm{lvl}\) and duration cap
+\(\mathrm{cap}\), define
+\(\phi\succeq_{\mathrm{sem}}\psi\) iff \(\mathrm{lvl}_\phi\le\mathrm{lvl}_\psi\) and
+\(\mathrm{cap}_\phi\le\mathrm{cap}_\psi\). If \(\psi\) fires on a history \(h\), the
+last \(\mathrm{cap}_\psi\) observations are all at level at least
+\(\mathrm{lvl}_\psi\); since \(\mathrm{cap}_\phi\le\mathrm{cap}_\psi\), the last
+\(\mathrm{cap}_\phi\) observations are a suffix of those and are therefore all at
+level at least \(\mathrm{lvl}_\psi\ge\mathrm{lvl}_\phi\), so \(\phi\) fires on \(h\)
+as well. Hence the firing language of \(\psi\) is contained in that of \(\phi\), and
+\(J_{c_\psi}(\pi)\le J_{c_\phi}(\pi)\) for every policy and environment consistent
+with these monitor semantics. The relation is stated on the executable parameters
+rather than the textual duration because the duration-to-cap map of
+Appendix~\ref{app:controlmodel} is not monotone when two durations collide.
+
+\paragraph{Trace-semantic implication versus Cartesian-state dominance.} The compiled MDP
+enumerates a Cartesian product of monitor counters and contains tuples no load history realizes
+(with thresholds \(10\) and \(40\) and equal caps, the \(40\)-counter can never lead the
+\(10\)-counter), so pointwise \(c_\phi\ge c_\psi\) on every Cartesian state is sufficient but not
+necessary for semantic implication: in that instance only \(7\) of \(28\) states are reachable
+and all six raw dominance violations sit at unreachable ones.
+
+\paragraph{Computational effect.} The raw joint monitor state is a Cartesian product
+over candidate counters, so raw pools reach a median of \RawMedianStates{} states and
+a maximum of \MaxRawStates{}; \RawCompileFailurePct{} exceed the experimental limit.
+After \textsc{Safe-Keep} the maximum compiled state count is \MaxSafeKeepStates{},
+a median reduction of \MedianStateReduction{}, computed for all \SkSubfamilies{}
+subfamilies in \SkRuntime{}\,s.
+
+\paragraph{Compiler-faithfulness and redundancy audits.} Replaying every level history of
+a fixed horizon from every initial state against the compiled cost gives about \(184\)k
+checks with zero mismatches; \(\succeq_{\mathrm{sem}}\) and reachable-state dominance agree
+on all \(5{,}074\) pairs where both hold and \(453\) where neither does; and the
+decision-level check \(\max\{J_{c_\psi}(\pi):\pi\in\Pi_{U_0}(d)\}\le d\) on
+\(U_0\cup\{\psi\}\) confirms all \SkLPConfirmed{} tested implications with \SkLPRefuted{}
+refutations. On the \BenchmarkUnchanged{} compiled benchmark instances of
+Section~\ref{sec:exp}, \textsc{Safe-Keep} returns the candidate sets unchanged.
+
+\paragraph{Certified-offline deployment.}
+Let \(A\) denote admission into the supported threshold-duration family. On
+\(A=1\) the deterministic generator places \(\psi^\dagger_{\mathrm{parsed}}\) in the
+raw pool \(\Psi\), and Proposition~\ref{prop:safekeep} gives
+\(\Pi_{U_0}(d)=\Pi_\Psi(d)\). Let \(\mathcal E_{\mathrm{off}}\) be the
+event on which \textsc{Certified-Protect}'s fixed-data guarantee is valid. On
+\(\mathcal E_{\mathrm{off}}\),
+\[
+\hat\pi\in\Pi_{U_0}(d)=\Pi_\Psi(d)\subseteq\Pi_{\psi^\dagger_{\mathrm{parsed}}}(d),
+\]
+so \(\{\textsc{Deploy}\wedge J_{c_{\psi^\dagger_{\mathrm{parsed}}}}(\hat\pi)>d\}
+\subseteq\mathcal E_{\mathrm{off}}^{\,c}\), giving Theorem~\ref{thm:deploy}(b). On
+\(A=0\) the structured mode abstains, so rejected inputs reduce automation coverage
+but do not enter the unsafe-deployment event. The argument is independent of whether
+\textsc{Decide} returns a singleton: certified full-set protection is a valid
+fallback, and a certified singleton may be used only when the learner contract of
+Theorem~\ref{thm:approx} is itself certified. Admission, deterministic generation and
+\textsc{Safe-Keep} add no probabilistic failure event; the certification error is covered by
+\(\delta_{\mathrm{off}}\), and \(\delta_{\mathrm{dec}}\), which controls singleton
+certification, enters neither deployment bound.
+
+\paragraph{Diagnostics of the fixed-data run.} The deployed policies use their budgets:
+\HighBudgetUsePct{} spend more than half of the governing-reading budget, with a singleton-branch
+median of \(J_{c_{\psi^\dagger}}/d=\SingletonGoldBudgetMedian{}\). In a sweep over budgets
+\(M_{\psi^\dagger}=\max_{\pi\in\Pi}J_{c_{\psi^\dagger}}(\pi)\), \SkMultiReadingTight{} of
+\SkSubfamilies{} pools remain multi-reading at the tightest setting \(\lambda{=}\SkTightLambda{}\)
+and \SkDecisionRelevantTight{} of them are decision-relevant; in the 149 pools that remained
+multi-reading no singleton met the certification condition, so \textsc{Certified-Protect}
+enforced the full retained set.

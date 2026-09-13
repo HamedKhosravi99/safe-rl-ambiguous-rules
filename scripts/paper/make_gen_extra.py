@@ -88,7 +88,7 @@ def selfconsistency() -> list[str]:
     return [
         f"Self-consistency vote (single cost) & ${v_ret:.1f}\\pm{v_ret_sd:.1f}$ & "
         f"${v_worst:.3f}\\pm{v_worst_sd:.3f}$ & ${v_viol:.3f}$ \\\\\n",
-        f"\\method{{}} (conformal set) & ${a_ret:.1f}\\pm{a_ret_sd:.1f}$ & "
+        f"Full retained set (calibrated) & ${a_ret:.1f}\\pm{a_ret_sd:.1f}$ & "
         f"${a_worst:.3f}\\pm{a_worst_sd:.3f}$ & ${a_viol:.3f}$ \\\\\n",
     ]
 
