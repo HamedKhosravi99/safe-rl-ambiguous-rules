@@ -28,7 +28,9 @@ METHODS = {
 }
 ORDER = ["deepstl", "nl2spec", "NL2TL", "NL2TL-FT", "synthtl", "nl2ltl", "nl2ltltemplate", "nl2structnl", "nl2structnl-reflect"]
 def pct(x, nd=1): return f"{100*x:.{nd}f}"
-LLM = {"gemini-2.5-flash": "gemini", "gpt-4.1": "GPT"}   # as the artifact's own figures label them
+LLM = {"gemini-2.5-flash": "Gemini-2.5-Flash", "gpt-4.1": "GPT-4.1"}
+# methods cited in the Method column of the main-body table, on their first row only
+CITED = {"DeepSTL (FT)", "nl2spec", "NL2TL+", "SynthTL", "directTL", "directTL-t", "ARTEMIS", "ARTEMIS + reflection"}
 def mac(name, val): return f"\\newcommand{{\\{name}}}{{{val}}}"
 def cols(x, arm, key="any"): return [x["by_group"][g][arm][key] for g in G] + [x["overall"][arm][key]]
 
@@ -72,15 +74,13 @@ for k, v in REPORTED.items():   # within rounding and one requirement's checker 
     assert abs(RATIOS[k] - v) < 0.06, (k, RATIOS[k], v)
 
 # ---- main-body rows: committed translation (first sample), in parentheses any of the ten samples
-T = []
+T = []; cited = set()
 for i, (src, backbone, name, year, bib, av, rc) in enumerate(rows):
     x = d["sources"][src]; pv = cols(x, "pool")
-    cells = []
-    for j, v in enumerate(av):
-        s = pct(v)
-        s = f"\\textbf{{{s}}}" if src == best_src[j] else s
-        cells.append(f"{s} ({pct(pv[j])})")
-    T.append(f"{name} & {year} & {LLM[backbone]} & 1 & " + " & ".join(cells) + " \\\\\n")
+    cells = [f"{pct(v)} ({pct(pv[j])})" for j, v in enumerate(av)]
+    label = f"{name} \\citep{{{bib}}}" if name in CITED and name not in cited else name
+    cited.add(name)
+    T.append(f"{label} & {year} & {LLM[backbone]} & 1 & " + " & ".join(cells) + " \\\\\n")
 T.append("\\midrule\n")
 T.append("Self-consistency vote & -- & both & 1 & " + " & ".join(pct(v) for v in maj) + " \\\\\n")
 T.append(f"All distinct samples & -- & both & {U['overall']['pool']['size_median']:.1f} & " + " & ".join(pct(v) for v in pool) + " \\\\\n")
