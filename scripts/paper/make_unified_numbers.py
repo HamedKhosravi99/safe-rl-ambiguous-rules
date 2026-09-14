@@ -292,6 +292,10 @@ def headline(acc_rows, composed):
             "P0-E: common-subset denominators disagree"
         out.append(mac("FiresFreeCommon", fc["fires"]))
         out.append(mac("FiresCommonDen", fc["n_total"]))
+        # rules on which one reading is enough, i.e. the value test does not fire, per class
+        assert 0 <= comp["fires"] <= fc["n_total"] and 0 <= fc["fires"] <= fc["n_total"]
+        out.append(mac("FiresMonSuff", fc["n_total"] - comp["fires"]))
+        out.append(mac("FiresFreeSuff", fc["n_total"] - fc["fires"]))
         assert p["n_pools"] == mf["n_total"] and k["n_pools"] == kf["n_total"], \
             ("P0-E: pool-count disagreement between antichain_reduction "
              f"({p['n_pools']}/{k['n_pools']}) and policy_class_budget "
