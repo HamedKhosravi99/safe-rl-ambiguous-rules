@@ -66,6 +66,8 @@ L = [
  r"\newcommand{\RawCompileFailurePct}{45.1\%}",
  # admission + end-to-end
  r"\newcommand{\StructuredAdmission}{581/1{,}271}",
+ r"\newcommand{\StructuredCorpusRules}{1{,}271}",
+ r"\newcommand{\StructuredAdmitted}{581}",
  r"\newcommand{\StructuredAdmissionPct}{45.7\%}",
  r"\newcommand{\FinalDeployRecords}{%s}" % th(n_rec),
  r"\newcommand{\FinalUnsafeDeployments}{%d}" % unsafe,
