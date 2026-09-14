@@ -138,7 +138,7 @@ def sweeps() -> None:
                 raise AssertionError(f"budget cell {dom}/eps={r['eps']} no longer "
                                      "favours the retained set; Section 5.3 says every one does")
             n_budget += 1
-            budget.append(f"{label[dom]} & ${r['eps']}$ & ${s['ret'][0]:.1f}$ & "
+            budget.append(f"{label[dom]} & ${float(r['eps']):.2f}$ & ${s['ret'][0]:.1f}$ & "
                           f"${s['true_worst'][0]:.3f}$ & ${s['chance'][0]:.3f}$ & "
                           f"${a['ret'][0]:.1f}$ & ${a['true_worst'][0]:.3f}$ & "
                           f"${a['chance'][0]:.3f}$ \\\\\n")

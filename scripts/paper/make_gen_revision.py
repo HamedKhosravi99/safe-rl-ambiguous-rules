@@ -103,7 +103,7 @@ assert r["mean_W"] < d, "the C-MAPSS re-evaluated mean W is no longer below the 
 rt = load("results/e2e", "decide_runtime.json")["parts"]
 hw = rt["exact_nonnested"]["hardware"]
 M += [mac("RtCpu", hw["cpu"]), mac("RtCores", hw["n_cores"]), mac("RtRam", f"{hw['ram_bytes'] / 2**30:.0f}"),
-      mac("RtSolver", "HiGHS (scipy " + hw["scipy"] + ")")]
+      mac("RtSolver", "HiGHS via SciPy " + hw["scipy"])]
 order = [("exact_nonnested", "exact non-nested suite (Tab.~\\ref{tab:exact})", "17 inst.\\ $\\times$ 5 budgets"),
          ("policy_sufficiency", "face certificates (Tab.~\\ref{tab:e2})", "28 inst.\\ $\\times$ 5 budgets"),
          ("surrogate_price", "single-cost surrogate price", "28 inst.\\ $\\times$ 5 budgets"),

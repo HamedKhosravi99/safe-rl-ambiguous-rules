@@ -84,7 +84,7 @@ for i, (src, backbone, name, year, bib, av, rc) in enumerate(rows):
 T.append("\\midrule\n")
 T.append("Self-consistency vote & -- & both & 1 & " + " & ".join(pct(v) for v in maj) + " \\\\\n")
 T.append(f"All distinct samples & -- & both & {U['overall']['pool']['size_median']:.1f} & " + " & ".join(pct(v) for v in pool) + " \\\\\n")
-T.append(f"\\textbf{{\\method{{}} \\textsc{{Score-Keep}}}} & 2026 & both & \\textbf{{{U['overall']['arrow']['size_median']:.1f}}} & " + " & ".join(f"\\textbf{{{pct(v)}}}" for v in arrow) + " \\\\\n")
+T.append(f"\\method{{}} \\textsc{{Score-Keep}} & 2026 & both & {U['overall']['arrow']['size_median']:.1f} & " + " & ".join(pct(v) for v in arrow) + " \\\\\n")
 open(os.path.join(GEN, "gen_artemis_methods_table.tex"), "w").write(HEAD + "".join(T))
 
 # ---- appendix rows: per method, four arms (any / recall / size)

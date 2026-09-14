@@ -62,7 +62,7 @@ for d in ("0.02", "0.05", "0.1"):
         mant, expo = f"{I['I']:.2e}".split("e"); Icell = f"${mant}\\times10^{{{int(expo)}}}$"
         ns = {c: nstar(float(d), members, c) for c in CERTS}
         ninfo = f"{I['n_info']:,.0f}".replace(",", "{,}")
-        C.append(f"${float(d):g}$ & {len(members)} & ${kappa:.4f}$ & {Icell} & ${ninfo}$ & " + " & ".join(fmt_n(ns[c]) if ns[c] else f"$>{fmt_n(grid[-1])[1:-1]}$" for c in CERTS) + " \\\\")
+        C.append(f"${float(d):.2f}$ & {len(members)} & ${kappa:.4f}$ & {Icell} & ${ninfo}$ & " + " & ".join(fmt_n(ns[c]) if ns[c] else f"$>{fmt_n(grid[-1])[1:-1]}$" for c in CERTS) + " \\\\")
 # headline macros (d = 0.05)
 ns_easy = {c: nstar(D, easy, c) for c in CERTS}; ns_hard = {c: nstar(D, hard, c) for c in CERTS}
 mac("VfEasyNstarUniform", fmt_n(ns_easy["UNIFORM"])); mac("VfEasyNstarOcc", fmt_n(ns_easy["OCC"])); mac("VfEasyNstarDual", fmt_n(ns_easy["DUAL"]))

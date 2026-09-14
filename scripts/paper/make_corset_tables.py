@@ -466,14 +466,15 @@ def gen_dsrl():
                     improved += 1          # CORSET lowers the worst-retained cost
                 else:
                     exceptions.append((tlabel[t], llabel[ln], s[2], a[2]))
-            mp_rew = f"{m[0]:.2f}\\,$\\pm$\\,{m[1]:.2f}" if m else "--"
-            mp_cst = f"{m[2]:.2f}\\,$\\pm$\\,{m[3]:.2f}" if m else "--"
+            num = lambda v: f"{v:.2f}".replace("-", "$-$", 1)   # true minus sign for negatives
+            mp_rew = f"{num(m[0])}\\,$\\pm$\\,{m[1]:.2f}" if m else "--"
+            mp_cst = f"{num(m[2])}\\,$\\pm$\\,{m[3]:.2f}" if m else "--"
             rows.append(
                 f"{tlabel[t]} & {llabel[ln]} & "
-                f"{s[0]:.2f}\\,$\\pm$\\,{s[1]:.2f} & {mp_rew} & "
-                f"{a[0]:.2f}\\,$\\pm$\\,{a[1]:.2f} & "
-                f"{s[2]:.2f}\\,$\\pm$\\,{s[3]:.2f} & {mp_cst} & "
-                f"{a[2]:.2f}\\,$\\pm$\\,{a[3]:.2f} \\\\\n")
+                f"{num(s[0])}\\,$\\pm$\\,{s[1]:.2f} & {mp_rew} & "
+                f"{num(a[0])}\\,$\\pm$\\,{a[1]:.2f} & "
+                f"{num(s[2])}\\,$\\pm$\\,{s[3]:.2f} & {mp_cst} & "
+                f"{num(a[2])}\\,$\\pm$\\,{a[3]:.2f} \\\\\n")
         rows.append("\\addlinespace\n" if t != tasks[-1] else "")
     write("gen_dsrl.tex", "".join(rows))
 

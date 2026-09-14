@@ -92,7 +92,7 @@ from scipy.stats import beta as _beta
 _m = res["P2"][None][2]; _g = int(round(_m * (1 - res["P2"][None][1])))
 assert _m == 182 and abs(_m * (1 - res["P2"][None][1]) - _g) < 1e-6, (_m, res["P2"][None][1])
 assert res["P2"][1][1] < res["P2"][10][1] < res["P2"][None][1], "coverage must rise with the candidate budget; text must change"
-macro("ArKOneAny", pct(res["P2"][1][1])); macro("ArKTenAny", pct(res["P2"][10][1])); macro("ArGenMisses", _g)
+macro("ArKOneAny", f"{100*res['P2'][1][1]:.1f}\\%"); macro("ArKTenAny", f"{100*res['P2'][10][1]:.1f}\\%"); macro("ArGenMisses", _g)
 macro("ArDgenUcb", f"{100 * _beta.ppf(0.95, _g + 1, _m - _g):.1f}\\%")
 macro("ArAnyOne", pct(res["P2"][1][1])); macro("ArAnyTen", pct(res["P2"][10][1])); macro("ArAnyAll", pct(res["P2"][None][1]))
 macro("ArPtwoN", res["P2"][None][2]); macro("ArPoneN", res["P1"][None][2])

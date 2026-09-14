@@ -16,7 +16,7 @@ def mac(n, v): M.append(f"\\newcommand{{\\{n}}}{{{v}}}")
 mac("VcNEv", f"{d['n_ev']:,}".replace(",", "{,}")); mac("VcDeltaEv", f"{d['delta_ev']:g}"); mac("VcPolicies", f"{len(rows):,}".replace(",", "{,}"))
 unsafe_dep = sum(1 for r in rows if r["ship"] and not r["safe"]); assert unsafe_dep == 0; mac("VcUnsafeDeployed", unsafe_dep)
 wrong_unsafe = [r for r in rows if arm_of(r) == "wrong" and not r["safe"]]; assert all(not r["ship"] for r in wrong_unsafe)
-mac("VcWrongUnsafe", len(wrong_unsafe)); mac("VcWrongUnsafeRejected", sum(1 for r in wrong_unsafe if not r["ship"]))
+mac("VcWrongUnsafe", f"{len(wrong_unsafe):,}".replace(",", "{,}")); mac("VcWrongUnsafeRejected", sum(1 for r in wrong_unsafe if not r["ship"]))
 T = []; pass_arrow = []; dep_arrow = []
 for l in ("fqi", "cpq", "pid", "cql"):
     for n in sorted({r["n"] for r in rows if r["learner"] == l}):

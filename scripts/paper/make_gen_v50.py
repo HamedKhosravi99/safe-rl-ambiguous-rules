@@ -108,5 +108,5 @@ open(os.path.join(GEN, "gen_v50_table_full.tex"), "w").write(H + "\n".join(table
 with open(os.path.join(GEN, "gen_v50_perinst.tex"), "w") as fh:
     fh.write(H)
     for k in keys:
-        fh.write(f"{k[0]} & {k[1]} & ${k[2]:g}$ & {pct(price_of[k])} & " + " & ".join(pts(g) for g in perinst[k]) + " \\\\\n")
+        fh.write(f"{k[0]} & {k[1]} & ${k[2]:.2f}$ & {pct(price_of[k])} & " + " & ".join(pts(g) for g in perinst[k]) + " \\\\\n")
 print("\n".join(table)); print("macros:", len(M))
