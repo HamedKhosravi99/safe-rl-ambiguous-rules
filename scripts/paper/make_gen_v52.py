@@ -25,7 +25,7 @@ for l in ("fqi", "cpq", "pid", "cql"):
             ret = float(np.mean([r["ret_frac"] for r in sel])); ps = float(np.mean([r["ship"] for r in sel]))
             dret = float(np.mean([r["ret_frac"] for r in dep])) if dep else None; srej = sum(1 for r in sel if r["safe"] and not r["ship"])
             unsafe = sum(1 for r in sel if not r["safe"])
-            label = {"arrow": "\\method{} reading", "surrogate": "union surrogate", "wrong": "wrong reading"}[arm]
+            label = {"arrow": "\\method{} reading", "surrogate": "single-cost surrogate", "wrong": "wrong reading"}[arm]
             T.append(f"{LNAME[l] if arm == 'arrow' else ''} & {n:,} & {label} & {pct(ret)} & {unsafe} & {pct(ps,0)} & {sum(1 for r in dep if not r['safe'])} & {pct(dret) if dret is not None else '--'} & {srej} \\\\".replace(",", "{,}").replace("{,} ", ", "))
             assert len(sel) == (180 if arm == "wrong" else 90)
             if n == 20000:
@@ -35,6 +35,7 @@ for l in ("fqi", "cpq", "pid", "cql"):
                 if arm == "arrow": pass_arrow.append(ps); dep_arrow.append(dret)
         T.append("\\addlinespace[1pt]")
 open(os.path.join(GEN, "gen_v52_table.tex"), "w").write(H + "\n".join(T[:-1]) + "\n")
+mac("VcArmPolicies", len([r for r in rows if r["learner"] == "fqi" and r["n"] == 20000 and arm_of(r) == "arrow"]))
 mac("VcArrowPassLo", pct(min(pass_arrow), 0)); mac("VcArrowPassHi", pct(max(pass_arrow), 0)); mac("VcArrowDepRetLo", pct(min(dep_arrow))); mac("VcArrowDepRetHi", pct(max(dep_arrow)))
 cql_arrow = [r for r in rows if r["learner"] == "cql" and arm_of(r) == "arrow"]
 assert sum(1 for r in cql_arrow if not r["safe"]) > 0 and all(not r["ship"] for r in cql_arrow if not r["safe"])   # the unsafe CQL runs are all rejected
@@ -46,7 +47,7 @@ for l in ("fqi", "cpq", "pid", "cql"):
     for arm in ("arrow", "surrogate"):
         sel = [r for r in rows if r["learner"] == l and r["n"] == 20000 and arm_of(r) == arm]; dep = [r for r in sel if r["ship"]]
         ret = float(np.mean([r["ret_frac"] for r in sel])); ps = float(np.mean([r["ship"] for r in sel])); dret = float(np.mean([r["ret_frac"] for r in dep]))
-        label = "\\method{} reading" if arm == "arrow" else "union surrogate"
+        label = "\\method{} reading" if arm == "arrow" else "single-cost surrogate"
         C.append(f"{LNAME[l] if arm == 'arrow' else ''} & {label} & {pct(ret)} & {sum(1 for r in sel if not r['safe'])} & {pct(ps,0)} & {sum(1 for r in dep if not r['safe'])} & {pct(dret)} \\\\")
 wrong = [r for r in rows if arm_of(r) == "wrong"]; wdep = [r for r in wrong if r["ship"]]
 C.append("\\midrule")

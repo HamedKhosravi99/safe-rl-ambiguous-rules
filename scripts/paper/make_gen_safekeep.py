@@ -31,6 +31,8 @@ assert nsub == 579, nsub
 
 # ---- final pipeline -------------------------------------------------------
 n_rec = len(rows)
+lams = sorted({r["lam"] for r in rows}); n_lam = len(lams)
+assert n_rec % n_lam == 0 and all(sum(1 for r in rows if r["lam"] == l) == n_rec // n_lam for l in lams)
 unsafe = sum(1 for r in rows if r["Jg_over_d"] > 1 + 1e-9)
 trivial = sum(1 for r in rows if r["fallback"])
 assert unsafe == 0 and trivial == 0, "pipeline unsafe/trivial deployments present"
@@ -55,6 +57,10 @@ L = [
  r"\newcommand{\ScoreKeepCoverPct}{%.1f\%%}" % (100.0 * score_viol / nsub),
  r"\newcommand{\SkLPConfirmed}{%s/%s}" % (th(lp_ok), th(lp_ok + lp_bad)),
  r"\newcommand{\SkLPRefuted}{%d}" % lp_bad,
+ r"\newcommand{\SkSemBothHold}{%s}" % th(sk["sem_reach"]["(True, True)"]),
+ r"\newcommand{\SkSemNeitherHold}{%d}" % sk["sem_reach"]["(False, False)"],
+ # compiled-cost trace replay (results/compiler_audit/REPORT.md: 0 mismatches in ~184k trace checks)
+ r"\newcommand{\SkTraceChecks}{184k}",
  r"\newcommand{\SkMedianK}{%d}" % safe_med,
  r"\newcommand{\RawMedianK}{%d}" % raw_med,
  r"\newcommand{\SkRuntime}{%.3f}" % sk["tsafe"],
@@ -70,6 +76,8 @@ L = [
  r"\newcommand{\StructuredAdmitted}{581}",
  r"\newcommand{\StructuredAdmissionPct}{45.7\%}",
  r"\newcommand{\FinalDeployRecords}{%s}" % th(n_rec),
+ r"\newcommand{\FinalDeployPools}{%d}" % (n_rec // n_lam),
+ r"\newcommand{\FinalDeployBudgets}{%d}" % n_lam,
  r"\newcommand{\FinalUnsafeDeployments}{%d}" % unsafe,
  r"\newcommand{\FinalTrivialFallbacks}{%d}" % trivial,
  r"\newcommand{\HighBudgetUsePct}{%.1f\%%}" % (100.0 * hi),

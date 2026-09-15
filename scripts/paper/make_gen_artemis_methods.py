@@ -96,13 +96,17 @@ for src, backbone, name, year, bib, av, rc in rows:
         f" & {o['arrow']['size_median']:.0f} & {pct(o['pool']['any'])} & {o['pool']['size_median']:.0f} \\\\\n")
 A.append("\\midrule\n")
 o = U["overall"]
-A.append("All nine methods, union of samples & both & " + " & ".join(
+A.append("All methods, union of samples & both & " + " & ".join(
     f"{pct(o[a]['any'])} & {pct(o[a]['recall'])}" for a in ("top1", "majority", "arrow")) +
     f" & {o['arrow']['size_median']:.1f} & {pct(o['pool']['any'])} & {o['pool']['size_median']:.1f} \\\\\n")
 open(os.path.join(GEN, "gen_artemis_methods_app.tex"), "w").write(HEAD + "".join(A))
 
 # ---- macros
+_per_method = {}
+for s_ in d["sources"]: _per_method.setdefault(s_.split("/")[1], []).append(s_.split("/")[0])
+assert all(len(v) == 2 or v == ["gemini-2.5-flash"] for v in _per_method.values())
 M = [mac("AmMethods", 9), mac("AmRows", len(rows)), mac("AmSamplesUnion", 190),
+     mac("AmMethodsBoth", sum(1 for v in _per_method.values() if len(v) == 2)), mac("AmMethodsGeminiOnly", sum(1 for v in _per_method.values() if len(v) == 1)),
      mac("AmBestSingleAll", pct(best[3]) + "\\%"), mac("AmBestSingleName", METHODS[best_src[3].split('/')[1]][0]),
      mac("AmBestSingleBackbone", best_src[3].split("/")[0]),
      mac("AmBestSinglePoolAll", pct(d["sources"][best_src[3]]["overall"]["pool"]["any"]) + "\\%"),

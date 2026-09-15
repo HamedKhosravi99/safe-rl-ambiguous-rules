@@ -30,6 +30,7 @@ assert len({(x["n"], x["rep"], x["d"], x["uid"], x["k"]) for x in r["primary"]})
 cls = {d: {c: set(m) for c, m in v.items()} for d, v in r["classes"].items()}
 hard = cls["0.05"][min(cls["0.05"], key=lambda s: float(s.split("=")[1]))]; easy = cls["0.05"][max(cls["0.05"], key=lambda s: float(s.split("=")[1]))]
 assert len(hard) == 5 and len(easy) == 22
+mac("VfHardCount", len(hard)); mac("VfEasyCount", len(easy))
 n_insuff = sum(1 for x in r["primary"] if not x["truth"] and x["d"] == D and x["n"] == grid[0])
 assert n_insuff == 29 * meta["reps"]
 
@@ -79,6 +80,16 @@ for d in ("0.02", "0.05", "0.1"):
     for cname, members in cls[d].items():
         n_d = nstar(float(d), members, "DUAL"); ratios.append(n_d / r["istar"][d][cname]["n_info"])
 mac("VfRatioLo", f"{min(ratios):.0f}"); mac("VfRatioHi", f"{max(ratios):.0f}"); mac("VfClasses", len(ratios))
+# generic uniform certificate against the floor, on the classes it reaches within the grid
+def sci(x):
+    m, e = f"{x:.1e}".split("e"); return f"${m}\\times10^{{{int(e)}}}$"
+gen_ratios = []
+for d in ("0.02", "0.05", "0.1"):
+    for cname, members in cls[d].items():
+        n_u = nstar(float(d), members, "UNIFORM")
+        if n_u is not None: gen_ratios.append(n_u / r["istar"][d][cname]["n_info"])
+assert gen_ratios and min(gen_ratios) > max(ratios)
+mac("VfGenericRatioLo", sci(min(gen_ratios))); mac("VfGenericRatioHi", sci(max(gen_ratios))); mac("VfGenericClasses", len(gen_ratios))
 # hard class over all independent draws
 for n, name in ((1e5, "VfHardAtEfive"), (10 ** 5.5, "VfHardAtThreeEfive"), (1e6, "VfHardAtEsix")):
     rows = [x for x in r["primary"] + r["extra_hard"] if abs(x["n"] - n) < 1e-6 and x["d"] == D and key(x) in hard]

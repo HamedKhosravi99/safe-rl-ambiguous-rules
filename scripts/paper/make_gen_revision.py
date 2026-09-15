@@ -127,6 +127,7 @@ M += [mac("RtTotalLps", num(tot_lp)), mac("RtTotalMilps", num(tot_milp)),
       mac("RtTotalWall", f"{sum(rt[k]['wall_seconds'] for k, _, _ in order):.0f}"),
       mac("RtPeakMb", f"{max(rt[k]['peak_rss_mb'] for k, _, _ in order):.0f}"),
       mac("RtPsFaceLps", num(rt["policy_sufficiency"]["n_face_lps_by_construction"])),
+      mac("RtPsSeconds", f"{rt['policy_sufficiency']['wall_seconds']:.1f}"),
       mac("RtPsValueLps", num(rt["policy_sufficiency"]["n_value_lps_by_construction"])),
       mac("RtPsTieLps", num(rt["policy_sufficiency"]["n_tiebreak_lps_by_construction"])),
       mac("RtLadderRows", num(rt["class_ladder"]["n_rows"]))]
