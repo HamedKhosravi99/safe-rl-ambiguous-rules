@@ -19,7 +19,7 @@ assert single_tight == 1.0 and all(rate(single, k) == 1.0 for k in tight)       
 assert corset_tight == 0.0 and rate(corset, 5) == 0.0                                  # the retained-set guard violates nothing
 assert single["task_value_mean"] > corset["task_value_mean"]                           # the set guard pays in task value
 mac = lambda k, v: f"\\newcommand{{\\{k}}}{{{v}}}"
-M = [mac("LvSessions", n), mac("LvModel", f"\\texttt{{{s['model']}}}"),
+M = [mac("LvSessions", n), mac("LvModel", {"gpt-4o-mini": "GPT-4o-mini"}.get(s["model"], s["model"])),
      mac("LvRetainedKs", ",".join(str(k) for k in ks)), mac("LvTightKs", ",".join(str(k) for k in tight)),
      mac("LvSingleValue", f"{single['task_value_mean']:.2f}"), mac("LvSetValue", f"{corset['task_value_mean']:.2f}"),
      mac("LvSingleTightViol", f"{single_tight:.2f}"), mac("LvSetTightViol", f"{corset_tight:.2f}"),
