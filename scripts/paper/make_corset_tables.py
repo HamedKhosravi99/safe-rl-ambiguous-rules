@@ -449,6 +449,7 @@ def gen_dsrl():
     have_mp = bool(mp)
     rows, viol_cells, improved = [], 0, 0
     mp_viol, mp_overlap, exceptions = 0, 0, []
+    n_cells = 0                                # task-learner cells reported in the table
     for t in tasks:
         for ln in learners:
             s = cell(recs, t, ln, "single")
@@ -456,6 +457,7 @@ def gen_dsrl():
             m = cell(mp, t, ln, "single") if have_mp else None
             if s is None or a is None:
                 continue
+            n_cells += 1
             if m and m[2] > 1.0:
                 mp_viol += 1               # c=20 most-plausible violates strictest
             if s[2] > 1.0:
@@ -508,6 +510,7 @@ def gen_dsrl():
     write("gen_dsrl_seedinfo.tex",
           f"\\def\\dsrlseedmain{{{main_txt}}}\n"
           f"\\def\\dsrlseedmp{{{mp_txt}}}\n"
+          f"\\def\\dsrlcells{{{n_cells}}}\n"
           f"\\def\\dsrlviol{{{viol_cells}}}\n"
           f"\\def\\dsrlimproved{{{improved}}}\n"
           f"\\def\\dsrlmpviol{{{mp_viol}}}\n"
