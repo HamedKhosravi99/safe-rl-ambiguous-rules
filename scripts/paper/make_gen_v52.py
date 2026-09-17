@@ -36,6 +36,13 @@ for l in ("fqi", "cpq", "pid", "cql"):
         T.append("\\addlinespace[1pt]")
 open(os.path.join(GEN, "gen_v52_table.tex"), "w").write(H + "\n".join(T[:-1]) + "\n")
 mac("VcArmPolicies", len([r for r in rows if r["learner"] == "fqi" and r["n"] == 20000 and arm_of(r) == "arrow"]))
+# the n = 2,000 ARROW and surrogate policies of the tabular learners, not listed in the compact table
+small = [r for r in rows if r["n"] == 2000 and arm_of(r) in ("arrow", "surrogate")]
+small_arrow = [r for r in small if arm_of(r) == "arrow"]; small_surr = [r for r in small if arm_of(r) == "surrogate"]
+assert len(small) == 540 and len(small_arrow) == len(small_surr) == 270 and all(r["learner"] != "cql" for r in small)
+sa_unsafe = [r for r in small_arrow if not r["safe"]]; assert sa_unsafe and all(not r["ship"] for r in sa_unsafe)
+assert all(r["safe"] and r["ship"] for r in small_surr)
+mac("VcSmallPolicies", len(small)); mac("VcSmallArrowN", len(small_arrow)); mac("VcSmallArrowUnsafe", len(sa_unsafe)); mac("VcSmallSurrN", len(small_surr))
 mac("VcArrowPassLo", pct(min(pass_arrow), 0)); mac("VcArrowPassHi", pct(max(pass_arrow), 0)); mac("VcArrowDepRetLo", pct(min(dep_arrow))); mac("VcArrowDepRetHi", pct(max(dep_arrow)))
 cql_arrow = [r for r in rows if r["learner"] == "cql" and arm_of(r) == "arrow"]
 assert sum(1 for r in cql_arrow if not r["safe"]) > 0 and all(not r["ship"] for r in cql_arrow if not r["safe"])   # the unsafe CQL runs are all rejected

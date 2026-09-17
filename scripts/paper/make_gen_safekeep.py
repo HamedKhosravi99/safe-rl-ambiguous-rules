@@ -25,8 +25,12 @@ cover_fail = sk["cover_fail"]; lp_ok = sk["lp_ok"]; lp_bad = sk["lp_bad"]
 assert cover_fail == 0 and lp_bad == 0, "SAFE-KEEP cover/LP failures present"
 assert safe_med < raw_med, "no compression"
 
-# score-KEEP cover violations (measured in the same run: 98/579)
-score_viol = 98
+# Score-Keep cover audit under the same relation (saorl/benchmark_sg/score_keep_cover_run.py)
+sc = json.loads((ROOT / "results/safe_keep_final/score_keep_cover.json").read_text())
+assert sc["nsub"] == nsub and sc["safe_keep_cover_failures"] == cover_fail, "cover audit population differs"
+assert int(sc["median_K_raw"]) == raw_med and int(sc["median_K_safe"]) == safe_med, "cover audit sizes differ"
+score_viol = sc["score_keep_cover_failures"]; score_abstain = sc["score_keep_retains_nothing"]; score_gold_dropped = sc["score_keep_governing_dropped"]
+assert 0 < score_viol < nsub and score_gold_dropped > 0
 assert nsub == 579, nsub
 
 # ---- final pipeline -------------------------------------------------------
@@ -55,6 +59,8 @@ L = [
  r"\newcommand{\SkCoverViolations}{%d/%d}" % (cover_fail, nsub),
  r"\newcommand{\ScoreKeepCoverViolations}{%d/%d}" % (score_viol, nsub),
  r"\newcommand{\ScoreKeepCoverPct}{%.1f\%%}" % (100.0 * score_viol / nsub),
+ r"\newcommand{\ScoreKeepAbstain}{%d}" % score_abstain,
+ r"\newcommand{\ScoreKeepGoldDropped}{%d}" % score_gold_dropped,
  r"\newcommand{\SkLPConfirmed}{%s/%s}" % (th(lp_ok), th(lp_ok + lp_bad)),
  r"\newcommand{\SkLPRefuted}{%d}" % lp_bad,
  r"\newcommand{\SkSemBothHold}{%s}" % th(sk["sem_reach"]["(True, True)"]),

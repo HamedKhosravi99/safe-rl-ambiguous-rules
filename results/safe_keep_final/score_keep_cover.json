@@ -1,0 +1,13 @@
+{
+ "nsub": 579,
+ "safe_keep_cover_failures": 0,
+ "score_keep_retains_nothing": 53,
+ "score_keep_cover_failures": 46,
+ "score_keep_governing_dropped": 11,
+ "median_K_raw": 8.0,
+ "median_K_safe": 1.0,
+ "median_K_score": 7.0,
+ "max_K_raw": 10,
+ "max_K_safe": 2,
+ "max_K_score": 10
+}
