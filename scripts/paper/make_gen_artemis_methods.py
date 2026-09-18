@@ -95,9 +95,9 @@ for src, backbone, name, year, bib, av, rc in rows:
     x = d["sources"][src]; pv = cols(x, "pool")
     S.append(f"{name} & {SHORT[backbone]} & " + " & ".join(f"{pct(v)} ({pct(pv[j])})" for j, v in enumerate(av)) + " \\\\\n")
 S.append("\\midrule\n")
-S.append("Self-consistency vote & both & " + " & ".join(pct(v) for v in maj) + " \\\\\n")
-S.append("All distinct samples & both & " + " & ".join(pct(v) for v in pool) + " \\\\\n")
-S.append("\\method{} \\textsc{Score-Keep} & both & " + " & ".join(pct(v) for v in arrow) + " \\\\\n")
+S.append("Self-consistency vote & union & " + " & ".join(pct(v) for v in maj) + " \\\\\n")
+S.append("All distinct samples & union & " + " & ".join(pct(v) for v in pool) + " \\\\\n")
+S.append("\\method{} \\textsc{Score-Keep} & union & " + " & ".join(pct(v) for v in arrow) + " \\\\\n")
 open(os.path.join(GEN, "gen_artemis_methods_table_short.tex"), "w").write(HEAD + "".join(S))
 
 # ---- appendix rows: per method, four arms (any / recall / size)
