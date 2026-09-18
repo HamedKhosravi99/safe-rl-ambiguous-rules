@@ -87,6 +87,19 @@ T.append(f"All distinct samples & -- & both & {U['overall']['pool']['size_median
 T.append(f"\\method{{}} \\textsc{{Score-Keep}} & -- & both & {U['overall']['arrow']['size_median']:.1f} & " + " & ".join(pct(v) for v in arrow) + " \\\\\n")
 open(os.path.join(GEN, "gen_artemis_methods_table.tex"), "w").write(HEAD + "".join(T))
 
+# ---- the same rows at the template's font size (arrow_v4): no citations in the cells (they go to the
+# caption), short LLM labels, no year or size column
+SHORT = {"gemini-2.5-flash": "Gemini", "gpt-4.1": "GPT-4.1"}
+S = []
+for src, backbone, name, year, bib, av, rc in rows:
+    x = d["sources"][src]; pv = cols(x, "pool")
+    S.append(f"{name} & {SHORT[backbone]} & " + " & ".join(f"{pct(v)} ({pct(pv[j])})" for j, v in enumerate(av)) + " \\\\\n")
+S.append("\\midrule\n")
+S.append("Self-consistency vote & both & " + " & ".join(pct(v) for v in maj) + " \\\\\n")
+S.append("All distinct samples & both & " + " & ".join(pct(v) for v in pool) + " \\\\\n")
+S.append("\\method{} \\textsc{Score-Keep} & both & " + " & ".join(pct(v) for v in arrow) + " \\\\\n")
+open(os.path.join(GEN, "gen_artemis_methods_table_short.tex"), "w").write(HEAD + "".join(S))
+
 # ---- appendix rows: per method, four arms (any / recall / size)
 A = []
 for src, backbone, name, year, bib, av, rc in rows:
