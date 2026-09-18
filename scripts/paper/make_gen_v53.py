@@ -1,5 +1,6 @@
 """Emit generated/gen_v53.tex (macros), gen_v53_table.tex (certified counts by size and certificate, d = 0.05),
-gen_v53_classes.tex (three scales per sufficient-reading class: n* of each certificate and the information floor),
+gen_v53_classes.tex (three scales per sufficient-reading class: n* of each certificate and the witness-based information
+floor kl(1-delta,delta)/Ibar, Ibar the divergence of the positive-margin witness chain and an upper bound on I*),
 gen_v53_tightening.tex (smallest certified budget tightening for the hard class) and gen_v53_secondary.tex from
 results/e2e/certificate_v53.json (REGISTRATION_V53).  Assertions are structural only (shapes, identical draw ids across
 certificates, ranges, truth matching the exact archive); method ordering, monotonicity and the false-certificate count are
@@ -55,7 +56,7 @@ for n in grid:
         cells.append((f"{tot // reps}" if tot % reps == 0 else f"{tot / reps:.1f}") + " / 27")
     f = sum(x[c]["pass"] for c in CERTS for x in rows if not x["truth"])
     T.append(f"{fmt_n(n)} & " + " & ".join(cells) + f" & {f} \\\\")
-# n* per class and certificate (all budgets) with the information floor
+# n* per class and certificate (all budgets) with the witness-based information floor
 C = []
 for d in ("0.02", "0.05", "0.1"):
     for cname, members in sorted(cls[d].items(), key=lambda kv: float(kv[0].split("=")[1])):

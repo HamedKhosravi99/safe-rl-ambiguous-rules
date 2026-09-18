@@ -27,4 +27,18 @@ secondary (path-sampled) n=1e+04: UNIFORM: 0/135 suff, 0 false | DUAL: 110/135 s
 secondary (path-sampled) n=1e+05: UNIFORM: 0/135 suff, 0 false | DUAL: 110/135 suff, 0 false  (115s)
 secondary (path-sampled) n=1e+06: UNIFORM: 0/135 suff, 0 false | DUAL: 135/135 suff, 0 false  (126s)
 secondary (path-sampled) n=1e+07: UNIFORM: 0/135 suff, 0 false | DUAL: 135/135 suff, 0 false  (221s)
-wrote /Users/hkhosravi7/Documents/GitHub/Offilne RL/results_e2e/certificate_v53.json (221s)
+wrote results/theory_extension/certificate_v53.json (221s)
+--- witness refresh 2026-09-18 19:29: required margin 1e-06
+Ibar d=0.02 kappa=0.0092 (x22): Ibar=3.6417e-03 margin=1.00e-06 n_info=727.681 (was 727.791)
+Ibar d=0.05 kappa=0.0028 (x5): Ibar=7.2139e-05 margin=1.00e-06 n_info=36734.4 (was 36757.1)
+Ibar d=0.05 kappa=0.0337 (x22): Ibar=1.2496e-02 margin=1.00e-06 n_info=212.06 (was 212.067)
+Ibar d=0.1 kappa=0.0146 (x1): Ibar=2.7041e-03 margin=1.00e-06 n_info=979.977 (was 980.092)
+Ibar d=0.1 kappa=0.0260 (x5): Ibar=1.8861e-03 margin=1.00e-06 n_info=1405 (was 1405.08)
+Ibar d=0.1 kappa=0.0745 (x22): Ibar=1.8764e-02 margin=1.00e-06 n_info=141.229 (was 141.231)
+verify d=0.02 kappa=0.0092: ds_1e-10: Gamma=1.000e-06, eq-resid=1.4e-17, ub-viol=0.0e+00, ipm_1e-10: Gamma=1.000e-06, eq-resid=1.4e-17, ub-viol=0.0e+00
+verify d=0.05 kappa=0.0028: ds_1e-10: Gamma=1.000e-06, eq-resid=1.7e-17, ub-viol=0.0e+00, ipm_1e-10: Gamma=1.000e-06, eq-resid=1.7e-17, ub-viol=0.0e+00
+verify d=0.05 kappa=0.0337: ds_1e-10: Gamma=1.000e-06, eq-resid=7.2e-18, ub-viol=0.0e+00, ipm_1e-10: Gamma=1.000e-06, eq-resid=7.2e-18, ub-viol=0.0e+00
+verify d=0.1 kappa=0.0146: ds_1e-10: Gamma=1.000e-06, eq-resid=6.7e-18, ub-viol=0.0e+00, ipm_1e-10: Gamma=1.000e-06, eq-resid=6.7e-18, ub-viol=0.0e+00
+verify d=0.1 kappa=0.0260: ds_1e-10: Gamma=1.000e-06, eq-resid=2.3e-17, ub-viol=0.0e+00, ipm_1e-10: Gamma=1.000e-06, eq-resid=2.3e-17, ub-viol=0.0e+00
+verify d=0.1 kappa=0.0745: ds_1e-10: Gamma=1.000e-06, eq-resid=2.8e-17, ub-viol=0.0e+00, ipm_1e-10: Gamma=1.000e-06, eq-resid=2.8e-17, ub-viol=0.0e+00
+wrote results/theory_extension/certificate_v53.json (5s)

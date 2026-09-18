@@ -3,7 +3,8 @@
 
 Three certificates on identical chain draws -- UNIFORM (archived, simulation-lemma slack), OCC (row-specific,
 occupancy-weighted) and DUAL (robust shaped-dominance witness; robust-dual ARROW) -- plus DUAL(eta) budget tightening,
-the oracle decision-information radius I*, and a path-sampled secondary.  Every certificate is a deterministic
+the witness divergence Ibar, an upper bound on the decision-information radius I* obtained from a decision-reversing
+chain whose margin is at least WITNESS_MARGIN (re-verified by verify_witnesses), and a path-sampled secondary.  Every certificate is a deterministic
 function of (Mhat, N, delta); soundness holds on the event E = { ||M_z - Mhat_z||_1 <= alpha_z for all rows }.
 Writes results/e2e/certificate_v53.json.
 """
@@ -15,9 +16,10 @@ sys.path.insert(0, os.path.join(REPO, "src"))
 from saorl.benchmark_sg import control_suite as cs
 GAMMA = cs.GAMMA
 OUT = os.path.join(REPO, "results", "theory_extension", "certificate_v53.json")
-LOG = open(os.path.join(REPO, "results", "theory_extension", "certificate_v53_progress.txt"), "w")
+LOG_PATH = os.path.join(REPO, "results", "theory_extension", "certificate_v53_progress.txt"); LOG = None
 def log(*a):
-    print(*a, file=LOG, flush=True); print(*a, flush=True)
+    if LOG is not None: print(*a, file=LOG, flush=True)
+    print(*a, flush=True)
 
 # ---------------------------------------------------------------- frozen design (REGISTRATION_V53)
 EPS, DELTA = 0.01, 0.05
@@ -28,6 +30,7 @@ HARD_EXTRA_REPS, HARD_EXTRA_N, HARD_D = 50, [1e5, 10 ** 5.5, 1e6], 0.05
 ETAS = [0.001, 0.002, 0.005, 0.01, 0.02]
 SEC_N, SEC_PATHS = [1e4, 1e5, 1e6, 1e7], 5
 SEED_PRIMARY, SEED_EXTRA, SEED_SECONDARY = 20260913, 20260914, 20260915
+WITNESS_MARGIN, WITNESS_SLACK = 1e-6, 1e-9   # required margin Gamma > 0 of the decision-reversing witness chain, and the tolerance of its re-verification
 LSIM = GAMMA / (2 * (1 - GAMMA)); SPAN_R, SPAN_C = 0.7, 1.0
 
 class _R:
@@ -115,7 +118,7 @@ def cert_dual(C, k, d, alpha, eta=0.0):
     W = robust_dual(C, k, 1 - k, alpha, Vlow, d - eta)
     return bool(W <= d + 1e-9), float(W - d)
 
-# ---------------------------------------------------------------- oracle: decision-information radius I*
+# ---------------------------------------------------------------- witness divergence Ibar, an upper bound on the decision-information radius I*
 def margin_under(rd, Q, k, d):
     C = Compiled(rd, Q); V = lp_max(C.r, [C.c[k]], [d], C.A, C.b)
     if V is None: return None
@@ -132,16 +135,21 @@ def istar(rd, k, d):
             for _ in range(30):
                 mid = (lo + hi) / 2
                 (lo, hi) = (mid, hi) if (margin_under(rd, Q_of(mid), k, d) or -1) >= 0 else (lo, mid)
-            Q = Q_of(hi); I = wkl(P, Q, w)
-            if I < best[0]: best = (I, Q, f"row {z}: {i}->{j}, t={hi:.5f}")
+            if -mhi < WITNESS_MARGIN: continue                    # the far end of this direction does not reach the required margin
+            lo2, hi2 = hi, P[z, i] * 0.999                       # smallest shift with Gamma >= WITNESS_MARGIN; Gamma(hi) > 0 is only tiny
+            for _ in range(40):
+                mid = (lo2 + hi2) / 2; g = margin_under(rd, Q_of(mid), k, d)
+                (lo2, hi2) = (mid, hi2) if (g is None or -g < WITNESS_MARGIN) else (lo2, mid)
+            Q = Q_of(hi2); I = wkl(P, Q, w)
+            if I < best[0]: best = (I, Q, f"row {z}: {i}->{j}, t={hi2:.5f}")
     if best[1] is None: return dict(I=np.inf, n_info=np.inf, l1_rows=[0.0] * R_ROWS, Q=None, note="no flipping chain found in the search")
     def unpack(th): Qm = np.exp(th.reshape(R_ROWS, R_ROWS)); return Qm / Qm.sum(1, keepdims=True)
-    cons = {"type": "ineq", "fun": lambda th: -((margin_under(rd, unpack(th), k, d)) if margin_under(rd, unpack(th), k, d) is not None else -1.0) - 1e-7}
+    cons = {"type": "ineq", "fun": lambda th: -((margin_under(rd, unpack(th), k, d)) if margin_under(rd, unpack(th), k, d) is not None else -1.0) - WITNESS_MARGIN}
     res = minimize(lambda th: wkl(P, unpack(th), w), np.log(np.maximum(best[1], 1e-9)).reshape(-1), method="SLSQP", constraints=[cons], options={"maxiter": 60, "ftol": 1e-12})
-    Qr = unpack(res.x); mr = margin_under(rd, Qr, k, d); Ir = wkl(P, Qr, w) if (mr is not None and mr <= 1e-6) else np.inf
+    Qr = unpack(res.x); mr = margin_under(rd, Qr, k, d); Ir = wkl(P, Qr, w) if (mr is not None and -mr >= WITNESS_MARGIN - WITNESS_SLACK) else np.inf
     I, Q = (Ir, Qr) if Ir < best[0] else (best[0], best[1])
     kl_delta = (1 - DELTA) * math.log((1 - DELTA) / DELTA) + DELTA * math.log(DELTA / (1 - DELTA))
-    return dict(I=I, n_info=kl_delta / I, n_first_order=math.log(1 / DELTA) / I, l1_rows=[float(np.abs(Q[z] - P[z]).sum()) for z in range(R_ROWS)], Q=Q.tolist(), start=best[2])
+    return dict(I=I, n_info=kl_delta / I, n_first_order=math.log(1 / DELTA) / I, l1_rows=[float(np.abs(Q[z] - P[z]).sum()) for z in range(R_ROWS)], Q=Q.tolist(), margin=float(-margin_under(rd, Q, k, d)), witness_margin_target=WITNESS_MARGIN, start=best[2])
 
 # ---------------------------------------------------------------- truth and classes
 truth = {}
@@ -161,6 +169,35 @@ for d in BUDGETS:
     log(f"d={d}: sufficient-reading classes by margin: " + ", ".join(f"kappa={kp:.4f} x{len(v)}" for kp, v in sorted(cl.items())))
 hard_members = set(classes[str(HARD_D)][min(classes[str(HARD_D)], key=lambda s: float(s.split('=')[1]))])
 log("hard class at d=%.2f: %d readings" % (HARD_D, len(hard_members)))
+
+def verify_witnesses(results):
+    """Re-solve both linear programs at every reported witness chain with two HiGHS algorithms at feasibility tolerance
+    1e-10 and require Gamma >= WITNESS_MARGIN - WITNESS_SLACK; the primal residuals of the solves are recorded too.
+    A failure raises, so no reported floor rests on a witness whose membership in B_psi is in doubt."""
+    global lp_max
+    settings = {"ds_1e-10": ("highs-ds", {"primal_feasibility_tolerance": 1e-10, "dual_feasibility_tolerance": 1e-10}),
+                "ipm_1e-10": ("highs-ipm", {"primal_feasibility_tolerance": 1e-10, "dual_feasibility_tolerance": 1e-10, "ipm_optimality_tolerance": 1e-12})}
+    base = lp_max
+    for d, classes_d in results["istar"].items():
+        for cname, rec in classes_d.items():
+            if rec.get("Q") is None: continue
+            uid, k = rec["representative"].split("|"); k = int(k); rd = dict(rules)[uid]; Q = np.array(rec["Q"]); ver = {}
+            for name, (method, opts) in settings.items():
+                resid = {"eq": 0.0, "ub": 0.0}
+                def lp_chk(obj, rows, rhs, A, b):
+                    r = linprog(-obj, A_ub=np.array(rows) if rows else None, b_ub=np.array(rhs) if rows else None, A_eq=A, b_eq=b, bounds=(0, None), method=method, options=opts)
+                    if r.status != 0: return None
+                    resid["eq"] = max(resid["eq"], float(np.abs(A @ r.x - b).max()))
+                    if rows: resid["ub"] = max(resid["ub"], float((np.array(rows) @ r.x - np.array(rhs)).max()))
+                    return float(obj @ r.x)
+                lp_max = lp_chk
+                try: m = margin_under(rd, Q, k, float(d))
+                finally: lp_max = base
+                gamma = None if m is None else -m
+                ver[name] = dict(margin=gamma, max_eq_residual=resid["eq"], max_ub_violation=resid["ub"])
+                assert gamma is not None and gamma >= WITNESS_MARGIN - WITNESS_SLACK, f"witness for d={d} {cname} fails verification under {name}: Gamma={gamma}"
+            rec["verification"] = ver
+            log(f"verify d={d} {cname}: " + ", ".join(f"{n}: Gamma={v['margin']:.3e}, eq-resid={v['max_eq_residual']:.1e}, ub-viol={v['max_ub_violation']:.1e}" for n, v in ver.items()))
 
 def draw_counts(rng, n):
     N = [max(2, int(round(n * PI[z]))) for z in range(R_ROWS)]
@@ -189,7 +226,8 @@ def evaluate(rd_map, Mhat, N, d_list, reading_filter=None, with_tightening=False
     return out
 
 def main():
-    t0 = time.time(); results = dict(meta=dict(eps=EPS, delta=DELTA, budgets=BUDGETS, n_grid=N_GRID, reps=REPS, hard_extra=dict(reps=HARD_EXTRA_REPS, n=HARD_EXTRA_N, d=HARD_D),
+    global LOG; LOG = open(LOG_PATH, "w")
+    t0 = time.time(); results = dict(meta=dict(witness_margin=WITNESS_MARGIN, eps=EPS, delta=DELTA, budgets=BUDGETS, n_grid=N_GRID, reps=REPS, hard_extra=dict(reps=HARD_EXTRA_REPS, n=HARD_EXTRA_N, d=HARD_D),
                                                   etas=ETAS, secondary=dict(n=SEC_N, paths=SEC_PATHS), seeds=dict(primary=SEED_PRIMARY, extra=SEED_EXTRA, secondary=SEED_SECONDARY),
                                                   M_true=M_TRUE.tolist(), pi=PI.tolist(), registration="results_e2e/REGISTRATION_V53.md"),
                                         truth={f"{u}|{k}|{d}": v for (u, k, d), v in truth.items() if v}, classes=classes, primary=[], extra_hard=[], secondary=[], istar={}, price={})
@@ -219,14 +257,15 @@ def main():
             if not (t and t["sufficient"]): continue
             V0 = lp_max(C.r, [C.c[k]], [HARD_D], C.A, C.b)
             results["price"][f"{uid}|{k}"] = {str(eta): (V0 - lp_max(C.r, [C.c[k]], [HARD_D - eta], C.A, C.b)) / V0 for eta in ETAS}
-    # ---- oracle I* per class and budget
+    # ---- witness divergence Ibar (upper bound on I*) per class and budget
     for d in BUDGETS:
         results["istar"][str(d)] = {}
         for cname, members in classes[str(d)].items():
             uid, k = members[0].split("|"); rd = dict(rules)[uid]
             results["istar"][str(d)][cname] = dict(istar(rd, int(k), d), representative=members[0], size=len(members))
-            r = results["istar"][str(d)][cname]; log(f"I* d={d} {cname} (x{len(members)}): I*={r['I']:.3e} n_info=kl(1-delta,delta)/I*={r['n_info']:.3g}, ln(1/delta)/I*={r.get('n_first_order', float('nan')):.3g}; L1 moves {np.round(r['l1_rows'], 4).tolist()}")
-    log(f"oracle done ({time.time()-t0:.0f}s)")
+            r = results["istar"][str(d)][cname]; log(f"Ibar d={d} {cname} (x{len(members)}): Ibar={r['I']:.3e} margin={r.get('margin', float('nan')):.2e} n_info=kl(1-delta,delta)/Ibar={r['n_info']:.3g}, ln(1/delta)/Ibar={r.get('n_first_order', float('nan')):.3g}; L1 moves {np.round(r['l1_rows'], 4).tolist()}")
+    verify_witnesses(results)
+    log(f"witness search and verification done ({time.time()-t0:.0f}s)")
     # ---- secondary: counts from one sampled path of the load chain
     rng = np.random.default_rng(SEED_SECONDARY)
     cum = np.cumsum(M_TRUE, axis=1)
@@ -252,5 +291,22 @@ def main():
     json.dump(results, open(OUT, "w"))
     log(f"wrote {OUT} ({time.time()-t0:.0f}s)")
 
+def refresh_istar():
+    """Recompute only the witness section of the existing results file (same classes and truth), verify it, write back."""
+    global LOG; LOG = open(LOG_PATH, "a"); t0 = time.time()
+    results = json.load(open(OUT)); results["meta"]["witness_margin"] = WITNESS_MARGIN
+    log(f"--- witness refresh {time.strftime('%Y-%m-%d %H:%M')}: required margin {WITNESS_MARGIN:g}")
+    old = {(d, c): v["n_info"] for d, cl in results["istar"].items() for c, v in cl.items()}
+    results["istar"] = {}
+    for d in BUDGETS:
+        results["istar"][str(d)] = {}
+        for cname, members in classes[str(d)].items():
+            uid, k = members[0].split("|"); rd = dict(rules)[uid]
+            results["istar"][str(d)][cname] = dict(istar(rd, int(k), d), representative=members[0], size=len(members))
+            r = results["istar"][str(d)][cname]
+            log(f"Ibar d={d} {cname} (x{len(members)}): Ibar={r['I']:.4e} margin={r.get('margin', float('nan')):.2e} n_info={r['n_info']:.6g} (was {old.get((str(d), cname), float('nan')):.6g})")
+    verify_witnesses(results)
+    json.dump(results, open(OUT, "w")); log(f"wrote {OUT} ({time.time()-t0:.0f}s)")
+
 if __name__ == "__main__":
-    main()
+    refresh_istar() if "--istar-only" in sys.argv else main()

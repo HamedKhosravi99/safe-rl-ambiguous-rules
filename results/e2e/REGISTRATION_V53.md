@@ -87,3 +87,15 @@ H4 (tightening) at n = 1e5 the hard class certifies at eta <= 0.01 with an exact
 H5 (idealization) the secondary path-sampled counts reproduce the qualitative ordering and scales of the primary run.
 Method ordering and monotonicity in n are outcomes, not assertions.  The generator asserts only structural facts:
 valid shapes, identical draw ids across certificates, counts within range, and the exact verdicts matching the archive.
+
+- Note (2026-09-18, proof audit). The quantity reported as I* above is the weighted relative entropy of a decision-reversing
+  chain found by the search (directional bisection, then SLSQP refinement), and the search does not certify a global
+  infimum. That chain lies in B_psi, so the reported value is an upper bound Ibar >= I* and the floor kl(1 - delta, delta) / Ibar
+  is at most the bound of Theorem 4.2(b); it remains a valid lower bound on the transitions used by any delta-sound procedure
+  that certifies the reading under the true chain with probability at least 1 - delta. The closure-by-continuity sentence
+  above is not relied upon. The search now targets a witness margin Gamma >= 1e-6 (it was 1e-7), and verify_witnesses in
+  certificate_v53.py re-solves both linear programs at every reported witness with HiGHS dual simplex and interior point at
+  feasibility tolerance 1e-10, requiring Gamma >= 1e-6 - 1e-9; the six stored witnesses have recomputed margin 1.000e-6 under
+  both, with equality residuals below 3e-17. The refresh (certificate_v53.py --istar-only) changed the six floors by at most
+  0.07% (hard class 36,757 -> 36,734); every other archived number is untouched. Paper wording: Table 14, Figure 2 and
+  Appendix D now say witness divergence Ibar and witness-based information floor.

@@ -1,6 +1,7 @@
 """figure/fig_v53_scales.pdf: three data scales per sufficient-reading class of the monitoring suite (V53) --
 the smallest reliably certifying log size n* of the generic uniform certificate, the occupancy-weighted certificate and the
-robust-dual certificate, and the information floor kl(1-delta,delta)/I* -- against 1/kappa^2.  Every point is read from
+robust-dual certificate, and the witness-based information floor kl(1-delta,delta)/Ibar, Ibar the divergence of the
+positive-margin witness chain and an upper bound on I* -- against 1/kappa^2.  Every point is read from
 results/e2e/certificate_v53.json; censored n* (not reached within the grid) are drawn as open markers at the grid maximum."""
 import json, os, math
 import numpy as np, matplotlib
@@ -30,7 +31,7 @@ def series(c, marker, color, label):
 series("UNIFORM", "^", "black", "uniform certificate (generic)")
 series("OCC", "D", "C1", "occupancy-weighted")
 series("DUAL", "s", "C0", "robust dual (\\textsc{Arrow})" if False else "robust dual (ARROW)")
-ax.scatter(x, [p["n_info"] for p in pts], marker="o", s=34, color="C2", label="information floor kl(1$-\\delta$,$\\delta$)/$I^\\star$", zorder=3)
+ax.scatter(x, [p["n_info"] for p in pts], marker="o", s=34, color="C2", label="witness-based floor kl(1$-\\delta$,$\\delta$)/$\\bar I$", zorder=3)
 # slope-1 reference through the geometric centre of the robust-dual points
 xd = x; yd = np.array([p["DUAL"] for p in pts], float)
 c0 = np.exp(np.mean(np.log(yd) - np.log(xd))); xs = np.array([x.min() / 2, x.max() * 2])
