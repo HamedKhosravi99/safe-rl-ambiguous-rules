@@ -28,7 +28,7 @@ Selection rule as in the paper: the offline-feasible iterate (every honoured cos
 P-hat) with the best offline return; if none is feasible, the iterate with the smallest
 maximal honoured cost.  The singleton arm runs the identical code with K = 1.
 
-## Learner-aware tolerance (Theorem C.9 / eq. contract)
+## Learner-aware tolerance (Proposition S5 (composition with an approximate learner) / eq. contract)
 Calibration seeds 100-104 (disjoint from evaluation seeds 0-9), singleton arm, each learner
 L and log size n, on the 9 instances certified at eps = 0.01: eps_r,L(n) = the largest
 true-model return shortfall V_psi(d) - J_r(pi_hat) over calibration runs, eta_L(n) = the

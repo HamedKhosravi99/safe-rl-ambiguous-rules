@@ -4,7 +4,7 @@ Registered 2026-09-12, before any CHECK outcome on these policies was computed (
 saorl/benchmark_sg/scope_agent_check.py; policies: results_e2e/scope_agent_learn.json, V50).
 
 ## Question
-The learner-aware composition theorem (Theorem C.9) certifies a learned policy without
+The learner-aware composition theorem (Proposition S5 (composition with an approximate learner)) certifies a learned policy without
 post-training evaluation only when the learner meets its contract; V51 showed that the
 tabular single-signal learners do not (calibrated shortfalls 0.06-0.17), while the LP planner
 does from n = 20,000.  The paper's general route for arbitrary learners is checked deployment

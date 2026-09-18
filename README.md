@@ -103,46 +103,41 @@ public NASA C-MAPSS files in `data/cmapss/` (not redistributed). The live agent
 
 ## Map: main-text tables and figures → code
 
-Page numbers refer to the submitted PDF.
+Page numbers refer to the submitted PDF (`arrow_v4.pdf`).
 
 | Display | Page | What it reports | Generator | Archived data |
 |---|---|---|---|---|
-| **Table 1** | 7 | Experimental roadmap (four questions, evidence, theory link) | hand-written | -- |
-| **Table 2** | 8 | Number of the 28 compiled monitoring rules judged reducible to one reading by the value test and by ARROW, per budget and policy class | `scripts/paper/make_gen_v13.py`, `scripts/paper/make_unified_numbers.py` | `results/e2e/policy_sufficiency.json`, `results/e2e/policy_class_budget.json` |
-| **Figure 1** | 8 | Clarification reaches a sufficient reading before full identification | `scripts/paper/make_figs_mpl.py` (`fig_e3_questions.pdf`) | `results/e2e/safe_collapse.json` |
-| **Table 3** | 9 | Normalized return on the agent-service benchmark: combined conservative cost versus the sufficient reading | `scripts/paper/make_gen_v50.py` | `results/e2e/scope_agent.json`, `results/e2e/scope_agent_learn.json` |
-| **Table 4** | 9 | Plausible readings retained on 182 ARTEMIS requirements: nine language-to-specification methods and three selection rules | `scripts/paper/make_gen_artemis_methods.py`, `scripts/paper/make_gen_artemis.py` | `results/e2e/artemis_per_method.json`, `results/e2e/artemis_external.json` |
+| **Table 1** | 8 | Number of the 28 compiled monitoring rules judged reducible to one reading by the value test and by ARROW, per budget | `scripts/paper/make_gen_v13.py`, `scripts/paper/make_unified_numbers.py` | `results/e2e/policy_sufficiency.json`, `results/e2e/policy_class_budget.json` |
+| **Figure 1** | 8 | Clarification progress on 87 service-monitoring candidate sets | `scripts/paper/make_figs_mpl.py` (`fig_e3_questions.pdf`) | `results/e2e/safe_collapse.json` |
+| **Table 2** | 8 | Return as a share of the exact full-set optimum on the agent-service benchmark: combined conservative cost versus the sufficient reading | `scripts/paper/make_gen_v50.py` | `results/e2e/scope_agent.json`, `results/e2e/scope_agent_learn.json` |
+| **Table 3** | 9 | Plausible readings retained on 182 ARTEMIS requirements: nine language-to-specification methods and three selection rules on the union pool | `scripts/paper/make_gen_artemis_methods.py` (`gen_artemis_methods_table_short.tex`), `scripts/paper/make_gen_artemis.py` | `results/e2e/artemis_per_method.json`, `results/e2e/artemis_external.json` |
 
-## Map: appendix tables and figures → code
+## Map: appendix tables, figures and algorithm → code
 
 | Display | Page | Appendix | What it reports | Generator | Archived data |
 |---|---|---|---|---|---|
-| **Table 5** | 14 | A | Positioning by problem solved, safety input and guarantee | hand-written | -- |
-| **Table 6** | 15 | B.1 | Data sources and benchmarks: every corpus, artifact and dataset with the results it feeds | hand-written | `data/rule_corpora/` (pinned commits in `NOTICE.md`) |
-| **Table 7** | 18 | B.3 | Retention and deployment combinations used by the pipeline | hand-written | -- |
-| **Table 8** | 30 | D | Appendix roadmap (question, evidence, theory link, what it establishes) | hand-written; one count from `scripts/paper/make_gen_v52.py` | `results/e2e/scope_agent_check.json` |
-| **Table 9** | 31 | D.1 | What single-reading optimization hides, solved exactly (compiled suite) | `scripts/paper/make_gen_csuite_bind.py` joining fragments of `scripts/paper/make_corset_tables.py` | `results/conformal/benchmark_sg/control_suite.json`, `results/e2e/exact_nonnested.json` |
-| **Table 10** | 31 | D.1 | Cross-organization replication: 465 pools from eight further organizations, value test vs ARROW at d=0.005 | `scripts/paper/make_gen_revision.py` (`gen_third_corpus_compact.tex`) | `results/e2e/third_corpus.json` |
-| **Table 11** | 31 | D.1 | Live service agent under a published rate limit (50 paired billed sessions per condition) | `scripts/paper/make_gen_live.py` | `experiments/live_agent/logs/eval_summary.json` |
-| **Table 12** | 32 | D.1 | Stopping versus identification by question count | `scripts/paper/make_gen_v43.py` | `results/e2e/safe_collapse.json`, `results/e2e/basis_size.json`, `results/e2e/learner_slack.json` |
-| **Table 13** | 32 | D.1 | Simple alternatives address different parts of the problem | `scripts/paper/make_gen_revision.py`, `scripts/paper/make_gen_v14.py` | `results/e2e/baseline_table.json`, `results/e2e/face_ladder.json` |
-| **Table 14** | 33 | D.2 | Three offline certificates on identical chain draws (uniform / occupancy-weighted / robust dual): certified counts and false certificates by log size | `scripts/paper/make_gen_v53.py` (`gen_v53_table.tex`) | `results/theory_extension/certificate_v53.json` |
-| **Table 15** | 33 | D.2 | Three data scales per sufficient-reading class: n* of each certificate and the information floor kl(1-delta,delta)/I* | `scripts/paper/make_gen_v53.py` (`gen_v53_classes.tex`) | `results/theory_extension/certificate_v53.json` |
-| **Figure 2** | 34 | D.2 | Generic certificate, decision-specific certificate and information floor against 1/kappa^2 | `scripts/paper/make_fig_v53.py` (`fig_v53_scales.pdf`) | `results/theory_extension/certificate_v53.json` |
-| **Table 16** | 34 | D.2 | Counts from sampled load-chain paths (secondary analysis) | `scripts/paper/make_gen_v53.py` (`gen_v53_secondary.tex`) | `results/theory_extension/certificate_v53.json` |
-| **Table 17** | 34 | D.2 | Smallest certified budget tightening for the hard class, with exact return prices | `scripts/paper/make_gen_v53.py` (`gen_v53_tightening.tex`) | `results/theory_extension/certificate_v53.json` |
-| **Table 18** | 35 | D.2 | Safe-Keep audit: reduction, coverage and deployment records | `scripts/paper/make_gen_safekeep.py` | `results/safe_keep_final/safekeep_final.json`, `results/final_pipeline/pipeline_rows.json` |
-| **Figure 3** | 36 | D.3 | Exact price of the single-cost surrogate by budget | `scripts/paper/make_figs_appendix.py` (`fig_e1_surrogate.pdf`) over `scripts/paper/make_gen_v47_51_tables.py` | `results/e2e/collapse_readout.json` |
-| **Table 19** | 36 | D.3 | Learners that accept one cost, under the single-cost surrogate and under the sufficient reading (all instances) | `scripts/paper/make_gen_v50.py` | `results/e2e/scope_agent.json`, `results/e2e/scope_agent_learn.json` |
-| **Table 20** | 36 | D.3 | Per-instance gains of the ARROW-selected reading over the single-cost surrogate (9 sufficient instances, 4 learners) | `scripts/paper/make_gen_v50.py` (`gen_v50_perinst.tex`) | `results/e2e/scope_agent.json`, `results/e2e/scope_agent_learn.json` |
-| **Table 21** | 37 | D.3 | Native multi-constraint learners: K separate constraints versus the sufficient reading | `scripts/paper/make_gen_v51.py` | `results/e2e/scope_agent_native.json` |
-| **Table 22** | 37 | D.3 | Checked deployment on all learned agent-service policies | `scripts/paper/make_gen_v52.py`, `scripts/paper/make_gen_v50.py` | `results/e2e/scope_agent_check.json`, `results/e2e/scope_agent.json` |
-| **Table 23** | 38 | D.3 | Budget sweep on the maintenance domains: both arms re-learned at every budget | `scripts/paper/make_gen_extra.py` | `results/conformal/selfconsistency.json`, `results/e2e/e2e_report_v4.json` |
-| **Table 24** | 38 | D.3 | Portability across five released offline safe-RL learners on DSRL/OSRL (**GPU**: PACE, V100) | `scripts/paper/make_corset_tables.py` (`gen_dsrl.tex`, `gen_dsrl_seedinfo.tex`) | `results/dsrl/` |
-| **Table 25** | 39 | D.4 | Expert-plausible readings preserved (union pool of every generator's archived translations) | `scripts/paper/make_gen_artemis.py` | `results/e2e/artemis_external.json` |
-| **Table 26** | 40 | D.4 | Every archived ARTEMIS method on its own samples | `scripts/paper/make_gen_artemis_methods.py` | `results/e2e/artemis_per_method.json` |
+| **Table 4** | 16 | A | Positioning by problem solved, safety input and guarantee | hand-written | -- |
+| **Table 5** | 17 | B.1 | Data sources and benchmarks: every corpus and dataset with the results it feeds | hand-written | `data/rule_corpora/` (pinned commits in `NOTICE.md`) |
+| **Algorithm 1** | 21 | B.3 | End-to-end pipeline with ARROW inlined (lines 7-23) | hand-written | -- |
+| **Table 6** | 37 | D | Appendix roadmap (question, evidence, theory link, what it establishes) | hand-written; one count from `scripts/paper/make_gen_v52.py` | `results/e2e/scope_agent_check.json` |
+| **Table 7** | 38 | D.1 | What single-reading optimization hides, solved exactly (17 of the 28 compiled rules) | `scripts/paper/make_gen_csuite_bind.py` joining fragments of `scripts/paper/make_corset_tables.py` | `results/conformal/benchmark_sg/control_suite.json`, `results/e2e/exact_nonnested.json` |
+| **Table 8** | 38 | D.1 | Cross-organization replication: 465 pools from eight further organizations, value test vs ARROW at d=0.005 | `scripts/paper/make_gen_revision.py` (`gen_third_corpus_compact.tex`) | `results/e2e/third_corpus.json` |
+| **Table 9** | 39 | D.1 | Live service agent under a published rate limit (50 paired billed sessions per condition) | `scripts/paper/make_gen_live.py` | `experiments/live_agent/logs/eval_summary.json` |
+| **Table 10** | 39 | D.1 | Budget sweep on the maintenance domains: both policies re-learned at every budget | `scripts/paper/make_gen_extra.py` | `results/paper/pareto/pareto_risk_*.json` |
+| **Table 11** | 40 | D.1 | Stopping versus identification by question count | `scripts/paper/make_gen_v43.py` | `results/e2e/safe_collapse.json`, `results/e2e/basis_size.json`, `results/e2e/learner_slack.json` |
+| **Table 12** | 41 | D.1 | Simple alternatives address different parts of the problem | `scripts/paper/make_gen_revision.py`, `scripts/paper/make_gen_v14.py`, `scripts/paper/make_gen_sota.py` | `results/e2e/baseline_table.json`, `results/e2e/face_ladder.json` |
+| **Table 13** | 41 | D.2 | Three offline certificates on identical chain draws (uniform / occupancy-weighted / robust dual): certified counts and false certificates by log size | `scripts/paper/make_gen_v53.py` (`gen_v53_table.tex`) | `results/theory_extension/certificate_v53.json` |
+| **Table 14** | 42 | D.2 | Three data scales per sufficient-reading class: n* of each certificate and the information floor kl(1-delta,delta)/I* | `scripts/paper/make_gen_v53.py` (`gen_v53_classes.tex`) | `results/theory_extension/certificate_v53.json` |
+| **Figure 2** | 42 | D.2 | Generic certificate, decision-specific certificate and information floor against 1/kappa^2 | `scripts/paper/make_fig_v53.py` (`fig_v53_scales.pdf`) | `results/theory_extension/certificate_v53.json` |
+| **Table 15** | 43 | D.2 | Safe-Keep audit: uncovered removals (Score-Keep audited under the same relation), retained-set sizes, implications confirmed | `scripts/paper/make_gen_safekeep.py` | `results/safe_keep_final/safekeep_final.json`, `results/safe_keep_final/score_keep_cover.json`, `results/final_pipeline/pipeline_rows.json` |
+| **Figure 3** | 43 | D.3 | Exact price of the single-cost surrogate by budget | `scripts/paper/make_figs_appendix.py` (`fig_e1_surrogate.pdf`) over `scripts/paper/make_gen_v47_51_tables.py` | `results/e2e/collapse_readout.json` |
+| **Table 16** | 44 | D.3 | Per-instance gains of the ARROW-selected reading over the single-cost surrogate (9 sufficient instances, 4 learners) | `scripts/paper/make_gen_v50.py` (`gen_v50_perinst.tex`) | `results/e2e/scope_agent.json`, `results/e2e/scope_agent_learn.json` |
+| **Table 17** | 45 | D.3 | Native multi-constraint learners: K separate constraints versus the sufficient reading | `scripts/paper/make_gen_v51.py` | `results/e2e/scope_agent_native.json` |
+| **Table 18** | 46 | D.3 | Portability across five released offline safe-RL learners on DSRL/OSRL (**GPU**: PACE, V100) | `scripts/paper/make_corset_tables.py` (`gen_dsrl.tex`, `gen_dsrl_seedinfo.tex`) | `results/dsrl/` |
+| **Table 19** | 46 | D.3 | Checked deployment on all learned agent-service policies | `scripts/paper/make_gen_v52.py`, `scripts/paper/make_gen_v50.py` | `results/e2e/scope_agent_check.json`, `results/e2e/scope_agent.json` |
+| **Table 20** | 47 | D.4 | Expert-plausible readings preserved (union pool of every generator's archived translations) | `scripts/paper/make_gen_artemis.py` | `results/e2e/artemis_external.json` |
 
-Table 24 is the one GPU result (five released offline safe-RL learners on DSRL/OSRL, run on V100s
+Table 18 is the one GPU result (five released offline safe-RL learners on DSRL/OSRL, run on V100s
 through the wrappers in `experiments/dsrl_learners/`); everything else was produced on CPU.
 
 ## Every LaTeX fragment the paper inputs
