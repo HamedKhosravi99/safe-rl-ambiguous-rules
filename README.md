@@ -135,7 +135,7 @@ Page numbers refer to the submitted PDF (`arrow_v4.pdf`).
 | **Algorithm 1** | 21 | B.3 | End-to-end pipeline with ARROW inlined (lines 7-23) | hand-written | -- |
 | **Table 6** | 37 | D | Appendix roadmap (question, evidence, theory link, what it establishes) | hand-written; one count from `scripts/paper/make_gen_v52.py` | `results/e2e/scope_agent_check.json` |
 | **Table 7** | 37 | D.1 | What single-reading optimization hides, solved exactly (17 of the 28 compiled rules) | `scripts/paper/make_gen_csuite_bind.py` joining fragments of `scripts/paper/make_corset_tables.py` | `results/conformal/benchmark_sg/control_suite.json`, `results/e2e/exact_nonnested.json` |
-| **Table 8** | 38 | D.1 | Cross-organization replication: 465 pools from eight further organizations, value test vs ARROW at d=0.005 | `scripts/paper/make_gen_revision.py` (`gen_third_corpus_compact.tex`) | `results/e2e/third_corpus.json` |
+| **Table 8** | 38 | D.1 | Cross-organization replication: 465 pools from eight further repositories, value test vs ARROW at d=0.005 | `scripts/paper/make_gen_revision.py` (`gen_third_corpus_compact.tex`) | `results/e2e/third_corpus.json` |
 | **Table 9** | 38 | D.1 | Live service agent under a published rate limit (50 paired billed sessions per condition) | `scripts/paper/make_gen_live.py` | `experiments/live_agent/logs/eval_summary.json` |
 | **Table 10** | 39 | D.1 | Budget sweep on the maintenance domains: both policies re-learned at every budget | `scripts/paper/make_gen_extra.py` | `results/paper_extra/pareto/pareto_risk_*.json` |
 | **Table 11** | 40 | D.1 | Stopping versus identification by question count | `scripts/paper/make_gen_v43.py` | `results/e2e/safe_collapse.json`, `results/e2e/basis_size.json`, `results/e2e/learner_slack.json` |
