@@ -21,8 +21,8 @@ import json
 from collections import defaultdict
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-ROOT = os.path.dirname(HERE)
-sys.path.insert(0, os.path.join(ROOT, "paper"))
+ROOT = os.path.dirname(os.path.dirname(HERE))
+sys.path.insert(0, os.path.join(ROOT, "scripts", "paper"))
 from make_corset_tables import _dedup_runs  # noqa: E402
 
 # keep in lockstep with gen_dsrl()'s base_dirs

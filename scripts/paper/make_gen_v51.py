@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Emit generated/gen_v51.tex (macros, prefix \Vn...) and gen_v51_table.tex from results/e2e/scope_agent_native.json:
+"""Emit generated/gen_v51.tex (macros, prefix \Vn...) from results/e2e/scope_agent_native.json:
 native multi-constraint learners (K separate constraints) versus the ARROW-certified singleton (REGISTRATION_V51).
 Every direction the manuscript states is asserted before writing."""
 import json, os, statistics as st
@@ -36,7 +36,6 @@ def agg(l, n):
                 surr=(float(np.mean([v["surrogate"]["ret_frac"] for v in by.values() if "surrogate" in v])) if any("surrogate" in v for v in by.values()) else None),
                 cert=sum(1 for k, v in d["certification"].items() if k.startswith(f"{l}|{n}|") and v["certified"]), mode=d["cert_mode"][f"{l}|{n}"],
                 eps_r=d["eps_prime"][f"{l}|{n}"]["eps_r"])
-T = []
 for l in d["learners"]:
     for i, n in enumerate(d["n_grid"]):
         a = agg(l, n); key = LKEY[l] + {2000: "A", 5000: "B", 20000: "C", 50000: "D"}[n]
@@ -45,9 +44,6 @@ for l in d["learners"]:
         mac(f"Vn{key}Cert", a["cert"]); mac(f"Vn{key}EpsR", f"{a['eps_r']:.3f}")
         if a["surr"] is not None: mac(f"Vn{key}Surr", pct(a["surr"]))
         name = LNAME[l] if i == 0 else ""
-        T.append(f"{name} & {n:,} & {pct(a['native'])} / {pct(a['native_safe'],0)} & {pct(a['arrow'])} / {pct(a['arrow_safe'],0)} & {pts(a['med'])} & {a['pos']}/{a['n_inst']} & {a['eps_r']:.3f} & {a['cert']} \\\\".replace(",", "{,}").replace("{,}5\\%", ",5\\%"))
-    if l != d["learners"][-1]: T.append("\\addlinespace[1pt]")
-open(os.path.join(GEN, "gen_v51_table.tex"), "w").write(H + "\n".join(T) + "\n")
 # ---- asserted directions
 for n in d["n_grid"]:
     for l in ("mfqi", "mpid"):
@@ -99,4 +95,4 @@ for l, key in (("mfqi", "Fqi"), ("mpid", "Pid"), ("mcpq", "Cpq"), ("lp", "Lp")):
 assert small_gap_range("mpid")[1] < 0 and small_gap_range("lp")[0] > 0 and abs(small_gap_range("mfqi")[1]) < 1e-3   # mixed directions, as the text states
 mac("VnSmNGrid", ", ".join(f"{n:,}".replace(",", "{,}") for n in sm["n_grid"]))
 open(os.path.join(GEN, "gen_v51.tex"), "w").write(H + "\n".join(M) + "\n")
-print("macros", len(M)); print(open(os.path.join(GEN, "gen_v51_table.tex")).read())
+print("macros", len(M))

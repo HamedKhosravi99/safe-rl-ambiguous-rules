@@ -1,11 +1,10 @@
 """Per-method comparison on the ARTEMIS benchmark (REGISTRATION_V17 data, per-method view).
 Reads results/e2e/artemis_per_method.json (corset_e2e/external/artemis_per_method.py) and writes
-  generated/gen_artemis_methods.tex          macros (prefix \Am...)
-  generated/gen_artemis_methods_table.tex    main-body rows: one row per (method, backbone), year, per-dataset
-                                             any-plausible coverage of the committed translation; then the
-                                             same-sample selection rules and ARROW
-  generated/gen_artemis_methods_app.tex      appendix rows: first sample / self-consistency / ARROW on the
-                                             method's own samples / unfiltered samples (any, recall, size)
+  generated/gen_artemis_methods.tex              macros (prefix \Am...)
+  generated/gen_artemis_methods_table_short.tex  Table 3 rows: one row per (method, backbone), per-dataset
+                                                 any-plausible coverage of the committed translation (any of the
+                                                 ten samples in parentheses); then the three selection rules on
+                                                 the union pool
 Asserts every direction the text states.  Run: python3 scripts/paper/make_gen_artemis_methods.py
 """
 import json, os
@@ -28,9 +27,7 @@ METHODS = {
 }
 ORDER = ["deepstl", "nl2spec", "NL2TL", "NL2TL-FT", "synthtl", "nl2ltl", "nl2ltltemplate", "nl2structnl", "nl2structnl-reflect"]
 def pct(x, nd=1): return f"{100*x:.{nd}f}"
-LLM = {"gemini-2.5-flash": "Gemini-2.5-Flash", "gpt-4.1": "GPT-4.1"}
 # methods cited in the Method column of the main-body table, on their first row only
-CITED = {"DeepSTL (FT)", "nl2spec", "NL2TL+", "SynthTL", "directTL", "directTL-t", "ARTEMIS", "ARTEMIS + reflection"}
 def mac(name, val): return f"\\newcommand{{\\{name}}}{{{val}}}"
 def cols(x, arm, key="any"): return [x["by_group"][g][arm][key] for g in G] + [x["overall"][arm][key]]
 
@@ -73,21 +70,7 @@ RATIOS = {k: ratio(*k) for k in REPORTED}
 for k, v in REPORTED.items():   # within rounding and one requirement's checker disagreement (the archive lists 18 unaligned files)
     assert abs(RATIOS[k] - v) < 0.06, (k, RATIOS[k], v)
 
-# ---- main-body rows: committed translation (first sample), in parentheses any of the ten samples
-T = []; cited = set()
-for i, (src, backbone, name, year, bib, av, rc) in enumerate(rows):
-    x = d["sources"][src]; pv = cols(x, "pool")
-    cells = [f"{pct(v)} ({pct(pv[j])})" for j, v in enumerate(av)]
-    label = f"{name} \\citep{{{bib}}}" if name in CITED and name not in cited else name
-    cited.add(name)
-    T.append(f"{label} & {year} & {LLM[backbone]} & 1 & " + " & ".join(cells) + " \\\\\n")
-T.append("\\midrule\n")
-T.append("Self-consistency vote & -- & both & 1 & " + " & ".join(pct(v) for v in maj) + " \\\\\n")
-T.append(f"All distinct samples & -- & both & {U['overall']['pool']['size_median']:.1f} & " + " & ".join(pct(v) for v in pool) + " \\\\\n")
-T.append(f"\\method{{}} \\textsc{{Score-Keep}} & -- & both & {U['overall']['arrow']['size_median']:.1f} & " + " & ".join(pct(v) for v in arrow) + " \\\\\n")
-open(os.path.join(GEN, "gen_artemis_methods_table.tex"), "w").write(HEAD + "".join(T))
-
-# ---- the same rows at the template's font size (arrow_v4): no citations in the cells (they go to the
+# ---- Table 3 rows at the template's font size (arrow_v4): no citations in the cells (they go to the
 # caption), short LLM labels, no year or size column
 SHORT = {"gemini-2.5-flash": "Gemini", "gpt-4.1": "GPT-4.1"}
 S = []
@@ -100,19 +83,6 @@ S.append("All distinct samples & union & " + " & ".join(pct(v) for v in pool) + 
 S.append("\\method{} \\textsc{Score-Keep} & union & " + " & ".join(pct(v) for v in arrow) + " \\\\\n")
 open(os.path.join(GEN, "gen_artemis_methods_table_short.tex"), "w").write(HEAD + "".join(S))
 
-# ---- appendix rows: per method, four arms (any / recall / size)
-A = []
-for src, backbone, name, year, bib, av, rc in rows:
-    x = d["sources"][src]; o = x["overall"]
-    A.append(f"{name} & {LLM[backbone]} & " + " & ".join(
-        f"{pct(o[a]['any'])} & {pct(o[a]['recall'])}" for a in ("top1", "majority", "arrow")) +
-        f" & {o['arrow']['size_median']:.0f} & {pct(o['pool']['any'])} & {o['pool']['size_median']:.0f} \\\\\n")
-A.append("\\midrule\n")
-o = U["overall"]
-A.append("All methods, union of samples & both & " + " & ".join(
-    f"{pct(o[a]['any'])} & {pct(o[a]['recall'])}" for a in ("top1", "majority", "arrow")) +
-    f" & {o['arrow']['size_median']:.1f} & {pct(o['pool']['any'])} & {o['pool']['size_median']:.1f} \\\\\n")
-open(os.path.join(GEN, "gen_artemis_methods_app.tex"), "w").write(HEAD + "".join(A))
 
 # ---- macros
 _per_method = {}

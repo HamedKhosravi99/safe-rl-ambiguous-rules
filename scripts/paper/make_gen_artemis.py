@@ -1,9 +1,8 @@
-"""Macros and fragments for the ARTEMIS external-validation study
-(REGISTRATION_V17).  Reads results/e2e/artemis_external.json only; asserts
-the branch-rule outcomes the text states.
+"""Macros for the ARTEMIS external-validation study (REGISTRATION_V17).  Reads
+results/e2e/artemis_external.json only; asserts the branch-rule outcomes the text states.
 
 Run: python3 scripts/paper/make_gen_artemis.py
-Writes generated/gen_artemis.tex, gen_artemis_table.tex, gen_artemis_bins.tex
+Writes generated/gen_artemis.tex
 """
 from __future__ import annotations
 
@@ -40,7 +39,6 @@ for r in d["pools"]["P1"]["per_unit"]:
 M += [mac("ArVent", groups["Ventilator"]), mac("ArRobo", groups["Robotics"]), mac("ArLmcps", groups["LMCPS"])]
 assert sum(groups.values()) == d["n_units"]
 
-rows_tab = []
 for w, wl in (("P1", "flagship generator, 50 samples"), ("P2", "union of all archived generators, 190 samples")):
     p = d["pools"][w]
     o = p["overall"]
@@ -54,19 +52,6 @@ for w, wl in (("P1", "flagship generator, 50 samples"), ("P2", "union of all arc
         s = o[arm]
         M += [mac(f"Ar{tag}{al}Any", pct(s["any"])), mac(f"Ar{tag}{al}Recall", pct(s["recall"])), mac(f"Ar{tag}{al}All", pct(s["all"])),
               mac(f"Ar{tag}{al}Size", fmt_size(s['size_median'])), mac(f"Ar{tag}{al}Eff", pct(s["efficiency_median"], 0))]
-    for arm, al in (("top1", "Top-1 (first sample)"), ("majority", "Self-consistency singleton"),
-                    ("arrow", "\\method{} Keep (calibrated set)"), ("pool", "Unfiltered candidate pool")):
-        s = o[arm]
-        rows_tab.append(f"{'' if arm != 'top1' else ''}{al} & {pct(s['any'])} & {pct(s['recall'])} & {pct(s['all'])} & {fmt_size(s['size_median'])} \\\\\n")
-    rows_tab.append("\\addlinespace\n" if w == "P1" else "")
-    # bins
-    bins = []
-    for b, v in p["by_bin"].items():
-        if v["n"]:
-            bl = b.replace(">", "$>$")
-            bins.append(f"{bl} & {v['n']} & {pct(v['top1']['recall'])} & {pct(v['majority']['recall'])} & {pct(v['arrow']['recall'])} & {v['arrow']['size_median']:.0f} & {pct(v['pool']['recall'])} \\\\\n")
-    with open(os.path.join(GEN, f"gen_artemis_bins_{w}.tex"), "w") as fh:
-        fh.write(HEAD + "".join(bins))
     for b, v in p["by_bin"].items():
         key = {"1": "One", "2-5": "Few", "6-10": "Mid", ">10": "Many"}[b]
         if v["n"]:
@@ -76,31 +61,6 @@ for w, wl in (("P1", "flagship generator, 50 samples"), ("P2", "union of all arc
     for g, v in p["by_group"].items():
         M += [mac(f"Ar{tag}Grp{g}Arrow", pct(v["arrow"]["recall"])), mac(f"Ar{tag}Grp{g}Maj", pct(v["majority"]["recall"])),
               mac(f"Ar{tag}Grp{g}Any", pct(v["arrow"]["any"]))]
-with open(os.path.join(GEN, "gen_artemis_table.tex"), "w") as fh:
-    fh.write(HEAD + "".join(rows_tab))
-
-# ---------------------------------------------------------------- V20 Natural2CTL
-ncp = os.path.join(ROOT, "results/e2e", "natural2ctl_external.json")
-if os.path.exists(ncp):
-    nc = json.load(open(ncp))
-    o = nc["overall"]
-    M += [mac("NcRegistered", nc.get("registered_units", o["n"])), mac("NcUnits", o["n"]), mac("NcRows", f"{nc['csv_rows']:,}".replace(",", "{,}")), mac("NcParseable", f"{nc['parseable']:,}".replace(",", "{,}")),
-          mac("NcUnparseable", nc["unparseable"]), mac("NcStruct", nc["n_struct"]), mac("NcInvalid", pct(o["invalid_rate"])),
-          mac("NcGenerated", pct(o["generated_rate"])), mac("NcSyntactic", pct(o["syntactic_hit"])), mac("NcTop", pct(o["top1"])),
-          mac("NcMaj", pct(o["majority"])), mac("NcRetained", pct(o["retained"])),
-          mac("NcRetGivenGen", pct(o["retained_given_generated"]) if o["retained_given_generated"] is not None else "--"),
-          mac("NcSetMed", f"{o['set_size_median']:.0f}"), mac("NcClassesMed", f"{o['classes_median']:.0f}"),
-          mac("NcEffMed", pct(o["efficiency_median"], 0) if o["efficiency_median"] is not None else "--"),
-          mac("NcCli", nc.get("cli_version") or "--")]
-    rows = []
-    for fam, v in nc["by_family"].items():
-        if v["n"]:
-            rows.append(f"{fam} & {v['n']} & {pct(v['generated_rate'])} & {pct(v['top1'])} & {pct(v['majority'])} & {pct(v['retained'])} & {v['set_size_median']:.0f} / {v['classes_median']:.0f} \\\\\n")
-    v = o
-    rows.append(f"\\midrule\nall & {v['n']} & {pct(v['generated_rate'])} & {pct(v['top1'])} & {pct(v['majority'])} & {pct(v['retained'])} & {v['set_size_median']:.0f} / {v['classes_median']:.0f} \\\\\n")
-    with open(os.path.join(GEN, "gen_natural2ctl.tex"), "w") as fh:
-        fh.write(HEAD + "".join(rows))
-
 with open(os.path.join(GEN, "gen_artemis.tex"), "w") as fh:
     fh.write(HEAD + "\n".join(M) + "\n")
-print(f"wrote gen_artemis.tex ({len(M)} macros) + fragments from {os.path.basename(SRC)}")
+print(f"wrote gen_artemis.tex ({len(M)} macros) from {os.path.basename(SRC)}")

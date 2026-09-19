@@ -3,8 +3,7 @@
 P0-A  ONE machine-readable table with, for every semantic metric:
       campaign_id, population, denominator, conditioning event, scorer_id,
       generator_version, split_id, n, value, CI.
-      Emitted to results/paper/semantic_accounting.{csv,json} and
-      paper/generated/gen_semantic_accounting.tex.
+      Computed in memory (the accounting rows) and folded into the headline macros.
       The point of the table is that these quantities are NOT comparable:
       each row states the population it was measured on, and the plan's rule
       is that no two rows may be placed on the same algebraic line unless
@@ -19,13 +18,11 @@ Run: python3 paper/make_unified_numbers.py
 """
 from __future__ import annotations
 
-import csv
 import json
 import os
 
 ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 GEN = os.path.join(ROOT, "paper", "generated")
-ACC_DIR = os.path.join(ROOT, "results", "paper")
 
 
 def load(*parts):
@@ -177,56 +174,6 @@ def semantic_accounting():
         assert not composable(*bad), \
             f"P0-A guard failed to reject illegal composition {bad}"
 
-    os.makedirs(ACC_DIR, exist_ok=True)
-    json.dump(dict(rows=rows,
-                   legal_composition=dict(
-                       what="V4 generation x V4 retention-given-generation",
-                       value=composed,
-                       equals_fraction_of_expressible_targets_retained=True),
-                   warning="Rows with different populations/denominators must "
-                           "never be multiplied or compared.",
-                   ),
-              open(os.path.join(ACC_DIR, "semantic_accounting.json"), "w"), indent=1)
-    cols = ["campaign_id", "metric", "population", "denominator", "conditioning",
-            "scorer_id", "generator_version", "split_id", "n", "value", "ci"]
-    with open(os.path.join(ACC_DIR, "semantic_accounting.csv"), "w", newline="") as fh:
-        w = csv.DictWriter(fh, fieldnames=cols)
-        w.writeheader()
-        for r in rows:
-            w.writerow({c: r.get(c) for c in cols})
-    print("wrote", os.path.join(ACC_DIR, "semantic_accounting.csv"))
-
-    body = []
-    for r in rows:
-        ci = ("--" if r["ci"] is None
-              else f"$[{r['ci'][0]:.3f},{r['ci'][1]:.3f}]$")
-        body.append(
-            f"{r['campaign_id']} & {r['metric']} & {r['conditioning']} & "
-            f"${r['n']}$ & ${r['value']:.3f}$ & {ci} \\\\\n")
-    write("gen_semantic_accounting.tex", "".join(body))
-
-    # P0-A also requires the FULL-provenance serialization: the same rows with
-    # every field, written to results/paper/semantic_accounting.tex (the third
-    # member of the {csv,json,tex} triple) and to a generated fragment the
-    # appendix typesets.
-    def _tx(x):
-        return (str(x).replace("\\", "").replace("_", r"\_")
-                .replace("%", r"\%").replace("&", r"\&"))
-
-    full = []
-    for r in rows:
-        ci = ("--" if r["ci"] is None
-              else f"$[{r['ci'][0]:.3f},{r['ci'][1]:.3f}]$")
-        full.append(" & ".join([
-            _tx(r["campaign_id"]), _tx(r["population"]), _tx(r["denominator"]),
-            _tx(r["conditioning"]), _tx(r["scorer_id"]),
-            _tx(r["generator_version"]), _tx(r["split_id"]),
-            f"${r['n']}$", _tx(r["metric"]), f"${r['value']:.3f}$", ci,
-        ]) + " \\\\\n")
-    with open(os.path.join(ACC_DIR, "semantic_accounting.tex"), "w") as fh:
-        fh.write("".join(full))
-    print("wrote", os.path.join(ACC_DIR, "semantic_accounting.tex"))
-    write("gen_semantic_accounting_full.tex", "".join(full))
     return rows, composed
 
 

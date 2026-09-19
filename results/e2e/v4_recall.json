@@ -1,7 +1,0 @@
-{
- "n_units": 315,
- "recall_v3_loco": 0.4984126984126984,
- "recall_v4": 0.8031746031746032,
- "recall_union": 0.8317460317460318,
- "genmiss_recovered": 124
-}

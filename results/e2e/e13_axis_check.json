@@ -1,9 +1,0 @@
-{
- "registration": "REGISTRATION_V10 E13",
- "prom_pools": 88,
- "kyv_pools": 44,
- "prom_pools_with_varying_duration": 71,
- "prom_frac": 0.8068,
- "kyv_readings": 234,
- "kyv_readings_with_temporal_field": 0
-}

@@ -19,14 +19,11 @@ env = dict(os.environ, ARROW_PAPER_DIR=PAPER, MPLBACKEND=os.environ.get("MPLBACK
 for d in ("generated", "figure"): os.makedirs(os.path.join(PAPER, d), exist_ok=True)
 
 # dependency order: fragments read by a later generator are produced by an earlier one
-STEPS = ["make_corset_tables", "make_gen_csuite_bind", "make_gen_revision", "make_gen_e5b", "make_gen_e5_side",
-         "make_gen_e5_prose", "make_gen_artemis", "make_gen_applic", "make_gen_finite", "make_gen_extra",
-         "make_gen_v47_51_tables", "make_gen_v47_51", "make_gen_avail", "make_gen_cov", "make_gen_e2e",
-         "make_gen_ladder", "make_gen_livecross", "make_gen_prov", "make_gen_r6", "make_gen_safekeep",
-         "make_gen_v11b", "make_gen_v13", "make_gen_v14", "make_gen_v28", "make_gen_v41", "make_gen_v43",
-         "make_gen_artemis_methods", "make_gen_artemis_decide", "make_gen_sota", "make_gen_live",
-         "make_gen_v50", "make_gen_v51", "make_gen_v52", "make_gen_v53",
-         "make_unified_numbers", "make_figs_mpl", "make_figs_appendix", "make_fig_v53"]
+STEPS = ["make_corset_tables", "make_gen_csuite_bind", "make_gen_revision", "make_gen_artemis", "make_gen_applic",
+         "make_gen_finite", "make_gen_extra", "make_gen_v47_51_tables", "make_gen_v47_51", "make_gen_r6",
+         "make_gen_safekeep", "make_gen_v13", "make_gen_v14", "make_gen_v43", "make_gen_artemis_methods",
+         "make_gen_artemis_decide", "make_gen_sota", "make_gen_live", "make_gen_v50", "make_gen_v51", "make_gen_v52",
+         "make_gen_v53", "make_unified_numbers", "make_figs_mpl", "make_figs_appendix", "make_fig_v53"]
 only = set(sys.argv[sys.argv.index("--only") + 1:]) if "--only" in sys.argv else set()
 failed = []
 for name in STEPS:

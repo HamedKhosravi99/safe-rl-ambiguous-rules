@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Emit generated/gen_v52.tex (macros, prefix \Vc...) and gen_v52_table.tex from results/e2e/scope_agent_check.json:
+"""Emit generated/gen_v52.tex (macros, prefix \Vc...) and gen_v52_table_compact.tex from results/e2e/scope_agent_check.json:
 the checked deployment route (empirical-Bernstein CHECK) on every learned policy of the agent-service experiment
 (REGISTRATION_V52).  Directions the manuscript states are asserted before writing."""
 import json, os
@@ -17,7 +17,7 @@ mac("VcNEv", f"{d['n_ev']:,}".replace(",", "{,}")); mac("VcDeltaEv", f"{d['delta
 unsafe_dep = sum(1 for r in rows if r["ship"] and not r["safe"]); assert unsafe_dep == 0; mac("VcUnsafeDeployed", unsafe_dep)
 wrong_unsafe = [r for r in rows if arm_of(r) == "wrong" and not r["safe"]]; assert all(not r["ship"] for r in wrong_unsafe)
 mac("VcWrongUnsafe", f"{len(wrong_unsafe):,}".replace(",", "{,}")); mac("VcWrongUnsafeRejected", sum(1 for r in wrong_unsafe if not r["ship"]))
-T = []; pass_arrow = []; dep_arrow = []
+pass_arrow = []; dep_arrow = []
 for l in ("fqi", "cpq", "pid", "cql"):
     for n in sorted({r["n"] for r in rows if r["learner"] == l}):
         for arm in ("arrow", "surrogate", "wrong"):
@@ -26,15 +26,12 @@ for l in ("fqi", "cpq", "pid", "cql"):
             dret = float(np.mean([r["ret_frac"] for r in dep])) if dep else None; srej = sum(1 for r in sel if r["safe"] and not r["ship"])
             unsafe = sum(1 for r in sel if not r["safe"])
             label = {"arrow": "\\method{} reading", "surrogate": "single-cost surrogate", "wrong": "wrong reading"}[arm]
-            T.append(f"{LNAME[l] if arm == 'arrow' else ''} & {n:,} & {label} & {pct(ret)} & {unsafe} & {pct(ps,0)} & {sum(1 for r in dep if not r['safe'])} & {pct(dret) if dret is not None else '--'} & {srej} \\\\".replace(",", "{,}").replace("{,} ", ", "))
             assert len(sel) == (180 if arm == "wrong" else 90)
             if n == 20000:
                 key = f"Vc{LKEY[l]}" + {"arrow": "Arrow", "surrogate": "Surr", "wrong": "Wrong"}[arm]
                 mac(key + "Pass", pct(ps, 0)); mac(key + "Ret", pct(ret)); mac(key + "Unsafe", unsafe); mac(key + "SafeRejected", srej)
                 if dret is not None: mac(key + "DepRet", pct(dret))
                 if arm == "arrow": pass_arrow.append(ps); dep_arrow.append(dret)
-        T.append("\\addlinespace[1pt]")
-open(os.path.join(GEN, "gen_v52_table.tex"), "w").write(H + "\n".join(T[:-1]) + "\n")
 mac("VcArmPolicies", len([r for r in rows if r["learner"] == "fqi" and r["n"] == 20000 and arm_of(r) == "arrow"]))
 # the n = 2,000 ARROW and surrogate policies of the tabular learners, not listed in the compact table
 small = [r for r in rows if r["n"] == 2000 and arm_of(r) in ("arrow", "surrogate")]
@@ -63,4 +60,4 @@ assert sum(1 for r in wdep if not r["safe"]) == 0 and len(wrong) == 1260
 mac("VcWrongPolicies", f"{len(wrong):,}".replace(",", "{,}")); mac("VcWrongPass", pct(float(np.mean([r["ship"] for r in wrong])), 0))
 open(os.path.join(GEN, "gen_v52_table_compact.tex"), "w").write(H + "\n".join(C) + "\n")
 open(os.path.join(GEN, "gen_v52.tex"), "w").write(H + "\n".join(M) + "\n")
-print("macros", len(M)); print(open(os.path.join(GEN, "gen_v52_table.tex")).read()[:600])
+print("macros", len(M)); print(open(os.path.join(GEN, "gen_v52_table_compact.tex")).read()[:600])
