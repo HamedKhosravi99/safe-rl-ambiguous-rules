@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Smoke test for the DSRL 20-seed merge logic in paper/make_corset_tables.py.
+"""Smoke test for the DSRL 20-seed merge logic in scripts/paper/make_corset_tables.py.
 
 Validates BEFORE the merge touches the shipped table (standing rule: review +
 smoke-test code faithful to the math before running the full pipeline):

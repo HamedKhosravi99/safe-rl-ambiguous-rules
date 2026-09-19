@@ -6,7 +6,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 FEATURES = ROOT / "data" / "cmapss" / "features_FD001.csv"
-CACHE = ROOT / "saorl" / "plausibility_cache.json"
+CACHE = ROOT / "src" / "saorl" / "plausibility_cache.json"
 
 
 def _ready():

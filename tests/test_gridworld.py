@@ -7,7 +7,7 @@ Run: python3 -m tests.test_gridworld
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-CACHE = ROOT / "saorl" / "plausibility_cache_temporal.json"
+CACHE = ROOT / "src" / "saorl" / "plausibility_cache_temporal.json"
 
 
 def _ready():

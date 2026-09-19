@@ -47,7 +47,8 @@ tail-level sweep, the Natural2CTL study) were removed together with their archiv
 │   │                          #   V23, V50-V53
 │   ├── compiler_audit/        #   compiler-faithfulness audit behind SAFE-KEEP's implication relation
 │   ├── conformal/             #   the compiled-suite reports (benchmark_sg/), the E0 corpus study (e0/), the LP
-│   │                          #   certificates the headline macros read (lp/) and the price report (price/)
+│   │                          #   certificates the headline macros read (lp/), the price report (price/) and the three
+│   │                          #   learning-arm archives (risk50/, budget50/, main50/) that the certificate drivers read
 │   ├── dsrl/                  #   published offline safe-RL learners on DSRL/OSRL, one JSON per run
 │   ├── safe_keep_final/, final_pipeline/   # SAFE-KEEP on 579 families and the fixed-data pipeline (Table 15)
 │   ├── theory_extension/      #   offline certificates on the 28 rules: the archived generic sweep and
@@ -74,7 +75,7 @@ and `Check` for the fresh-evaluation safety test.
 python3 -m venv .venv && . .venv/bin/activate
 pip install -r requirements.txt        # numpy, scipy, matplotlib, PyYAML
 export PYTHONPATH=src                  # the packages live in src/
-python3 -m pytest tests -q             # 22 unit tests
+python3 -m pytest tests -q             # 22 unit tests; the three C-MAPSS tests skip unless data/cmapss/ is present
 ```
 
 Re-running the learning arms additionally needs `torch`, `scikit-learn`, and `pandas`.
@@ -120,7 +121,7 @@ Page numbers refer to the submitted PDF (`arrow_v4.pdf`).
 
 | Display | Page | What it reports | Generator | Archived data |
 |---|---|---|---|---|
-| **Table 1** | 8 | Number of the 28 compiled monitoring rules judged reducible to one reading by the value test and by ARROW, per budget | `scripts/paper/make_gen_v13.py`, `scripts/paper/make_unified_numbers.py` | `results/e2e/policy_sufficiency.json`, `results/e2e/policy_class_budget.json` |
+| **Table 1** | 8 | Number of the 28 compiled monitoring rules judged reducible to one reading by the value test and by ARROW, per budget | `scripts/paper/make_gen_v13.py` | `results/e2e/policy_sufficiency.json` |
 | **Figure 1** | 8 | Clarification progress on 87 service-monitoring candidate sets | `scripts/paper/make_figs_mpl.py` (`fig_e3_questions.pdf`) | `results/e2e/safe_collapse.json` |
 | **Table 2** | 8 | Return as a share of the exact full-set optimum on the agent-service benchmark: combined conservative cost versus the sufficient reading | `scripts/paper/make_gen_v50.py` | `results/e2e/scope_agent.json`, `results/e2e/scope_agent_learn.json` |
 | **Table 3** | 9 | Plausible readings retained on 182 ARTEMIS requirements: nine language-to-specification methods and three selection rules on the union pool | `scripts/paper/make_gen_artemis_methods.py` (`gen_artemis_methods_table_short.tex`), `scripts/paper/make_gen_artemis.py` | `results/e2e/artemis_per_method.json`, `results/e2e/artemis_external.json` |
@@ -208,11 +209,13 @@ Three intermediate fragments are produced but not input by the paper: `gen_contr
 |---|---|
 | `policy_sufficiency.json` | `src/saorl/benchmark_sg/policy_sufficiency.py`, `src/saorl/benchmark_sg/safe_face_select.py`, `src/saorl/benchmark_sg/baseline_table.py` |
 | `safe_face_select.json` | `src/saorl/benchmark_sg/safe_face_offline.py` |
-| `face_live.json` | `experiments/live_agent/face_live.py` |
+| `face_live.json` | `experiments/live_agent/face_live.py` (reads `results/e2e/live_crossing_replay.json`) |
 | `face_ladder.json` | `src/saorl/benchmark_sg/face_ladder.py`, `src/saorl/benchmark_sg/decide_runtime.py` |
-| `deploy_certificate.json` | `src/saorl/evaluator_scale.py`, `src/saorl/exposure_ceiling.py`, `src/saorl/certificate_audit.py` |
+| `deploy_certificate.json` | `src/saorl/deploy_certificate.py` |
+| `expected_cost_certificate.json` | `src/saorl/expected_cost_certificate.py` |
+| `certificate_audit.json` | `src/saorl/certificate_audit.py` |
 | `shadow_price.json` | `src/saorl/shadow_price.py` |
-| `baseline_table.json` | `src/saorl/benchmark_sg/baseline_table.py`, `src/saorl/benchmark_sg/pipeline_compare.py` |
+| `baseline_table.json` | `src/saorl/benchmark_sg/baseline_table.py` |
 | `surrogate_price.json` | `src/saorl/benchmark_sg/collapse_readout.py`, `src/saorl/benchmark_sg/surrogate_price.py`, `src/saorl/benchmark_sg/decide_runtime.py` |
 | `safe_collapse.json` | `src/saorl/benchmark_sg/safe_collapse.py` |
 | `query_loop.json` | `src/saorl/benchmark_sg/query_loop.py` |
@@ -226,12 +229,13 @@ Three intermediate fragments are produced but not input by the paper: `gen_contr
 | `coverage_funnel.json` | `src/corset_e2e/analysis/coverage_funnel.py` |
 | `third_corpus.json` | `src/saorl/benchmark_sg/third_corpus.py` |
 | `decide_runtime.json` | `src/saorl/benchmark_sg/decide_runtime.py` |
-| `control_suite.json` | `src/saorl/e10_real_game.py`, `src/saorl/t31_switchgap.py` |
+| `control_suite.json` | `src/saorl/benchmark_sg/control_suite.py` |
+| `switch_gap_exact.json` | `src/saorl/t31_switchgap.py` |
 | `e0_report.json` | `src/saorl/benchmark_sg/e0_run.py` |
 | `artemis_units.json` | `src/corset_e2e/external/artemis_decide.py`, `src/corset_e2e/external/artemis_arrow.py`, `src/corset_e2e/external/artemis_load.py` |
 | `artemis_external.json` | `src/corset_e2e/external/artemis_decide.py`, `src/corset_e2e/external/artemis_arrow.py` |
 | `gold_ast.json` | `src/corset_e2e/analysis/emission_gap_g2.py` |
-| `pipeline_compare.json` | `src/saorl/benchmark_sg/pipeline_compare.py` |
+| `pipeline_compare.json` | `src/saorl/benchmark_sg/pipeline_compare.py` (reads `results/conformal/lp/certificate_audit.json` and the `main50`/`budget50` learning-arm archives) |
 | `collapse_utility.json` | `src/saorl/benchmark_sg/collapse_readout.py`, `src/saorl/benchmark_sg/collapse_utility.py` |
 | `answer_noise_check.json` | `src/saorl/benchmark_sg/answer_noise_frontier.py`, `src/saorl/benchmark_sg/answer_noise_check.py` |
 | `union_calibrated_v51.json` | `src/corset_e2e/analysis/union_calibrated_v51.py` |

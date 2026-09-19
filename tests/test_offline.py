@@ -91,7 +91,7 @@ def test_real_llm_ensemble_reproduces_claims():
     # hand-set scores. Skips only if the cache has not been built.
     from pathlib import Path
 
-    cache = Path(__file__).resolve().parents[1] / "saorl" / "plausibility_cache.json"
+    cache = Path(__file__).resolve().parents[1] / "src" / "saorl" / "plausibility_cache.json"
     if not cache.exists():
         print("  (skip test_real_llm_ensemble_reproduces_claims: no cache)")
         return
@@ -127,7 +127,7 @@ def test_offline_rl_learner_kill_test():
     # yet hides a worst-case violation that honoring all of U_alpha removes.
     from pathlib import Path
 
-    cache = Path(__file__).resolve().parents[1] / "saorl" / "plausibility_cache.json"
+    cache = Path(__file__).resolve().parents[1] / "src" / "saorl" / "plausibility_cache.json"
     if not cache.exists():
         print("  (skip test_offline_rl_learner_kill_test: no cache)")
         return
@@ -169,7 +169,7 @@ def test_cql_learner_kill_test():
     except ImportError:
         print("  (skip test_cql_learner_kill_test: torch not installed)")
         return
-    cache = Path(__file__).resolve().parents[1] / "saorl" / "plausibility_cache.json"
+    cache = Path(__file__).resolve().parents[1] / "src" / "saorl" / "plausibility_cache.json"
     if not cache.exists():
         print("  (skip test_cql_learner_kill_test: no cache)")
         return
