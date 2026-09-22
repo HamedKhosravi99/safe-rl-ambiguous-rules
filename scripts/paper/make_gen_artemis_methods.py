@@ -70,7 +70,7 @@ RATIOS = {k: ratio(*k) for k in REPORTED}
 for k, v in REPORTED.items():   # within rounding and one requirement's checker disagreement (the archive lists 18 unaligned files)
     assert abs(RATIOS[k] - v) < 0.06, (k, RATIOS[k], v)
 
-# ---- Table 3 rows at the template's font size (arrow_v4): no citations in the cells (they go to the
+# ---- Table 3 rows at the template's font size (arrow_v5): no citations in the cells (they go to the
 # caption), short LLM labels, no year or size column
 SHORT = {"gemini-2.5-flash": "Gemini", "gpt-4.1": "GPT-4.1"}
 S = []
@@ -80,7 +80,7 @@ for src, backbone, name, year, bib, av, rc in rows:
 S.append("\\midrule\n")
 S.append("Self-consistency vote & union & " + " & ".join(pct(v) for v in maj) + " \\\\\n")
 S.append("All distinct samples & union & " + " & ".join(pct(v) for v in pool) + " \\\\\n")
-S.append("\\method{} \\textsc{Score-Keep} & union & " + " & ".join(pct(v) for v in arrow) + " \\\\\n")
+S.append("\\textbf{\\method{} \\textsc{Score-Keep}} & union & " + " & ".join(pct(v) for v in arrow) + " \\\\\n")   # ours, name in bold, numbers plain
 open(os.path.join(GEN, "gen_artemis_methods_table_short.tex"), "w").write(HEAD + "".join(S))
 
 
@@ -97,6 +97,7 @@ M = [mac("AmMethods", 9), mac("AmRows", len(rows)), mac("AmSamplesUnion", 190),
      mac("AmArrowLmcps", pct(arrow[2]) + "\\%"), mac("AmBestVent", pct(best[0]) + "\\%"), mac("AmBestRobo", pct(best[1]) + "\\%"),
      mac("AmBestLmcps", pct(best[2]) + "\\%"), mac("AmMajAll", pct(maj[3]) + "\\%"), mac("AmPoolAll", pct(pool[3]) + "\\%"),
      mac("AmArrowSize", f"{U['overall']['arrow']['size_median']:.1f}"), mac("AmPoolSize", f"{U['overall']['pool']['size_median']:.1f}"),
+     mac("AmArrowCeilingShare", pct(arrow[3] / pool[3], 0) + "\\%"),   # Score-Keep coverage as a share of the all-samples ceiling
      mac("AmArrowRecallAll", pct(U['overall']['arrow']['recall']) + "\\%"), mac("AmTopRecallAll", pct(U['overall']['top1']['recall']) + "\\%"),
      mac("AmBestRecallAll", pct(max(r[6][3] for r in rows)) + "\\%"),
      mac("AmOwnEqPool", own_eq_pool), mac("AmOwnBestAny", pct(own_best[1]['overall']['arrow']['any']) + "\\%"),

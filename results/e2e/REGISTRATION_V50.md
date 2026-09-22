@@ -52,3 +52,29 @@ because at d = 0.20 the primary limit no longer binds (V_U = V_unc), so no readi
 be unsafe.  Exact surface recomputed (scope_agent.json): certified instances are light
 K in {2,3,4} at d in {0.10, 0.15} and medium K in {2,3,4} at d = 0.15 (9 instances, exact
 surrogate price 8.7-28.9%); heavy auxiliary demand is never certified at these budgets.
+
+## Amendment 2 (2026-09-21, after the archived runs; recorded with the earlier archives kept)
+Two independent code audits of the archived run found that three learner settings had been
+inherited from the maintenance domain (rewards 4-40) without rescaling to this domain (rewards
+0.2-1.0, 0/1 costs): the multiplier grid (0, 2, 5, ..., 320), whose smallest non-zero point
+already makes every charged call unprofitable, so every Lagrangian learner returned the same
+"never call" policy; the BCQ support threshold 0.05, which excluded the zero-cost local action
+at rarely visited states; and the CPQ/CAPS cost-limit grids laid out for a 0-100 range. All three
+were replaced by rules stated in scope_agent_learn.py next to each value (multiplier step 0.02 =
+the reward increment, offset by 0.01 to avoid exact ties, then 2..320; an action admissible iff
+logged at the state, exact because transitions are deterministic; limit grids geometric at ratio
+1.1 from 1/(1-gamma) to 1, then 0.8, 0.5, 0.3, 0.15, 0.05, 0), shared by every learner and both arms; the offline selection rule is
+unchanged. Two learners were added as our own tabular implementations, CAPS (Chemingui et al.,
+AAAI 2025; per-state cost-to-go threshold in place of the accumulated-cost budget) and O3SRL
+(Chemingui et al., NeurIPS 2025; EXP3 over the grid points up to 5, four rounds per arm, losses scaled to the observed range, iterate returned); PID-Lagrangian
+runs with the maintenance gains divided by 100 and 96 dual steps (gain sensitivity x0.5 / x2 in
+scope_agent_learn_pid_gains_x*.json). The earlier archives are kept for the sensitivity paragraph
+of Appendix D.3: scope_agent_learn_coarsegrid.json (every inherited setting: the maintenance multiplier grid,
+tau 0.05, the maintenance limit grids, PID gains 80/60/40 with 24 steps, nine O3SRL arms; six
+learners) and scope_agent_learn_tau005.json (rule-defined multiplier grid and PID gains, but tau
+0.05 and the maintenance limit grids, so its CPQ and CAPS rows are those of the coarse-grid
+archive), with the matching scope_agent_check_*.json. The hypotheses are unchanged; H3's
+magnitude moved (median gain 18.7 -> 15.0 points for BCQ-FQI and O3SRL, 18.7 -> 22.0 for PID,
+CPQ 20.8 -> 20.7, CQL 36.4 -> 37.3); the sign of every instance's gain is the same in the main,
+coarse-grid, tau-0.05 and halved-gain archives, and with doubled PID gains one instance (light
+K=2, d=0.10) turns negative by 2.5 points.

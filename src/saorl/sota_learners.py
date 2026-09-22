@@ -214,11 +214,227 @@ def learn_pid_lagrangian_constrained(
 
 
 # --------------------------------------------------------------------------- #
+# shared helpers for the 2025 learners                                        #
+# --------------------------------------------------------------------------- #
+def _cost_step(b: _Batch) -> np.ndarray:
+    """Per-step honored cost of the logged action: the generalised signal when the
+    batch carries one (benchmark adapters set ``b.charged``), otherwise the
+    maintenance domain's 1{honored fires and a=continue}."""
+    charged = getattr(b, "charged", None)
+    if charged is not None:
+        return np.asarray(charged, dtype=np.float64)
+    return (b.fired & (b.a == CONTINUE)).astype(np.float64)
+
+
+def _fit_cost_q_min(b: _Batch, allowed: np.ndarray, gamma: float, n_iter: int) -> np.ndarray:
+    """Tabular cost-to-go Q_c(s,a) of the cost-MINIMIZING in-support policy: the
+    cost critic CAPS retains from a cost-only offline-RL run (costs as rewards,
+    minimized), i.e. the expected discounted future cost of taking a at s and then
+    following the maximally safe policy pi_c. Fit by averaging Bellman targets over
+    logged (s,a) cells, bootstrapping with the minimum over supported actions."""
+    cost_step = _cost_step(b)
+    terminal = b.sp < 0
+    ns = np.where(terminal, 0, b.sp)
+    sa_flat = b.s * NA + b.a
+    cnt = np.zeros(b.n_states * NA)
+    np.add.at(cnt, sa_flat, 1.0)
+    nz = cnt > 0
+    qc = np.zeros((b.n_states, NA))
+    sum_buf = np.zeros(b.n_states * NA)
+    for _ in range(n_iter):
+        qc_masked = np.where(allowed, qc, np.inf)
+        nxt = qc_masked.min(axis=1)
+        nxt = np.where(np.isfinite(nxt), nxt, 0.0)
+        boot = np.where(terminal, 0.0, gamma * nxt[ns])
+        y = cost_step + boot
+        sum_buf[:] = 0.0
+        np.add.at(sum_buf, sa_flat, y)
+        flat = qc.reshape(-1)
+        flat[nz] = sum_buf[nz] / cnt[nz]
+        qc = flat.reshape(b.n_states, NA)
+    return qc
+
+
+def _table_policy(b: _Batch, action_of_state: np.ndarray, allowed: np.ndarray) -> Policy:
+    """Wrap a per-state action table as a Policy through the module's greedy
+    extractor (so unlogged states get the same default as every other learner)."""
+    q = np.full((b.n_states, NA), -1e9)
+    q[np.arange(b.n_states), action_of_state] = 1.0
+    return _greedy_policy(b, q, allowed)
+
+
+# --------------------------------------------------------------------------- #
+# CAPS: constraint-adaptive policy switching (Chemingui et al., AAAI 2025)     #
+# --------------------------------------------------------------------------- #
+def learn_caps_constrained(
+    data: OfflineDataset,
+    mdp: MaintenanceMDP,
+    honor: Sequence[Candidate],
+    U_eval: Sequence[Candidate],
+    eps: float,
+    gamma: float = 0.99,
+    n_iter: int = 80,
+    bcq_tau: float = 0.1,
+    bcq_min_abs: int = 1,
+    lam_grid: Sequence[float] = (0.5, 1.0, 2.0, 5.0, 10.0, 20.0, 40.0, 80.0),
+    kappa_grid: Sequence[float] = (
+        50.0, 30.0, 20.0, 12.0, 8.0, 5.0, 3.0, 2.0, 1.2, 0.8, 0.5, 0.3, 0.15, 0.05, 0.0
+    ),
+    n_return_eps: int = 40,
+    return_fn=None,
+) -> FQIResult:
+    """Constraint-adaptive policy switching (CAPS; Chemingui, Deshwal, Wei, Fern &
+    Doppa, AAAI 2025) in tabular form.
+
+    Training (CAPS Sec. 4.2, reduction to offline RL): a reward-only critic Q_r
+    (BCQ-filtered FQI, lambda=0), a cost-only critic Q_c of the cost-minimizing
+    policy (``_fit_cost_q_min``), and a policy set
+    P = {pi_r, pi_{lam_1}, ..., pi_{lam_m}, pi_c} extracted greedily from Q_r,
+    Q_r - lam_k Q_c and Q_c over in-support actions.
+    Decision (CAPS Sec. 4.1, Eqs. 3-4): at each state keep the actions proposed by
+    the policies in P whose cost-to-go Q_c(s, pi(s)) is within the threshold kappa
+    (so the action is safe to take and then follow pi_c), pick the one with the
+    largest Q_r, and fall back to pi_c's action when no proposal is within kappa.
+    CAPS tracks the accumulated finite-horizon cost; in the stationary discounted
+    setting the per-state cost-to-go test is its analogue.
+    Selection: kappa is scanned loose -> tight and the loosest threshold whose
+    offline honored worst-case cost meets eps is returned, the same offline rule
+    every learner in this module uses (fallback: the best-safety iterate).
+    """
+    b = _Batch(data, honor)
+    support = b.allowed(bcq_tau, bcq_min_abs)
+    qr = _fit_q(b, support, 0.0, gamma, n_iter)                 # reward-only critic
+    qc = _fit_cost_q_min(b, support, gamma, n_iter)             # cost critic of pi_c
+    qr_sup = np.where(support, qr, -np.inf)
+    qc_sup = np.where(support, qc, np.inf)
+    pi_r = qr_sup.argmax(axis=1)
+    pi_c = qc_sup.argmin(axis=1)
+    mixed = [np.where(support, qr - lam * qc, -np.inf).argmax(axis=1) for lam in lam_grid]
+    proposals = np.stack([pi_r] + mixed + [pi_c], axis=1)      # n_states x |P|
+    rows = np.arange(b.n_states)[:, None]
+    qc_prop = qc[rows, proposals]
+    qr_prop = qr[rows, proposals]
+
+    chosen: Optional[FQIResult] = None
+    fallback: Optional[FQIResult] = None
+    for kappa in kappa_grid:
+        feasible = qc_prop <= kappa                              # filter (Eq. 3)
+        score = np.where(feasible, qr_prop, -np.inf)
+        pick = score.argmax(axis=1)                              # select (Eq. 4)
+        action = np.where(feasible.any(axis=1), proposals[np.arange(b.n_states), pick], pi_c)
+        pol = _table_policy(b, action, support)
+        honored = worst_case_cost(pol, data, honor, normalize="active")
+        ret = (return_fn(pol) if return_fn is not None
+               else evaluate_return(mdp, pol, n_episodes=n_return_eps))
+        true_worst = worst_case_cost(pol, data, U_eval, normalize="active")
+        res = FQIResult(ret, honored, true_worst, kappa, pol)
+        if fallback is None or honored < fallback.honored_cost:
+            fallback = res                 # best-safety iterate, if none feasible
+        if honored <= eps and chosen is None:
+            chosen = res                   # loosest feasible (grid is loose->tight)
+    return chosen if chosen is not None else fallback
+
+
+# --------------------------------------------------------------------------- #
+# O3SRL: online optimization for offline safe RL (Chemingui et al., NeurIPS 2025)
+# --------------------------------------------------------------------------- #
+def learn_o3srl_constrained(
+    data: OfflineDataset,
+    mdp: MaintenanceMDP,
+    honor: Sequence[Candidate],
+    U_eval: Sequence[Candidate],
+    eps: float,
+    gamma: float = 0.99,
+    n_iter: int = 80,
+    bcq_tau: float = 0.1,
+    bcq_min_abs: int = 1,
+    lam_arms: Sequence[float] = (0.0, 2.0, 5.0, 10.0, 20.0, 40.0, 80.0, 160.0, 320.0),
+    n_rounds: int = 36,
+    eta: Optional[float] = None,
+    seed: int = 0,
+    n_return_eps: int = 40,
+    return_fn=None,
+) -> FQIResult:
+    """Online optimization for offline safe RL (O3SRL; Chemingui, Deshwal, Fern,
+    Nguyen-Tang & Doppa, NeurIPS 2025), Algorithm 2, in tabular form.
+
+    The constrained problem is the minimax game max_pi min_lam V_r(pi) -
+    lam (V_c(pi) - kappa). Each round an offline-RL oracle (here BCQ-filtered FQI)
+    is run on the shaped reward r - lam_t (c - (1-gamma) kappa), whose per-step
+    budget (1-gamma) kappa is the normalized limit eps, and the multiplier is
+    played by EXP3 over a grid of arms: the arm that was played is charged the
+    oracle's Lagrangian value estimate, importance-weighted by its probability, so
+    the lam-player has no regret against the best fixed multiplier. The oracle's
+    value estimate is the offline return estimate minus lam times the offline
+    honored-cost excess, both on the same log the oracle trained on.
+    EXP3's losses are the Lagrangian values scaled to the range seen so far, so
+    they lie in [0,1] without an a-priori bound that would squash them.
+    Output: O3SRL's practical version returns an iterate rather than the averaged
+    policy; here the iterate is chosen by the offline rule every learner in this
+    module uses (loosest feasible: best offline return among iterates whose
+    offline honored worst-case cost meets eps; fallback: the best-safety iterate).
+    """
+    b = _Batch(data, honor)
+    allowed = b.allowed(bcq_tau, bcq_min_abs)
+    K = len(lam_arms)
+    eta = float(eta) if eta is not None else float(np.sqrt(2.0 * np.log(K) / (K * n_rounds)))
+    rng = np.random.default_rng(seed)
+    r_logged = b.r.copy()
+
+    def oracle(lam: float):
+        # r - lam*(c - eps) == (r + lam*eps) - lam*c: shift the logged reward, shape with lam
+        b.r = r_logged + lam * eps
+        try:
+            q = _fit_q(b, allowed, lam, gamma, n_iter)
+        finally:
+            b.r = r_logged
+        pol = _greedy_policy(b, q, allowed)
+        honored = worst_case_cost(pol, data, honor, normalize="active")
+        ret = (return_fn(pol) if return_fn is not None
+               else evaluate_return(mdp, pol, n_episodes=n_return_eps))
+        true_worst = worst_case_cost(pol, data, U_eval, normalize="active")
+        return FQIResult(ret, honored, true_worst, lam, pol)
+
+    # EXP3 needs losses in [0,1]; the Lagrangian values are scaled by the range
+    # observed so far (an a-priori bound from lam_max squashes every loss into a
+    # narrow band and makes the bandit inert). The lambda=0 oracle seeds the range.
+    base = oracle(0.0)
+    seen = [base.ret - 0.0 * (base.honored_cost - eps)]
+
+    weights = np.ones(K) / K
+    chosen: Optional[FQIResult] = None
+    fallback: Optional[FQIResult] = None
+    for res in [base]:
+        fallback = res
+        if res.honored_cost <= eps:
+            chosen = res
+    for _ in range(n_rounds):
+        arm = int(rng.choice(K, p=weights))
+        res = oracle(float(lam_arms[arm]))
+        # Lagrangian value of the oracle's policy at the played multiplier
+        value = res.ret - lam_arms[arm] * (res.honored_cost - eps)
+        seen.append(value); v_lo, v_hi = min(seen), max(seen)
+        loss = float(np.clip((value - v_lo) / max(v_hi - v_lo, 1e-9), 0.0, 1.0))
+        # EXP3 (Alg. 2, line 4): the lam-player minimizes the Lagrangian value
+        est = np.zeros(K)
+        est[arm] = loss / max(weights[arm], 1e-12)
+        weights = weights * np.exp(-eta * est)
+        weights = weights / weights.sum()
+        if fallback is None or res.honored_cost < fallback.honored_cost:
+            fallback = res                 # best-safety iterate, if none feasible
+        if res.honored_cost <= eps and (chosen is None or res.ret > chosen.ret):
+            chosen = res                   # loosest feasible: best return at safe
+    return chosen if chosen is not None else fallback
+
+
+# --------------------------------------------------------------------------- #
 # registry + self-test                                                        #
 # --------------------------------------------------------------------------- #
 SOTA_LEARNERS = {
     "CPQ": learn_cpq_constrained,
     "PID-Lagrangian": learn_pid_lagrangian_constrained,
+    "CAPS": learn_caps_constrained,
+    "O3SRL": learn_o3srl_constrained,
 }
 
 

@@ -15,13 +15,35 @@ import numpy as np
 from saorl import neural_rl as nrl, offline as off, offline_rl as orl, sota_learners as sl
 from saorl.offline import OfflineDataset
 from saorl.benchmark_sg.scope_agent import GAMMA, AUX_DEMAND, K_GRID, D_GRID, build, exact
+def _limit_grid(gamma):
+    top = 1.0 / (1.0 - gamma); g = []; v = top
+    while v > 1.0:
+        g.append(round(v, 4)); v /= 1.1
+    return tuple(g) + (1.0, 0.8, 0.5, 0.3, 0.15, 0.05, 0.0)
+LIMIT_GRID = _limit_grid(GAMMA)
 from saorl.benchmark_sg.safe_face_offline import Log, occupancy, score
 import saorl.benchmark_sg.safe_face_offline as sfo
 
 ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
 R = os.path.join(ROOT, "results/e2e"); OUT = os.path.join(R, "scope_agent_learn.json")
-N_GRID = (2000, 20000); SEEDS = tuple(range(10)); CQL_N = (20000,); LEARNERS = ("fqi", "cpq", "pid", "cql")
-LAM_GRID = (0.0, 2.0, 5.0, 10.0, 20.0, 40.0, 80.0, 160.0, 320.0); BCQ_TAU = 0.05
+N_GRID = (2000, 20000); SEEDS = tuple(range(10)); CQL_N = (20000,); LEARNERS = ("fqi", "cpq", "pid", "cql", "caps", "o3srl")
+LAM_GRID_COARSE = (0.0, 2.0, 5.0, 10.0, 20.0, 40.0, 80.0, 160.0, 320.0)   # the maintenance-domain grid (rewards 4-40) used in the archived coarse-grid run
+# Rule-defined grid at the reward-increment resolution of this domain: every reward is a multiple of 0.02 and the largest
+# reward is 1.0 against local work 0.2, so a multiplier of 0.8 already makes every charged call unprofitable; the grid takes
+# step 0.02 on [0, 1.2), offset by 0.01 so no point coincides with a reward difference (an exact tie between a charged call
+# and local work), then the coarse tail. The same grid is passed to every Lagrangian learner.
+LAM_GRID = (0.0,) + tuple(round(0.01 + 0.02 * i, 2) for i in range(60)) + (2.0, 5.0, 10.0, 20.0, 40.0, 80.0, 160.0, 320.0)
+O3SRL_ARMS = tuple(l for l in LAM_GRID if l <= 5.0)   # beyond 5 the greedy policy cannot change (all charged calls already unprofitable)
+PID_GAINS = dict(kp=0.8, ki=0.6, kd=0.4, n_dual_steps=96)   # the maintenance gains (80, 60, 40) divided by 100, with a step budget that lets the multiplier cycle
+_PID_GAIN_FACTOR = float(os.environ.get("PID_GAIN_FACTOR", "1"))   # sensitivity runs (scripts/paper/run_pid_gain_sensitivity.py) scale the three gains
+for _g in ("kp", "ki", "kd"): PID_GAINS[_g] *= _PID_GAIN_FACTOR
+# Support rule: an action is admissible at a state iff the log contains it there (tau = 0, one observation). Transitions are
+# deterministic, so the empirical model is exact on every logged pair and no count-ratio threshold is needed; the maintenance
+# threshold 0.05 used in the archived tau-0.05 run excluded the zero-cost local action at rarely visited states.
+BCQ_TAU = 0.0
+# Cost-limit grid for the limit-based learners (CPQ's d_lim, CAPS's kappa), in discounted charged-call units: a geometric grid of
+# ratio 1.1 from 1/(1 - GAMMA) down to 1 (the smallest cost-to-go of a charged call), then 0.8, 0.5, 0.3, 0.15, 0.05 and 0; the
+# maintenance default was laid out for a 0-100 range and steps by a factor 1.6 in the band selected here.
 BEHAV_MIX = 0.3
 
 # ------------------------------------------------------------------ adapter (patches)
@@ -154,9 +176,11 @@ def policy_table(m, pol):
 def run_learner(name, data, lg, m, honor, U_eval, d, seed):
     _CTX["m"], _CTX["lg"] = m, lg; ret_fn = lambda pol: lg.est(policy_table(m, pol))[0]
     if name == "fqi": return orl.learn_fqi_constrained(data, None, honor=honor, U_eval=U_eval, eps=d, gamma=GAMMA, bcq_tau=BCQ_TAU, lam_grid=LAM_GRID, return_fn=ret_fn)
-    if name == "cpq": return sl.learn_cpq_constrained(data, None, honor=honor, U_eval=U_eval, eps=d, gamma=GAMMA, bcq_tau=BCQ_TAU, return_fn=ret_fn)
-    if name == "pid": return sl.learn_pid_lagrangian_constrained(data, None, honor=honor, U_eval=U_eval, eps=d, gamma=GAMMA, bcq_tau=BCQ_TAU, return_fn=ret_fn)
-    if name == "cql": return nrl.learn_cql_constrained(data, None, honor=honor, U_eval=U_eval, eps=d, gamma=GAMMA, seed=seed, device="cpu", return_fn=ret_fn)
+    if name == "cpq": return sl.learn_cpq_constrained(data, None, honor=honor, U_eval=U_eval, eps=d, gamma=GAMMA, bcq_tau=BCQ_TAU, dlim_grid=LIMIT_GRID, return_fn=ret_fn)
+    if name == "pid": return sl.learn_pid_lagrangian_constrained(data, None, honor=honor, U_eval=U_eval, eps=d, gamma=GAMMA, bcq_tau=BCQ_TAU, return_fn=ret_fn, **PID_GAINS)
+    if name == "cql": return nrl.learn_cql_constrained(data, None, honor=honor, U_eval=U_eval, eps=d, gamma=GAMMA, seed=seed, device="cpu", lam_grid=LAM_GRID, return_fn=ret_fn)
+    if name == "caps": return sl.learn_caps_constrained(data, None, honor=honor, U_eval=U_eval, eps=d, gamma=GAMMA, bcq_tau=BCQ_TAU, kappa_grid=LIMIT_GRID, return_fn=ret_fn)
+    if name == "o3srl": return sl.learn_o3srl_constrained(data, None, honor=honor, U_eval=U_eval, eps=d, gamma=GAMMA, bcq_tau=BCQ_TAU, lam_arms=O3SRL_ARMS, n_rounds=4 * len(O3SRL_ARMS), seed=seed, return_fn=ret_fn)
     raise ValueError(name)
 
 def certified_instances():
@@ -190,16 +214,35 @@ def run_task(task, seeds=SEEDS, n_grid=N_GRID, learners=LEARNERS):
                                      safe=sc["safe"], honored_offline=float(res.honored_cost), lam=float(res.lam), secs=time.time() - t1))
     return dict(task=task, rows=rows, secs=time.time() - t0)
 
+def _cli_learners():
+    """--learners a,b restricts the run to a subset (default: all of LEARNERS)."""
+    for i, a in enumerate(sys.argv):
+        if a == "--learners" and i + 1 < len(sys.argv): return tuple(x for x in sys.argv[i + 1].split(",") if x)
+        if a.startswith("--learners="): return tuple(x for x in a.split("=", 1)[1].split(",") if x)
+    return LEARNERS
+
+def _run_task_subset(task):
+    return run_task(task, learners=_cli_learners())
+
 def main():
-    tasks = certified_instances(); print(f"{len(tasks)} certified instances:", [(t["variant"], t["K"], t["d"]) for t in tasks], flush=True)
+    tasks = certified_instances(); learners = _cli_learners()
+    print(f"{len(tasks)} certified instances:", [(t["variant"], t["K"], t["d"]) for t in tasks], "| learners:", learners, flush=True)
     if "--smoke" in sys.argv:
-        out = run_task(tasks[-1], seeds=(0,), n_grid=(20000,))
-        for row in out["rows"]: print(f"{row['learner']:4s} {row['arm']:20s} ret={row['ret_frac']:.3f} costs/d={np.round(row['costs_over_d'],2)} safe={row['safe']} offl={row['honored_offline']:.3f} lam={row['lam']:.1f} {row['secs']:.1f}s")
+        out = run_task(tasks[-1], seeds=(0,), n_grid=(20000,), learners=learners)
+        for row in out["rows"]: print(f"{row['learner']:5s} {row['arm']:20s} ret={row['ret_frac']:.3f} costs/d={np.round(row['costs_over_d'],2)} safe={row['safe']} offl={row['honored_offline']:.3f} lam={row['lam']:.1f} {row['secs']:.1f}s")
         print("secs", round(out["secs"], 1)); return
     t0 = time.time()
-    with Pool(int(os.environ.get("V50_WORKERS", "10"))) as pool: outs = pool.map(run_task, tasks, chunksize=1)
+    with Pool(int(os.environ.get("V50_WORKERS", "10"))) as pool: outs = pool.map(_run_task_subset, tasks, chunksize=1)
     rows = [r for o in outs for r in o["rows"]]
-    json.dump(dict(registration="V50 learned arms", n_grid=list(N_GRID), seeds=len(SEEDS), learners=list(LEARNERS), tasks=[o["task"] for o in outs], rows=rows, seconds=time.time() - t0), open(OUT, "w"))
+    if "--merge" in sys.argv:
+        # --merge: keep the archived rows of the learners not run here (same logs: the dataset seed is a hash of
+        # (variant, K, d, n, seed) only), replace the rows of the learners run here, record every learner
+        prev = json.load(open(OUT)); kept = [r for r in prev["rows"] if r["learner"] not in learners]
+        rows = kept + rows; learners_all = [l for l in LEARNERS if l in set(prev["learners"]) | set(learners)]
+        seconds = prev.get("seconds", 0.0) + (time.time() - t0)
+    else:
+        learners_all, seconds = list(learners), time.time() - t0
+    json.dump(dict(registration="V50 learned arms", n_grid=list(N_GRID), seeds=len(SEEDS), learners=learners_all, tasks=[o["task"] for o in outs], rows=rows, seconds=seconds), open(OUT, "w"))
     print("wrote", OUT, "rows", len(rows), "in %.0fs" % (time.time() - t0))
 
 if __name__ == "__main__":
