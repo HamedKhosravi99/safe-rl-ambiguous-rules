@@ -58,8 +58,7 @@ tail-level sweep, the Natural2CTL study) were removed together with their archiv
 ├── data/rule_corpora/         # the third-party rule files the pipeline reads, at pinned commits (NOTICE.md inside)
 ├── paper/
 │   ├── reference/             # the 36 fragments (generated/, 33 input by the paper) and 3 figures (figure/) compiled into the PDF
-│   ├── generated/, figure/    # outputs of scripts/reproduce_paper.py (ignored by git)
-│   └── supplementary_derivations.tex   # long-form derivations the appendix states compactly
+│   └── generated/, figure/    # outputs of scripts/reproduce_paper.py (ignored by git)
 ├── tests/                     # unit tests (construction, gridworld, offline learner, C-MAPSS)
 └── requirements.txt
 ```
