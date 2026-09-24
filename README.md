@@ -34,8 +34,8 @@ tail-level sweep, the Natural2CTL study) were removed together with their archiv
 │   ├── theory_extension/      # offline certificates on the 28 compiled rules: real_rules_experiment.py
 │   │                          #   (the archived generic certificate sweep) and certificate_v53.py (registered
 │   │                          #   V53 study: generic uniform, occupancy-weighted and robust-dual certificates on
-│   │                          #   identical draws, and the witness-based information floor; Table 11)
-│   └── dsrl_learners/         # wrappers that ran the published offline safe-RL learners (results/dsrl/, Table 16)
+│   │                          #   identical draws, and the witness-based information floor; Table 14)
+│   └── dsrl_learners/         # wrappers that ran the published offline safe-RL learners (results/dsrl/, Table 19)
 ├── scripts/
 │   ├── paper/                 # 26 generators (make_gen_*.py, make_fig*.py, make_corset_tables.py,
 │   │                          #   make_unified_numbers.py): archived results -> LaTeX fragments and figures
@@ -50,10 +50,10 @@ tail-level sweep, the Natural2CTL study) were removed together with their archiv
 │   │                          #   certificates the headline macros read (lp/), the price report (price/) and the three
 │   │                          #   learning-arm archives (risk50/, budget50/, main50/) that the certificate drivers read
 │   ├── dsrl/                  #   published offline safe-RL learners on DSRL/OSRL, one JSON per run
-│   ├── safe_keep_final/, final_pipeline/   # SAFE-KEEP on 579 families and the fixed-data pipeline (Table 12)
+│   ├── safe_keep_final/, final_pipeline/   # SAFE-KEEP on 579 families and the fixed-data pipeline (Table 15)
 │   ├── theory_extension/      #   offline certificates on the 28 rules: the archived generic sweep and
-│   │                          #   certificate_v53.json (Table 11), with their logs
-│   ├── paper_extra/pareto/    #   the maintenance budget sweep (Table 9)
+│   │                          #   certificate_v53.json (Table 14), with their logs
+│   ├── paper_extra/pareto/    #   the maintenance budget sweep (Table 12)
 │   └── fragments/
 ├── data/rule_corpora/         # the third-party rule files the pipeline reads, at pinned commits (NOTICE.md inside)
 ├── paper/
@@ -99,9 +99,9 @@ root with `PYTHONPATH=src`. For example
 
 ```bash
 python3 src/saorl/benchmark_sg/policy_sufficiency.py        # exact ARROW verdicts behind Table 1
-python3 src/saorl/benchmark_sg/safe_keep_final_run.py       # SAFE-KEEP on 579 families (Table 12), ~30 s
-python3 src/saorl/benchmark_sg/final_pipeline_run.py        # fixed-data pipeline, 1,600 records (Table 12), ~30 s
-python3 experiments/theory_extension/certificate_v53.py     # three offline certificates on the 28 rules (Table 11), ~4 min
+python3 src/saorl/benchmark_sg/safe_keep_final_run.py       # SAFE-KEEP on 579 families (Table 15), ~30 s
+python3 src/saorl/benchmark_sg/final_pipeline_run.py        # fixed-data pipeline, 1,600 records (Table 15), ~30 s
+python3 experiments/theory_extension/certificate_v53.py     # three offline certificates on the 28 rules (Table 14), ~4 min
 python3 src/saorl/benchmark_sg/scope_agent.py               # exact surface of the agent-service family (Table 2, Tables 14 and 17)
 python3 src/corset_e2e/external/artemis_per_method.py       # every archived ARTEMIS method on its own samples (Table 3)
 ```
@@ -129,26 +129,29 @@ Page numbers refer to the submitted PDF (`arrow_v5.pdf`).
 
 | Display | Page | Appendix | What it reports | Generator | Archived data |
 |---|---|---|---|---|---|
-| **Table 4** | 16 | A | Positioning by problem solved, safety input and guarantee | hand-written | -- |
-| **Algorithm 1** | 20 | B.3 | End-to-end pipeline with ARROW inlined (lines 7-23) | hand-written | -- |
-| **Table 5** | 21 | B.3 | Learner settings of the agent-service study (one rule per setting, shared by all learners and both arms) | hand-written; two counts from `scripts/paper/make_gen_v50.py` | `results/e2e/scope_agent_learn.json` |
-| **Table 6** | 35 | D | Appendix roadmap (question, evidence, theory link, what it establishes) | hand-written; one count from `scripts/paper/make_gen_v52.py` | `results/e2e/scope_agent_check.json` |
-| **Table 7** | 36 | D.1 | What single-reading optimization hides, solved exactly (17 of the 28 compiled rules) | `scripts/paper/make_gen_csuite_bind.py` joining fragments of `scripts/paper/make_corset_tables.py` | `results/conformal/benchmark_sg/control_suite.json`, `results/e2e/exact_nonnested.json` |
-| **Table 8** | 36 | D.1 | Simple alternatives address different parts of the problem | `scripts/paper/make_gen_revision.py`, `scripts/paper/make_gen_v14.py`, `scripts/paper/make_gen_sota.py` | `results/e2e/baseline_table.json`, `results/e2e/face_ladder.json` |
-| **Table 9** | 37 | D.1 | Budget sweep on the maintenance domains: both policies re-learned at every budget | `scripts/paper/make_gen_extra.py` | `results/paper_extra/pareto/pareto_risk_*.json` |
-| **Table 10** | 37 | D.1 | Stopping versus identification by question count (hyperedge cutting at its FREE stop, the SAFE-stop exception in the caption) | `scripts/paper/make_gen_v43.py` | `results/e2e/safe_collapse.json`, `results/e2e/basis_size.json`, `results/e2e/learner_slack.json` |
-| **Table 11** | 38 | D.2 | Three data scales per sufficient-reading class: n* of each certificate and the witness-based information floor kl(1-delta,delta)/Ibar, Ibar the divergence of the positive-margin witness chain and an upper bound on I*, a valid lower bound for delta-sound procedures that certify under the true chain with probability at least 1-delta | `scripts/paper/make_gen_v53.py` (`gen_v53_classes.tex`) | `results/theory_extension/certificate_v53.json` |
-| **Figure 2** | 39 | D.2 | Generic certificate, decision-specific certificate and information floor against 1/kappa^2 for the six budget-margin classes | `scripts/paper/make_fig_v53.py` (`fig_v53_scales.pdf`) | `results/theory_extension/certificate_v53.json` |
-| **Table 12** | 39 | D.2 | Safe-Keep audit: uncovered removals (Score-Keep audited under the same relation), retained-set sizes, implications confirmed | `scripts/paper/make_gen_safekeep.py` | `results/safe_keep_final/safekeep_final.json`, `results/safe_keep_final/score_keep_cover.json`, `results/final_pipeline/pipeline_rows.json` |
-| **Figure 3** | 40 | D.3 | Exact price of the single-cost surrogate by budget, median-to-maximum band | `scripts/paper/make_figs_appendix.py` (`fig_e1_surrogate.pdf`) | `results/e2e/collapse_readout.json` |
-| **Table 13** | 41 | D.3 | Exact price of the single-cost surrogate by budget (median, mean, p90, max, counts above 1%, 2%, 5%) | `scripts/paper/make_gen_v47_51_tables.py` (`gen_v48_surrogate.tex`) | `results/e2e/collapse_readout.json` |
-| **Table 14** | 41 | D.3 | Per-instance gains of the ARROW-selected reading over the single-cost surrogate (9 sufficient instances, 6 learners) | `scripts/paper/make_gen_v50.py` (`gen_v50_perinst.tex`) | `results/e2e/scope_agent.json`, `results/e2e/scope_agent_learn.json` |
-| **Table 15** | 42 | D.3 | Native multi-constraint learners: K separate constraints versus the sufficient reading | `scripts/paper/make_gen_v51.py` | `results/e2e/scope_agent_native.json`, `results/e2e/scope_agent_native_smalln.json` |
-| **Table 16** | 42 | D.3 | Portability across five released offline safe-RL learners on DSRL/OSRL (**GPU**: V100) | `scripts/paper/make_corset_tables.py` (`gen_dsrl.tex`, `gen_dsrl_seedinfo.tex`) | `results/dsrl/` |
-| **Table 17** | 43 | D.3 | Checked deployment on all learned agent-service policies: per learner, unsafe and pass counts under each training cost and unsafe deployments, plus the pooled wrong-reading policies | `scripts/paper/make_gen_v52.py`, `scripts/paper/make_gen_v50.py` | `results/e2e/scope_agent_check.json`, `results/e2e/scope_agent_learn.json` |
-| **Table 18** | 43 | D.4 | Expert-plausible readings preserved (union pool of every generator's archived translations) | `scripts/paper/make_gen_artemis.py` | `results/e2e/artemis_external.json` |
+| **Table 4** | 17 | A | Positioning by problem solved, safety input and guarantee | hand-written | -- |
+| **Table 5** | 19 | B.1 | Data sources and populations (external sources and our three constructions, with the results each feeds) | hand-written; counts from the fragment macros | see the fragment rows below |
+| **Table 6** | 19 | B.2 | Decision models: what each reading charges, horizon, budget and policy class | hand-written | -- |
+| **Algorithm 1** | 21 | B.3 | End-to-end pipeline with ARROW inlined (lines 7-23) | hand-written | -- |
+| **Table 7** | 22 | B.3 | Protocols of the exact and fixed-data studies (population, settings, repeats) | hand-written; counts from the fragment macros | see the fragment rows below |
+| **Table 8** | 23 | B.3 | Learner settings of the agent-service study (one rule per setting, shared by all learners and both arms) | hand-written; two counts from `scripts/paper/make_gen_v50.py` | `results/e2e/scope_agent_learn.json` |
+| **Table 9** | 37 | D | Appendix roadmap (question, evidence, theory link, what it establishes) | hand-written; one count from `scripts/paper/make_gen_v52.py` | `results/e2e/scope_agent_check.json` |
+| **Table 10** | 38 | D.1 | What single-reading optimization hides, solved exactly (17 of the 28 compiled rules) | `scripts/paper/make_gen_csuite_bind.py` joining fragments of `scripts/paper/make_corset_tables.py` | `results/conformal/benchmark_sg/control_suite.json`, `results/e2e/exact_nonnested.json` |
+| **Table 11** | 38 | D.1 | Simple alternatives address different parts of the problem | `scripts/paper/make_gen_revision.py`, `scripts/paper/make_gen_v14.py`, `scripts/paper/make_gen_sota.py` | `results/e2e/baseline_table.json`, `results/e2e/face_ladder.json` |
+| **Table 12** | 39 | D.1 | Budget sweep on the maintenance domains: both policies re-learned at every budget | `scripts/paper/make_gen_extra.py` | `results/paper_extra/pareto/pareto_risk_*.json` |
+| **Table 13** | 39 | D.1 | Stopping versus identification by question count (hyperedge cutting at its FREE stop, the SAFE-stop exception in the caption) | `scripts/paper/make_gen_v43.py` | `results/e2e/safe_collapse.json`, `results/e2e/basis_size.json`, `results/e2e/learner_slack.json` |
+| **Table 14** | 40 | D.2 | Three data scales per sufficient-reading class: n* of each certificate and the witness-based information floor kl(1-delta,delta)/Ibar, Ibar the divergence of the positive-margin witness chain and an upper bound on I*, a valid lower bound for delta-sound procedures that certify under the true chain with probability at least 1-delta | `scripts/paper/make_gen_v53.py` (`gen_v53_classes.tex`) | `results/theory_extension/certificate_v53.json` |
+| **Figure 2** | 41 | D.2 | Generic certificate, decision-specific certificate and information floor against 1/kappa^2 for the six budget-margin classes | `scripts/paper/make_fig_v53.py` (`fig_v53_scales.pdf`) | `results/theory_extension/certificate_v53.json` |
+| **Table 15** | 41 | D.2 | Safe-Keep audit: uncovered removals (Score-Keep audited under the same relation), retained-set sizes, implications confirmed | `scripts/paper/make_gen_safekeep.py` | `results/safe_keep_final/safekeep_final.json`, `results/safe_keep_final/score_keep_cover.json`, `results/final_pipeline/pipeline_rows.json` |
+| **Figure 3** | 42 | D.3 | Exact price of the single-cost surrogate by budget, median-to-maximum band | `scripts/paper/make_figs_appendix.py` (`fig_e1_surrogate.pdf`) | `results/e2e/collapse_readout.json` |
+| **Table 16** | 43 | D.3 | Exact price of the single-cost surrogate by budget (median, mean, p90, max, counts above 1%, 2%, 5%) | `scripts/paper/make_gen_v47_51_tables.py` (`gen_v48_surrogate.tex`) | `results/e2e/collapse_readout.json` |
+| **Table 17** | 43 | D.3 | Per-instance gains of the ARROW-selected reading over the single-cost surrogate (9 sufficient instances, 6 learners) | `scripts/paper/make_gen_v50.py` (`gen_v50_perinst.tex`) | `results/e2e/scope_agent.json`, `results/e2e/scope_agent_learn.json` |
+| **Table 18** | 44 | D.3 | Native multi-constraint learners: K separate constraints versus the sufficient reading | `scripts/paper/make_gen_v51.py` | `results/e2e/scope_agent_native.json`, `results/e2e/scope_agent_native_smalln.json` |
+| **Table 19** | 44 | D.3 | Portability across five released offline safe-RL learners on DSRL/OSRL (**GPU**: V100) | `scripts/paper/make_corset_tables.py` (`gen_dsrl.tex`, `gen_dsrl_seedinfo.tex`) | `results/dsrl/` |
+| **Table 20** | 45 | D.3 | Checked deployment on all learned agent-service policies: per learner, unsafe and pass counts under each training cost and unsafe deployments, plus the pooled wrong-reading policies | `scripts/paper/make_gen_v52.py`, `scripts/paper/make_gen_v50.py` | `results/e2e/scope_agent_check.json`, `results/e2e/scope_agent_learn.json` |
+| **Table 21** | 45 | D.4 | Expert-plausible readings preserved (union pool of every generator's archived translations) | `scripts/paper/make_gen_artemis.py` | `results/e2e/artemis_external.json` |
 
-Table 16 is the one GPU result (five released offline safe-RL learners on DSRL/OSRL, run on V100s
+Table 19 is the one GPU result (five released offline safe-RL learners on DSRL/OSRL, run on V100s
 through the wrappers in `experiments/dsrl_learners/`); everything else was produced on CPU.
 Results reported in the appendix text rather than in a table, with their generators: the data
 sources (Appendix B.1), the eight-repository replication totals (`make_gen_revision.py`: `gen_revision.tex` for the
@@ -156,7 +159,7 @@ totals, `gen_third_corpus_compact.tex` for the per-repository rows), the live se
 `gen_live.tex`), the certificate-versus-log-size sweep (`make_gen_v53.py`, `gen_v53_table.tex`)
 and the earlier-setting sensitivity runs of the learning study (`make_gen_v50.py` from the archived
 `scope_agent_learn_*.json`). The appendix figures (`make_fig_v53.py`, `make_figs_appendix.py`) are Figures 2 and 3; their
-numbers are also Tables 11 and 13.
+numbers are also Tables 14 and 16.
 
 ## Every LaTeX fragment the paper inputs
 
@@ -207,7 +210,7 @@ row bodies. The "archived data read" column was recorded by tracing every file e
 
 Two intermediate fragments are produced but not input by the paper: `gen_control_suite.tex` and
 `gen_bind.tex` (`make_corset_tables.py`), joined by `make_gen_csuite_bind.py` into
-`gen_csuite_bind.tex`. `gen_v48_surrogate.tex` (`make_gen_v47_51_tables.py`) is input as Table 13 and
+`gen_csuite_bind.tex`. `gen_v48_surrogate.tex` (`make_gen_v47_51_tables.py`) is input as Table 16 and
 `make_figs_appendix.py` plots the same numbers as Figure 3.
 
 ## Archived results → experiment scripts
@@ -256,7 +259,7 @@ Two intermediate fragments are produced but not input by the paper: `gen_control
 | `artemis_per_method.json` (every archived ARTEMIS generator on its own samples) | `src/corset_e2e/external/artemis_per_method.py` |
 | `artemis_decide.json` (entailment structure of the retained sets; REGISTRATION_V23) | `src/corset_e2e/external/artemis_decide.py` |
 | `experiments/live_agent/logs/eval_summary.json` (50 paired live sessions per condition) | `experiments/live_agent/run_eval.py` (billed API calls; archived, not meant to be re-run) |
-| `results/dsrl/**` (per-run JSON files of the released offline safe-RL learners: the sweeps and top-ups that Table 16 reads, and the vector-constraint, E3 and non-dominated runs that the run count in Appendix B.1 includes) | `experiments/dsrl_learners/dsrl_sweep.py`, `dsrl_vector.py`, `dsrl_e3.py`, `dsrl_nondominated.py` (wrappers around the published OSRL/DSRL learners; the SLURM job files are omitted); `make_dsrl_table.py` and `aggregate_vector.py` summarize them |
+| `results/dsrl/**` (per-run JSON files of the released offline safe-RL learners: the sweeps and top-ups that Table 19 reads, and the vector-constraint, E3 and non-dominated runs that the run count in Appendix B.1 includes) | `experiments/dsrl_learners/dsrl_sweep.py`, `dsrl_vector.py`, `dsrl_e3.py`, `dsrl_nondominated.py` (wrappers around the published OSRL/DSRL learners; the SLURM job files are omitted); `make_dsrl_table.py` and `aggregate_vector.py` summarize them |
 | `results/theory_extension/certificate_v53.json` (three offline certificates on identical draws, the witness divergence and floor per class; REGISTRATION_V53) | `experiments/theory_extension/certificate_v53.py` (about four minutes on one CPU core; `--istar-only` refreshes and re-verifies the witness section alone; `certificate_v53_stdout.txt` is its log) |
 
 Files under `results/e2e/` and `results/conformal/` that no row above names (`ledger.json`,

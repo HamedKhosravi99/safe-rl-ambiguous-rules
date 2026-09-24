@@ -23,7 +23,7 @@ METHODS = {
     "nl2ltl":              ("directTL",                2026, "mendoza2026artemis"),
     "nl2ltltemplate":      ("directTL-t",              2026, "mendoza2026artemis"),
     "nl2structnl":         ("ARTEMIS",                 2026, "mendoza2026artemis"),
-    "nl2structnl-reflect": ("ARTEMIS + reflection",    2026, "mendoza2026artemis"),
+    "nl2structnl-reflect": ("ARTEMIS + reflection (50 translations)", 2026, "mendoza2026artemis"),   # the release archives fifty samples for this method, ten for the others
 }
 ORDER = ["deepstl", "nl2spec", "NL2TL", "NL2TL-FT", "synthtl", "nl2ltl", "nl2ltltemplate", "nl2structnl", "nl2structnl-reflect"]
 def pct(x, nd=1): return f"{100*x:.{nd}f}"
