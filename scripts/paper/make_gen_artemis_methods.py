@@ -70,7 +70,7 @@ RATIOS = {k: ratio(*k) for k in REPORTED}
 for k, v in REPORTED.items():   # within rounding and one requirement's checker disagreement (the archive lists 18 unaligned files)
     assert abs(RATIOS[k] - v) < 0.06, (k, RATIOS[k], v)
 
-# ---- Table 3 rows at the template's font size (arrow_v5): no citations in the cells (they go to the
+# ---- Table 3 rows at the template's font size: no citations in the cells (they go to the
 # caption), short LLM labels, no year or size column
 SHORT = {"gemini-2.5-flash": "Gemini", "gpt-4.1": "GPT-4.1"}
 S = []

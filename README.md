@@ -116,7 +116,7 @@ metered API and is archived rather than meant to be re-run.
 
 ## Map: main-text tables and figures → code
 
-Page numbers refer to the submitted PDF (`arrow_v5.pdf`).
+Page numbers refer to the submitted PDF.
 
 | Display | Page | What it reports | Generator | Archived data |
 |---|---|---|---|---|
@@ -164,7 +164,7 @@ numbers are also Tables 14 and 16.
 ## Every LaTeX fragment the paper inputs
 
 The 36 files under `paper/reference/generated/` are the `\input` and `\tblinput` targets of
-`arrow_v5.tex`, 33 of them input by the current version (the table bodies `gen_third_corpus_compact.tex`,
+the paper source, 33 of them input by the current version (the table bodies `gen_third_corpus_compact.tex`,
 `gen_live_agent.tex` and `gen_v53_table.tex` remain generated and archived; their totals are quoted in
 the appendix text through the macro files). Macro files carry the numbers the running text and captions print; table files are
 row bodies. The "archived data read" column was recorded by tracing every file each generator opens.
