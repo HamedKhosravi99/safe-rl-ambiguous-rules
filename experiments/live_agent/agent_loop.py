@@ -1,4 +1,4 @@
-"""Bounded tool-using agent for the Workstream-G demo (paper section 22.3).
+"""Bounded tool-using agent for the live service-agent check (Appendix D.1 of the paper).
 
 Task family: research-and-summarize over a LOCAL document corpus. Each episode
 is one task card (demo/tasks/*.json) answerable from the bundled corpus
@@ -41,7 +41,7 @@ MAX_STEPS = 12
 # the best-matching sentence), so it reliably covers a fact near the start of a
 # sentence but misses trailing facts -- a genuine, deterministic value gap the
 # PAID LLM (which synthesizes the full answer) can close. This is the demo's
-# paid-vs-fallback economics (section 22.3): paid earns more task value.
+# paid-vs-fallback economics (Appendix D.1): paid earns more task value.
 FREE_SNIPPET_CHARS = 60
 _WORD = re.compile(r"[a-z0-9]+")
 

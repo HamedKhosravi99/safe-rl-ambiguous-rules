@@ -31,7 +31,7 @@ does not modify anything under saorl/.
 
 The numeric thresholds and which reading is "most plausible" / "anchored" come
 from the policy text + conformal scoring, which are DEFERRED until the policy is
-selected (see policy_candidates.md). This module is parametrized by the reading
+selected (see policy_source.json). This module is parametrized by the reading
 sets; `demo_call_quota_readings()` provides placeholder readings so the wiring
 is testable now.
 """

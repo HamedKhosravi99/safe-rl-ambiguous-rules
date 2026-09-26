@@ -1,6 +1,6 @@
-# Workstream G -- live agent demonstration RESULTS
+# Live service-agent check -- RESULTS
 
-Paper section 22: CORSET governing a real, billed tool-using agent. The agent is a Slack-style app posting research-summary messages to a channel; each **paid post** is a real billed `gpt-4o-mini` call, and a **guard** gates posting exactly as the budget domain gates `buy`. The deployment unit is the real Slack Web-API posting-rate policy `real-a02-slack-posting-rate`.
+Appendix D.1 of the paper: ARROW (called CORSET in this code) governing a real, billed tool-using agent. The agent is a Slack-style app posting research-summary messages to a channel; each **paid post** is a real billed `gpt-4o-mini` call, and a **guard** gates posting exactly as the budget domain gates `buy`. The deployment unit is the real Slack Web-API posting-rate policy `real-a02-slack-posting-rate`.
 
 ## Headline
 

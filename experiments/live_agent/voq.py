@@ -115,7 +115,7 @@ def main() -> dict:
 
     # transcript
     lines = []
-    lines.append("== Workstream-G clarification transcript (paper section 22.5) ==")
+    lines.append("== clarification transcript (Appendix D.1 of the paper) ==")
     lines.append(f"policy: real-a02-slack-posting-rate")
     lines.append(f"retained set U = {rs['retained_names']}  (q-hat = {rs['qhat']})")
     lines.append(f"posterior over U (plausibility-normalized): "

@@ -1,4 +1,4 @@
-"""Cost accounting for the Workstream-G live-agent demo (paper section 22).
+"""Cost accounting for the live service-agent check (Appendix D.1 of the paper).
 
 The metered axis is provider-billed US dollars. This module:
 

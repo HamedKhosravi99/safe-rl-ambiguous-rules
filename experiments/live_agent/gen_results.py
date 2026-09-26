@@ -47,7 +47,7 @@ def main():
     )
 
     md = []
-    md.append("# Workstream G -- live agent demonstration RESULTS")
+    md.append("# Live service-agent check -- RESULTS")
     md.append("")
     md.append("Paper section 22: CORSET governing a real, billed tool-using agent. "
               "The agent is a Slack-style app posting research-summary messages to "

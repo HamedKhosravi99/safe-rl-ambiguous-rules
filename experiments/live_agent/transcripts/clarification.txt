@@ -1,4 +1,4 @@
-== Workstream-G clarification transcript (paper section 22.5) ==
+== clarification transcript (Appendix D.1 of the paper) ==
 policy: real-a02-slack-posting-rate
 retained set U = ['psi_calls>=3', 'psi_calls>=4', 'psi_calls>=5', 'psi_calls>=6', 'psi_calls>=8']  (q-hat = 0.5)
 posterior over U (plausibility-normalized): {'k=3': 0.201, 'k=4': 0.192, 'k=5': 0.221, 'k=6': 0.197, 'k=8': 0.189}

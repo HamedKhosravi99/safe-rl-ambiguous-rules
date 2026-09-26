@@ -1,4 +1,4 @@
-"""Frozen DSL reading pool for the Workstream-G live demo (paper section 22).
+"""Frozen DSL reading pool for the live service-agent check (Appendix D.1 of the paper).
 
 Deployment unit: the Slack posting-rate policy (real-a02-slack-posting-rate)
 

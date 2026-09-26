@@ -1,6 +1,6 @@
 {
   "instance_id": "real-a02-slack-posting-rate",
-  "selected_as": "PRIMARY (policy_candidates.md shortlist #1)",
+  "selected_as": "PRIMARY",
   "source_type": "real",
   "domain": "api_rate_limits",
   "category": "A (API quota docs)",

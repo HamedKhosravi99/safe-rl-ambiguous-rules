@@ -1,4 +1,4 @@
-"""End-to-end DRY RUN for the Workstream-G harness (paper section 22.6 step 3).
+"""End-to-end DRY RUN for the live service-agent harness.
 
 Runs 5 episodes with the PASSTHROUGH guard and REAL paid calls -- this is the
 <= $5 build-phase validation. It verifies:
