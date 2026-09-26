@@ -1,7 +1,7 @@
 """Emit generated/gen_v53.tex (macros), gen_v53_table.tex (certified counts by size and certificate, d = 0.05),
 gen_v53_classes.tex (three scales per sufficient-reading class: n* of each certificate and the witness-based information
 floor kl(1-delta,delta)/Ibar, Ibar the divergence of the positive-margin witness chain and an upper bound on I*) from
-results/e2e/certificate_v53.json (REGISTRATION_V53).  Assertions are structural only (shapes, identical draw ids across
+results/theory_extension/certificate_v53.json (REGISTRATION_V53).  Assertions are structural only (shapes, identical draw ids across
 certificates, ranges, truth matching the exact archive); method ordering, monotonicity and the false-certificate count are
 reported as outcomes, the last one loudly if nonzero."""
 import json, os, math, collections

@@ -6,7 +6,7 @@ occupancy-weighted) and DUAL (robust shaped-dominance witness; robust-dual ARROW
 the witness divergence Ibar, an upper bound on the decision-information radius I* obtained from a decision-reversing
 chain whose margin is at least WITNESS_MARGIN (re-verified by verify_witnesses), and a path-sampled secondary.  Every certificate is a deterministic
 function of (Mhat, N, delta); soundness holds on the event E = { ||M_z - Mhat_z||_1 <= alpha_z for all rows }.
-Writes results/e2e/certificate_v53.json.
+Writes results/theory_extension/certificate_v53.json.
 """
 import sys, json, math, time, itertools, os
 import numpy as np
