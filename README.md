@@ -268,3 +268,9 @@ and `v16_*` reports, `e2e_test_rows_v11_complete.json`, the E0 and LP reports) a
 outputs of the drivers named above and of the generation-pipeline analyses that
 `make_unified_numbers.py` and `make_gen_v47_51.py` read; they are kept because a listed driver
 reads them.
+
+## License
+
+The code, scripts, archived results and documentation in this repository are released under the
+MIT License (`LICENSE`). The third-party rule files under `data/rule_corpora/` keep their own
+licenses, listed in `data/rule_corpora/NOTICE.md`.
