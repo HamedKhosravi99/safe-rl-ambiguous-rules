@@ -73,7 +73,7 @@ certifies at that tolerance.  Recorded before evaluation:
 
 ## Exploratory extension (2026-09-12, after the registered runs; labelled exploratory)
 Prompted by the LP arms differing at n = 2,000, the same protocol was re-run at n in
-{250, 500, 1,000} (results_e2e/scope_agent_native_smalln.json).  Outcome: per-instance median
+{250, 500, 1,000} (results/e2e/scope_agent_native_smalln.json).  Outcome: per-instance median
 return gaps are mixed (vector PID -2.3 to -1.8 points, vector CPQ -0.3 to +3.1, LP +2.5 to
 +5.3, Lagrangian FQI 0); the singleton arm is LESS safe than the K-constraint arm
 for the LP (54-64% vs 77-81% safe runs), PID (87-89% vs 97-100%) and CPQ (90-94% vs 98-100%)

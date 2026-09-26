@@ -6,7 +6,7 @@ analysis of the paper is one organization's monitoring rules
 (kube-prometheus) and one organization's admission rules (kyverno/policies).
 This adds the exact decision-level pipeline on the alert rules of eight
 other organizations whose repositories are already pinned on disk for the
-generation study (results_e2e/catalog_src_manifest.json SHAs):
+generation study (results/e2e/catalog_src_manifest.json SHAs):
 mimir and loki (Grafana Labs), cluster-monitoring-operator (Red Hat
 OpenShift), victoriametrics, rook and ceph, thanos, tidb (PingCAP).
 Excluded, with the reason stated: gitlab-runbooks (machine expansion of a
@@ -49,4 +49,4 @@ rare-firing finding is corpus-dependent; if it does not, it says the
 finding replicates on eight further organizations. Either sentence is
 written only after the run.
 
-Output: results_e2e/third_corpus.json; macros via make_gen_revision.py.
+Output: results/e2e/third_corpus.json; macros via make_gen_revision.py.

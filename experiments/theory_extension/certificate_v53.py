@@ -229,7 +229,7 @@ def main():
     global LOG; LOG = open(LOG_PATH, "w")
     t0 = time.time(); results = dict(meta=dict(witness_margin=WITNESS_MARGIN, eps=EPS, delta=DELTA, budgets=BUDGETS, n_grid=N_GRID, reps=REPS, hard_extra=dict(reps=HARD_EXTRA_REPS, n=HARD_EXTRA_N, d=HARD_D),
                                                   etas=ETAS, secondary=dict(n=SEC_N, paths=SEC_PATHS), seeds=dict(primary=SEED_PRIMARY, extra=SEED_EXTRA, secondary=SEED_SECONDARY),
-                                                  M_true=M_TRUE.tolist(), pi=PI.tolist(), registration="results_e2e/REGISTRATION_V53.md"),
+                                                  M_true=M_TRUE.tolist(), pi=PI.tolist(), registration="results/e2e/REGISTRATION_V53.md"),
                                         truth={f"{u}|{k}|{d}": v for (u, k, d), v in truth.items() if v}, classes=classes, primary=[], extra_hard=[], secondary=[], istar={}, price={})
     # ---- primary
     rng = np.random.default_rng(SEED_PRIMARY)

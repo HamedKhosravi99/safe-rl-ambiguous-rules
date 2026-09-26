@@ -1,7 +1,7 @@
 # REGISTRATION V53 — decision-specific offline certification on the compiled monitoring rules
 
 Registered 2026-09-12, before the confirmatory run (driver: paper/theory_extension/certificate_v53.py;
-results: results_e2e/certificate_v53.json; generator: paper/final/make_gen_v53.py).
+results: results/theory_extension/certificate_v53.json; generator: scripts/paper/make_gen_v53.py).
 
 ## Provenance
 Exploratory runs on 2026-09-12 (session scratchpad: robust_dual_cert.py, occ_cert.py, split_cert.py) compared
@@ -16,7 +16,7 @@ requirement is certificate conservatism and how much is intrinsic to the decisio
 ARROW can certify from a fixed log when the exact-budget decision is unresolved.
 
 ## Setting (as archived, unchanged)
-The 28 compiled monitoring rules of results_e2e/control_suite_uncapped.json, gamma = 0.97, two readings
+The 28 compiled monitoring rules of results/e2e/control_suite_uncapped.json, gamma = 0.97, two readings
 per rule.  The only stochastic component is the load chain M (R = 3 rows, m_z = 3 successors per row);
 every monitor counter updates deterministically.  Telemetry of n pooled transitions gives per-row counts
 N_z = round(n pi_z), pi the stationary law of M; the empirical chain Mhat is recompiled into every rule.

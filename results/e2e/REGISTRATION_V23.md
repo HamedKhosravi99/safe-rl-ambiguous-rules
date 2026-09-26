@@ -35,7 +35,7 @@ the number of readings a set-protecting controller must satisfy at once.
 If joint satisfiability fails on a material share, the paper reports that
 set protection is infeasible there.
 
-Output: results_e2e/artemis_decide.json; macros via make_gen_artemis.py.
+Output: results/e2e/artemis_decide.json; macros via make_gen_artemis.py.
 
 Addendum (2026-09-03, during the run): the single sequential process was
 stopped at unit 82 of P2 because a few units spend the full pair guard on

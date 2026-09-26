@@ -4,7 +4,7 @@
 ~300 channel-session episodes under a MIXTURE behavior policy (per-episode
 greedy-post or randomized-fallback), REAL billed gpt-4o-mini posts, a StopLoss
 guard, per-step features (running calls + spend), deterministic task rewards, and
-billed cost per post. Serializes to demo/logs/offline_episodes.jsonl in the
+billed cost per post. Serializes to experiments/live_agent/logs/offline_episodes.jsonl in the
 saorl OfflineDataset schema (trajectory state dicts carry 'calls' + 'spend';
 actions in {buy, skip}; rewards = realized per-step value). Billing lines append
 to demo/billing_log.jsonl (the demo-wide ledger).

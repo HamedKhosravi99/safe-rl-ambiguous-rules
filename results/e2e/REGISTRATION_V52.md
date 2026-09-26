@@ -1,7 +1,7 @@
 # REGISTRATION V52 — the checked deployment route on the learned policies of the agent-service experiment
 
 Registered 2026-09-12, before any CHECK outcome on these policies was computed (driver:
-saorl/benchmark_sg/scope_agent_check.py; policies: results_e2e/scope_agent_learn.json, V50).
+saorl/benchmark_sg/scope_agent_check.py; policies: results/e2e/scope_agent_learn.json, V50).
 
 ## Question
 The learner-aware composition theorem (Proposition S5 (composition with an approximate learner)) certifies a learned policy without

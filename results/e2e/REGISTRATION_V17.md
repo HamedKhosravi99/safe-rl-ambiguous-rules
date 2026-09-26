@@ -10,7 +10,7 @@ plausible formal readings that were not used to build ARROW's protocol.
 
 ARTEMIS artifact (Mendoza, Mavridou, Katis, Trippel, ICSE 2026),
 https://github.com/dmmendo/ARTEMIS, pinned at the commit recorded in
-results_e2e/artemis_external.json. Units are the requirements of the three
+results/e2e/artemis_external.json. Units are the requirements of the three
 multi-reference FRETish groups: Ventilator (121), Robotics/RobotExplain (46),
 LMCPS = FSM-AP (9) + FSM-S (4) + REG (2) = 15; 182 in all. DeepSTL and Thales
 are single-reference and are not used. The expert set P_l of a unit is the
